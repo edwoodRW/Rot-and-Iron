@@ -1,0 +1,53 @@
+capital = 545
+
+oob = "RHO_1936"
+
+set_research_slots = 3
+set_convoys = 200
+set_stability = 0.5
+set_war_support = 0.6
+
+set_technology = {
+	support_weapons = 1
+	infantry_weapons = 1
+	motorised_infantry = 1 
+	tech_support = 1 
+	tech_field_hospital = 1 
+	tech_engineers = 1 
+	gwtank = 1 
+	basic_light_tank = 1 
+	gw_artillery = 1 
+	tech_mountaineers = 1
+	early_fighter = 1 
+	interwar_antiair = 1 
+	interwar_antitank = 1
+}
+
+set_politics = {
+	ruling_party = fascist
+	last_election = "1965.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascist = 60
+	nationalist = 25
+	monarchist = 10
+	national_bolshevik = 0
+	national_conservative = 5
+	centrist = 0
+	liberal = 0
+	new_democrat = 0
+	moderate_socialist = 0
+	revolutionary_socialist = 0
+	communist = 0
+}
+
+create_country_leader = {
+	name = "Pieter Groenewald"
+	picture = "Pieter_Groenewald.dds"
+	ideology = fascist_ideology
+	traits = { rho_white_supremacist rho_loyalist_commander }
+	
+}

@@ -1,0 +1,13 @@
+graphical_culture = african_gfx
+graphical_culture_2d = commonwealth_2d
+
+color = { 255  215  0 }
+
+historical_ideas = {
+	afc_pan_african_socialism
+	afc_land_reform
+	afc_militant_anti_imperialism
+	afc_economic_self_sufficiency
+	afc_regional_hegemony
+	afc_mugabe_cult
+}

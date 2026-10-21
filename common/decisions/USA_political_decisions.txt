@@ -1,0 +1,225 @@
+USA_political_decisions = {
+
+	USA_investigate_military_contractors = {
+		icon = GFX_unkown
+
+		allowed = { always = yes }
+		visible = { tag = USA }
+
+		available = {
+			NOT = { has_country_flag = USA_investigated_contractors_cd }
+		}
+
+		cost = 100
+
+		complete_effect = {
+			add_to_variable = {
+				var = USA_corporate_influence
+				value = -10
+			}
+			USA_update_influence_tier = yes
+			set_country_flag = {
+				flag = USA_investigated_contractors_cd
+				days = 60
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	USA_crackdown_on_corporate_pacs = {
+		icon = GFX_unkown
+
+		allowed = { always = yes }
+		visible = { tag = USA }
+
+		available = {
+			NOT = { has_country_flag = USA_crackdown_pacs_cd }
+		}
+
+		cost = 150
+
+		complete_effect = {
+			add_to_variable = {
+				var = USA_corporate_influence
+				value = -20
+			}
+			USA_update_influence_tier = yes
+			add_stability = -0.02
+			add_popularity = {
+				ideology = moderate_socialist
+				popularity = -5
+			}
+			set_country_flag = {
+				flag = USA_crackdown_pacs_cd
+				days = 90
+			}
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	USA_court_business_confidence = {
+		icon = GFX_unkown
+
+		allowed = { always = yes }
+		visible = { tag = USA }
+
+		available = {
+			NOT = { has_country_flag = USA_court_business_cd }
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_to_variable = {
+				var = USA_corporate_influence
+				value = 15
+			}
+			USA_update_influence_tier = yes
+			add_stability = 0.03
+			set_country_flag = {
+				flag = USA_court_business_cd
+				days = 60
+			}
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	USA_purge_sympathetic_officers = {
+		icon = GFX_unkown
+
+		allowed = { always = yes }
+		visible = { tag = USA }
+
+		available = {
+			NOT = { has_country_flag = USA_preemptive_purge_cd }
+			check_variable = { var = USA_corporate_influence value = 20 compare = greater_than }
+		}
+
+		cost = 200
+
+		complete_effect = {
+			add_to_variable = {
+				var = USA_corporate_influence
+				value = -25
+			}
+			USA_update_influence_tier = yes
+			add_stability = -0.03
+			set_country_flag = {
+				flag = USA_preemptive_purge_active
+				days = 180
+			}
+			set_country_flag = {
+				flag = USA_preemptive_purge_cd
+				days = 180
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	USA_rally_the_unions = {
+		icon = GFX_unkown
+
+		allowed = { always = yes }
+		visible = { tag = USA }
+
+		available = {
+			NOT = { has_country_flag = USA_rally_unions_cd }
+		}
+
+		cost = 100
+
+		complete_effect = {
+			add_to_variable = {
+				var = USA_corporate_influence
+				value = -10
+			}
+			USA_update_influence_tier = yes
+			add_popularity = {
+				ideology = revolutionary_socialist
+				popularity = 8
+			}
+			add_stability = 0.02
+			set_country_flag = {
+				flag = USA_rally_unions_cd
+				days = 60
+			}
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	USA_grant_military_autonomy = {
+		icon = GFX_unkown
+
+		allowed = { always = yes }
+		visible = { tag = USA }
+
+		available = {
+			NOT = { has_country_flag = USA_military_autonomy_cd }
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_to_variable = {
+				var = USA_corporate_influence
+				value = 20
+			}
+			USA_update_influence_tier = yes
+			add_war_support = 0.03
+			set_country_flag = {
+				flag = USA_military_autonomy_cd
+				days = 90
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_loosen_campaign_finance_rules = {
+		icon = GFX_unkown
+
+		allowed = { always = yes }
+		visible = { tag = USA }
+
+		available = {
+			NOT = { has_country_flag = USA_campaign_finance_cd }
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_to_variable = {
+				var = USA_corporate_influence
+				value = 15
+			}
+			USA_update_influence_tier = yes
+			add_political_power = 50
+			set_country_flag = {
+				flag = USA_campaign_finance_cd
+				days = 90
+			}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+}

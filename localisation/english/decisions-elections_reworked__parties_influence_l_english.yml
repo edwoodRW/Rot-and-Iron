@@ -1,0 +1,150 @@
+﻿l_english:
+elections_reworked__parties_influence:0 "Parties Influence"
+elections_reworked__parties_influence_desc:0 "Being on the political stage is always about showing your people how you are ready to make their lives better and why your way is the best, or let other parties deal with it.  \n\n Reactionary Party influence: £reactionary_influence_texticon [?ROOT.Rea_inf|Y]§Y%§!§Y§!\n\n Conservative Party influence: £conservative_influence_texticon [?ROOT.Con_inf|Y]§Y%§!§Y§!\n\n Social Liberal Party influence: £social_liberal_influence_texticon [?ROOT.Soc_lib_inf|Y]§Y%§!§Y§!\n\n Social Democrats influence: £labour_influence_texticon [?ROOT.labour_inf|Y]§Y%§!§Y§!\n\n Progressive influence: £Progressive_influence_texticon [?ROOT.Pro_inf|Y]§Y%§!§Y§!\n\n Socialist Parties influence: £socialist_influence_texticon [?ROOT.Soc_inf|Y]§Y%§!§Y§!\n\n Communist Parties influence: £communism_influence_texticon [?ROOT.COM_inf|Y]§Y%§!§Y§!\n\n nationalist Parties influence: £nationalist_influence_texticon [?ROOT.Nat_inf|Y]§Y%§!§Y§!\n\n Fascist Party influence: £fascism_influence_texticon [?ROOT.Fas_inf|Y]§Y%§!§Y§!\n\n Monarchy party influence: £neutrality_influence_texticon [?ROOT.Neu_inf|Y]§Y%§!§Y§!\n\nThe influence of parties shows how much the party controls your country. The increase in influence decreases with the increase in the level of influence, the higher the influence, the greater the chance of peaceful overthrow or civil war. (limit 100.00). You can change the influence of parties by giving them more power or, on the contrary, arrange routs against them. \n\nParty Power: £party_power_texticon [?ROOT.party_power|G]§Y§! \n\nParty Power is spent on decisions from this category and other categories of the mod. \nThe increase of £party_power_texticon is equal to the increase of £pol_power (limit 100.00)"
+grant_reactionary_more_influence:0 "Grant the Reactionary Party more influence"
+grant_conservative_party_more_influence:0 "Grant the Conservative Party more influence"
+grant_social_liberal_party_more_influence:0 "Grant the Social Liberal Party more influence"
+grant_Labour_party_more_influence:0 "Grant the Social Democrats more influence"
+grant_Progressive_party_more_influence:0 "Grant the Progressives more influence"
+grant_socialist_party_more_influence:0 "Grant the Democratic Socialist Party more influence"
+grant_communism_party_more_influence:0 "Grant Communism Party more influence"
+grant_fascism_party_more_influence:0 "Grant Fascism Party more influence"
+grant_monarchy_party_more_influence:0 "Grant the monarchy more influence"
+arrange_a_rout_against_democratic_party:0 "Arrange a rout against Democratic Party"
+arrange_a_rout_against_communism_party:0 "Arrange a rout against Communism Party"
+arrange_a_rout_against_fascism_party:0 "Arrange a rout against Fascism Party"
+arrange_a_rout_against_authoritarian_party:0 "Arrange a rout against Neutral Party"
+arrange_a_rout_against_nationalist_party:0 "Arrange a rout against nationalist Party"
+
+
+tt_part_vs1_cost:0 "£party_power_texticon §Y30§!"
+tt_part_vs1_cost_blocked:0 "£party_power_texticon §R30§!"
+tt_part_vs1_cost_tooltip:0 "It costs £party_power_texticon §Y30§! to take the decision"
+tt_part_vs2_cost:0 "£party_power_texticon §Y20§!"
+tt_part_vs2_cost_blocked:0 "£party_power_texticon §R20§!"
+tt_part_vs2_cost_tooltip:0 "It costs £party_power_texticon §Y20§! to take the decision"
+tt_part_vs3_cost:0 "£party_power_texticon §Y50§!"
+tt_part_vs3_cost_blocked:0 "£party_power_texticon §R50§!"
+tt_part_vs3_cost_tooltip:0 "It costs £party_power_texticon §Y50§! to take the decision"
+tt_part_vs4_cost:0 "£party_power_texticon §Y75§!"
+tt_part_vs4_cost_blocked:0 "£party_power_texticon §R75§!"
+tt_part_vs4_cost_tooltip:0 "It costs £party_power_texticon §Y75§! to take the decision"
+
+tt_d_inf:0 "Change influence £democratic_influence_texticon  — §G5.00%§!"
+tt_c_inf:0 "Change influence £communism_influence_texticon  — §G5.00%§!"
+tt_f_inf:0 "Change influence £fascism_influence_texticon  — §G5.00%§!"
+tt_n_inf:0 "Change influence £neutrality_influence_texticon  — §G5.00%§!"
+
+tt_d_meet:0 "Change influence £democratic_influence_texticon  — §G2.50%§!"
+tt_c_meet:0 "Change influence £communism_influence_texticon  — §G2.50%§!"
+tt_f_meet:0 "Change influence £fascism_influence_texticon  — §G2.50%§!"
+tt_n_meet:0 "Change influence £neutrality_influence_texticon  — §G2.50%§!"
+
+tt_d_inf20:0 "Change influence £democratic_influence_texticon  — §G20.00%§!"
+tt_c_inf20:0 "Change influence £communism_influence_texticon  — §G20.00%§!"
+tt_f_inf20:0 "Change influence £fascism_influence_texticon  — §G20.00%§!"
+tt_n_inf20:0 "Change influence £neutrality_influence_texticon  — §G20.00%§!"
+
+tt_d_inf25:0 "Change influence £democratic_influence_texticon  — §G25.00%§!"
+tt_c_inf25:0 "Change influence £communism_influence_texticon  — §G25.00%§!"
+tt_f_inf25:0 "Change influence £fascism_influence_texticon  — §G25.00%§!"
+tt_n_inf25:0 "Change influence £neutrality_influence_texticon  — §G25.00%§!"
+
+tt_d_infmi10:0 "Change influence £democratic_influence_texticon  —  §R-10.00%§!"
+tt_c_infmi10:0 "Change influence £communism_influence_texticon  —  §R-10.00%§!"
+tt_f_infmi10:0 "Change influence £fascism_influence_texticon  —  §R-10.00%§!"
+tt_n_infmi10:0 "Change influence £neutrality_influence_texticon  —  §R-10.00%§!"
+
+tt_d_infmi5:0 "Change influence £democratic_influence_texticon  —  §R-5.00%§!"
+tt_c_infmi5:0 "Change influence £communism_influence_texticon  —  §R-5.00%§!"
+tt_f_infmi5:0 "Change influence £fascism_influence_texticon  —  §R-5.00%§!"
+tt_n_infmi5:0 "Change influence £neutrality_influence_texticon  —  §R-5.00%§!"
+
+tt_d_up:0 "More than §Y15%§! influences £democratic_influence_texticon"
+tt_c_up:0 "More than §Y15%§! influences £communism_influence_texticon"
+tt_f_up:0 "More than §Y15%§! influences £fascism_influence_texticon"
+tt_n_up:0 "More than §Y15%§! influences £neutrality_influence_texticon"
+
+tt_d_rban:0 "More than §Y20%§! influences £democratic_influence_texticon"
+tt_c_rban:0 "More than §Y20%§! influences £communism_influence_texticon"
+tt_f_rban:0 "More than §Y20%§! influences £fascism_influence_texticon"
+tt_n_rban:0 "More than §Y20%§! influences £neutrality_influence_texticon"
+
+tt_d_comp:0 "The Democratic Party will lose influence and popularity. \n§RThere is a chance that the rout will fail!§!"
+tt_c_comp:0 "The Communist Party will lose influence and popularity. \n§RThere is a chance that the rout will fail!§!"
+tt_f_comp:0 "The Fascist Party will lose influence and popularity. \n§RThere is a chance that the rout will fail!§!"
+tt_n_comp:0 "The Neutral Party will lose influence and popularity. \n§RThere is a chance that the rout will fail!§!"
+
+tt_suppress_meet:0 "They probably won't like it."
+tt_cheat_election:0 "This may raise questions."
+
+#Влияние not lower - Influance not low
+
+tt_d_infm:0 "Level influences £democratic_influence_texticon not lower §Ymedium§!"
+tt_c_infm:0 "Level influences £communism_influence_texticon not lower §Ymedium§!"
+tt_f_infm:0 "Level influences £fascism_influence_texticon not lower §Ymedium§!"
+tt_n_infm:0 "Level influences £neutrality_influence_texticon not lower §Ymedium§!"
+
+tt_d_infh:0 "Level influences £democratic_influence_texticon not lower §Yhigh§!"
+tt_c_infh:0 "Level influences £communism_influence_texticon not lower §Yhigh§!"
+tt_f_infh:0 "Level influences £fascism_influence_texticon not lower §Yhigh§!"
+tt_n_infh:0 "Level influences £neutrality_influence_texticon not lower §Yhigh§!"
+
+tt_d_infvh:0 "Level influences £democratic_influence_texticon not lower §Yabsolute§!"
+tt_c_infvh:0 "Level influences £communism_influence_texticon not lower §Yabsolute§!"
+tt_f_infvh:0 "Level influences £fascism_influence_texticon not lower §Yabsolute§!"
+tt_n_infvh:0 "Level influences £neutrality_influence_texticon not lower §Yabsolute§!"
+
+tt_d_infnm:0 "Level influences £democratic_influence_texticon not higher §Ymedium§!"
+tt_c_infnm:0 "Level influences £communism_influence_texticon not higher §Ymedium§!"
+tt_f_infnm:0 "Level influences £fascism_influence_texticon not higher §Ymedium§!"
+tt_n_infnm:0 "Level influences £neutrality_influence_texticon not higher §Ymedium§!"
+
+#Время восстановления - Time Remaning
+
+tt_c_time60:0 "Recovery time: §Y60 days§!"
+
+#Parties Control
+
+raid_democratic:0 "Raids against Democrats"
+raid_democratic_desc:0 "Due to the increasing popularity of the Democratic Party, we must take action!"
+raid_communism:0 "Raids against Communists"
+raid_communism_desc:0 "Due to the increasing popularity of the Communist Party, we must take action!"
+raid_fascism:0 "Raids against Fascists"
+raid_fascism_desc:0 "Due to the increasing popularity of the Fascist Party, we must take action!"
+raid_neutrality:0 "Raids against Neutrals"
+raid_neutrality_desc:0 "Due to the increasing popularity of the Neutral Party, we must take action!"
+
+elections_reworked__parties_control:0 "Control Parties"
+democratic_party_actions:0 "Democratic Party"
+communism_party_actions:0 "Communist Party"
+fascism_party_actions:0 "Fascist Party"
+neutrality_party_actions:0 "Neutral Party"
+
+attract_foreign_investments:0 "Attract Foreign Investors"
+attract_foreign_investments_desc:0 "Funds are not superfluous!"
+freedom_nation:0 "Freedom of the Nation"
+freedom_nation_desc:0 "Freedom for the nation, for the people!"
+war_bondse:0 "The Bonds of War"
+war_bondse_desc:0 "The bonds that bind us and our allies."
+
+shock_work:0 "Shock Work"
+shock_work_desc:0 "Right now it means - NOW!"
+red_volunteers:0 "Red Volunteers"
+red_volunteers_desc:0 "Let's cover the people with our own breasts!"
+everything_for_front:0 "Everything for the Front"
+everything_for_front_desc:0 "Everything for the front! And nothing by!"
+
+militarization_politics:0 "The Policy of Militarization"
+militarization_politics_desc:0 "We will fight not for a day or two, but for the rest of our lives!"
+forced_industry:0 "Forced industry"
+forced_industry_desc:0 "Two steps ahead!"
+focus_on_war:0 "Focus on the War"
+focus_on_war_desc:0 "It's a war now, we'll take care of the civilians later."
+
+trade_benefits:0 "Trade Benefits"
+trade_benefits_desc:0 "A wad of money to this gentleman and no duties!"
+relieve_bureaucracy:0 "Relieve the Bureaucracy"
+relieve_bureaucracy_desc:0 "If you kick gentlemen in jackets out of their offices for a couple of days, it won't hurt them."
+mutually_beneficial_assistance:0 "Mutually Beneficial Assistance"
+mutually_beneficial_assistance_desc:0 "We can find a common language, especially if you have more weapons!"

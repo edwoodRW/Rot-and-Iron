@@ -1,0 +1,1851 @@
+focus_tree = {
+	id = usa_tree
+
+	country = {
+		factor = 1
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 22300 }
+
+	# ====================================================
+	# ROOT - Turner's cabinet assesses the outbreak of WWIII
+	# ====================================================
+	focus = {
+		id = USA_The_War_Begins
+		icon = GFX_USA_The_War_Begins
+		x = 2
+		y = 0
+		cost = 2
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 150
+			set_country_flag = USA_assessed_the_war
+			set_variable = { var = USA_corporate_influence value = 20 }
+			USA_update_influence_tier = yes
+			country_event = { id = USA_events.1 }
+		}
+	}
+
+	# ====================================================
+	# BRANCH 1 - Support Germany
+	# ====================================================
+	focus = {
+		id = USA_The_Turner_Doctrine
+		icon = GFX_The_Turner_Doctrine
+		x = -12
+		y = 1
+		relative_position_id = USA_The_War_Begins
+		cost = 2
+		prerequisite = { focus = USA_The_War_Begins }
+		mutually_exclusive = {
+			focus = USA_The_Containment_Reversal
+			focus = USA_The_New_New_Deal
+		}
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+			add_to_variable = { var = USA_corporate_influence value = 5 }
+			USA_update_influence_tier = yes
+			set_country_flag = USA_supports_germany
+			country_event = { id = USA_events.2 }
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+
+	focus = {
+		id = USA_Lend_Lease_to_Berlin
+		icon = GFX_Lend_Lease_to_Berlin
+		x = -12
+		y = 2
+		relative_position_id = USA_The_War_Begins
+		cost = 2
+		prerequisite = { focus = USA_The_Turner_Doctrine }
+		available = { always = yes }
+		completion_reward = {
+			set_country_flag = USA_lend_lease_active
+			country_event = { id = USA_events.21 }
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+
+	focus = {
+		id = USA_Atlantic_Alliance
+		icon = GFX_USA_Atlantic_Alliance
+		x = -12
+		y = 3
+		relative_position_id = USA_The_War_Begins
+		cost = 2
+		prerequisite = { focus = USA_Lend_Lease_to_Berlin }
+		available = { always = yes }
+		completion_reward = {
+			set_country_flag = USA_atlantic_alliance_formed
+			country_event = { id = USA_events.22 }
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+
+	focus = {
+		id = USA_Deploy_the_Expeditionary_Force
+		icon = GFX_Deploy_the_Expeditionary_Force
+		x = -12
+		y = 4
+		relative_position_id = USA_The_War_Begins
+		cost = 2
+		prerequisite = { focus = USA_Atlantic_Alliance }
+		available = {
+			OR = {
+				has_country_flag = USA_atlantic_integrated_command
+				has_country_flag = USA_atlantic_sovereign_command
+			}
+		}
+		completion_reward = {
+			add_manpower = 50000
+			add_war_support = 0.05
+			set_country_flag = USA_expeditionary_force_deployed
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1st Expeditionary Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2nd Expeditionary Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"3rd Expeditionary Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+			}
+			country_event = { id = USA_events.3 }
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	# ====================================================
+	# BRANCH 2 - Save the USSR
+	# ====================================================
+	focus = {
+		id = USA_The_Containment_Reversal
+		icon = GFX_The_Containment_Reversal
+		x = -2
+		y = 1
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_War_Begins }
+		mutually_exclusive = {
+			focus = USA_The_Turner_Doctrine
+			focus = USA_The_New_New_Deal
+		}
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 100
+			set_country_flag = USA_seeks_to_save_ussr
+			country_event = { id = USA_events.4 }
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = USA_Push_for_a_Ceasefire
+		icon = GFX_Push_for_a_Ceasefire
+		x = -4
+		y = 2
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Containment_Reversal }
+		available = {
+			OR = {
+				has_country_flag = USA_pressed_moscow_harder
+				has_country_flag = USA_waited_for_moscow
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = USA_ceasefire_push_underway
+			country_event = { id = USA_events.17 }
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = USA_War_Profiteers_Mobilize
+		icon = GFX_War_Profiteers_Mobilize
+		x = 0
+		y = 2
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Containment_Reversal }
+		available = { always = yes }
+		completion_reward = {
+			add_stability = -0.02
+			set_country_flag = USA_profiteers_mobilizing
+			add_to_variable = { var = USA_corporate_influence value = 10 }
+			USA_update_influence_tier = yes
+			country_event = { id = USA_events.18 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_The_Ceasefire_Holds
+		icon = GFX_The_Ceasefire_Holds
+		x = -4
+		y = 3
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Push_for_a_Ceasefire }
+		mutually_exclusive = {
+			focus = USA_The_War_Grinds_On
+		}
+		available = { always = yes }
+		completion_reward = {
+			add_stability = 0.05
+			set_country_flag = USA_ceasefire_achieved
+			if = {
+				limit = { GER = { has_war_with = SOV } }
+				GER = { white_peace = { tag = SOV } }
+			}
+			add_to_variable = { var = USA_corporate_influence value = -10 }
+			USA_update_influence_tier = yes
+			country_event = { id = USA_events.24 }
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				has_country_flag = USA_sabotage_exposed
+			}
+			modifier = {
+				factor = 0.3
+				has_country_flag = USA_sabotage_ignored
+			}
+		}
+	}
+
+	focus = {
+		id = USA_The_War_Grinds_On
+		icon = GFX_The_War_Grinds_On
+		x = 0
+		y = 3
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Push_for_a_Ceasefire }
+		mutually_exclusive = {
+			focus = USA_The_Ceasefire_Holds
+		}
+		available = { always = yes }
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.05
+			set_country_flag = USA_ceasefire_collapsed
+			add_to_variable = { var = USA_corporate_influence value = 10 }
+			USA_update_influence_tier = yes
+			country_event = { id = USA_events.25 }
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				has_country_flag = USA_sabotage_ignored
+			}
+			modifier = {
+				factor = 0.3
+				has_country_flag = USA_sabotage_exposed
+			}
+		}
+	}
+
+	focus = {
+		id = USA_A_Longer_War
+		icon = GFX_A_Longer_War
+		x = 0
+		y = 4
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_War_Grinds_On }
+		available = { always = yes }
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.03
+			if = {
+				limit = {
+					NOT = { has_idea = USA_total_war_economy }
+					NOT = { has_country_flag = USA_war_economy_limited }
+				}
+				add_ideas = USA_total_war_economy
+			}
+			set_country_flag = USA_committed_to_long_war
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_A_Peace_Denied
+		icon = GFX_A_Peace_Denied
+		x = 0
+		y = 5
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_A_Longer_War }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.05
+			set_country_flag = USA_legacy_peace_denied
+			country_event = { id = USA_events.19 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_The_Reform_Package
+		icon = GFX_The_Reform_Package
+		x = -4
+		y = 4
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Ceasefire_Holds }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 35
+			set_country_flag = USA_reform_package_offered
+			country_event = { id = USA_events.26 }
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = USA_Negotiated_Peace
+		icon = GFX_Negotiated_Peace
+		x = -4
+		y = 5
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_The_Reform_Package }
+		available = {
+			has_country_flag = USA_reform_package_offered
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = -0.05
+			set_country_flag = USA_brokered_peace
+			country_event = { id = USA_events.5 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	# ====================================================
+	# BRANCH 3 - Isolation
+	# ====================================================
+	focus = {
+		id = USA_The_New_New_Deal
+		icon = GFX_The_New_New_Deal
+		x = 4
+		y = 1
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_War_Begins }
+		mutually_exclusive = {
+			focus = USA_The_Turner_Doctrine
+			focus = USA_The_Containment_Reversal
+		}
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_ideas = USA_fortress_mentality
+			set_country_flag = USA_isolation_chosen
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_Domestic_Socialist_Transformation
+		icon = GFX_Domestic_Socialist_Transformation
+		x = 4
+		y = 2
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_New_New_Deal }
+		available = { always = yes }
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_socialist
+				popularity = 0.10
+			}
+			add_political_power = 75
+			set_country_flag = USA_industries_nationalised
+			country_event = { id = USA_events.6 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_Fortress_America
+		icon = GFX_Fortress_America
+		x = 4
+		y = 3
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Domestic_Socialist_Transformation }
+		available = {
+			has_country_flag = USA_industries_nationalised
+		}
+		completion_reward = {
+			set_country_flag = USA_fortress_america_declared
+			country_event = { id = USA_events.27 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	# ====================================================
+	# BRANCH 4 - The Coup
+	# ====================================================
+	focus = {
+		id = USA_The_Business_Plot_2_0
+		icon = GFX_The_Business_Plot_2_0
+		x = 22
+		y = 1
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_War_Begins }
+		available = {
+			OR = {
+				has_country_flag = USA_business_plot_revealed
+				has_country_flag = USA_legacy_pacific_century
+				has_country_flag = USA_fortress_america_declared
+				has_country_flag = USA_legacy_peace_denied
+				has_country_flag = USA_sabotage_ignored
+				check_variable = { var = USA_corporate_influence value = 60 compare = greater_than_or_equals }
+			}
+		}
+		completion_reward = {
+			set_country_flag = USA_business_plot_underway
+			country_event = { id = USA_events.7 }
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = USA_Turner_Survives
+		icon = GFX_USA_Turner_Survives
+		x = 19
+		y = 2
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Business_Plot_2_0 }
+		mutually_exclusive = {
+			focus = USA_Coup_Succeeds
+		}
+		available = {
+			has_country_flag = USA_preemptive_purge_active
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_socialist
+				popularity = 0.15
+			}
+			add_political_power = 100
+			add_stability = -0.05
+			set_country_flag = USA_coup_crushed
+			USA_purge_aftermath_effect = yes
+			country_event = { id = USA_events.8 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = USA_Coup_Succeeds
+		icon = GFX_USA_Coup_Succeeds
+		x = 24
+		y = 2
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_The_Business_Plot_2_0 }
+		mutually_exclusive = {
+			focus = USA_Turner_Survives
+		}
+		available = {
+			has_country_flag = USA_delayed_response
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "Pete Hegseth"
+				desc = "USA_pete_hegseth_desc"
+				picture = "gfx/leaders/USA/Pete_Hegseth.dds"
+				expire = "2050.1.1"
+				ideology = military_junta
+				traits = { }
+			}
+			add_party_popularity = {
+				ideology = revolutionary_socialist
+				popularity = 0.15
+			}
+			set_cosmetic_tag = USA
+			start_civil_war = {
+				ideology = revolutionary_socialist
+				size = 0.35
+			}
+			every_country = {
+				limit = {
+					has_war_with = USA
+					has_government = revolutionary_socialist
+				}
+				set_country_flag = USA_dsa_revolt_organized
+				set_cosmetic_tag = USA_revolutionary_faction
+				set_politics = {
+					ruling_party = revolutionary_socialist
+					elections_allowed = no
+				}
+				create_country_leader = {
+					name = "The DSA National Council"
+					desc = "USA_dsa_national_council_desc"
+					expire = "2050.1.1"
+					ideology = revolutionary_socialist_ideology
+					traits = { }
+				}
+				add_manpower = 45000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = USA
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"DSA People's Guard\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Workers' Defence Brigade\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Volunteer Defence Brigade\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+						owner = PREV
+					}
+				}
+			}
+			add_manpower = 80000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 10000
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+				producer = USA
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1st National Guard Division\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2nd National Guard Division\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"3rd National Guard Division\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"4th National Guard Division\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"5th National Guard Division\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"6th National Guard Division\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"7th National Guard Division\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"8th National Guard Division\" division_template = \"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+					owner = ROOT
+				}
+			}
+			add_political_power = 200
+			set_country_flag = USA_coup_succeeded
+			news_event = { id = USA_events.100 }
+			news_event = { id = USA_events.101 days = 2 }
+			country_event = { id = USA_events.9 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# ====================================================
+	# BRANCH 5 - Pacific First
+	# ====================================================
+	focus = {
+		id = USA_Pivot_to_Asia
+		icon = GFX_Pivot_to_Asia
+		x = 12
+		y = 1
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_War_Begins }
+		available = { always = yes }
+		completion_reward = {
+			add_navy_experience = 25
+			set_country_flag = USA_pivoted_to_asia
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_The_Pacific_Alliance
+		icon = GFX_The_Pacific_Alliance
+		x = 12
+		y = 2
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Pivot_to_Asia }
+		available = { always = yes }
+		completion_reward = {
+			set_country_flag = USA_pacific_alliance_formed
+			country_event = { id = USA_events.28 }
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_Operation_Pacific_Storm
+		icon = GFX_USA_Operation_Pacific_Storm
+		x = 12
+		y = 3
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_The_Pacific_Alliance }
+		available = {
+			OR = {
+				has_country_flag = USA_pacific_planning_shared
+				has_country_flag = USA_pacific_commitment_limited
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.1
+			set_country_flag = USA_pacific_storm_launched
+			country_event = { id = USA_events.10 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	# ====================================================
+	# BRANCH 1 EXTENSION - Full Co-Belligerency
+	# (continues from USA_Deploy_the_Expeditionary_Force)
+	# ====================================================
+	focus = {
+		id = USA_Full_Co_Belligerency
+		icon = GFX_Full_Co_Belligerency
+		x = -12
+		y = 5
+		relative_position_id = USA_The_War_Begins
+		cost = 2
+		prerequisite = { focus = USA_Deploy_the_Expeditionary_Force }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 75
+			add_war_support = 0.05
+			set_country_flag = USA_co_belligerent_status
+			country_event = { id = USA_events.11 }
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = USA_Joint_Operations_Command
+		icon = GFX_Joint_Operations_Command
+		x = -12
+		y = 6
+		relative_position_id = USA_The_War_Begins
+		cost = 1
+		prerequisite = { focus = USA_Full_Co_Belligerency }
+		available = { always = yes }
+		completion_reward = {
+			add_ideas = USA_atlantic_command
+			set_country_flag = USA_joint_command_established
+			country_event = { id = USA_events.23 }
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = USA_Arm_the_Eastern_Front
+		icon = GFX_Arm_the_Eastern_Front
+		x = -12
+		y = 7
+		relative_position_id = USA_The_War_Begins
+		cost = 1
+		prerequisite = { focus = USA_Joint_Operations_Command }
+		available = { always = yes }
+		completion_reward = {
+			add_manpower = 25000
+			add_war_support = 0.05
+			add_ideas = USA_arsenal_of_the_coalition
+			set_country_flag = USA_arming_eastern_front
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = USA_The_Soviet_Collapse
+		icon = GFX_The_Soviet_Collapse
+		x = -12
+		y = 8
+		relative_position_id = USA_The_War_Begins
+		cost = 2
+		prerequisite = { focus = USA_Arm_the_Eastern_Front }
+		available = {
+			SOV = { has_capitulated = yes }
+		}
+		completion_reward = {
+			add_political_power = 100
+			set_country_flag = USA_witnessed_soviet_collapse
+			country_event = { id = USA_events.12 }
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = USA_A_New_World_Order
+		icon = GFX_A_New_World_Order
+		x = -15
+		y = 9
+		relative_position_id = USA_The_War_Begins
+		cost = 1
+		prerequisite = { focus = USA_The_Soviet_Collapse }
+		mutually_exclusive = {
+			focus = USA_Contain_the_Victor
+		}
+		available = { always = yes }
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_socialist
+				popularity = 0.05
+			}
+			country_event = { id = USA_events.29 }
+			set_country_flag = USA_pursues_multipolar_order
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_Contain_the_Victor
+		icon = GFX_Contain_the_Victor
+		x = -9
+		y = 9
+		relative_position_id = USA_The_War_Begins
+		cost = 1
+		prerequisite = { focus = USA_The_Soviet_Collapse }
+		mutually_exclusive = {
+			focus = USA_A_New_World_Order
+		}
+		available = { always = yes }
+		completion_reward = {
+			add_stability = 0.03
+			country_event = { id = USA_events.30 }
+			set_country_flag = USA_contains_germany
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_Rebuild_Eastern_Europe
+		icon = GFX_Rebuild_Eastern_Europe
+		x = -15
+		y = 10
+		relative_position_id = USA_The_War_Begins
+		cost = 2
+		prerequisite = { focus = USA_A_New_World_Order }
+		available = {
+			has_country_flag = USA_pursues_multipolar_order
+			OR = {
+				has_country_flag = USA_european_reconstruction_first
+				has_country_flag = USA_european_aid_conditional
+			}
+		}
+		completion_reward = {
+			set_country_flag = USA_rebuilding_eastern_europe
+			USA_reconstruction_aid_effect = yes
+			add_stability = 0.04
+			add_political_power = 50
+			add_manpower = 25000
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_Quiet_Rearmament
+		icon = GFX_Quiet_Rearmament
+		x = -9
+		y = 10
+		relative_position_id = USA_The_War_Begins
+		cost = 1
+		prerequisite = { focus = USA_Contain_the_Victor }
+		available = {
+			has_country_flag = USA_contains_germany
+			OR = {
+				has_country_flag = USA_contains_germany_openly
+				has_country_flag = USA_contains_germany_diplomatically
+			}
+		}
+		completion_reward = {
+			set_country_flag = USA_quietly_rearming
+			USA_quiet_rearmament_effect = yes
+			add_army_experience = 25
+			add_war_support = 0.05
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_The_Peace_Turner_Built
+		icon = GFX_The_Peace_Turner_Built
+		x = -15
+		y = 11
+		relative_position_id = USA_The_War_Begins
+		cost = 2
+		prerequisite = { focus = USA_Rebuild_Eastern_Europe }
+		available = {
+			has_country_flag = USA_rebuilding_eastern_europe
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			set_country_flag = USA_legacy_multipolar_peace
+			USA_independent_recovery_effect = yes
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_The_Cold_Peace
+		icon = GFX_The_Cold_Peace
+		x = -9
+		y = 11
+		relative_position_id = USA_The_War_Begins
+		cost = 1
+		prerequisite = { focus = USA_Quiet_Rearmament }
+		available = {
+			has_country_flag = USA_quietly_rearming
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_army_experience = 15
+			add_war_support = 0.03
+			set_country_flag = USA_legacy_cold_peace
+			USA_cold_peace_effect = yes
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_The_Eastern_Compact
+		icon = GFX_The_Eastern_Compact
+		x = -15
+		y = 12
+		relative_position_id = USA_The_War_Begins
+		cost = 2
+		prerequisite = { focus = USA_The_Peace_Turner_Built }
+		available = {
+			has_country_flag = USA_legacy_multipolar_peace
+		}
+		completion_reward = {
+			set_country_flag = USA_eastern_compact_founded
+			USA_eastern_compact_effect = yes
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_A_Europe_of_Many_Peoples
+		icon = GFX_A_Europe_of_Many_Peoples
+		x = -15
+		y = 13
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Eastern_Compact }
+		available = {
+			has_country_flag = USA_eastern_compact_founded
+		}
+		completion_reward = {
+			set_country_flag = USA_legacy_europe_of_peoples
+			add_stability = 0.03
+			country_event = { id = USA_events.34 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_The_Atlantic_Shield
+		icon = GFX_The_Atlantic_Shield
+		x = -9
+		y = 12
+		relative_position_id = USA_The_War_Begins
+		cost = 2
+		prerequisite = { focus = USA_The_Cold_Peace }
+		available = {
+			has_country_flag = USA_legacy_cold_peace
+		}
+		completion_reward = {
+			set_country_flag = USA_atlantic_shield_built
+			USA_atlantic_shield_effect = yes
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_The_Long_Watch
+		icon = GFX_The_Long_Watch
+		x = -9
+		y = 13
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Atlantic_Shield }
+		available = {
+			has_country_flag = USA_atlantic_shield_built
+		}
+		completion_reward = {
+			set_country_flag = USA_legacy_long_watch
+			add_war_support = 0.03
+			country_event = { id = USA_events.35 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	# ====================================================
+	# BRANCH 2 EXTENSION - After Negotiated Peace
+	# ====================================================
+	focus = {
+		id = USA_Washington_Moscow_Accord
+		icon = GFX_Washington_Moscow_Accord
+		x = -4
+		y = 6
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Negotiated_Peace }
+		available = {
+			has_country_flag = USA_brokered_peace
+		}
+		completion_reward = {
+			add_political_power = 75
+			set_country_flag = USA_moscow_accord_signed
+			if = {
+				limit = { GER = { has_war_with = SOV } }
+				GER = { white_peace = { tag = SOV } }
+			}
+			country_event = { id = USA_events.13 }
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_Leverage_for_Reform
+		icon = GFX_Leverage_for_Reform
+		x = -6
+		y = 7
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Washington_Moscow_Accord }
+		mutually_exclusive = {
+			focus = USA_Pragmatic_Silence
+		}
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = revolutionary_socialist
+				popularity = 0.05
+			}
+			set_country_flag = USA_pushes_soviet_reform
+			USA_moscow_pressure_effect = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_Pragmatic_Silence
+		icon = GFX_Pragmatic_Silence
+		x = -2
+		y = 7
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Washington_Moscow_Accord }
+		mutually_exclusive = {
+			focus = USA_Leverage_for_Reform
+		}
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			set_country_flag = USA_stays_silent_on_moscow
+			USA_moscow_silence_effect = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_The_Rashkin_Ultimatum
+		icon = GFX_The_Rashkin_Ultimatum
+		x = -6
+		y = 8
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Leverage_for_Reform }
+		available = {
+			has_country_flag = USA_pushes_soviet_reform
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_war_support = -0.03
+			set_country_flag = USA_issued_rashkin_ultimatum
+			country_event = { id = USA_events.32 }
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_Look_the_Other_Way
+		icon = GFX_Look_the_Other_Way
+		x = -2
+		y = 8
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Pragmatic_Silence }
+		available = {
+			has_country_flag = USA_stays_silent_on_moscow
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.03
+			add_popularity = {
+				ideology = moderate_socialist
+				popularity = 0.05
+			}
+			set_country_flag = USA_looked_away
+			USA_moscow_silence_effect = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_A_Reformed_Union
+		icon = GFX_A_Reformed_Union
+		x = -6
+		y = 9
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_The_Rashkin_Ultimatum }
+		available = {
+			has_country_flag = USA_issued_rashkin_ultimatum
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = USA_reformed_union
+			set_country_flag = USA_legacy_reformed_union
+			country_event = { id = USA_events.33 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_The_Price_of_Peace
+		icon = GFX_The_Price_of_Peace
+		x = -2
+		y = 9
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_Look_the_Other_Way }
+		available = {
+			has_country_flag = USA_looked_away
+		}
+		completion_reward = {
+			add_stability = 0.05
+			if = {
+				limit = { NOT = { has_idea = USA_ceasefire_guarantor } }
+				remove_ideas = USA_ceasefire_compromise
+				add_ideas = USA_ceasefire_guarantor
+			}
+			set_country_flag = USA_legacy_price_of_peace
+			USA_grain_dependency_effect = yes
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	# ====================================================
+	# BRANCH 3 EXTENSION - After Fortress America
+	# ====================================================
+	focus = {
+		id = USA_The_Pan_American_Union
+		icon = GFX_The_Pan_American_Union
+		x = 4
+		y = 4
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Fortress_America }
+		available = {
+			has_country_flag = USA_fortress_america_declared
+		}
+		completion_reward = {
+			set_country_flag = USA_pan_american_union_founded
+			if = {
+				limit = {
+					NOT = { is_in_faction = yes }
+				}
+				create_faction = USA_pan_american_union_faction
+				MEX = {
+					if = {
+						limit = {
+							NOT = { is_in_faction = yes }
+							NOT = { has_war_with = USA }
+						}
+						add_to_faction = USA
+					}
+				}
+				CUB = {
+					if = {
+						limit = {
+							NOT = { is_in_faction = yes }
+							NOT = { has_war_with = USA }
+						}
+						add_to_faction = USA
+					}
+				}
+				BRA = {
+					if = {
+						limit = {
+							NOT = { is_in_faction = yes }
+							NOT = { has_war_with = USA }
+						}
+						add_to_faction = USA
+					}
+				}
+			}
+			country_event = { id = USA_events.31 }
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_Courting_Mexico_City
+		icon = GFX_Courting_Mexico_City
+		x = 4
+		y = 5
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Pan_American_Union }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = moderate_socialist
+				popularity = 0.05
+			}
+			set_country_flag = USA_courted_mexico_city
+			USA_mexico_partnership_effect = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_The_Southern_Cone_Question
+		icon = GFX_USA_The_Southern_Cone_Question
+		x = 4
+		y = 6
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Courting_Mexico_City }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = USA_southern_cone_engaged
+			country_event = { id = USA_events.14 }
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_The_World_Finds_Us
+		icon = GFX_USA_The_World_Finds_Us
+		x = 2
+		y = 7
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_The_Southern_Cone_Question }
+		mutually_exclusive = {
+			focus = USA_The_Wall_Holds
+		}
+		available = {
+			has_country_flag = USA_hemisphere_supports_opposition
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = USA_hemispheric_union
+			set_country_flag = USA_legacy_reluctant_engagement
+			USA_hemisphere_engagement_effect = yes
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_The_Wall_Holds
+		icon = GFX_USA_The_Wall_Holds
+		x = 6
+		y = 7
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_The_Southern_Cone_Question }
+		mutually_exclusive = {
+			focus = USA_The_World_Finds_Us
+		}
+		available = {
+			has_country_flag = USA_hemisphere_limits_response
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = USA_fortress_mentality
+			set_country_flag = USA_legacy_the_wall_holds
+			USA_the_wall_holds_effect = yes
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	# ====================================================
+	# BRANCH 5 EXTENSION - After Operation Pacific Storm
+	# ====================================================
+	focus = {
+		id = USA_The_Two_Front_Question
+		icon = GFX_USA_The_Two_Front_Question
+		x = 12
+		y = 4
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Operation_Pacific_Storm }
+		available = {
+			has_country_flag = USA_pacific_storm_launched
+			OR = {
+				has_country_flag = USA_pressed_the_advantage
+				has_country_flag = USA_held_at_demarcation
+			}
+		}
+		completion_reward = {
+			add_political_power = 75
+			set_country_flag = USA_faces_two_front_question
+			country_event = { id = USA_events.15 }
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_Total_Pacific_Mobilization
+		icon = GFX_USA_Total_Pacific_Mobilization
+		x = 10
+		y = 5
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Two_Front_Question }
+		mutually_exclusive = {
+			focus = USA_Stabilize_and_Withdraw
+		}
+		available = {
+			has_country_flag = USA_two_fronts_accepted
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = USA_pacific_mobilization
+			set_country_flag = USA_total_pacific_mobilization
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_Stabilize_and_Withdraw
+		icon = GFX_USA_Stabilize_and_Withdraw
+		x = 14
+		y = 5
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Two_Front_Question }
+		mutually_exclusive = {
+			focus = USA_Total_Pacific_Mobilization
+		}
+		available = {
+			has_country_flag = USA_two_fronts_rejected
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_ideas = USA_pacific_withdrawal
+			set_country_flag = USA_stabilized_and_withdrew
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USA_The_Pacific_Century
+		icon = GFX_USA_The_Pacific_Century
+		x = 10
+		y = 6
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_Total_Pacific_Mobilization }
+		available = {
+			has_country_flag = USA_total_pacific_mobilization
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = USA_pacific_coordination
+			set_country_flag = USA_legacy_pacific_century
+			if = {
+				limit = {
+					NOT = { has_country_flag = USA_business_plot_underway }
+					NOT = { has_country_flag = USA_business_plot_revealed }
+				}
+				country_event = { id = USA_events.36 }
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_An_Uneasy_Truce
+		icon = GFX_USA_An_Uneasy_Truce
+		x = 14
+		y = 6
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_Stabilize_and_Withdraw }
+		available = {
+			has_country_flag = USA_stabilized_and_withdrew
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = USA_ceasefire_guarantor
+			set_country_flag = USA_legacy_uneasy_truce
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	# ====================================================
+	# BRANCH 4 EXTENSION - After Turner Survives / Coup Succeeds
+	# ====================================================
+	focus = {
+		id = USA_The_Reckoning
+		icon = GFX_USA_The_Reckoning
+		x = 19
+		y = 3
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Turner_Survives }
+		available = {
+			has_country_flag = USA_coup_crushed
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = revolutionary_socialist
+				popularity = 0.10
+			}
+			set_country_flag = USA_the_reckoning_complete
+			country_event = { id = USA_events.16 }
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = USA_A_Party_Remade
+		icon = GFX_USA_A_Party_Remade
+		x = 19
+		y = 4
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_The_Reckoning }
+		available = {
+			has_country_flag = USA_the_reckoning_complete
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = USA_reformed_union
+			set_country_flag = USA_legacy_party_remade
+			
+			set_politics = {
+				ruling_party = revolutionary_socialist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "Nina Turner"
+				desc = "USA_nina_turner_desc"
+				picture = "gfx/leaders/USA/Nina_Turner.dds"
+				expire = "2050.1.1"
+				ideology = revolutionary_socialist_ideology
+				traits = { 				}
+			}
+			set_cosmetic_tag = USA_revolutionary_socialist_cosmetics
+			USA_party_remade_abroad_effect = yes
+			load_focus_tree = {
+				tree = USA_revolutionary_socialist_tree
+				keep_completed = yes
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_The_Junta_Consolidates
+		icon = GFX_USA_The_Junta_Consolidates
+		x = 24
+		y = 3
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Coup_Succeeds }
+		available = {
+			has_country_flag = USA_coup_succeeded
+		}
+		completion_reward = {
+			add_stability = 0.05
+			set_country_flag = USA_junta_consolidated
+			USA_loyalist_offensive_effect = yes
+			country_event = { id = USA_events.20 }
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = USA_Martial_Law_Made_Permanent
+		icon = GFX_USA_Martial_Law_Made_Permanent
+		x = 24
+		y = 4
+		relative_position_id = USA_The_War_Begins
+		cost = 4
+		prerequisite = { focus = USA_The_Junta_Consolidates }
+		available = {
+			has_country_flag = USA_junta_consolidated
+			OR = {
+				has_country_flag = USA_junta_security_council
+				has_country_flag = USA_junta_administrative_council
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = -50
+			set_country_flag = USA_legacy_martial_law_permanent
+			USA_martial_law_effect = yes
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_Rebuild_the_Union
+		icon = GFX_Rebuild_the_Union
+		x = 24
+		y = 5
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Martial_Law_Made_Permanent }
+		available = {
+			has_country_flag = USA_legacy_martial_law_permanent
+			has_civil_war = no
+		}
+		completion_reward = {
+			add_ideas = USA_post_civil_war_reconstruction
+			add_stability = 0.05
+			add_political_power = 50
+			set_country_flag = USA_post_civil_war_reconstruction_started
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = USA_The_Security_State_Endures
+		icon = GFX_The_Security_State_Endures
+		x = 22
+		y = 6
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Rebuild_the_Union }
+		mutually_exclusive = {
+			focus = USA_A_Civilian_Recovery_Cabinet
+		}
+		available = { always = yes }
+		completion_reward = {
+			remove_ideas = USA_junta_civilian_facade
+			add_ideas = USA_junta_security_state
+			add_stability = 0.03
+			add_war_support = 0.05
+			set_country_flag = USA_postwar_security_state
+			USA_security_state_abroad_effect = yes
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	# BRANCH 4 - SECURITY STATE FOLLOW-UP
+	focus = {
+		id = USA_National_Security_Directorate
+		icon = GFX_National_Security_Directorate
+		x = 24
+		y = 7
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Security_State_Endures }
+		visible = { has_country_flag = USA_postwar_security_state }
+		available = { has_country_flag = USA_postwar_security_state }
+		completion_reward = {
+			add_ideas = USA_national_security_directorate
+			add_political_power = 50
+			set_country_flag = USA_security_directorate_established
+			news_event = { id = USA_events.103 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_Operation_Civic_Shield
+		icon = GFX_Operation_Civic_Shield
+		x = 22
+		y = 8
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_National_Security_Directorate }
+		mutually_exclusive = { focus = USA_The_Atlantic_Perimeter }
+		visible = { has_country_flag = USA_postwar_security_state }
+		available = { has_country_flag = USA_security_directorate_established }
+		completion_reward = {
+			add_ideas = USA_civic_security_program
+			add_stability = -0.02
+			add_political_power = 50
+			set_country_flag = USA_civic_shield_authorized
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	focus = {
+		id = USA_The_Atlantic_Perimeter
+		icon = GFX_The_Atlantic_Perimeter
+		x = 26
+		y = 8
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_National_Security_Directorate }
+		mutually_exclusive = { focus = USA_Operation_Civic_Shield }
+		visible = { has_country_flag = USA_postwar_security_state }
+		available = { has_country_flag = USA_security_directorate_established }
+		completion_reward = {
+			add_ideas = USA_atlantic_perimeter
+			add_war_support = 0.03
+			set_country_flag = USA_atlantic_perimeter_authorized
+			news_event = { id = USA_events.104 }
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_The_Loyalty_Bureaus
+		icon = GFX_The_Loyalty_Bureaus
+		x = 22
+		y = 9
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Operation_Civic_Shield }
+		visible = { has_country_flag = USA_postwar_security_state }
+		available = { has_country_flag = USA_civic_shield_authorized }
+		completion_reward = {
+			add_ideas = USA_loyalty_bureaus
+			add_political_power = 75
+			add_stability = -0.03
+			set_country_flag = USA_loyalty_bureaus_active
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	focus = {
+		id = USA_The_Continental_Arsenal
+		icon = GFX_The_Continental_Arsenal
+		x = 26
+		y = 9
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Atlantic_Perimeter }
+		visible = { has_country_flag = USA_postwar_security_state }
+		available = { has_country_flag = USA_atlantic_perimeter_authorized }
+		completion_reward = {
+			add_ideas = USA_continental_arsenal
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 8000
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 800
+				producer = USA
+			}
+			set_country_flag = USA_continental_arsenal_ready
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_America_Under_Watch
+		icon = GFX_America_Under_Watch
+		x = 22
+		y = 10
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Loyalty_Bureaus }
+		visible = { has_country_flag = USA_postwar_security_state }
+		available = { has_country_flag = USA_loyalty_bureaus_active }
+		completion_reward = {
+			remove_ideas = USA_civic_security_program
+			remove_ideas = USA_loyalty_bureaus
+			add_ideas = USA_america_under_watch
+			add_stability = 0.05
+			add_war_support = 0.03
+			add_political_power = -75
+			set_country_flag = USA_america_under_watch
+			news_event = { id = USA_events.105 }
+			load_focus_tree = {
+				tree = USA_security_nationalist_tree
+				keep_completed = yes
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	focus = {
+		id = USA_The_Hemisphere_Armed
+		icon = GFX_The_Hemisphere_Armed
+		x = 26
+		y = 10
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_The_Continental_Arsenal }
+		visible = { has_country_flag = USA_postwar_security_state }
+		available = { has_country_flag = USA_continental_arsenal_ready }
+		completion_reward = {
+			add_ideas = USA_hemisphere_armed
+			add_manpower = 80000
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1000
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 500
+				producer = USA
+			}
+			set_country_flag = USA_hemisphere_armed
+			news_event = { id = USA_events.106 }
+			load_focus_tree = {
+				tree = USA_hemispheric_nationalist_tree
+				keep_completed = yes
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = USA_A_Civilian_Recovery_Cabinet
+		icon = GFX_A_Civilian_Recovery_Cabinet
+		x = 26
+		y = 6
+		relative_position_id = USA_The_War_Begins
+		cost = 3
+		prerequisite = { focus = USA_Rebuild_the_Union }
+		mutually_exclusive = {
+			focus = USA_The_Security_State_Endures
+		}
+		available = { always = yes }
+		completion_reward = {
+			remove_ideas = USA_junta_security_state
+			add_ideas = USA_junta_civilian_facade
+			add_stability = 0.08
+			add_war_support = -0.03
+			add_political_power = 50
+			set_country_flag = USA_postwar_civilian_cabinet
+			USA_civilian_cabinet_abroad_effect = yes
+			load_focus_tree = {
+				tree = USA_civilian_recovery_tree
+				keep_completed = yes
+			}
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+}

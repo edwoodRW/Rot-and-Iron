@@ -1,0 +1,72 @@
+bookmarks = {
+    bookmark = {
+        name = "BLITZKRIEG_NAME"
+        desc = "BLITZKRIEG_DESC"
+        date = 2026.1.1.12
+        picture = "GFX_select_date_1939"
+        default_country = "GER"
+
+        "SCO"={
+            history = "SCO_BLITZKRIEG_DESC"
+            ideology = moderate_socialist
+            ideas={
+            
+            }
+        }
+        "FRA"={
+            history = "FRA_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+                idea_eu_member
+                idea_united_nations_security_council_member
+            }
+        }
+        "GER"={
+            history = "GER_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+                idea_GER_german_legacy
+                idea_eu_member
+                GER_bundeswehr_shortcomings
+            }
+        }
+        "CAN"={
+            history = "CAN_BLITZKRIEG_DESC"
+            ideology = conservative
+            ideas = {
+            }
+        }
+        "SOV"={
+            history = "SOV_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+                idea_united_nations_security_council_member
+                idea_eu_sanctions
+            }
+        }
+        "ENG"={
+            history = "ENG_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+                Fragile_Coalition
+                The_2020s_Debt_Hangover
+                Border_Emergency
+                The_Green_Surge
+            }
+        }
+        "USA"={
+            history = "USA_BLITZKRIEG_DESC"
+            ideology = social_liberal
+            ideas = {
+                idea_USA_political_establishment
+                american_militarism
+                idea_united_nations_security_council_member
+            }
+        }
+
+        effect = {
+            randomize_weather = 12345
+
+        }
+    }
+}

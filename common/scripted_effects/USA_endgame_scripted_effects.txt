@@ -1,0 +1,968 @@
+USA_reconstruction_aid_effect = {
+	hidden_effect = {
+			if = {
+				limit = {
+					country_exists = POL
+					NOT = { POL = { has_war_with = USA } }
+				}
+				POL = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = UKR
+					NOT = { UKR = { has_war_with = USA } }
+				}
+				UKR = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = BLR
+					NOT = { BLR = { has_war_with = USA } }
+				}
+				BLR = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LIT
+					NOT = { LIT = { has_war_with = USA } }
+				}
+				LIT = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LAT
+					NOT = { LAT = { has_war_with = USA } }
+				}
+				LAT = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = EST
+					NOT = { EST = { has_war_with = USA } }
+				}
+				EST = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = FIN
+					NOT = { FIN = { has_war_with = USA } }
+				}
+				FIN = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ROM
+					NOT = { ROM = { has_war_with = USA } }
+				}
+				ROM = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HUN
+					NOT = { HUN = { has_war_with = USA } }
+				}
+				HUN = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+	}
+	custom_effect_tooltip = USA_tt_reconstruction_aid
+}
+
+
+USA_independent_recovery_effect = {
+	hidden_effect = {
+			if = {
+				limit = {
+					country_exists = POL
+					NOT = { POL = { has_war_with = USA } }
+				}
+				POL = {
+					add_ideas = USA_independent_recovery
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+				give_guarantee = POL
+			}
+			if = {
+				limit = {
+					country_exists = UKR
+					NOT = { UKR = { has_war_with = USA } }
+				}
+				UKR = {
+					add_ideas = USA_independent_recovery
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+				give_guarantee = UKR
+			}
+			if = {
+				limit = {
+					country_exists = BLR
+					NOT = { BLR = { has_war_with = USA } }
+				}
+				BLR = {
+					add_ideas = USA_independent_recovery
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+				give_guarantee = BLR
+			}
+			if = {
+				limit = {
+					country_exists = LIT
+					NOT = { LIT = { has_war_with = USA } }
+				}
+				LIT = {
+					add_ideas = USA_independent_recovery
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+				give_guarantee = LIT
+			}
+			if = {
+				limit = {
+					country_exists = LAT
+					NOT = { LAT = { has_war_with = USA } }
+				}
+				LAT = {
+					add_ideas = USA_independent_recovery
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+				give_guarantee = LAT
+			}
+			if = {
+				limit = {
+					country_exists = EST
+					NOT = { EST = { has_war_with = USA } }
+				}
+				EST = {
+					add_ideas = USA_independent_recovery
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+				give_guarantee = EST
+			}
+			if = {
+				limit = {
+					country_exists = FIN
+					NOT = { FIN = { has_war_with = USA } }
+				}
+				FIN = {
+					add_ideas = USA_independent_recovery
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+				give_guarantee = FIN
+			}
+			if = {
+				limit = {
+					country_exists = ROM
+					NOT = { ROM = { has_war_with = USA } }
+				}
+				ROM = {
+					add_ideas = USA_independent_recovery
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+				give_guarantee = ROM
+			}
+			if = {
+				limit = {
+					country_exists = HUN
+					NOT = { HUN = { has_war_with = USA } }
+				}
+				HUN = {
+					add_ideas = USA_independent_recovery
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+				give_guarantee = HUN
+			}
+		if = {
+			limit = { country_exists = GER }
+			GER = { add_opinion_modifier = { target = USA modifier = USA_rival_reconstruction } }
+		}
+	}
+	custom_effect_tooltip = USA_tt_independent_recovery
+}
+
+
+USA_cold_peace_effect = {
+	hidden_effect = {
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 15000 producer = USA }
+		add_equipment_to_stockpile = { type = support_equipment amount = 1500 producer = USA }
+		add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 producer = USA }
+		add_manpower = 100000
+		if = {
+			limit = { has_country_flag = USA_contains_germany_openly }
+				if = {
+					limit = {
+						country_exists = POL
+						NOT = { POL = { has_war_with = USA } }
+					}
+					give_guarantee = POL
+					POL = {
+						add_opinion_modifier = { target = USA modifier = USA_cold_peace_guarantee }
+					}
+				}
+				if = {
+					limit = {
+						country_exists = UKR
+						NOT = { UKR = { has_war_with = USA } }
+					}
+					give_guarantee = UKR
+					UKR = {
+						add_opinion_modifier = { target = USA modifier = USA_cold_peace_guarantee }
+					}
+				}
+				if = {
+					limit = {
+						country_exists = FIN
+						NOT = { FIN = { has_war_with = USA } }
+					}
+					give_guarantee = FIN
+					FIN = {
+						add_opinion_modifier = { target = USA modifier = USA_cold_peace_guarantee }
+					}
+				}
+				if = {
+					limit = {
+						country_exists = ROM
+						NOT = { ROM = { has_war_with = USA } }
+					}
+					give_guarantee = ROM
+					ROM = {
+						add_opinion_modifier = { target = USA modifier = USA_cold_peace_guarantee }
+					}
+				}
+				if = {
+					limit = {
+						country_exists = LIT
+						NOT = { LIT = { has_war_with = USA } }
+					}
+					give_guarantee = LIT
+					LIT = {
+						add_opinion_modifier = { target = USA modifier = USA_cold_peace_guarantee }
+					}
+				}
+				if = {
+					limit = {
+						country_exists = LAT
+						NOT = { LAT = { has_war_with = USA } }
+					}
+					give_guarantee = LAT
+					LAT = {
+						add_opinion_modifier = { target = USA modifier = USA_cold_peace_guarantee }
+					}
+				}
+				if = {
+					limit = {
+						country_exists = EST
+						NOT = { EST = { has_war_with = USA } }
+					}
+					give_guarantee = EST
+					EST = {
+						add_opinion_modifier = { target = USA modifier = USA_cold_peace_guarantee }
+					}
+				}
+			if = {
+				limit = { country_exists = GER }
+				GER = { add_opinion_modifier = { target = USA modifier = USA_cold_peace_rivalry } }
+			}
+		}
+		if = {
+			limit = { has_country_flag = USA_contains_germany_diplomatically }
+			if = {
+				limit = { country_exists = GER }
+				GER = { add_opinion_modifier = { target = USA modifier = USA_cold_peace_dialogue } }
+			}
+		}
+	}
+	custom_effect_tooltip = USA_tt_cold_peace
+}
+
+
+USA_quiet_rearmament_effect = {
+	hidden_effect = {
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 8000 producer = USA }
+		add_equipment_to_stockpile = { type = support_equipment amount = 800 producer = USA }
+		add_manpower = 60000
+	}
+	custom_effect_tooltip = USA_tt_quiet_rearmament
+}
+
+
+USA_moscow_pressure_effect = {
+	hidden_effect = {
+		if = {
+			limit = { country_exists = SOV }
+			SOV = {
+				add_stability = -0.05
+				add_opinion_modifier = { target = USA modifier = USA_moscow_pressured }
+			}
+		}
+	}
+	custom_effect_tooltip = USA_tt_moscow_pressure
+}
+
+
+USA_moscow_silence_effect = {
+	hidden_effect = {
+		if = {
+			limit = { country_exists = SOV }
+			SOV = {
+				add_stability = 0.03
+				add_political_power = 50
+				add_opinion_modifier = { target = USA modifier = USA_moscow_courted }
+			}
+		}
+	}
+	custom_effect_tooltip = USA_tt_moscow_silence
+}
+
+
+USA_soviet_thaw_effect = {
+	hidden_effect = {
+		if = {
+			limit = { country_exists = SOV }
+			SOV = {
+				add_ideas = USA_soviet_thaw
+				add_stability = 0.05
+				add_opinion_modifier = { target = USA modifier = USA_moscow_courted }
+			}
+		}
+	}
+	custom_effect_tooltip = USA_tt_soviet_thaw
+}
+
+
+USA_grain_dependency_effect = {
+	hidden_effect = {
+		if = {
+			limit = { country_exists = SOV }
+			SOV = {
+				add_ideas = USA_soviet_grain_dependency
+				add_stability = 0.05
+				add_opinion_modifier = { target = USA modifier = USA_moscow_courted }
+			}
+		}
+	}
+	custom_effect_tooltip = USA_tt_grain_dependency
+}
+
+
+USA_mexico_partnership_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				country_exists = MEX
+				NOT = { MEX = { has_war_with = USA } }
+			}
+			give_guarantee = MEX
+			MEX = {
+				add_ideas = USA_hemispheric_partner
+				add_stability = 0.03
+				add_opinion_modifier = { target = USA modifier = USA_hemispheric_partnership }
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = USA }
+				add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = USA }
+			}
+		}
+	}
+	custom_effect_tooltip = USA_tt_mexico_partnership
+}
+
+
+USA_argentina_opposition_effect = {
+	hidden_effect = {
+		if = {
+			limit = { country_exists = ARG }
+			ARG = {
+				add_ideas = USA_argentine_unrest
+				add_stability = -0.1
+				add_opinion_modifier = { target = USA modifier = USA_argentina_interference }
+			}
+		}
+		if = {
+			limit = { country_exists = BRA }
+			BRA = { add_opinion_modifier = { target = USA modifier = USA_hemispheric_partnership } }
+		}
+		if = {
+			limit = { country_exists = MEX }
+			MEX = { add_opinion_modifier = { target = USA modifier = USA_hemispheric_partnership } }
+		}
+	}
+	custom_effect_tooltip = USA_tt_argentina_opposition
+}
+
+
+USA_argentina_asylum_effect = {
+	hidden_effect = {
+		if = {
+			limit = { country_exists = ARG }
+			ARG = {
+				add_stability = -0.03
+				add_opinion_modifier = { target = USA modifier = USA_argentina_interference }
+			}
+		}
+		if = {
+			limit = { country_exists = BRA }
+			BRA = { add_opinion_modifier = { target = USA modifier = USA_hemispheric_partnership } }
+		}
+	}
+	custom_effect_tooltip = USA_tt_argentina_asylum
+}
+
+
+USA_hemisphere_engagement_effect = {
+	hidden_effect = {
+		if = {
+			limit = { country_exists = ARG }
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ARG
+			}
+			ARG = { add_stability = -0.05 }
+		}
+		add_manpower = 30000
+	}
+	custom_effect_tooltip = USA_tt_hemisphere_engagement
+}
+
+
+USA_the_wall_holds_effect = {
+	hidden_effect = {
+		add_manpower = 20000
+		if = {
+			limit = { country_exists = BRA }
+			BRA = { add_opinion_modifier = { target = USA modifier = USA_hemispheric_partnership } }
+		}
+		if = {
+			limit = { country_exists = ARG }
+			ARG = { add_opinion_modifier = { target = USA modifier = USA_argentina_interference } }
+		}
+	}
+	custom_effect_tooltip = USA_tt_the_wall_holds
+}
+
+
+USA_eastern_compact_effect = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { is_in_faction = yes } }
+			create_faction = USA_eastern_compact_faction
+		}
+			if = {
+				limit = {
+					country_exists = POL
+					NOT = { POL = { is_in_faction = yes } }
+					NOT = { POL = { has_war_with = USA } }
+				}
+				POL = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = UKR
+					NOT = { UKR = { is_in_faction = yes } }
+					NOT = { UKR = { has_war_with = USA } }
+				}
+				UKR = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = FIN
+					NOT = { FIN = { is_in_faction = yes } }
+					NOT = { FIN = { has_war_with = USA } }
+				}
+				FIN = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ROM
+					NOT = { ROM = { is_in_faction = yes } }
+					NOT = { ROM = { has_war_with = USA } }
+				}
+				ROM = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HUN
+					NOT = { HUN = { is_in_faction = yes } }
+					NOT = { HUN = { has_war_with = USA } }
+				}
+				HUN = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LIT
+					NOT = { LIT = { is_in_faction = yes } }
+					NOT = { LIT = { has_war_with = USA } }
+				}
+				LIT = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LAT
+					NOT = { LAT = { is_in_faction = yes } }
+					NOT = { LAT = { has_war_with = USA } }
+				}
+				LAT = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = EST
+					NOT = { EST = { is_in_faction = yes } }
+					NOT = { EST = { has_war_with = USA } }
+				}
+				EST = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+		if = {
+			limit = { country_exists = GER }
+			GER = { add_opinion_modifier = { target = USA modifier = USA_rival_reconstruction } }
+		}
+	}
+	custom_effect_tooltip = USA_tt_eastern_compact
+}
+
+
+USA_atlantic_shield_effect = {
+	hidden_effect = {
+		add_ideas = USA_atlantic_shield
+		add_army_experience = 30
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 8000 producer = USA }
+		add_equipment_to_stockpile = { type = artillery_equipment amount = 800 producer = USA }
+		if = {
+			limit = { country_exists = GER }
+			GER = { add_opinion_modifier = { target = USA modifier = USA_cold_peace_rivalry } }
+		}
+	}
+	custom_effect_tooltip = USA_tt_atlantic_shield
+}
+
+
+USA_long_watch_arms_effect = {
+	hidden_effect = {
+		add_ideas = USA_long_watch_readiness
+		add_manpower = 80000
+		if = {
+			limit = { country_exists = GER }
+			GER = {
+				add_opinion_modifier = { target = USA modifier = USA_cold_peace_rivalry }
+				add_war_support = 0.03
+			}
+		}
+	}
+	custom_effect_tooltip = USA_tt_long_watch_arms
+}
+
+
+USA_long_watch_detente_effect = {
+	hidden_effect = {
+		if = {
+			limit = { country_exists = GER }
+			GER = {
+				add_opinion_modifier = { target = USA modifier = USA_cold_peace_dialogue }
+				add_stability = 0.03
+			}
+		}
+	}
+	custom_effect_tooltip = USA_tt_long_watch_detente
+}
+
+
+USA_europe_trade_effect = {
+	hidden_effect = {
+		add_ideas = USA_eastern_trade_network
+			if = {
+				limit = {
+					country_exists = POL
+					NOT = { POL = { has_war_with = USA } }
+				}
+				POL = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = UKR
+					NOT = { UKR = { has_war_with = USA } }
+				}
+				UKR = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = FIN
+					NOT = { FIN = { has_war_with = USA } }
+				}
+				FIN = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ROM
+					NOT = { ROM = { has_war_with = USA } }
+				}
+				ROM = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HUN
+					NOT = { HUN = { has_war_with = USA } }
+				}
+				HUN = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LIT
+					NOT = { LIT = { has_war_with = USA } }
+				}
+				LIT = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LAT
+					NOT = { LAT = { has_war_with = USA } }
+				}
+				LAT = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = EST
+					NOT = { EST = { has_war_with = USA } }
+				}
+				EST = {
+					add_stability = 0.05
+					add_political_power = 50
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+				}
+			}
+	}
+	custom_effect_tooltip = USA_tt_europe_trade
+}
+
+
+USA_europe_defense_effect = {
+	hidden_effect = {
+		add_ideas = USA_eastern_shield
+			if = {
+				limit = {
+					country_exists = BLR
+					NOT = { BLR = { is_in_faction = yes } }
+					NOT = { BLR = { has_war_with = USA } }
+				}
+				BLR = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = POL
+					NOT = { POL = { is_in_faction = yes } }
+					NOT = { POL = { has_war_with = USA } }
+				}
+				POL = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = UKR
+					NOT = { UKR = { is_in_faction = yes } }
+					NOT = { UKR = { has_war_with = USA } }
+				}
+				UKR = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = FIN
+					NOT = { FIN = { is_in_faction = yes } }
+					NOT = { FIN = { has_war_with = USA } }
+				}
+				FIN = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ROM
+					NOT = { ROM = { is_in_faction = yes } }
+					NOT = { ROM = { has_war_with = USA } }
+				}
+				ROM = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HUN
+					NOT = { HUN = { is_in_faction = yes } }
+					NOT = { HUN = { has_war_with = USA } }
+				}
+				HUN = {
+					add_to_faction = USA
+					add_opinion_modifier = { target = USA modifier = USA_reconstruction_aid }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = USA }
+				}
+			}
+	}
+	custom_effect_tooltip = USA_tt_europe_defense
+}
+
+USA_loyalist_offensive_effect = {
+	hidden_effect = {
+		every_country = {
+			limit = {
+				has_war_with = USA
+				has_country_flag = USA_dsa_revolt_organized
+			}
+			add_stability = -0.05
+			add_political_power = -50
+			add_war_support = -0.05
+		}
+		news_event = { id = USA_events.102 days = 1 }
+	}
+	custom_effect_tooltip = USA_tt_loyalist_offensive
+}
+
+USA_martial_law_effect = {
+	hidden_effect = {
+		add_ideas = USA_martial_law_mobilization
+		add_manpower = 60000
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = USA }
+		add_equipment_to_stockpile = { type = support_equipment amount = 600 producer = USA }
+		every_country = {
+			limit = {
+				has_war_with = USA
+				has_country_flag = USA_dsa_revolt_organized
+			}
+			add_war_support = -0.05
+			add_stability = -0.03
+		}
+	}
+	custom_effect_tooltip = USA_tt_martial_law
+}
+
+USA_security_state_abroad_effect = {
+	hidden_effect = {
+		add_manpower = 100000
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 10000 producer = USA }
+		add_equipment_to_stockpile = { type = artillery_equipment amount = 800 producer = USA }
+		if = {
+			limit = { country_exists = GER }
+			GER = { add_opinion_modifier = { target = USA modifier = USA_junta_sympathy } }
+		}
+		if = {
+			limit = { country_exists = ITA }
+			ITA = { add_opinion_modifier = { target = USA modifier = USA_junta_sympathy } }
+		}
+		if = {
+			limit = { country_exists = JAP }
+			JAP = { add_opinion_modifier = { target = USA modifier = USA_junta_sympathy } }
+		}
+		if = {
+			limit = { country_exists = SPR }
+			SPR = { add_opinion_modifier = { target = USA modifier = USA_junta_sympathy } }
+		}
+		if = {
+			limit = { country_exists = ENG }
+			ENG = { add_opinion_modifier = { target = USA modifier = USA_junta_pariah } }
+		}
+		if = {
+			limit = { country_exists = FRA }
+			FRA = { add_opinion_modifier = { target = USA modifier = USA_junta_pariah } }
+		}
+		if = {
+			limit = { country_exists = CAN }
+			CAN = { add_opinion_modifier = { target = USA modifier = USA_junta_pariah } }
+		}
+	}
+	custom_effect_tooltip = USA_tt_security_state_abroad
+}
+
+USA_civilian_cabinet_abroad_effect = {
+	hidden_effect = {
+		if = {
+			limit = { country_exists = ENG }
+			ENG = { add_opinion_modifier = { target = USA modifier = USA_civilian_restoration } }
+		}
+		if = {
+			limit = { country_exists = FRA }
+			FRA = { add_opinion_modifier = { target = USA modifier = USA_civilian_restoration } }
+		}
+		if = {
+			limit = { country_exists = CAN }
+			CAN = { add_opinion_modifier = { target = USA modifier = USA_civilian_restoration } }
+		}
+		if = {
+			limit = { country_exists = MEX }
+			MEX = { add_opinion_modifier = { target = USA modifier = USA_civilian_restoration } }
+		}
+		if = {
+			limit = { country_exists = GER }
+			GER = { add_opinion_modifier = { target = USA modifier = USA_junta_pariah } }
+		}
+		if = {
+			limit = { country_exists = ITA }
+			ITA = { add_opinion_modifier = { target = USA modifier = USA_junta_pariah } }
+		}
+		if = {
+			limit = { country_exists = JAP }
+			JAP = { add_opinion_modifier = { target = USA modifier = USA_junta_pariah } }
+		}
+	}
+	custom_effect_tooltip = USA_tt_civilian_cabinet_abroad
+}
+
+USA_purge_aftermath_effect = {
+	hidden_effect = {
+		add_to_variable = { var = USA_corporate_influence value = -25 }
+		USA_clamp_influence = yes
+		USA_check_influence_tier = yes
+	}
+	custom_effect_tooltip = USA_tt_purge_aftermath
+}
+
+USA_party_remade_abroad_effect = {
+	hidden_effect = {
+		if = {
+			limit = { country_exists = SOV }
+			SOV = { add_opinion_modifier = { target = USA modifier = USA_civilian_restoration } }
+		}
+		if = {
+			limit = { country_exists = ENG }
+			ENG = { add_opinion_modifier = { target = USA modifier = USA_civilian_restoration } }
+		}
+		if = {
+			limit = { country_exists = FRA }
+			FRA = { add_opinion_modifier = { target = USA modifier = USA_civilian_restoration } }
+		}
+		if = {
+			limit = { country_exists = CAN }
+			CAN = { add_opinion_modifier = { target = USA modifier = USA_civilian_restoration } }
+		}
+		if = {
+			limit = { country_exists = MEX }
+			MEX = { add_opinion_modifier = { target = USA modifier = USA_civilian_restoration } }
+		}
+		if = {
+			limit = { country_exists = BRA }
+			BRA = { add_opinion_modifier = { target = USA modifier = USA_civilian_restoration } }
+		}
+		if = {
+			limit = { country_exists = GER }
+			GER = { add_opinion_modifier = { target = USA modifier = USA_junta_pariah } }
+		}
+		set_variable = { var = USA_corporate_influence value = 0 }
+		USA_check_influence_tier = yes
+	}
+	custom_effect_tooltip = USA_tt_party_remade_abroad
+}

@@ -1,0 +1,10 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_focus_tree_canadian_base"
+		texturefile = "gfx/interface/goals/canada_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_fortress_of_the_north"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+}

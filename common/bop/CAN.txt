@@ -1,0 +1,181 @@
+CAN_black_mogg_balance = {
+	initial_value = 0.7
+	left_side = CAN_black_side
+	right_side = CAN_mogg_side
+	decision_category = political_decisions
+
+	# Outer range covers the full spectrum
+	range = {
+		id = CAN_coalition_balance_range
+		min = -1.0
+		max = 3.5
+		modifier = {
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+		}
+	}
+
+	side = {
+		id = CAN_black_side
+		icon = GFX_CAN_decision_category_emblem
+
+		# Black minor influence — Black has slight edge
+		range = {
+			id = CAN_black_minor_influence
+			min = -0.5
+			max = -0.2
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_black_side
+					gfx = GFX_CAN_bop_black_maple
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_black_side
+					gfx = GFX_CAN_decision_category_emblem
+				}
+			}
+		}
+
+		# Black cabinet influence — Black clearly in control
+		range = {
+			id = CAN_black_cabinet_influence
+			min = -0.8
+			max = -0.5
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_black_side
+					gfx = GFX_CAN_bop_black_maple
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_black_side
+					gfx = GFX_CAN_decision_category_emblem
+				}
+			}
+		}
+
+		# Black dominance — Mogg plan impossible
+		range = {
+			id = CAN_black_dominance
+			min = -1.0
+			max = -0.8
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_black_side
+					gfx = GFX_CAN_bop_black_maple
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_black_side
+					gfx = GFX_CAN_decision_category_emblem
+				}
+			}
+		}
+	}
+
+	side = {
+		id = CAN_mogg_side
+		icon = GFX_CAN_decision_category_emblem
+
+		# Mogg minor influence — Mogg has slight edge
+		range = {
+			id = CAN_mogg_minor_influence
+			min = 1.2
+			max = 1.8
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_mogg_side
+					gfx = GFX_CAN_bop_mogg_maple
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_mogg_side
+					gfx = GFX_CAN_decision_category_emblem
+				}
+			}
+		}
+
+		# Mogg cabinet influence — Mogg clearly in control
+		range = {
+			id = CAN_mogg_cabinet_influence
+			min = 2.0
+			max = 2.6
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_mogg_side
+					gfx = GFX_CAN_bop_mogg_maple
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_mogg_side
+					gfx = GFX_CAN_decision_category_emblem
+				}
+			}
+		}
+
+		# Mogg dominance — Black plan impossible
+		range = {
+			id = CAN_mogg_dominance
+			min = 2.8
+			max = 3.5
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_mogg_side
+					gfx = GFX_CAN_bop_mogg_maple
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = CAN_black_mogg_balance
+					side = CAN_mogg_side
+					gfx = GFX_CAN_decision_category_emblem
+				}
+			}
+		}
+	}
+
+	# Balanced coalition — neither side dominant
+	# Middle zone around zero representing genuine tension
+	range = {
+		id = CAN_balanced_coalition
+		min = 0.5
+		max = 0.9
+		modifier = {
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+		}
+	}
+}

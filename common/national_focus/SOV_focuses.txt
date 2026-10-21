@@ -1,0 +1,819 @@
+###########################################################
+# Rot and Iron — Soviet Union Focus Tree (Intro Phase)
+# File: common/national_focus/SOV_focuses.txt
+#
+# This is the PRE-WAR phase only, mirroring the structure
+# of GER_focuses.txt's "Gathering Storm" phase. The USSR
+# does NOT declare war anywhere in this tree — it is
+# entirely about quiet military readiness against Germany,
+# getting the economy onto a war footing, and managing the
+# republics/regions that make up the Union while there's
+# still time to do it peacefully.
+#
+# Four branches converge on "The Bear Awakens", which just
+# marks the USSR as fully prepared — Germany's own tree is
+# what actually triggers the invasion.
+###########################################################
+
+focus_tree = {
+	id = SOV_intro_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+
+	default = no
+
+	###################################################
+	# ROOT FOCUS
+	###################################################
+
+	focus = {
+		id = SOV_prepare_the_rodina
+		icon = GFX_focus_SOV_prepare_rodina
+		name = "Prepare the Rodina"
+		text = "SOV_prepare_the_rodina_tt"
+
+		x = 18
+		y = 0
+
+		cost = 5
+
+		available = {}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 100
+
+			set_country_flag = SOV_prewar_phase_active
+
+			country_event = {
+				id = SOV_prewar.1
+				days = 3
+			}
+		}
+
+		ai_will_do = { factor = 100 }
+	}
+
+	###################################################
+	# BRANCH 1 — THE FRONTIER
+	# Quiet defensive buildup along the German border.
+	# No provocation, no declarations — just concrete,
+	# barbed wire, and divisions.
+	###################################################
+
+	focus = {
+		id = SOV_the_western_frontier
+		icon = GFX_focus_SOV_western_frontier
+		name = "The Western Frontier"
+		text = "SOV_the_western_frontier_tt"
+
+		prerequisite = { focus = SOV_prepare_the_rodina }
+
+		x = 0
+		y = 2
+
+		cost = 7
+
+		available = {}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 50
+
+			add_ideas = SOV_frontier_commission
+
+			set_country_flag = SOV_frontier_commission_active
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_border_fortification_line
+		icon = GFX_focus_SOV_fortifications
+		name = "The Border Fortification Line"
+		text = "SOV_border_fortification_line_tt"
+
+		prerequisite = { focus = SOV_the_western_frontier }
+
+		x = -3
+		y = 3
+
+		cost = 10
+
+		available = {
+			has_country_flag = SOV_frontier_commission_active
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 50
+
+			# Fortify the border states without any fanfare
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SOV
+					state_category > town
+				}
+				add_building_construction = {
+					type = land_fort
+					level = 2
+					instant_build = no
+				}
+			}
+
+			add_ideas = SOV_fortified_frontier
+
+			set_country_flag = SOV_border_fortified
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_forward_garrisons
+		icon = GFX_focus_SOV_garrisons
+		name = "Forward Garrisons"
+		text = "SOV_forward_garrisons_tt"
+
+		prerequisite = { focus = SOV_the_western_frontier }
+
+		x = 3
+		y = 3
+
+		cost = 7
+
+		available = {
+			has_country_flag = SOV_frontier_commission_active
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 15
+
+			add_ideas = SOV_forward_deployment
+
+			set_country_flag = SOV_garrisons_reinforced
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_defense_in_depth
+		icon = GFX_focus_SOV_defense_doctrine
+		name = "Defense in Depth"
+		text = "SOV_defense_in_depth_tt"
+
+		prerequisite = { focus = SOV_border_fortification_line }
+		prerequisite = { focus = SOV_forward_garrisons }
+
+		x = 0
+		y = 4
+
+		cost = 7
+
+		available = {
+			has_country_flag = SOV_border_fortified
+			has_country_flag = SOV_garrisons_reinforced
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 75
+			army_experience = 20
+
+			add_ideas = SOV_defense_in_depth_doctrine
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_the_readiness_directive
+		icon = GFX_focus_SOV_readiness
+		name = "The Readiness Directive"
+		text = "SOV_the_readiness_directive_tt"
+
+		prerequisite = { focus = SOV_defense_in_depth }
+
+		x = 0
+		y = 5
+
+		cost = 10
+
+		available = {}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+
+			set_country_flag = SOV_frontier_ready
+
+			country_event = {
+				id = SOV_prewar.readiness_directive
+				days = 7
+			}
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	###################################################
+	# BRANCH 2 — THE SECOND FIVE-YEAR PLAN
+	# Getting the economy onto a war footing while
+	# officially it's still just "the Plan"
+	###################################################
+
+	focus = {
+		id = SOV_second_five_year_plan
+		icon = GFX_focus_SOV_five_year_plan
+		name = "The Second Five-Year Plan"
+		text = "SOV_second_five_year_plan_tt"
+
+		prerequisite = { focus = SOV_prepare_the_rodina }
+
+		x = 12
+		y = 2
+
+		cost = 7
+
+		available = {}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 75
+
+			add_ideas = SOV_planned_economy
+
+			set_country_flag = SOV_five_year_plan_active
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_heavy_industry_push
+		icon = GFX_focus_SOV_heavy_industry
+		name = "Heavy Industry Push"
+		text = "SOV_heavy_industry_push_tt"
+
+		prerequisite = { focus = SOV_second_five_year_plan }
+
+		x = 9
+		y = 3
+
+		cost = 7
+
+		available = {
+			has_country_flag = SOV_five_year_plan_active
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 75
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SOV
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = no
+				}
+			}
+
+			add_ideas = SOV_heavy_industry
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_ural_relocation_program
+		icon = GFX_focus_SOV_ural_relocation
+		name = "The Ural Relocation Program"
+		text = "SOV_ural_relocation_program_tt"
+
+		prerequisite = { focus = SOV_second_five_year_plan }
+
+		x = 15
+		y = 3
+
+		cost = 10
+
+		available = {
+			has_country_flag = SOV_five_year_plan_active
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 50
+
+			# Quietly shifting critical industry east of the
+			# Urals, well out of reach of any western invader
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SOV
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = no
+				}
+			}
+
+			add_ideas = SOV_industrial_dispersal
+
+			set_country_flag = SOV_industry_relocated
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_arms_factory_expansion
+		icon = GFX_focus_SOV_arms_factories
+		name = "Arms Factory Expansion"
+		text = "SOV_arms_factory_expansion_tt"
+
+		prerequisite = { focus = SOV_heavy_industry_push }
+
+		x = 9
+		y = 4
+
+		cost = 7
+
+		available = {}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 50
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SOV
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = no
+				}
+			}
+
+			add_ideas = SOV_expanded_arms_production
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_war_economy_foundations
+		icon = GFX_focus_SOV_war_economy
+		name = "War Economy Foundations"
+		text = "SOV_war_economy_foundations_tt"
+
+		prerequisite = { focus = SOV_arms_factory_expansion }
+		prerequisite = { focus = SOV_ural_relocation_program }
+
+		x = 12
+		y = 5
+
+		cost = 10
+
+		available = {
+			has_country_flag = SOV_industry_relocated
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+
+			add_ideas = SOV_war_economy_footing
+
+			set_country_flag = SOV_economy_ready
+
+			country_event = {
+				id = SOV_prewar.war_economy_ready
+				days = 7
+			}
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	###################################################
+	# BRANCH 3 — THE NATIONAL QUESTION
+	# Keeping the Union's regions and republics onside
+	# before any war puts that loyalty under strain
+	###################################################
+
+	focus = {
+		id = SOV_the_national_question
+		icon = GFX_focus_SOV_national_question
+		name = "The National Question"
+		text = "SOV_the_national_question_tt"
+
+		prerequisite = { focus = SOV_prepare_the_rodina }
+
+		x = 24
+		y = 2
+
+		cost = 7
+
+		available = {}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 75
+
+			add_ideas = SOV_nationalities_commission
+
+			set_country_flag = SOV_nationalities_policy_active
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_ukrainian_grain_quotas
+		icon = GFX_focus_SOV_ukraine
+		name = "Ukrainian Grain Quotas"
+		text = "SOV_ukrainian_grain_quotas_tt"
+
+		prerequisite = { focus = SOV_the_national_question }
+
+		x = 20
+		y = 3
+
+		cost = 7
+
+		available = {
+			has_country_flag = SOV_nationalities_policy_active
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = -25
+
+			# Squeezing the breadbasket for the war to come —
+			# it will feed the army, but it won't win friends
+			add_ideas = SOV_grain_requisition
+
+			add_stability = -0.03
+
+			set_country_flag = SOV_ukraine_requisitioned
+
+			country_event = {
+				id = SOV_regions.ukrainian_reaction
+				days = 14
+			}
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_baku_oil_development
+		icon = GFX_focus_SOV_baku_oil
+		name = "Baku Oil Development"
+		text = "SOV_baku_oil_development_tt"
+
+		prerequisite = { focus = SOV_the_national_question }
+
+		x = 24
+		y = 3
+
+		cost = 7
+
+		available = {
+			has_country_flag = SOV_nationalities_policy_active
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 50
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SOV
+					free_building_slots = {
+						building = raffinery
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = raffinery
+					level = 2
+					instant_build = no
+				}
+			}
+
+			add_ideas = SOV_caucasus_oil_output
+
+			set_country_flag = SOV_baku_developed
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_central_asian_cotton_program
+		icon = GFX_focus_SOV_central_asia
+		name = "Central Asian Cotton Program"
+		text = "SOV_central_asian_cotton_program_tt"
+
+		prerequisite = { focus = SOV_the_national_question }
+
+		x = 28
+		y = 3
+
+		cost = 7
+
+		available = {
+			has_country_flag = SOV_nationalities_policy_active
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 50
+
+			add_ideas = SOV_cotton_program
+
+			# Modest goodwill from investment, offset by the
+			# same quota logic straining Ukraine
+			add_stability = 0.02
+
+			set_country_flag = SOV_central_asia_developed
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_securing_the_periphery
+		icon = GFX_focus_SOV_periphery
+		name = "Securing the Periphery"
+		text = "SOV_securing_the_periphery_tt"
+
+		prerequisite = { focus = SOV_ukrainian_grain_quotas }
+		prerequisite = { focus = SOV_baku_oil_development }
+		prerequisite = { focus = SOV_central_asian_cotton_program }
+
+		x = 24
+		y = 4
+
+		cost = 10
+
+		available = {
+			has_country_flag = SOV_ukraine_requisitioned
+			has_country_flag = SOV_baku_developed
+			has_country_flag = SOV_central_asia_developed
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 100
+			add_national_unity = 0.05
+
+			set_country_flag = SOV_regions_secured
+
+			country_event = {
+				id = SOV_regions.periphery_secured
+				days = 7
+			}
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	###################################################
+	# BRANCH 4 — THE WATCHFUL EYE
+	# NKVD counter-intelligence work against German
+	# infiltration — the mirror image of Germany's own
+	# shadow war against the UBSR
+	###################################################
+
+	focus = {
+		id = SOV_nkvd_counterintelligence
+		icon = GFX_focus_SOV_nkvd
+		name = "NKVD Counter-Intelligence Directive"
+		text = "SOV_nkvd_counterintelligence_tt"
+
+		prerequisite = { focus = SOV_prepare_the_rodina }
+
+		x = 36
+		y = 2
+
+		cost = 7
+
+		available = {}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 50
+
+			add_ideas = SOV_counterintelligence_directorate
+
+			set_country_flag = SOV_counterintel_active
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_watch_the_rhineland
+		icon = GFX_focus_SOV_watch_germany
+		name = "Watch the Rhineland"
+		text = "SOV_watch_the_rhineland_tt"
+
+		prerequisite = { focus = SOV_nkvd_counterintelligence }
+
+		x = 33
+		y = 3
+
+		cost = 7
+
+		available = {
+			has_country_flag = SOV_counterintel_active
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 25
+
+			GER = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = SOV_watched_closely
+				}
+			}
+
+			set_country_flag = SOV_watching_germany
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_expose_the_saboteurs
+		icon = GFX_focus_SOV_expose_saboteurs
+		name = "Expose the Saboteurs"
+		text = "SOV_expose_the_saboteurs_tt"
+
+		prerequisite = { focus = SOV_nkvd_counterintelligence }
+
+		x = 39
+		y = 3
+
+		cost = 7
+
+		available = {
+			has_country_flag = SOV_counterintel_active
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 75
+
+			# Rolls up whatever German networks have
+			# already taken root, if any have
+			add_stability = 0.03
+
+			set_country_flag = SOV_saboteurs_exposed
+
+			country_event = {
+				id = SOV_watchful.saboteurs_exposed
+				days = 10
+			}
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = SOV_the_iron_curtain_tightens
+		icon = GFX_focus_SOV_iron_curtain
+		name = "The Iron Curtain Tightens"
+		text = "SOV_the_iron_curtain_tightens_tt"
+
+		prerequisite = { focus = SOV_watch_the_rhineland }
+		prerequisite = { focus = SOV_expose_the_saboteurs }
+
+		x = 36
+		y = 4
+
+		cost = 10
+
+		available = {
+			has_country_flag = SOV_watching_germany
+			has_country_flag = SOV_saboteurs_exposed
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+
+			set_country_flag = SOV_intelligence_ready
+
+			country_event = {
+				id = SOV_watchful.iron_curtain_tightens
+				days = 7
+			}
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+
+	###################################################
+	# CONVERGENCE — THE BEAR AWAKENS
+	# Marks the USSR as fully prepared. This does NOT
+	# declare war on anyone — Germany's own tree is what
+	# actually starts the invasion. This just means the
+	# Soviet Union is ready for it when it comes.
+	###################################################
+
+	focus = {
+		id = SOV_the_bear_awakens
+		icon = GFX_focus_SOV_bear_awakens
+		name = "The Bear Awakens"
+		text = "SOV_the_bear_awakens_tt"
+
+		prerequisite = { focus = SOV_the_readiness_directive }
+		prerequisite = { focus = SOV_war_economy_foundations }
+		prerequisite = { focus = SOV_securing_the_periphery }
+		prerequisite = { focus = SOV_the_iron_curtain_tightens }
+
+		x = 18
+		y = 6
+
+		cost = 10
+
+		available = {
+			has_country_flag = SOV_prewar_phase_active
+		}
+
+		bypass = {}
+
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.10
+			add_national_unity = 0.05
+
+			add_ideas = SOV_fully_prepared
+
+			set_country_flag = SOV_prewar_preparations_complete
+
+			country_event = {
+				id = SOV_prewar.the_bear_awakens
+				days = 3
+			}
+		}
+
+		ai_will_do = { factor = 100 }
+	}
+
+}

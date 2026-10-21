@@ -1,0 +1,22 @@
+state={
+	id=1111
+	name="STATE_817" #South Shetland Islands
+	provinces={
+		14033 14035 14036 14038 14039 14040 14041 
+	}
+	manpower = 0
+
+	state_category = wasteland
+
+	history = {
+		owner = ANT
+		add_claim_by = ENG
+		buildings = {
+			infrastructure = 0
+			13837 = {
+				naval_base = 1
+			}
+		}
+	}
+
+}

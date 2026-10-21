@@ -1,0 +1,45 @@
+﻿l_english:
+
+ CAN_blacks_last_act: "Black's Last Act"
+
+ CAN_boris_victory: "Boris's Victory"
+
+###########################################################
+# DETROIT AGREEMENT MISSION
+###########################################################
+
+ CAN_detroit_agreement_mission: "Negotiate the Detroit Agreement"
+
+###########################################################
+# ADDITIONAL IDEAS REFERENCED IN FOCUSES
+###########################################################
+
+ CAN_free_trade_agreement: "North American Free Trade"
+ CAN_free_trade_agreement_desc: "The formal trade framework between Canada and the United States has transformed the economic relationship between the two countries. American goods flow north. Canadian resources flow south. The border that was a wall is becoming a bridge. Conrad Black, who spent his career building fortresses, has built something else entirely."
+
+ CAN_american_investment: "American Capital"
+ CAN_american_investment_desc: "The first wave of American investment in Canadian manufacturing represents something neither government quite expected — a genuine economic partnership built on mutual interest rather than ideology. The factories are real. The jobs are real. And the political consequences, for both Black and Turner, are becoming real as well."
+
+ CAN_st_lawrence_trade: "The Laurentian Corridor"
+ CAN_st_lawrence_trade_desc: "The St Lawrence Seaway is flowing with commerce for the first time in a generation. Joint infrastructure investment has transformed the river corridor into the central artery of North American trade. The cities along the Seaway — Montreal, Kingston, Toronto, Hamilton — are feeling the difference."
+
+ CAN_usa_defence_cooperation: "North American Defence Cooperation"
+ CAN_usa_defence_cooperation_desc: "Canadian and American military officers are sharing intelligence, conducting joint exercises, and planning for shared contingencies for the first time since the Great Exile. It is not yet an alliance. Both sides are careful about that word. But the practical reality of cooperation is building something that may become one."
+
+ CAN_north_american_alliance: "The North American Pact"
+ CAN_north_american_alliance_desc: "Canada and the United States are formal partners. The Pact commits both governments to mutual defence, economic integration, and joint management of the post-Soviet world order. It is the most significant treaty in Canadian history. Conrad Black did not expect to sign it. Boris Johnson thinks it is the only thing that made sense."
+
+ CAN_renewed_mandate: "A Government's Purpose"
+ CAN_renewed_mandate_desc: "The minority government has found its footing. Rees-Mogg is gone. The Detroit Agreement is signed. Canada knows, for the first time in twenty-seven years, what it is and where it is going. The government's mandate is clear. The work continues."
+
+ CAN_party_discipline: "Party Discipline"
+ CAN_party_discipline_desc: "Black has shored up his parliamentary position. The NCP backbench is secure. Further defections to Rees-Mogg's IRP have been prevented through a combination of persuasion, patronage, and the simple fact that the government's approval ratings are rising. Loyalty, it turns out, follows success."
+
+ CAN_continentalist_support: "The Carney Accord"
+ CAN_continentalist_support_desc: "Mark Carney's Continentalists have formally agreed to support the minority government through its term in exchange for three commitments: the Detroit framework, trade talks, and Indigenous consultation. It is an unusual coalition — a technocratic liberal party propping up a conservative government. Both sides are uncomfortable with it. Both sides are making it work."
+
+ CAN_ccf_compact: "The Angus Compact"
+ CAN_ccf_compact_desc: "The informal agreement between Black and Angus is not written down anywhere. It does not need to be. Both men know what it says and both men know what it means. The CCF will not bring down the government. The government will not conscript Canadian workers for exile crusades. Canada's labour movement breathes again."
+
+ CAN_northern_shield_idea: "The Northern Shield"
+ CAN_northern_shield_idea_desc: "The Canadian North is defended not by walls but by knowledge — the knowledge of ten thousand years of inhabitation, integrated into a formal national defence framework for the first time. Romeo Saganash's Ministry of Northern Affairs has transformed territorial defence. Any force attempting to move through the Canadian North will find the land itself is against it."

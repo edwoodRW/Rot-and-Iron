@@ -1,0 +1,70 @@
+ideas = {
+	rho_imperial_defence = {
+		icon = generic_defense_2
+		army_cost = -0.1
+		navy_cost = -0.1
+		air_cost = -0.1
+		allow_divisions = {
+			role = "anti_tank"
+		}
+		allow_divisions = {
+			role = "anti_air"
+		}
+	}
+	
+	rho_white_settler_rule = {
+		icon = generic_political_points_1
+		political_power_gain = 0.1
+		local_manpower = 0.05
+		non_core_manpower = 0.05
+	}
+	
+	rho_strategic_airlift = {
+		icon = generic_air_reliability_1
+		air_mission_efficiency = 0.1
+	}
+	
+	rho_sanctions_busting = {
+		icon = generic_production_1
+		civilian_factory_use = 0.05
+		construction_speed = 0.1
+	}
+	
+	rho_international_rejection = {
+		icon = generic_political_power_2
+		trade_opinion = -0.1
+		foreign_tech_cost = 0.1
+	}
+	
+	rho_loyalist_militia = {
+		icon = generic_defense_1
+		militia_attack = 0.2
+		militia_defense = 0.2
+		militia_cost = -0.2
+	}
+	
+	rho_white_supremacist = {
+		icon = generic_political_power_1
+		suppression_factor = 0.1
+		local_manpower = 0.1
+		stability_factor = -0.05
+	}
+	
+	rho_loyalist_commander = {
+		icon = generic_army_morale_1
+		army_morale = 0.1
+		political_power_gain = 0.05
+	}
+	
+	rho_hawkish_militarist = {
+		icon = generic_offensive_1
+		army_attack = 0.1
+		war_support_factor = 0.1
+	}
+	
+	rho_moderate_unionist = {
+		icon = generic_diplomacy_1
+		suppression_factor = -0.05
+		foreign_subversion_resistance = 0.1
+	}
+}

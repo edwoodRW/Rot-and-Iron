@@ -1,0 +1,77 @@
+units = {
+	division = {
+		name = "1st Rhodesian Division"
+		location = 771
+		division_template = "Infantry Division (1936)"
+		regiment = {
+			type = "infantry"
+			experience = 0.2
+			strength = 1.0
+		}
+		regiment = {
+			type = "infantry"
+			experience = 0.2
+			strength = 1.0
+		}
+		regiment = {
+			type = "infantry"
+			experience = 0.2
+			strength = 1.0
+		}
+	}
+	division = {
+		name = "2nd Rhodesian Division"
+		location = 771
+		division_template = "Infantry Division (1936)"
+		regiment = {
+			type = "infantry"
+			experience = 0.2
+			strength = 1.0
+		}
+		regiment = {
+			type = "infantry"
+			experience = 0.2
+			strength = 1.0
+		}
+		regiment = {
+			type = "infantry"
+			experience = 0.2
+			strength = 1.0
+		}
+	}
+	division = {
+		name = "Rhodesian Light Infantry"
+		location = 771
+		division_template = "Light Infantry Division (1936)"
+		regiment = {
+			type = "infantry"
+			experience = 0.3
+			strength = 1.0
+		}
+		regiment = {
+			type = "infantry"
+			experience = 0.3
+			strength = 1.0
+		}
+		regiment = {
+			type = "cavalry"
+			experience = 0.4
+			strength = 1.0
+		}
+	}
+	division = {
+		name = "Rhodesian Air Force Wing"
+		location = 771
+		division_template = "Basic Fighter Wing (1936)"
+		regiment = {
+			type = "fighter"
+			experience = 0.3
+			strength = 1.0
+		}
+		regiment = {
+			type = "fighter"
+			experience = 0.3
+			strength = 1.0
+		}
+	}
+}

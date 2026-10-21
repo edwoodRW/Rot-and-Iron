@@ -1,0 +1,375 @@
+﻿capital = 360
+
+oob = "AMS_Civil_War"
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "NEA_2000_naval_mtg"
+	else = {
+		set_naval_oob = "NEA_2000_naval_legacy"
+	}
+}
+
+set_research_slots = 4
+set_convoys = 96
+set_stability = 0.25
+set_war_support = 0.2
+
+
+set_technology = {
+	support_weapons = 1
+	infantry_weapons = 1
+	motorised_infantry = 1 
+	tech_support = 1 
+	tech_field_hospital = 1 
+	tech_engineers = 1 
+	gw_artillery = 1 
+	tech_mountaineers = 1
+	paratroopers = 1 
+	marines = 1
+	atomic_research = 1 
+	interwar_antiair = 1
+	interwar_antitank = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+#		set_air_oob = "ENG_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_small_airframe = 1
+		}
+	else = {
+#		set_air_oob = "ENG_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1 
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		armor_tech_1 = 1
+		engine_tech_1 = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		
+		
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_airplane_launcher = 1
+	}
+}
+set_politics = {
+	ruling_party = fascist
+	last_election = "1997.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+add_ideas = {
+	idea_america_neutrality
+}
+set_popularities = {
+        fascist = 0
+		nationalist = 4
+		monarchist = 0
+		national_bolshevik = 5
+		national_conservative = 0
+		centrist = 0
+		liberal = 0
+		new_democrat = 0
+		moderate_socialist = 8
+		revolutionary_socialist = 79
+		communist = 4
+}
+
+recruit_character = AMS_noam_chomsky
+recruit_character = AMS_sam_webb
+recruit_character = AMS_tom_hoefling
+recruit_character = AMS_new_england_royal_council
+recruit_character = AMS_will_williams
+recruit_character = AMS_newt_gingrich
+recruit_character = AMS_john_kasich
+recruit_character = AMS_debbie_wasserman_schultz
+recruit_character = AMS_keith_ellison
+recruit_character = AMS_bernie_sanders
+recruit_character = AMS_peter_schoomaker
+recruit_character = AMS_bryan_d._brown
+recruit_character = AMS_eric_b._schoomaker
+recruit_character = AMS_gustave_f._perna
+recruit_character = AMS_james_hart
+recruit_character = AMS_john_m._murray
+recruit_character = AMS_keith_alexander
+recruit_character = AMS_robert_brooks_brown
+recruit_character = AMS_raymond_a._thomas_iii
+recruit_character = AMS_michael_j._williams
+recruit_character = AMS_michael_flynn
+recruit_character = AMS_paul_lacamera
+recruit_character = AMS_kevin_p._byrnes
+recruit_character = AMS_robert_magnus
+recruit_character = AMS_henry_g._ulrich_iii
+recruit_character = AMS_james_g._stavridis
+recruit_character = AMS_karl_schultz
+recruit_character = AMS_walter_doran
+recruit_character = AMS_william_j._fallon
+recruit_character = AMS_john_c._harvey_jr.
+recruit_character = AMS_craig_s._faller
+recruit_character = AMS_protestant_clique_char
+recruit_character = AMS_richard_cheney
+recruit_character = AMS_marion_robertson
+recruit_character = AMS_kevin_strom
+recruit_character = AMS_social_development_council
+recruit_character = AMS_rudy_fratto
+recruit_character = AMS_mike_pence
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "Cold War Light Tank"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Cold War Heavy Tank" 
+		type = heavy_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_howitzer
+			turret_type_slot = tank_heavy_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_small_cannon
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 4
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Cold War Medium Tank" 
+		type = medium_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_medium_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 5
+		}
+	}
+}
+#ships
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+		name = "Nimitz Class"  # carriers also covers the enterprise class
+		type = ship_hull_carrier_conversion_bb
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = ship_deck_space
+			fixed_ship_anti_air_slot = ship_anti_air_4
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = carrier_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			mid_1_custom_slot = ship_deck_space
+		}
+	}
+create_equipment_variant = {
+		name = "Ticonderoga Class" 	# Heavy Cruisers 
+		type = ship_hull_cruiser_2
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_4
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_airplane_launcher_2
+			mid_2_custom_slot = ship_torpedo_2
+			rear_1_custom_slot = ship_light_medium_battery_2
+			front_1_custom_slot = ship_light_medium_battery_2	
+		}
+	}
+create_equipment_variant = {
+	name = "Virginia Class"			# Virginia and California classes
+	type = ship_hull_cruiser_2
+	parent_version = 0
+		modules = {
+		fixed_ship_battery_slot = ship_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_3
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = ship_sonar_1
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_secondaries_slot = ship_secondaries_2
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		mid_1_custom_slot = ship_secondaries_1
+		mid_2_custom_slot = ship_torpedo_2
+		rear_1_custom_slot = ship_medium_battery_2
+		front_1_custom_slot = ship_anti_air_4
+		}
+	}
+create_equipment_variant = {
+	name = "Spurance Class"	#destroyers also covers the kidd class 
+	type = ship_hull_light_2
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_4			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = ship_sonar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_2
+		mid_1_custom_slot = ship_anti_air_4	
+		rear_1_custom_slot = ship_torpedo_2
+		}
+	}
+	create_equipment_variant = {
+		name = "Los Angeles Class" # submarines
+		type = ship_hull_submarine_2
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_torpedo_sub_2
+		}
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	create_equipment_variant = { 
+		name = "Nimitz Class" #carriers
+		type = carrier_2
+		upgrades = {
+			ship_deckspace_upgrade = 3
+			carrier_armor_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_reliability_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Ticonderoga Class"
+		type = heavy_cruiser_2
+		upgrades = {
+			ship_reliability_upgrade = 0
+			ship_engine_upgrade = 1
+			ship_armor_upgrade = 2
+			ship_gun_upgrade = 4
+		}
+	}
+	create_equipment_variant = {
+		name = "Virginia Class"
+		type = heavy_cruiser_2
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 2
+			ship_armor_upgrade = 2
+			ship_gun_upgrade = 3
+		}
+	}
+	create_equipment_variant = {
+		name = "Spurance Class" #destroyers
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 2
+			ship_anti_air_upgrade = 4
+		}
+	}
+	create_equipment_variant = {
+		name = "Los Angeles Class" #submarines
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+}

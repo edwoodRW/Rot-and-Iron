@@ -1,0 +1,21 @@
+state={
+	id=1089
+	name="STATE_795" # Adelei Land
+	manpower = 0
+	
+	state_category = wasteland
+	
+	impassable = yes
+
+	history={
+		owner = ANT
+		add_claim_by = FRA
+		buildings = {
+			infrastructure = 0
+		}
+	}
+
+	provinces={
+		13853
+	}
+}

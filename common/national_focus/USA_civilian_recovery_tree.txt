@@ -1,0 +1,243 @@
+focus_tree = {
+	id = USA_civilian_recovery_tree
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 22300 }
+
+	focus = {
+		id = USA_Civic_Reconstruction_Charter
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 0
+		cost = 2
+		available = { has_country_flag = USA_postwar_civilian_cabinet }
+		completion_reward = {
+			remove_ideas = USA_junta_civilian_facade
+			add_ideas = USA_civilian_charter
+			add_stability = 0.05
+			add_political_power = 75
+			set_country_flag = USA_civic_charter_opened
+			news_event = { id = USA_events.113 }
+		}
+	}
+
+	focus = {
+		id = USA_Reopen_Congress
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = USA_Civic_Reconstruction_Charter
+		cost = 3
+		prerequisite = { focus = USA_Civic_Reconstruction_Charter }
+		available = { has_country_flag = USA_civic_charter_opened }
+		completion_reward = {
+			add_ideas = USA_civilian_legislature
+			add_political_power = 50
+			add_stability = 0.03
+			add_popularity = { ideology = moderate_socialist popularity = 0.03 }
+		}
+	}
+
+	focus = {
+		id = USA_Civilian_Control_of_the_Armed_Forces
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1
+		relative_position_id = USA_Reopen_Congress
+		cost = 3
+		prerequisite = { focus = USA_Reopen_Congress }
+		available = { has_country_flag = USA_civic_charter_opened }
+		completion_reward = {
+			add_ideas = USA_civilian_command
+			add_army_experience = 20
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = USA_A_New_Constitutional_Convention
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = USA_Civilian_Control_of_the_Armed_Forces
+		cost = 3
+		prerequisite = { focus = USA_Civilian_Control_of_the_Armed_Forces }
+		available = { has_country_flag = USA_civic_charter_opened }
+		completion_reward = {
+			add_ideas = USA_constitutional_reform
+			add_stability = 0.05
+			add_political_power = 50
+			set_country_flag = USA_constitutional_convention_complete
+		}
+	}
+
+	focus = {
+		id = USA_Return_to_the_Ballot
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = USA_A_New_Constitutional_Convention
+		cost = 3
+		prerequisite = { focus = USA_A_New_Constitutional_Convention }
+		available = { has_country_flag = USA_constitutional_convention_complete }
+		completion_reward = {
+			remove_ideas = USA_civilian_charter
+			add_ideas = USA_constitutional_republic
+			set_politics = {
+				ruling_party = moderate_socialist
+				elections_allowed = yes
+			}
+			add_popularity = { ideology = moderate_socialist popularity = 0.08 }
+			add_popularity = { ideology = nationalist popularity = -0.08 }
+			add_stability = 0.05
+			set_country_flag = USA_free_elections_restored
+			news_event = { id = USA_events.115 }
+		}
+	}
+
+	focus = {
+		id = USA_Repair_the_Heartland
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 4
+		y = 1
+		relative_position_id = USA_Civic_Reconstruction_Charter
+		cost = 3
+		prerequisite = { focus = USA_Civic_Reconstruction_Charter }
+		available = { has_country_flag = USA_civic_charter_opened }
+		completion_reward = {
+			add_ideas = USA_reconstruction_corps
+			add_manpower = 50000
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = USA_Public_Works_Corps
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		relative_position_id = USA_Repair_the_Heartland
+		cost = 3
+		prerequisite = { focus = USA_Repair_the_Heartland }
+		available = { has_country_flag = USA_civic_charter_opened }
+		completion_reward = {
+			add_ideas = USA_public_works_program
+			add_stability = 0.03
+			add_manpower = 25000
+		}
+	}
+
+	focus = {
+		id = USA_Labor_and_Industry_Compact
+		icon = GFX_goal_generic_production
+		x = 0
+		y = 1
+		relative_position_id = USA_Public_Works_Corps
+		cost = 3
+		prerequisite = { focus = USA_Public_Works_Corps }
+		available = { has_country_flag = USA_civic_charter_opened }
+		completion_reward = {
+			add_ideas = USA_labor_industry_compact
+			add_stability = 0.04
+			add_popularity = { ideology = moderate_socialist popularity = 0.03 }
+		}
+	}
+
+	focus = {
+		id = USA_The_Recovery_Dividend
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		relative_position_id = USA_Labor_and_Industry_Compact
+		cost = 3
+		prerequisite = { focus = USA_Labor_and_Industry_Compact }
+		available = { has_country_flag = USA_civic_charter_opened }
+		completion_reward = {
+			add_ideas = USA_recovery_dividend
+			add_political_power = 75
+			add_stability = 0.04
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 producer = USA }
+			add_equipment_to_stockpile = { type = support_equipment amount = 500 producer = USA }
+		}
+	}
+
+	focus = {
+		id = USA_Truth_and_Accountability
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 1
+		relative_position_id = USA_Civic_Reconstruction_Charter
+		cost = 3
+		prerequisite = { focus = USA_Civic_Reconstruction_Charter }
+		available = { has_country_flag = USA_civic_charter_opened }
+		completion_reward = {
+			add_ideas = USA_truth_commission
+			add_political_power = 50
+			add_stability = -0.02
+		}
+	}
+
+	focus = {
+		id = USA_Amnesty_and_Due_Process
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = USA_Truth_and_Accountability
+		cost = 3
+		prerequisite = { focus = USA_Truth_and_Accountability }
+		available = { has_country_flag = USA_civic_charter_opened }
+		completion_reward = {
+			country_event = { id = USA_events.114 }
+		}
+	}
+
+	focus = {
+		id = USA_Restore_Civil_Liberties
+		icon = GFX_goal_generic_political_reform
+		x = 0
+		y = 1
+		relative_position_id = USA_Amnesty_and_Due_Process
+		cost = 3
+		prerequisite = { focus = USA_Amnesty_and_Due_Process }
+		available = { has_country_flag = USA_civic_charter_opened }
+		completion_reward = {
+			add_ideas = USA_civil_liberties
+			add_popularity = { ideology = liberal popularity = 0.05 }
+			add_popularity = { ideology = moderate_socialist popularity = 0.03 }
+			add_stability = 0.05
+			set_country_flag = USA_civil_liberties_restored
+		}
+	}
+
+	focus = {
+		id = USA_Rejoin_the_Democratic_World
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 1
+		relative_position_id = USA_Restore_Civil_Liberties
+		cost = 3
+		prerequisite = { focus = USA_Restore_Civil_Liberties }
+		available = { has_country_flag = USA_civil_liberties_restored }
+		completion_reward = {
+			add_ideas = USA_democratic_reintegration
+			add_stability = 0.03
+			add_political_power = 50
+			if = {
+				limit = { country_exists = CAN }
+				CAN = { add_opinion_modifier = { target = USA modifier = USA_public_justice } }
+			}
+			if = {
+				limit = { country_exists = ENG }
+				ENG = { add_opinion_modifier = { target = USA modifier = USA_public_justice } }
+			}
+			if = {
+				limit = { country_exists = FRA }
+				FRA = { add_opinion_modifier = { target = USA modifier = USA_public_justice } }
+			}
+			set_country_flag = USA_democratic_reintegration_complete
+			news_event = { id = USA_events.116 }
+		}
+	}
+}

@@ -1,0 +1,120 @@
+﻿l_english:
+  USA_country_splash_header: "The United States of America"
+  USA_country_splash_description: "The United States emerged from the 1934 Business Plot under a military-corporate order that kept its institutions intact while narrowing their purpose. The 2008 crash broke that arrangement: a socialist revolution brought the Democratic Socialist Party to power, initially through a cautious coalition that still carried the habits of the old republic.\n\nNina Turner now leads a country whose leftward turn remains unfinished. Her administration inherited a powerful economy and military, but also a deep alliance with the forces that once constrained reform. Washington had backed Canada and Japan as bulwarks against the revolutionary tide; now Turner is drawing closer to Europe's socialist governments. The old security establishment is watching, and the state is no longer certain that it serves the President."
+  USA_country_splash_picture: "GFX_USA_country_splash_picture"
+  USA_country_splash_close_button: "Begin"
+
+  JAP_country_splash_header: "The Japanese Empire"
+  JAP_country_splash_description: "Japan lost the Second World War to Soviet and Chinese forces, but defeat did not dislodge the military and imperial institutions at the heart of its government. The right-wing order survived, and the armed forces have kept a firm grip on politics ever since. Pro-democracy and socialist movements are suppressed whenever they threaten to take root.\n\nThe empire has stagnated under that rule, caught between Soviet influence on the continent and a Pacific increasingly shaped by Chinese power. Japan remains formidable, but its leaders must decide whether to preserve the old order through repression or risk opening a way out of it."
+  JAP_country_splash_picture: "GFX_ENG_country_splash_picture"
+  JAP_country_splash_close_button: "Begin"
+
+  GER_country_splash_header: "The Socialist Republic of Germany"
+  GER_country_splash_description: "The German Revolution rose from the upheavals of the Second World War. Rosa Luxemburg's Spartacists seized power and built a socialist republic that rejected both capitalism and Moscow's bureaucratic model. Germany's revolutionary armies helped carry communism across Europe, but the state they created at home was decentralized, democratic, and fiercely egalitarian.\n\nUnder Chancellor Stefan Liebknecht, Germany presents itself as proof that socialism need not mean Soviet tyranny. Its growing confrontation with the Soviet Union now tests that claim: a system founded in opposition to Moscow is leading a new war against it, with the fate of Eastern Europe and the revolution itself at stake."
+  GER_country_splash_picture: "GFX_ENG_country_splash_picture"
+  GER_country_splash_close_button: "Begin"
+
+  CHI_country_splash_header: "The Republic of China"
+  CHI_country_splash_description: "The Left Kuomintang's alliance with the Chinese Communist Party carried China to victory over Japan in the Second World War. A brief democratic opening in the 1940s gave way to a dictatorial communist state, followed decades later by slow democratization. Under the nationalist leadership of Bo Xilai, that progress has been reversed.\n\nChina has aligned with Germany and launched an invasion of the Soviet Union from the east. Its leaders see the war as a chance to reshape the balance of power, but the two-front campaign risks turning China's rise into a prolonged struggle with its former communist rival."
+  CHI_country_splash_picture: "GFX_ENG_country_splash_picture"
+  CHI_country_splash_close_button: "Begin"
+
+  SOV_country_splash_header: "The Union of Soviet Socialist Republics"
+  SOV_country_splash_description: "The Soviet Union was once the world's foremost communist power. Lenin lit the revolution; Trotsky and later Tukhachevsky carried it forward, extending Moscow's influence across a vast international movement. That ascendancy has curdled into a rigid, repressive state, increasingly at odds with the democratic socialism of Germany and the independent revolution in China.\n\nUnder Valery Rashkin, the USSR faces a war on two fronts and a crisis of its own making. Its armies are battered, its logistics falter, and old political divisions are returning as the frontiers contract. The Union remains immense, but its survival—and the future of the Soviet system—can no longer be taken for granted."
+  SOV_country_splash_picture: "GFX_ENG_country_splash_picture"
+  SOV_country_splash_close_button: "Begin"
+
+  ENG_country_splash_header: "The Union of British Socialist Republics"
+  ENG_country_splash_description: "The British Empire collapsed in the 1999 Millennium Revolution, when a charismatic socialist movement swept away the old order. Keir Starmer's government built a revolutionary state with deep ties to Moscow, relying on Soviet military aid as Britain remade its economy and institutions. The Union still carries the weight of its imperial past, even as it claims a new socialist identity.\n\nThat settlement is under strain. Scottish separatism has grown around disputes over resources, power, and political control, while the Soviet Union's war against Germany and China threatens the lifeline on which London depends. Starmer must hold the republic together as shortages and pressure from the front expose the limits of the old alliance."
+  ENG_country_splash_picture: "GFX_ENG_country_splash_picture"
+  ENG_country_splash_close_button: "Begin"
+
+  RAJ_country_splash_header: "The Indian Socialist Union"
+  RAJ_country_splash_description: "India's socialist union was forged in a thirty-year guerrilla war against the British Raj. Its revolutionaries rejected both colonial rule and the Soviet model of a centralized state, building instead a decentralized network of soviet republics. The result is a vast, prosperous, and often fractious federation.\n\nPresident Dipankar Bhattacharya has tried to preserve the Union's autonomy and neutrality. As the great powers' war spreads, that balance is becoming harder to maintain: India's decentralized institutions resist easy mobilization, while its leaders fear that choosing a side could undo the revolution's hard-won independence."
+  RAJ_country_splash_picture: "GFX_ENG_country_splash_picture"
+  RAJ_country_splash_close_button: "Begin"
+
+  CAN_country_splash_header: "The Dominion of Canada"
+  CAN_country_splash_description: "Canada became a refuge for the exiled British monarchy and the imperial loyalists who fled the 1999 Millennium Revolution. Prime Minister Conrad Black's national-conservative government preserves the appearance of parliamentary rule, but power rests with a narrow oligarchy and its security apparatus.\n\nThe Dominion depends on an increasingly uncertain United States while suppressing dissent at home. Its leaders fear that socialist revolution could cross the border, yet every crackdown deepens the resentment that makes the country harder to govern. Canada's old imperial identity survives, but the world that sustained it is gone."
+  CAN_country_splash_picture: "GFX_ENG_country_splash_picture"
+  CAN_country_splash_close_button: "Begin"
+
+  FRA_country_splash_header: "The Commune of France"
+  FRA_country_splash_description: "France's postwar settlement left the country socialist, but not at peace with itself. Pierre Laurent's orthodox faction dominates a state that still claims the language of democracy, while reformers and rival left-wing currents question the direction of the revolution. Years of political stagnation have left the country ill-prepared for a new European war.\n\nThe loss of Alsace-Lorraine to Germany remains an open wound, and the French military has little patience for the government's caution. Paris is caught between its Soviet ties and the threat posed by a revolutionary Germany. As the war expands, France must decide whether to defend the existing order or risk a deeper internal rupture."
+  FRA_country_splash_picture: "GFX_ENG_country_splash_picture"
+  FRA_country_splash_close_button: "Begin"
+
+  UAR_country_splash_header: "The United Arab Republic"
+  UAR_country_splash_description: "Led by Hamdeen Sabahi, the United Arab Republic is a pragmatic, moderate dictatorship that seeks accommodation with the Soviet Union without surrendering its independence. Centered on Egypt, it extends its influence through satellite states and maintains a fragile domestic settlement with a prosperous Jewish economic elite.\n\nHostile Ba'athist governments in Syria and Iraq, Islamist movements, and the spreading world war all threaten that balance. The UAR is trying to negotiate its way through the crisis, but neutrality grows more difficult as every great power demands a choice."
+  UAR_country_splash_picture: "GFX_ENG_country_splash_picture"
+  UAR_country_splash_close_button: "Begin"
+
+  BRA_country_splash_header: "The Federal Socialist Republic of Brazil"
+  BRA_country_splash_description: "Brazil was transformed by the violent Latin American Spring of 2003. The revolution overthrew decades of US-backed military juntas and the political order left by the Cheney era. Under Guilherme Boulos, the country moved from hard-line revolutionary rule toward a prosperous, democratic form of socialism.\n\nBrazil has become a major non-aligned power: sympathetic to Germany's socialist experiment, but unwilling to become anyone's satellite. Its leaders must protect the gains of the revolution while deciding how far to involve the country in a war that could redraw the global balance."
+  BRA_country_splash_picture: "GFX_ENG_country_splash_picture"
+  BRA_country_splash_close_button: "Begin"
+
+  VIN_country_splash_header: "The Socialist Republic of Vietnam"
+  VIN_country_splash_description: "Vietnam is a staunch Soviet ally, but its leaders fear China's power as much as they depend on Moscow. The security state has turned Indochina into a fortress, holding Laos and Cambodia as heavily militarized satellite states and keeping political life under close watch.\n\nNow Soviet setbacks and China's growing reach threaten the whole arrangement. Hanoi is being asked to help Moscow while guarding against a neighboring power it believes may use the crisis to dominate the region. For Vietnam, the war is not distant: it is a test of whether the state can keep its allies, its buffer, and its independence."
+  VIN_country_splash_picture: "GFX_ENG_country_splash_picture"
+  VIN_country_splash_close_button: "Begin"
+
+  PER_country_splash_header: "The Iranian People's Republic"
+  PER_country_splash_description: "The Iranian People's Republic was established after Soviet intervention during the Third World War and spent decades as a loyal client of Moscow. Its Marxist-Leninist order endured through repression and dependence, but the old guard's grip has weakened. A recent internal coup brought Hamid Taqve's faction to power and began a difficult break with the past.\n\nIran is now turning toward Germany, seeking support and a route through the Caucasus as the Soviet Union falters. The shift gives Tehran new room to maneuver, but risks drawing the country into the very war that has destabilized its former patron."
+  PER_country_splash_picture: "GFX_ENG_country_splash_picture"
+  PER_country_splash_close_button: "Begin"
+
+  LBA_country_splash_header: "The Great Socialist People's Libyan Arab Jamahiriya"
+  LBA_country_splash_description: "Muammar Gaddafi built Libya into a fiercely independent, anti-imperialist power, extending its influence across Chad, Sudan, Niger, and the Central African Republic. The network he created outlasted its founder, but it is now fraying under the strain of regional wars and an economy short on resources.\n\nHis Western-educated heir, Saif al-Islam Gaddafi, is attempting desperate reforms while the state fights a widening counter-insurgency. Libya's ambitions once let it defy the great powers; now survival depends on whether its new leadership can hold that far-flung project together."
+  LBA_country_splash_picture: "GFX_ENG_country_splash_picture"
+  LBA_country_splash_close_button: "Begin"
+
+  MEX_country_splash_header: "The United Mexican Socialist States"
+  MEX_country_splash_description: "Mexico's socialist federation emerged from the Latin American Spring of 2003, after decades of US-backed liberal-conservative dictatorships left much of the countryside impoverished. The revolution replaced the old order with a federal republic built around regional autonomy and public investment.\n\nLiving standards have risen, but rural infrastructure remains uneven and corruption has not disappeared. Mexico's leaders must keep the federation's regions invested in the project while navigating a hemisphere where Washington is again seeking influence and revolutionary movements are testing the limits of the new order."
+  MEX_country_splash_picture: "GFX_ENG_country_splash_picture"
+  MEX_country_splash_close_button: "Begin"
+
+  SPR_country_splash_header: "The Federated Iberian Communes"
+  SPR_country_splash_description: "The Iberian communes were liberated from dictatorship during the wave of socialist revolutions that reshaped Europe. Rather than restore a centralized state, local councils and regional communes built a permanent federation on the peninsula. Authority is deliberately dispersed, with no single government able to dominate the others.\n\nThat experiment has survived through cooperation and compromise, but it faces a harsher test as war reaches the continent. Iberia's decentralized institutions offer a different model of socialism; whether they can defend it against armies and pressure from larger powers remains uncertain."
+  SPR_country_splash_picture: "GFX_ENG_country_splash_picture"
+  SPR_country_splash_close_button: "Begin"
+
+  ARG_country_splash_header: "The Argentine Republic"
+  ARG_country_splash_description: "Argentina survived the Latin American Spring of 2003 as the last major right-wing stronghold in South America. The junta held on, but decades of neglect and repression have left the country brittle. Mass labor strikes and civil unrest now threaten the regime from within.\n\nThe government remains focused on preserving its power while revolution gathers strength around it. Argentina's isolation has kept foreign attention at bay, but that may not last: the coming conflict could decide whether the junta survives, collapses, or drags the country into a wider war."
+  ARG_country_splash_picture: "GFX_ENG_country_splash_picture"
+  ARG_country_splash_close_button: "Begin"
+
+  ETH_country_splash_header: "The People's Democratic Republic of Ethiopia"
+  ETH_country_splash_description: "Ethiopia is a steadfast Soviet ally whose authoritarian planning system has delivered a striking economic transformation. Soviet aid and state-led development turned the country into a regional power, while the ruling party presents its growth as proof that the revolution can overcome poverty and division.\n\nThe Soviet Union's crisis now threatens Ethiopia's chief patron and source of support. Addis Ababa must preserve its gains and its security while deciding how much to rely on a weakening Moscow—or whether a new alignment can protect the republic without undoing its socialist project."
+  ETH_country_splash_picture: "GFX_ENG_country_splash_picture"
+  ETH_country_splash_close_button: "Begin"
+
+  INS_country_splash_header: "The People's Federal Republic of Indonesia"
+  INS_country_splash_description: "Indonesia's communist revolution produced a paranoid, centralized dictatorship under the hard-line leadership of D. N. Aidit. Loosely aligned with the Soviet Union, it fought a brutal war against Malaysia from 2004 to 2007 and emerged in control of an island empire, but not at peace with its neighbors.\n\nThe republic has become an insular power determined to preserve its independence and play both sides of the coming war. Its leaders distrust the great powers, yet the struggle between Germany, China, and the Soviet Union may leave little room for a neutral course."
+  INS_country_splash_picture: "GFX_ENG_country_splash_picture"
+  INS_country_splash_close_button: "Begin"
+
+  TUR_country_splash_header: "The Kemalist Republic of Turkey"
+  TUR_country_splash_description: "Turkey has turned leftward into a secular, socialist-nationalist republic, but its politics remain shaped by the Kemalist state. Its control of the Bosporus makes it a strategic gatekeeper between Europe and the Black Sea. President Erkan Baş uses that position to bargain with every great power while guarding Turkish autonomy.\n\nAnkara's neutrality is deliberate, not passive. Turkey hopes to keep the war away from its borders, strengthen its influence in the region, and emerge with greater authority over the balance of power. As Germany and the Soviet Union clash, that careful policy may become impossible to sustain."
+  TUR_country_splash_picture: "GFX_ENG_country_splash_picture"
+  TUR_country_splash_close_button: "Begin"
+
+  ITA_country_splash_header: "The Socialist Republic of Italy"
+  ITA_country_splash_description: "Italian fascism collapsed in 1942 as Soviet forces swept down the peninsula. Unlike revolutionary Germany, Italy became a centralized dictatorship and one of Moscow's most dependable European clients. Its government maintains control through a mixture of state power, patronage, and trade with the Soviet bloc.\n\nItaly is not ready for a full-scale war against Germany. Its leaders are rebuilding the armed forces and weighing the price of loyalty to Moscow as the Soviet front deteriorates. Rome may be called upon to defend the order that made it powerful before it has recovered enough to do so."
+  ITA_country_splash_picture: "GFX_ENG_country_splash_picture"
+  ITA_country_splash_close_button: "Begin"
+
+  SAF_country_splash_header: "The Republic of South Africa"
+  SAF_country_splash_description: "South Africa's apartheid regime fell after a violent revolution in the 1980s. Nelson Mandela's government worked to integrate the country's white and Indian communities into the new republic, creating a democratic settlement out of a deeply divided society.\n\nMandela's death has reopened old disputes inside the African National Congress. The party is fractured between moderates and a growing communist movement, while economic and political pressures test the promise of reconciliation. South Africa must decide whether its revolution can endure without the leader who held its coalition together."
+  SAF_country_splash_picture: "GFX_ENG_country_splash_picture"
+  SAF_country_splash_close_button: "Begin"
+
+  PRK_country_splash_header: "The Democratic People's Republic of Korea"
+  PRK_country_splash_description: "The Soviet Union liberated Korea in 1945, and Kim Il-sung ruled the northern state until his death. A military coup removed Kim Jong-il in 1996 and left the country under a grim socialist junta. The regime has survived through discipline and isolation, but its security now depends on a rapidly changing balance around the peninsula.\n\nGerman forces are advancing from the west while China moves from the east, each presenting its campaign as the liberation of Korea. The junta must defend its independence against two armies whose victory could replace one foreign domination with another."
+  PRK_country_splash_picture: "GFX_ENG_country_splash_picture"
+  PRK_country_splash_close_button: "Begin"
+
+  AST_country_splash_header: "The Democratic Republic of Australia"
+  AST_country_splash_description: "As British influence collapsed, Australia turned away from its imperial past. A historic landslide brought a German-style socialist government to power, but the new republic retained competitive elections and a lively multi-party democracy. Socialist and labor parties contest power within a system that has maintained high living standards and broad civil liberties.\n\nAustralia's distance once offered protection from the rivalries of Europe and Asia. The widening war now tests that security and the country's independent path. Its government must decide how to defend a democratic socialist republic without allowing the great powers to dictate its future."
+  AST_country_splash_picture: "GFX_ENG_country_splash_picture"
+  AST_country_splash_close_button: "Begin"

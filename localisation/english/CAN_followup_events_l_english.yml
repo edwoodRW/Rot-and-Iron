@@ -1,0 +1,144 @@
+﻿l_english:
+ CAN_coalition.irp_warning.t: "The Coalition Frays"
+ CAN_coalition.irp_warning.d: "§IOttawa, After Midnight§!\n\nThe House is empty, but the lights are still on in the Imperial Restoration Party offices.\n\nA junior whip is carrying a stack of resignation letters from room to room. None have been signed. Not yet.\n\nRees-Mogg's people do not shout. They do not need to. They speak in low voices about promises, sacrifices, and the growing suspicion that Ottawa has begun to regard them as an inconvenience.\n\nOutside, Parliament Hill is buried under fresh snow. Inside, the coalition is beginning to come apart at the seams."
+ CAN_coalition.irp_warning.a: "Keep the government together."
+ CAN_coalition.mogg_dominant.t: "The Deputy's Ascendancy"
+ CAN_coalition.mogg_dominant.d: "§IOttawa, Cabinet Room§!\n\nThe agenda has been changed again.\n\nBlack notices it halfway through the meeting: every paper on the table concerns the fleet, the exiles, or England. Housing is pushed to next week. Railways are deferred. The Treasury note has vanished altogether.\n\nRees-Mogg sits at Black's right hand, hands folded, listening with the mild expression of a man who has never had to raise his voice to win an argument.\n\nBy the time the meeting ends, nobody can quite remember who made the decisions."
+ CAN_coalition.mogg_dominant.a: "The Reclamation sets the pace."
+ CAN_coalition.boris_restless.t: "Boris Looks Elsewhere"
+ CAN_coalition.boris_restless.d: "§IToronto, A Rainy Afternoon§!\n\nThe reporter asks Boris a simple question: does he still support the Government?\n\nFor once, he does not answer immediately.\n\nHe looks down at his notes. He makes a joke about the weather. The room laughs because it is supposed to. Then he says that Canada is a country, not a waiting room, and moves on before anyone can ask what he means.\n\nThe clip runs all evening. In Ottawa, three ministers watch it separately and arrive at the same conclusion.\n\nBoris is no longer merely unhappy."
+ CAN_coalition.boris_restless.a: "This cannot continue."
+ CAN_coalition.authority_crisis.t: "A Prime Minister Diminished"
+ CAN_coalition.authority_crisis.d: "§IOttawa, Prime Minister's Office§!\n\nBlack has asked for a briefing.\n\nHis Chief of Staff has brought him three: one from the IRP, one from the Continentalists, and one from a group of his own backbenchers. Each contains demands. Each assumes that the other two will be rejected.\n\nBlack reads them in silence, places them in a neat pile, and asks for coffee.\n\nHis Chief of Staff hesitates.\n\n§R\"Sir?\"§!\n\nBlack does not look up.\n\n§R\"Coffee,\"§! he says. §R\"Then find out who thinks they are in charge.\"§!"
+ CAN_coalition.authority_crisis.a: "Regain control."
+ CAN_coalition.wobbling.t: "Confidence Wavers"
+ CAN_coalition.wobbling.d: "§IParliament Hill, Whips' Office§!\n\nThe numbers are written on a whiteboard in red marker.\n\nGovernment. Opposition. Undecided. Absent.\n\nEvery hour, someone crosses one name out and writes it in another column. Phones ring. Promises are made. A junior staffer has been sent to find an MP who has stopped answering every number from Ottawa.\n\nThe Government has not lost a vote.\n\nIt simply no longer knows that it can win one."
+ CAN_coalition.wobbling.a: "Hold the line."
+
+ CAN_saganash.1.t: "A Place at the Table"
+ CAN_saganash.1.d: "§IOttawa, Cabinet Antechamber§!\n\nRomeo Saganash arrives without an entourage. No photographers wait for him. No band plays. He takes off his coat, accepts a cup of coffee, and studies the portrait of a long-dead governor general on the wall.\n\nWhen Black enters, Saganash does not stand.\n\n§R\"You asked me here,\"§! he says. §R\"So tell me whether you want advice, or whether you want someone to blame later.\"§!\n\nBlack looks at him for a moment.\n\n§R\"Advice,\"§! he says.\n\nIt is not a revolution. It is a chair at a table. In Ottawa, that can be much the same thing."
+ CAN_saganash.1.a: "Canada is stronger when it listens."
+
+# =======================================================
+ # MAIN ELECTION
+ # =======================================================
+ CAN_election.1.t:0 "A Dominion at the Crossroads"
+ CAN_election.1.d:0 "Rain falls relentlessly against the stone facade of Centre Block. Outside, beneath a dense canopy of black umbrellas, crowds of anxious citizens clutch damp late-edition newspapers. The old coalition—frayed by imperial nostalgia, labour unrest, and backroom betrayals—has finally collapsed under its own weight.\n\nTonight, Canada decides which direction it will take. Will it yield to the cool, calculated technocracy of Bay Street, entrust itself to the rough-edged but democratic politics of organized labour, or double down on eccentric imperial bluster? As the final ballot boxes from the frozen reaches of the Northwest Territories arrive, the returning officers take the stage. The old guard is finished. What follows will rewrite the Dominion."
+ 
+ CAN_election.1.a:0 "The technocrats win. Mark Carney assumes the Premiership."
+ CAN_election.1.b:0 "Labour wins the mandate. Charlie Angus forms a government."
+ CAN_election.1.c:0 "The Tories endure. Boris Johnson secures the mandate."
+
+ # =======================================================
+ # AFTERMATH 1: MARK CARNEY (Continentalist Victory)
+ # =======================================================
+ CAN_carney_aftermath.1.t:0 "The Market Restored"
+ CAN_carney_aftermath.1.d:0 "The air in the West Block press room is thick with expensive cologne and fresh coffee. Mark Carney steps up to the lectern, adjusting his gold cufflinks, immaculate and completely unbothered by the late hour.\n\n\"Ladies and gentlemen,\" Carney begins, his voice measured, precise, and devoid of theatrical fluff.\"The era of political sentimentality is closed. Ideology does not build national balance sheets, nor does it secure liquidity in volatile global markets. Starting tomorrow, this government will treat the Dominion not as an emotional playground, but as an enterprise of immense, untapped value.\"\n\n**THE ROAD AHEAD:**\nCarney’s national blueprint is immediate and clinical. His administration plans to sign the controversial Detroit Accords to bind Canadian energy to American grids, deregulate cross-border trade, and replace ideological regional grants with targeted sovereign fund capital. There will be no speeches about 'destiny'—only fiscal optimization."
+ 
+ CAN_carney_aftermath.1.a:0 "A new balance sheet for a new Dominion."
+
+ # =======================================================
+ # AFTERMATH 2: CHARLIE ANGUS (CCF Victory)
+ # =======================================================
+ CAN_angus_aftermath.1.t:0 "The Voice of the North"
+ CAN_angus_aftermath.1.d:0 "In a packed union hall in Sudbury, feedback screams through the speakers as Charlie Angus grabs the microphone. His tie is askew, sleeves rolled to the elbows, and the room is on its feet before he says a word.\n\n\"They told us from their offices in Toronto that working people couldn't run this country,\" Angus says, voice rough with exhaustion more than fury. \"They thought northern communities would always be the ones asked to sacrifice first and heard last. Well, not anymore. This government is going to remember who the country is actually for.\"\n\n**THE ROAD AHEAD:**\nAngus's programme is reformist, labour-driven, and unapologetically democratic: repeal the conscription law, settle the Hamilton dispute, strengthen organized labour, expand federal support for First Nations communities, and put strategic industries under firmer public direction where the national interest requires it."
+ 
+ CAN_angus_aftermath.1.a:0 "A government for working Canada."
+
+ # =======================================================
+ # AFTERMATH 3: BORIS JOHNSON (Conservative Victory)
+ # =======================================================
+ CAN_boris_aftermath.1.t:0 "The Great Gamble"
+ CAN_boris_aftermath.1.d:0 "Flashbulbs explode in frantic bursts on the steps of Parliament as Boris Johnson stumbles slightly up to the microphone, his blonde hair sticking out in three conflicting directions against the Ottawa wind. He shuffles a stack of handwritten, heavily scribbled notes before beaming wildly at the press corps.\n\n\"Well, er—gosh!\" Johnson blusters, waving a hand vaguely toward the sky. \"What an absolutely, fantastically ripping outcome! The doomsters, the gloomsters, the naysaying rank-and-file wallahs said we couldn't keep this magnificent, roaring locomotive on the tracks! They said Canada would crumble into a... a sort of miserable, lukewarm bowl of continental porridge! Nonsense! Pure balderdash! We are going to build, my friends! We are going to turbocharge this glorious Dominion, forge a titanic imperial partnership, and make the skeptics choke on their own cynicism!\"\n\n**THE ROAD AHEAD:**\nBeneath the eccentric bluster lies a high-stakes imperial gamble. Johnson plans an immediate expansion of the Royal Canadian Navy, a massive infrastructure drive dubbed 'The Great Dominion Network', and an aggressive renegotiation of trade terms with Washington, refusing to play second fiddle to anyone."
+ CAN_boris_aftermath.1.a:0 "Onward to victory, whatever the cost!"
+
+ CAN_blackslastact.1.t: "Black's Last Act"
+ CAN_blackslastact.1.d: "§IOttawa, Tuesday Morning§!\n\nThe office is almost bare. The photographs are still there, the cold coffee is still there, but the files have been boxed and labelled in Black's precise hand.\n\nBoris stands by the window, trying unsuccessfully to make the moment lighter. Black lets him try.\n\nThen he says that he is stepping down.\n\nBoris stops.\n\n§R\"Conrad, you cannot simply hand me the keys and disappear.\"§!\n\nBlack smiles, very slightly.\n\n§R\"Of course I can. That is rather the point.\"§!\n\nOutside, the flags over Parliament Hill move in the winter wind."
+ CAN_blackslastact.1.a: "The work continues."
+
+ USA_reactions.1.t: "Washington Takes Note"
+ USA_reactions.1.d: "§IThe White House, Washington D.C.§!\n\nThe Canadian file is thinner than it used to be. That is what catches the President's eye.\n\nFor twenty-seven years, every briefing on Ottawa has contained the same warning: British exiles, British money, British dreams.\n\nNow there is something else. A government trying, awkwardly and publicly, to become Canadian again.\n\nThe President closes the folder.\n\n§R\"Get me Ottawa,\"§! she says. §R\"Not London. Ottawa.\"§!"
+ USA_reactions.1.a: "Keep the channel open."
+ ENG_reactions.1.t: "Ottawa's Defiance"
+ ENG_reactions.1.d: "§ILondon, Cabinet Bunker§!\n\nThe Canadian broadcast has been replayed three times.\n\nNo one in the room says much. There is nothing to say that has not already been said for twenty-seven years: Canada owes England, Canada remembers England, Canada will come home to England.\n\nBut this is different.\n\nOttawa is not asking permission.\n\nAt last, the English leader reaches for the remote and turns off the screen. The room is silent for a long moment.\n\nThen he says, §R\"We will remember this.\"§!"
+ ENG_reactions.1.a: "We will remember this."
+ GER_reactions.CAN_detroit.t: "The Detroit Agreement"
+ GER_reactions.CAN_detroit.d: "§IBerlin, Foreign Ministry§!\n\nThe cable from Detroit is read twice, then placed beside a map of the Atlantic.\n\nCanada and the United States have spent decades treating one another as unfinished business. Now they are speaking in the language of trade corridors, intelligence exchanges, and mutual interests.\n\nA junior diplomat asks whether this is an alliance.\n\nHis superior considers the question.\n\n§R\"Not yet,\"§! he says. §R\"Which is why we should take it seriously.\"§!"
+ GER_reactions.CAN_detroit.a: "An interesting development."
+ ENG_reactions.CAN_detroit.t: "Canada Turns South"
+ ENG_reactions.CAN_detroit.d: "§ILondon, Foreign Office Situation Room§!\n\nDetroit is circled in red on the map.\n\nNot because it is a city of special importance. Not because anyone in the room cares especially about its factories or its river.\n\nIt is circled because Ottawa chose it.\n\nCanada has placed a signature beside America's. In London, that signature is read as a door closing."
+ ENG_reactions.CAN_detroit.a: "A grave mistake."
+ ENG_liberation.1.t: "London Falls"
+ ENG_liberation.1.d: "§ILondon, Before Dawn§!\n\nThe radio signal disappears first. Then the telephone exchange. Then, just after five in the morning, the sound of gunfire reaches the streets around Westminster.\n\nBy sunrise, Canadian troops are moving past shuttered shops and abandoned buses. Nobody waves. Nobody throws stones. London watches from behind curtains.\n\nA soldier raises a maple leaf over a government building and looks almost embarrassed by it.\n\nEngland has not been liberated. Not yet.\n\nIt has been conquered."
+ ENG_liberation.1.a: "England faces a new reality."
+
+ CAN_professional_command: "Professional Command"
+ CAN_professional_command_desc: "The Armada is directed by officers chosen for competence rather than symbolism."
+ CAN_fanatical_command: "Fanatical Command"
+ CAN_fanatical_command_desc: "The Armada is driven by conviction and memory, at the cost of careful coordination."
+ CAN_symbolic_landing: "Symbolic Landing"
+ CAN_symbolic_landing_desc: "The landing is aimed at the most politically resonant objective."
+ CAN_pragmatic_landing: "Pragmatic Landing"
+ CAN_pragmatic_landing_desc: "The landing plan prioritises ports, supply, and a sustainable campaign."
+ CAN_coordinated_landing: "Coordinated Landing"
+ CAN_coordinated_landing_desc: "Multiple landing groups are prepared to strike together."
+ CAN_coordination_bonus: "Unified Planning Staff"
+ CAN_coordination_bonus_desc: "The competing command structures have been made to work together."
+ CAN_armada_ready_professional: "Armada Ready: Professional"
+ CAN_armada_ready_professional_desc: "The fleet sails with disciplined command and a coherent operational plan."
+ CAN_armada_ready_fanatical: "Armada Ready: Fanatical"
+ CAN_armada_ready_fanatical_desc: "The fleet sails with extraordinary resolve and considerable risk."
+ CAN_armada_ready_divided: "Armada Ready: Divided"
+ CAN_armada_ready_divided_desc: "The fleet sails despite unresolved tensions in its command structure."
+
+ # =======================================================
+ # NEW ELECTION REFORM EVENTS
+ # =======================================================
+ CAN_carney_reforms.1.t: "The Bay Street Blueprint"
+ CAN_carney_reforms.1.d: "§IToronto Financial District§!\n\nCarney's economic team has begun the process of 'optimizing Canadian enterprise.' What this means in practice is a wave of deregulation, tax incentives for cross-border investment, and the systematic removal of barriers to American capital.\n\nThe message to the markets is clear: Canada is open for business.\n\nThe message to the unions is equally clear: the era of labor-driven economic policy is over."
+ CAN_carney_reforms.1.a: "Efficiency over ideology."
+
+ CAN_angus_reforms.1.t: "The Nationalization Program"
+ CAN_angus_reforms.1.d: "§IHamilton Steel Belt§!\n\nThe Angus government is moving quickly, though not recklessly. Strategic steel, nickel, and resource operations are being reorganized under stronger public oversight, with Ottawa arguing that sectors vital to national resilience cannot be left entirely to shareholder logic.\n\nWorkers are celebrating. Business editors are appalled. Provincial premiers are demanding reassurances. A social-democratic economic turn is now unmistakably underway."
+ CAN_angus_reforms.1.a: "Canada's resources must serve Canada."
+
+ CAN_boris_reforms.1.t: "The Great Dominion Network"
+ CAN_boris_reforms.1.d: "§IHalifax Dockyards§!\n\nBoris Johnson stands before a crowd of shipyard workers, journalists, and curious locals. Behind him, three destroyers are being fitted out with the latest Canadian-built radar systems.\n\n'Never again shall Canada be a passive observer in its own defense!' he declares, gesturing dramatically at the vessels. 'We shall build! We shall sail! We shall show the world that the Dominion is no longer in waiting!'"
+ CAN_boris_reforms.1.a: "Full steam ahead!"
+
+ USA_carney_trade.1.t: "The Northern Economic Partnership"
+ USA_carney_trade.1.d: "§IWashington D.C.§!\n\nThe Carney administration has wasted no time in reaching out to Washington. The proposed 'Northern Economic Partnership' would integrate Canadian energy grids with American markets, create a unified regulatory framework for cross-border investment, and formalize the de facto economic integration that has been developing for decades.\n\nPresident Turner reviews the proposal. It is generous to American interests. It is pragmatic. It is, quite simply, good business."
+ USA_carney_trade.1.a: "Welcome to the table, Canada."
+
+ ENG_boris_imperial.1.t: "The Imperial Restoration Initiative"
+ ENG_boris_imperial.1.d: "§ILondon, Foreign Office§!\n\nBoris Johnson's victory in Ottawa has not gone unnoticed. The new Canadian Prime Minister is speaking openly about 'imperial partnership' and 'shared destiny' in terms that London has not heard from Canada in decades.\n\nThe question is whether London should respond with caution or enthusiasm. The decision is made: Boris Johnson may be eccentric, but he is also a committed imperialist. Canada has returned to the fold, in its own chaotic way."
+ ENG_boris_imperial.1.a: "Welcome back, cousins."
+
+ CAN_eng_military_cooperation.1.t: "The Imperial Military Accord"
+ CAN_eng_military_cooperation.1.d: "§IOttawa, Department of National Defence§!\n\nLondon has proposed a formal military cooperation agreement. Joint exercises, intelligence sharing, coordinated naval operations in the Atlantic — the full suite of partnership arrangements.\n\nFor Boris Johnson, this is the opportunity of a lifetime. For his opponents, it is a dangerous step toward being drawn back into Britain's wars."
+ CAN_eng_military_cooperation.1.a: "Accept the partnership."
+ CAN_eng_military_cooperation.1.b: "North America first. Always."
+
+ # =======================================================
+ # NEW GOVERNMENT IDEAS
+ # =======================================================
+ CAN_carney_government: "The Carney Administration"
+ CAN_carney_government_desc: "Mark Carney's technocratic government prioritizes economic efficiency, fiscal responsibility, and integration with North American markets. Ideology has been replaced by optimization."
+ CAN_angus_government: "The Angus Government"
+ CAN_angus_government_desc: "Charlie Angus leads a social-democratic labour government focused on workers' rights, strategic public control in key sectors, and a fairer distribution of economic power within a democratic Canadian framework."
+ CAN_boris_government: "The Johnson Premiership"
+ CAN_boris_government_desc: "Boris Johnson's imperialist government emphasizes military expansion, infrastructure development, and the restoration of Canada's role in the British imperial project."
+ CAN_economic_optimization: "Economic Optimization"
+ CAN_economic_optimization_desc: "Carney's economic reforms have streamlined regulations, removed barriers to investment, and maximized industrial efficiency."
+ CAN_worker_power: "Worker Power"
+ CAN_worker_power_desc: "Angus has expanded worker representation, improved labour conditions, and given organized labour a larger voice in industrial decision-making."
+ CAN_public_works_program: "Public Works Program"
+ CAN_public_works_program_desc: "Massive government investment in infrastructure has created jobs, improved transportation, and boosted national unity."
+ CAN_naval_expansion: "Naval Expansion"
+ CAN_naval_expansion_desc: "Johnson's commitment to naval power has accelerated shipbuilding programs and expanded Canada's maritime capabilities."
+ CAN_imperial_ambition: "Imperial Ambition"
+ CAN_imperial_ambition_desc: "The government's commitment to imperial restoration has mobilized public support for military and foreign policy objectives."
+ CAN_industrial_nationalization: "Industrial Nationalization"
+ CAN_industrial_nationalization_desc: "Key industries have been placed under stronger public control so strategic sectors answer to national priorities rather than short-term private profit alone."
+ CAN_imperial_military_cooperation: "Imperial Military Cooperation"
+ CAN_imperial_military_cooperation_desc: "Formal military cooperation with Britain has improved coordination and capability, but at the cost of some autonomy."

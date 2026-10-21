@@ -1,0 +1,1729 @@
+focus_tree = {
+	id = canadian_base
+	
+	country = {
+		factor = 1
+		
+		modifier = {
+			add = 10
+			tag = CAN
+			has_dlc = "Together for Victory"
+		}
+	}
+	
+	default = no
+
+    continuous_focus_position = { x = 50 y = 22300 }
+
+    # Opening Focus - Shared by all paths
+    focus = {
+        id =  CAN_The_Imperial_Defense_Appropriations_Act
+        icon = GFX_goal_The_Imperial_Defense_Appropriations_Act
+        available = {
+            has_country_flag = CAN_opening_fired
+        }
+        x = 15
+        y = 0
+        cost = 7
+
+        completion_reward = {
+            add_political_power = 50
+            add_war_support = 0.03
+            set_country_flag = CAN_defence_appropriations_passed
+            country_event = {
+                id = CAN_opening.1
+            }
+            
+        }
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    # Early Economic/Industrial Focuses - Shared
+    focus = {
+        id = CAN_Settle_the_Timber_Rights
+        icon = GFX_goal_settle_the_timber_rights
+        x = -7
+        y = 1
+
+        cost = 5
+
+        prerequisite = {
+            focus = CAN_The_Imperial_Defense_Appropriations_Act
+        }
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_stability = 0.03
+            add_political_power = 25
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = no
+            }
+            country_event = {
+                id = CAN_opening.2
+            }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Settle_the_Steel_Quotas
+        icon = GFX_goal_settle_the_steel_quotas
+        x = 7
+        y = 1
+
+        cost = 5
+
+        prerequisite = {
+            focus = CAN_The_Imperial_Defense_Appropriations_Act
+        }
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 25
+            add_war_support = 0.03
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = no
+            }
+            country_event = {
+                id = CAN_opening.3
+            }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    # The Grand Compromise - Leads to Black vs Mogg choice
+    focus = {
+        id = CAN_The_Grand_Compromise_of_26
+        icon = GFX_the_great_compromise_of_26
+        x = 0
+        y = 2
+
+        cost = 6
+
+        prerequisite = {
+            focus = CAN_Settle_the_Timber_Rights
+        }
+		  prerequisite = {
+            focus = CAN_Settle_the_Steel_Quotas
+        }
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 50
+            set_country_flag = CAN_grand_compromise_signed
+            country_event = { 
+                id = CAN_compromise.1 }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    # The Black Plan - Canada First
+    focus = {
+        id = CAN_The_Black_Plan
+        icon = GFX_goal_black_plan
+        x = -10
+        y = 3
+
+        cost = 5
+
+        prerequisite = {
+            focus = CAN_The_Grand_Compromise_of_26
+        }
+        mutually_exclusive = {
+            focus = CAN_THE_MOGG_PLAN
+        }
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {has_country_flag = CAN_sided_with_black}
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.03
+            set_country_flag = CAN_black_plan_adopted
+            # Shift balance significantly toward Black
+            add_to_variable = { var = CAN_mogg_faction_influence value = -20 }
+            add_to_variable = { var = CAN_black_authority value = 10 }
+            country_event = { id = CAN_policy.1 days = 1 }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    # Black branch focuses
+    focus = {
+        id = CAN_The_St_Lawrence_Shield
+        icon = GFX_goal_st_lawrence_shield
+        x = -8
+        y = 4
+
+        cost = 2
+
+        prerequisite = {
+            focus = CAN_The_Black_Plan
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = no
+            }
+            add_stability = 0.03
+            add_war_support = 0.02
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Subsidize_the_Laurentian_Mills
+        icon = GFX_goal_subsidize_the_laurentian_mills
+        x = -8
+        y = 5
+
+        cost = 2
+
+        prerequisite = {
+            focus = CAN_The_St_Lawrence_Shield
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = no
+            }
+            add_political_power = 25
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Keep_the_Exiles_in_Check
+        icon = GFX_goal_keep_exiles_in_check
+        x = -13
+        y = 4
+
+        cost = 5
+
+        prerequisite = {
+            focus = CAN_The_Black_Plan
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_stability = 0.04
+            add_to_variable = { var = CAN_mogg_faction_influence value = -10 }
+            set_country_flag = CAN_exile_finances_supervised
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Canadian_Patents_First
+        icon = GFX_goal_canadian_patents_first
+        x = -13
+        y = 5
+
+        cost = 3
+
+        prerequisite = {
+            focus = CAN_Keep_the_Exiles_in_Check
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_research_slot = 1
+            add_political_power = 25
+            set_country_flag = CAN_canadian_patents_protected
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Protect_the_Border_Pipelines
+        icon = GFX_Protect_the_Border_Pipelines
+        x = -9
+        y = 6
+
+        cost = 2
+
+        prerequisite = {
+            focus = CAN_Subsidize_the_Laurentian_Mills
+        }
+		   prerequisite = {
+            focus = CAN_Canadian_Patents_First
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = no
+            }
+            add_war_support = 0.03
+            set_country_flag = CAN_border_energy_secured
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Settle_the_Prairie_Wheat
+        icon = GFX_goal_settle_the_prairie_wheat
+        x = -17
+        y = 4
+
+        cost = 5
+
+        prerequisite = {
+            focus = CAN_The_Black_Plan
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Laurentian_Steel_Mills
+        icon = GFX_goal_laurentian_steel_mills
+        x = -17
+        y = 5
+
+        cost = 5
+
+        prerequisite = {
+            focus = CAN_Settle_the_Prairie_Wheat
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = no
+            }
+            add_political_power = 25
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Canadian_Autarky
+        icon = GFX_goal_canadian_autarky
+        x = -11
+        y = 7
+
+        cost = 6
+
+        prerequisite = {
+            focus = CAN_Laurentian_Steel_Mills
+        }
+        prerequisite = {
+            focus = CAN_Protect_the_Border_Pipelines
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.05
+            set_country_flag = CAN_autarky_achieved
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_The_Great_Lakes_Flotilla
+        icon = GFX_The_Great_Lakes_Flotilla
+        x = -9
+        y = 7
+
+        cost = 5
+
+        prerequisite = {
+            focus = CAN_Protect_the_Border_Pipelines
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 25
+            add_war_support = 0.03
+            set_country_flag = CAN_great_lakes_flotilla
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Conscript_the_National_Guard
+        icon = GFX_conscript_the_national_guard
+        x = -9
+        y = 8
+
+        cost = 6
+
+        prerequisite = {
+            focus = CAN_The_Great_Lakes_Flotilla
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_manpower = 50000
+            add_war_support = 0.05
+            set_country_flag = CAN_national_guard_conscripted
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Reorganize_the_Entente
+        icon = GFX_Reorganize_the_Entente
+        x = -9 
+        y = 9
+
+        cost = 7
+
+        prerequisite = {
+            focus = CAN_Conscript_the_National_Guard
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.03
+            set_country_flag = CAN_entente_reorganized
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_The_Fortress_of_the_North
+        icon = GFX_The_Fortress_of_the_North        
+        x = -13
+        y = 8
+
+        cost = 5
+
+        prerequisite = {
+            focus = CAN_Canadian_Autarky
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_building_construction = {
+                type = bunker
+                level = 2
+                instant_build = no
+            }
+            add_war_support = 0.08
+            add_stability = 0.05
+            add_political_power = 50
+            set_country_flag = CAN_fortress_north_complete
+            country_event = {
+                id = CAN_sovereignty.1
+                days = 7
+            }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Alberta_Energy_Independence
+        icon = GFX_goal_alberta_energy_independence
+        x = -11
+        y = 8
+
+        cost = 2
+
+        prerequisite = {
+            focus = CAN_Canadian_Autarky
+        }
+
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+        available = {
+            has_country_flag = CAN_black_plan_adopted
+        }
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.03
+            set_country_flag = CAN_alberta_energy_secured
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = no
+            }
+            add_to_variable = { var = CAN_mogg_faction_influence value = -5 }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Reform_the_Officer_Corps
+        icon = GFX_goal_reform_the_officer_corps
+        x = -11
+        y = 5
+
+        cost = 3
+
+        prerequisite = {
+            focus = CAN_Keep_the_Exiles_in_Check
+        }
+
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+        available = {
+            has_country_flag = CAN_black_plan_adopted
+        }
+
+        bypass = {}
+
+        completion_reward = {
+            add_army_experience = 25
+            add_political_power = 50
+            set_country_flag = CAN_officer_corps_reformed
+            add_to_variable = { var = CAN_mogg_faction_influence value = -10 }
+            add_to_variable = { var = CAN_boris_loyalty value = 10 }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_The_Northern_Shield
+        icon = GFX_The_Northern_Shield
+        x = -13
+        y = 6
+
+        cost = 2
+
+        prerequisite = {
+            focus = CAN_Reform_the_Officer_Corps
+        }
+
+        prerequisite = {
+            focus = CAN_Canadian_Patents_First
+        }
+
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+        available = {
+            has_country_flag = CAN_black_plan_adopted
+            OR = {
+                has_country_flag = CAN_saganash_cabinet
+                has_country_flag = CAN_saganash_northern_affairs
+            }
+        }
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 75
+            add_stability = 0.05
+            set_country_flag = CAN_northern_shield_active
+            add_ideas = CAN_northern_shield_idea
+            add_army_experience = 20
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Manage_the_Bernier_Problem
+        icon = GFX_Manage_the_Bernier_Problem
+        x = -15
+        y = 6
+
+        cost = 2
+
+        prerequisite = {
+            focus = CAN_Canadian_Patents_First
+        }
+
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+        available = {
+            has_country_flag = CAN_black_plan_adopted
+        }
+
+        bypass = {}
+
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 50
+            set_country_flag = CAN_bernier_managed
+            add_popularity = {
+                ideology = nationalist
+                popularity = -0.03
+            }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Indigenous_Consultation
+        icon = GFX_Indigenous_Consultation
+        x = -14
+        y = 7
+
+        cost = 1
+
+        prerequisite = {
+            focus = CAN_Manage_the_Bernier_Problem
+        }
+
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+        available = {
+            has_country_flag = CAN_black_plan_adopted
+        }
+
+        bypass = {}
+
+        completion_reward = {
+            add_stability = 0.03
+            add_political_power = 25
+            set_country_flag = CAN_indigenous_consultation_held
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    # The Mogg Plan - Reclamation
+    focus = {
+        id = CAN_THE_MOGG_PLAN
+        icon = GFX_goal_the_mogg_plan
+        x = 10
+        y = 3
+
+        cost = 5
+
+        prerequisite = {
+            focus = CAN_The_Grand_Compromise_of_26
+        }
+        mutually_exclusive = {
+            focus = CAN_The_Black_Plan
+        }
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {has_country_flag = CAN_sided_with_mogg}
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 50
+            add_war_support = 0.03
+            set_country_flag = CAN_mogg_plan_adopted
+            # Shift balance significantly toward Mogg
+            add_to_variable = { var = CAN_black_authority value = -20 }
+            add_to_variable = { var = CAN_mogg_faction_influence value = 10 }
+            country_event = { id = CAN_policy.2 days = 1 }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    # Mogg branch focuses
+    focus = {
+        id = CAN_Requisition_the_Exile_Wealth
+        icon = GFX_Requisition_the_Exile_Wealth
+        x = 7
+        y = 4
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_THE_MOGG_PLAN
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 100
+            add_stability = -0.03
+            add_to_variable = { var = CAN_mogg_faction_influence value = 5 }
+            set_country_flag = CAN_exile_wealth_requisitioned
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_The_Halifax_Super_Docks
+        icon = GFX_The_Halifax_Super_Docks
+        x = 7
+        y = 5
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_Requisition_the_Exile_Wealth
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = no
+            }
+            add_command_power = 20
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_The_Blue_Water_Mandate
+        icon = GFX_The_Blue_Water_Mandate
+        x = 5
+        y = 4
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_THE_MOGG_PLAN
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_war_support = 0.06
+            add_political_power = 25
+            set_country_flag = CAN_blue_water_mandate_issued
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Press_Gang_the_Merchantry
+        icon = GFX_Press_Gang_the_Merchantry
+        x = 9
+        y = 4
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_THE_MOGG_PLAN
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_convoy = 25
+            add_command_power = 10
+            add_stability = -0.02
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Draft_the_Liberation_Army
+        icon = GFX_Draft_the_Liberation_Army
+        x = 12
+        y = 4
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_THE_MOGG_PLAN
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_manpower = 30000
+            add_war_support = 0.06
+            add_army_experience = 20
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Suppress_the_Quiet_Liberals
+        icon = GFX_Suppress_the_Quiet_Liberals
+        x = 14
+        y = 4
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_THE_MOGG_PLAN
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_stability = -0.03
+            add_political_power = 25
+            add_to_variable = { var = CAN_mogg_faction_influence value = 10 }
+            set_country_flag = CAN_liberal_opposition_suppressed
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_The_Admiralty_Protocols
+        icon = GFX_The_Admiralty_Protocols
+        x = 14
+        y = 5
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_THE_MOGG_PLAN
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 25
+            add_command_power = 25
+            set_country_flag = CAN_admiralty_protocols_adopted
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Commission_the_Exiled_Officers
+        icon = GFX_Commission_the_Exiled_Officers
+        x = 5
+        y = 5
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_The_Blue_Water_Mandate
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_army_experience = 20
+            add_command_power = 25
+            set_country_flag = CAN_exiled_officers_commissioned
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Conscript_the_Resettled
+        icon = GFX_Conscript_the_Resettled
+        x = 8
+        y = 6
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_Commission_the_Exiled_Officers
+        }
+		    prerequisite = {
+            focus = CAN_The_Halifax_Super_Docks
+        }
+	
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_manpower = 40000
+            add_war_support = 0.05
+            add_army_experience = 15
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Secure_the_Newfoundland_Base
+        icon = GFX_Secure_the_Newfoundland_Base
+        x = 13
+        y = 6
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_The_Admiralty_Protocols
+        }
+	
+        prerequisite = {
+            focus = CAN_Draft_the_Liberation_Army
+        }
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_building_construction = {
+                type = naval_base
+                level = 2
+                instant_build = no
+            }
+            add_building_construction = {
+                type = bunker
+                level = 1
+                instant_build = no
+            }
+            set_country_flag = CAN_newfoundland_base_secured
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_Summon_the_Entente_Cohorts
+        icon = GFX_summon_the_Entente_Cohorts
+        x = 10
+        y = 7
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_Secure_the_Newfoundland_Base
+        }
+	
+        prerequisite = {
+            focus = CAN_Conscript_the_Resettled
+        }
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            add_manpower = 50000
+            add_war_support = 0.08
+            add_political_power = 50
+            set_country_flag = CAN_entente_cohorts_summoned
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = CAN_The_Exiles_Mark_Their_Return
+        icon = GFX_The_Exiles_Mark_Their_Return
+        x = 10
+        y = 8
+
+        cost = 8
+
+        prerequisite = {
+            focus = CAN_Summon_the_Entente_Cohorts
+        }
+
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+                        add_war_support = 0.10
+                        add_command_power = 50
+                        set_country_flag = CAN_exiles_return_declared
+          country_event = {
+            id = CAN_armada.1
+            days = 3
+        }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    # The Armada's defeat is the continuation of the original reclamation branch.
+    focus = {
+        id = CAN_the_atlantic_reckoning
+        icon = GFX_the_atlantic_reckoning
+        x = 0
+        y = 1
+        relative_position_id = CAN_The_Exiles_Mark_Their_Return
+        cost = 5
+
+        prerequisite = { focus = CAN_The_Exiles_Mark_Their_Return }
+
+        available = {
+            has_country_flag = CAN_armada_destroyed
+        }
+
+        completion_reward = {
+            add_political_power = 50
+            set_country_flag = CAN_armada_reckoning_opened
+        }
+    }
+
+    focus = {
+        id = CAN_black_faces_the_house
+        icon = GFX_black_faces_the_house
+        x = -2
+        y = 1
+        relative_position_id = CAN_the_atlantic_reckoning
+        cost = 35
+
+        prerequisite = { focus = CAN_the_atlantic_reckoning }
+        mutually_exclusive = { focus = CAN_mogg_refuses_defeat }
+
+        completion_reward = {
+            add_stability = 0.05
+            add_to_variable = { var = CAN_black_authority value = 10 }
+            add_to_variable = { var = CAN_mogg_faction_influence value = -10 }
+            set_country_flag = CAN_black_accepts_armada_responsibility
+        }
+    }
+
+    focus = {
+        id = CAN_mogg_refuses_defeat
+        icon = GFX_mogg_refuses_defeat
+        x = 2
+        y = 1
+        relative_position_id = CAN_the_atlantic_reckoning
+        cost = 35
+
+        prerequisite = { focus = CAN_the_atlantic_reckoning }
+        mutually_exclusive = { focus = CAN_black_faces_the_house }
+
+        completion_reward = {
+            add_war_support = 0.08
+            add_stability = -0.03
+            add_to_variable = { var = CAN_mogg_faction_influence value = 10 }
+            add_to_variable = { var = CAN_boris_loyalty value = -20 }
+            set_country_flag = CAN_mogg_refuses_armada_reckoning
+        }
+    }
+
+    focus = {
+        id = CAN_the_halifax_commission
+        icon = GFX_the_halifax_commission
+        x = 0
+        y = 1
+        relative_position_id = CAN_black_faces_the_house
+        cost = 49
+
+        prerequisite = { focus = CAN_black_faces_the_house }
+
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = -25
+            set_country_flag = CAN_halifax_commission_complete
+        }
+    }
+
+    focus = {
+        id = CAN_rebuild_the_armada
+        icon = GFX_rebuild_the_armada
+        x = 0
+        y = 1
+        relative_position_id = CAN_mogg_refuses_defeat
+        cost = 70
+
+        prerequisite = { focus = CAN_mogg_refuses_defeat }
+
+        completion_reward = {
+            add_war_support = 0.05
+            add_political_power = -50
+            set_country_flag = CAN_armada_rebuild_begun
+        }
+    }
+
+    focus = {
+        id = CAN_publish_the_halifax_report
+        icon = GFX_publish_the_halifax_report
+        x = 0
+        y = 1
+        relative_position_id = CAN_the_halifax_commission
+        cost = 56
+
+        prerequisite = { focus = CAN_the_halifax_commission }
+
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 50
+            add_ideas = CAN_halifax_accountability
+            set_country_flag = CAN_halifax_report_published
+            country_event = { id = CAN_humiliation.3 days = 1 }
+        }
+    }
+
+    focus = {
+        id = CAN_canada_before_reclamation
+        icon = GFX_canada_before_reclamation
+        x = 0
+        y = 1
+        relative_position_id = CAN_publish_the_halifax_report
+        cost = 70
+
+        prerequisite = { focus = CAN_publish_the_halifax_report }
+
+        completion_reward = {
+            add_stability = 0.08
+            add_political_power = 100
+            add_to_variable = { var = CAN_mogg_faction_influence value = -15 }
+            set_country_flag = CAN_canada_first_after_armada
+        }
+    }
+
+    focus = {
+        id = CAN_seek_a_new_mandate
+        icon = GFX_seek_a_new_mandate
+        x = 0
+        y = 1
+        relative_position_id = CAN_canada_before_reclamation
+        cost = 56
+
+        prerequisite = { focus = CAN_canada_before_reclamation }
+
+        completion_reward = {
+            add_political_power = -50
+            country_event = { id = CAN_humiliation.6 days = 1 }
+        }
+    }
+
+    focus = {
+        id = CAN_black_renewed_mandate
+        icon = GFX_black_renewed_mandate
+        x = -2
+        y = 1
+        relative_position_id = CAN_seek_a_new_mandate
+        cost = 70
+
+        prerequisite = { focus = CAN_seek_a_new_mandate }
+
+        available = {
+            has_country_flag = CAN_black_post_armada_mandate
+        }
+
+        completion_reward = {
+            add_stability = 0.10
+            add_political_power = 100
+            set_country_flag = CAN_black_renewed_mandate_granted
+        }
+    }
+
+    focus = {
+        id = CAN_boris_inherits_the_future
+        icon = GFX_boris_inherits_the_future
+        x = 2
+        y = 1
+        relative_position_id = CAN_seek_a_new_mandate
+        cost = 70
+
+        prerequisite = { focus = CAN_seek_a_new_mandate }
+
+        available = {
+            has_country_flag = CAN_boris_post_armada_mandate
+        }
+
+        completion_reward = {
+            add_war_support = 0.10
+            add_political_power = 100
+            add_to_variable = { var = CAN_boris_loyalty value = 25 }
+            set_country_flag = CAN_boris_canadian_future_secured
+        }
+    }
+
+    focus = {
+        id = CAN_learn_from_the_wreckage
+        icon = GFX_learn_from_the_wreckage
+        x = 0
+        y = 1
+        relative_position_id = CAN_rebuild_the_armada
+        cost = 56
+
+        prerequisite = { focus = CAN_rebuild_the_armada }
+
+        completion_reward = {
+            add_war_support = 0.05
+            add_ideas = CAN_second_armada_doctrine
+            set_country_flag = CAN_second_armada_doctrine_adopted
+            country_event = { id = CAN_humiliation.4 days = 1 }
+        }
+    }
+
+    focus = {
+        id = CAN_the_second_armada
+        icon = GFX_the_second_armada
+        x = 0
+        y = 1
+        relative_position_id = CAN_learn_from_the_wreckage
+        cost = 70
+
+        prerequisite = { focus = CAN_learn_from_the_wreckage }
+
+        available = {
+            NOT = { has_war_with = ENG }
+            ENG = { has_capitulated = no }
+        }
+
+        completion_reward = {
+            add_political_power = -75
+            add_war_support = 0.08
+            add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = no
+            }
+            set_country_flag = CAN_second_armada_authorised
+            country_event = { id = CAN_armada.8 days = 7 }
+        }
+    }
+
+    focus = {
+        id = CAN_britain_reclaimed
+        icon = GFX_unkown
+
+        available = {
+            has_country_flag = CAN_britain_liberated
+        }
+
+        x = 33
+        y = 7
+        cost = 35
+
+        completion_reward = {
+            add_political_power = 75
+            add_stability = 0.03
+            set_country_flag = CAN_post_liberation_government_begun
+        }
+    }
+
+    focus = {
+        id = CAN_restore_the_ministries
+        icon = GFX_unkown
+
+        prerequisite = { focus = CAN_britain_reclaimed }
+
+        x = 0
+        y = 1
+        relative_position_id = CAN_britain_reclaimed
+        cost = 49
+
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.03
+            set_country_flag = CAN_whitehall_reopened
+        }
+    }
+
+    focus = {
+        id = CAN_feed_the_capital
+        icon = GFX_unkown
+
+        prerequisite = { focus = CAN_restore_the_ministries }
+
+        x = -2
+        y = 1
+        relative_position_id = CAN_restore_the_ministries
+        cost = 49
+
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = -25
+            set_country_flag = CAN_london_relief_underway
+        }
+    }
+
+    focus = {
+        id = CAN_restore_british_government
+        icon = GFX_unkown
+
+        prerequisite = { focus = CAN_restore_the_ministries }
+
+        available = {
+            NOT = { has_war_with = ENG }
+            ENG = { has_capitulated = yes }
+        }
+
+        x = 0
+        y = 1
+        relative_position_id = CAN_restore_the_ministries
+        cost = 49
+
+        completion_reward = {
+            country_event = { id = CAN_westminster.3 days = 1 }
+        }
+    }
+
+    focus = {
+        id = CAN_the_scottish_question
+        icon = GFX_unkown
+
+        prerequisite = { focus = CAN_restore_british_government }
+
+        available = {
+            SCO = { exists = yes }
+        }
+
+        x = 0
+        y = 2
+        relative_position_id = CAN_restore_the_ministries
+        cost = 35
+
+        completion_reward = {
+            add_political_power = 25
+            set_country_flag = CAN_scottish_question_opened
+        }
+    }
+
+    focus = {
+        id = CAN_offer_a_new_union
+        icon = GFX_unkown
+
+        prerequisite = { focus = CAN_the_scottish_question }
+        mutually_exclusive = {
+            focus = CAN_recognise_scottish_sovereignty
+            focus = CAN_demand_the_union_restored
+        }
+
+        x = 2
+        y = 1
+        relative_position_id = CAN_the_scottish_question
+        cost = 49
+
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.03
+            set_country_flag = CAN_new_union_offered
+            country_event = { id = CAN_westminster.5 days = 1 }
+        }
+    }
+
+    focus = {
+        id = CAN_demand_the_union_restored
+        icon = GFX_unkown
+
+        prerequisite = { focus = CAN_the_scottish_question }
+        mutually_exclusive = {
+            focus = CAN_offer_a_new_union
+            focus = CAN_recognise_scottish_sovereignty
+        }
+
+        x = 0
+        y = 2
+        relative_position_id = CAN_the_scottish_question
+        cost = 49
+
+        completion_reward = {
+            add_war_support = 0.05
+            add_stability = -0.03
+            set_country_flag = CAN_union_restoration_demanded
+        }
+    }
+
+    focus = {
+        id = CAN_recognise_scottish_sovereignty
+        icon = GFX_unkown
+
+        prerequisite = { focus = CAN_the_scottish_question }
+        mutually_exclusive = {
+            focus = CAN_offer_a_new_union
+            focus = CAN_demand_the_union_restored
+        }
+
+        x = -2
+        y = 1
+        relative_position_id = CAN_the_scottish_question
+        cost = 49
+
+        completion_reward = {
+            add_stability = 0.05
+            set_country_flag = CAN_scottish_sovereignty_recognised
+        }
+    }
+
+    focus = {
+        id = CAN_ratify_a_new_union
+        icon = GFX_unkown
+
+        prerequisite = {
+            focus = CAN_offer_a_new_union
+        }
+        prerequisite = {
+            focus = CAN_restore_british_government
+        }
+
+        available = {
+            has_country_flag = CAN_scottish_union_accepted
+        }
+
+        x = 1
+        y = -1
+        relative_position_id = CAN_offer_a_new_union
+        cost = 35
+
+        completion_reward = {
+            country_event = { id = CAN_westminster.4 days = 1 }
+        }
+    }
+
+    focus = {
+        id = CAN_reclamation_fleet_complete
+        icon = GFX_focus_CAN_navy
+
+        available = {
+            has_country_flag = CAN_entente_contribution_made
+        }
+
+        x = 10
+        y = 6
+        relative_position_id = CAN_THE_MOGG_PLAN
+        cost = 7
+
+        completion_reward = {
+            add_ideas = CAN_reclamation_fleet
+            add_war_support = 0.05
+            add_political_power = 100
+            set_country_flag = CAN_reclamation_fleet_complete
+            country_event = { id = CAN_mogg_implementation.5 days = 1 }
+        }
+    }
+
+    focus = {
+        id = CAN_detroit_agreement_mission
+        icon = GFX_focus_CAN_detroit_mission
+
+        available = {
+            has_country_flag = CAN_sovereignty_address_delivered
+            NOT = { has_country_flag = CAN_detroit_agreement_signed }
+        }
+
+        bypass = {
+            has_country_flag = CAN_detroit_agreement_signed
+        }
+
+        x = 14
+        y = 4
+
+        cost = 5
+
+
+
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.02
+            set_country_flag = CAN_detroit_talks_prepared
+        }
+    }
+    # Prepare for Elections - Black branch
+    focus = {
+        id = CAN_Prepare_for_Elections_Black
+        icon = GFX_Prepare_for_Elections_Black
+        x = -12
+        y = 10
+
+        cost = 7
+
+        prerequisite = {
+            focus = CAN_The_Fortress_of_the_North
+        }
+
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+        available = {
+            has_country_flag = CAN_black_plan_adopted
+            has_country_flag = CAN_detroit_agreement_signed
+            has_country_flag = CAN_mogg_resigned
+            date > 2026.6.1
+        }
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 100
+            set_country_flag = CAN_election_preparation_begun
+            country_event = {
+                id = CAN_election.1
+                days = 30
+            }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    # Prepare for Elections - Mogg branch
+    focus = {
+        id = CAN_Prepare_for_Elections_Mogg
+        icon = GFX_Prepare_for_Elections_Mogg
+        x = 4
+        y = 9
+
+        cost = 7
+
+        prerequisite = {
+            focus = CAN_The_Exiles_Mark_Their_Return
+        }
+
+        relative_position_id = CAN_The_Imperial_Defense_Appropriations_Act
+
+        available = {
+            has_country_flag = CAN_mogg_plan_adopted
+            has_country_flag = CAN_armada_destroyed
+            has_country_flag = CAN_black_resigned
+            date > 2026.6.1
+        }
+
+        bypass = {}
+
+        completion_reward = {
+            add_political_power = 100
+            set_country_flag = CAN_election_preparation_begun
+            country_event = {
+                id = CAN_election.1
+                days = 30
+            }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+}

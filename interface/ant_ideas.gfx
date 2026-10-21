@@ -1,0 +1,6 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_frozen_continent"
+		texturefile = "gfx/interface/ideas/ant_frozen_continent.dds"
+	}
+}

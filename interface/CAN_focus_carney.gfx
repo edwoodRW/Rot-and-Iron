@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_focus_tree_canadian_carney"
+		texturefile = "gfx/interface/goals/canada_carney.dds"
+	}
+}

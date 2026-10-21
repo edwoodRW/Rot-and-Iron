@@ -1,0 +1,286 @@
+### common/national_focus/CAN_elected_focus_trees.txt
+###
+### Three trees that are NEVER assigned at game start (factor = 0).
+### They are swapped in by load_focus_tree in the CAN_carney.1 / CAN_angus.1 /
+### CAN_borispm.1 events once the election result is known.
+###
+### Each tree is seeded with the focuses your existing follow-up events already
+### expect (the .2 / .3 events say "fires when the player completes ...").
+### Replace the placeholder rewards, icons and layout as you build them out.
+###
+### Localisation needed for every focus id: <id> and <id>_desc
+
+########################################################################
+# CARNEY - economic reform / Detroit framework government
+########################################################################
+focus_tree = {
+	id = canadian_carney
+
+	country = {
+		factor = 0
+	}
+
+	default = no
+
+	focus = {
+		id = CAN_carney_implement_reforms
+		icon = GFX_goal_unknown
+		x = 2
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			# CAN_carney_economic_reforms.1 grants the idea, so guard against
+			# double-firing if the Carney negotiation path already ran it
+			if = {
+				limit = { NOT = { has_idea = CAN_economic_optimization } }
+				country_event = { id = CAN_carney_economic_reforms.1 }
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = CAN_carney_deregulate_the_markets
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_carney_implement_reforms }
+		x = 0
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			country_event = { id = CAN_carney_economic_reforms.2 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = CAN_carney_attract_foreign_investment
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_carney_implement_reforms }
+		x = 4
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			country_event = { id = CAN_carney_economic_reforms.3 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+}
+
+########################################################################
+# ANGUS - industrial nationalisation / worker-led government
+########################################################################
+focus_tree = {
+	id = canadian_angus
+
+	country = {
+		factor = 0
+	}
+
+	default = no
+
+	focus = {
+		id = CAN_angus_nationalize_key_industries
+		icon = GFX_goal_unknown
+		x = 2
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = CAN_industrial_nationalization } }
+				country_event = { id = CAN_angus_industrial_nationalization.1 }
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = CAN_angus_establish_worker_councils
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_angus_nationalize_key_industries }
+		x = 0
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			country_event = { id = CAN_angus_industrial_nationalization.2 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = CAN_angus_launch_public_works
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_angus_nationalize_key_industries }
+		x = 4
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			country_event = { id = CAN_angus_industrial_nationalization.3 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+}
+
+########################################################################
+# BORIS - one-nation Conservative, Canada first
+# Reformer who undoes Black's centralisation, refuses reclamation, and keeps
+# the imperial language as a Dominion / Commonwealth bloc rather than a
+# reconquest. Rewards are direct effects, so nothing here depends on the old
+# CAN_boris_naval_expansion events.
+########################################################################
+focus_tree = {
+	id = canadian_boris
+
+	country = {
+		factor = 0
+	}
+
+	default = no
+
+	# --- Root ---------------------------------------------------------
+	focus = {
+		id = CAN_boris_one_nation_mandate
+		icon = GFX_goal_unknown
+		x = 4
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+			set_country_flag = CAN_boris_one_nation_government
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# --- Reform: undo Black's centralisation --------------------------
+	focus = {
+		id = CAN_boris_restore_parliamentary_norms
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_boris_one_nation_mandate }
+		x = 0
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+			set_country_flag = CAN_black_emergency_powers_repealed
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = CAN_boris_end_the_patronage_machine
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_boris_restore_parliamentary_norms }
+		x = 0
+		y = 2
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# --- Canada first: levelling up the provinces ---------------------
+	focus = {
+		id = CAN_boris_level_up_the_provinces
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_boris_one_nation_mandate }
+		x = 4
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = no
+				}
+			}
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = CAN_boris_one_country_not_two_communities
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_boris_level_up_the_provinces }
+		x = 4
+		y = 2
+		cost = 5
+
+		completion_reward = {
+			# Exiles integrated as Canadians, not a government-in-waiting
+			add_stability = 0.05
+			set_country_flag = CAN_exiles_integrated
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# --- Imperial, but not reclamationist -----------------------------
+	focus = {
+		id = CAN_boris_shelve_the_reclamation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_boris_one_nation_mandate }
+		x = 8
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			# The break with Mogg
+			add_stability = 0.05
+			add_war_support = -0.05
+			set_country_flag = CAN_reclamation_shelved
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = CAN_boris_the_dominion_network
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_boris_shelve_the_reclamation }
+		x = 7
+		y = 2
+		cost = 5
+
+		completion_reward = {
+			# Commonwealth-style trade and diplomatic bloc
+			add_political_power = 50
+			set_country_flag = CAN_dominion_network_founded
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = CAN_boris_the_atlantic_shield
+		icon = GFX_goal_unknown
+		prerequisite = { focus = CAN_boris_shelve_the_reclamation }
+		x = 9
+		y = 2
+		cost = 5
+
+		completion_reward = {
+			# Navy as Atlantic defence, not a reclamation fleet
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = no
+				}
+			}
+			add_war_support = 0.03
+		}
+		ai_will_do = { factor = 10 }
+	}
+}

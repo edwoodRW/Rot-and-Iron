@@ -1,0 +1,128 @@
+﻿capital = 651
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 2
+oob = "BKN"
+
+add_ideas = {
+	BKN_Zinatulla_Bulashev_hog_rso
+	BKN_Sharif_Manatov_for_rso
+	BKN_Kharis_Yumagulov_eco_tot
+	BKN_Akhmed_Biishev_sec_rso
+}
+
+set_politics = {
+	ruling_party = radical_socialist
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 1
+	radical_socialist = 41
+	syndicalist = 11
+	social_democrat = 9
+	social_liberal = 7
+	market_liberal = 2
+	social_conservative = 3
+	authoritarian_democrat = 5
+	paternal_autocrat = 21
+	national_populist = 0
+}
+
+create_country_leader = {
+	name = "Sharif ulı Manatov"
+	picture = "gfx/leaders/BKN/Portrait_BKN_Manatov.png"
+	expire = "1.1.1"
+	ideology = moderate_socialist_subtype
+	traits = {}
+}
+create_country_leader = {
+	name = "Mekhemmetkhan ulı Qulayev"
+	picture = "gfx/leaders/BKN/Portrait_BKN_Kulayev.png"
+	expire = "1.1.1"
+	ideology = moderate_authoritarianism_subtype
+	traits = {}
+}
+create_country_leader = {
+	name = "Mekhemmetkhan ulı Qulayev"
+	picture = "gfx/leaders/BKN/Portrait_BKN_Kulayev.png"
+	expire = "1.1.1"
+	ideology = authdem_junta_subtype
+	traits = {}
+}
+create_country_leader = {
+	name = "Mekhemmetkhan ulı Qulayev"
+	picture = "gfx/leaders/BKN/Portrait_BKN_Kulayev.png"
+	expire = "1.1.1"
+	ideology = junta_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Akhmatzaki ulı Validi"
+	picture = "gfx/leaders/BKN/Portrait_BKN_Validi.png"
+	expire = "1.1.1"
+	expire = "1.1.1"
+	ideology = agrarian_syndicalism_subtype
+	traits = {}
+}
+
+
+### Field Marshal
+
+create_field_marshal = { 
+	name = "Akhmatzaki ulı Validi "
+	portrait_path = "gfx/leaders/BKN/Portrait_BKN_Validi.png"
+	traits = {
+		old_guard
+		defensive_doctrine
+	}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_field_marshal = { 
+	name = "Mekhemmetkhan ulı Qulayev "
+	portrait_path = "gfx/leaders/BKN/Portrait_BKN_Kulayev.png"
+	traits = {
+		old_guard
+		offensive_doctrine
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+### Corps Commander
+create_corps_commander = { #Auto-Generated
+	name = "Selayman ulı Ishmyrzin"
+	portrait_path = "gfx/leaders/BKN/Portrait_BKN_Ishmyrzin.png"
+	traits = {
+		old_guard
+		guerilla_officer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = { #Auto-Generated
+	name = "Amir ulı Karamyshev"
+	portrait_path = "gfx/leaders/BKN/Portrait_BKN_Karamyshev.png"
+	traits = {
+		old_guard
+		cavalry_expert
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}

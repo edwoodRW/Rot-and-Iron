@@ -1,0 +1,46 @@
+characters={
+	afc_robert_mugabe={
+		name=afc_robert_mugabe
+		portraits={
+			civilian={
+				large=GFX_portrait_AFC_mugabe
+			}
+		}
+		country_leader={
+			ideology=revolutionary_socialist
+			expire="2036.1.1.1"
+			traits = { afc_liberation_hero afc_permanent_president }
+			id=-1
+		}
+	}
+	
+	afc_josiah_tongogara={
+		name=afc_josiah_tongogara
+		portraits={
+			civilian={
+				large=GFX_portrait_AFC_tongogara
+			}
+		}
+		country_leader={
+			ideology=revolutionary_socialist
+			expire="2036.1.1.1"
+			traits = { afc_military_champion }
+			id=-1
+		}
+	}
+	
+	afc_samora_machel={
+		name=afc_samora_machel
+		portraits={
+			civilian={
+				large=GFX_portrait_AFC_machel
+			}
+		}
+		country_leader={
+			ideology=revolutionary_socialist
+			expire="2036.1.1.1"
+			traits = { afc_anti_imperialist_hardliner }
+			id=-1
+		}
+	}
+}

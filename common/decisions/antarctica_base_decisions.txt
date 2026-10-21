@@ -1,0 +1,924 @@
+antarctica_decisions = {
+
+	# Little America and Orcadas already established in 1936
+
+	# East Base
+	USA_establish_east_base = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = USA
+		}
+
+		available = {
+			date > 1939.11.25
+			804 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = USA
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					804 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = USA
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1098
+			set_province_name = {
+				id = 13663
+				name = "East Base"
+			}
+			804 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				804 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.1
+				}
+			}
+		}
+	}
+
+	# Station A / Station B
+	ENG_establish_station_a_b = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = ENG
+		}
+
+		available = {
+			date > 1944.02.07
+			805 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = ENG
+				}
+			}
+			806 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = ENG
+				}
+			}
+			has_manpower > 40
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -40
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					805 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = ENG
+						}
+					}
+					806 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = ENG
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1099
+			805 = {
+				add_manpower = 20
+			}
+			set_province_name = {
+				id = 13664
+				name = "Station A"
+			}
+			transfer_state = 1100
+			806 = {
+				add_manpower = 20
+				
+			}
+			set_province_name = {
+				id = 13665
+				name = "Station B"
+			}
+			hidden_effect = {
+				805 = {
+					remove_core_of = ANT
+				}
+				806 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.2
+				}
+			}
+		}
+	}
+	
+	# Station D
+	ENG_establish_station_d = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = ENG
+		}
+
+		available = {
+			date > 1945.02.13
+			807 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = ENG
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					807 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = ENG
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1101
+			set_province_name = {
+				id = 13666
+				name = "Station D"
+			}
+			807 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				807 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.3
+				}
+			}
+		}
+	}
+	
+	# Base Arturio Prat
+	CHL_establish_base_arturio_prat = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = CHL
+		}
+
+		available = {
+			date > 1947.02.06
+			808 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = CHL
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					808 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = CHL
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1102
+			set_province_name = {
+				id = 13667
+				name = "Base Arturio Prat"
+			}
+			808 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				808 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.4
+				}
+			}
+		}
+	}
+	
+	# Melchior Base
+	CHL_establish_melchior_base = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = CHL
+		}
+
+		available = {
+			date > 1947.01.15
+			809 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = CHL
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					809 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = CHL
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1103
+			set_province_name = {
+				id = 13668
+				name = "Base Melchior"
+			}
+			809 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				809 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.5
+				}
+			}
+		}
+	}
+	
+	# Station F / Station G
+	ENG_establish_station_f_g = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = ENG
+		}
+
+		available = {
+			date > 1947.01.07
+			810 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = ENG
+				}
+			}
+			811= {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = ENG
+				}
+			}
+			has_manpower > 40
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -40
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					810 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = ENG
+						}
+					}
+					811 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = ENG
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1104
+			810 = {
+				add_manpower = 20
+			}
+			set_province_name = {
+				id = 13669
+				name = "Station F"
+			}
+			transfer_state = 1105
+			811 = {
+				add_manpower = 20
+				
+			}
+			set_province_name = {
+				id = 13670
+				name = "Station G"
+			}
+			hidden_effect = {
+				810 = {
+					remove_core_of = ANT
+				}
+				811 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.6
+				}
+			}
+		}
+	}
+	
+	# O'Higgins Station
+	CHL_establish_ohiggins_station = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = CHL
+		}
+
+		available = {
+			date > 1948.02.18
+			812 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = CHL
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					812 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = CHL
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1106
+			set_province_name = {
+				id = 13671
+				name = "Base O'Higgins"
+			}
+			812 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				812 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.7
+				}
+			}
+		}
+	}
+	
+	# Maudheim
+	NOR_establish_maudheim = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = NOR
+		}
+
+		available = {
+			date > 1949.02.15
+			813 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = NOR
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					813 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = NOR
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1107
+			set_province_name = {
+				id = 13672
+				name = "Maudheim"
+			}
+			813 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				813 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.8
+				}
+			}
+		}
+	}
+	
+	# Port Martin
+	FRA_establish_port_martin = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = FRA
+		}
+
+		available = {
+			date > 1950.01.18
+			814 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = FRA
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					814 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = FRA
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1108
+			set_province_name = {
+				id = 13673
+				name = "Port Martin"
+			}
+			814 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				814 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.9
+				}
+			}
+		}
+	}
+	
+	# Station E
+	ENG_establish_station_e = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = ENG
+		}
+
+		available = {
+			date > 1946.02.25
+			804 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = ENG
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					804 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = ENG
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1098
+			set_province_name = {
+				id = 13663
+				name = "Station E"
+			}
+			804 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				804 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.10
+				}
+			}
+		}
+	}
+	
+	# Deception Base
+	ARG_establish_deception_base = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = ARG
+		}
+
+		available = {
+			date > 1948.01.25
+			806 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = ARG
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					806 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = ARG
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1100
+			set_province_name = {
+				id = 13665
+				name = "Base Decepción"
+			}
+			806 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				806 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.11
+				}
+			}
+		}
+	}
+	
+	# Hitler Station
+	GER_establish_hitler_station = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = GER
+			has_government = fascism
+		}
+
+		available = {
+			date > 1949.02.15
+			813 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = GER
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					813 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = GER
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1107
+			set_province_name = {
+				id = 13672
+				name = "Hitler Station"
+			}
+			813 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				813 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.12
+				}
+			}
+		}
+	}
+	
+	# Station H
+	ENG_establish_station_h = {
+
+		icon = infiltrate_state
+		
+		visible = {
+			original_tag = ENG
+		}
+
+		available = {
+			date > 1947.03.18
+			815 = {
+				OR = {
+					is_owned_and_controlled_by = ANT
+					is_owned_and_controlled_by = ENG
+				}
+			}
+			has_manpower > 20
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = -20
+		}
+		
+		days_remove = 30
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					815 = {
+						OR = {
+							is_owned_and_controlled_by = ANT
+							is_owned_and_controlled_by = ENG
+						}
+					}
+				}
+			}
+		}
+		
+		remove_effect = {
+			transfer_state = 1109
+			set_province_name = {
+				id = 13674
+				name = "Station H"
+			}
+			815 = {
+				add_manpower = 20
+			}
+			hidden_effect = {
+				815 = {
+					remove_core_of = ANT
+				}
+				country_event = {
+					id = antbase.13
+				}
+			}
+		}
+	}
+}

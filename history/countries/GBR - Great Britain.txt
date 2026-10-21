@@ -1,0 +1,38 @@
+﻿capital = 126
+
+oob = "empty"
+
+set_research_slots = 4
+
+set_stability = 0.4
+set_war_support = 0.2
+starting_train_buffer = 1
+###GB doesnt need starting techs as it inherits all techs from UoB
+
+set_convoys = 200
+
+add_ideas = {
+	GBR_military_chaos_1
+}
+
+set_politics = {
+	ruling_party = monarchist
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascist = 0
+	nationalist = 7
+	monarchist = 35
+	national_bolshevik = 10
+	national_conservative = 20
+	centrist = 0
+	liberal = 15
+	new_democrat = 0
+	moderate_socialist = 0
+	revolutionary_socialist = 8
+	communist = 5
+}
+

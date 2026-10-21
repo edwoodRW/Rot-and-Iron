@@ -1,0 +1,101 @@
+capital = 523
+
+oob = "PNG_2026"
+
+set_research_slots = 3
+set_convoys = 50
+set_stability = 0.5
+set_war_support = 0.3
+
+set_technology = {
+	support_weapons = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1
+	tech_field_hospital = 1
+	tech_engineers = 1
+	gwtank = 1
+	basic_light_tank = 1
+	gw_artillery = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+}
+
+set_politics = {
+	ruling_party = new_democrat
+	last_election = "2024.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascist = 0
+	nationalist = 15
+	monarchist = 0
+	national_bolshevik = 0
+	national_conservative = 12
+	centrist = 10
+	liberal = 8
+	new_democrat = 30
+	moderate_socialist = 12
+	revolutionary_socialist = 7
+	communist = 6
+}
+
+create_country_leader = {
+	name = "Joseph Somare"
+	ideology = fascist_ideology
+}
+
+create_country_leader = {
+	name = "Samuel Tau"
+	ideology = nationalist_ideology
+}
+
+create_country_leader = {
+	name = "Simon Namaliu"
+	ideology = absolute_monarchist
+}
+
+create_country_leader = {
+	name = "Peter Kaiulo"
+	ideology = national_bolshevik_ideology
+}
+
+create_country_leader = {
+	name = "Paul Wama"
+	ideology = fiscal_conservative
+}
+
+create_country_leader = {
+	name = "Daniel Mara"
+	ideology = centrist_ideology
+}
+
+create_country_leader = {
+	name = "Kila Kaupa"
+	ideology = social_liberal
+}
+
+create_country_leader = {
+	name = "Michael Okuk"
+	ideology = new_democrat_ideology
+}
+
+create_country_leader = {
+	name = "Thomas Hola"
+	ideology = democratic_socialist
+}
+
+create_country_leader = {
+	name = "Moses Pato"
+	ideology = revolutionary_socialist_ideology
+}
+
+create_country_leader = {
+	name = "John Waigani"
+	ideology = communist
+}
+

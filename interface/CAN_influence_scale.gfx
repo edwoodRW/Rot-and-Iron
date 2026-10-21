@@ -1,0 +1,46 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_CAN_bop_black_side"
+		texturefile = "gfx/canada_influence_assets/faction_conrad_black.png"
+	}
+
+	spriteType = {
+		name = "GFX_CAN_bop_black_maple"
+		texturefile = "gfx/canada_influence_assets/bop_portrait_conrad_left.png"
+	}
+
+	spriteType = {
+		name = "GFX_CAN_bop_black_endpoint"
+		texturefile = "gfx/canada_influence_assets/endpoint_conrad.png"
+	}
+
+	spriteType = {
+		name = "GFX_CAN_bop_mogg_side"
+		texturefile = "gfx/canada_influence_assets/faction_jacob_rees_mogg.png"
+	}
+
+	spriteType = {
+		name = "GFX_CAN_bop_mogg_maple"
+		texturefile = "gfx/canada_influence_assets/bop_portrait_jacob_right.png"
+	}
+
+	spriteType = {
+		name = "GFX_CAN_bop_mogg_endpoint"
+		texturefile = "gfx/canada_influence_assets/endpoint_jacob.png"
+	}
+
+	spriteType = {
+		name = "GFX_CAN_bop_neutral_maple"
+		texturefile = "gfx/canada_influence_assets/icon_neutral_maple.png"
+	}
+
+	spriteType = {
+		name = "GFX_CAN_bop_crest"
+		texturefile = "gfx/canada_influence_assets/canada_crest.png"
+	}
+
+	spriteType = {
+		name = "GFX_CAN_decision_category_emblem"
+		texturefile = "gfx/canada_influence_assets/canada_emblem_button.png"
+	}
+}

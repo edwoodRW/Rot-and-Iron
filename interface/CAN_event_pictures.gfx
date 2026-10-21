@@ -1,0 +1,23 @@
+spriteTypes = {
+	SpriteType = { name = "GFX_report_event_CAN_armada_sailing" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_atlantic_disaster" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_black_phone" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_boris_council" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_boris_rally" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_detroit_hotel" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_factory" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_halifax_night" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_london_liberated" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_mogg_office" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_mogg_press" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_mogg_press_final" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_parliament_corridor" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_parliament_grey" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_parliament_night" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_parliament_office" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_parliament_winter" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_planning_map" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_planning_room" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_rideau_hall" texturefile = "gfx/event_pictures/report_event_001.dds" }
+	SpriteType = { name = "GFX_report_event_CAN_war_council" texturefile = "gfx/event_pictures/report_event_001.dds" }
+}

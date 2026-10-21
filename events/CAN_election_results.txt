@@ -1,0 +1,146 @@
+### events/CAN_election_results.txt
+###
+### Needs add_namespace = CAN_election declared once (top of any events file).
+### CAN_carney, CAN_angus and CAN_borispm are already declared in
+### CAN_sovereignty_events.txt.
+###
+### CAN_election.1 is what CAN_sovereignty.6d and both "Prepare for Elections"
+### focuses already fire. It did not exist in the uploaded files, so this
+### version is a stand-in: delete it if you already have your own and just
+### have that one fire CAN_carney.1 / CAN_angus.1 / CAN_borispm.1.
+
+###########################################################
+# ELECTION RESULT - hidden dispatcher
+# Weights are placeholders keyed off flags you already set
+###########################################################
+
+country_event = {
+	id = CAN_election.1
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = CAN_election_held
+
+		random_list = {
+			30 = {
+				modifier = {
+					add = 20
+					has_country_flag = CAN_detroit_agreement_signed
+				}
+				country_event = { id = CAN_carney.1 }
+			}
+			30 = {
+				modifier = {
+					add = 15
+					has_country_flag = CAN_black_angus_understanding
+				}
+				modifier = {
+					add = 10
+					has_country_flag = CAN_conscription_repealed
+				}
+				country_event = { id = CAN_angus.1 }
+			}
+			40 = {
+				modifier = {
+					add = 20
+					has_country_flag = CAN_boris_national_figure
+				}
+				modifier = {
+					add = 10
+					has_country_flag = CAN_boris_deputy_pm_appointed
+				}
+				country_event = { id = CAN_borispm.1 }
+			}
+		}
+	}
+}
+
+###########################################################
+# CARNEY ELECTED
+###########################################################
+
+country_event = {
+	id = CAN_carney.1
+	title = CAN_carney.1.t
+	desc = CAN_carney.1.d
+	picture = GFX_report_event_CAN_parliament_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = CAN_carney_elected
+		load_focus_tree = {
+			tree = canadian_carney
+			keep_completed = yes
+		}
+	}
+
+	option = {
+		name = CAN_carney.1.a
+
+		# Government change, leader swap, ideas etc. go here
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+###########################################################
+# ANGUS ELECTED
+###########################################################
+
+country_event = {
+	id = CAN_angus.1
+	title = CAN_angus.1.t
+	desc = CAN_angus.1.d
+	picture = GFX_report_event_CAN_parliament_corridor
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = CAN_angus_elected
+		load_focus_tree = {
+			tree = canadian_angus
+			keep_completed = yes
+		}
+	}
+
+	option = {
+		name = CAN_angus.1.a
+
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+###########################################################
+# BORIS ELECTED
+###########################################################
+
+country_event = {
+	id = CAN_borispm.1
+	title = CAN_borispm.1.t
+	desc = CAN_borispm.1.d
+	picture = GFX_report_event_CAN_boris_rally
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = CAN_boris_elected
+		load_focus_tree = {
+			tree = canadian_boris
+			keep_completed = yes
+		}
+	}
+
+	option = {
+		name = CAN_borispm.1.a
+
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}

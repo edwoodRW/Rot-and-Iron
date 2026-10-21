@@ -1,0 +1,361 @@
+###########################################################
+# Rot and Iron — Canada Policy Events
+# File: events/CAN_policy_events.txt
+# These fire when Black Plan or Mogg Plan focus is chosen
+# They establish the tone and direction of each path
+###########################################################
+
+add_namespace = CAN_policy
+
+###########################################################
+# CAN_policy.1
+# Fires 1 day after The Black Plan focus completes
+# Black addresses cabinet on the new direction
+###########################################################
+
+country_event = {
+	id = CAN_policy.1
+	title = CAN_policy.1.t
+	desc = CAN_policy.1.d
+	picture = GFX_report_event_CAN_parliament_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = CAN_black_plan_event_seen
+	}
+
+	option = {
+		name = CAN_policy.1.a	# "Canada first. Always."
+
+		add_stability = 0.03
+		add_political_power = 50
+
+		# Black plan national spirit — Canada focused
+		add_ideas = CAN_canada_first_doctrine
+
+		# Rees-Mogg faction unhappy but contained
+		CAN_mogg_faction_influence_-5 = yes
+
+		# Boris approves strongly
+		CAN_boris_loyalty_5 = yes
+
+		# Bernier momentarily satisfied
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.01
+		}
+
+		# Trigger follow-up event about implementing the Canada First policy
+		country_event = {
+			id = CAN_black_implementation.1
+			days = 7
+		}
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_policy.2
+# Fires 1 day after The Mogg Plan focus completes
+# Rees-Mogg addresses the exile community
+###########################################################
+
+country_event = {
+	id = CAN_policy.2
+	title = CAN_policy.2.t
+	desc = CAN_policy.2.d
+	picture = GFX_report_event_CAN_mogg_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = CAN_mogg_plan_event_seen
+	}
+
+	option = {
+		name = CAN_policy.2.a	# "The time has come. We are going home."
+
+		add_war_support = 0.05
+		add_political_power = 50
+
+		# Mogg plan national spirit — crusade economy
+		add_ideas = CAN_reclamation_commitment
+
+		# Exile community energised
+		CAN_mogg_faction_influence_10 = yes
+
+		# Boris loyalty drops — this is not what he wanted
+		CAN_boris_loyalty_-10 = yes
+
+		# Ordinary Canadians worried
+		add_stability = -0.03
+
+		# Bernier's movement grows — they see the costs coming
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.02
+		}
+
+		# CCF gains — working class angry
+		add_popularity = {
+			ideology = cooperative_commonwealth
+			popularity = 0.02
+		}
+
+		# Trigger follow-up event about implementing the Reclamation
+		country_event = {
+			id = CAN_mogg_implementation.1
+			days = 7
+		}
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_black_implementation.1
+# Follow-up to Black Plan - implementing Canada First policies
+# Flavor only: the Fortress North America focus becomes
+# available in the tree, but the player must choose it
+###########################################################
+
+country_event = {
+	id = CAN_black_implementation.1
+	title = CAN_black_implementation.1.t
+	desc = CAN_black_implementation.1.d
+	picture = GFX_report_event_CAN_parliament_office
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = CAN_black_implementation.1.a
+		
+		# Economic effects of Canada First policy
+		add_ideas = CAN_economic_optimization
+		add_political_power = 50
+		
+		# Infrastructure construction
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = no
+		}
+	}
+}
+
+###########################################################
+# CAN_black_implementation.2
+# Fires when the player completes Fortress North America
+###########################################################
+
+country_event = {
+	id = CAN_black_implementation.2
+	title = CAN_black_implementation.2.t
+	desc = CAN_black_implementation.2.d
+	picture = GFX_report_event_CAN_parliament_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_black_implementation.2.a
+
+		add_stability = 0.02
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_black_implementation.3
+# Fires when the player completes North American Fortress
+###########################################################
+
+country_event = {
+	id = CAN_black_implementation.3
+	title = CAN_black_implementation.3.t
+	desc = CAN_black_implementation.3.d
+	picture = GFX_report_event_CAN_parliament_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_black_implementation.3.a
+
+		add_war_support = 0.02
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_black_implementation.4
+# Fires when the player completes Domestic Industry
+###########################################################
+
+country_event = {
+	id = CAN_black_implementation.4
+	title = CAN_black_implementation.4.t
+	desc = CAN_black_implementation.4.d
+	picture = GFX_report_event_CAN_parliament_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_black_implementation.4.a
+
+		add_political_power = 25
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_black_implementation.5
+# Capstone: fires when the player completes The Fortress Economy
+###########################################################
+
+country_event = {
+	id = CAN_black_implementation.5
+	title = CAN_black_implementation.5.t
+	desc = CAN_black_implementation.5.d
+	picture = GFX_report_event_CAN_parliament_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_black_implementation.5.a
+
+		add_stability = 0.05
+		add_war_support = 0.03
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_mogg_implementation.1
+# Follow-up to Mogg Plan - implementing Reclamation policies
+###########################################################
+
+country_event = {
+	id = CAN_mogg_implementation.1
+	title = CAN_mogg_implementation.1.t
+	desc = CAN_mogg_implementation.1.d
+	picture = GFX_report_event_CAN_mogg_office
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = CAN_mogg_implementation.1.a
+		
+		# Naval construction effects
+		add_ideas = CAN_naval_expansion
+		add_political_power = 50
+		
+		# Dockyard construction
+		add_building_construction = {
+			type = dockyard
+			level = 1
+			instant_build = no
+		}
+		
+		# War support increase
+		add_war_support = 0.05
+	}
+}
+
+###########################################################
+# CAN_mogg_implementation.2
+# Fires when the player completes The Great Armada
+###########################################################
+
+country_event = {
+	id = CAN_mogg_implementation.2
+	title = CAN_mogg_implementation.2.t
+	desc = CAN_mogg_implementation.2.d
+	picture = GFX_report_event_CAN_mogg_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_mogg_implementation.2.a
+
+		add_war_support = 0.02
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_mogg_implementation.3
+# Fires when the player completes Amphibious Training
+###########################################################
+
+country_event = {
+	id = CAN_mogg_implementation.3
+	title = CAN_mogg_implementation.3.t
+	desc = CAN_mogg_implementation.3.d
+	picture = GFX_report_event_CAN_mogg_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_mogg_implementation.3.a
+
+		add_war_support = 0.02
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_mogg_implementation.4
+# Fires when the player completes Entente Contribution
+###########################################################
+
+country_event = {
+	id = CAN_mogg_implementation.4
+	title = CAN_mogg_implementation.4.t
+	desc = CAN_mogg_implementation.4.d
+	picture = GFX_report_event_CAN_mogg_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_mogg_implementation.4.a
+
+		add_political_power = 25
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_mogg_implementation.5
+# Capstone: fires when the player completes The Reclamation Fleet
+###########################################################
+
+country_event = {
+	id = CAN_mogg_implementation.5
+	title = CAN_mogg_implementation.5.t
+	desc = CAN_mogg_implementation.5.d
+	picture = GFX_report_event_CAN_mogg_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_mogg_implementation.5.a
+
+		add_war_support = 0.05
+		add_stability = -0.02
+		ai_chance = { factor = 100 }
+	}
+}
+

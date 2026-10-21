@@ -1,0 +1,13 @@
+graphical_culture = african_gfx
+graphical_culture_2d = commonwealth_2d
+
+color = { 0  0  0 }
+
+historical_ideas = {
+	rhd_imperial_defence
+	rhd_white_settler_rule
+	rhd_strategic_airlift
+	rhd_sanctions_busting
+	rhd_international_rejection
+	rhd_loyalist_militia
+}

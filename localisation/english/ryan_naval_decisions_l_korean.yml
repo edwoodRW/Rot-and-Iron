@@ -1,0 +1,19 @@
+﻿l_korean:
+ ryan_naval_decisions:0 "해군 관리 — 국가의 해군을 강화합니다."
+ ryan_naval_decisions_desc:0 "세계적 수준의 조선소를 건설하고 전문화된 제조 공정을 통합하여 효율을 높이십시오. 민간 산업과 계약하여 조선소 생산량을 증가시킵니다."
+ 
+ ryan_ship_upgrade_efficiency:0 "민영 조선소로 군함 개수선 효율 향상"
+ ryan_ship_upgrade_efficiency_desc:0 "국가의 최고의 조선소에 함정 개수선 작업을 위탁하십시오"
+ 
+ ryan_heavy_ship_specialization:0 "모듈식 생산을 통한 중형/대형 함정 특화"
+ ryan_heavy_ship_specialization_desc:0 "포 및 전차 공장을 중형·대형 함정 부품 제조로 전환하십시오"
+
+ ryan_navy_research:0 "해군 기술 향상을 위한 외교·첩보 투자"
+ ryan_navy_research_desc:0 "해외의 스파이 네트워크와 사업 연락망을 개발하여 해군 기술을 탈취하고 학습합니다."
+
+ ryan_heavy_engine_specialization:0 "중형·대형 함정 엔진 특화 — 군수공장 전환"
+ ryan_heavy_engine_specialization_desc:0 "전차 공장을 중형·대형 함정 엔진 제조로 전환하십시오"
+
+ ryan_carrier_specialization:0 "항공모함 특화"
+ ryan_carrier_specialization_desc:0 "항공기 공장을 항공모함 부품 제조로 전환하십시오."
+

@@ -1,0 +1,598 @@
+add_namespace = CAN_armada
+add_namespace = CAN_westminster
+add_namespace = CAN_humiliation
+add_namespace = SCO_armada_reaction
+
+country_event = {
+	id = CAN_armada.1
+	title = CAN_armada.1.t
+	desc = CAN_armada.1.d
+	picture = GFX_report_event_CAN_war_council
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = CAN_armada_planning_begun
+		add_war_support = 0.05
+	}
+	option = {
+		name = CAN_armada.1.a
+		add_political_power = -50
+		add_war_support = 0.05
+		set_country_flag = CAN_admiral_forthright_leads
+		country_event = { id = CAN_armada.2 days = 14 }
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = CAN_armada.1.b
+		add_political_power = -25
+		add_stability = 0.03
+		CAN_mogg_faction_influence_-10 = yes
+		add_war_support = 0.03
+		set_country_flag = CAN_armada_delayed_once
+		country_event = { id = CAN_armada.2 days = 30 }
+		ai_chance = { factor = 30 }
+	}
+}
+
+country_event = {
+	id = CAN_armada.2
+	title = CAN_armada.2.t
+	desc = CAN_armada.2.d
+	picture = GFX_report_event_CAN_planning_room
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_armada.2.a
+		set_country_flag = CAN_canadian_command
+		set_country_flag = CAN_professional_command
+		add_war_support = 0.03
+		CAN_mogg_faction_influence_-5 = yes
+		add_ideas = CAN_professional_command
+		country_event = { id = CAN_armada.3 days = 14 }
+		ai_chance = { factor = 45 }
+	}
+	option = {
+		name = CAN_armada.2.b
+		set_country_flag = CAN_exile_command
+		set_country_flag = CAN_fanatical_command
+		add_war_support = 0.08
+		add_ideas = CAN_fanatical_command
+		CAN_mogg_faction_influence_10 = yes
+		country_event = { id = CAN_armada.3 days = 14 }
+		ai_chance = { factor = 35 }
+	}
+	option = {
+		name = CAN_armada.2.c
+		set_country_flag = CAN_joint_command
+		set_country_flag = CAN_command_friction_risk
+		add_war_support = 0.05
+		country_event = { id = CAN_armada.3 days = 14 }
+		ai_chance = { factor = 20 }
+	}
+}
+
+country_event = {
+	id = CAN_armada.3
+	title = CAN_armada.3.t
+	desc = CAN_armada.3.d
+	picture = GFX_report_event_CAN_planning_map
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_armada.3.a
+		set_country_flag = CAN_landing_dover
+		set_country_flag = CAN_symbolic_landing
+		CAN_mogg_faction_influence_10 = yes
+		add_ideas = CAN_symbolic_landing
+		country_event = { id = CAN_armada.4 days = 14 }
+		ai_chance = { factor = 35 }
+	}
+	option = {
+		name = CAN_armada.3.b
+		set_country_flag = CAN_landing_portsmouth
+		set_country_flag = CAN_pragmatic_landing
+		add_ideas = CAN_pragmatic_landing
+		country_event = { id = CAN_armada.4 days = 14 }
+		ai_chance = { factor = 40 }
+	}
+	option = {
+		name = CAN_armada.3.c
+		set_country_flag = CAN_landing_multiple
+		set_country_flag = CAN_coordinated_landing
+		add_ideas = CAN_coordinated_landing
+		if = {
+			limit = { has_country_flag = CAN_joint_command }
+			add_ideas = CAN_coordination_bonus
+		}
+		if = {
+			limit = {
+				has_country_flag = CAN_command_friction_risk
+			}
+			random_list = {
+				35 = { set_country_flag = CAN_coordination_problems }
+				65 = { }
+			}
+		}
+		country_event = { id = CAN_armada.4 days = 14 }
+		ai_chance = { factor = 25 }
+	}
+}
+
+country_event = {
+	id = CAN_armada.4
+	title = CAN_armada.4.t
+	desc = CAN_armada.4.d
+	picture = GFX_report_event_CAN_boris_council
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_armada.4.a
+		set_country_flag = CAN_boris_addressed_council
+		add_stability = 0.03
+		CAN_boris_loyalty_10 = yes
+		CAN_mogg_faction_influence_-5 = yes
+		country_event = { id = CAN_armada.5 days = 7 }
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = CAN_armada.4.b
+		CAN_boris_loyalty_-20 = yes
+		CAN_mogg_faction_influence_10 = yes
+		set_country_flag = CAN_boris_silenced_at_council
+		country_event = { id = CAN_armada.5 days = 7 }
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = CAN_armada.5
+	title = CAN_armada.5.t
+	desc = CAN_armada.5.d
+	picture = GFX_report_event_CAN_halifax_night
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = { set_country_flag = CAN_night_before_fired }
+	option = {
+		name = CAN_armada.5.a
+		add_war_support = 0.10
+		if = {
+			limit = { has_country_flag = CAN_canadian_command }
+			add_ideas = CAN_armada_ready_professional
+		}
+		if = {
+			limit = { has_country_flag = CAN_exile_command }
+			add_ideas = CAN_armada_ready_fanatical
+		}
+		if = {
+			limit = { has_country_flag = CAN_joint_command }
+			add_ideas = CAN_armada_ready_divided
+		}
+		country_event = { id = CAN_armada.6 days = 3 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = CAN_armada.6
+	title = CAN_armada.6.t
+	desc = CAN_armada.6.d
+	picture = GFX_report_event_CAN_armada_sailing
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = CAN_armada_launched
+		add_war_support = 0.15
+		add_stability = -0.10
+	}
+	option = {
+		name = CAN_armada.6.a
+		declare_war_on = {
+			target = ENG
+			type = annex_everything
+		}
+		set_country_flag = CAN_armada_landed
+		country_event = { id = CAN_armada.7 days = 21 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+# The invasion must break England within three weeks. Otherwise the bridgehead is evacuated.
+country_event = {
+	id = CAN_armada.7
+	title = CAN_armada.7.t
+	desc = CAN_armada.7.d
+	picture = GFX_report_event_CAN_atlantic_disaster
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = CAN
+		has_country_flag = CAN_armada_landed
+		has_war_with = ENG
+		NOT = { has_country_flag = CAN_britain_liberated }
+		ENG = { has_capitulated = no }
+	}
+	immediate = {
+		set_country_flag = CAN_armada_failure
+		set_country_flag = CAN_armada_evacuation_ordered
+		white_peace = { tag = ENG }
+	}
+	option = {
+		name = CAN_armada.7.a
+		country_event = { id = CAN_humiliation.1 days = 1 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = CAN_armada.8
+	title = CAN_armada.8.t
+	desc = CAN_armada.8.d
+	picture = GFX_report_event_CAN_armada_sailing
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = CAN_second_armada_launched
+		add_war_support = 0.05
+	}
+	option = {
+		name = CAN_armada.8.a
+		declare_war_on = {
+			target = ENG
+			type = annex_everything
+		}
+		country_event = { id = CAN_armada.9 days = 35 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+# The rebuilt force has a longer operational window, but no third invasion is possible.
+country_event = {
+	id = CAN_armada.9
+	title = CAN_armada.9.t
+	desc = CAN_armada.9.d
+	picture = GFX_report_event_CAN_atlantic_disaster
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = CAN
+		has_country_flag = CAN_second_armada_launched
+		has_war_with = ENG
+		NOT = { has_country_flag = CAN_britain_liberated }
+		ENG = { has_capitulated = no }
+	}
+	immediate = {
+		set_country_flag = CAN_second_armada_failed
+		white_peace = { tag = ENG }
+		add_stability = -0.10
+		add_war_support = -0.15
+	}
+	option = {
+		name = CAN_armada.9.a
+		country_event = { id = CAN_humiliation.5 days = 1 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = CAN_westminster.1
+	title = CAN_westminster.1.t
+	desc = CAN_westminster.1.d
+	picture = GFX_report_event_CAN_london_liberated
+	fire_only_once = yes
+	trigger = {
+		tag = CAN
+		has_country_flag = CAN_armada_launched
+		has_war_with = ENG
+		ENG = { has_capitulated = yes }
+	}
+	mean_time_to_happen = { days = 1 }
+	immediate = {
+		set_country_flag = CAN_britain_liberated
+		add_war_support = 0.20
+		add_stability = 0.10
+		ENG = { country_event = { id = ENG_liberation.1 days = 7 } }
+	}
+	option = {
+		name = CAN_westminster.1.a
+		set_country_flag = CAN_mogg_governs_britain
+		CAN_mogg_faction_influence_20 = yes
+		CAN_boris_loyalty_-25 = yes
+		country_event = { id = CAN_westminster.2a days = 7 }
+		ai_chance = { factor = 25 }
+		ENG {
+			set_politics = {
+				ruling_party = monarchist
+				elections_allowed = no
+			}
+			set_country_leader = {
+				name = "Jacob_Rees_Mogg"
+				desc = CAN_jacob_rees_mogg_desc
+				picture = CAN_Jacob_Rees_Mogg
+				ideology = high_toryism
+				traits = { CAN_true_believer CAN_exile_aristocrat }
+			}
+		}
+	}
+	option = {
+		name = CAN_westminster.1.b
+		set_country_flag = CAN_canada_administers_britain
+		CAN_black_authority_10 = yes
+		set_country_flag = CAN_boris_high_commissioner
+		country_event = { id = CAN_westminster.2b days = 7 }
+		ai_chance = { factor = 40 }
+	}
+	option = {
+		name = CAN_westminster.1.c
+		available = { check_variable = { CAN_boris_loyalty > 60 } }
+		set_country_flag = CAN_british_elections_called
+		CAN_boris_loyalty_25 = yes
+		CAN_mogg_faction_influence_-20 = yes
+		country_event = { id = CAN_westminster.2c days = 7 }
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = CAN_humiliation.1
+	title = CAN_humiliation.1.t
+	desc = CAN_humiliation.1.d
+	picture = GFX_report_event_CAN_atlantic_disaster
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = CAN_armada_destroyed
+		add_war_support = -0.30
+		add_stability = -0.25
+		add_national_unity = -0.15
+		add_popularity = { ideology = nationalist popularity = 0.08 }
+		add_popularity = { ideology = national_bolshevik popularity = 0.05 }
+		add_popularity = { ideology = monarchist popularity = -0.15 }
+	}
+	option = {
+		name = CAN_humiliation.1.a
+		country_event = { id = CAN_humiliation.2 days = 3 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = CAN_westminster.2a
+	title = CAN_westminster.2a.t
+	desc = CAN_westminster.2a.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_westminster.2a.a
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = CAN_westminster.2b
+	title = CAN_westminster.2b.t
+	desc = CAN_westminster.2b.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_westminster.2b.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = CAN_westminster.2c
+	title = CAN_westminster.2c.t
+	desc = CAN_westminster.2c.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_westminster.2c.a
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = CAN_westminster.3
+	title = CAN_westminster.3.t
+	desc = CAN_westminster.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		# Make ENG a puppet of CAN
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_puppet
+		}
+		ENG = {
+			load_focus_tree = ENG_restored_britain_tree
+			transfer_state = 123
+			transfer_state = 125
+			transfer_state = 126
+			transfer_state = 127
+			transfer_state = 128
+			transfer_state = 129
+			transfer_state = 130
+			transfer_state = 131
+			transfer_state = 132
+			transfer_state = 338
+			transfer_state = 931
+			transfer_state = 932
+			set_country_flag = ENG_restored_after_armada
+		}
+		if = {
+			limit = { has_country_flag = CAN_mogg_governs_britain }
+			ENG = {
+				set_politics = {
+					ruling_party = monarchist
+					elections_allowed = no
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = CAN_british_elections_called }
+			ENG = {
+				set_politics = {
+					ruling_party = new_democrat
+					elections_allowed = yes
+				}
+			}
+		}
+		else = {
+			ENG = {
+				set_politics = {
+					ruling_party = centrist
+					elections_allowed = no
+				}
+			}
+		}
+	}
+	option = {
+		name = CAN_westminster.3.a
+		set_country_flag = CAN_british_government_restored
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = CAN_humiliation.2
+	title = CAN_humiliation.2.t
+	desc = CAN_humiliation.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_humiliation.2.a
+		remove_ideas = CAN_fanatical_command
+		remove_ideas = CAN_symbolic_landing
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = CAN_humiliation.3
+	title = CAN_humiliation.3.t
+	desc = CAN_humiliation.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_humiliation.3.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = CAN_humiliation.4
+	title = CAN_humiliation.4.t
+	desc = CAN_humiliation.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_humiliation.4.a
+		add_war_support = 0.02
+	}
+}
+
+country_event = {
+	id = CAN_humiliation.5
+	title = CAN_humiliation.5.t
+	desc = CAN_humiliation.5.d
+	picture = GFX_report_event_CAN_atlantic_disaster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_humiliation.5.a
+		CAN_mogg_faction_influence_-20 = yes
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = CAN_humiliation.6
+	title = CAN_humiliation.6.t
+	desc = CAN_humiliation.6.d
+	picture = GFX_report_event_CAN_war_council
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_humiliation.6.a
+		add_stability = 0.05
+		CAN_black_authority_15 = yes
+		set_country_flag = CAN_black_post_armada_mandate
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = CAN_humiliation.6.b
+		add_stability = 0.03
+		CAN_boris_loyalty_15 = yes
+		CAN_mogg_faction_influence_-10 = yes
+		set_country_flag = CAN_boris_post_armada_mandate
+		ai_chance = { factor = 40 }
+	}
+}
+
+# Fires for Scotland when Canada controls London
+country_event = {
+	id = SCO_armada_reaction.1
+	title = SCO_armada_reaction.1.t
+	desc = SCO_armada_reaction.1.d
+	trigger = {
+		tag = SCO
+		CAN = { controls_state = 126 }
+		has_country_flag = SCO_independent
+	}
+	mean_time_to_happen = { days = 1 }
+	fire_only_once = yes
+	option = {
+		name = SCO_armada_reaction.1.a
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = SCO_armada_reaction.2
+	title = SCO_armada_reaction.2.t
+	desc = SCO_armada_reaction.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = SCO_armada_reaction.2.a
+		SCO = { set_country_flag = SCO_new_union_member }
+		CAN = { set_country_flag = CAN_scottish_union_accepted }
+		ai_chance = { factor = 45 }
+	}
+	option = {
+		name = SCO_armada_reaction.2.b
+		SCO = { set_country_flag = SCO_new_union_rejected }
+		CAN = { set_country_flag = CAN_scottish_union_rejected }
+		ai_chance = { factor = 55 }
+	}
+}
+
+country_event = {
+	id = CAN_westminster.4
+	title = CAN_westminster.4.t
+	desc = CAN_westminster.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		ENG = {
+			annex_country = {
+				target = SCO
+				transfer_troops = yes
+			}
+			set_country_flag = ENG_new_union_restored
+		}
+	}
+	option = {
+		name = CAN_westminster.4.a
+		CAN = {
+			set_country_flag = CAN_new_union_ratified
+			add_stability = 0.05
+		}
+	}
+}
+
+
+
+
+
+

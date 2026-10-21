@@ -1,0 +1,339 @@
+focus_tree = {
+	id = eng_red_tide_breaks
+
+	country = {
+		factor = 1
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 22300 }
+
+
+	
+
+	focus = {
+		id = ENG_Hudson_Elected
+		icon = GFX_unkown
+		x = 6
+		y = 0
+		#relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_The_2027_Mandate }
+		mutually_exclusive = {
+			focus = ENG_Starmer_Retains_Power
+		}
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 150
+			set_country_flag = ENG_hudson_elected
+			ENG_events.2 = yes
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				has_country_flag = ENG_vote_allowed_to_speak
+			}
+			modifier = {
+				factor = 0.3
+				has_country_flag = ENG_vote_rigged
+			}
+		}
+	}
+
+
+
+	# ====================================================
+	# HUDSON'S PATH - the Juche-ification of England
+	# ====================================================
+	focus = {
+		id = ENG_The_New_England_Revolution
+		icon = GFX_unkown
+		x = 6
+		y = 1
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_Hudson_Elected }
+		available = {
+			has_country_flag = ENG_hudson_elected
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+			set_country_flag = ENG_new_revolution_declared
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = ENG_Betray_the_Peace_Promise
+		icon = GFX_unkown
+		x = 6
+		y = 2
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_The_New_England_Revolution }
+		available = { always = yes }
+		completion_reward = {
+			add_war_support = -0.03
+			set_country_flag = ENG_peace_promise_betrayed
+			ENG_events.3 = yes
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = ENG_Purge_the_Starmerites
+		icon = GFX_unkown
+		x = 6
+		y = 3
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_Betray_the_Peace_Promise }
+		available = { always = yes }
+		completion_reward = {
+			add_stability = -0.03
+			start_civil_war = {
+				ideology = revolutionary_socialist
+				size = 0.15
+			}
+			set_country_flag = ENG_starmerites_purged
+			ENG_events.4 = yes
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = ENG_Proclaim_Hudson_Thought
+		icon = GFX_unkown
+		x = 6
+		y = 4
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 15
+		prerequisite = { focus = ENG_Purge_the_Starmerites }
+		available = { always = yes }
+		completion_reward = {
+			swap_ideology = national_bolshevik
+			add_political_power = 150
+			set_country_flag = ENG_hudson_thought_proclaimed
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = ENG_The_Personality_Cult_Begins
+		icon = GFX_unkown
+		x = 6
+		y = 5
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_Proclaim_Hudson_Thought }
+		available = { always = yes }
+		completion_reward = {
+			add_stability = 0.08
+			add_popularity = {
+				ideology = national_bolshevik
+				popularity = 15
+			}
+			set_country_flag = ENG_cult_of_personality
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+
+	focus = {
+		id = ENG_Close_the_Borders
+		icon = GFX_unkown
+		x = 6
+		y = 6
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_The_Personality_Cult_Begins }
+		available = { always = yes }
+		completion_reward = {
+			add_stability = 0.03
+			set_country_flag = ENG_borders_closed
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = ENG_Establish_the_Loyalty_Register
+		icon = GFX_unkown
+		x = 6
+		y = 7
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_Close_the_Borders }
+		available = { always = yes }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			set_country_flag = ENG_loyalty_register_established
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = ENG_Nationalize_Everything
+		icon = GFX_unkown
+		x = 6
+		y = 8
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_Establish_the_Loyalty_Register }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 100
+			set_country_flag = ENG_total_nationalization
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = ENG_The_Military_First_Doctrine
+		icon = GFX_unkown
+		x = 6
+		y = 9
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_Nationalize_Everything }
+		available = { always = yes }
+		completion_reward = {
+			add_war_support = 0.08
+			set_country_flag = ENG_military_first_doctrine
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = ENG_Build_the_Camps
+		icon = GFX_unkown
+		x = 6
+		y = 10
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_The_Military_First_Doctrine }
+		available = { always = yes }
+		completion_reward = {
+			add_stability = 0.05
+			set_country_flag = ENG_camps_established
+			ENG_events.5 = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = ENG_The_Eternal_War
+		icon = GFX_unkown
+		x = 6
+		y = 11
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_Build_the_Camps }
+		available = { always = yes }
+		completion_reward = {
+			add_war_support = 0.1
+			set_country_flag = ENG_eternal_war_declared
+			ENG_events.6 = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = ENG_Harden_the_Border
+		icon = GFX_unkown
+		x = 6
+		y = 12
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_The_Eternal_War }
+		available = { always = yes }
+		completion_reward = {
+			add_stability = 0.03
+			set_country_flag = ENG_border_hardened
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = ENG_Develop_Strategic_Weapons
+		icon = GFX_unkown
+		x = 6
+		y = 13
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 15
+		prerequisite = { focus = ENG_Harden_the_Border }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.05
+			set_country_flag = ENG_strategic_weapons_program
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = ENG_The_Succession_Question
+		icon = GFX_unkown
+		x = 6
+		y = 14
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 10
+		prerequisite = { focus = ENG_Develop_Strategic_Weapons }
+		available = { always = yes }
+		completion_reward = {
+			add_stability = 0.03
+			set_country_flag = ENG_succession_planned
+			ENG_events.7 = yes
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+
+	focus = {
+		id = ENG_The_Hermit_Commune
+		icon = GFX_unkown
+		x = 6
+		y = 15
+		relative_position_id = ENG_The_Starmer_Settlement
+		cost = 15
+		prerequisite = { focus = ENG_The_Succession_Question }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 200
+			add_stability = 0.1
+			set_country_flag = ENG_legacy_hermit_commune
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+}

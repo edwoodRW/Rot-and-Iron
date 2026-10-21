@@ -1,0 +1,24 @@
+state={
+	id=1105
+	name="STATE_811" # Admiralty Bay
+	manpower = 0
+	
+	state_category = wasteland
+
+	history={
+		owner = ANT
+		victory_points = {
+			13670 1
+		}
+		buildings = {
+			13670 = {
+				naval_base = 1
+			}
+			infrastructure = 0
+		}
+	}
+
+	provinces={
+		13866
+	}
+}

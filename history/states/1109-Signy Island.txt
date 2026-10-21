@@ -1,0 +1,24 @@
+state={
+	id=1109
+	name="STATE_815" # Signy Island
+	manpower = 0
+	
+	state_category = wasteland
+
+	history={
+		owner = ANT
+		victory_points = {
+			13674 1
+		}
+		buildings = {
+			13674 = {
+				naval_base = 1
+			}
+			infrastructure = 0
+		}
+	}
+
+	provinces={
+		13870
+	}
+}

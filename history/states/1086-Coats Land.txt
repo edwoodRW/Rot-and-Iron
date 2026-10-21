@@ -1,0 +1,21 @@
+state={
+	id=1086
+	name="STATE_792" # Coats Land
+	manpower = 0
+	
+	state_category = wasteland
+	
+	impassable = yes
+
+	history={
+		owner = ANT
+		add_claim_by = ENG
+		buildings = {
+			infrastructure = 0
+		}
+	}
+
+	provinces={
+		13833
+	}
+}

@@ -1,0 +1,252 @@
+###########################################################
+# Rot and Iron — Boris PM Events
+# File: events/CAN_borispm_events.txt
+###########################################################
+
+add_namespace = CAN_borispm
+
+###########################################################
+# CAN_borispm.platform
+# Fires from CAN_boris_platform focus
+# Boris gets a public platform as Deputy PM
+# His speech about Canada goes viral
+###########################################################
+
+country_event = {
+	id = CAN_borispm.platform
+	title = CAN_borispm.platform.t
+	desc = CAN_borispm.platform.d
+	picture = GFX_report_event_CAN_boris_rally
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = CAN_boris_platform_given
+	}
+
+	option = {
+		name = CAN_borispm.platform.a	# "Canada is our home. Let me show them what that means."
+
+		# Boris becomes a nationally beloved figure
+		set_country_flag = CAN_boris_national_figure
+
+		# Major popularity boost
+		add_popularity = {
+			ideology = national_conservative
+			popularity = 0.08
+		}
+
+		# Stability boost — people feel good about the direction
+		add_stability = 0.08
+		add_political_power = 75
+
+		# Rees-Mogg loses ground — Boris is winning the argument
+		CAN_mogg_faction_influence_-10 = yes
+
+		# Boris loyalty maxes out — this is what he was born to do
+		CAN_boris_loyalty_15 = yes
+
+		# Turner's White House notices
+		USA = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = CAN_sovereignty_positive
+			}
+		}
+
+		# Bernier's movement softens slightly
+		# Boris's Canadian patriotism undercuts their message
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.02
+		}
+
+		# Fire follow-up event — international reaction to Boris
+		country_event = {
+			id = CAN_borispm.platform_reaction
+			days = 7
+		}
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_borispm.platform_reaction
+# International reaction to Boris's platform speech
+# Fires 7 days after platform event
+###########################################################
+
+country_event = {
+	id = CAN_borispm.platform_reaction
+	title = CAN_borispm.platform_reaction.t
+	desc = CAN_borispm.platform_reaction.d
+	picture = GFX_report_event_CAN_parliament_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		# Starmer's Britain condemns Boris as a traitor
+		ENG = {
+			country_event = {
+				id = ENG_reactions.1
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = CAN_borispm.platform_reaction.a	# "Let them talk. Canada is listening."
+
+		add_political_power = 50
+		add_stability = 0.03
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_borispm.defence_framework
+# Fires from CAN_shared_defence_framework focus
+# Canada and USA begin formal military cooperation
+# Boris reacts to the milestone
+###########################################################
+
+country_event = {
+	id = CAN_borispm.defence_framework
+	title = CAN_borispm.defence_framework.t
+	desc = CAN_borispm.defence_framework.d
+	picture = GFX_report_event_CAN_parliament_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = CAN_defence_framework_active
+
+		# USA reaction — this is significant
+		USA = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = CAN_detroit_agreement
+			}
+		}
+	}
+
+	option = {
+		name = CAN_borispm.defence_framework.a	# "Two neighbours. One future."
+
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.05
+
+		# Military cooperation unlocks
+		add_ideas = CAN_usa_defence_cooperation
+
+		# Rees-Mogg furious — this is the final nail
+		# in the Reclamation's coffin
+		CAN_mogg_faction_influence_-10 = yes
+
+		# Boris sees this as his life's work coming together
+		CAN_boris_loyalty_10 = yes
+
+		# Sets flag that unlocks North American Pact focus
+		set_country_flag = CAN_defence_cooperation_active
+
+		# Germany cautiously approves
+		GER = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = CAN_sovereignty_positive
+			}
+		}
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################################
+# CAN_borispm.becomes_pm
+# Fires when Black's Last Act focus completes
+# Boris officially becomes Prime Minister
+# (Also triggered by CAN_blackslastact.1 event chain)
+###########################################################
+
+country_event = {
+	id = CAN_borispm.becomes_pm
+	title = CAN_borispm.becomes_pm.t
+	desc = CAN_borispm.becomes_pm.d
+	picture = GFX_report_event_CAN_parliament_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = CAN_boris_pm
+		set_country_flag = CAN_black_plan_complete
+
+		# Remove Boris Deputy PM idea
+		remove_ideas = CAN_boris_deputy_pm
+
+		# Retire Black as country leader
+		retire_country_leader = yes
+
+		# Create Boris as new leader
+		create_country_leader = {
+			name = "Boris Johnson"
+			picture = "CAN_Boris_Johnson.dds"
+			ideology = canadian_one_nation
+			traits = {
+				CAN_exile_who_stayed
+				CAN_one_nation_reformer
+			}
+		}
+
+		# Turner calls immediately
+		USA = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = CAN_detroit_agreement
+			}
+		}
+
+		# Germany congratulates
+		GER = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = CAN_sovereignty_positive
+			}
+		}
+	}
+
+	option = {
+		name = CAN_borispm.becomes_pm.a	# "Canada's future starts now."
+
+		add_stability = 0.15
+		add_war_support = 0.10
+		add_political_power = 150
+
+		# Recognise Scottish independence if not already done
+		if = {
+			limit = {
+				SCO = { exists = yes }
+				NOT = { has_country_flag = CAN_edinburgh_agreement_signed }
+			}
+			set_country_flag = CAN_edinburgh_agreement_signed
+			SCO = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = CAN_sovereignty_positive
+				}
+			}
+		}
+
+		# Victory condition flag
+		set_country_flag = CAN_boris_canada_achieved
+
+		ai_chance = { factor = 100 }
+	}
+}
+

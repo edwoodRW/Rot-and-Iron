@@ -1,0 +1,33 @@
+﻿l_english:
+elections_reworked__elections:0 "Elections"
+elections_reworked__elections_desc:0 "This is a new category of elections. Here you will always (if a democracy) see a "mission" (the same as the "MEFO Bills" for the German Reich) with a period of every 1-4 years before the elections, and a couple of decisions to allow or ban elections, parties."
+allow_elections1:0 "Allow elections"
+allow_elections1_desc:0 "Allows elections in your country."
+ban_elections:0 "Ban elections"
+ban_elections_desc:0 "Ban elections in your country."
+elections:0 "Elections"
+elections_desc:0 "The elections will begin soon!"
+
+er_ban_democratic_party:0 "Ban Democratic party"
+er_ban_democratic_party_desc:0 "We must secure our power in the country, and we will start it by moving out Democratic party."
+er_democratic_banned:0 "Democratic Banned"
+has_democratic_banned:0 "Democratic Banned"
+er_democratic_banned_desc:0 "While they are trying to argue against being banned, we have enough time to ensure that Democratic party will be no longer a threat to us"
+
+er_ban_communism_party:0 "Ban Communist party"
+er_ban_communism_party_desc:0 "We must secure our power in the country, and we will start it by moving out Communist party."
+er_communism_banned:0 "Communism Banned"
+has_communism_banned:0 "Communism Banned"
+er_communism_banned_desc:0 "While they are trying to argue against being banned, we have enough time to ensure that Communist party will be no longer a threat to us"
+
+er_ban_fascism_party:0 "Ban Fascist party"
+er_ban_fascism_party_desc:0 "We must secure our power in the country, and we will start it by moving out Fascist party."
+er_fascism_banned:0 "Fascism Banned"
+has_fascism_banned:0 "Fascism Banned"
+er_fascism_banned_desc:0 "While they are trying to argue against being banned, we have enough time to ensure that Fascist party will be no longer a threat to us"
+
+er_ban_neutrality_party:0 "Ban Neutral party"
+er_ban_neutrality_party_desc:0 "We must secure our power in the country, and we will start it by moving out Authoritarian party."
+er_neutrality_banned:0 "Neutrals Banned"
+has_neutrality_banned:0 "Neutrals Banned"
+er_neutrality_banned_desc:0 "While they are trying to argue against being banned, we have enough time to ensure that Authoritarian party will be no longer a threat to us"

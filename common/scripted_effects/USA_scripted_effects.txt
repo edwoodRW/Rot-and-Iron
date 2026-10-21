@@ -1,0 +1,51 @@
+USA_clamp_influence = {
+	if = {
+		limit = {
+			check_variable = { var = USA_corporate_influence value = 0 compare = less_than }
+		}
+		set_variable = {
+			var = USA_corporate_influence
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { var = USA_corporate_influence value = 100 compare = greater_than }
+		}
+		set_variable = {
+			var = USA_corporate_influence
+			value = 100
+		}
+	}
+}
+
+USA_check_influence_tier = {
+	remove_ideas = USA_influence_mild_lobbying
+	remove_ideas = USA_influence_entrenched_networks
+	remove_ideas = USA_influence_shadow_government
+
+	if = {
+		limit = {
+			check_variable = { var = USA_corporate_influence value = 60 compare = greater_than_or_equals }
+		}
+		add_ideas = USA_influence_shadow_government
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = USA_corporate_influence value = 30 compare = greater_than_or_equals }
+		}
+		add_ideas = USA_influence_entrenched_networks
+	}
+	else = {
+		add_ideas = USA_influence_mild_lobbying
+	}
+}
+
+# Call this after any effect that changes USA_corporate_influence
+USA_update_influence_tier = {
+	hidden_effect = {
+		USA_clamp_influence = yes
+		USA_check_influence_tier = yes
+	}
+	custom_effect_tooltip = USA_influence_tier_updated_tt
+}

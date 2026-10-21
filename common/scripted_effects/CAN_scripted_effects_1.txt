@@ -1,0 +1,364 @@
+###########################################################
+# Rot and Iron — Canada Scripted Effects and Variables
+# File: common/scripted_effects/CAN_scripted_effects.txt
+###########################################################
+
+###########################################################
+# HOW THESE WORK IN HOI4
+#
+# HOI4 does not support true variables the way a programming
+# language does. Instead we use a combination of:
+#
+# 1. set_variable / add_to_variable — for numeric tracking
+# 2. scripted_effects — for reusable effect blocks
+# 3. scripted_triggers — for reusable condition checks
+# 4. country_flags — for binary on/off states
+#
+# The variables below are initialised in the country
+# history file and modified by events and focuses.
+# Threshold checks fire events when values cross key points.
+###########################################################
+
+###########################################################
+# VARIABLE INITIALISATION
+# Add this block to history/countries/CAN - Canada.txt
+# so variables exist from game start
+#
+# set_variable = { CAN_mogg_faction_influence = 60 }
+# set_variable = { CAN_boris_loyalty = 50 }
+# set_variable = { CAN_black_authority = 70 }
+# set_variable = { CAN_coalition_stability = 65 }
+###########################################################
+
+###########################################################
+# MOGG FACTION INFLUENCE
+# Tracks how much political influence Rees-Mogg's
+# Imperial Restoration Party holds within the coalition
+# Range: 0 to 100
+# Starting value: 60
+# 80+: Mogg Plan focuses unlock, Mogg dominant flag set
+# 40-: Black Plan focuses unlock faster
+# 20-: IRP departure warning fires
+###########################################################
+
+CAN_mogg_faction_influence_add = {
+	add_to_variable = {
+		var = CAN_mogg_faction_influence
+		value = CAN_mogg_faction_influence_change
+	}
+	clamp_variable = {
+		var = CAN_mogg_faction_influence
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = {
+			check_variable = { CAN_mogg_faction_influence < 20 }
+			NOT = { has_country_flag = CAN_coalition_broken }
+			NOT = { has_country_flag = CAN_mogg_resigned }
+			NOT = { has_country_flag = CAN_irp_departure_warned }
+		}
+		set_country_flag = CAN_irp_departure_warned
+		country_event = {
+			id = CAN_coalition.irp_warning
+			days = 7
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { CAN_mogg_faction_influence > 80 }
+			NOT = { has_country_flag = CAN_mogg_dominant }
+		}
+		set_country_flag = CAN_mogg_dominant
+		country_event = {
+			id = CAN_coalition.mogg_dominant
+			days = 7
+		}
+	}
+}
+
+###########################################################
+# BORIS LOYALTY
+# Tracks Boris Johnson's loyalty to Black
+# and his political standing within the NCP
+# Range: 0 to 100
+# Starting value: 50
+# 80+: Boris actively campaigns for Black's agenda
+# 30-: Boris begins making independent moves
+# 10-: Boris considers breaking publicly
+###########################################################
+
+CAN_boris_loyalty_add = {
+	add_to_variable = {
+		var = CAN_boris_loyalty
+		value = CAN_boris_loyalty_change
+	}
+	clamp_variable = {
+		var = CAN_boris_loyalty
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = {
+			check_variable = { CAN_boris_loyalty < 30 }
+			NOT = { has_country_flag = CAN_boris_independent_warned }
+			NOT = { has_country_flag = CAN_boris_national_figure }
+			NOT = { has_country_flag = CAN_boris_deputy_pm_appointed }
+		}
+		set_country_flag = CAN_boris_independent_warned
+		country_event = {
+			id = CAN_coalition.boris_restless
+			days = 14
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { CAN_boris_loyalty > 80 }
+			NOT = { has_country_flag = CAN_boris_champion }
+		}
+		set_country_flag = CAN_boris_champion
+	}
+}
+
+###########################################################
+# BLACK AUTHORITY
+# Tracks Conrad Black's personal authority
+# Range: 0 to 100
+# Starting value: 70
+# 80+: Black can act without consulting coalition
+# 40-: Coalition partners openly defy him
+# 20-: Confidence vote becomes likely
+###########################################################
+
+CAN_black_authority_add = {
+	add_to_variable = {
+		var = CAN_black_authority
+		value = CAN_black_authority_change
+	}
+	clamp_variable = {
+		var = CAN_black_authority
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = {
+			check_variable = { CAN_black_authority < 40 }
+			NOT = { has_country_flag = CAN_authority_crisis }
+		}
+		set_country_flag = CAN_authority_crisis
+		country_event = {
+			id = CAN_coalition.authority_crisis
+			days = 7
+		}
+	}
+}
+
+###########################################################
+# COALITION STABILITY
+# Tracks overall health of the governing coalition
+# Range: 0 to 100
+# Starting value: 65
+# 80+: Coalition stable, no defection risk
+# 40-: Defection events can fire
+# 20-: Coalition collapse imminent
+# 0: Coalition collapses, CAN_sovereignty.6 fires
+###########################################################
+
+CAN_coalition_stability_add = {
+	add_to_variable = {
+		var = CAN_coalition_stability
+		value = CAN_coalition_stability_change
+	}
+	clamp_variable = {
+		var = CAN_coalition_stability
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = {
+			check_variable = { CAN_coalition_stability < 40 }
+			NOT = { has_country_flag = CAN_coalition_wobbling }
+			NOT = { has_country_flag = CAN_coalition_broken }
+		}
+		set_country_flag = CAN_coalition_wobbling
+		country_event = {
+			id = CAN_coalition.wobbling
+			days = 7
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { CAN_coalition_stability < 1 }
+			NOT = { has_country_flag = CAN_coalition_broken }
+		}
+		set_country_flag = CAN_coalition_broken
+		country_event = {
+			id = CAN_sovereignty.6
+			days = 3
+		}
+	}
+}
+
+###########################################################
+# CONVENIENCE WRAPPERS
+# These match exactly how the variables are called
+# in the event files — e.g. CAN_mogg_faction_influence = -20
+# HOI4 will call these as scripted effects
+###########################################################
+
+CAN_mogg_faction_influence_-20 = {
+	set_variable = { CAN_mogg_faction_influence_change = -20 }
+	add_power_balance_value = {
+		id = CAN_black_mogg_balance
+		value = -0.20
+		tooltip_side = CAN_black_side
+	}
+	CAN_mogg_faction_influence_add = yes
+}
+CAN_mogg_faction_influence_-15 = {
+	set_variable = { CAN_mogg_faction_influence_change = -15 }
+	add_power_balance_value = {
+		id = CAN_black_mogg_balance
+		value = -0.15
+		tooltip_side = CAN_black_side
+	}
+	CAN_mogg_faction_influence_add = yes
+}
+CAN_mogg_faction_influence_-10 = {
+	set_variable = { CAN_mogg_faction_influence_change = -10 }
+	add_power_balance_value = {
+		id = CAN_black_mogg_balance
+		value = -0.10
+		tooltip_side = CAN_black_side
+	}
+	CAN_mogg_faction_influence_add = yes
+}
+CAN_mogg_faction_influence_-8 = {
+	set_variable = { CAN_mogg_faction_influence_change = -8 }
+	add_power_balance_value = {
+		id = CAN_black_mogg_balance
+		value = -0.08
+		tooltip_side = CAN_black_side
+	}
+	CAN_mogg_faction_influence_add = yes
+}
+CAN_mogg_faction_influence_-5 = {
+	set_variable = { CAN_mogg_faction_influence_change = -5 }
+	add_power_balance_value = {
+		id = CAN_black_mogg_balance
+		value = -0.05
+		tooltip_side = CAN_black_side
+	}
+	CAN_mogg_faction_influence_add = yes
+}
+CAN_mogg_faction_influence_5 = {
+	set_variable = { CAN_mogg_faction_influence_change = 5 }
+	add_power_balance_value = {
+		id = CAN_black_mogg_balance
+		value = 0.05
+		tooltip_side = CAN_mogg_side
+	}
+	CAN_mogg_faction_influence_add = yes
+}
+CAN_mogg_faction_influence_10 = {
+	set_variable = { CAN_mogg_faction_influence_change = 10 }
+	add_power_balance_value = {
+		id = CAN_black_mogg_balance
+		value = 0.10
+		tooltip_side = CAN_mogg_side
+	}
+	CAN_mogg_faction_influence_add = yes
+}
+CAN_mogg_faction_influence_15 = {
+	set_variable = { CAN_mogg_faction_influence_change = 15 }
+	add_power_balance_value = {
+		id = CAN_black_mogg_balance
+		value = 0.15
+		tooltip_side = CAN_mogg_side
+	}
+	CAN_mogg_faction_influence_add = yes
+}
+CAN_mogg_faction_influence_20 = {
+	set_variable = { CAN_mogg_faction_influence_change = 20 }
+	add_power_balance_value = {
+		id = CAN_black_mogg_balance
+		value = 0.20
+		tooltip_side = CAN_mogg_side
+	}
+	CAN_mogg_faction_influence_add = yes
+}
+
+CAN_boris_loyalty_-15 = {
+	set_variable = { CAN_boris_loyalty_change = -15 }
+	CAN_boris_loyalty_add = yes
+}
+CAN_boris_loyalty_-10 = {
+	set_variable = { CAN_boris_loyalty_change = -10 }
+	CAN_boris_loyalty_add = yes
+}
+CAN_boris_loyalty_-8 = {
+	set_variable = { CAN_boris_loyalty_change = -8 }
+	CAN_boris_loyalty_add = yes
+}
+CAN_boris_loyalty_-5 = {
+	set_variable = { CAN_boris_loyalty_change = -5 }
+	CAN_boris_loyalty_add = yes
+}
+CAN_boris_loyalty_-20 = {
+	set_variable = { CAN_boris_loyalty_change = -20 }
+	CAN_boris_loyalty_add = yes
+}
+CAN_boris_loyalty_-25 = {
+	set_variable = { CAN_boris_loyalty_change = -25 }
+	CAN_boris_loyalty_add = yes
+}
+CAN_boris_loyalty_5 = {
+	set_variable = { CAN_boris_loyalty_change = 5 }
+	CAN_boris_loyalty_add = yes
+}
+CAN_boris_loyalty_10 = {
+	set_variable = { CAN_boris_loyalty_change = 10 }
+	CAN_boris_loyalty_add = yes
+}
+CAN_boris_loyalty_15 = {
+	set_variable = { CAN_boris_loyalty_change = 15 }
+	CAN_boris_loyalty_add = yes
+}
+CAN_boris_loyalty_25 = {
+	set_variable = { CAN_boris_loyalty_change = 25 }
+	CAN_boris_loyalty_add = yes
+}
+CAN_boris_loyalty_30 = {
+	set_variable = { CAN_boris_loyalty_change = 30 }
+	CAN_boris_loyalty_add = yes
+}
+
+CAN_black_authority_-10 = {
+	set_variable = { CAN_black_authority_change = -10 }
+	CAN_black_authority_add = yes
+}
+CAN_black_authority_5 = {
+	set_variable = { CAN_black_authority_change = 5 }
+	CAN_black_authority_add = yes
+}
+CAN_black_authority_10 = {
+	set_variable = { CAN_black_authority_change = 10 }
+	CAN_black_authority_add = yes
+}
+
+CAN_coalition_stability_-10 = {
+	set_variable = { CAN_coalition_stability_change = -10 }
+	CAN_coalition_stability_add = yes
+}
+CAN_coalition_stability_-5 = {
+	set_variable = { CAN_coalition_stability_change = -5 }
+	CAN_coalition_stability_add = yes
+}
+CAN_coalition_stability_5 = {
+	set_variable = { CAN_coalition_stability_change = 5 }
+	CAN_coalition_stability_add = yes
+}
+CAN_coalition_stability_10 = {
+	set_variable = { CAN_coalition_stability_change = 10 }
+	CAN_coalition_stability_add = yes
+}

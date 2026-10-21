@@ -1,0 +1,1573 @@
+add_namespace = USA_events
+add_namespace = USA_rev_events
+add_namespace = USA_nat_events
+
+
+
+# ============================================================
+# USA_events.1 - fires on completion of USA_The_War_Begins
+# ============================================================
+country_event = {
+	id = USA_events.1
+	title = USA_events.1.t
+	desc = USA_events.1.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.1.a
+		add_political_power = 25
+		add_war_support = 0.02
+		set_country_flag = USA_addressed_nation_directly
+	}
+	option = {
+		name = USA_events.1.b
+		add_stability = 0.03
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+# ============================================================
+# USA_events.2 - fires on completion of USA_The_Turner_Doctrine
+# ============================================================
+country_event = {
+	id = USA_events.2
+	title = USA_events.2.t
+	desc = USA_events.2.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.2.a
+		add_stability = -0.03
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = revolutionary_socialist
+			popularity = 5
+		}
+	}
+	option = {
+		name = USA_events.2.b
+		add_political_power = 50
+		add_war_support = -0.02
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# ============================================================
+# USA_events.3 - fires on completion of USA_Deploy_the_Expeditionary_Force
+# ============================================================
+country_event = {
+	id = USA_events.3
+	title = USA_events.3.t
+	desc = USA_events.3.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.3.a
+		add_stability = 0.04
+		add_political_power = -20
+	}
+	option = {
+		name = USA_events.3.b
+		add_stability = -0.04
+		add_political_power = 20
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# ============================================================
+# USA_events.4 - fires on completion of USA_The_Containment_Reversal
+# ============================================================
+country_event = {
+	id = USA_events.4
+	title = USA_events.4.t
+	desc = USA_events.4.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.4.a
+		add_political_power = -30
+		set_country_flag = USA_pressed_moscow_harder
+	}
+	option = {
+		name = USA_events.4.b
+		add_stability = 0.02
+		set_country_flag = USA_waited_for_moscow
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+# ============================================================
+# USA_events.5 - fires on completion of USA_Negotiated_Peace
+# ============================================================
+country_event = {
+	id = USA_events.5
+	title = USA_events.5.t
+	desc = USA_events.5.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.5.a
+		add_war_support = -0.08
+		add_political_power = 75
+		set_country_flag = USA_forced_the_ceasefire
+	}
+	option = {
+		name = USA_events.5.b
+		add_stability = 0.03
+		set_country_flag = USA_allowed_diplomatic_process
+		add_political_power = -25
+		ai_chance = {
+			factor = 35
+		}
+	}
+}
+
+# ============================================================
+# USA_events.6 - fires on completion of USA_Domestic_Socialist_Transformation
+# ============================================================
+country_event = {
+	id = USA_events.6
+	title = USA_events.6.t
+	desc = USA_events.6.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.6.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = revolutionary_socialist
+			popularity = 10
+		}
+		set_country_flag = USA_seized_the_holdouts
+	}
+	option = {
+		name = USA_events.6.b
+		add_stability = 0.05
+		add_popularity = {
+			ideology = moderate_socialist
+			popularity = 5
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# ============================================================
+# USA_events.7 - fires on completion of USA_The_Business_Plot_2_0
+# ============================================================
+country_event = {
+	id = USA_events.7
+	title = USA_events.7.t
+	desc = USA_events.7.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.7.a
+		add_stability = 0.05
+		set_country_flag = USA_preemptive_purge_active
+	}
+	option = {
+		name = USA_events.7.b
+		add_political_power = 40
+		add_stability = -0.03
+		set_country_flag = USA_delayed_response
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+# ============================================================
+# USA_events.8 - fires on completion of USA_Turner_Survives
+# ============================================================
+country_event = {
+	id = USA_events.8
+	title = USA_events.8.t
+	desc = USA_events.8.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.8.a
+		add_political_power = 50
+	}
+}
+
+# ============================================================
+# USA_events.9 - fires on completion of USA_Coup_Succeeds
+# ============================================================
+country_event = {
+	id = USA_events.9
+	title = USA_events.9.t
+	desc = USA_events.9.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.9.a
+		set_cosmetic_tag = USA
+		add_political_power = 50
+		set_country_flag = USA_remained_with_the_coup
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = USA_events.9.b
+		set_cosmetic_tag = USA
+		set_country_flag = USA_player_sided_with_dsa
+		every_country = {
+			limit = {
+				has_war_with = USA
+				has_government = revolutionary_socialist
+				has_country_flag = USA_dsa_revolt_organized
+			}
+			set_cosmetic_tag = USA_revolutionary_socialist_cosmetics
+			change_tag_from = ROOT
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# ============================================================
+# Reports on the coup and the DSA's call for resistance
+# ============================================================
+news_event = {
+	id = USA_events.100
+	title = USA_events.100.t
+	desc = USA_events.100.d
+	picture = GFX_news_event_001
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.100.a
+	}
+}
+
+news_event = {
+	id = USA_events.101
+	title = USA_events.101.t
+	desc = USA_events.101.d
+	picture = GFX_news_event_001
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.101.a
+	}
+}
+
+# ============================================================
+# USA_events.10 - fires on completion of USA_Operation_Pacific_Storm
+# ============================================================
+country_event = {
+	id = USA_events.10
+	title = USA_events.10.t
+	desc = USA_events.10.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.10.a
+		add_war_support = 0.05
+		add_political_power = -20
+		set_country_flag = USA_pressed_the_advantage
+	}
+	option = {
+		name = USA_events.10.b
+		add_stability = 0.03
+		set_country_flag = USA_held_at_demarcation
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+# ============================================================
+# USA_events.11 - fires on completion of USA_Full_Co_Belligerency
+# ============================================================
+country_event = {
+	id = USA_events.11
+	title = USA_events.11.t
+	desc = USA_events.11.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.11.a
+		add_war_support = 0.03
+		add_political_power = -20
+	}
+	option = {
+		name = USA_events.11.b
+		add_stability = 0.03
+		add_war_support = -0.02
+		ai_chance = {
+			factor = 35
+		}
+	}
+}
+
+# ============================================================
+# USA_events.12 - fires on completion of USA_The_Soviet_Collapse
+# ============================================================
+country_event = {
+	id = USA_events.12
+	title = USA_events.12.t
+	desc = USA_events.12.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.12.a
+		set_country_flag = USA_chose_orderly_soviet_transition
+		add_ideas = USA_reconstruction_mission
+		add_stability = 0.02
+	}
+	option = {
+		name = USA_events.12.b
+		set_country_flag = USA_chose_strategic_vacuum
+		add_ideas = USA_cold_peace_mobilization
+		add_war_support = 0.02
+	}
+}
+
+# ============================================================
+# USA_events.13 - fires on completion of USA_Washington_Moscow_Accord
+# ============================================================
+country_event = {
+	id = USA_events.13
+	title = USA_events.13.t
+	desc = USA_events.13.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.13.a
+		add_stability = -0.02
+		add_political_power = 30
+	}
+	option = {
+		name = USA_events.13.b
+		add_stability = 0.03
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+# ============================================================
+# USA_events.14 - fires on completion of USA_The_Southern_Cone_Question
+# ============================================================
+country_event = {
+	id = USA_events.14
+	title = USA_events.14.t
+	desc = USA_events.14.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.14.a
+		add_political_power = -20
+		set_country_flag = USA_hemisphere_supports_opposition
+		USA_argentina_opposition_effect = yes
+		add_popularity = {
+			ideology = moderate_socialist
+			popularity = 5
+		}
+	}
+	option = {
+		name = USA_events.14.b
+		set_country_flag = USA_hemisphere_limits_response
+		USA_argentina_asylum_effect = yes
+		add_stability = 0.02
+		ai_chance = {
+			factor = 35
+		}
+	}
+}
+
+# ============================================================
+# USA_events.15 - fires on completion of USA_The_Two_Front_Question
+# ============================================================
+country_event = {
+	id = USA_events.15
+	title = USA_events.15.t
+	desc = USA_events.15.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.15.a
+		set_country_flag = USA_two_fronts_accepted
+		remove_ideas = USA_pacific_withdrawal
+		add_ideas = USA_pacific_mobilization
+		add_war_support = 0.03
+	}
+	option = {
+		name = USA_events.15.b
+		set_country_flag = USA_two_fronts_rejected
+		remove_ideas = USA_pacific_mobilization
+		add_ideas = USA_pacific_withdrawal
+		add_stability = 0.03
+	}
+}
+
+# ============================================================
+# USA_events.16 - fires on completion of USA_The_Reckoning
+# ============================================================
+country_event = {
+	id = USA_events.16
+	title = USA_events.16.t
+	desc = USA_events.16.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.16.a
+		add_stability = 0.03
+		add_popularity = {
+			ideology = revolutionary_socialist
+			popularity = 8
+		}
+	}
+	option = {
+		name = USA_events.16.b
+		add_stability = -0.02
+		add_political_power = 50
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# ============================================================
+# USA_events.17 - fires on completion of USA_Push_for_a_Ceasefire
+# ============================================================
+country_event = {
+	id = USA_events.17
+	title = USA_events.17.t
+	desc = USA_events.17.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.17.a
+		add_political_power = -20
+		set_country_flag = USA_pressed_for_ceasefire_hard
+	}
+	option = {
+		name = USA_events.17.b
+		add_stability = 0.02
+		set_country_flag = USA_played_it_cautious
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+# ============================================================
+# USA_events.18 - fires on completion of USA_War_Profiteers_Mobilize
+# ============================================================
+country_event = {
+	id = USA_events.18
+	title = USA_events.18.t
+	desc = USA_events.18.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.18.a
+		add_stability = 0.04
+		add_popularity = {
+			ideology = revolutionary_socialist
+			popularity = 8
+		}
+		set_country_flag = USA_sabotage_exposed
+		add_to_variable = {
+			var = USA_corporate_influence
+			value = -15
+		}
+		USA_update_influence_tier = yes
+	}
+	option = {
+		name = USA_events.18.b
+		add_political_power = 60
+		set_country_flag = USA_sabotage_ignored
+		add_to_variable = {
+			var = USA_corporate_influence
+			value = 15
+		}
+		USA_update_influence_tier = yes
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# ============================================================
+# USA_events.19 - fires on completion of USA_A_Peace_Denied
+# ============================================================
+country_event = {
+	id = USA_events.19
+	title = USA_events.19.t
+	desc = USA_events.19.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.19.a
+		add_stability = -0.03
+		add_popularity = {
+			ideology = revolutionary_socialist
+			popularity = 10
+		}
+	}
+	option = {
+		name = USA_events.19.b
+		add_political_power = 50
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# ============================================================
+# USA_events.20 - the junta's first civilian-military cabinet
+# ============================================================
+country_event = {
+	id = USA_events.20
+	title = USA_events.20.t
+	desc = USA_events.20.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_events.20.a
+		add_stability = -0.05
+		set_country_flag = USA_junta_established
+		set_country_flag = USA_junta_security_council
+		add_ideas = USA_junta_security_state
+	}
+	option = {
+		name = USA_events.20.b
+		add_political_power = 50
+		set_country_flag = USA_junta_administrative_council
+		add_ideas = USA_junta_civilian_facade
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+	# ============================================================
+	# USA_events.21 - the Lend-Lease contracts reach Congress
+	# ============================================================
+	country_event = {
+		id = USA_events.21
+		title = USA_events.21.t
+		desc = USA_events.21.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.21.a
+			set_country_flag = USA_berlin_contracts_fast_tracked
+			add_ideas = USA_arsenal_of_the_coalition
+			add_to_variable = { var = USA_corporate_influence value = 5 }
+			USA_update_influence_tier = yes
+			if = {
+				limit = { GER = { exists = yes } }
+				GER = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 5000
+						producer = USA
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 500
+						producer = USA
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 300
+						producer = USA
+					}
+				}
+			}
+		}
+		option = {
+			name = USA_events.21.b
+			set_country_flag = USA_berlin_contracts_audited
+			add_ideas = USA_contractual_oversight
+			add_to_variable = { var = USA_corporate_influence value = -5 }
+			USA_update_influence_tier = yes
+			if = {
+				limit = { GER = { exists = yes } }
+				GER = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 2500
+						producer = USA
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 250
+						producer = USA
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 150
+						producer = USA
+					}
+				}
+			}
+		}
+	}
+
+	# ============================================================
+	# USA_events.22 - the Atlantic pact's command arrangements
+	# ============================================================
+	country_event = {
+		id = USA_events.22
+		title = USA_events.22.t
+		desc = USA_events.22.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.22.a
+			set_country_flag = USA_atlantic_integrated_command
+			add_to_faction = GER
+			remove_ideas = USA_atlantic_caution
+			add_ideas = USA_atlantic_command
+		}
+		option = {
+			name = USA_events.22.b
+			set_country_flag = USA_atlantic_sovereign_command
+			add_to_faction = GER
+			remove_ideas = USA_atlantic_command
+			add_ideas = USA_atlantic_caution
+			add_stability = 0.02
+		}
+	}
+
+	# ============================================================
+	# USA_events.23 - a joint command is more than a photograph
+	# ============================================================
+	country_event = {
+		id = USA_events.23
+		title = USA_events.23.t
+		desc = USA_events.23.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.23.a
+			set_country_flag = USA_joint_command_integrated
+			add_war_support = 0.02
+		}
+		option = {
+			name = USA_events.23.b
+			set_country_flag = USA_joint_command_limited
+			add_political_power = 25
+		}
+	}
+
+	# ============================================================
+	# USA_events.24 - how to keep the ceasefire from becoming a pause
+	# ============================================================
+	country_event = {
+		id = USA_events.24
+		title = USA_events.24.t
+		desc = USA_events.24.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.24.a
+			set_country_flag = USA_ceasefire_verification_mission
+			remove_ideas = USA_ceasefire_compromise
+			add_ideas = USA_ceasefire_guarantor
+			add_political_power = -25
+		}
+		option = {
+			name = USA_events.24.b
+			set_country_flag = USA_ceasefire_political_compromise
+			remove_ideas = USA_ceasefire_guarantor
+			add_ideas = USA_ceasefire_compromise
+			add_stability = 0.02
+		}
+	}
+
+	# ============================================================
+	# USA_events.25 - the war economy acquires its own constituency
+	# ============================================================
+	country_event = {
+		id = USA_events.25
+		title = USA_events.25.t
+		desc = USA_events.25.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.25.a
+			set_country_flag = USA_war_economy_authorized
+			add_ideas = USA_total_war_economy
+			add_war_support = 0.03
+		}
+		option = {
+			name = USA_events.25.b
+			set_country_flag = USA_war_economy_limited
+			add_stability = 0.03
+			add_to_variable = { var = USA_corporate_influence value = -5 }
+			USA_update_influence_tier = yes
+		}
+	}
+
+	# ============================================================
+	# USA_events.26 - the conditions attached to relief for Moscow
+	# ============================================================
+	country_event = {
+		id = USA_events.26
+		title = USA_events.26.t
+		desc = USA_events.26.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.26.a
+			set_country_flag = USA_aid_tied_to_reform
+			remove_ideas = USA_reconstruction_mission
+			add_ideas = USA_conditional_aid
+			add_political_power = -25
+			if = {
+				limit = { SOV = { exists = yes } }
+				SOV = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 2500
+						producer = USA
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 250
+						producer = USA
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 150
+						producer = USA
+					}
+				}
+			}
+		}
+		option = {
+			name = USA_events.26.b
+			set_country_flag = USA_aid_sent_without_conditions
+			remove_ideas = USA_conditional_aid
+			add_ideas = USA_reconstruction_mission
+			add_stability = 0.02
+			if = {
+				limit = { SOV = { exists = yes } }
+				SOV = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 5000
+						producer = USA
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 500
+						producer = USA
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 300
+						producer = USA
+					}
+				}
+			}
+		}
+	}
+
+	# ============================================================
+	# USA_events.27 - what Fortress America is meant to defend
+	# ============================================================
+	country_event = {
+		id = USA_events.27
+		title = USA_events.27.t
+		desc = USA_events.27.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.27.a
+			set_country_flag = USA_defends_the_continent
+			remove_ideas = USA_hemispheric_union
+			add_ideas = USA_hemispheric_defense
+			if = {
+				limit = {
+					NOT = { has_country_flag = USA_business_plot_underway }
+					NOT = { has_country_flag = USA_business_plot_revealed }
+				}
+				country_event = { id = USA_events.36 }
+			}
+		}
+		option = {
+			name = USA_events.27.b
+			set_country_flag = USA_builds_hemispheric_partnerships
+			remove_ideas = USA_hemispheric_defense
+			add_ideas = USA_hemispheric_union
+			add_political_power = 25
+			if = {
+				limit = {
+					NOT = { has_country_flag = USA_business_plot_underway }
+					NOT = { has_country_flag = USA_business_plot_revealed }
+				}
+				country_event = { id = USA_events.36 }
+			}
+		}
+	}
+
+	# ============================================================
+	# USA_events.36 - business and military opposition surfaces
+	# ============================================================
+	country_event = {
+		id = USA_events.36
+		title = USA_events.36.t
+		desc = USA_events.36.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.36.a
+			set_country_flag = USA_business_plot_revealed
+		}
+	}
+
+	# ============================================================
+	# USA_events.28 - the price of a Pacific alliance
+	# ============================================================
+	country_event = {
+		id = USA_events.28
+		title = USA_events.28.t
+		desc = USA_events.28.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.28.a
+			set_country_flag = USA_pacific_planning_shared
+			remove_ideas = USA_pacific_withdrawal
+			add_ideas = USA_pacific_coordination
+			add_war_support = 0.02
+		}
+		option = {
+			name = USA_events.28.b
+			set_country_flag = USA_pacific_commitment_limited
+			remove_ideas = USA_pacific_coordination
+			add_ideas = USA_pacific_withdrawal
+			add_stability = 0.02
+		}
+	}
+
+	# ============================================================
+	# USA_events.29 - aid or leverage in the new European order
+	# ============================================================
+	country_event = {
+		id = USA_events.29
+		title = USA_events.29.t
+		desc = USA_events.29.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.29.a
+			set_country_flag = USA_european_reconstruction_first
+			remove_ideas = USA_conditional_aid
+			add_ideas = USA_reconstruction_mission
+			add_political_power = -25
+		}
+		option = {
+			name = USA_events.29.b
+			set_country_flag = USA_european_aid_conditional
+			remove_ideas = USA_reconstruction_mission
+			add_ideas = USA_conditional_aid
+		}
+	}
+
+	# ============================================================
+	# USA_events.30 - preparing for a Germany that has won
+	# ============================================================
+	country_event = {
+		id = USA_events.30
+		title = USA_events.30.t
+		desc = USA_events.30.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.30.a
+			set_country_flag = USA_contains_germany_openly
+			remove_ideas = USA_atlantic_caution
+			add_ideas = USA_cold_peace_mobilization
+			add_war_support = 0.02
+		}
+		option = {
+			name = USA_events.30.b
+			set_country_flag = USA_contains_germany_diplomatically
+			remove_ideas = USA_cold_peace_mobilization
+			add_ideas = USA_atlantic_caution
+			add_stability = 0.02
+		}
+	}
+
+	# ============================================================
+	# USA_events.31 - the terms of the Pan-American Union
+	# ============================================================
+	country_event = {
+		id = USA_events.31
+		title = USA_events.31.t
+		desc = USA_events.31.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.31.a
+			set_country_flag = USA_union_built_on_investment
+			remove_ideas = USA_hemispheric_defense
+			add_ideas = USA_hemispheric_union
+			add_political_power = -25
+		}
+		option = {
+			name = USA_events.31.b
+			set_country_flag = USA_union_built_on_security
+			remove_ideas = USA_hemispheric_union
+			add_ideas = USA_hemispheric_defense
+		}
+	}
+
+	# ============================================================
+	# USA_events.32 - Moscow answers the Rashkin ultimatum
+	# ============================================================
+	country_event = {
+		id = USA_events.32
+		title = USA_events.32.t
+		desc = USA_events.32.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.32.a
+			add_political_power = -25
+			custom_effect_tooltip = USA_tt_grain_released
+			hidden_effect = {
+				if = {
+					limit = { country_exists = SOV }
+					SOV = {
+						add_stability = 0.08
+						add_opinion_modifier = { target = USA modifier = USA_moscow_courted }
+					}
+				}
+			}
+		}
+		option = {
+			name = USA_events.32.b
+			add_political_power = 25
+			custom_effect_tooltip = USA_tt_credits_held
+			hidden_effect = {
+				if = {
+					limit = { country_exists = SOV }
+					SOV = {
+						add_stability = -0.05
+						add_political_power = -50
+						add_opinion_modifier = { target = USA modifier = USA_moscow_pressured }
+					}
+				}
+			}
+			ai_chance = {
+				factor = 40
+			}
+		}
+	}
+
+	# ============================================================
+	# USA_events.33 - Soviet reforms become public
+	# ============================================================
+	country_event = {
+		id = USA_events.33
+		title = USA_events.33.t
+		desc = USA_events.33.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.33.a
+			USA_soviet_thaw_effect = yes
+		}
+	}
+
+	# ============================================================
+	# USA_events.34 - what the Eastern Compact becomes
+	# ============================================================
+	country_event = {
+		id = USA_events.34
+		title = USA_events.34.t
+		desc = USA_events.34.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.34.a
+			set_country_flag = USA_europe_trade_chosen
+			add_political_power = -25
+			USA_europe_trade_effect = yes
+		}
+		option = {
+			name = USA_events.34.b
+			set_country_flag = USA_europe_defense_chosen
+			USA_europe_defense_effect = yes
+			ai_chance = {
+				factor = 40
+			}
+		}
+	}
+
+	# ============================================================
+	# USA_events.35 - Berlin reads the Long Watch
+	# ============================================================
+	country_event = {
+		id = USA_events.35
+		title = USA_events.35.t
+		desc = USA_events.35.d
+		picture = GFX_unkown
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.35.a
+			set_country_flag = USA_long_watch_arms
+			USA_long_watch_arms_effect = yes
+		}
+		option = {
+			name = USA_events.35.b
+			set_country_flag = USA_long_watch_detente
+			add_stability = 0.03
+			USA_long_watch_detente_effect = yes
+			ai_chance = {
+				factor = 40
+			}
+		}
+	}
+
+	# ============================================================
+	# USA_events.102 - the junta's offensive, as reported by the press
+	# ============================================================
+	news_event = {
+		id = USA_events.102
+		title = USA_events.102.t
+		desc = USA_events.102.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+
+		option = {
+			name = USA_events.102.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.103
+		title = USA_events.103.t
+		desc = USA_events.103.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.103.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.104
+		title = USA_events.104.t
+		desc = USA_events.104.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.104.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.105
+		title = USA_events.105.t
+		desc = USA_events.105.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.105.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.106
+		title = USA_events.106.t
+		desc = USA_events.106.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.106.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.107
+		title = USA_events.107.t
+		desc = USA_events.107.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.107.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.108
+		title = USA_events.108.t
+		desc = USA_events.108.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.108.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.109
+		title = USA_events.109.t
+		desc = USA_events.109.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.109.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.110
+		title = USA_events.110.t
+		desc = USA_events.110.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.110.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.111
+		title = USA_events.111.t
+		desc = USA_events.111.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.111.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.112
+		title = USA_events.112.t
+		desc = USA_events.112.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.112.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.113
+		title = USA_events.113.t
+		desc = USA_events.113.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.113.a
+		}
+	}
+
+	country_event = {
+		id = USA_events.114
+		title = USA_events.114.t
+		desc = USA_events.114.d
+		picture = GFX_news_event_001
+		is_triggered_only = yes
+		option = {
+			name = USA_events.114.a
+			add_stability = -0.02
+			add_war_support = 0.03
+			set_country_flag = USA_public_hearings_chosen
+			if = {
+				limit = { country_exists = CAN }
+				CAN = { add_opinion_modifier = { target = USA modifier = USA_public_justice } }
+			}
+			if = {
+				limit = { country_exists = ENG }
+				ENG = { add_opinion_modifier = { target = USA modifier = USA_public_justice } }
+			}
+			if = {
+				limit = { country_exists = FRA }
+				FRA = { add_opinion_modifier = { target = USA modifier = USA_public_justice } }
+			}
+		}
+		option = {
+			name = USA_events.114.b
+			add_stability = 0.05
+			add_political_power = 50
+			set_country_flag = USA_conditional_amnesty_chosen
+			if = {
+				limit = { country_exists = CAN }
+				CAN = { add_opinion_modifier = { target = USA modifier = USA_pragmatic_reconciliation } }
+			}
+			if = {
+				limit = { country_exists = MEX }
+				MEX = { add_opinion_modifier = { target = USA modifier = USA_pragmatic_reconciliation } }
+			}
+		}
+	}
+
+
+country_event = {
+	id = USA_rev_events.1
+	title = USA_rev_events.1.t
+	desc = USA_rev_events.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = USA_rev_events.1.a
+		add_stability = 0.03
+		add_political_power = -25
+		add_popularity = { ideology = revolutionary_socialist popularity = 0.03 }
+	}
+	option = {
+		name = USA_rev_events.1.b
+		add_stability = 0.04
+		add_popularity = { ideology = moderate_socialist popularity = 0.03 }
+		ai_chance = { factor = 60 }
+	}
+}
+
+country_event = {
+	id = USA_rev_events.2
+	title = USA_rev_events.2.t
+	desc = USA_rev_events.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = USA_rev_events.2.a
+		add_war_support = 0.03
+		add_manpower = 25000
+	}
+}
+
+country_event = {
+	id = USA_rev_events.3
+	title = USA_rev_events.3.t
+	desc = USA_rev_events.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = USA_rev_events.3.a
+		add_stability = 0.02
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = USA_rev_events.4
+	title = USA_rev_events.4.t
+	desc = USA_rev_events.4.d
+	is_triggered_only = yes
+
+	option = {
+		name = USA_rev_events.4.a
+		add_popularity = { ideology = revolutionary_socialist popularity = 0.04 }
+		add_stability = -0.02
+		add_war_support = 0.02
+	}
+	option = {
+		name = USA_rev_events.4.b
+		add_stability = 0.03
+		add_political_power = -25
+		ai_chance = { factor = 40 }
+	}
+}
+
+news_event = {
+	id = USA_rev_events.5
+	title = USA_rev_events.5.t
+	desc = USA_rev_events.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = USA_rev_events.5.a
+		add_political_power = 50
+	}
+}
+
+	news_event = {
+		id = USA_events.115
+		title = USA_events.115.t
+		desc = USA_events.115.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.115.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.116
+		title = USA_events.116.t
+		desc = USA_events.116.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.116.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.117
+		title = USA_events.117.t
+		desc = USA_events.117.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.117.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.118
+		title = USA_events.118.t
+		desc = USA_events.118.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.118.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.120
+		title = USA_events.120.t
+		desc = USA_events.120.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.120.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.121
+		title = USA_events.121.t
+		desc = USA_events.121.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.121.a
+		}
+	}
+
+	news_event = {
+		id = USA_events.122
+		title = USA_events.122.t
+		desc = USA_events.122.d
+		picture = GFX_news_event_001
+		major = yes
+		is_triggered_only = yes
+		option = {
+			name = USA_events.122.a
+		}
+	}
+
+
+
+
+
+country_event = {
+	id = USA_nat_events.1
+	title = USA_nat_events.1.t
+	desc = USA_nat_events.1.d
+	is_triggered_only = yes
+	option = {
+		name = USA_nat_events.1.a
+		add_political_power = 25
+		add_war_support = 0.02
+	}
+}
+
+country_event = {
+	id = USA_nat_events.2
+	title = USA_nat_events.2.t
+	desc = USA_nat_events.2.d
+	is_triggered_only = yes
+	option = {
+		name = USA_nat_events.2.a
+		add_political_power = 25
+		add_war_support = 0.03
+		add_stability = -0.02
+	}
+	option = {
+		name = USA_nat_events.2.b
+		add_stability = 0.02
+		add_political_power = -25
+		ai_chance = { factor = 40 }
+	}
+}
+
+country_event = {
+	id = USA_nat_events.3
+	title = USA_nat_events.3.t
+	desc = USA_nat_events.3.d
+	is_triggered_only = yes
+	option = {
+		name = USA_nat_events.3.a
+		add_stability = 0.03
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = USA_nat_events.4
+	title = USA_nat_events.4.t
+	desc = USA_nat_events.4.d
+	is_triggered_only = yes
+	option = {
+		name = USA_nat_events.4.a
+		add_political_power = 50
+		add_stability = -0.02
+		add_popularity = { ideology = liberal popularity = -0.03 }
+	}
+	option = {
+		name = USA_nat_events.4.b
+		add_stability = 0.02
+		ai_chance = { factor = 60 }
+	}
+}
+
+country_event = {
+	id = USA_nat_events.5
+	title = USA_nat_events.5.t
+	desc = USA_nat_events.5.d
+	is_triggered_only = yes
+	option = {
+		name = USA_nat_events.5.a
+		add_political_power = 25
+		add_war_support = 0.02
+	}
+}
+
+country_event = {
+	id = USA_nat_events.6
+	title = USA_nat_events.6.t
+	desc = USA_nat_events.6.d
+	is_triggered_only = yes
+	option = {
+		name = USA_nat_events.6.a
+		add_war_support = 0.03
+		add_manpower = 25000
+	}
+}
+
+news_event = {
+	id = USA_nat_events.7
+	title = USA_nat_events.7.t
+	desc = USA_nat_events.7.d
+	is_triggered_only = yes
+	option = {
+		name = USA_nat_events.7.a
+		add_political_power = 50
+	}
+}
+
+news_event = {
+	id = USA_nat_events.8
+	title = USA_nat_events.8.t
+	desc = USA_nat_events.8.d
+	is_triggered_only = yes
+	option = {
+		name = USA_nat_events.8.a
+		add_political_power = 50
+	}
+}
+
+
+
+
+
+
+
+
+
+

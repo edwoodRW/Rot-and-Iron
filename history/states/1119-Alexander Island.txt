@@ -1,0 +1,19 @@
+state={
+	id=1119
+	name="STATE_825"
+	provinces={
+		13877 13932 13945 13946 13947 13960 13979 13980 13981 14001 14013 14020 
+	}
+	manpower = 0
+
+	state_category = wasteland
+
+	history = {
+		owner = ANT
+		add_claim_by = ENG
+		buildings = {
+			infrastructure = 0
+		}
+	}
+
+}

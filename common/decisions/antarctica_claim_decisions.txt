@@ -1,0 +1,200 @@
+antarctica_decisions = {
+
+	# 1939 Queen Maud Land (Norway)
+	NOR_claim_queen_maud_land = {
+
+		icon = ger_mefo_bills
+		
+		visible = {
+			original_tag = NOR
+		}
+
+		available = {
+			date > 1939.01.14
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			add_state_claim = 1087
+			add_state_claim = 1096
+			add_state_claim = 1129
+			add_state_claim = 1130
+			add_state_claim = 1131
+			hidden_effect = {
+				country_event = {
+					id = antarctica.1
+				}
+			}
+		}
+	}
+	
+	# New Swabia Expedition
+	GER_new_swabia_expedition = {
+
+		icon = generic_naval
+		
+		visible = {
+			original_tag = GER
+		}
+
+		available = {
+			date > 1939.12.17
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = new_swabia_expedition_tt
+			hidden_effect = {
+				country_event = {
+					id = antarctica.5
+				}
+			}
+		}
+		
+		days_remove = 115
+		
+        remove_effect = {
+			# MS Schwabenland returns
+			hidden_effect = {
+				set_country_flag = schwabenland_returned
+				country_event = {
+					id = antarctica.6
+				}
+			}
+        }
+	}
+	
+	# 1939 New Swabia (Germany)
+	GER_claim_new_swabia = {
+
+		icon = ger_mefo_bills
+		
+		visible = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = schwabenland_returned
+			date > 1939.04.11
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			add_state_claim = 1096
+			add_state_claim = 1129
+			802 = {
+				set_state_name = "New Swabia"
+			}
+			835 = {
+				set_state_name = "New Swabia"
+			}
+			hidden_effect = {
+				country_event = {
+					id = antarctica.2
+				}
+			}
+		}
+	}
+	
+	# 1940 Chilean Antarctic Territory
+	CHL_formalize_claims = {
+
+		icon = ger_mefo_bills
+		
+		visible = {
+			original_tag = CHL
+		}
+
+		available = {
+			date > 1940.11.06
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			add_state_claim = 1083
+			add_state_claim = 1084
+			add_state_claim = 1085
+			add_state_claim = 1117
+			add_state_claim = 1118
+			add_state_claim = 1119
+			add_state_claim = 1120
+			add_state_claim = 1121
+			add_state_claim = 1122
+			add_state_claim = 1123
+			add_state_claim = 1124
+			add_state_claim = 1125
+			add_state_claim = 1126
+			add_state_claim = 1144
+			add_state_claim = 1092
+			hidden_effect = {
+				set_global_flag = chile_claimed_antarctica
+				country_event = {
+					id = antarctica.3
+				}
+			}
+		}
+	}
+	
+	# 1942 Argentine Antarctica
+	ARG_formalize_claims = {
+
+		icon = ger_mefo_bills
+		
+		visible = {
+			original_tag = ARG
+		}
+
+		available = {
+			has_global_flag = chile_claimed_antarctica
+			date > 1942.01.15
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			add_state_claim = 1085
+			add_state_claim = 1110
+			add_state_claim = 1119
+			add_state_claim = 1120
+			add_state_claim = 1121
+			add_state_claim = 1122
+			add_state_claim = 1123
+			add_state_claim = 1124
+			add_state_claim = 1125
+			add_state_claim = 1126
+			add_state_claim = 1127
+			add_state_claim = 1144
+			add_state_claim = 1092
+			hidden_effect = {
+				country_event = {
+					id = antarctica.4
+				}
+			}
+		}
+		
+	}
+}

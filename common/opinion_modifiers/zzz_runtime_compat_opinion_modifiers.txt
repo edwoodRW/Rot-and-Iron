@@ -1,0 +1,14 @@
+rival = {
+	value = -50
+	monthly_decay = 0
+}
+
+declaration_of_friendship = {
+	value = 40
+	monthly_decay = 0
+}
+
+KR_hostile = {
+	value = -75
+	monthly_decay = 0
+}

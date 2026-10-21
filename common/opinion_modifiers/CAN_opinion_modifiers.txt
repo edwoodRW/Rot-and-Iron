@@ -1,0 +1,96 @@
+###########################################################
+# Rot and Iron — Canada Opinion Modifiers
+# File: common/opinion_modifiers/CAN_opinion_modifiers.txt
+###########################################################
+
+# Fired when Black delivers the full sovereignty address
+# USA views Canada positively — finally acting like a real neighbour
+CAN_sovereignty_positive = {
+	value = 40
+}
+
+# Fired when Black softens the speech
+# USA cautiously watches — not convinced yet
+CAN_sovereignty_cautious = {
+	value = 10
+}
+
+# Fired when Black opens talks with Turner
+# USA pleased Canada is willing to negotiate
+CAN_open_to_talks = {
+	value = 20
+}
+
+# Fired when trade talks are formally scheduled
+# USA sees genuine progress
+CAN_trade_talks_scheduled = {
+	value = 30
+}
+
+# Fired when Detroit Agreement is signed
+# The big one — formal framework agreed
+CAN_detroit_agreement = {
+	value = 60
+}
+
+# Fired when Angus deal is accepted
+# USA approves of Canada treating its own workers better
+CAN_angus_deal_positive = {
+	value = 25
+}
+
+# Fired when election is called during coalition crisis
+# USA uncertain who they will be dealing with
+CAN_election_uncertainty = {
+	value = -10
+}
+
+# Fired when Carney is played against Angus
+# Carney privately furious — his party's relations with Canada suffer
+CAN_carney_played = {
+	value = -20
+}
+
+# =======================================================
+# ELECTION AFTERMATH OPINION MODIFIERS
+# =======================================================
+
+# USA reaction to Carney administration
+USA_trade_deal_positive = {
+	value = 35
+}
+
+# USA reaction to Boris independent stance
+CAN_independent_stance = {
+	value = 15
+}
+
+# ENG reaction to Boris imperial policy
+ENG_imperial_restoration_support = {
+	value = 40
+}
+
+# ENG reaction to Canada refusing military cooperation
+CAN_imperial_disappointment = {
+	value = -25
+}
+
+# ENG reaction to Canada accepting military cooperation
+CAN_military_partner = {
+	value = 30
+}
+
+# USA reaction to Carney administration
+CAN_carney_administration = {
+	value = 25
+}
+
+# USA reaction to Boris administration
+CAN_boris_administration = {
+	value = -15
+}
+
+# ENG reaction to Canada as imperial partner
+CAN_imperial_partner = {
+	value = 35
+}

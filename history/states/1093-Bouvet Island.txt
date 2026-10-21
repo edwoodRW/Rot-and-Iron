@@ -1,0 +1,21 @@
+state={
+	id=1093
+	name="STATE_799" # Bouvet Island
+	manpower = 0
+	
+	state_category = wasteland
+
+	history={
+		owner = NOR
+		buildings = {
+			infrastructure = 1
+			13852 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		14048
+	}
+}

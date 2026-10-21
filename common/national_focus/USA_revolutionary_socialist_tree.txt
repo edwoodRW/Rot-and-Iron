@@ -1,0 +1,620 @@
+focus_tree = {
+	id = USA_revolutionary_socialist_tree
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 22300 }
+
+	focus = {
+		id = USA_Revolutionary_Reconstruction_Programme
+		icon = GFX_goal_generic_political_pressure
+		x = 12
+		y = 0
+		cost = 2
+		available = { has_country_flag = USA_legacy_party_remade }
+		completion_reward = {
+			add_ideas = USA_revolutionary_reconstruction
+			add_political_power = 75
+			add_stability = 0.03
+			set_country_flag = USA_revolutionary_programme_launched
+			news_event = { id = USA_events.120 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Public_Banking
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Revolutionary_Reconstruction_Programme }
+		completion_reward = {
+			add_ideas = USA_public_banking
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nationalise_Heavy_Industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 2
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Public_Banking }
+		completion_reward = {
+			remove_ideas = USA_public_banking
+			add_ideas = USA_public_ownership
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 7000 producer = USA }
+			add_equipment_to_stockpile = { type = support_equipment amount = 700 producer = USA }
+			add_popularity = { ideology = revolutionary_socialist popularity = 0.05 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_Five_Year_Plan
+		icon = GFX_goal_generic_production
+		x = 0
+		y = 3
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Nationalise_Heavy_Industry }
+		completion_reward = {
+			add_ideas = USA_five_year_plan
+			add_political_power = 50
+			add_stability = -0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_A_Planned_Economy
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 4
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_The_Five_Year_Plan }
+		completion_reward = {
+			remove_ideas = USA_revolutionary_reconstruction
+			add_ideas = USA_planned_economy
+			add_stability = 0.04
+			add_equipment_to_stockpile = { type = artillery_equipment amount = 800 producer = USA }
+			add_manpower = 50000
+			set_country_flag = USA_planned_economy_established
+			news_event = { id = USA_events.121 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Debt_Jubilee
+		icon = GFX_goal_generic_political_pressure
+		x = -2
+		y = 2
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Public_Banking }
+		completion_reward = {
+			add_ideas = USA_rev_debt_jubilee
+			add_political_power = 25
+			add_popularity = { ideology = revolutionary_socialist popularity = 0.03 }
+			country_event = { id = USA_rev_events.1 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_Public_Grid
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 3
+		y = 3
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Nationalise_Heavy_Industry }
+		completion_reward = {
+			add_ideas = USA_rev_public_grid
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Solar_and_Storage
+		icon = GFX_goal_generic_scientific_exchange
+		x = 2
+		y = 4
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_The_Public_Grid }
+		completion_reward = {
+			add_ideas = USA_rev_clean_energy
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Rail_and_Gigafactories
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 4
+		y = 4
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_The_Public_Grid }
+		completion_reward = {
+			add_ideas = USA_rev_gigafactories
+			add_stability = 0.02
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_Green_Republic
+		icon = GFX_goal_generic_production
+		x = 3
+		y = 5
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 4
+		prerequisite = { focus = USA_Solar_and_Storage }
+		prerequisite = { focus = USA_Rail_and_Gigafactories }
+		completion_reward = {
+			add_ideas = USA_rev_green_republic
+			add_stability = 0.03
+			add_popularity = { ideology = revolutionary_socialist popularity = 0.03 }
+			set_country_flag = USA_green_republic_built
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Workers_Councils
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 1
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Revolutionary_Reconstruction_Programme }
+		completion_reward = {
+			add_ideas = USA_workers_councils
+			add_stability = 0.03
+			add_popularity = { ideology = moderate_socialist popularity = -0.03 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Guaranteed_Employment
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 6
+		y = 2
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Workers_Councils }
+		completion_reward = {
+			add_ideas = USA_guaranteed_employment
+			add_manpower = 75000
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Universal_Public_Provision
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 2
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Workers_Councils }
+		completion_reward = {
+			add_ideas = USA_universal_provision
+			add_stability = 0.05
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_Workers_Republic
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 3
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Universal_Public_Provision }
+		prerequisite = { focus = USA_Guaranteed_Employment }
+		completion_reward = {
+			add_ideas = USA_workers_republic
+			add_popularity = { ideology = revolutionary_socialist popularity = 0.08 }
+			add_stability = 0.04
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Housing_as_a_Right
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 5
+		y = 3
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Guaranteed_Employment }
+		completion_reward = {
+			add_ideas = USA_rev_public_housing
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Medicare_for_All
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 3
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Universal_Public_Provision }
+		completion_reward = {
+			add_ideas = USA_rev_universal_care
+			add_stability = 0.03
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_Digital_Public_Square
+		icon = GFX_goal_generic_propaganda
+		x = 8
+		y = 4
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_The_Workers_Republic }
+		completion_reward = {
+			add_ideas = USA_rev_public_square
+			add_political_power = 50
+			add_popularity = { ideology = moderate_socialist popularity = 0.03 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Counterplot_Investigations
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 15
+		y = 1
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Revolutionary_Reconstruction_Programme }
+		completion_reward = {
+			add_ideas = USA_counterplot_investigations
+			add_political_power = 50
+			add_stability = -0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_Party_Security_Bureau
+		icon = GFX_goal_generic_secret_police
+		x = 15
+		y = 2
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Counterplot_Investigations }
+		completion_reward = {
+			remove_ideas = USA_counterplot_investigations
+			add_ideas = USA_party_security_bureau
+			add_war_support = 0.03
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Centralise_the_Revolution
+		icon = GFX_goal_generic_secret_police
+		x = 13
+		y = 3
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_The_Party_Security_Bureau }
+		mutually_exclusive = { focus = USA_Oversight_of_the_Watchers }
+		completion_reward = {
+			add_ideas = USA_revolutionary_discipline
+			add_popularity = { ideology = liberal popularity = -0.05 }
+			add_popularity = { ideology = moderate_socialist popularity = -0.05 }
+			add_popularity = { ideology = revolutionary_socialist popularity = 0.08 }
+			set_country_flag = USA_revolution_centralised
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = USA_The_Vanguard_State
+		icon = GFX_goal_generic_secret_police
+		x = 13
+		y = 4
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Centralise_the_Revolution }
+		available = { has_country_flag = USA_revolution_centralised }
+		completion_reward = {
+			add_ideas = USA_vanguard_state
+			add_stability = 0.05
+			add_war_support = 0.05
+			set_politics = {
+				ruling_party = revolutionary_socialist
+				elections_allowed = no
+			}
+			news_event = { id = USA_events.122 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Oversight_of_the_Watchers
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 17
+		y = 3
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_The_Party_Security_Bureau }
+		mutually_exclusive = { focus = USA_Centralise_the_Revolution }
+		completion_reward = {
+			add_ideas = USA_rev_security_oversight
+			add_stability = 0.02
+			add_popularity = { ideology = moderate_socialist popularity = 0.04 }
+			add_popularity = { ideology = liberal popularity = 0.02 }
+			set_country_flag = USA_security_oversight
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = USA_The_Digital_Bill_of_Rights
+		icon = GFX_goal_generic_political_pressure
+		x = 17
+		y = 4
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Oversight_of_the_Watchers }
+		available = { has_country_flag = USA_security_oversight }
+		completion_reward = {
+			add_ideas = USA_rev_digital_bill_of_rights
+			add_stability = 0.04
+			add_popularity = { ideology = moderate_socialist popularity = 0.04 }
+			set_country_flag = USA_digital_bill_of_rights
+			country_event = { id = USA_rev_events.3 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_Peoples_Guard
+		icon = GFX_goal_generic_army_doctrines
+		x = -12
+		y = 1
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Revolutionary_Reconstruction_Programme }
+		completion_reward = {
+			add_ideas = USA_rev_peoples_guard
+			add_manpower = 50000
+			add_war_support = 0.03
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Purge_the_Coup_Officers
+		icon = GFX_goal_generic_secret_police
+		x = -14
+		y = 2
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_The_Peoples_Guard }
+		completion_reward = {
+			add_stability = 0.02
+			set_country_flag = USA_coup_officers_purged
+			country_event = { id = USA_rev_events.4 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nationalise_the_Arms_Industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -10
+		y = 2
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_The_Peoples_Guard }
+		completion_reward = {
+			add_ideas = USA_rev_public_arsenal
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 producer = USA }
+			add_popularity = { ideology = revolutionary_socialist popularity = 0.03 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Cyber_Defence_Command
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -14
+		y = 3
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_The_Peoples_Guard }
+		completion_reward = {
+			add_ideas = USA_rev_cyber_command
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_Democratic_Army
+		icon = GFX_goal_generic_army_doctrines
+		x = -12
+		y = 4
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 4
+		prerequisite = { focus = USA_Purge_the_Coup_Officers }
+		prerequisite = { focus = USA_Nationalise_the_Arms_Industry }
+		completion_reward = {
+			add_ideas = USA_rev_democratic_army
+			add_war_support = 0.05
+			add_army_experience = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Revolutionary_Diplomacy
+		icon = GFX_goal_generic_demand_territory
+		x = -6
+		y = 1
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Revolutionary_Reconstruction_Programme }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = USA_revolutionary_diplomacy
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Americas_Solidarity_Pact
+		icon = GFX_goal_support_communists
+		x = -6
+		y = 2
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Revolutionary_Diplomacy }
+		completion_reward = {
+			add_ideas = USA_rev_americas_solidarity
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = MEX }
+				give_guarantee = MEX
+			}
+			if = {
+				limit = { country_exists = BRA }
+				give_guarantee = BRA
+			}
+			set_country_flag = USA_americas_pact_signed
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Support_Argentine_Labour
+		icon = GFX_goal_support_communists
+		x = -6
+		y = 4
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Americas_Solidarity_Pact }
+		completion_reward = {
+			if = {
+				limit = { country_exists = ARG }
+				ARG = { add_stability = -0.05 }
+			}
+			set_country_flag = USA_supported_argentine_labour
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Overthrow_the_Junta
+		icon = GFX_goal_generic_demand_territory
+		x = -6
+		y = 5
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Support_Argentine_Labour }
+		completion_reward = {
+			add_war_support = 0.03
+			if = {
+				limit = { country_exists = ARG }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ARG
+				}
+			}
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = USA_Liberate_the_North
+		icon = GFX_goal_generic_demand_territory
+		x = -8
+		y = 3
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Americas_Solidarity_Pact }
+		mutually_exclusive = { focus = USA_Peaceful_Coexistence }
+		completion_reward = {
+			add_war_support = 0.05
+			if = {
+				limit = { country_exists = CAN }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = CAN
+				}
+			}
+			country_event = { id = USA_rev_events.2 }
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = USA_Peaceful_Coexistence
+		icon = GFX_goal_generic_national_unity
+		x = -4
+		y = 3
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 3
+		prerequisite = { focus = USA_Americas_Solidarity_Pact }
+		mutually_exclusive = { focus = USA_Liberate_the_North }
+		completion_reward = {
+			add_stability = 0.04
+			add_political_power = 50
+			set_country_flag = USA_peaceful_coexistence
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = USA_The_Second_American_Revolution
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 6
+		relative_position_id = USA_Revolutionary_Reconstruction_Programme
+		cost = 4
+		prerequisite = { focus = USA_A_Planned_Economy }
+		prerequisite = { focus = USA_The_Workers_Republic }
+		prerequisite = { focus = USA_The_Vanguard_State focus = USA_The_Digital_Bill_of_Rights }
+		completion_reward = {
+			add_ideas = USA_rev_second_revolution
+			add_stability = 0.08
+			add_war_support = 0.05
+			add_political_power = 100
+			set_country_flag = USA_second_revolution_complete
+			news_event = { id = USA_rev_events.5 }
+		}
+		ai_will_do = { factor = 6 }
+	}
+
+}

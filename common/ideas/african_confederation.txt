@@ -1,0 +1,64 @@
+ideas = {
+	afc_pan_african_socialism = {
+		icon = generic_communist_resistance_1
+		political_power_gain = 0.1
+		stability_factor = 0.1
+	}
+	
+	afc_land_reform = {
+		icon = generic_production_2
+		factory_output_methods = 0.1
+		civilian_factory_use = -0.05
+	}
+	
+	afc_militant_anti_imperialism = {
+		icon = generic_anti_air_defense_1
+		army_attack = 0.1
+		national_unity = 0.1
+	}
+	
+	afc_economic_self_sufficiency = {
+		icon = generic_production_efficiency_1
+		construction_speed = 0.1
+		production_factory_efficiency = 0.05
+	}
+	
+	afc_regional_hegemony = {
+		icon = generic_army_defense_1
+		supply_consumption = -0.1
+		supply_throughput = 0.1
+	}
+	
+	afc_mugabe_cult = {
+		icon = generic_fuel_efficiency_1
+		ruling_party_support = 0.15
+		war_support_factor = 0.1
+		division_defense = 0.1
+	}
+	
+	afc_liberation_hero = {
+		icon = generic_army_defense_1
+		army_morale = 0.15
+		political_power_gain = 0.1
+	}
+	
+	afc_permanent_president = {
+		icon = generic_political_power_2
+		ruling_party_support = 0.2
+		war_support_factor = 0.05
+		suppression_factor = 0.15
+	}
+	
+	afc_military_champion = {
+		icon = generic_army_offense_1
+		army_attack = 0.1
+		army_defense = 0.1
+	}
+	
+	afc_anti_imperialist_hardliner = {
+		icon = generic_political_power_1
+		foreign_subversion_resistance = 0.2
+		trade_opinion = -0.15
+		war_support_factor = 0.15
+	}
+}

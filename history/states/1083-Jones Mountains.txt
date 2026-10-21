@@ -1,0 +1,21 @@
+state={
+	id=1083
+	name="STATE_789" # Marie Byrd Land
+	manpower = 0
+	
+	state_category = wasteland
+	
+	impassable = yes
+
+	history={
+		owner = ANT
+		buildings = {
+			infrastructure = 0
+		}
+	}
+
+	provinces={
+		13826
+
+	}
+}

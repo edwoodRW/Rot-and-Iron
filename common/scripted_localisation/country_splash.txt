@@ -1,0 +1,31 @@
+defined_text = {
+	name = GetCountrySplashHeader
+
+	text = {
+		localization_key = country_culture|country_splash_header
+	}
+}
+
+defined_text = {
+	name = GetCountrySplashDescription
+
+	text = {
+		localization_key = country_culture|country_splash_description
+	}
+}
+
+defined_text = {
+	name = GetCountrySplashPicture
+
+	text = {
+		localization_key = country_culture|country_splash_picture
+	}
+}
+
+defined_text = {
+	name = GetCountrySplashCloseButton
+
+	text = {
+		localization_key = country_culture|country_splash_close_button
+	}
+}

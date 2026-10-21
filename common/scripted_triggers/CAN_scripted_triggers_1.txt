@@ -1,0 +1,148 @@
+###########################################################
+# Rot and Iron — Canada Scripted Triggers
+# File: common/scripted_triggers/CAN_scripted_triggers.txt
+###########################################################
+
+###########################################################
+# MOGG FACTION INFLUENCE TRIGGERS
+# Use these in focus available = {} and event trigger = {}
+# blocks to check the current state of the coalition
+###########################################################
+
+# Rees-Mogg dominant — Mogg Plan focuses available
+CAN_mogg_is_dominant = {
+	check_variable = { CAN_mogg_faction_influence > 70 }
+	NOT = { has_country_flag = CAN_mogg_resigned }
+	NOT = { has_country_flag = CAN_coalition_broken }
+}
+
+# Rees-Mogg weakened — Black Plan focuses available faster
+CAN_mogg_is_weakened = {
+	check_variable = { CAN_mogg_faction_influence < 40 }
+}
+
+# Rees-Mogg critically weak — IRP departure imminent
+CAN_mogg_critically_weak = {
+	check_variable = { CAN_mogg_faction_influence < 20 }
+	NOT = { has_country_flag = CAN_mogg_resigned }
+}
+
+# Rees-Mogg still in coalition
+CAN_mogg_in_coalition = {
+	NOT = { has_country_flag = CAN_coalition_broken }
+	NOT = { has_country_flag = CAN_mogg_resigned }
+	NOT = { has_country_flag = CAN_mogg_removed_from_cabinet }
+}
+
+###########################################################
+# BORIS LOYALTY TRIGGERS
+###########################################################
+
+# Boris is fully loyal — actively champions Black's agenda
+CAN_boris_is_loyal = {
+	check_variable = { CAN_boris_loyalty > 70 }
+}
+
+# Boris is neutral — supportive but independent
+CAN_boris_is_neutral = {
+	check_variable = { CAN_boris_loyalty > 30 }
+	check_variable = { CAN_boris_loyalty < 70 }
+}
+
+# Boris is restless — considering independent action
+CAN_boris_is_restless = {
+	check_variable = { CAN_boris_loyalty < 30 }
+	NOT = { has_country_flag = CAN_boris_deputy_pm_appointed }
+}
+
+# Boris is in a position to become PM
+CAN_boris_can_become_pm = {
+	has_country_flag = CAN_boris_deputy_pm_appointed
+	has_country_flag = CAN_boris_national_figure
+	check_variable = { CAN_boris_loyalty > 60 }
+}
+
+###########################################################
+# BLACK AUTHORITY TRIGGERS
+###########################################################
+
+# Black is fully in command
+CAN_black_is_dominant = {
+	check_variable = { CAN_black_authority > 75 }
+}
+
+# Black's authority is slipping
+CAN_black_authority_slipping = {
+	check_variable = { CAN_black_authority < 50 }
+}
+
+# Black is in serious trouble
+CAN_black_authority_crisis = {
+	check_variable = { CAN_black_authority < 30 }
+}
+
+###########################################################
+# COALITION STABILITY TRIGGERS
+###########################################################
+
+# Coalition is healthy
+CAN_coalition_is_stable = {
+	check_variable = { CAN_coalition_stability > 65 }
+	NOT = { has_country_flag = CAN_coalition_broken }
+}
+
+# Coalition is wobbling
+CAN_coalition_is_wobbling = {
+	check_variable = { CAN_coalition_stability < 40 }
+	NOT = { has_country_flag = CAN_coalition_broken }
+}
+
+# Coalition has collapsed
+CAN_coalition_has_collapsed = {
+	has_country_flag = CAN_coalition_broken
+}
+
+# Government is a functioning majority
+CAN_has_majority_government = {
+	NOT = { has_country_flag = CAN_minority_government }
+	NOT = { has_country_flag = CAN_coalition_broken }
+	NOT = { has_country_flag = CAN_election_called }
+}
+
+# Government is a minority
+CAN_has_minority_government = {
+	has_country_flag = CAN_minority_government
+	NOT = { has_country_flag = CAN_election_called }
+}
+
+###########################################################
+# COMPOUND TRIGGERS
+# Useful shorthand for complex conditions
+###########################################################
+
+# Black Plan is viable — Mogg weakened, Black has authority
+CAN_black_plan_viable = {
+	CAN_mogg_is_weakened = yes
+	NOT = { CAN_black_authority_crisis = yes }
+	NOT = { has_country_flag = CAN_mogg_government }
+}
+
+# Mogg Plan is viable — Mogg dominant, war support high
+CAN_mogg_plan_viable = {
+	CAN_mogg_is_dominant = yes
+	check_variable = { CAN_mogg_faction_influence > 70 }
+}
+
+# Boris succession is viable
+CAN_boris_succession_viable = {
+	CAN_boris_can_become_pm = yes
+	has_country_flag = CAN_black_plan_complete
+	NOT = { has_country_flag = CAN_mogg_government }
+}
+
+# Sovereignty Address can be delivered strongly
+CAN_can_deliver_full_address = {
+	CAN_mogg_is_weakened = yes
+	CAN_boris_is_loyal = yes
+	has_country_flag = CAN_detroit_agreement_signed
+}

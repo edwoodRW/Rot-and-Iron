@@ -1,0 +1,133 @@
+﻿l_english:
+ britain_news.1.t:0 "Britain Returns the Falklands"
+ britain_news.1.d:0 "Britain has returned the Falkland Islands, signaling a major change in London’s strategic posture and regional diplomacy."
+ britain_news.1.o1:0 "A notable shift in British policy."
+
+ britain_news.55.t:0 "Britain Goes with Europe"
+ britain_news.55.d:0 "London has chosen closer alignment with European institutions, redrawing its diplomatic and economic priorities."
+ britain_news.55.o1:0 "A pragmatic choice for Britain."
+ britain_news.55.o2:0 "A welcome return to partnership."
+ britain_news.55.o3:0 "Commonwealth ties may weaken."
+ britain_news.55.o4:0 "Europe shifts again."
+ britain_news.55.o5:0 "Our rivalry with Britain deepens."
+
+ britain_news.56.t:0 "Britain Goes with the Commonwealth"
+ britain_news.56.d:0 "Britain has prioritized Commonwealth integration, strengthening historic ties over continental alignment."
+ britain_news.56.o1:0 "The Commonwealth endures."
+ britain_news.56.o2:0 "Europe loses influence in London."
+ britain_news.56.o3:0 "Britain charts its own course."
+
+ britain_news.57.t:0 "Britain Stands Alone"
+ britain_news.57.d:0 "Britain has rejected formal blocs and signaled an independent foreign policy path."
+ britain_news.57.o1:0 "We stand on our own terms."
+ britain_news.57.o2:0 "An uncertain path for London."
+
+ britain_news.59.t:0 "Britain Moves Left"
+ britain_news.59.d:0 "Britain’s political direction has shifted left, with wide implications for domestic reform and foreign policy."
+ britain_news.59.o1:0 "A new chapter opens."
+
+ britain_news.60.t:0 "Britain Moves Right"
+ britain_news.60.d:0 "Britain’s political direction has shifted right, signaling a hard turn in governance and diplomacy."
+ britain_news.60.o1:0 "A decisive ideological shift."
+
+ britain_news.61.t:0 "Britain Defies Remain"
+ britain_news.61.d:0 "London has taken a confrontational path against pro-European expectations, escalating political tensions at home and abroad."
+ britain_news.61.o1:0 "Britain stands defiant."
+ britain_news.61.o2:0 "Europe faces a difficult partner."
+ britain_news.61.o3:0 "The split appears final."
+
+ britain_news.62.t:0 "Britain Reaches for South Africa"
+ britain_news.62.d:0 "Britain has moved to deepen strategic ties with South Africa, reshaping influence networks beyond Europe."
+ britain_news.62.o1:0 "A natural strategic alignment."
+ britain_news.62.o2:0 "This challenges our regional interests."
+ britain_news.62.o3:0 "A new axis of cooperation emerges."
+
+ britain_news.63.t:0 "Britain Strikes the Raj"
+ britain_news.63.d:0 "Britain has moved against the Raj, opening a new and dangerous front in imperial politics."
+ britain_news.63.o1:0 "A campaign of restoration begins."
+ britain_news.63.o2:0 "The region braces for conflict."
+ britain_news.63.o3:0 "The world watches uneasily."
+
+ britain_news.64.t:0 "Britain Prepares Unification Treaties"
+ britain_news.64.d:0 "British leadership has advanced plans for far-reaching unification treaties, signaling major constitutional ambitions."
+ britain_news.64.o1:0 "A bold constitutional gambit."
+
+ britain_news.65.t:0 "The Iron Curtain Falls on the Channel"
+ britain_news.65.d:0 "The world watched in stunned silence as the flickering lights of British democracy were systematically extinguished. What began as a temporary emergency to restore order has hardened into a terrifying new reality. Across the globe, newsrooms are broadcasting the same chilling images: the Union Jack being hauled down from public buildings, replaced by the stark, geometric banners of the National Rebirth Party.\n\nThe BBC, once the gold standard of international journalism, has fallen silent, only to return hours later as a state-run mouthpiece, its veteran anchors replaced by stone-faced party loyalists. Reports are filtering out of massive administrative removals at Whitehall and the inner sanctums of Oxford and Cambridge. The borders have been slammed shut, and the Pound Sterling has been decoupled from international markets, effectively turning the United Kingdom into a fortress of isolation.\n\nIn Washington, Paris, and Berlin, the reaction is one of absolute alarm. The Special Relationship is dead, and the European Union has moved to declare a total diplomatic and economic blockade. Britain, the nation that once stood as the bulwark of Western liberalism, has become a pariah state overnight. A new, dark shadow has fallen across the English Channel, and for the first time in centuries, the world has no idea what is happening inside the Reborn Kingdom."
+ britain_news.65.o1:0 "Europe wakes to a darker shore."
+
+ britain_news.66.t:0 "The Atlantic Powers Quarantine Britain"
+ britain_news.66.d:0 "The crisis around Britain has moved from rumor to formal international action. Following the escape of the royal family and the appearance of coalition fleets off British waters, Washington, Ottawa, and Paris have announced a joint maritime quarantine around the British Isles. The measure stops short of a declaration of war, but insurers, shipping houses, and naval observers all understand its practical meaning: traffic bound for British ports may now be inspected, diverted, or turned back under foreign guns. The democratic powers are attempting to strangle the Yerbury regime without becoming the first side to fire openly.\n\nIn foreign capitals the move is being sold as defensive necessity after weeks of escalating reports from inside Britain: the liquidation of constitutional rule, the subordination of the monarchy, the royal escape into exile, and open military readiness by the new state. Markets have reacted immediately. Shipping rates on Atlantic routes have surged, commodity traders are recalculating British access to fuel and industrial imports, and military planners across Europe are suddenly treating the Channel not as a stable frontier but as the edge of a live containment zone. What happens next may depend on whether Britain accepts encirclement, or decides that humiliation at sea is more dangerous than war."
+ britain_news.66.o1:0 "The ring around Britain tightens."
+
+ britain_news.67.t:0 "Ultimatum in the North Sea"
+ britain_news.67.d:0 "The naval confrontation around Britain has entered a more dangerous phase. After British warships moved aggressively toward the coalition cordon, American, French, and Commonwealth commanders issued a joint limit-line ultimatum warning that any further advance by British formations may be met with force. No battle has yet begun, but the atmosphere now resembles the final minutes before one. Radar locks, warning hails, and combat air patrols have turned the waters around the Isles into a theater where a single misjudgment could ignite war across the Atlantic community.\n\nThe significance of the ultimatum is political as well as military. The democratic coalition is no longer merely displaying resolve; it is defining rules of engagement against Britain in public view. Around the world, governments that had hoped the British collapse could still be contained internally are being forced to reconsider. This is no longer only a constitutional tragedy inside one country. It is an international crisis centered on a nuclear-armed island state whose rulers increasingly treat escalation itself as proof of strength."
+ britain_news.67.o1:0 "The sea lanes now carry the smell of war."
+
+ britain_news.68.t:0 "Britain Loses Ireland"
+ britain_news.68.d:0 "The British occupation in Ireland has collapsed with shocking speed. What began as an urban insurgent strike in Dublin has cascaded into a general unraveling of the occupation apparatus, culminating in a desperate evacuation from Belfast and the effective end of British rule across the island. Reports describe burning depots, abandoned checkpoints, shattered transport lines, and columns of soldiers and officials fleeing under cover of smoke toward the last available ships.\n\nThe political significance reaches far beyond Ireland itself. The Yerbury regime had presented the conquest as proof that terror, surveillance, and administrative violence could crush a nation permanently. Instead the occupation has ended in military humiliation and visible panic. Foreign observers now see a regime that can threaten the Atlantic with Larkhill one week and lose an entire island the next."
+ britain_news.68.o1:0 "The cage in Ireland has been broken."
+
+ britain_news.69.t:0 "Britain Scours Ireland"
+ britain_news.69.d:0 "International observers are reporting a new phase of mass reprisal in Ireland as the British regime responds to insurgency with what amounts to an openly punitive destruction campaign. Urban districts have been shelled, transport corridors obliterated, and large areas of the island reorganized under a governorate system defined by labor control, ration coercion, and militarized administration. Evidence suggests that the objective is no longer ordinary occupation. It is exemplary terror meant to deny the Irish resistance any civilian depth at all.\n\nThe campaign has provoked horror abroad even among governments already preparing for confrontation with Britain at sea. If confirmed at full scale, the Scouring will mark another decisive step in the transformation of Yerbury's state from authoritarian siege regime into something closer to a continental occupation machine operating on island soil."
+ britain_news.69.o1:0 "Ireland is being ruled through fire and ration cards."
+ britain_news.70.t:0 "Irish Unification"
+ britain_news.70.d:0 "The constitutional crisis inside the United Kingdom has produced one of the most consequential outcomes imaginable: Northern Ireland has left the union and entered a reunified Irish state. What makes the event so extraordinary is the route by which it happened. London did not lose Ulster through gradual constitutional drift or consensual retreat. It lost it after a hard-line campaign that convinced growing numbers of people in the North that British rule now meant control without balance and coercion without a sustainable settlement. Dublin has moved quickly to present reunification as a stabilizing historic correction. Across Europe and North America, the reaction is a mix of astonishment, relief, and alarm at what this says about the collapse of political authority inside Britain itself."
+ britain_news.70.o1:0 "The Irish question has been answered at last."
+
+ britain_news.71.t:0 "Scotland Declares Independence"
+ britain_news.71.d:0 "Scotland has broken openly with Westminster after a spiraling constitutional confrontation between the Reform government and Holyrood. John Swinney and the Scottish National Party have moved beyond demands for a sanctioned referendum and declared that London's crackdown has destroyed the legitimacy of the existing settlement. The declaration is illegal under British law, but legality is no longer the centre of the crisis. The issue now is whether Westminster can reassert political control over a nation whose devolved leadership is claiming democratic authority against it in full public view. International observers see the event for what it is: the most serious fracture in the British union in the modern era."
+ britain_news.71.o1:0 "Britain's union is breaking in public."
+ britain_news.72.t:0 "Britain Threatens Force Against Scotland"
+ britain_news.72.d:0 "The Scottish independence crisis has escalated sharply after Nigel Farage used a Downing Street address to warn that London may use force to reverse what he calls an illegal nationalist seizure of authority in Edinburgh. He stopped short of a formal military order, but the meaning of the speech was clear enough for foreign ministries and markets alike: the British government is now trying to recover deterrence by making coercive options part of the public script. The result is to transform a constitutional rupture into a potential security crisis inside the former United Kingdom."
+ britain_news.72.o1:0 "Britain is now speaking the language of force."
+
+ britain_news.73.t:0 "Britain Threatens Action Over Irish Unification"
+ britain_news.73.d:0 "The reunification of Ireland has been followed by an aggressive British response. Nigel Farage has warned that London may take sweeping action to defend British interests and punish what he presents as the illegitimate loss of Ulster. While no declaration of war has been issued, the speech has sharply raised fears that Britain may try to answer constitutional defeat with military pressure, cross-border coercion, or a wider security confrontation. Governments across Europe are now treating the Irish settlement and the British reaction to it as part of the same dangerous crisis."
+ britain_news.73.o1:0 "A constitutional defeat is turning into a military threat."
+ britain_news.74.t:0 "Europe Accepts Scottish Independence"
+ britain_news.74.d:0 "European leaders have moved quickly to recognize Scotland's new position and warn London against any attempt to reverse it by force. Brussels is treating the Scottish rupture not as a temporary domestic disturbance, but as a political reality that now requires continental protection against British escalation. The message to Westminster is stark: accept the outcome, or face heavy sanctions and broader diplomatic isolation."
+ britain_news.74.o1:0 "Europe has drawn a line around Scotland."
+
+ britain_news.75.t:0 "Europe Backs Irish Reunification"
+ britain_news.75.d:0 "The European Union has endorsed the reunification of Ireland and warned Britain that any attempt to coerce or overturn the new settlement will trigger harsh sanctions. What London hoped to frame as a sovereign dispute over British territory is now being reframed abroad as a test of whether Europe will tolerate British intimidation after the union's collapse."
+ britain_news.75.o1:0 "Brussels has chosen the new settlement."
+ britain_news.76.t:0 "Pro-EU Protests Spread Across England"
+ britain_news.76.d:0 "Britain's sanctions confrontation with Europe is now producing a new domestic spectacle: large pro-EU demonstrations in major English cities blaming the government, not Brussels, for the economic pain. What began as a nationalist escalation over Scotland and Ireland has widened into a broader argument over Britain's place in Europe, the cost of brinkmanship, and whether Nigel Farage is governing through grievance at the expense of basic economic competence. Foreign observers see a government that wanted a patriotic rally and got a counter-mobilization instead."
+ britain_news.76.o1:0 "England is protesting the sanctions fight itself."
+
+ britain_news.77.t:0 "Farage Softens the Line"
+ britain_news.77.d:0 "After weeks of furious rhetoric, Nigel Farage's government has edged toward a more careful line on Europe and the sanctions crisis. Ministers are avoiding grand promises of retaliation, stressing stability, and trying to present the shift as calm stewardship rather than retreat. The move may steady markets and quiet some domestic critics, but it also exposes the distance between Reform's earlier defiance and the harder arithmetic of governing through economic punishment."
+ britain_news.77.o1:0 "London is trying to step back without saying so."
+
+ britain_news.78.t:0 "Farage Radicalizes Under Sanctions"
+ britain_news.78.d:0 "Rather than moderate, Nigel Farage has chosen to radicalize his response to European sanctions. The government is now portraying the economic shock as proof that Britain is under coordinated attack from Brussels and from domestic opponents accused of siding with foreign pressure. Abroad, the line is being read less as resilience than as a government turning sanctions into a permanent political mythology in order to survive the consequences of its own decisions."
+ britain_news.78.o1:0 "The crisis is becoming the message."
+
+ britain_news.79.t:0 "Britain Announces a New Progressive Settlement"
+ britain_news.79.d:0 "The Burnham government has formally declared what many observers suspected was already underway: Britain's post-Brexit crisis is to be answered not with minor repair, but with a new domestic settlement built around constitutional reform, regional power, and a more activist social-democratic state. What makes the announcement noteworthy abroad is not only the policy content, but the tone. London is speaking less like a government trying to manage decline and more like one claiming to have found a replacement story for the country.\n\nEuropean and North American observers are divided over whether the project represents overdue renewal or simply a softer, more competent upheaval. Either way, the message is clear. Britain intends to redefine itself on purpose."
+ britain_news.79.o1:0 "London is rewriting its own script."
+
+ britain_news.80.t:0 "Britain Reopens the Brussels Channel"
+ britain_news.80.d:0 "Britain has moved to formalise a new framework of structured cooperation with European partners under what London is calling the Brussels Protocol. The arrangement does not amount to a wholesale return to the old order, but it signals a marked shift away from performative estrangement and toward a managed reconstruction of British-European ties. Diplomats across the continent are reading the move as proof that the political mood in London has changed more deeply than its rhetoric alone suggested.\n\nThe broader significance lies in the precedent. Britain is no longer treating closeness to Europe as a humiliation to be disguised. It is beginning to institutionalise it again."
+ britain_news.80.o1:0 "The Channel feels narrower again."
+
+ britain_news.81.t:0 "Britain Unveils 'Global Britain 2.0'"
+ britain_news.81.d:0 "The Burnham administration has capped its reform programme with a foreign-policy doctrine billed as Global Britain 2.0, a formulation designed to distance the country from both post-imperial nostalgia and narrow insularity. The new line links domestic reconstruction to a more civic, regional, and alliance-based international posture, with ministers arguing that Britain can no longer sell prestige abroad while its institutions decay at home.\n\nForeign governments are still working out what the slogan means in practice, but most agree on one point: London is attempting to trade theatrical sovereignty for a more networked model of influence. If the doctrine holds, Britain's international role may become less grandiose and more durable."
+ britain_news.81.o1:0 "A smaller boast, perhaps a more serious strategy."
+
+ britain_news.82.t:0 "Britain Deepens Its European Settlement"
+ britain_news.82.d:0 "European outlets have treated the British customs announcement as a practical story rather than a symbolic one. Freight procedures are being simplified, inspection burdens reduced, and cross-Channel trade made more predictable under a new associate arrangement with European partners. In Brussels and Dublin especially, coverage has focused on what the agreement will do to port traffic, supply chains, and routine commercial certainty rather than what it means for old political mythology.\n\nThat tone itself is revealing. Britain is no longer being watched solely as a country arguing with its own recent past. It is being watched as a state rebuilding working border arrangements with its neighbours."
+ britain_news.82.o1:0 "The paperwork of estrangement is being dismantled."
+
+ britain_news.83.t:0 "Britain Adopts an Open Society Settlement"
+ britain_news.83.d:0 "Foreign reporting has described the Open Society Act as Britain's attempt to consolidate a scattered reform period into a recognisable constitutional project. The new law binds together civic rights, federal restructuring, housing and municipal-state powers, social liberalisation, and a more systematic European orientation. From abroad, the significance lies less in any one clause than in London's clear attempt to make the whole settlement harder to reverse.\n\nDiplomats and analysts are reading the measure as a test of durability. Britain is no longer merely changing policy emphasis. It is trying to write a new liberal centre into law and administration."
+ britain_news.83.o1:0 "A quieter Britain may yet prove the more lasting one."
+
+ britain_news.84.t:0 "Britain Creates a New Investment State"
+ britain_news.84.d:0 "Britain's new investment partnership is being interpreted abroad as an attempt to give the state a durable financing instrument for housing, infrastructure, industrial upgrading, and regional development. Rather than another short-term programme, the institution is designed to channel capital over longer time horizons and in closer partnership with local and regional bodies.\n\nInternational coverage has concentrated on the mechanics: funding windows, co-financing rules, eligible sectors, and whether the institution can genuinely anchor long-term projects. Britain is being judged not by its slogans here, but by whether it can make state-backed investment feel routine again."
+ britain_news.84.o1:0 "Britain is trying to finance seriousness."
+
+ britain_news.85.t:0 "A New Liberal Centre Emerges in Britain"
+ britain_news.85.d:0 "Foreign capitals increasingly see Britain's Liberal programme as something more than an improvised coalition phase. Federal redistribution of power, regulated markets, civic-rights guarantees, municipal delivery institutions, and a closer European orientation are now being presented by London as parts of one new governing centre. The claim is being taken seriously abroad because these reforms are no longer linked only by rhetoric. They are increasingly linked by law, institutions, and administrative practice.\n\nThe result is a shift in how Britain is discussed overseas. The country is no longer only being watched for instability. It is being watched to see whether a distinct post-crisis settlement can actually hold."
+ britain_news.85.o1:0 "Britain may have found a new equilibrium."

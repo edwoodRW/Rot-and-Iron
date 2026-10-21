@@ -1,0 +1,375 @@
+ideas = {
+	country = {
+		GER_diplomatic_corps = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_foreign_capital
+			modifier = {
+				political_power_gain = 0.03
+			}
+		}
+
+		GER_french_trade_partner = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_foreign_capital
+			modifier = {
+				industrial_capacity_factory = 0.02
+				industrial_capacity_dockyard = 0.02
+			}
+		}
+
+		GER_intelligence_directorate = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+				political_power_gain = 0.02
+				research_speed_factor = 0.02
+			}
+		}
+
+		GER_covert_rearmament = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				production_speed_arms_factory_factor = 0.04
+				production_factory_efficiency_gain_factor = 0.03
+			}
+		}
+
+		GER_prewar_officer_training = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				army_org_factor = 0.04
+				planning_speed = 0.04
+			}
+		}
+
+		GER_liebich_war_mandate = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_communist_drift_bonus
+			modifier = {
+				war_support_factor = 0.03
+				political_power_gain = 0.02
+			}
+		}
+
+		GER_war_economy_decree = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		GER_industrial_rationalisation = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.02
+			}
+		}
+
+		GER_expanded_conscription = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				conscription_factor = 0.03
+				war_support_factor = 0.02
+			}
+		}
+
+		GER_peoples_army_doctrine = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_communist_army
+			modifier = {
+				army_org_factor = 0.04
+				army_attack_factor = 0.03
+			}
+		}
+
+		GER_accelerated_officers = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				planning_speed = 0.05
+				army_org_factor = 0.02
+			}
+		}
+
+		GER_eastern_hammer_doctrine = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_communist_army
+			modifier = {
+				army_attack_factor = 0.05
+				army_org_factor = -0.03
+			}
+		}
+
+		GER_atlantic_strategy = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				naval_speed_factor = 0.03
+				convoy_raiding_efficiency_factor = 0.04
+			}
+		}
+
+		GER_naval_expansion = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
+		GER_submarine_warfare = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_navy_submarines
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.08
+				naval_speed_factor = 0.02
+			}
+		}
+
+		GER_iceland_base = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_naval_invasion
+			modifier = {
+				naval_speed_factor = 0.02
+				convoy_raiding_efficiency_factor = 0.03
+			}
+		}
+
+		GER_biscay_patrol = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				naval_speed_factor = 0.02
+				convoy_raiding_efficiency_factor = 0.03
+			}
+		}
+
+		GER_med_strategy = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				naval_speed_factor = 0.02
+				convoy_raiding_efficiency_factor = 0.03
+			}
+		}
+
+		GER_north_sea_blockade_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.05
+			}
+		}
+
+		GER_coalition_coordinator = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_foreign_capital
+			modifier = {
+				planning_speed = 0.03
+				political_power_gain = 0.02
+			}
+		}
+
+		GER_two_front_coordination = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_supply_line
+			modifier = {
+				army_attack_factor = 0.03
+				planning_speed = 0.03
+			}
+		}
+
+		GER_grand_coalition_bonus = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_foreign_capital
+			modifier = {
+				war_support_factor = 0.03
+				political_power_gain = 0.02
+			}
+		}
+
+		GER_coalition_stability_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_communist_drift_bonus
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.02
+			}
+		}
+
+		GER_war_mandate_renewed = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_communist_drift_bonus
+			modifier = {
+				stability_factor = 0.03
+				war_support_factor = 0.03
+			}
+		}
+
+		GER_war_won = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_communist_drift_bonus
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.03
+			}
+		}
+
+		GER_berlin_accords_spirit = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		FRA_bordeaux_agreement = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_foreign_capital
+			modifier = {
+				industrial_capacity_factory = 0.03
+				industrial_capacity_dockyard = 0.02
+			}
+		}
+
+		GER_french_economic_partner = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_foreign_capital
+			modifier = {
+				industrial_capacity_factory = 0.03
+				industrial_capacity_dockyard = 0.02
+			}
+		}
+
+		CHI_german_coordination = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_communist_army
+			modifier = {
+				army_attack_factor = 0.03
+				planning_speed = 0.03
+			}
+		}
+
+		SCO_german_trained_brigades = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_communist_army
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.03
+			}
+		}
+
+		SCO_german_guarantee = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.03
+			}
+		}
+
+		SOV_british_lifeline = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_supply_line
+			modifier = {
+				industrial_capacity_factory = 0.04
+				production_speed_arms_factory_factor = 0.03
+			}
+		}
+
+		GER_production_drive = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		GER_war_bonds = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_foreign_capital
+			modifier = {
+				industrial_capacity_factory = 0.03
+				consumer_goods_factor = -0.02
+				stability_factor = -0.02
+			}
+		}
+	}
+}

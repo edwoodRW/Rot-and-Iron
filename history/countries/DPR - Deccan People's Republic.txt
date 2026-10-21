@@ -1,0 +1,102 @@
+capital = 429
+
+oob = "DPR_2026"
+
+set_research_slots = 3
+set_convoys = 50
+set_stability = 0.5
+set_war_support = 0.3
+
+set_technology = {
+	support_weapons = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1
+	tech_field_hospital = 1
+	tech_engineers = 1
+	gwtank = 1
+	basic_light_tank = 1
+	gw_artillery = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+}
+
+set_politics = {
+	ruling_party = moderate_socialist
+	last_election = "2024.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascist = 0
+	nationalist = 12
+	monarchist = 0
+	national_bolshevik = 0
+	national_conservative = 8
+	centrist = 0
+	liberal = 0
+	new_democrat = 10
+	moderate_socialist = 35
+	revolutionary_socialist = 20
+	communist = 15
+}
+
+create_country_leader = {
+	name = "Sanjay Verma"
+	ideology = fascist_ideology
+}
+
+create_country_leader = {
+	name = "Manoj Pillai"
+	ideology = nationalist_ideology
+}
+
+create_country_leader = {
+	name = "Suresh Rathore"
+	ideology = absolute_monarchist
+}
+
+create_country_leader = {
+	name = "Vikram Desai"
+	ideology = national_bolshevik_ideology
+}
+
+create_country_leader = {
+	name = "Anil Mehra"
+	ideology = fiscal_conservative
+}
+
+create_country_leader = {
+	name = "Rajiv Banerjee"
+	ideology = centrist_ideology
+}
+
+create_country_leader = {
+	name = "Naveen Joshi"
+	ideology = social_liberal
+}
+
+create_country_leader = {
+	name = "Prakash Ambedkar"
+	ideology = new_democrat_ideology
+	picture = "Prakash_Ambedkar.dds"
+}
+
+create_country_leader = {
+	name = "Deepak Bhatt"
+	ideology = democratic_socialist
+}
+
+create_country_leader = {
+	name = "Kiran Chauhan"
+	ideology = revolutionary_socialist_ideology
+}
+
+create_country_leader = {
+	name = "Arjun Rao"
+	ideology = communist
+}
+

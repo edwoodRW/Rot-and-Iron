@@ -1,0 +1,746 @@
+spriteTypes = {	
+
+	#### Generic continuous goal icons
+
+
+
+	###USA#####
+	
+	SpriteType = {
+		name = "GFX_The_Hemisphere_Armed"
+		texturefile = "gfx/interface/goals/USA/The_Hemisphere_Armed.dds"
+		}
+
+	
+	SpriteType = {
+		name = "GFX_The_Continental_Arsenal"
+		texturefile = "gfx/interface/goals/USA/The_Continental_Arsenal.dds"
+		}
+	
+	SpriteType = {
+		name = "GFX_The_Atlantic_Perimeter"
+		texturefile = "gfx/interface/goals/USA/The_Atlantic_Perimeter.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_America_Under_Watch"
+		texturefile = "gfx/interface/goals/USA/America_Under_Watch.dds"
+		}
+	
+	SpriteType = {
+		name = "GFX_The_Loyalty_Bureaus"
+		texturefile = "gfx/interface/goals/USA/The_Loyalty_Bureaus.dds"
+		}
+
+	
+	SpriteType = {
+		name = "GFX_Operation_Civic_Shield"
+		texturefile = "gfx/interface/goals/USA/Operation_Civic_Shield.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_National_Security_Directorate"
+		texturefile = "gfx/interface/goals/USA/National_Security_Directorate.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_The_Long_Watch"
+		texturefile = "gfx/interface/goals/USA/The_Long_Watch.dds"
+		}
+	
+
+	SpriteType = {
+		name = "GFX_The_Atlantic_Shield"
+		texturefile = "gfx/interface/goals/USA/The_Atlantic_Shield.dds"
+		}
+	
+	
+	SpriteType = {
+		name = "GFX_A_Europe_of_Many_Peoples"
+		texturefile = "gfx/interface/goals/USA/A_Europe_of_Many_Peoples.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_The_Eastern_Compact"
+		texturefile = "gfx/interface/goals/USA/The_Eastern_Compact.dds"
+		}
+	
+ 
+	SpriteType = {
+		name = "GFX_A_Civilian_Recovery_Cabinet"
+		texturefile = "gfx/interface/goals/USA/A_Civilian_Recovery_Cabinet.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_The_Security_State_Endures"
+		texturefile = "gfx/interface/goals/USA/The_Security_State_Endures.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_Rebuild_the_Union"
+		texturefile = "gfx/interface/goals/USA/Rebuild_the_Union.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_The_Pacific_Alliance"
+		texturefile = "gfx/interface/goals/USA/The_Pacific_Alliance.dds"
+		}
+	
+	SpriteType = {
+		name = "GFX_The_Soviet_Collapse"
+		texturefile = "gfx/interface/goals/USA/The_Soviet_Collapse.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_A_New_World_Order"
+		texturefile = "gfx/interface/goals/USA/New_World_Order.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_Contain_the_Victor"
+		texturefile = "gfx/interface/goals/USA/Contain_the_Victor.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_Rebuild_Eastern_Europe"
+		texturefile = "gfx/interface/goals/USA/Rebuild_Eastern_Europe.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_Quiet_Rearmament"
+		texturefile = "gfx/interface/goals/USA/Quiet_Rearmament.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_The_Peace_Turner_Built"
+		texturefile = "gfx/interface/goals/USA/The_Peace_Turner_Built.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_The_Cold_Peace"
+		texturefile = "gfx/interface/goals/USA/The_Cold_Peace.dds"
+		}
+	
+	SpriteType = {
+		name = "GFX_Arm_the_Eastern_Front"
+		texturefile = "gfx/interface/goals/USA/Arm_the_Eastern_Front.dds"
+		}
+	
+	SpriteType = {
+		name = "GFX_Joint_Operations_Command"
+		texturefile = "gfx/interface/goals/USA/Joint_Operations_Command.dds"
+		}
+
+
+	SpriteType = {
+		name = "GFX_Full_Co_Belligerency"
+		texturefile = "gfx/interface/goals/USA/Full_Co_Belligerency.dds"
+		}
+	
+	SpriteType = {
+		name = "GFX_Deploy_the_Expeditionary_Force"
+		texturefile = "gfx/interface/goals/USA/Deploy_the_Expeditionary_Force.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_USA_The_War_Begins"
+		texturefile = "gfx/interface/goals/USA/USA_The_War_Begins.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_The_Containment_Reversal"
+		texturefile = "gfx/interface/goals/USA/The_Containment_Reversal.dds"
+		}
+		
+	SpriteType = {
+		name = "GFX_The_Turner_Doctrine"
+		texturefile = "gfx/interface/goals/USA/The_Turner_Doctrine.dds"
+		}
+		
+
+	SpriteType = {
+		name = "GFX_The_New_New_Deal"
+		texturefile = "gfx/interface/goals/USA/The_New_New_Deal.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_Pivot_to_Asia"
+		texturefile = "gfx/interface/goals/USA/Pivot_to_Asia.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_The_Business_Plot_2_0"
+		texturefile = "gfx/interface/goals/USA/The_Business_Plot_2_0.dds"
+		}
+
+		SpriteType = {
+			name = "GFX_Lend_Lease_to_Berlin"
+			texturefile = "gfx/interface/goals/USA/Lend_Lease_to_Berlin.dds"
+		}
+
+
+	SpriteType = {
+		name = "GFX_USA_Atlantic_Alliance"
+		texturefile = "gfx/interface/goals/USA/Atlantic_Alliance.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_Push_for_a_Ceasefire"
+		texturefile = "gfx/interface/goals/USA/Push_for_a_Ceasefire.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_War_Profiteers_Mobilize"
+		texturefile = "gfx/interface/goals/USA/War_Profiteers_Mobilize.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_The_Ceasefire_Holds"
+		texturefile = "gfx/interface/goals/USA/The_Ceasefire_Holds.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_The_War_Grinds_On"
+		texturefile = "gfx/interface/goals/USA/The_War_Grinds_On.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_A_Longer_War"
+		texturefile = "gfx/interface/goals/USA/A_Longer_war.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_A_Peace_Denied"
+		texturefile = "gfx/interface/goals/USA/A_Peace_Denied.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_The_Reform_Package"
+		texturefile = "gfx/interface/goals/USA/The_Reform_Package.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Negotiated_Peace"
+		texturefile = "gfx/interface/goals/USA/Negotiated_Peace.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Domestic_Socialist_Transformation"
+		texturefile = "gfx/interface/goals/USA/Domestic_Socialist_Transformation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Fortress_America"
+		texturefile = "gfx/interface/goals/USA/Fortress_America.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Washington_Moscow_Accord"
+		texturefile = "gfx/interface/goals/USA/Washington_Moscow_Accord.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Leverage_for_Reform"
+		texturefile = "gfx/interface/goals/USA/Leverage_for_Reform.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Pragmatic_Silence"
+		texturefile = "gfx/interface/goals/USA/Pragmatic_Silence.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_The_Rashkin_Ultimatum"
+		texturefile = "gfx/interface/goals/USA/The_Rashkin_Ultimatum.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Look_the_Other_Way"
+		texturefile = "gfx/interface/goals/USA/Look_the_Other_Way.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_A_Reformed_Union"
+		texturefile = "gfx/interface/goals/USA/A_Reformed_Union.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_The_Price_of_Peace"
+		texturefile = "gfx/interface/goals/USA/The Price of Peace.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_The_Pan_American_Union"
+		texturefile = "gfx/interface/goals/USA/The_Pan_American_Union.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Courting_Mexico_City"
+		texturefile = "gfx/interface/goals/USA/Courting_Mexico_City.dds"
+	}
+		
+
+
+		
+
+	####Canada#####
+
+	
+
+	SpriteType = {
+		name = "GFX_Conscript_the_Resettled"
+		texturefile = "gfx/interface/goals/Canada/Conscript_the_Resettled.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_the_second_armada"
+		texturefile = "gfx/interface/goals/Canada/the_second_armada.dds"
+	}
+	
+
+	SpriteType = {
+		name = "GFX_rebuild_the_armada"
+		texturefile = "gfx/interface/goals/Canada/rebuild_the_armada.dds"
+	}
+
+	
+	
+	SpriteType = {
+		name = "GFX_learn_from_the_wreckage"
+		texturefile = "gfx/interface/goals/Canada/learn_from_the_wreckage.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_boris_inherits_the_future"
+		texturefile = "gfx/interface/goals/Canada/boris_inherits_the_future.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_black_renewed_mandate"
+		texturefile = "gfx/interface/goals/Canada/black_renewed_mandate.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_canada_before_reclamation"
+		texturefile = "gfx/interface/goals/Canada/canada_before_reclamation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_seek_a_new_mandate"
+		texturefile = "gfx/interface/goals/Canada/seek_a_new_mandate.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_canada_before_reclamation"
+		texturefile = "gfx/interface/goals/Canada/canada_before_reclamation.dds"
+	}
+
+	
+	SpriteType = {
+		name = "GFX_publish_the_halifax_report"
+		texturefile = "gfx/interface/goals/Canada/publish_the_halifax_report.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_the_halifax_commission"
+		texturefile = "gfx/interface/goals/Canada/the_halifax_commission.dds"
+	}
+	
+	
+	SpriteType = {
+		name = "GFX_mogg_refuses_defeat"
+		texturefile = "gfx/interface/goals/Canada/mogg_refuses_defeat.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_black_faces_the_house"
+		texturefile = "gfx/interface/goals/Canada/black_faces_the_house.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_the_atlantic_reckoning"
+		texturefile = "gfx/interface/goals/Canada/the_atlantic_reckoning.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Prepare_for_Elections_Mogg"
+		texturefile = "gfx/interface/goals/Canada/Prepare_for_Elections_Mogg.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_The_Exiles_Mark_Their_Return"
+		texturefile = "gfx/interface/goals/Canada/The_Exiles_Mark_Their_Return.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_summon_the_Entente_Cohorts"
+		texturefile = "gfx/interface/goals/Canada/summon_the_Entente_Cohorts.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Secure_the_Newfoundland_Base"
+		texturefile = "gfx/interface/goals/Canada/Secure_the_Newfoundland_Base.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_The_Admiralty_Protocols"
+		texturefile = "gfx/interface/goals/Canada/The_Admiralty_Protocols.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_Commission_the_Exiled_Officers"
+		texturefile = "gfx/interface/goals/Canada/Commission_the_Exiled_Officers.dds"
+	}
+
+	
+	SpriteType = {
+		name = "GFX_The_Halifax_Super_Docks"
+		texturefile = "gfx/interface/goals/Canada/The_Halifax_Super_Docks.dds"
+	}
+
+	
+	SpriteType = {
+		name = "GFX_Suppress_the_Quiet_Liberals"
+		texturefile = "gfx/interface/goals/Canada/Suppress_the_Quiet_Liberals.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Draft_the_Liberation_Army"
+		texturefile = "gfx/interface/goals/Canada/Draft_the_Liberation_Army.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_Press_Gang_the_Merchantry"
+		texturefile = "gfx/interface/goals/Canada/Press_Gang_the_Merchantry.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_The_Blue_Water_Mandate"
+		texturefile = "gfx/interface/goals/Canada/The_Blue_Water_Mandate.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Requisition_the_Exile_Wealth"
+		texturefile = "gfx/interface/goals/Canada/Requisition_the_Exile_Wealth.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_The_Fortress_of_the_North"
+		texturefile = "gfx/interface/goals/Canada/The_Fortress_of_the_North.dds"
+	}
+	
+	
+	SpriteType = {
+		name = "GFX_Indigenous_Consultation"
+		texturefile = "gfx/interface/goals/Canada/Indigenous_Consultation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Protect_the_Border_Pipelines"
+		texturefile = "gfx/interface/goals/Canada/Protect_the_Border_Pipelines.dds"
+	}	
+
+
+	SpriteType = {
+		name = "GFX_Manage_the_Bernier_Problem"
+		texturefile = "gfx/interface/goals/Canada/Manage_the_Bernier_Problem.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_Prepare_for_Elections_Black"
+		texturefile = "gfx/interface/goals/Canada/Prepare_for_Elections_Black.dds"
+	}
+
+	SpriteType = {
+				name = "GFX_Reorganize_the_Entente"
+				texturefile = "gfx/interface/goals/Canada/Reorganize_the_Entente.dds"
+			}
+
+	SpriteType = {
+				name = "GFX_conscript_the_national_guard"
+				texturefile = "gfx/interface/goals/Canada/conscript_the_national_guard.dds"
+			}
+
+	SpriteType = {
+				name = "GFX_The_Great_Lakes_Flotilla"
+				texturefile = "gfx/interface/goals/Canada/The_Great_Lakes_Flotilla.dds"
+			}	
+
+		SpriteType = {
+			name = "GFX_The_Great_Lakes_Flotilla"
+			texturefile = "gfx/interface/goals/Canada/The_Great_Lakes_Flotilla.dds"
+		}	
+
+		SpriteType = {
+			name = "GFX_The_Northern_Shield"
+			texturefile = "gfx/interface/goals/Canada/The_Northern_Shield.dds"			
+		}
+
+		SpriteType = {
+			name = "GFX_goal_Protect_the_Border_Pipelines"
+			texturefile = "gfx/interface/goals/Canada/Protect_the_Border_Pipelines.dds"			
+		}	
+
+	SpriteType = {
+		name = "GFX_goal_The_Imperial_Defense_Appropriations_Act"
+		texturefile = "gfx/interface/goals/Canada/The_Imperial_Defense_Appropriations_Act.dds"			
+	}	
+
+
+	SpriteType = {
+		name = "GFX_goal_settle_the_timber_rights"
+		texturefile = "gfx/interface/goals/Canada/settle_the_timber_rights.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_settle_the_steel_quotas"
+		texturefile = "gfx/interface/goals/Canada/settle_the_steel_quotas.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_the_great_compromise_of_26"
+		texturefile = "gfx/interface/goals/Canada/the_great_compromise_of_26.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_black_plan"
+		texturefile = "gfx/interface/goals/Canada/black_plan.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_the_mogg_plan"
+		texturefile = "gfx/interface/goals/Canada/The_mogg_plan.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_st_lawrence_shield"
+		texturefile = "gfx/interface/goals/Canada/st_lawrence_shield.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_subsidize_the_laurentian_mills"
+		texturefile = "gfx/interface/goals/Canada/subsidize_the_laurentian_mills.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_keep_exiles_in_check"
+		texturefile = "gfx/interface/goals/Canada/keep_exiles_in_check.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_canadian_patents_first"
+		texturefile = "gfx/interface/goals/Canada/canadian_patents_first.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_settle_the_prairie_wheat"
+		texturefile = "gfx/interface/goals/Canada/settle_the_prairie_wheat.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_laurentian_steel_mills"
+		texturefile = "gfx/interface/goals/Canada/laurentain_steel_mills.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_canadian_autarky"
+		texturefile = "gfx/interface/goals/Canada/Canadian_autarky.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_alberta_energy_independence"
+		texturefile = "gfx/interface/goals/Canada/alberta_energy_independence.dds"			
+	}	
+
+	SpriteType = {
+		name = "GFX_goal_reform_the_officer_corps"
+		texturefile = "gfx/interface/goals/Canada/reform_the_officer_corps.dds"			
+	}	
+
+	##Generic##
+
+	SpriteType = {
+		name = "GFX_goal_continuous_air_production"
+		texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}	
+	SpriteType = {
+		name = "GFX_goal_eng_lifeline_snaps"
+		texturefile = "gfx/interface/goals/britain/lifeline_snaps.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_ration_north_sea_fuel"
+		texturefile = "gfx/interface/goals/britain/Ration_North_Sea_Fuel.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_seize_the_dockyards"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_muzzle_the_trade_unions"
+		texturefile = "gfx/interface/goals/britain/nuzzle_the_trade_unions.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_tweed_defense_grid"
+		texturefile = "gfx/interface/goals/britain/tweed_defence_grid.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_emergency_conscription"
+		texturefile = "gfx/interface/goals/britain/emergency_conscription.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_garrison_the_lowlands"
+		texturefile = "gfx/interface/goals/britain/garrison_the_lowlands.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_1999_constitution"
+		texturefile = "gfx/interface/goals/britain/1999_constitution.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_winter_of_discontent_25"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_starmer_holds"
+		texturefile = "gfx/interface/goals/britain/starmer_holds.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_reform_attempt"
+		texturefile = "gfx/interface/goals/britain/reform_attempt.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_garrison_state"
+		texturefile = "gfx/interface/goals/britain/garrison_state.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_military_intervention"
+		texturefile = "gfx/interface/goals/britain/military_intervention.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_establish_the_committee_of_public_security"
+		texturefile = "gfx/interface/goals/britain/Establish_the_Committee_of_Public_Security.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_the_enemy_within_the_walls"
+		texturefile = "gfx/interface/goals/britain/the_enemy_within_the_walls.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_the_london_show_trials"
+		texturefile = "gfx/interface/goals/britain/London_show_trials.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_seize_the_dockyards"
+		texturefile = "gfx/interface/goals/britain/seize_the_docklands.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_winter_of_discontent_25"
+		texturefile = "gfx/interface/goals/britain/winter_of_discontent_25.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_radio_free_whitehall"
+		texturefile = "gfx/interface/goals/britain/radio_free_whitehall.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_scottish_pacification"
+		texturefile = "gfx/interface/goals/britain/scottish_pacification.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_dismantle_the_edinburgh_soviet"
+		texturefile = "gfx/interface/goals/britain/dismantle_the_edinburgh_soviet.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_highland_reeducation"
+		texturefile = "gfx/interface/goals/britain/highland_reducation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_no_step_backwards_in_britain"
+		texturefile = "gfx/interface/goals/britain/no_step_backwards_in_britain.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_shells_for_the_static_front"
+		texturefile = "gfx/interface/goals/britain/shells_for_the_static_front.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_iron_line_on_the_tweed"
+		texturefile = "gfx/interface/goals/britain/iron_line_on_The_tweed.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_the_sappers_mandate"
+		texturefile = "gfx/interface/goals/britain/the_sappers_mandate.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_project_caelus"
+		texturefile = "gfx/interface/goals/britain/Project_Caelus.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_weaponize_the_rations"
+		texturefile = "gfx/interface/goals/britain/weaponise_the_rations.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_requisition_the_welsh_valleys"
+		texturefile = "gfx/interface/goals/britain/requistition_the_welsh_valleys.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_crush_the_plaid_insurgency"
+		texturefile = "gfx/interface/goals/britain/crush_the_plaid_insurgency.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_the_rural_collectivisation"
+		texturefile = "gfx/interface/goals/britain/The_Rural_Collectivisation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_the_dragon_awakens"
+		texturefile = "gfx/interface/goals/britain/the_dragon_awakens.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_liquidate_the_modernizers"
+		texturefile = "gfx/interface/goals/britain/liquidate_the_modernizers.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_purge_the_high_command"
+		texturefile = "gfx/interface/goals/britain/purge_the_high_command.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_restore_the_greater_map"
+		texturefile = "gfx/interface/goals/britain/restore_the_greater_map.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_conquest_of_cardiff"
+		texturefile = "gfx/interface/goals/britain/the_conquest_of_cardiff.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_welsh_bread_basket_secure"
+		texturefile = "gfx/interface/goals/britain/The_Welsh_Bread_Basket_Secure.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_sights_on_the_tweed"
+		texturefile = "gfx/interface/goals/britain/sights_on_the_tweed.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_enforce_the_republic_line"
+		texturefile = "gfx/interface/goals/britain/enforce_the_republican_line.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_belfast_amphibious_assault"
+		texturefile = "gfx/interface/goals/britain/the_belfast_amphbious_assault.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_irish_conquest_campaign"
+		texturefile = "gfx/interface/goals/britain/the_irish_conquest_campaign.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_ignore_the_southern_isolation"
+		texturefile = "gfx/interface/goals/britain/ignore_the_southern_isolation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_eng_ulster_ultimatum"
+		texturefile = "gfx/interface/goals/britain/ulster_ultimatum.dds"
+	}
+	
+
+
+
+
+}

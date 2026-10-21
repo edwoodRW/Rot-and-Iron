@@ -1,0 +1,10 @@
+﻿l_english:
+ rot_intro.close:0 "Begin"
+ rot_intro.generic.t:0 "World Situation Briefing"
+ rot_intro.ENG.t:0 "United Kingdom Briefing"
+ rot_intro.SCO.t:0 "Scotland Briefing"
+ rot_intro.USA.t:0 "United States Briefing"
+ rot_intro.GER.t:0 "Germany Briefing"
+ rot_intro.FRA.t:0 "France Briefing"
+ rot_intro.SOV.t:0 "Russia Briefing"
+ rot_intro.CAN.t:0 "Canada Briefing"

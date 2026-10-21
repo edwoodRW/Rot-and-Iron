@@ -1,0 +1,45 @@
+ideas = {
+	country = {
+		frozen_continent = {
+			picture = GFX_idea_frozen_continent
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 2
+				drift_defence_factor = 1.0
+				enemy_justify_war_goal_time = 100.0
+				production_speed_buildings_factor = -1.0
+				conscription_factor = -1.0
+				MONTHLY_POPULATION = -1.0
+				local_resources_factor = -1.0
+				consumer_goods_factor = 1.0
+				join_faction_tension = 1.0
+				ai_get_ally_desire_factor = -2.0
+				ai_focus_peaceful_factor = 2.0
+				ai_desired_divisions_factor = -2.0
+			}
+		}
+	}
+
+	political_advisor = {
+	}
+	theorist = {
+	}
+	high_command = {
+	}
+	army_chief = {
+	}
+	air_chief = {
+	}
+	navy_chief = {
+	}
+}

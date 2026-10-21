@@ -1,0 +1,36 @@
+opinion_modifiers = {
+	GER_quiet_feelers = {
+		value = 15
+		months = 36
+	}
+
+	GER_french_overture = {
+		value = 15
+		months = 36
+	}
+
+	GER_diplomatic_pressure = {
+		value = 10
+		months = 36
+	}
+
+	GER_biscay_tension = {
+		value = -20
+		months = 36
+	}
+
+	GER_med_pressure = {
+		value = -15
+		months = 36
+	}
+
+	GER_recognition_bonus = {
+		value = 35
+		months = 48
+	}
+
+	GER_edinburgh_pact_anger = {
+		value = -35
+		months = 48
+	}
+}

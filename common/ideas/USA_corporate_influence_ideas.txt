@@ -1,0 +1,38 @@
+ideas = {
+	country = {
+
+		USA_influence_mild_lobbying = {
+			picture = GFX_unkown
+			allowed = { tag = USA }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				stability_factor = -0.02
+			}
+		}
+
+		USA_influence_entrenched_networks = {
+			picture = GFX_unkown
+			allowed = { tag = USA }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.10
+			}
+		}
+
+		USA_influence_shadow_government = {
+			picture = GFX_unkown
+			allowed = { tag = USA }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.25
+				war_support_factor = -0.05
+			}
+		}
+
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=1087
+	name="STATE_793" # Queen Maud Land
+	manpower = 0
+	
+	state_category = wasteland
+	
+	impassable = yes
+
+	history={
+		owner = ANT
+		buildings = {
+			infrastructure = 0
+		}
+		
+		1939.01.14 = {
+			add_claim_by = NOR
+		}
+	}
+
+	provinces={
+		13836 13837 13838 13839 13840 13841 13842
+	}
+}

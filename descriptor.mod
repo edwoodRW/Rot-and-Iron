@@ -1,0 +1,15 @@
+version="1"
+tags={
+	"Alternative History"
+}
+replace_path="events"
+replace_path="common/on_actions"
+replace_path="common/characters"
+replace_path="common/countries"
+replace_path="history/states"
+replace_path="history/countries"
+replace_path="history/units"
+replace_path="history/general"
+replace_path="common/bookmarks"
+name="Rot and Iron"
+supported_version="1.19.*"

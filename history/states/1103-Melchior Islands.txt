@@ -1,0 +1,24 @@
+state={
+	id=1103
+	name="STATE_809" # Melchior Islands
+	manpower = 0
+	
+	state_category = wasteland
+
+	history={
+		owner = ANT
+		victory_points = {
+			13668 1
+		}
+		buildings = {
+			13668 = {
+				naval_base = 1
+			}
+			infrastructure = 0
+		}
+	}
+
+	provinces={
+		13864
+	}
+}

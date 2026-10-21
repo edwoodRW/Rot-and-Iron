@@ -1,0 +1,24 @@
+state={
+	id=1106
+	name="STATE_812" # Cape Legoupil
+	manpower = 0
+	
+	state_category = wasteland
+
+	history={
+		owner = ANT
+		victory_points = {
+			13671 1
+		}
+		buildings = {
+			13671 = {
+				naval_base = 1
+			}
+			infrastructure = 0
+		}
+	}
+
+	provinces={
+		13867
+	}
+}

@@ -1,0 +1,19 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ITA_country_splash_picture"
+		texturefile = "gfx/interface/country_splash/ITA_country_splash_picture.png"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_ENG_country_splash_picture"
+		texturefile = "gfx/interface/country_splash/ENG_country_splash_picture.png"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_USA_country_splash_picture"
+		texturefile = "gfx/interface/country_splash/USA_country_splash_picture.png"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}

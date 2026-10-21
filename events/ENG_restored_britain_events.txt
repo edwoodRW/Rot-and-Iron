@@ -1,0 +1,150 @@
+add_namespace = ENG_restored
+
+country_event = {
+	id = ENG_restored.1
+	title = ENG_restored.1.t
+	desc = ENG_restored.1.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_restored.1.a
+		add_stability = 0.03
+		add_popularity = { ideology = monarchist popularity = 0.10 }
+	}
+}
+
+country_event = {
+	id = ENG_restored.2
+	title = ENG_restored.2.t
+	desc = ENG_restored.2.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_restored.2.a
+		add_stability = 0.05
+		add_popularity = { ideology = new_democrat popularity = 0.10 }
+	}
+}
+
+country_event = {
+	id = ENG_restored.3
+	title = ENG_restored.3.t
+	desc = ENG_restored.3.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_restored.3.a
+		add_stability = 0.03
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = ENG_restored.4
+	title = ENG_restored.4.t
+	desc = ENG_restored.4.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_restored.4.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = ENG_restored.5
+	title = ENG_restored.5.t
+	desc = ENG_restored.5.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_restored.5.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = ENG_restored.6
+	title = ENG_restored.6.t
+	desc = ENG_restored.6.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_restored.6.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = ENG_restored.7
+	title = ENG_restored.7.t
+	desc = ENG_restored.7.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_restored.7.a
+		add_stability = 0.03
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = ENG_restored.8
+	title = ENG_restored.8.t
+	desc = ENG_restored.8.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_restored.8.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = ENG_restored.9
+	title = ENG_restored.9.t
+	desc = ENG_restored.9.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_restored.9.a
+		set_country_flag = SCO_federal_union_accepted
+		ENG = { set_country_flag = ENG_scottish_federal_union_accepted }
+		ai_chance = { factor = 45 }
+	}
+	option = {
+		name = ENG_restored.9.b
+		set_country_flag = SCO_federal_union_rejected
+		ENG = { set_country_flag = ENG_scottish_federal_union_rejected }
+		ai_chance = { factor = 55 }
+	}
+}
+
+country_event = {
+	id = ENG_restored.10
+	title = ENG_restored.10.t
+	desc = ENG_restored.10.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		annex_country = {
+			target = SCO
+			transfer_troops = yes
+		}
+		set_country_flag = ENG_federal_union_ratified
+	}
+	option = {
+		name = ENG_restored.10.a
+		add_stability = 0.05
+	}
+}

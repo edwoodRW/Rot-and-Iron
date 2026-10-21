@@ -1,0 +1,502 @@
+###########################################################
+# Rot and Iron - Restored Britain Focus Tree
+###########################################################
+
+focus_tree = {
+	id = ENG_restored_britain_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+continuous_focus_position = { x = 150 y = 1500 }
+	default = no
+
+	focus = {
+		id = ENG_a_country_returned
+		icon = GFX_unkown
+		name = "ENG_a_country_returned"
+		text = "ENG_a_country_returned_tt"
+
+		x = 0
+		y = 0
+		cost = 35
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.03
+			set_country_flag = ENG_post_liberation_reconstruction_begun
+		}
+	}
+
+	focus = {
+		id = ENG_reopen_whitehall
+		icon = GFX_unkown
+		name = "ENG_reopen_whitehall"
+		text = "ENG_reopen_whitehall_tt"
+
+		prerequisite = { focus = ENG_a_country_returned }
+
+		x = 0
+		y = 1
+		relative_position_id = ENG_a_country_returned
+		cost = 49
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			set_country_flag = ENG_whitehall_reopened
+		}
+	}
+
+	focus = {
+		id = ENG_the_constitutional_question
+		icon = GFX_unkown
+		name = "ENG_the_constitutional_question"
+		text = "ENG_the_constitutional_question_tt"
+
+		prerequisite = { focus = ENG_reopen_whitehall }
+
+		x = 0
+		y = 1
+		relative_position_id = ENG_reopen_whitehall
+		cost = 35
+
+		completion_reward = {
+			add_political_power = 25
+			set_country_flag = ENG_constitutional_settlement_begun
+		}
+	}
+
+	focus = {
+		id = ENG_the_crown_returns
+		icon = GFX_unkown
+		name = "ENG_the_crown_returns"
+		text = "ENG_the_crown_returns_tt"
+
+		prerequisite = { focus = ENG_the_constitutional_question }
+		mutually_exclusive = {
+			focus = ENG_the_peoples_constitution
+			focus = ENG_the_london_compact
+		}
+
+		available = {
+			CAN = { has_country_flag = CAN_mogg_governs_britain }
+		}
+
+		x = -3
+		y = 1
+		relative_position_id = ENG_the_constitutional_question
+		cost = 70
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			set_country_flag = ENG_crown_restored
+			country_event = { id = ENG_restored.1 days = 1 }
+		}
+	}
+
+	focus = {
+		id = ENG_the_peoples_constitution
+		icon = GFX_unkown
+		name = "ENG_the_peoples_constitution"
+		text = "ENG_the_peoples_constitution_tt"
+
+		prerequisite = { focus = ENG_the_constitutional_question }
+		mutually_exclusive = {
+			focus = ENG_the_crown_returns
+			focus = ENG_the_london_compact
+		}
+
+		available = {
+			CAN = { has_country_flag = CAN_british_elections_called }
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = ENG_the_constitutional_question
+		cost = 70
+
+		completion_reward = {
+			add_stability = 0.08
+			add_political_power = 75
+			set_country_flag = ENG_democratic_constitution_adopted
+			country_event = { id = ENG_restored.2 days = 1 }
+		}
+	}
+
+	focus = {
+		id = ENG_the_london_compact
+		icon = GFX_unkown
+		name = "ENG_the_london_compact"
+		text = "ENG_the_london_compact_tt"
+
+		prerequisite = { focus = ENG_the_constitutional_question }
+		mutually_exclusive = {
+			focus = ENG_the_crown_returns
+			focus = ENG_the_peoples_constitution
+		}
+
+		available = {
+			CAN = { has_country_flag = CAN_canada_administers_britain }
+		}
+
+		x = 3
+		y = 1
+		relative_position_id = ENG_the_constitutional_question
+		cost = 70
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			set_country_flag = ENG_transitional_compact_signed
+			country_event = { id = ENG_restored.3 days = 1 }
+		}
+	}
+
+	focus = {
+		id = ENG_rebuild_the_island
+		icon = GFX_unkown
+		name = "ENG_rebuild_the_island"
+		text = "ENG_rebuild_the_island_tt"
+
+		prerequisite = {
+			focus = ENG_the_crown_returns
+			focus = ENG_the_peoples_constitution
+			focus = ENG_the_london_compact
+		}
+
+		x = 0
+		y = 2
+		relative_position_id = ENG_the_constitutional_question
+		cost = 70
+
+		completion_reward = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = no
+			}
+			add_stability = 0.05
+			set_country_flag = ENG_reconstruction_programme_active
+		}
+	}
+
+	focus = {
+		id = ENG_a_union_of_equals
+		icon = GFX_unkown
+		name = "ENG_a_union_of_equals"
+		text = "ENG_a_union_of_equals_tt"
+
+		prerequisite = { focus = ENG_rebuild_the_island }
+
+		available = {
+			has_country_flag = ENG_new_union_restored
+		}
+
+		x = -2
+		y = 1
+		relative_position_id = ENG_rebuild_the_island
+		cost = 56
+
+		completion_reward = {
+			add_stability = 0.08
+			add_political_power = 75
+			set_country_flag = ENG_union_of_equals_implemented
+			country_event = { id = ENG_restored.4 days = 1 }
+		}
+	}
+
+	focus = {
+		id = ENG_the_kings_peace
+		icon = GFX_unkown
+		name = "ENG_the_kings_peace"
+		text = "ENG_the_kings_peace_tt"
+
+		prerequisite = { focus = ENG_rebuild_the_island }
+		mutually_exclusive = {
+			focus = ENG_a_republic_rebuilt
+			focus = ENG_end_the_canadian_mission
+		}
+
+		available = {
+			has_country_flag = ENG_crown_restored
+		}
+
+		x = -4
+		y = 1
+		relative_position_id = ENG_rebuild_the_island
+		cost = 70
+
+		completion_reward = {
+			add_stability = 0.08
+			add_war_support = 0.03
+			set_country_flag = ENG_crown_settlement_consolidated
+			country_event = { id = ENG_restored.6 days = 1 }
+		}
+	}
+
+	###################################################
+	# RECONSTRUCTION AND THE SCOTTISH SETTLEMENT
+	###################################################
+
+	focus = {
+		id = ENG_homes_for_the_returning
+		icon = GFX_unkown
+		name = "ENG_homes_for_the_returning"
+		text = "ENG_homes_for_the_returning_tt"
+
+		prerequisite = { focus = ENG_rebuild_the_island }
+
+		x = -6
+		y = 1
+		relative_position_id = ENG_rebuild_the_island
+		cost = 56
+
+		completion_reward = {
+			add_stability = 0.05
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = no
+			}
+			set_country_flag = ENG_housing_reconstruction_begun
+		}
+	}
+
+	focus = {
+		id = ENG_restore_the_railways
+		icon = GFX_unkown
+		name = "ENG_restore_the_railways"
+		text = "ENG_restore_the_railways_tt"
+
+		prerequisite = { focus = ENG_rebuild_the_island }
+
+		x = -8
+		y = 1
+		relative_position_id = ENG_rebuild_the_island
+		cost = 56
+
+		completion_reward = {
+			add_stability = 0.03
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = no
+			}
+			set_country_flag = ENG_rail_reconstruction_begun
+		}
+	}
+
+	focus = {
+		id = ENG_reopen_the_yards
+		icon = GFX_unkown
+		name = "ENG_reopen_the_yards"
+		text = "ENG_reopen_the_yards_tt"
+
+		prerequisite = { focus = ENG_rebuild_the_island }
+
+		x = 2
+		y = 1
+		relative_position_id = ENG_rebuild_the_island
+		cost = 56
+
+		completion_reward = {
+			add_political_power = 50
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = no
+			}
+			set_country_flag = ENG_industrial_reconstruction_begun
+		}
+	}
+
+	focus = {
+		id = ENG_the_reconstruction_settlement
+		icon = GFX_unkown
+		name = "ENG_the_reconstruction_settlement"
+		text = "ENG_the_reconstruction_settlement_tt"
+
+		prerequisite = {
+			focus = ENG_homes_for_the_returning
+			focus = ENG_restore_the_railways
+			focus = ENG_reopen_the_yards
+		}
+
+		x = 0
+		y = 3
+		relative_position_id = ENG_rebuild_the_island
+		cost = 70
+
+		completion_reward = {
+			add_stability = 0.08
+			add_political_power = 75
+			set_country_flag = ENG_reconstruction_settlement_complete
+		}
+	}
+
+	focus = {
+		id = ENG_offer_a_federal_union
+		icon = GFX_unkown
+		name = "ENG_offer_a_federal_union"
+		text = "ENG_offer_a_federal_union_tt"
+
+		prerequisite = { focus = ENG_the_reconstruction_settlement }
+		mutually_exclusive = { focus = ENG_demand_scottish_return }
+
+		available = {
+			SCO = { exists = yes }
+		}
+
+		x = -2
+		y = 1
+		relative_position_id = ENG_the_reconstruction_settlement
+		cost = 56
+
+		completion_reward = {
+			add_political_power = -50
+			set_country_flag = ENG_scottish_federal_union_offered
+			SCO = { country_event = { id = ENG_restored.9 days = 1 } }
+		}
+	}
+
+	focus = {
+		id = ENG_ratify_the_federal_union
+		icon = GFX_unkown
+		name = "ENG_ratify_the_federal_union"
+		text = "ENG_ratify_the_federal_union_tt"
+
+		prerequisite = { focus = ENG_offer_a_federal_union }
+
+		available = {
+			has_country_flag = ENG_scottish_federal_union_accepted
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = ENG_offer_a_federal_union
+		cost = 35
+
+		completion_reward = {
+			country_event = { id = ENG_restored.10 days = 1 }
+		}
+	}
+
+	focus = {
+		id = ENG_demand_scottish_return
+		icon = GFX_unkown
+		name = "ENG_demand_scottish_return"
+		text = "ENG_demand_scottish_return_tt"
+
+		prerequisite = { focus = ENG_the_reconstruction_settlement }
+		mutually_exclusive = { focus = ENG_offer_a_federal_union }
+
+		available = {
+			has_country_flag = ENG_crown_restored
+			SCO = { exists = yes }
+		}
+
+		x = 2
+		y = 1
+		relative_position_id = ENG_the_reconstruction_settlement
+		cost = 56
+
+		completion_reward = {
+			add_war_support = 0.05
+			set_country_flag = ENG_scottish_ultimatum_issued
+			create_wargoal = {
+				type = annex_everything
+				target = SCO
+				generator = { 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_a_republic_rebuilt
+		icon = GFX_unkown
+		name = "ENG_a_republic_rebuilt"
+		text = "ENG_a_republic_rebuilt_tt"
+
+		prerequisite = { focus = ENG_rebuild_the_island }
+		mutually_exclusive = {
+			focus = ENG_the_kings_peace
+			focus = ENG_end_the_canadian_mission
+		}
+
+		available = {
+			has_country_flag = ENG_democratic_constitution_adopted
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = ENG_rebuild_the_island
+		cost = 70
+
+		completion_reward = {
+			add_stability = 0.08
+			add_political_power = 100
+			set_country_flag = ENG_democratic_settlement_consolidated
+			country_event = { id = ENG_restored.7 days = 1 }
+		}
+	}
+
+	focus = {
+		id = ENG_end_the_canadian_mission
+		icon = GFX_unkown
+		name = "ENG_end_the_canadian_mission"
+		text = "ENG_end_the_canadian_mission_tt"
+
+		prerequisite = { focus = ENG_rebuild_the_island }
+		mutually_exclusive = {
+			focus = ENG_the_kings_peace
+			focus = ENG_a_republic_rebuilt
+		}
+
+		available = {
+			has_country_flag = ENG_transitional_compact_signed
+		}
+
+		x = 4
+		y = 1
+		relative_position_id = ENG_rebuild_the_island
+		cost = 70
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
+			set_country_flag = ENG_canadian_mission_ended
+			country_event = { id = ENG_restored.8 days = 1 }
+		}
+	}
+
+	focus = {
+		id = ENG_two_nations_one_island
+		icon = GFX_unkown
+		name = "ENG_two_nations_one_island"
+		text = "ENG_two_nations_one_island_tt"
+
+		prerequisite = { focus = ENG_rebuild_the_island }
+
+		available = {
+			SCO = { exists = yes }
+		}
+
+		x = 6
+		y = 1
+		relative_position_id = ENG_rebuild_the_island
+		cost = 56
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 50
+			set_country_flag = ENG_scottish_treaty_pursued
+			country_event = { id = ENG_restored.5 days = 1 }
+		}
+	}
+}

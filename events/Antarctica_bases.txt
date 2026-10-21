@@ -1,0 +1,189 @@
+###########################
+# Antarctica Research Base Events
+###########################
+
+add_namespace = antbase
+
+# Little America and Orcadas already established in 1936
+
+# East Base
+country_event = {
+	id = antbase.1
+	title = antbase.1.t
+	desc = antbase.1.d
+	picture = GFX_report_event_usa_east_base
+
+	is_triggered_only = yes
+	
+	option = { # Set up the base
+		name = antbase.1.a
+	}
+}
+
+# Station A / Station B
+country_event = {
+	id = antbase.2
+	title = antbase.2.t # Operation Tabarin
+	desc = antbase.2.d
+	picture = GFX_report_event_eng_station_a
+	
+	is_triggered_only = yes
+	
+	option = { # Set up the bases
+		name = antbase.2.a
+	}
+}
+
+# Station D
+country_event = {
+	id = antbase.3
+	title = antbase.3.t
+	desc = antbase.3.d
+	picture = GFX_report_event_eng_station_d
+
+	is_triggered_only = yes
+	
+	option = { # Set up the base
+		name = antbase.3.a
+	}
+}
+
+# Base Arturio Prat
+country_event = {
+	id = antbase.4
+	title = antbase.4.t
+	desc = antbase.4.d
+	picture = GFX_report_event_chl_arturo_prat
+
+	is_triggered_only = yes
+	
+	option = { # Set up the base
+		name = antbase.4.a
+	}
+}
+
+# Melchior Base
+country_event = {
+	id = antbase.5
+	title = antbase.5.t
+	desc = antbase.5.d
+	picture = GFX_report_event_arg_melchior_base
+
+	is_triggered_only = yes
+	
+	option = { # Set up the base
+		name = antbase.5.a
+	}
+}
+
+# Station F / Station G
+country_event = {
+	id = antbase.6
+	title = antbase.6.t
+	desc = antbase.6.d
+	picture = GFX_report_event_eng_station_g
+
+	is_triggered_only = yes
+	
+	option = { # Set up the bases
+		name = antbase.6.a
+	}
+}
+
+# O'Higgins Station
+country_event = {
+	id = antbase.7
+	title = antbase.7.t
+	desc = antbase.7.d
+	picture = GFX_report_event_chl_ohiggins_base
+
+	is_triggered_only = yes
+	
+	option = { # Set up the bases
+		name = antbase.7.a
+	}
+}
+
+# Maudheim
+country_event = {
+	id = antbase.8
+	title = antbase.8.t
+	desc = antbase.8.d
+	picture = GFX_report_event_nor_maudheim
+
+	is_triggered_only = yes
+	
+	option = { # Set up the base
+		name = antbase.8.a
+	}
+}
+
+# Port Martin
+country_event = {
+	id = antbase.9
+	title = antbase.9.t
+	desc = antbase.9.d
+	picture = GFX_report_event_fra_port_martin
+
+	is_triggered_only = yes
+	
+	option = { # Set up the base
+		name = antbase.9.a
+	}
+}
+
+# Station E
+country_event = {
+	id = antbase.10
+	title = antbase.10.t
+	desc = antbase.10.d
+	picture = GFX_report_event_eng_station_e
+
+	is_triggered_only = yes
+	
+	option = { # Set up the base
+		name = antbase.10.a
+	}
+}
+
+# Deception Base
+country_event = {
+	id = antbase.11
+	title = antbase.11.t
+	desc = antbase.11.d
+	picture = GFX_report_event_arg_deception_station
+	
+	is_triggered_only = yes
+	
+	option = { # Set up the base
+		name = antbase.11.a
+	}
+}
+
+# Hitler Station
+country_event = {
+	id = antbase.12
+	title = antbase.12.t
+	desc = antbase.12.d
+	picture = GFX_report_event_ger_hitler_station
+	
+	is_triggered_only = yes
+	
+	option = { # Set up the base
+		name = antbase.12.a
+	}
+}
+
+# Station H
+country_event = {
+	id = antbase.13
+	title = antbase.13.t
+	desc = antbase.13.d
+	picture = GFX_report_event_eng_signy_station
+
+	is_triggered_only = yes
+	
+	option = { # Set up the base
+		name = antbase.13.a
+	}
+}

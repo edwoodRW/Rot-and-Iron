@@ -1,0 +1,604 @@
+add_namespace = CAN_coalition
+add_namespace = CAN_saganash
+add_namespace = CAN_election
+add_namespace = CAN_blackslastact
+add_namespace = USA_reactions
+add_namespace = ENG_reactions
+add_namespace = GER_reactions
+add_namespace = ENG_liberation
+
+country_event = {
+	id = CAN_coalition.irp_warning
+	title = CAN_coalition.irp_warning.t
+	desc = CAN_coalition.irp_warning.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_coalition.irp_warning.a
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = CAN_coalition.mogg_dominant
+	title = CAN_coalition.mogg_dominant.t
+	desc = CAN_coalition.mogg_dominant.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_coalition.mogg_dominant.a
+		add_war_support = 0.03
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = CAN_coalition.boris_restless
+	title = CAN_coalition.boris_restless.t
+	desc = CAN_coalition.boris_restless.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_coalition.boris_restless.a
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = CAN_coalition.authority_crisis
+	title = CAN_coalition.authority_crisis.t
+	desc = CAN_coalition.authority_crisis.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_coalition.authority_crisis.a
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = CAN_coalition.wobbling
+	title = CAN_coalition.wobbling.t
+	desc = CAN_coalition.wobbling.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_coalition.wobbling.a
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = CAN_saganash.1
+	title = CAN_saganash.1.t
+	desc = CAN_saganash.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_saganash.1.a
+		add_ideas = CAN_saganash_cabinet_idea
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+    id = CAN_election.1
+    title = CAN_election.1.t
+    desc = CAN_election.1.d
+    picture = GFX_report_event_CAN_parliament_office
+    
+    is_triggered_only = yes
+
+    # Carney / Continentalists Victory
+    option = {
+        name = CAN_election.1.a
+        retire_country_leader = yes
+        create_country_leader = {
+            name = "Mark Carney"
+            picture = "Mark_Carney.dds"
+            ideology = social_liberal
+            traits = { }
+        }
+		set_politics = {
+			ruling_party = liberal
+		}
+		country_event = {
+			id = CAN_carney_aftermath.1
+			days = 2
+		}
+    }
+
+    # Angus / CCF Victory
+    option = {
+        name = CAN_election.1.b
+        retire_country_leader = yes
+        create_country_leader = {
+            name = "Charlie Angus"
+            picture = "Charlie_Angus.dds"
+            ideology = social_democracy
+            traits = { }
+        }
+		set_politics = {
+			ruling_party = new_democrat
+		}
+		country_event = {
+			id = CAN_angus_aftermath.1
+			days = 2
+		}
+    }
+
+    # Johnson / Tory Victory
+    option = {
+        name = CAN_election.1.c
+        retire_country_leader = yes
+        create_country_leader = {
+            name = "Boris Johnson"
+            picture = "CAN_Boris_Johnson.dds"
+            ideology = canadian_one_nation
+            traits = { }
+        }
+		country_event = {
+			id = CAN_boris_aftermath.1
+			days = 2
+		}
+    }
+}
+
+# =======================================================
+# AFTERMATH EVENTS (Triggers based on winner)
+# =======================================================
+
+# Carney Aftermath
+country_event = {
+    id = CAN_carney_aftermath.1
+    title = CAN_carney_aftermath.1.t
+    desc = CAN_carney_aftermath.1.d
+    picture = GFX_report_event_carney_office
+    is_triggered_only = yes
+
+    option = {
+        name = CAN_carney_aftermath.1.a
+        
+        # Economic bonuses
+		add_ideas = CAN_carney_government
+		add_ideas = CAN_detroit_framework
+        
+        # Political changes
+        add_political_power = 150
+        add_stability = 0.10
+        add_war_support = -0.05
+        
+        # Economic modifiers
+		set_country_flag = CAN_technocratic_government
+        
+        # Relations with USA improve
+        USA = {
+            add_opinion_modifier = {
+                target = CAN
+                modifier = CAN_carney_administration
+            }
+        }
+        
+        # Trigger follow-up economic reform events
+        country_event = {
+            id = CAN_carney_reforms.1
+            days = 7
+        }
+    }
+}
+
+# Angus Aftermath
+country_event = {
+    id = CAN_angus_aftermath.1
+    title = CAN_angus_aftermath.1.t
+    desc = CAN_angus_aftermath.1.d
+    picture = GFX_report_event_strike_rally
+    is_triggered_only = yes
+
+    option = {
+        name = CAN_angus_aftermath.1.a
+        
+        # Remove conscription legislation
+        remove_ideas = CAN_conscription_legislation
+        set_country_flag = CAN_conscription_repealed
+        
+        # CCF government ideas
+		add_ideas = CAN_angus_government
+		add_ideas = CAN_industrial_nationalization
+        
+        # Political changes
+        add_political_power = 150
+        add_stability = 0.15
+        add_war_support = -0.10
+        
+        # Industrial changes
+		set_country_flag = CAN_socialist_government
+        
+        # Worker support increases
+        add_popularity = {
+            ideology = social_democracy
+            popularity = 0.15
+        }
+        
+        # Relations with First Nations improve
+        set_country_flag = CAN_indigenous_consultation_active
+        
+        # Trigger follow-up nationalization events
+        country_event = {
+            id = CAN_angus_reforms.1
+            days = 7
+        }
+    }
+}
+
+# Boris Johnson Aftermath
+country_event = {
+    id = CAN_boris_aftermath.1
+    title = CAN_boris_aftermath.1.t
+    desc = CAN_boris_aftermath.1.d
+    picture = GFX_report_event_boris_press
+    is_triggered_only = yes
+
+    option = {
+        name = CAN_boris_aftermath.1.a
+        
+        # Boris government ideas
+		add_ideas = CAN_boris_government
+		add_ideas = CAN_imperial_ambition
+        
+        # Political changes
+        add_political_power = 150
+        add_stability = 0.05
+        add_war_support = 0.15
+        
+        # Imperial restoration focus
+		set_country_flag = CAN_imperial_government
+        
+        # Relations with USA worsen (more aggressive stance)
+        USA = {
+            add_opinion_modifier = {
+                target = CAN
+                modifier = CAN_boris_administration
+            }
+        }
+        
+        # Relations with UK improve (imperial focus)
+        ENG = {
+            add_opinion_modifier = {
+                target = CAN
+                modifier = CAN_imperial_partner
+            }
+        }
+        
+        # Trigger follow-up infrastructure events
+        country_event = {
+            id = CAN_boris_reforms.1
+            days = 7
+        }
+    }
+}
+
+country_event = {
+	id = CAN_blackslastact.1
+	title = CAN_blackslastact.1.t
+	desc = CAN_blackslastact.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CAN_blackslastact.1.a
+		set_country_flag = CAN_boris_succeeds_black
+		add_stability = 0.05
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Boris Johnson"
+			desc = CAN_boris_desc
+			picture = "CAN_Boris_Johnson.dds"
+			ideology = canadian_one_nation
+			traits = {
+				CAN_exile_who_stayed
+				CAN_one_nation_reformer
+			}
+		}
+	}
+}
+
+country_event = {
+	id = USA_reactions.1
+	title = USA_reactions.1.t
+	desc = USA_reactions.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = USA_reactions.1.a
+		add_opinion_modifier = { target = CAN modifier = CAN_sovereignty_positive }
+	}
+}
+
+country_event = {
+	id = ENG_reactions.1
+	title = ENG_reactions.1.t
+	desc = ENG_reactions.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_reactions.1.a
+		add_opinion_modifier = { target = CAN modifier = CAN_sovereignty_cautious }
+	}
+}
+
+country_event = {
+	id = GER_reactions.CAN_detroit
+	title = GER_reactions.CAN_detroit.t
+	desc = GER_reactions.CAN_detroit.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = GER_reactions.CAN_detroit.a
+		add_opinion_modifier = { target = CAN modifier = CAN_detroit_agreement }
+	}
+}
+
+country_event = {
+	id = ENG_reactions.CAN_detroit
+	title = ENG_reactions.CAN_detroit.t
+	desc = ENG_reactions.CAN_detroit.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_reactions.CAN_detroit.a
+		add_opinion_modifier = { target = CAN modifier = CAN_sovereignty_cautious }
+	}
+}
+
+country_event = {
+	id = ENG_liberation.1
+	title = ENG_liberation.1.t
+	desc = ENG_liberation.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ENG_liberation.1.a
+		add_stability = -0.05
+	}
+}
+
+# =======================================================
+# CARNEY REFORM EVENTS
+# =======================================================
+country_event = {
+	id = CAN_carney_reforms.1
+	title = CAN_carney_reforms.1.t
+	desc = CAN_carney_reforms.1.d
+	picture = GFX_report_event_CAN_factory
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_carney_reforms.1.a
+		
+		# Economic growth boost
+		custom_effect_tooltip = CAN_carney_economic_boost_tt
+		
+		# Construction speed bonus
+		add_ideas = CAN_economic_optimization
+		
+		# Trade deal with USA
+		USA = {
+			country_event = {
+				id = USA_carney_trade.1
+				days = 3
+			}
+		}
+		
+		add_political_power = 100
+	}
+}
+
+# =======================================================
+# ANGUS REFORM EVENTS  
+# =======================================================
+country_event = {
+	id = CAN_angus_reforms.1
+	title = CAN_angus_reforms.1.t
+	desc = CAN_angus_reforms.1.d
+	picture = GFX_report_event_CAN_factory
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_angus_reforms.1.a
+		
+		# Industrial nationalization
+		custom_effect_tooltip = CAN_angus_nationalization_tt
+		
+		# Worker productivity boost
+		add_ideas = CAN_worker_power
+		
+		# Infrastructure construction bonus
+		add_ideas = CAN_public_works_program
+		
+		# Popularity shift
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.05
+		}
+		
+		add_political_power = 100
+	}
+}
+
+# =======================================================
+# BORIS REFORM EVENTS
+# =======================================================
+country_event = {
+	id = CAN_boris_reforms.1
+	title = CAN_boris_reforms.1.t
+	desc = CAN_boris_reforms.1.d
+	picture = GFX_report_event_CAN_halifax_night
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_boris_reforms.1.a
+		
+		# Naval construction boost
+		custom_effect_tooltip = CAN_boris_naval_boost_tt
+		
+		# Dockyard construction bonus
+		add_ideas = CAN_naval_expansion
+		
+		# Infrastructure construction
+		add_ideas = CAN_dominion_network
+		
+		# War support increase
+		add_war_support = 0.10
+		
+		# Imperial relations boost
+		ENG = {
+			country_event = {
+				id = ENG_boris_imperial.1
+				days = 3
+			}
+		}
+		
+		add_political_power = 100
+	}
+}
+
+# =======================================================
+# USA REACTION TO CARNEY TRADE
+# =======================================================
+country_event = {
+	id = USA_carney_trade.1
+	title = USA_carney_trade.1.t
+	desc = USA_carney_trade.1.d
+	is_triggered_only = yes
+	
+	option = {
+		name = USA_carney_trade.1.a
+		
+		CAN = {
+			add_opinion_modifier = {
+				target = USA
+				modifier = USA_trade_deal_positive
+			}
+		}
+		
+		add_political_power = 25
+	}
+}
+
+# =======================================================
+# ENG REACTION TO BORIS IMPERIAL POLICY
+# =======================================================
+country_event = {
+	id = ENG_boris_imperial.1
+	title = ENG_boris_imperial.1.t
+	desc = ENG_boris_imperial.1.d
+	is_triggered_only = yes
+	
+	option = {
+		name = ENG_boris_imperial.1.a
+		
+		CAN = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = ENG_imperial_restoration_support
+			}
+		}
+		
+		# Offer military cooperation
+		CAN = {
+			country_event = {
+				id = CAN_eng_military_cooperation.1
+				days = 5
+			}
+		}
+	}
+}
+
+# =======================================================
+# CAN-ENG MILITARY COOPERATION OFFER
+# =======================================================
+country_event = {
+	id = CAN_eng_military_cooperation.1
+	title = CAN_eng_military_cooperation.1.t
+	desc = CAN_eng_military_cooperation.1.d
+	picture = GFX_report_event_CAN_parliament_office
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_eng_military_cooperation.1.a
+		
+		# Accept cooperation
+		add_ideas = CAN_imperial_military_cooperation
+		
+		ENG = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = CAN_military_partner
+			}
+		}
+		
+		add_war_support = 0.05
+	}
+	
+	option = {
+		name = CAN_eng_military_cooperation.1.b
+		
+		# Decline - focus on North American interests
+		USA = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = CAN_independent_stance
+			}
+		}
+		
+		ENG = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = CAN_imperial_disappointment
+			}
+		}
+		
+		add_stability = 0.03
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

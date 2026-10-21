@@ -1,0 +1,76 @@
+﻿l_english:
+
+ # ===== United States - Starting Ideas =====
+
+ USA_symington_apparatus: "The Symington Apparatus"
+ USA_symington_apparatus_desc: "During the American Dark Decade, President Stuart Symington built the most comprehensive surveillance state in the history of the Western world. Every telephone line, every union hall and every university lecture became a source for the files. Sanders and Grayson dismantled the worst of it, but the offices, the archives and many of the officials remain. The machinery is still switched on, and Turner has not yet decided whether to use it or to destroy it."
+
+ USA_hollowed_institutions: "Reagan's Hollowed Institutions"
+ USA_hollowed_institutions_desc: "Ronald Reagan did not so much rule America as hollow it out. Twelve years of cuts stripped the remaining social protections, handed wealth to the top of the pile and left public institutions underfunded and half-staffed. The DSA presidents have rebuilt much of it, but the damage was deep. Schools, hospitals and agencies still work around gaps that a generation of neglect carved into them."
+
+ USA_shadow_network: "Bush's Shadow Network"
+ USA_shadow_network_desc: "George Bush's twelve years in office were the golden age of the American intelligence community. Juntas were funded, coups were arranged and covert operations ran on every continent. The agency that built that network is still in place, with its people, its contacts and its habits intact. It gives America remarkable reach in the shadows, and it explains why so many in Latin America are slow to trust a Washington that now speaks of solidarity."
+
+ USA_broken_unions: "Garner's Broken Unions"
+ USA_broken_unions_desc: "The Garner Crackdowns of the late 1930s broke organised labour in America. Leaders were jailed, strikes were put down by the army and union halls were closed by order. Labour was rebuilt slowly under the DSA, but the old solidarity has not fully returned. Many American workers have no memory of a strong union, and some doubt that Turner's promises will hold."
+
+ USA_unbombed_giant: "The Unbombed Giant"
+ USA_unbombed_giant_desc: "No American city has been bombed and no American farm has been fought over since the nineteenth century. While Europe burned in 1942 and 1944, American factories, ports and railways went untouched. The result is the largest industrial base on Earth, with vast manpower and untapped resources. But a nation that has not fought a real war in generations is not ready to wage one, and mobilising this giant will take time."
+
+ USA_ocean_shield: "Ocean Shield"
+ USA_ocean_shield_desc: "Two great oceans have always protected the United States, and no invading army has ever crossed either. Coastal defences, a deep navy and a long tradition of air power make a direct attack on American soil almost unthinkable. The same geography makes projecting force abroad slow and expensive. America is safe, but safety has made it hesitant to go to war."
+
+ USA_divided_congress: "Divided Congress"
+ USA_divided_congress_desc: "The Democratic Socialists hold the presidency, but they do not hold the whole of the American system. Congress is split between the DSA, the old Democratic establishment and a Republican minority that still controls key committees. Every major decision becomes a negotiation, and every negotiation costs time. Turner has the mandate of the voters, but not yet the votes to use it freely."
+
+ USA_silent_pacific_partner: "Silent Pacific Partner"
+ USA_silent_pacific_partner_desc: "Officially, the United States has no military ties to Japan. Unofficially, American technical knowledge and quiet approval helped Japan rearm far beyond the limits set at Shanghai. Washington needs a counterweight to China, and Tokyo needs a friend that will not say so in public. The arrangement works only while both sides keep silent, and it makes relations with Beijing worse by the year."
+
+ # ===== United States - Policy Dial Ideas (Day 21 Address) =====
+
+ USA_arsenal_of_the_coalition: "Arsenal of the Coalition"
+ USA_arsenal_of_the_coalition_desc: "Turner has chosen to stand with Berlin. American factories have been redirected to supply the German Democratic Coalition with weapons, ammunition and vehicles. Industry is running hot, but the public never asked for this war. Many Americans wonder why they are arming one socialist state to fight another."
+
+ USA_fortress_mentality: "Fortress Mentality"
+ USA_fortress_mentality_desc: "Turner has chosen to turn America inward. The war in Europe and Asia is not America's war, and the president has said so plainly. Attention and resources are turned to the home front, to reform and to the defence of the hemisphere. It is a popular choice, but a nation that looks away from the world will eventually find that the world has not looked away from it."
+
+ USA_atlantic_command: "The Atlantic Command"
+ USA_atlantic_command_desc: "American and German officers have learned to plan from the same map, even when they do not agree on what the map means. The arrangement saves time at the front and gives Berlin a voice in American deployments that no previous administration would have accepted."
+ USA_atlantic_caution: "Alliance Without Trust"
+ USA_atlantic_caution_desc: "Washington keeps its own chain of command intact and shares only what the alliance requires. Cooperation is slower, but the President can still tell Congress that American forces answer to American officers."
+ USA_contractual_oversight: "The Public Contracts Board"
+ USA_contractual_oversight_desc: "Every shipment to Europe is now reviewed by a civilian board with authority to delay or disclose a contract. The safeguards reassure Congress, though factories and shipping firms lose some of the speed the emergency once provided."
+ USA_ceasefire_guarantor: "Guarantor of the Armistice"
+ USA_ceasefire_guarantor_desc: "The ceasefire survives because Washington is willing to spend prestige on every violation, every prisoner exchange and every convoy of relief supplies. Peace has become a standing commitment rather than a signed page."
+ USA_ceasefire_compromise: "An Imperfect Peace"
+ USA_ceasefire_compromise_desc: "The administration has accepted that some questions must remain unanswered if the guns are to stay silent. The public is tired enough to accept the bargain; the people left behind the new lines are not asked."
+ USA_total_war_economy: "The Emergency Production Board"
+ USA_total_war_economy_desc: "Contracts, shipping, labor and steel are being coordinated as parts of one war effort. Output rises, but so does the share of national life committed to a conflict whose end Washington can no longer predict."
+ USA_reconstruction_mission: "The Reconstruction Mission"
+ USA_reconstruction_mission_desc: "American credits and engineers are rebuilding civilian institutions before the next army can claim the ruins. It is slow, expensive work, and every school or rail bridge restored is also a visible argument against rule by occupation."
+ USA_conditional_aid: "Conditional Relief"
+ USA_conditional_aid_desc: "Food and credit cross the front only alongside demands for verifiable political concessions. The policy gives Washington leverage, but every delay turns civilians into part of the negotiation."
+ USA_hemispheric_union: "The Hemispheric Compact"
+ USA_hemispheric_union_desc: "A trade and infrastructure bloc is beginning to make the Americas less dependent on decisions taken in Berlin, Moscow or Tokyo. Partners welcome the investment while watching carefully to see who writes the rules."
+ USA_hemispheric_defense: "The Continental Perimeter"
+ USA_hemispheric_defense_desc: "The administration has chosen a defensible perimeter over promises it cannot keep abroad. Coastal readiness improves and the public is reassured, at the cost of a narrower definition of American responsibility."
+ USA_pacific_coordination: "Pacific Staff Coordination"
+ USA_pacific_coordination_desc: "American and Japanese planners have begun sharing schedules, signals intelligence and contingency maps. The partnership is effective precisely because both sides keep the most sensitive parts of their plans to themselves."
+ USA_pacific_mobilization: "Pacific Mobilization"
+ USA_pacific_mobilization_desc: "Shipyards and carrier groups are committed to the Pacific theatre. The shift gives the fleet the means to hold the line, while drawing steel, crews and political attention away from every other obligation."
+ USA_pacific_withdrawal: "A Deliberate Drawdown"
+ USA_pacific_withdrawal_desc: "The fleet has been ordered to hold a narrower perimeter while crews and resources are brought home. Readiness for a new offensive falls, but the administration has bought room to recover and choose its next commitment."
+ USA_reformed_union: "A Union Reformed"
+ USA_reformed_union_desc: "The administration has tied its postwar legitimacy to rebuilding public institutions and widening the coalition behind them. Reform is no longer a campaign promise; it is the measure by which the government expects to be judged."
+ USA_cold_peace_mobilization: "The Cold Peace Establishment"
+ USA_cold_peace_mobilization_desc: "Demobilization has been postponed without being publicly cancelled. The armed forces are preparing for a future conflict while the administration insists that no one should mistake preparation for intent."
+ USA_junta_security_state: "The Security Council"
+ USA_junta_security_state_desc: "The generals have placed national security above civilian government. The chain of command is clear and the armed forces are well supplied; every decision now passes through officers who answer to no electorate."
+ USA_junta_civilian_facade: "The National Recovery Cabinet"
+ USA_junta_civilian_facade_desc: "The junta keeps civilian ministries open and gives administrators a role in rebuilding the economy. The arrangement makes the state more capable, but its ministers serve at the pleasure of the officers who removed the elected government."
+ USA_post_civil_war_reconstruction: "Reconstruction After the Civil War"
+ USA_post_civil_war_reconstruction_desc: "With the fighting over, the government is repairing damaged communities and restoring the institutions needed to make the country governable again. Recovery is slow, but rebuilding provides a foundation for the junta's postwar order."
+
+
+
+

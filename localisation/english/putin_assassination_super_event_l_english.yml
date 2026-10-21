@@ -1,0 +1,13 @@
+﻿l_english:
+ PUTIN_ASSASSINATION_SUPER_EVENT_HEADER: "The Kremlin Coup"
+ PUTIN_ASSASSINATION_SUPER_EVENT_QUOTE: "Power is never more brittle than when it begins to fear its own failures."
+ PUTIN_ASSASSINATION_SUPER_EVENT_DESCRIPTION: "Vladimir Putin is dead. Whether felled by conspirators, rivals within the state, or an assassin striking at the heart of the Kremlin, the result is the same: the political order that defined Russia for a generation has been shattered. Across the federation, the security services mobilise, factions jostle for control, and the world braces for whatever comes next."
+ PUTIN_ASSASSINATION_SUPER_EVENT_PICTURE: "GFX_portrait_SOV_vladimir_putin"
+ PUTIN_ASSASSINATION_SUPER_EVENT_CLOSE_BUTTON: "The world holds its breath"
+ PUTIN_ASSASSINATION_SUPER_EVENT_REACTION: "The world holds its breath"
+ putin_super_event.2.t: "The Assassination of Vladimir Putin"
+ putin_super_event.2.d: "Use this event as a manual trigger if you want to fire the Putin assassination and coup chain directly."
+ putin_super_event.2.a: "Proceed"
+ putin_super_event.100.t: "Nationalist Junta Seizes Moscow"
+ putin_super_event.100.d: "In a dramatic overnight seizure of power in Moscow, Vladimir Putin has been killed and a nationalist military junta has taken control of the Russian state. Sources across Europe report that senior officers moved decisively after months of anger over the failure to secure victory in Ukraine, mounting casualties, economic decay, and the growing sense that Russia had become a humiliated and dysfunctional power on the world stage.\n\nThrough the night, troops and Rosgvardiya units surrounded key ministries, television centers, and the Kremlin itself, while figures seen as personally loyal to Putin were detained before dawn. By morning, General Valery Gerasimov appeared on the main state news channels to announce that authority had passed into military hands under a temporary emergency command. In his first statement, he blamed corruption, strategic failure, economic breakdown, and international embarrassment for pushing Russia to the brink of state collapse.\n\nThe new junta has vowed to restore order, crush resistance inside the state, and rebuild national authority. Outside Russia, governments are now asking the same question: will Gerasimov seek revenge for the disaster in Ukraine and escalate further, or will he turn inward and focus first on stabilising a battered economy, a shaken state, and a regime that increasingly looked like it was failing from within?"
+ putin_super_event.100.a: "Russia enters a new and darker phase"

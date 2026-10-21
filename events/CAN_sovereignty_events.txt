@@ -1,0 +1,1506 @@
+﻿add_namespace = CAN_sovereignty
+add_namespace = CAN_opening
+add_namespace = CAN_compromise
+add_namespace = CAN_saganash
+add_namespace = CAN_borispm
+add_namespace = CAN_black
+add_namespace = CAN_mogg
+add_namespace = CAN_coalition
+add_namespace = CAN_carney
+add_namespace = CAN_angus 
+
+
+
+
+
+country_event = {
+	id = CAN_opening.1
+	title = CAN_opening.1.t
+	desc = CAN_opening.1.d
+	picture = GFX_report_event_CAN_parliament_office
+
+	fire_only_once = yes
+
+	# Fires 7 days after game start
+	trigger = {
+		tag = CAN
+		date > 2026.1.7
+		date < 2026.2.1
+		NOT = { has_country_flag = CAN_opening_fired }
+	}
+
+	immediate = {
+		set_country_flag = CAN_opening_fired
+	}
+
+ option = {
+		name = CAN_opening.1.a	# "Back Rees-Mogg's Naval Plan"
+
+		# Naval production boost
+		add_timed_idea = {
+			idea = CAN_naval_priority
+			days = 365
+		}
+
+		# War support increase
+		add_war_support = 0.05
+
+		# Union strikes — stability drops
+		add_stability = -0.10
+
+		# Rees-Mogg faction pleased
+		CAN_mogg_faction_influence_10 = yes
+
+		# Boris Johnson quietly concerned
+		CAN_boris_loyalty_-5 = yes
+
+		# Set flag for later events to track
+		set_country_flag = CAN_mogg_naval_plan_chosen
+
+		# Unlock The Imperial Defense Appropriations Act
+		unlock_national_focus = CAN_The_Imperial_Defense_Appropriations_Act
+
+		
+
+		ai_chance = {
+			factor = 40
+		}
+	}
+
+	option = {
+		name = CAN_opening.1.b	# "Back Black's Infrastructure Priority"
+
+		# Infrastructure construction boost
+		add_timed_idea = {
+			idea = CAN_infrastructure_priority
+			days = 365
+		}
+
+		# Stability increase
+		add_stability = 0.05
+
+		# Rees-Mogg faction displeased
+		CAN_mogg_faction_influence_-10 = yes
+
+		# Boris Johnson pleased — this is more his vision
+		CAN_boris_loyalty_5 = yes
+
+		# Set flag for later events to track
+		set_country_flag = CAN_black_infrastructure_chosen
+
+		# Unlock The Imperial Defense Appropriations Act
+		unlock_national_focus = CAN_The_Imperial_Defense_Appropriations_Act
+
+		# Trigger follow-up event — exile community reaction
+		country_event = {
+			id = CAN_opening.3
+			days = 14
+		}
+
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+
+###########################################################
+# EVENT 2 — THE UNION REACTION
+# Fires 14 days after Rees-Mogg Naval Plan chosen
+# Represents Canadian workers reacting to steel diversion
+###########################################################
+
+country_event = {
+	id = CAN_opening.2
+	title = CAN_opening.2.t
+	desc = CAN_opening.2.d
+	picture = GFX_report_event_CAN_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Charlie Angus reacts to the naval priority decision
+	immediate = {
+		set_country_flag = CAN_union_angry
+	}
+
+	option = {
+		name = CAN_opening.2.a	# "The steel goes to the ships. That is final."
+
+		# Double down — more war support but worse stability
+		add_war_support = 0.03
+		add_stability = -0.05
+
+		# CCF gains support from angry workers
+		add_popularity = {
+			ideology = new_democrat
+			popularity = 0.03
+		}
+
+		# Pat King's movement also benefits
+		add_popularity = {
+			ideology = national_bolshevik
+			popularity = 0.01
+		}
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = {
+		name = CAN_opening.2.b	# "Offer the unions a partial concession."
+
+		# Small stability recovery
+		add_stability = 0.03
+		add_political_power = -25	# Costs political capital to negotiate
+
+		# Rees-Mogg mildly unhappy with the concession
+		CAN_mogg_faction_influence_-5 = yes
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+ country_event = {
+    id = CAN_compromise.1
+    title = CAN_compromise.1.t
+    desc = CAN_compromise.1.d
+    picture = GFX_report_event_parliament_tno
+    
+    is_triggered_only = yes
+
+    # Option A: Back Conrad Black (Pragmatic / Dominion First)
+    option = {
+        name = CAN_compromise.1.a
+        custom_effect_tooltip = CAN_compromise_black_tt
+        set_country_flag = CAN_sided_with_black
+        add_political_power = 50
+        add_popularity = {
+			ideology = reactionary
+            popularity = 0.10
+        }
+    }
+
+    # Option B: Back Jacob Rees-Mogg (Imperial Restorationist)
+    option = {
+        name = CAN_compromise.1.b
+        custom_effect_tooltip = CAN_compromise_mogg_tt
+        set_country_flag = CAN_sided_with_mogg
+        add_political_power = 25
+        add_popularity = {
+			ideology = high_toryism
+            popularity = 0.15
+        }
+    }
+}
+
+
+###########################################################
+# EVENT 3 — THE EXILE COMMUNITY REACTS
+# Fires 14 days after Black Infrastructure Priority chosen
+# Represents exile establishment reacting to being deprioritised
+###########################################################
+
+country_event = {
+	id = CAN_opening.3
+	title = CAN_opening.3.t
+	desc = CAN_opening.3.d
+	picture = GFX_report_event_CAN_mogg_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = CAN_exile_community_restless
+	}
+
+	option = {
+		name = CAN_opening.3.a	# "Canada's infrastructure comes first. The Navy can wait."
+
+		# Hold firm — good for ordinary Canadians, bad for coalition
+		add_stability = 0.03
+		CAN_mogg_faction_influence_-5 = yes
+
+		# Boris approves
+		CAN_boris_loyalty_5 = yes
+
+		# Bernier's movement shrinks slightly — Canada First agenda being delivered
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.01
+		}
+
+		ai_chance = {
+			factor = 55
+		}
+	}
+
+	option = {
+		name = CAN_opening.3.b	# "Reassure the exile community — their patience will be rewarded."
+
+		# Diplomatic reassurance costs political power
+		add_political_power = -50
+
+		# Rees-Mogg partially mollified
+		CAN_mogg_faction_influence_5 = yes
+
+		# But ordinary Canadians notice
+		add_stability = -0.02
+
+		ai_chance = {
+			factor = 45
+		}
+	}
+}
+
+	###events for the post-sovereignty Canadian political crisis
+	country_event = {
+		id = CAN_sovereignty.1
+		title = CAN_sovereignty.1.t
+		desc = CAN_sovereignty.1.d
+		picture = GFX_report_event_CAN_parliament_winter
+
+		is_triggered_only = yes	 
+		fire_only_once = yes
+		immediate = {
+			set_country_flag = CAN_sovereignty_address_delivered
+		}
+
+		option = {
+			name = CAN_sovereignty.1.a	 
+
+			add_stability = 0.15
+			add_war_support = 0.05
+
+			add_ideas = {
+				CAN_sovereignty_declared
+			}
+
+		#	Rees-Mogg faction loses influence
+			CAN_mogg_faction_influence_-20 = yes
+
+		#	Boris Johnson loyalty increases
+			CAN_boris_loyalty_15 = yes
+
+		#	Trigger Rees-Mogg's Response in 3 days
+			country_event = {
+				id = CAN_sovereignty.2
+				days = 3
+			}
+
+	
+
+			ai_chance = {
+				factor = 60
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.1.b
+
+			add_stability = 0.05
+
+		#	Rees-Mogg faction loses minimal influence
+			CAN_mogg_faction_influence_-5 = yes
+
+		#	Boris Johnson disappointed
+			CAN_boris_loyalty_-10 = yes
+
+		#	Trigger The Watered Declaration immediately
+			country_event = {
+				id = CAN_sovereignty.3
+				days = 1
+			}		
+
+			ai_chance = {
+				factor = 40
+			}
+		}
+	}
+
+	country_event = {
+		id = CAN_sovereignty.2
+		title = CAN_sovereignty.2.t
+		desc = CAN_sovereignty.2.d
+		picture = GFX_report_event_CAN_mogg_office
+
+		is_triggered_only = yes
+
+		option = {
+			name = CAN_sovereignty.2.a	 
+
+			CAN_mogg_faction_influence_-10 = yes
+
+		#	Boris Johnson approves
+			CAN_boris_loyalty_10 = yes
+
+			add_stability = -0.05
+
+		#	Coalition Crisis fires in 14 days
+			country_event = {
+				id = CAN_sovereignty.6
+				days = 14
+			}
+
+			ai_chance = {
+				factor = 50
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.2.b
+			CAN_mogg_faction_influence_-15 = yes
+
+			add_popularity = {
+				ideology = national_conservative
+				popularity = 0.10
+			}
+
+		#	Boris Speaks fires immediately
+			country_event = {
+				id = CAN_sovereignty.5
+				days = 1
+			}
+
+			ai_chance = {
+				factor = 50
+			}
+		}
+	}
+
+
+
+	country_event = {
+		id = CAN_sovereignty.3
+		title = CAN_sovereignty.3.t
+		desc = CAN_sovereignty.3.d
+		picture = GFX_report_event_CAN_parliament_grey
+
+		is_triggered_only = yes
+
+	#	Rees-Mogg's smug response fires automatically
+		immediate = {
+			country_event = {
+				id = CAN_sovereignty.3b
+				days = 2
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.3.a	 
+			CAN_mogg_faction_influence_-8 = yes
+			CAN_boris_loyalty_-5 = yes # Still disappointed but respects the correction
+			add_stability = 0.03
+
+		#	Turner's call comes earlier — 21 days
+		#	Cancel the 30 day timer and replace with 21 day
+		#	Note: implement via scripted effect to override previous timer
+			set_country_flag = CAN_clarification_issued
+
+		# Trigger Turner's call earlier
+			country_event = {
+				id = CAN_sovereignty.4
+				days = 21
+			}
+
+			ai_chance = {
+				factor = 55
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.3.b	
+
+			CAN_mogg_faction_influence_-5 = yes
+			CAN_boris_loyalty_-10 = yes
+			add_stability = 0.05
+
+		#		Rees-Mogg quietly lobbies backbenchers
+			set_country_flag = CAN_mogg_lobbying_active
+
+		# Trigger event about Rees-Mogg's lobbying campaign
+			country_event = {
+				id = CAN_mogg_lobbying_campaign.1
+				days = 7
+			}
+
+			ai_chance = {
+				factor = 45
+			}
+		}
+	}
+
+
+
+
+	country_event = {
+		id = CAN_sovereignty.3b
+		title = CAN_sovereignty.3b.t
+		desc = CAN_sovereignty.3b.d
+		picture = GFX_report_event_CAN_mogg_press
+
+		is_triggered_only = yes
+
+		#No choices — this is a pure narrative event showing Rees-Mogg
+		#spinning the watered declaration as a victory
+
+		option = {
+			name = CAN_sovereignty.3b.a
+
+			CAN_mogg_faction_influence_10 = yes # He won this round
+			CAN_black_authority_-10 = yes
+			CAN_boris_loyalty_-5 = yes
+
+		#	If clarification was issued, partially offset the damage
+			if = {
+				limit = {
+					has_country_flag = CAN_clarification_issued
+				}
+				CAN_mogg_faction_influence_-5 = yes
+				CAN_black_authority_5 = yes
+			}
+
+			ai_chance = {
+				factor = 100
+			}
+		}
+	}
+
+
+
+
+	country_event = {
+		id = CAN_sovereignty.4
+		title = CAN_sovereignty.4.t
+		desc = CAN_sovereignty.4.d
+		picture = GFX_report_event_CAN_black_phone
+
+		is_triggered_only = yes
+
+	#	Different description depending on which path was taken
+	#	Implement via triggered desc blocks
+
+		trigger = {
+	#		Only fires if The Sovereignty Address has fired
+			has_country_flag = CAN_sovereignty_address_delivered
+		}
+
+		option = {
+			name = CAN_sovereignty.4.a	 
+
+			USA = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = CAN_sovereignty_positive
+				}
+			}
+
+			add_relation_modifier = {
+				target = USA
+				modifier = CAN_open_to_talks
+			}
+
+			#Rees-Mogg furious
+				CAN_mogg_faction_influence_-10 = yes
+
+		#	Boris approves
+				CAN_boris_loyalty_15 = yes
+
+		#	Coalition wobbles
+				CAN_coalition_stability_-10 = yes
+
+			#	Detroit Agreement unlocks immediately
+			unlock_national_focus = CAN_detroit_agreement_mission
+
+			# Fire Detroit Agreement event in 14 days
+			country_event = {
+				id = CAN_sovereignty.7
+				days = 14
+			}
+
+			ai_chance = {
+				factor = 65
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.4.b	 
+
+			USA = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = CAN_sovereignty_cautious
+				}
+			}
+
+			add_stability = 0.05
+
+			#Detroit Agreement unlocks with longer timer
+			unlock_national_focus = CAN_detroit_agreement_mission
+			country_event = {
+				id = CAN_sovereignty.7
+				days = 30
+			}
+
+		#	Rees-Mogg mildly unhappy
+			CAN_mogg_faction_influence_-5 = yes
+
+			ai_chance = {
+				factor = 35
+			}
+		}
+	}
+
+
+
+
+
+	country_event = {
+		id = CAN_sovereignty.5
+		title = CAN_sovereignty.5.t
+		desc = CAN_sovereignty.5.d
+		picture = GFX_report_event_CAN_boris_rally
+		fire_only_once = yes
+		is_triggered_only = yes
+
+	#	No branching choices — this is a payoff event
+	#	Effects fire automatically and lead into Turner's Phone Call
+
+		immediate = {
+			#Turner's White House reacts
+			USA = {
+				country_event = {
+					id = USA_reactions.1
+					days = 2
+				}
+			}
+
+			# Starmer condemns Boris
+			ENG = {
+				country_event = {
+					id = ENG_reactions.1
+					days = 3
+				}
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.5.a
+
+			add_popularity = { ideology = national_conservative popularity = 0.20 }
+			CAN_mogg_faction_influence_-15 = yes
+			CAN_boris_loyalty_25 = yes
+			set_country_flag = CAN_boris_national_figure
+
+			# FIX: Trigger President Turner's call!
+			country_event = {
+				id = CAN_sovereignty.4
+				days = 2
+			}
+		}
+	}
+
+
+
+
+	country_event = {
+		id = CAN_sovereignty.6
+		title = CAN_sovereignty.6.t
+		desc = CAN_sovereignty.6.d
+		picture = GFX_report_event_CAN_parliament_night
+
+		is_triggered_only = yes
+
+		immediate = {
+			#Rees-Mogg leaves cabinet
+			remove_ideas = CAN_mogg_deputy_pm
+			set_country_flag = CAN_mogg_removed_from_cabinet
+
+			# IRP withdraws from coalition
+			set_country_flag = CAN_coalition_broken
+
+			#Black now leads minority government
+			set_country_flag = CAN_minority_government
+		}
+
+		option = {
+			name = CAN_sovereignty.6.a	
+			#Open negotiations with Carney
+			country_event = {
+				id = CAN_sovereignty.6a
+				days = 2
+			}
+
+			CAN_boris_loyalty_5 = yes
+
+			ai_chance = {
+				factor = 40
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.6.b	 
+			#Open negotiations with Angus
+			country_event = {
+				id = CAN_sovereignty.6b
+				days = 2
+			}
+
+			CAN_boris_loyalty_10 = yes
+
+			ai_chance = {
+				factor = 35
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.6.c	
+			#Both negotiations open simultaneously
+			country_event = {
+				id = CAN_sovereignty.6c
+				days = 1
+			}
+
+			CAN_boris_loyalty_15 = yes
+
+			ai_chance = {
+				factor = 15
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.6.e
+			#Dissolution and election
+			country_event = {
+				id = CAN_sovereignty.6d
+				days = 1
+			}
+
+			CAN_boris_loyalty_5 = yes
+			add_stability = -0.15
+
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+
+
+
+
+	country_event = {
+		id = CAN_sovereignty.6a
+		title = CAN_sovereignty.6a.t
+		desc = CAN_sovereignty.6a.d
+		picture = GFX_report_event_CAN_black_phone
+
+		is_triggered_only = yes
+
+		option = {
+			name = CAN_sovereignty.6a.a	
+			# Detroit Agreement Framework becomes official policy
+			set_country_flag = CAN_detroit_framework_accepted
+
+			# Washington trade talks scheduled
+			add_relation_modifier = {
+				target = USA
+				modifier = CAN_trade_talks_scheduled
+			}
+
+			#Indigenous consultation begins
+			set_country_flag = CAN_indigenous_consultation_active
+
+			#Government survives confidence vote
+			set_country_flag = CAN_minority_survived
+
+			add_stability = 0.15
+			CAN_boris_loyalty_10 = yes
+
+			#Three NCP backbenchers cross to IRP
+			add_popularity = {
+				ideology = monarchist
+				popularity = 0.03
+			}
+
+			# Trigger follow-up event about implementing the deal
+			country_event = {
+				id = CAN_carney_implementation.1
+				days = 7
+			}
+
+			ai_chance = {
+				factor = 70
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.6a.b
+
+			#Negotiations collapse
+			set_country_flag = CAN_carney_talks_failed
+
+			#Must now approach Angus or call election
+			country_event = {
+				id = CAN_sovereignty.6b
+				days = 3
+			}
+
+			add_stability = -0.08
+			CAN_boris_loyalty_-5 = yes
+
+			ai_chance = {
+				factor = 30
+			}
+		}
+	}
+
+
+
+
+
+	country_event = {
+		id = CAN_sovereignty.6b
+		title = CAN_sovereignty.6b.t
+		desc = CAN_sovereignty.6b.d
+		picture = GFX_report_event_CAN_black_phone
+
+		is_triggered_only = yes
+
+		option = {
+			name = CAN_sovereignty.6b.a
+
+			#Conscription legislation repealed
+			remove_ideas = CAN_conscription_legislation
+			set_country_flag = CAN_conscription_repealed
+
+			#Hamilton steel dispute resolved
+			set_country_flag = CAN_hamilton_dispute_resolved
+			add_ideas = CAN_industrial_stability
+
+			#Saganash enters cabinet
+			set_country_flag = CAN_saganash_cabinet
+			set_country_flag = CAN_angus_support_active
+			country_event = {
+				id = CAN_saganash.1
+				days = 7
+			}
+
+			#Government survives
+			set_country_flag = CAN_minority_survived
+			add_stability = 0.15
+			add_war_support = 0.05
+
+			#NCP backbench revolt
+			add_popularity = {
+				ideology = monarchist
+				popularity = 0.06
+			}
+
+			#Bernier loses his primary grievance
+			add_popularity = {
+				ideology = nationalist
+				popularity = -0.05
+			}
+
+			#Turner reacts warmly
+			USA = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = CAN_angus_deal_positive
+				}
+			}
+
+		
+			ai_chance = {
+				factor = 55
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.6b.b	 
+
+			remove_ideas = CAN_conscription_legislation
+			set_country_flag = CAN_conscription_repealed
+			set_country_flag = CAN_hamilton_dispute_resolved
+
+			#Saganash gets Ministry of Northern Affairs instead of full cabinet
+			set_country_flag = CAN_saganash_northern_affairs
+			set_country_flag = CAN_angus_support_active
+
+			add_stability = 0.08
+			CAN_boris_loyalty_5 = yes
+
+			# Trigger event about Saganash accepting the compromise
+			country_event = {
+				id = CAN_saganash_compromise.1
+				days = 5
+			}
+
+			ai_chance = {
+				factor = 35
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.6b.c
+
+			#Angus call ends badly
+			set_country_flag = CAN_angus_talks_failed
+
+			# Back to Carney but he raises his price
+			country_event = {
+				id = CAN_sovereignty.6a
+				days = 2
+			}
+
+			add_stability = -0.05
+			CAN_boris_loyalty_-8 = yes
+
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+
+
+
+
+
+	country_event = {
+		id = CAN_sovereignty.6c
+		title = CAN_sovereignty.6c.t
+		desc = CAN_sovereignty.6c.d
+		picture = GFX_report_event_CAN_black_phone
+
+		is_triggered_only = yes
+
+		#Boris's idea — play them against each other
+		#Angus blinks first and accepts conscription repeal only
+
+		immediate = {
+			# Conscription legislation repealed as the minimum price
+			remove_ideas = CAN_conscription_legislation
+			set_country_flag = CAN_conscription_repealed
+
+			# CCF supports confidence vote
+			set_country_flag = CAN_minority_survived
+
+			# Carney privately furious
+			add_relation_modifier = {
+				target = CAN
+				modifier = CAN_carney_played
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.6c.a	 
+
+			CAN_boris_loyalty_15 = yes
+			add_stability = 0.12
+			add_war_support = 0.05
+
+			# Bernier loses conscription grievance
+			add_popularity = {
+				ideology = nationalist
+				popularity = -0.05
+			}
+
+		
+			add_popularity = {
+				ideology = national_bolshevik
+				popularity = 0.03
+			}
+
+			# Turner notices
+			USA = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = CAN_sovereignty_positive
+				}
+			}
+
+			
+			country_event = {
+				id = CAN_sovereignty.6c_followup
+				days = 7
+			}
+
+	
+			ai_chance = {
+				factor = 100
+			}
+		}
+	}
+
+
+
+
+	country_event = {
+		id = CAN_sovereignty.6c_followup
+		title = CAN_sovereignty.6c_followup.t
+		desc = CAN_sovereignty.6c_followup.d
+		picture = GFX_report_event_CAN_parliament_corridor
+
+		is_triggered_only = yes
+
+	
+
+		option = {
+			name = CAN_sovereignty.6c_followup.a	
+			# Sets flag for future CCF cooperation events
+			set_country_flag = CAN_black_angus_understanding
+
+			# Small trust building effect
+			add_ideas = CAN_opposition_dialogue
+
+			ai_chance = {
+				factor = 100
+			}
+		}
+	}
+
+
+
+
+	country_event = {
+		id = CAN_sovereignty.6d
+		title = CAN_sovereignty.6d.t
+		desc = CAN_sovereignty.6d.d
+		picture = GFX_report_event_CAN_rideau_hall
+
+		is_triggered_only = yes
+
+		immediate = {
+			#Election called
+			set_country_flag = CAN_election_called
+			add_stability = -0.15
+
+			# Turner waits to see who wins
+			USA = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = CAN_election_uncertainty
+				}
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.6d.a
+
+		#	Fire the Canadian election event chain
+			country_event = {
+				id = CAN_election.1
+				days = 30
+			}
+
+			CAN_boris_loyalty_5 = yes
+
+			ai_chance = {
+				factor = 100
+			}
+		}
+	}
+
+
+	country_event = {
+		id = CAN_sovereignty.7
+		title = CAN_sovereignty.7.t
+		desc = CAN_sovereignty.7.d
+		picture = GFX_report_event_CAN_detroit_hotel
+
+		is_triggered_only = yes
+
+		trigger = {
+			#Only fires if Turner's call was answered positively
+			has_country_flag = CAN_sovereignty_address_delivered
+			NOT = {
+				has_country_flag = CAN_detroit_agreement_signed
+			}
+		}
+
+		immediate = {
+		#	Agreement is signed — set the flag
+			set_country_flag = CAN_detroit_agreement_signed
+
+			#Germany congratulates
+			GER = {
+				country_event = {
+					id = GER_reactions.CAN_detroit
+					days = 3
+				}
+			}
+
+		#	Starmer condemns
+			ENG = {
+				country_event = {
+					id = ENG_reactions.CAN_detroit
+					days = 2
+				}
+			}
+
+		#	Rees-Mogg crisis begins
+			country_event = {
+				id = CAN_sovereignty.8
+				days = 7
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.7.a	 
+			# USA relations major improvement
+			USA = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = CAN_detroit_agreement
+				}
+			}
+
+			add_war_support = 0.05
+
+			add_ideas = CAN_detroit_framework
+
+			#Unlock Continental Free Trade focus
+			unlock_national_focus = CAN_continental_free_trade
+
+			#Boris loyalty maxed
+			CAN_boris_loyalty_25 = yes
+
+			#Angus first positive statement
+			set_country_flag = CAN_angus_cautiously_approves
+
+			add_stability = 0.20
+			add_war_support = 0.05
+
+			ai_chance = {
+				factor = 100
+			}
+		}
+	}
+
+
+
+
+
+	country_event = {
+		id = CAN_sovereignty.8
+		title = CAN_sovereignty.8.t
+		desc = CAN_sovereignty.8.d
+		picture = GFX_report_event_CAN_mogg_press_final
+
+		is_triggered_only = yes
+
+		immediate = {
+			#Rees-Mogg formally resigns from coalition
+			remove_ideas = CAN_mogg_deputy_pm
+			set_country_flag = CAN_mogg_resigned
+			set_country_flag = CAN_coalition_broken
+
+			#IRP now in formal opposition
+			add_popularity = {
+				ideology = monarchist
+				popularity = 0.05
+			}
+		}
+
+		option = {
+			name = CAN_sovereignty.8.a	 
+
+			
+			add_ideas = CAN_boris_deputy_pm
+			CAN_boris_loyalty_30 = yes
+			set_country_flag = CAN_boris_deputy_pm_appointed
+			set_country_flag = CAN_minority_government_formed
+
+			add_stability = -0.10	 #Short term shock
+			add_war_support = 0.08	 #Long term gain
+
+		
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = national_bolshevik
+				popularity = 0.02
+			}
+
+			#Unlock minority government focus tree branch
+			unlock_national_focus = CAN_minority_government_branch
+
+			ai_chance = {
+				factor = 100
+			}
+		}
+	}
+
+
+
+
+# Note: the ideas granted above (CAN_sovereignty_declared, CAN_detroit_framework,
+# CAN_boris_deputy_pm, etc.) are defined in common/ideas/CAN_ideas.txt and
+# common/ideas/canada.txt, not in this events file.
+
+###########################################################
+# MISSING FOLLOW-UP EVENTS
+###########################################################
+
+# Carney Implementation Event
+country_event = {
+	id = CAN_carney_implementation.1
+	title = CAN_carney_implementation.1.t
+	desc = CAN_carney_implementation.1.d
+	picture = GFX_report_event_CAN_parliament_grey
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_carney_implementation.1.a
+		
+		# Economic benefits of the deal
+		add_ideas = CAN_detroit_framework
+		add_political_power = 50
+		add_stability = 0.05
+		
+		# USA approves of the implementation
+		USA = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = CAN_detroit_agreement
+			}
+		}
+		
+		# Trigger economic reforms follow-up
+		country_event = {
+			id = CAN_carney_economic_reforms.1
+			days = 7
+		}
+		
+		# Trigger the actual Detroit Agreement event chain
+		country_event = {
+			id = CAN_sovereignty.7
+			days = 14
+		}
+	}
+}
+
+# Saganash Compromise Event
+country_event = {
+	id = CAN_saganash_compromise.1
+	title = CAN_saganash_compromise.1.t
+	desc = CAN_saganash_compromise.1.d
+	picture = GFX_report_event_CAN_parliament_corridor
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_saganash_compromise.1.a
+		
+		# Saganash accepts the compromise but it's not ideal
+		add_ideas = CAN_saganash_northern_ministry
+		add_stability = 0.03
+		CAN_boris_loyalty_5 = yes
+		
+		# Indigenous consultation still happens, just at a lower level
+		set_country_flag = CAN_indigenous_consultation_active
+		
+		# Government survives but with less stability than full deal
+		set_country_flag = CAN_minority_survived
+		
+		# Trigger follow-up about the Northern Affairs ministry
+		country_event = {
+			id = CAN_northern_affairs_setup.1
+			days = 7
+		}
+		
+		# Also trigger Angus reforms about nationalization
+		country_event = {
+			id = CAN_angus_industrial_nationalization.1
+			days = 14
+		}
+	}
+}
+
+# Northern Affairs Ministry Setup Event
+country_event = {
+	id = CAN_northern_affairs_setup.1
+	title = CAN_northern_affairs_setup.1.t
+	desc = CAN_northern_affairs_setup.1.d
+	picture = GFX_report_event_CAN_parliament_office
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_northern_affairs_setup.1.a
+		
+		# Northern defense improved
+		add_ideas = CAN_northern_shield_idea
+		add_political_power = 30
+		
+		# Small stability boost from indigenous inclusion
+		add_stability = 0.02
+	}
+}
+
+###########################################################
+# ADDITIONAL FOLLOW-UP EVENTS TO PREVENT DEAD ENDS
+###########################################################
+
+# Mogg Lobbying Campaign Event
+country_event = {
+	id = CAN_mogg_lobbying_campaign.1
+	title = CAN_mogg_lobbying_campaign.1.t
+	desc = CAN_mogg_lobbying_campaign.1.d
+	picture = GFX_report_event_CAN_mogg_office
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_mogg_lobbying_campaign.1.a
+		
+		# Mogg gains some influence back
+		CAN_mogg_faction_influence_5 = yes
+		
+		# But creates political tension
+		add_stability = -0.02
+		
+		# Boris is concerned
+		CAN_boris_loyalty_-5 = yes
+		
+		# Trigger potential backbench revolt event
+		country_event = {
+			id = CAN_backbench_tension.1
+			days = 14
+		}
+	}
+}
+
+# Backbench Tension Event
+country_event = {
+	id = CAN_backbench_tension.1
+	title = CAN_backbench_tension.1.t
+	desc = CAN_backbench_tension.1.d
+	picture = GFX_report_event_CAN_parliament_corridor
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_backbench_tension.1.a
+		
+		# Black must address the caucus
+		add_political_power = -30
+		add_stability = 0.02
+		
+		# Makes backbench management decisions available
+		set_country_flag = CAN_minority_survived
+	}
+}
+
+# Carney Economic Reforms Follow-up
+# Flavor only: Implement Carney's Reforms becomes available, player must choose it
+country_event = {
+	id = CAN_carney_economic_reforms.1
+	title = CAN_carney_economic_reforms.1.t
+	desc = CAN_carney_economic_reforms.1.d
+	picture = GFX_report_event_CAN_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_carney_economic_reforms.1.a
+		
+		# Economic benefits
+		add_ideas = CAN_economic_optimization
+		add_political_power = 50
+		
+		# Industrial construction boost
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = no
+			}
+		}
+	}
+}
+
+# Fires when the player completes Deregulate the Markets
+country_event = {
+	id = CAN_carney_economic_reforms.2
+	title = CAN_carney_economic_reforms.2.t
+	desc = CAN_carney_economic_reforms.2.d
+	picture = GFX_report_event_CAN_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_carney_economic_reforms.2.a
+
+		add_stability = 0.02
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Fires when the player completes Attract Foreign Investment
+country_event = {
+	id = CAN_carney_economic_reforms.3
+	title = CAN_carney_economic_reforms.3.t
+	desc = CAN_carney_economic_reforms.3.d
+	picture = GFX_report_event_CAN_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_carney_economic_reforms.3.a
+
+		add_political_power = 25
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Angus Industrial Nationalization Follow-up
+# Flavor only: Nationalize Key Industries becomes available, player must choose it
+country_event = {
+	id = CAN_angus_industrial_nationalization.1
+	title = CAN_angus_industrial_nationalization.1.t
+	desc = CAN_angus_industrial_nationalization.1.d
+	picture = GFX_report_event_CAN_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_angus_industrial_nationalization.1.a
+		
+		# Industrial nationalization effects
+		add_ideas = CAN_industrial_nationalization
+		add_political_power = 50
+		
+		# Infrastructure boost
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = no
+			}
+		}
+		
+		# CCF popularity increases
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.05
+		}
+		
+		# Business community unhappy
+		add_stability = -0.03
+	}
+}
+
+# Fires when the player completes Establish Worker Councils
+country_event = {
+	id = CAN_angus_industrial_nationalization.2
+	title = CAN_angus_industrial_nationalization.2.t
+	desc = CAN_angus_industrial_nationalization.2.d
+	picture = GFX_report_event_CAN_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_angus_industrial_nationalization.2.a
+
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.02
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Fires when the player completes Launch Public Works Program
+country_event = {
+	id = CAN_angus_industrial_nationalization.3
+	title = CAN_angus_industrial_nationalization.3.t
+	desc = CAN_angus_industrial_nationalization.3.d
+	picture = GFX_report_event_CAN_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_angus_industrial_nationalization.3.a
+
+		add_political_power = 25
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Boris Naval Expansion Follow-up
+# Flavor only: Expand the Royal Canadian Navy becomes available, player must choose it
+country_event = {
+	id = CAN_boris_naval_expansion.1
+	title = CAN_boris_naval_expansion.1.t
+	desc = CAN_boris_naval_expansion.1.d
+	picture = GFX_report_event_CAN_halifax_night
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CAN_boris_naval_expansion.1.a
+		
+		# Naval expansion effects
+		add_ideas = CAN_naval_expansion
+		add_political_power = 50
+		
+		# Dockyard construction
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = no
+			}
+		}
+		
+		# War support increase
+		add_war_support = 0.05
+	}
+}
+
+# Fires when the player completes Build the Imperial Fleet
+country_event = {
+	id = CAN_boris_naval_expansion.2
+	title = CAN_boris_naval_expansion.2.t
+	desc = CAN_boris_naval_expansion.2.d
+	picture = GFX_report_event_CAN_halifax_night
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_boris_naval_expansion.2.a
+
+		add_war_support = 0.02
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Fires when the player completes The Dominion Network
+country_event = {
+	id = CAN_boris_naval_expansion.3
+	title = CAN_boris_naval_expansion.3.t
+	desc = CAN_boris_naval_expansion.3.d
+	picture = GFX_report_event_CAN_halifax_night
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CAN_boris_naval_expansion.3.a
+
+		add_political_power = 25
+		ai_chance = { factor = 100 }
+	}
+}

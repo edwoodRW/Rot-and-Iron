@@ -1,0 +1,217 @@
+add_namespace = SCO_liberation
+add_namespace = FRA_german_overture
+add_namespace = SOV_german_ceasefire
+add_namespace = SOV_german_war
+add_namespace = FRA_german_war
+add_namespace = ITA_german_war
+
+country_event = {
+	id = FRA_german_war.1
+	title = FRA_german_war.1.t
+	desc = FRA_german_war.1.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = FRA_german_war.1.a
+		add_political_power = 25
+		add_stability = -0.01
+	}
+}
+
+country_event = {
+	id = FRA_german_war.decision
+	title = FRA_german_war.decision.t
+	desc = FRA_german_war.decision.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = FRA_german_war.decision.a
+		ai_chance = {
+			base = 3
+			modifier = {
+				factor = 0.1
+				GER = { has_country_flag = GER_bordeaux_signed }
+			}
+		}
+		clr_country_flag = FRA_hesitating_on_war
+		SOV = { add_to_faction = FRA }
+		if = {
+			limit = { NOT = { has_war_with = GER } }
+			declare_war_on = {
+				target = GER
+				type = take_territory
+			}
+		}
+		add_war_support = 0.05
+	}
+	option = {
+		name = FRA_german_war.decision.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 5
+				GER = { has_country_flag = GER_bordeaux_signed }
+			}
+		}
+		clr_country_flag = FRA_hesitating_on_war
+		set_country_flag = FRA_stayed_out_of_war
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = ITA_german_war.1
+	title = ITA_german_war.1.t
+	desc = ITA_german_war.1.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = ITA_german_war.1.a
+		add_political_power = 25
+		add_stability = -0.01
+	}
+}
+
+country_event = {
+	id = ITA_german_war.decision
+	title = ITA_german_war.decision.t
+	desc = ITA_german_war.decision.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = ITA_german_war.decision.a
+		ai_chance = { base = 3 }
+		clr_country_flag = ITA_hesitating_on_war
+		SOV = { add_to_faction = ITA }
+		if = {
+			limit = { NOT = { has_war_with = GER } }
+			declare_war_on = {
+				target = GER
+				type = take_territory
+			}
+		}
+		add_war_support = 0.05
+	}
+	option = {
+		name = ITA_german_war.decision.b
+		ai_chance = { base = 1 }
+		clr_country_flag = ITA_hesitating_on_war
+		set_country_flag = ITA_stayed_out_of_war
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = SCO_liberation.german_feelers
+	title = SCO_liberation.german_feelers.t
+	desc = SCO_liberation.german_feelers.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = SCO_liberation.german_feelers.a
+		add_political_power = 25
+		set_country_flag = SCO_german_contact_open
+	}
+	option = {
+		name = SCO_liberation.german_feelers.b
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = SCO_liberation.german_arms
+	title = SCO_liberation.german_arms.t
+	desc = SCO_liberation.german_arms.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = SCO_liberation.german_arms.a
+		add_war_support = 0.03
+		army_experience = 5
+	}
+	option = {
+		name = SCO_liberation.german_arms.b
+		add_stability = 0.02
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = SCO_liberation.edinburgh_pact
+	title = SCO_liberation.edinburgh_pact.t
+	desc = SCO_liberation.edinburgh_pact.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = SCO_liberation.edinburgh_pact.a
+		add_stability = 0.03
+		add_war_support = 0.03
+		set_country_flag = SCO_edinburgh_pact_signed
+	}
+}
+
+country_event = {
+	id = FRA_german_overture.covert
+	title = FRA_german_overture.covert.t
+	desc = FRA_german_overture.covert.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = FRA_german_overture.covert.a
+		add_political_power = 25
+		set_country_flag = FRA_german_contact_open
+	}
+	option = {
+		name = FRA_german_overture.covert.b
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = FRA_german_overture.1
+	title = FRA_german_overture.1.t
+	desc = FRA_german_overture.1.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = FRA_german_overture.1.a
+		add_political_power = 25
+		add_war_support = 0.02
+	}
+	option = {
+		name = FRA_german_overture.1.b
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = SOV_german_war.1
+	title = SOV_german_war.1.t
+	desc = SOV_german_war.1.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = SOV_german_war.1.a
+		add_war_support = 0.05
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = SOV_german_ceasefire.1
+	title = SOV_german_ceasefire.1.t
+	desc = SOV_german_ceasefire.1.d
+	picture = GFX_news_event_001
+	is_triggered_only = yes
+	option = {
+		name = SOV_german_ceasefire.1.a
+		add_stability = 0.03
+		add_war_support = -0.03
+		set_country_flag = SOV_accepts_ceasefire_talks
+	}
+	option = {
+		name = SOV_german_ceasefire.1.b
+		add_war_support = 0.03
+		add_stability = -0.02
+	}
+}

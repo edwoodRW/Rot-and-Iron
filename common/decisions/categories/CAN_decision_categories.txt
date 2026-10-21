@@ -1,0 +1,10 @@
+CAN_political_management = {
+	picture = "gfx/interface/icons/decision_categories/intelligence.dds"
+	cost = 0
+	activation = {
+		tag = CAN
+	}
+	visible = {
+		tag = CAN
+	}
+}

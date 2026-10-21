@@ -1,0 +1,26 @@
+scripted_gui = {
+	country_splash_window = {
+		context_type = player_context
+		window_name = "country_splash_window"
+
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			has_variable = ROOT.country_splash_variable
+		}
+
+		properties = {
+			country_splash_picture = {
+				image = "[ROOT.GetCountrySplashPicture]"
+			}
+		}
+
+		effects = {
+			country_splash_close_button_click = {
+				clear_variable = ROOT.country_splash_variable
+			}
+		}
+	}
+}

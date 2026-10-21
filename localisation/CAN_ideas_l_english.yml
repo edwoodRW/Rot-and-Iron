@@ -1,0 +1,72 @@
+﻿l_english:
+
+###########################################################
+# IDEA NAMES AND DESCRIPTIONS
+###########################################################
+
+ CAN_mogg_deputy_pm: "The Deputy Prime Minister"
+ CAN_mogg_deputy_pm_desc: "Jacob Rees-Mogg serves as Deputy Prime Minister, wielding the considerable financial and political resources of the British exile community to push Canada toward the Reclamation. His presence in cabinet is a constant source of tension — a government within a government, answerable to the Crown rather than to Ottawa."
+
+ CAN_boris_deputy_pm: "The Exile Who Stayed"
+ CAN_boris_deputy_pm_desc: "Boris Johnson serves as Deputy Prime Minister — the British exile who chose Canada over the Reclamation. His appointment represents a fundamental shift in the coalition's character. Where Rees-Mogg looked east across the Atlantic, Johnson looks at the country around him and calls it home."
+
+ CAN_sovereignty_declared: "The Sovereignty Address"
+ CAN_sovereignty_declared_desc: "Prime Minister Black's declaration that Canada's foreign policy will serve Canadian interests — and Canadian interests alone — has changed the political weather overnight. For the first time in twenty-seven years, the government of this country has said clearly what it is and what it is not. The world is still deciding what to make of it."
+
+ CAN_detroit_framework: "The Detroit Agreement"
+ CAN_detroit_framework_desc: "The framework agreed between Ottawa and Washington in Detroit has normalised relations between Canada and the United States for the first time since the Great Exile. It is not a treaty. It commits neither side to very much. But it opens a door that has been closed for a generation, and both sides intend to walk through it."
+
+ CAN_conscription_legislation: "The Conscription Legislation"
+ CAN_conscription_legislation_desc: "Pushed through Parliament by Deputy Prime Minister Rees-Mogg's Imperial Restoration Party, the Military Service Extension Act allows the government to conscript Canadian citizens for overseas military service. Framed as a defensive necessity, it is widely understood as the legal foundation for the Reclamation crusade. Ordinary Canadians are not pleased."
+
+ CAN_industrial_stability: "Hamilton Settlement"
+ CAN_industrial_stability_desc: "The binding arbitration agreement that ended the eight-month lockout at Hamilton's steel works has restored industrial peace to Canada's manufacturing heartland. Workers returned to their furnaces. Production resumed. And the government that brokered the deal earned a rare word of cautious approval from Charlie Angus."
+
+ CAN_opposition_dialogue: "Across the Aisle"
+ CAN_opposition_dialogue_desc: "A quiet conversation in a Parliament Hill corridor. No cameras. No aides. Two men who agree on very little discovering, to their mutual surprise, that they are both trying to do right by the same country. It is a small thing. But small things sometimes grow."
+
+ CAN_minority_government_idea: "Minority Government"
+ CAN_minority_government_idea_desc: "The Imperial Restoration Party's withdrawal from the coalition has left Black's government dependent on the support of parties it does not control. Every vote is a negotiation. Every policy is a compromise. The government functions — but only just, and at considerable cost to its ability to act decisively."
+
+ CAN_saganash_cabinet_idea: "Saganash at the Table"
+ CAN_saganash_cabinet_idea_desc: "Romeo Saganash's appointment to full cabinet marks the first time an Indigenous leader has held genuine executive authority in the history of the Canadian state. The Indigenous Military Council has stood down its territorial resistance operations. The Northern Shield — a defence network built on Indigenous territorial knowledge — is being integrated into Canada's formal military structure."
+
+ CAN_saganash_northern_affairs_idea: "Ministry of Northern Affairs"
+ CAN_saganash_northern_affairs_idea_desc: "Romeo Saganash leads the newly created Ministry of Northern Affairs — a genuine portfolio with real authority over the vast northern territories that cover most of Canada's landmass. It is not the full cabinet seat he asked for. But it is more than anyone has offered before, and he intends to use it."
+
+ CAN_indigenous_consultation_active_idea: "Consultation in Progress"
+ CAN_indigenous_consultation_active_idea_desc: "For the first time the government of Canada is formally consulting with Indigenous communities about the use of their territories for military and industrial purposes. The process is slow, expensive, and frequently uncomfortable. It is also, quietly, the most significant political development in Canadian history."
+
+ CAN_reclamation_war_economy: "The Reclamation Economy"
+ CAN_reclamation_war_economy_desc: "Every factory, every mill, every yard of Canadian steel has been redirected toward a single purpose. Rees-Mogg's total war economy is extraordinary in its ambition and brutal in its execution. Canada's industrial output has never been higher. Neither has the resentment of the Canadians who are living it."
+
+ CAN_halifax_superdocks: "Halifax — Fortress of the Atlantic"
+ CAN_halifax_superdocks_desc: "The expanded Halifax shipyards are the largest military harbour in the Western Hemisphere. Dry-docks capable of laying down multiple aircraft carriers simultaneously. Berths for a hundred warships. The city has been transformed — consumed — by the weight of the Reclamation's ambition. Whatever happens next, Halifax will never be the same."
+
+###########################################################
+# OPINION MODIFIER NAMES
+###########################################################
+
+ CAN_sovereignty_positive: "Sovereign and Serious"
+ CAN_sovereignty_positive_desc: "Canada's declaration of sovereignty has impressed Washington. For the first time in twenty-seven years this looks like a government making decisions for itself rather than for exiled British royalty."
+
+ CAN_sovereignty_cautious: "Watching Ottawa"
+ CAN_sovereignty_cautious_desc: "Canada's address was measured — perhaps too measured. Washington is watching to see whether the words mean anything."
+
+ CAN_open_to_talks: "Willing to Talk"
+ CAN_open_to_talks_desc: "Canada has opened diplomatic channels with the United States. After twenty-seven years of hostility this is no small thing."
+
+ CAN_trade_talks_scheduled: "Trade Talks Scheduled"
+ CAN_trade_talks_scheduled_desc: "Canadian and American trade representatives will meet within ninety days. The economic relationship between the two countries is thawing."
+
+ CAN_detroit_agreement: "The Detroit Agreement"
+ CAN_detroit_agreement_desc: "The framework agreed between Ottawa and Washington has transformed the relationship between the two countries. The long years of hostility are not forgotten — but they are, perhaps, behind us."
+
+ CAN_angus_deal_positive: "Workers Come First"
+ CAN_angus_deal_positive_desc: "Canada's decision to repeal conscription legislation and resolve the Hamilton lockout has impressed Turner's administration. This looks like a government that cares about its own people."
+
+ CAN_election_uncertainty: "Canadian Election"
+ CAN_election_uncertainty_desc: "Canada has called an election. Washington is waiting to see who wins before deciding how to proceed."
+
+ CAN_carney_played: "Played by Ottawa"
+ CAN_carney_played_desc: "Mark Carney's Continentalist Party is privately furious after Black used the threat of CCF negotiations to extract better terms. Trust between the two parties has been damaged."

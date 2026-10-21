@@ -1,0 +1,62 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_USA_Turner_Survives"
+		texturefile = "gfx/interface/goals/USA/Turner_Survives.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_Coup_Succeeds"
+		texturefile = "gfx/interface/goals/USA/coup_succeeds.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_The_Reckoning"
+		texturefile = "gfx/interface/goals/USA/The_Reckoning.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_A_Party_Remade"
+		texturefile = "gfx/interface/goals/USA/A_Party_Remade.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_The_Junta_Consolidates"
+		texturefile = "gfx/interface/goals/USA/The_Junta_Consolidates.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_Martial_Law_Made_Permanent"
+		texturefile = "gfx/interface/goals/USA/Martial_Law_Made_Permanent.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_Operation_Pacific_Storm"
+		texturefile = "gfx/interface/goals/USA/Operation_Pacific_Storm.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_The_Southern_Cone_Question"
+		texturefile = "gfx/interface/goals/USA/The_Southern_Cone_Question.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_The_World_Finds_Us"
+		texturefile = "gfx/interface/goals/USA/The_World_Finds_Us.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_The_Wall_Holds"
+		texturefile = "gfx/interface/goals/USA/The_wall_holds.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_The_Two_Front_Question"
+		texturefile = "gfx/interface/goals/USA/The_Two_Front_Question.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_Total_Pacific_Mobilization"
+		texturefile = "gfx/interface/goals/USA/Total_Pacific_Mobilization.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_Stabilize_and_Withdraw"
+		texturefile = "gfx/interface/goals/USA/Stabilize_and_Withdraw.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_The_Pacific_Century"
+		texturefile = "gfx/interface/goals/USA/The_Pacific_Century.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_An_Uneasy_Truce"
+		texturefile = "gfx/interface/goals/USA/An_Uneasy_Truce.dds"
+	}
+}

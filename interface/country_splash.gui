@@ -1,0 +1,85 @@
+guiTypes = {
+	containerWindowType = {
+		name = "country_splash_window"
+
+		size = { width = 960 height = 620 }
+		orientation = center
+		origo = center
+		clipping = no
+		moveable = yes
+
+		background = {
+			name = "country_splash_bg"
+			quadTextureSprite = "GFX_tiled_window"
+		}
+
+		containerWindowType = {
+			name = "country_splash_header_window"
+			position = { x = 12 y = 12 }
+			size = { width = 936 height = 44 }
+			clipping = no
+
+			instantTextBoxType = {
+				name = "country_splash_header"
+				position = { x = 0 y = 0 }
+				format = center
+				maxWidth = 936
+				font = "hoi_30header"
+				text = "[ROOT.GetCountrySplashHeader]"
+			}
+		}
+
+		containerWindowType = {
+			name = "country_splash_picture_window"
+			position = { x = 14 y = 64 }
+			size = { width = 260 height = 500 }
+			clipping = no
+
+			background = {
+				name = "country_splash_picture_bg"
+				quadTextureSprite = "GFX_tiled_window"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "country_splash_picture"
+				position = { x = 10 y = 10 }
+				spriteType = "GFX_dog"
+			}
+		}
+
+		containerWindowType = {
+			name = "country_splash_description_window"
+			position = { x = 286 y = 64 }
+			size = { width = 660 height = 500 }
+
+			background = {
+				name = "country_splash_description_bg"
+				quadTextureSprite = "GFX_tiled_window"
+				position = { x = 0 y = 0 }
+			}
+
+			instantTextBoxType = {
+				name = "country_splash_description"
+				position = { x = 12 y = 12 }
+				format = left
+				maxWidth = 636
+				maxHeight = 470
+				font = "hoi_18"
+				text = "[ROOT.GetCountrySplashDescription]"
+				scrollbartype = "standardtext_slider"
+			}
+		}
+
+		buttonType = {
+			name = "country_splash_close_button"
+			position = { x = 406 y = 576 }
+			quadTextureSprite = "GFX_button_148x34"
+			buttonText = "[ROOT.GetCountrySplashCloseButton]"
+			buttonFont = "hoi_20b"
+			orientation = "UPPER_LEFT"
+			clicksound = click_close
+			oversound = ui_menu_over
+		}
+	}
+}

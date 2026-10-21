@@ -1,0 +1,93 @@
+l_english:
+
+CAN_black_mogg_balance:0 "The Black-Mogg Rivalry"
+political_decisions:0 "Cabinet Influence"
+political_decisions_desc:0 "Conrad Black's government is balanced against Jacob Rees-Mogg's inner network of imperial loyalists. Use these decisions to shore up Black's hand, blunt Mogg's caucus operations, and keep the coalition from slipping away."
+
+CAN_black_side:0 "Black"
+CAN_mogg_side:0 "Mogg"
+CAN_coalition_balance_range:0 "A Cabinet in Tension"
+CAN_black_steady_hand:0 "Black Steadies the Coalition"
+CAN_black_cabinet_control:0 "Black Controls the Cabinet"
+CAN_black_dominance:0 "Black Dominates Ottawa"
+CAN_mogg_inner_circle:0 "Mogg Builds His Bloc"
+CAN_mogg_shadow_cabinet:0 "Mogg's Shadow Cabinet"
+CAN_mogg_dominance:0 "Mogg Dominates the Coalition"
+
+CAN_political_management:0 "Political Management"
+CAN_political_management_desc:0 "Manage the government's political position through backbench management, patronage networks, and ministerial appointments."
+
+CAN_manage_backbench_decision:0 "Secure the Backbench"
+CAN_manage_backbench_decision_desc:0 "The coalition is fragile. Individual MPs are receiving calls from rival factions. Patronage must be distributed, committees must be filled, loyalty must be secured.\n\n§GCost: 30 Political Power§!\n§GEffect: +10% Stability, +75 Political Power§!"
+
+CAN_patronage_network_decision:0 "Expand Patronage Network"
+CAN_patronage_network_decision_desc:0 "The government must distribute resources and opportunities to maintain the loyalty of its backbench MPs. Committee positions, government contracts, and constituency projects are the currency of survival.\n\n§GCost: 25 Political Power§!\n§GEffect: +5% Stability, +100 Political Power§!"
+
+CAN_ministerial_positions_decision:0 "Distribute Ministerial Positions"
+CAN_ministerial_positions_decision_desc:0 "Ministerial positions are valuable rewards for loyal MPs. By strategically distributing them, Black can shore up support in key regions and factions.\n\n§GCost: 25 Political Power§!\n§GEffect: +8% Stability, +75 Political Power§!"
+
+CAN_counter_mogg_lobbying_decision:0 "Counter Rees-Mogg's Influence"
+CAN_counter_mogg_lobbying_decision_desc:0 "The Imperial Restoration Party's influence must be contained before it becomes an existential threat to the government. Black will use his media empire and government resources to ensure the message stays on track.\n\n§GCost: 25 Political Power§!\n§GEffect: -15 Mogg Faction Influence, +5% Stability, +50 Political Power§!"
+
+CAN_media_control_decision:0 "Control the Narrative"
+CAN_media_control_decision_desc:0 "Rees-Mogg's influence must be countered before it becomes an existential threat to the government. Black will use his media empire and government resources to ensure the message stays on track.\n\n§GCost: 20 Political Power§!\n§GEffect: +75 Political Power, +5% Stability, -10 Mogg Faction Influence§!"
+
+CAN_boris_mediation_decision:0 "Boris's Mediation"
+CAN_boris_mediation_decision_desc:0 "Boris Johnson is uniquely positioned to mediate between the competing factions. His popularity gives him credibility, and his eccentricity makes him seem less threatening to Rees-Mogg's supporters.\n\n§GCost: 20 Political Power§!\n§GEffect: +50 Political Power, +8% Stability, +10 Boris Loyalty§!"
+
+CAN_boris_naval_response_decision:0 "Expand the Royal Canadian Navy"
+CAN_boris_naval_response_decision_desc:0 "Boris Johnson believes Canada's future lies on the seas. With the Reclamation either delayed or abandoned, the Royal Canadian Navy must be expanded to protect Dominion interests and project power in the Atlantic.\n\n§GCost: 35 Political Power§!\n§GEffect: +2 Dockyard Construction, +10% War Support, +75 Political Power§!"
+
+CAN_imperial_fleet_decision:0 "Build the Imperial Fleet"
+CAN_imperial_fleet_decision_desc:0 "Boris Johnson has a vision of Canada as a naval power to be reckoned with. Battleships, aircraft carriers, cruisers — a fleet that can project power across the Atlantic.\n\n§GCost: 30 Political Power§!\n§GEffect: +1 Dockyard Construction, +5% War Support, +50 Political Power§!"
+
+CAN_dominion_network_decision:0 "The Dominion Network"
+CAN_dominion_network_decision_desc:0 "A comprehensive infrastructure project to connect Canada's major cities, improve logistics, and enable rapid military movement across the Dominion.\n\n§GCost: 30 Political Power§!\n§GEffect: +2 Infrastructure Construction, +8% War Support, +75 Political Power§!"
+
+CAN_northern_shield_focus_decision:0 "The Northern Shield"
+CAN_northern_shield_focus_decision_desc:0 "Romeo Saganash's Northern Affairs Ministry has proposed a revolutionary approach to northern defense: integrate Indigenous knowledge, invest in northern infrastructure, and defend the Arctic through communities that have lived there for millennia.\n\n§GCost: 30 Political Power§!\n§GEffect: +1 Infrastructure Construction, +5% Stability, +75 Political Power§!"
+
+CAN_indigenous_infrastructure_decision:0 "Indigenous Infrastructure"
+CAN_indigenous_infrastructure_decision_desc:0 "The Northern Affairs Ministry will invest in infrastructure that serves Indigenous communities while strengthening Canada's Arctic position. Roads, communications, and housing projects in the North.\n\n§GCost: 25 Political Power§!\n§GEffect: +2 Infrastructure Construction, +8% Stability, +50 Political Power§!"
+
+CAN_arctic_sovereignty_decision:0 "Arctic Sovereignty"
+CAN_arctic_sovereignty_decision_desc:0 "Canada must assert its sovereignty over the Arctic through presence and capability. Bases, radar stations, and patrol networks will ensure the North remains Canadian.\n\n§GCost: 25 Political Power§!\n§GEffect: +1 Infrastructure Construction, +5% War Support, +75 Political Power§!"
+
+CAN_angus_nationalization_response_decision:0 "Nationalize Key Industries"
+CAN_angus_nationalization_response_decision_desc:0 "The CCF has drafted legislation to bring Canada's most vital industries under state control. Steel, mining, energy — the foundations of our economy will serve the people, not private profit.\n\n§GCost: 35 Political Power§!\n§GEffect: +2 Industrial Complex Construction, +1 Infrastructure Construction, +10% Social Democracy Popularity, +75 Political Power§!"
+
+CAN_worker_councils_decision:0 "Establish Worker Councils"
+CAN_worker_councils_decision_desc:0 "Angus believes that democracy shouldn't stop at the ballot box. Workers should have a say in how their workplaces are run. Worker councils will give ordinary Canadians real power over their economic lives.\n\n§GCost: 30 Political Power§!\n§GEffect: +1 Industrial Complex Construction, +5% Stability, +50 Political Power§!"
+
+CAN_public_works_decision:0 "Launch Public Works Program"
+CAN_public_works_decision_desc:0 "The government will put Canadians to work building the infrastructure of the future. Roads, bridges, public housing — projects that serve the public good rather than private profit.\n\n§GCost: 30 Political Power§!\n§GEffect: +2 Infrastructure Construction, +8% Stability, +75 Political Power§!"
+
+CAN_carney_reform_program_decision:0 "Implement Carney's Reforms"
+CAN_carney_reform_program_decision_desc:0 "Carney's team has delivered the framework. Now comes the harder part: converting trade normalization and market confidence into a functioning Canadian recovery programme.\n\n§GCost: 35 Political Power§!\n§GEffect: +2 Industrial Complex Construction, +100 Political Power, triggers the first Carney implementation event§!"
+
+CAN_deregulate_markets_decision:0 "Deregulate the Markets"
+CAN_deregulate_markets_decision_desc:0 "Licensing rules, capital controls, and old wartime barriers are choking investment. Carney wants them cut back fast, before the window closes.\n\n§GCost: 30 Political Power§!\n§GEffect: +1 Industrial Complex Construction, +3% Stability, +50 Political Power§!"
+
+CAN_foreign_investment_decision:0 "Attract Foreign Investment"
+CAN_foreign_investment_decision_desc:0 "With the framework in place and the domestic rules loosened, Ottawa can actively court outside capital. The gains will be immediate, and the political consequences will not be.\n\n§GCost: 35 Political Power§!\n§GEffect: +2 Industrial Complex Construction, +5% Stability, +75 Political Power§!"
+
+CAN_black_implementation_decision:0 "Fortress North America"
+CAN_black_implementation_decision_desc:0 "Black's statecraft is no longer theoretical. Border infrastructure, hardened logistics, and visible domestic resilience must now be built into the Canadian landscape.\n\n§GCost: 35 Political Power§!\n§GEffect: +2 Infrastructure Construction, +1 Land Anti-Air Construction, triggers the first Black implementation event§!"
+
+CAN_north_american_fortress_decision:0 "North American Fortress"
+CAN_north_american_fortress_decision_desc:0 "Canada must become expensive to threaten and difficult to coerce. Air defenses, redundancy, and hardened movement corridors are the foundation of that doctrine.\n\n§GCost: 30 Political Power§!\n§GEffect: +2 Land Anti-Air Construction, +1 Infrastructure Construction, +5% War Support§!"
+
+CAN_domestic_industry_decision:0 "Domestic Industry"
+CAN_domestic_industry_decision_desc:0 "Strategic autonomy requires factories, not speeches. Black's government will expand domestic productive capacity so Ottawa can arm and supply itself without waiting on anyone else.\n\n§GCost: 30 Political Power§!\n§GEffect: +2 Industrial Complex Construction, +75 Political Power§!"
+
+CAN_fortress_economy_decision:0 "The Fortress Economy"
+CAN_fortress_economy_decision_desc:0 "The end-state of the Black programme is a Canada that can feed, defend, and equip itself. This decision locks in the final economic architecture of that strategy.\n\n§GCost: 35 Political Power§!\n§GEffect: grants the Fortress Economy idea, +5% Stability, +100 Political Power§!"
+
+CAN_mogg_implementation_focus_decision:0 "The Great Armada"
+CAN_mogg_implementation_focus_decision_desc:0 "The Reclamation requires a fleet of unprecedented scale. Every shipyard, every dock, every resource must be dedicated to building the armada that will sail for home.\n\n§GCost: 40 Political Power§!\n§GEffect: +2 Dockyard Construction, +15% War Support, +75 Political Power§!"
+
+CAN_amphibious_training_decision:0 "Amphibious Training"
+CAN_amphibious_training_decision_desc:0 "The liberation of Britain will require expertise in amphibious warfare. Canadian forces must train for beach landings, coastal assaults, and naval integration.\n\n§GCost: 30 Political Power§!\n§GEffect: +8% War Support, +50 Political Power§!"
+
+CAN_entente_contribution_decision:0 "Entente Contribution"
+CAN_entente_contribution_decision_desc:0 "Canada will lead the Entente's liberation effort, but our allies must contribute their share. Military cooperation, resource sharing, and joint planning will make the invasion of Britain possible.\n\n§GCost: 30 Political Power§!\n§GEffect: +10% War Support, +75 Political Power§!"

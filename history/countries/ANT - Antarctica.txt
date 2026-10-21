@@ -1,0 +1,62 @@
+capital = 1083
+set_research_slots = 0
+set_stability = 1.0
+set_war_support = 0.0
+set_technology = {
+}
+
+1939.1.1 = {
+}
+
+add_ideas = frozen_continent
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities={
+	democratic = 0
+	fascism = 0
+	communism = 0
+	neutrality = 100
+}
+
+
+create_country_leader = {
+	name = "-"
+	desc = ""
+	picture = "Portrait_Antarctica.tga"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "-"
+	desc = ""
+	picture = "Portrait_Antarctica.tga"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "-"
+	desc = ""
+	picture = "Portrait_Antarctica.tga"
+	expire = "1965.1.1"
+	ideology = anarchist_communism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "-"
+	desc = ""
+	picture = "Portrait_Antarctica.tga"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+	}
+}

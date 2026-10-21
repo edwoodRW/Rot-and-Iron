@@ -1,0 +1,1067 @@
+ideas = {
+	country = {
+
+		# ===== Starting ideas =====
+
+		USA_symington_apparatus = {
+			picture = GFX_idea_USA_symington_apparatus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				agency_upgrade_time = -0.25
+				enemy_operative_detection_chance = 0.1
+				stability_weekly = -0.0005
+			}
+		}
+
+		USA_hollowed_institutions = {
+			picture = GFX_idea_USA_hollowed_institutions
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_gain = -0.05
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		USA_shadow_network = {
+			picture = GFX_idea_USA_shadow_network
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				operative_slot = 1
+				intel_network_gain_factor = 0.2
+			}
+		}
+
+		USA_broken_unions = {
+			picture = GFX_idea_USA_broken_unions
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.1
+				conscription_factor = -0.05
+			}
+		}
+
+		USA_unbombed_giant = {
+			picture = GFX_idea_USA_unbombed_giant
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.15
+				conscription_factor = 0.1
+				training_time_factor = 0.2
+			}
+		}
+
+		USA_ocean_shield = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				navy_defence_factor = 0.1
+				army_defence_factor = 0.05
+				send_volunteer_divisions_required = 0.1
+			}
+		}
+
+		USA_divided_congress = {
+			picture = GFX_idea_USA_divided_congress
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				decision_cost_modifier = 0.15
+				political_power_gain = -0.1
+			}
+		}
+
+		USA_silent_pacific_partner = {
+			picture = GFX_idea_USA_silent_pacific_partner
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				# Relations effects are applied in on_add (see opinion modifiers file)
+				# so this idea needs no numeric modifier of its own.
+			}
+			on_add = {
+				# Change the tags below if your Japan / China tags differ
+				JAP = {
+					add_opinion_modifier = { target = USA modifier = USA_silent_partner_japan }
+				}
+				CHI = {
+					add_opinion_modifier = { target = USA modifier = USA_silent_partner_china }
+				}
+			}
+		}
+
+		# ===== Policy Dial ideas (Day 21 address) =====
+
+		USA_arsenal_of_the_coalition = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		USA_fortress_mentality = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				send_volunteer_divisions_required = 10
+			}
+		}
+
+		USA_atlantic_command = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.03
+			}
+		}
+
+		USA_atlantic_caution = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				army_org_factor = 0.02
+			}
+		}
+
+		USA_contractual_oversight = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = 0.03
+				industrial_capacity_factory = -0.03
+			}
+		}
+
+		USA_ceasefire_guarantor = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.04
+				war_support_factor = -0.03
+				political_power_gain = 0.03
+			}
+		}
+
+		USA_ceasefire_compromise = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		USA_total_war_economy = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.1
+				conscription_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		USA_reconstruction_mission = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				stability_factor = 0.02
+			}
+		}
+
+		USA_conditional_aid = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = -0.02
+				research_speed_factor = 0.03
+			}
+		}
+
+		USA_hemispheric_union = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.08
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_hemispheric_defense = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.06
+				stability_factor = 0.04
+			}
+		}
+
+		USA_pacific_coordination = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				naval_coordination = 0.08
+				naval_doctrine_cost_factor = -0.05
+			}
+		}
+
+		USA_pacific_mobilization = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				naval_coordination = 0.1
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.04
+			}
+		}
+
+		USA_pacific_withdrawal = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				naval_coordination = -0.05
+				stability_factor = 0.04
+				political_power_gain = 0.03
+			}
+		}
+
+		USA_reformed_union = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.03
+			}
+		}
+
+		USA_independent_recovery = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_soviet_thaw = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		USA_soviet_grain_dependency = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		USA_hemispheric_partner = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				stability_factor = 0.03
+			}
+		}
+
+		USA_argentine_unrest = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.1
+				war_support_factor = -0.05
+			}
+		}
+
+		USA_atlantic_shield = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.08
+				land_reinforce_rate = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		USA_long_watch_readiness = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				max_planning = 0.1
+				war_support_factor = 0.05
+			}
+		}
+
+		USA_eastern_trade_network = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		USA_eastern_shield = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.06
+				stability_factor = 0.04
+			}
+		}
+
+		USA_martial_law_mobilization = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				army_attack_factor = 0.05
+				land_reinforce_rate = 0.05
+				political_power_gain = -0.05
+			}
+		}
+
+		USA_cold_peace_mobilization = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.08
+				army_attack_factor = 0.04
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		USA_junta_security_state = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.08
+				stability_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+
+		USA_junta_civilian_facade = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.08
+				political_power_gain = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		USA_post_civil_war_reconstruction = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = 0.05
+				political_power_gain = 0.03
+			}
+		}
+
+		USA_national_security_directorate = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.03
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		USA_civic_security_program = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				enemy_operative_detection_chance = 0.15
+				resistance_growth = -0.1
+				political_power_gain = -0.03
+			}
+		}
+
+		USA_loyalty_bureaus = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.03
+				war_support_factor = 0.05
+				political_power_gain = 0.05
+				encryption = 0.05
+			}
+		}
+
+		USA_america_under_watch = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				enemy_operative_detection_chance = 0.2
+				war_support_factor = 0.05
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+
+		USA_atlantic_perimeter = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.05
+				navy_org = 0.05
+				war_support_factor = 0.03
+			}
+		}
+
+		USA_continental_arsenal = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.08
+				production_speed_arms_factory_factor = 0.08
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		USA_hemisphere_armed = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				conscription_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		USA_christian_national_order = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.05
+				drift_defence_factor = 0.05
+			}
+		}
+
+		USA_christian_civic_code = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.03
+				civilian_intel_to_others = -5
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		USA_one_party_christian_state = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.08
+				political_power_gain = 0.08
+				consumer_goods_factor = 0.08
+				research_speed_factor = -0.03
+			}
+		}
+
+		USA_christian_hemisphere = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				war_support_factor = 0.04
+				army_org_factor = 0.03
+			}
+		}
+
+		USA_national_service_act = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				army_defence_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		USA_americas_covenant = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.07
+				army_defence_factor = 0.07
+				war_support_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		USA_theocratic_public_life = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.05
+				political_power_gain = 0.05
+				research_speed_factor = -0.03
+			}
+		}
+
+		USA_corporatist_charters = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.08
+				production_speed_industrial_complex_factor = 0.05
+				political_power_gain = 0.03
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		USA_corporatist_reconstruction = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.08
+				production_speed_arms_factory_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+
+		USA_forward_defense_network = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.08
+				army_org_factor = 0.05
+				navy_org = 0.05
+				war_support_factor = 0.03
+			}
+		}
+
+		USA_fortress_hemisphere = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.08
+				army_defence_factor = 0.08
+				conscription_factor = 0.08
+				stability_factor = -0.03
+			}
+		}
+
+		USA_hemispheric_economy = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.08
+				production_speed_arms_factory_factor = 0.05
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_civilian_charter = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				war_support_factor = -0.03
+			}
+		}
+
+		USA_civilian_legislature = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.08
+				stability_factor = 0.04
+				drift_defence_factor = 0.05
+			}
+		}
+
+		USA_civilian_command = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.03
+				army_defence_factor = 0.04
+				stability_factor = 0.03
+			}
+		}
+
+		USA_constitutional_reform = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.06
+				political_power_gain = 0.05
+				war_support_factor = -0.03
+			}
+		}
+
+		USA_constitutional_republic = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				political_power_gain = 0.08
+				research_speed_factor = 0.03
+			}
+		}
+
+		USA_reconstruction_corps = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.08
+				production_speed_infrastructure_factor = 0.08
+				stability_factor = 0.03
+			}
+		}
+
+		USA_public_works_program = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.06
+				production_speed_infrastructure_factor = 0.1
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		USA_labor_industry_compact = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				stability_factor = 0.04
+			}
+		}
+
+		USA_recovery_dividend = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.08
+				production_speed_arms_factory_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_truth_commission = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.04
+				war_support_factor = -0.03
+			}
+		}
+
+		USA_civil_liberties = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.03
+				enemy_operative_detection_chance = -0.05
+			}
+		}
+
+		USA_democratic_reintegration = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				research_speed_factor = 0.03
+			}
+		}
+
+		USA_revolutionary_reconstruction = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.05
+				production_speed_industrial_complex_factor = 0.04
+			}
+		}
+
+		USA_public_banking = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.08
+				production_speed_industrial_complex_factor = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		USA_public_ownership = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.08
+				production_speed_industrial_complex_factor = 0.08
+				consumer_goods_factor = 0.03
+				research_speed_factor = 0.02
+			}
+		}
+
+		USA_five_year_plan = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.08
+				production_factory_efficiency_gain_factor = 0.05
+				research_speed_factor = 0.03
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		USA_planned_economy = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.12
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = 0.04
+			}
+		}
+
+		USA_workers_councils = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.03
+				war_support_factor = 0.03
+			}
+		}
+
+		USA_guaranteed_employment = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				recruitable_population_factor = 0.05
+				production_speed_industrial_complex_factor = 0.06
+				stability_factor = 0.04
+			}
+		}
+
+		USA_universal_provision = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				consumer_goods_factor = 0.05
+				political_power_gain = 0.03
+			}
+		}
+
+		USA_workers_republic = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.06
+				war_support_factor = 0.05
+				research_speed_factor = 0.03
+			}
+		}
+
+		USA_counterplot_investigations = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				enemy_operative_detection_chance = 0.15
+				stability_factor = -0.02
+				political_power_gain = 0.03
+			}
+		}
+
+		USA_party_security_bureau = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				enemy_operative_detection_chance = 0.2
+				encryption = 1
+				war_support_factor = 0.05
+				political_power_gain = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		USA_revolutionary_discipline = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				war_support_factor = 0.08
+				political_power_gain = 0.05
+				research_speed_factor = -0.02
+			}
+		}
+
+		USA_vanguard_state = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.08
+				political_power_gain = 0.08
+				consumer_goods_factor = 0.04
+				research_speed_factor = -0.03
+			}
+		}
+
+				USA_rev_debt_jubilee = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.04
+				consumer_goods_factor = -0.03
+			}
+		}
+ 
+		USA_rev_public_grid = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				stability_factor = 0.02
+			}
+		}
+ 
+		USA_rev_clean_energy = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.04
+				research_speed_factor = 0.03
+			}
+		}
+ 
+		USA_rev_gigafactories = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+ 
+		USA_rev_green_republic = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.04
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}
+ 
+		USA_rev_public_housing = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.03
+				political_power_factor = 0.03
+			}
+		}
+ 
+		USA_rev_universal_care = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.04
+				war_support_factor = 0.02
+			}
+		}
+ 
+		USA_rev_public_square = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.02
+			}
+		}
+ 
+		USA_rev_security_oversight = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.03
+				political_power_factor = 0.03
+			}
+		}
+ 
+		USA_rev_digital_bill_of_rights = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+ 
+		USA_rev_peoples_guard = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+ 
+		USA_rev_public_arsenal = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.15
+				industrial_capacity_factory = 0.05
+			}
+		}
+ 
+		USA_rev_cyber_command = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+ 
+		USA_rev_democratic_army = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				training_time_factor = -0.1
+			}
+		}
+ 
+		USA_rev_americas_solidarity = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.03
+				political_power_factor = 0.03
+			}
+		}
+ 
+		USA_rev_second_revolution = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+ 
+	}
+
+}
+

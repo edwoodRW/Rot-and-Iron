@@ -1,0 +1,19 @@
+﻿l_english:
+spirit_of_democracy:0 "Wind of Freedom"
+communism_empowered:0 "People's Power"
+fascism_will:0 "Fascism will"
+authoritarian_spirit:0 "Legal Authority"
+elections_enabled:0 "Elections Allowed"
+elections_enabled_desc:0 "This country allowed elections."
+elections_banned:0 "Elections Banned"
+elections_banned_desc:0 "This country has banned elections."
+
+fascist_strikes:0 "Fascist protests"
+fascist_strikes_desc:0 "§RBecause of our recent actions, the fascist party began actively sabotaging the supply of the army!§!"
+communist_strikes:0 "Communist protests"
+communist_strikes_desc:0 "§RBecause of our recent actions, the Communist Party has started actively sabotaging production!§!"
+democrats_strikes:0 "Democratic protests"
+democrats_strikes_desc:0 "§RBecause of our recent actions, the Democratic Party has begun to actively question our power and help the resistance in the territory we have seized!§!"
+neutrals_strikes:0 "Neutral protests"
+neutrals_strikes_desc:0 "§RDue to our recent actions, the Neutral Party has started actively forging documents because of this, some processes have slowed down!§!"
+

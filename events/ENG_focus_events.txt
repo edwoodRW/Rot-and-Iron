@@ -1,0 +1,580 @@
+add_namespace = rot_eng_focus
+
+country_event = {
+    id = rot_eng_focus.1
+    title = rot_eng_focus.1.t
+    desc = rot_eng_focus.1.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.1.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.2
+    title = rot_eng_focus.2.t
+    desc = rot_eng_focus.2.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.2.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.3
+    title = rot_eng_focus.3.t
+    desc = rot_eng_focus.3.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.4
+    title = rot_eng_focus.4.t
+    desc = rot_eng_focus.4.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.4.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.5
+    title = rot_eng_focus.5.t
+    desc = rot_eng_focus.5.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.5.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.6
+    title = rot_eng_focus.6.t
+    desc = rot_eng_focus.6.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.6.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.7
+    title = rot_eng_focus.7.t
+    desc = rot_eng_focus.7.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.8
+    title = rot_eng_focus.8.t
+    desc = rot_eng_focus.8.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.8.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.9
+    title = rot_eng_focus.9.t
+    desc = rot_eng_focus.9.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.9.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.10
+    title = rot_eng_focus.10.t
+    desc = rot_eng_focus.10.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.10.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.11
+    title = rot_eng_focus.11.t
+    desc = rot_eng_focus.11.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.11.a
+    }
+
+    option = {
+        name = rot_eng_focus.11.b
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.12
+    title = rot_eng_focus.12.t
+    desc = rot_eng_focus.12.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.12.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.13
+    title = rot_eng_focus.13.t
+    desc = rot_eng_focus.13.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.13.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.14
+    title = rot_eng_focus.14.t
+    desc = rot_eng_focus.14.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.14.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.15
+    title = rot_eng_focus.15.t
+    desc = rot_eng_focus.15.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.15.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.16
+    title = rot_eng_focus.16.t
+    desc = rot_eng_focus.16.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.16.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.17
+    title = rot_eng_focus.17.t
+    desc = rot_eng_focus.17.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.17.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.18
+    title = rot_eng_focus.18.t
+    desc = rot_eng_focus.18.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.18.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.19
+    title = rot_eng_focus.19.t
+    desc = rot_eng_focus.19.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.19.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.20
+    title = rot_eng_focus.20.t
+    desc = rot_eng_focus.20.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.20.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.21
+    title = rot_eng_focus.21.t
+    desc = rot_eng_focus.21.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.21.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.22
+    title = rot_eng_focus.22.t
+    desc = rot_eng_focus.22.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.22.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.23
+    title = rot_eng_focus.23.t
+    desc = rot_eng_focus.23.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.23.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.24
+    title = rot_eng_focus.24.t
+    desc = rot_eng_focus.24.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.24.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.25
+    title = rot_eng_focus.25.t
+    desc = rot_eng_focus.25.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.25.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.26
+    title = rot_eng_focus.26.t
+    desc = rot_eng_focus.26.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.26.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.27
+    title = rot_eng_focus.27.t
+    desc = rot_eng_focus.27.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.27.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.28
+    title = rot_eng_focus.28.t
+    desc = rot_eng_focus.28.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.28.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.29
+    title = rot_eng_focus.29.t
+    desc = rot_eng_focus.29.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.29.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.30
+    title = rot_eng_focus.30.t
+    desc = rot_eng_focus.30.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.30.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.31
+    title = rot_eng_focus.31.t
+    desc = rot_eng_focus.31.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.31.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.32
+    title = rot_eng_focus.32.t
+    desc = rot_eng_focus.32.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.32.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.33
+    title = rot_eng_focus.33.t
+    desc = rot_eng_focus.33.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.34
+    title = rot_eng_focus.34.t
+    desc = rot_eng_focus.34.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.35
+    title = rot_eng_focus.35.t
+    desc = rot_eng_focus.35.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+        declare_war_on = {
+    target = SCO
+    type = annex_everything
+    }
+        set_country_flag = ENG_Scottish_Pacification_Complete
+
+    }
+}
+
+ country_event = {
+    id = rot_eng_focus.45
+    title = rot_eng_focus.45.t
+    desc = rot_eng_focus.45.d
+    picture = GFX_report_event_generic
+    fire_only_once = yes
+    trigger = {
+         
+           NOT = { has_war_with = SCO }
+            OR = {
+                SCO = { exists = no }
+                SCO = { has_capitulated = yes }
+            }
+          
+    }
+      option = {
+        name = OK
+        set_country_flag = ENG_Scottish_Pacification_Complete
+    }
+
+ 
+}
+
+
+
+
+country_event = {
+    id = rot_eng_focus.36
+    title = rot_eng_focus.36.t
+    desc = rot_eng_focus.36.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.37
+    title = rot_eng_focus.37.t
+    desc = rot_eng_focus.37.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.38
+    title = rot_eng_focus.38.t
+    desc = rot_eng_focus.38.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+        transfer_state = 119
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.39
+    title = rot_eng_focus.39.t
+    desc = rot_eng_focus.39.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.40
+    title = rot_eng_focus.40.t
+    desc = rot_eng_focus.40.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+        declare_war_on = {
+            target = IRE
+            type = annex_everything
+        }
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.41
+    title = rot_eng_focus.41.t
+    desc = rot_eng_focus.41.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.42
+    title = rot_eng_focus.42.t
+    desc = rot_eng_focus.42.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.42.a
+        set_country_flag = ENG_starmer_breaks_the_plot
+        set_country_flag = ENG_cardiff_unlocked
+        country_event = { id = rot_eng_focus.43 days = 1 }
+    }
+
+    option = {
+        name = rot_eng_focus.42.b
+        set_country_flag = ENG_army_takes_control_of_the_republic
+        country_event = { id = rot_eng_focus.44 days = 1 }
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.43
+    title = rot_eng_focus.43.t
+    desc = rot_eng_focus.43.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.43.a
+    }
+}
+
+country_event = {
+    id = rot_eng_focus.44
+    title = rot_eng_focus.44.t
+    desc = rot_eng_focus.44.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = rot_eng_focus.44.a
+    }
+}
+

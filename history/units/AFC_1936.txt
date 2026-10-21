@@ -1,0 +1,22 @@
+units = {
+	division = {
+		name = "1st Pan-African Division"
+		location = 772
+		division_template = "Infantry Division (1936)"
+		regiment = {
+			type = "infantry"
+			experience = 0.3
+			strength = 1.0
+		}
+		regiment = {
+			type = "infantry"
+			experience = 0.3
+			strength = 1.0
+		}
+		regiment = {
+			type = "infantry"
+			experience = 0.3
+			strength = 1.0
+		}
+	}
+}

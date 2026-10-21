@@ -1,0 +1,377 @@
+guiTypes = {
+
+	# Country Selection Screen
+	# Rot and Iron mod — adjusted portrait/flag/background layout
+	# Portrait sits top 55% of card, background visible behind
+	# Flag larger and anchored bottom of card
+
+	containerWindowType = {
+		name = "country_select_window"
+		position = { x = 0 y = 0 }
+		size = { width = 1920 height = 1080 }
+		orientation = upper_left
+		clipping = false
+
+		# Main background
+		iconType = {
+			name = "background"
+			spriteType = "GFX_select_country_background"
+			position = { x = 0 y = 0 }
+			alwaysTransparent = yes
+		}
+
+		# Title
+		instantTextboxType = {
+			name = "title"
+			position = { x = 0 y = 30 }
+			size = { width = 1920 height = 50 }
+			font = "HoI4Header"
+			text = "SELECT COUNTRY"
+			format = centre
+			fixedSize = yes
+		}
+
+		# Country cards container — horizontally scrollable
+		scrollareaType = {
+			name = "country_list_scroll"
+			position = { x = 60 y = 100 }
+			size = { width = 1800 height = 380 }
+			orientation = upper_left
+			scrollbartype = "horizontal_scroll"
+			pdx_tooltip = ""
+
+			containerWindowType = {
+				name = "country_list"
+				position = { x = 0 y = 0 }
+				size = { width = 1800 height = 360 }
+			}
+		}
+
+		# Selected country info panel — bottom left
+		containerWindowType = {
+			name = "country_info_panel"
+			position = { x = 60 y = 500 }
+			size = { width = 480 height = 300 }
+			orientation = upper_left
+
+			iconType = {
+				name = "info_bg"
+				spriteType = "GFX_country_info_bg"
+				position = { x = 0 y = 0 }
+			}
+
+			instantTextboxType = {
+				name = "info_title"
+				position = { x = 20 y = 15 }
+				size = { width = 440 height = 30 }
+				font = "HoI4Header"
+				text = "Information"
+				format = left
+				fixedSize = yes
+			}
+
+			# Leader portrait — large display
+			iconType = {
+				name = "selected_leader_portrait"
+				spriteType = "GFX_null"
+				position = { x = 260 y = 40 }
+				size = { width = 200 height = 240 }
+			}
+
+			# Leader name
+			instantTextboxType = {
+				name = "selected_leader_name"
+				position = { x = 20 y = 50 }
+				size = { width = 230 height = 25 }
+				font = "HoI4Header"
+				text = ""
+				format = left
+				fixedSize = yes
+			}
+
+			# Ideology
+			instantTextboxType = {
+				name = "selected_ideology"
+				position = { x = 20 y = 80 }
+				size = { width = 230 height = 20 }
+				font = "HoI4"
+				text = ""
+				format = left
+				fixedSize = yes
+			}
+
+			# Government type
+			instantTextboxType = {
+				name = "selected_government"
+				position = { x = 20 y = 110 }
+				size = { width = 230 height = 80 }
+				font = "HoI4"
+				text = ""
+				format = left
+				fixedSize = yes
+			}
+		}
+
+		# Selected country flag/name panel — bottom centre
+		containerWindowType = {
+			name = "country_flag_panel"
+			position = { x = 570 y = 500 }
+			size = { width = 360 height = 300 }
+			orientation = upper_left
+
+			iconType = {
+				name = "flag_bg"
+				spriteType = "GFX_country_flag_bg"
+				position = { x = 0 y = 0 }
+			}
+
+			instantTextboxType = {
+				name = "selected_country_name"
+				position = { x = 0 y = 15 }
+				size = { width = 360 height = 35 }
+				font = "HoI4Header"
+				text = ""
+				format = centre
+				fixedSize = yes
+			}
+
+			# Large flag display
+			iconType = {
+				name = "selected_flag"
+				spriteType = "GFX_null"
+				position = { x = 80 y = 60 }
+				size = { width = 200 height = 120 }
+			}
+
+			# Focus icon placeholder
+			iconType = {
+				name = "selected_focus"
+				spriteType = "GFX_null"
+				position = { x = 130 y = 200 }
+				size = { width = 100 height = 80 }
+			}
+		}
+
+		# Brief history panel — bottom right
+		containerWindowType = {
+			name = "country_history_panel"
+			position = { x = 960 y = 500 }
+			size = { width = 900 height = 300 }
+			orientation = upper_left
+
+			iconType = {
+				name = "history_bg"
+				spriteType = "GFX_country_history_bg"
+				position = { x = 0 y = 0 }
+			}
+
+			instantTextboxType = {
+				name = "history_title"
+				position = { x = 20 y = 15 }
+				size = { width = 860 height = 30 }
+				font = "HoI4Header"
+				text = "Brief History"
+				format = left
+				fixedSize = yes
+			}
+
+			instantTextboxType = {
+				name = "history_text"
+				position = { x = 20 y = 50 }
+				size = { width = 860 height = 230 }
+				font = "HoI4"
+				text = ""
+				format = left
+				fixedSize = yes
+			}
+		}
+
+		# Back button
+		buttonType = {
+			name = "back_button"
+			position = { x = 570 y = 820 }
+			size = { width = 160 height = 40 }
+			buttonFont = "HoI4Header"
+			text = "BACK"
+			pdx_tooltip = "BACK"
+		}
+
+		# Select Country button
+		buttonType = {
+			name = "select_button"
+			position = { x = 750 y = 820 }
+			size = { width = 200 height = 40 }
+			buttonFont = "HoI4Header"
+			text = "SELECT COUNTRY"
+			pdx_tooltip = "SELECT_COUNTRY"
+		}
+
+	}
+
+	# =====================================================
+	# INDIVIDUAL COUNTRY CARD
+	# This is the template for each selectable country
+	# Key changes from vanilla:
+	#   - Background image more visible
+	#   - Portrait smaller, sits top 55% of card
+	#   - Flag larger, anchored bottom
+	#   - Country name clearly readable at bottom
+	# =====================================================
+
+	containerWindowType = {
+		name = "country_select_item"
+
+		# Card overall size
+		size = { width = 172 height = 240 }
+
+		orientation = upper_left
+		clipping = yes
+
+		# -----------------------------------------------
+		# BACKGROUND IMAGE
+		# Full card size, sits behind everything
+		# Increased brightness vs vanilla so it shows through
+		# -----------------------------------------------
+		iconType = {
+			name = "country_background"
+			spriteType = "GFX_null"
+			position = { x = 0 y = 0 }
+			size = { width = 172 height = 240 }
+
+			# Background fills the whole card
+			# Portrait sits on top — portrait is only 55% height
+			# so background is visible in bottom 45%
+		}
+
+		# -----------------------------------------------
+		# COUNTRY FLAG
+		# Larger than vanilla, positioned centre-bottom
+		# so it anchors the card and is clearly readable
+		# -----------------------------------------------
+		iconType = {
+			name = "country_flag"
+			spriteType = "GFX_null"
+
+			# Centred horizontally
+			# Positioned at 58% down the card height
+			# so it sits just below the portrait
+			position = { x = 36 y = 148 }
+			size = { width = 100 height = 60 }
+		}
+
+		# -----------------------------------------------
+		# LEADER PORTRAIT
+		# Reduced from vanilla — sits in top 55% of card
+		# Fades at bottom so flag and background show through
+		# -----------------------------------------------
+		iconType = {
+			name = "leader_portrait"
+			spriteType = "GFX_null"
+
+			# Portrait anchored to top of card
+			position = { x = 10 y = 5 }
+
+			# Height reduced to 55% of card — 132px of 240px
+			# This leaves 108px for flag and background below
+			size = { width = 152 height = 132 }
+		}
+
+		# -----------------------------------------------
+		# PORTRAIT FADE GRADIENT
+		# Soft fade at bottom of portrait so it blends
+		# into the background/flag area rather than hard cut
+		# -----------------------------------------------
+		iconType = {
+			name = "portrait_fade"
+			spriteType = "GFX_country_select_portrait_fade"
+			position = { x = 10 y = 100 }
+			size = { width = 152 height = 40 }
+		}
+
+		# -----------------------------------------------
+		# COUNTRY NAME
+		# Sits at very bottom of card, clearly readable
+		# Dark background strip behind text for legibility
+		# -----------------------------------------------
+		iconType = {
+			name = "name_background"
+			spriteType = "GFX_country_select_name_bg"
+			position = { x = 0 y = 210 }
+			size = { width = 172 height = 30 }
+		}
+
+		instantTextboxType = {
+			name = "country_name"
+			position = { x = 5 y = 214 }
+			size = { width = 162 height = 22 }
+			font = "HoI4"
+			text = ""
+			format = centre
+			fixedSize = yes
+		}
+
+		# -----------------------------------------------
+		# CARD BORDER/FRAME
+		# Sits on top of everything — decorative frame
+		# -----------------------------------------------
+		iconType = {
+			name = "card_frame"
+			spriteType = "GFX_country_select_frame"
+			position = { x = 0 y = 0 }
+			size = { width = 172 height = 240 }
+		}
+
+		# -----------------------------------------------
+		# STABILITY BAR
+		# Sits below the card
+		# Red when low, blue when high — vanilla behaviour
+		# -----------------------------------------------
+		iconType = {
+			name = "stability_bar_bg"
+			spriteType = "GFX_country_select_stability_bg"
+			position = { x = 0 y = 244 }
+			size = { width = 172 height = 8 }
+		}
+
+		iconType = {
+			name = "stability_bar"
+			spriteType = "GFX_country_select_stability"
+			position = { x = 0 y = 244 }
+			size = { width = 172 height = 8 }
+		}
+
+		# War support bar
+		iconType = {
+			name = "war_support_bar_bg"
+			spriteType = "GFX_country_select_warsupport_bg"
+			position = { x = 0 y = 255 }
+			size = { width = 172 height = 8 }
+		}
+
+		iconType = {
+			name = "war_support_bar"
+			spriteType = "GFX_country_select_warsupport"
+			position = { x = 0 y = 255 }
+			size = { width = 172 height = 8 }
+		}
+
+		# Selected highlight — glows when this card is active
+		iconType = {
+			name = "selected_highlight"
+			spriteType = "GFX_country_select_highlight"
+			position = { x = 0 y = 0 }
+			size = { width = 172 height = 240 }
+		}
+
+		# Clickable button covering whole card
+		buttonType = {
+			name = "select_country_button"
+			position = { x = 0 y = 0 }
+			size = { width = 172 height = 240 }
+			buttonFont = "HoI4"
+			text = ""
+			pdx_tooltip = "SELECT_THIS_COUNTRY"
+		}
+	}
+
+}

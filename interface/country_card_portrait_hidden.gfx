@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_country_card_portrait_hidden"
+		texturefile = "gfx/interface/country_card_portrait_hidden.dds"
+	}
+}

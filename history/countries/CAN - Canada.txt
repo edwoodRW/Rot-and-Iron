@@ -1,0 +1,291 @@
+﻿capital = 276
+
+oob = "CAN_1936"
+
+load_focus_tree = canadian_base
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "CAN_2000_naval_mtg"
+	else = {
+		set_naval_oob = "CAN_2000_naval_legacy"
+	}
+}
+
+	
+create_faction = "Entente"
+add_to_faction = CAN # Canada
+add_to_faction = AST # Australia
+add_to_faction = NZL # New Zealand
+add_to_faction = JAM # West Indies / Jamaica hub
+add_to_faction = ICE # Iceland
+add_to_faction = POR # Portugal
+add_to_faction = GUY # British Guyana
+
+
+set_variable = { CAN_mogg_faction_influence = 60 }
+set_variable = { CAN_boris_loyalty = 50 }
+set_variable = { CAN_black_authority = 70 }
+set_variable = { CAN_coalition_stability = 65 }
+set_variable = { CAN_mogg_faction_influence_change = 0 }
+set_variable = { CAN_boris_loyalty_change = 0 }
+set_variable = { CAN_black_authority_change = 0 }
+set_variable = { CAN_coalition_stability_change = 0 }
+set_power_balance = {
+	id = CAN_black_mogg_balance
+	value = 0.7
+}
+
+add_ideas = {
+   CAN_mogg_deputy_pm
+   CAN_conscription_legislation
+
+
+
+
+}
+
+
+
+set_research_slots = 4
+set_convoys = 500
+set_stability = 0.8
+set_war_support = 0.3
+add_manpower = 124829
+
+set_technology = {
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	basic_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_carrier = 1
+	basic_carrier = 1
+	support_weapons = 1
+	infantry_weapons = 1
+	motorised_infantry = 1 
+	tech_support = 1 
+	tech_field_hospital = 1 
+	tech_engineers = 1 
+	gwtank = 1 
+	basic_light_tank = 1 
+	gw_artillery = 1 
+	tech_mountaineers = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	
+	fighter1 = 1
+	
+	naval_bomber1 = 1
+	
+	cv_naval_bomber1 = 1 
+	early_bomber = 1  
+	paratroopers = 1 
+	marines = 1
+	basic_heavy_tank = 1 
+	atomic_research = 1 
+	nuclear_reactor = 1 
+	nukes = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		
+		
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_airplane_launcher = 1
+	}
+}
+
+set_politics = {
+	ruling_party = national_conservative
+	last_election = "1997.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        fascist = 3
+        nationalist = 18
+        monarchist = 9
+        national_bolshevik = 0
+        national_conservative = 34
+        centrist = 2
+        liberal = 18
+        new_democrat = 0
+        moderate_socialist = 14
+        revolutionary_socialist = 2 
+        communist = 0
+}
+
+
+
+
+create_country_leader = {
+	name = "Maxime Bernier"
+	desc = "POLITICS_PRESTON_MANNING_DESC"
+	picture = "Maxime_Bernier.dds"
+	ideology = fascist_ideology
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Kellie Leitch"
+	desc = "POLITICS_PRESTON_MANNING_DESC"
+	picture = "Kellie_Leitch.dds"
+	ideology = nationalist_ideology
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Jacob Rees-Mogg"
+	desc = "POLITICS_PRESTON_MANNING_DESC"
+	picture = "Jacob_Rees_Mogg.dds"
+	ideology = high_toryism
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Conrad Black"
+	desc = "POLITICS_PRESTON_MANNING_DESC"
+	picture = "CAN_Conrad_Black.dds"
+	ideology = reactionary
+	traits = { }
+}
+
+create_country_leader = {
+	name = "J.J. McCullough"
+	desc = "POLITICS_PRESTON_MANNING_DESC"
+	picture = "J_J_McCullough.dds"
+	ideology = Libertarianism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Mark Carney"
+	desc = "POLITICS_PRESTON_MANNING_DESC"
+	picture = "Mark_Carney.dds"
+	ideology = social_liberal
+	traits = {
+		CAN_technocrat
+		CAN_bank_governor
+	}
+}
+
+create_country_leader = {
+	name = "Charlie Angus"
+	picture = "Charlie_Angus.dds"
+	ideology = social_democracy
+	traits = {
+		
+	}
+}
+
+
+
+create_country_leader = {
+	name = "Avi Lewis"
+	desc = "POLITICS_PRESTON_MANNING_DESC"
+	picture = "Avi_Lewis.dds"
+	ideology = democratic_socialist
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Naomi Klein"
+	desc = "POLITICS_PRESTON_MANNING_DESC"
+	picture = "Naomi_Klein.dds"
+	ideology = syndicalism
+	traits = {
+		
+	}
+}
+
+
+create_country_leader = {
+	name = "Elizabeth Rowley"
+	desc = "POLITICS_PRESTON_MANNING_DESC"
+	picture = "Elizabeth_Rowley.dds"
+	ideology = communist
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Pat King"
+	desc = "POLITICS_PRESTON_MANNING_DESC"
+	picture = "Pat_King.dds"
+	ideology = national_bolshevik_ideology
+	traits = {
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

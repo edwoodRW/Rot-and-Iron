@@ -1,0 +1,1328 @@
+focus_tree = {
+
+
+    id = the_uk_tree
+    country = {
+        factor = 0
+        
+        modifier = {
+            add = 20
+            original_tag = ENG
+        }
+    }
+
+    continuous_focus_position = { x = 50 y = 22300 }
+
+
+    
+    focus = {
+        id = ENG_THE_LIFELINE_SNAPS
+        icon = GFX_goal_eng_lifeline_snaps
+
+        x = 15
+        y = 0
+        cost = 7
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.1 }
+
+            
+        }
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+    focus = {
+        id = ENG_RATION_NORTH_SEA_FUEL
+        icon = GFX_goal_eng_ration_north_sea_fuel
+        x = -3
+        y = 1
+
+        cost = 8
+
+        prerequisite = {
+            focus = ENG_THE_LIFELINE_SNAPS
+        }
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.2 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+     focus = {
+        id = ENG_SEIZE_THE_DOCKYARDS
+          icon = GFX_goal_eng_seize_the_dockyards
+        x = -3
+        y = 2
+
+        cost = 7
+
+        prerequisite = {
+            focus = ENG_RATION_NORTH_SEA_FUEL
+        }
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.3 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+       focus = {
+        id = ENG_MUZZLE_THE_TRADE_UNIONS
+        icon = GFX_goal_eng_muzzle_the_trade_unions
+        x = -3
+        y = 3
+
+        cost = 7
+
+        prerequisite = {
+            focus = ENG_RATION_NORTH_SEA_FUEL
+        }
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.4 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+
+
+    focus = {
+        id = ENG_THE_TWEED_DEFENSE_GRID
+        icon = GFX_goal_eng_tweed_defense_grid
+        x = 3
+        y = 1
+
+        cost = 7
+
+        prerequisite = {
+            focus = ENG_THE_LIFELINE_SNAPS
+        }
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+          
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+ focus = {
+        id = ENG_EMERGENCY_CONSCRIPTION
+     icon = GFX_goal_eng_emergency_conscription
+        x = 3
+        y = 2
+
+        cost = 8
+
+        prerequisite = {
+            focus = ENG_THE_TWEED_DEFENSE_GRID
+        }
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.6 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+ focus = {
+        id = ENG_GARRISON_THE_LOWLANDS
+     icon = GFX_goal_eng_garrison_the_lowlands
+        x = 3
+        y = 3
+
+        cost = 7
+
+        prerequisite = {
+            focus = ENG_EMERGENCY_CONSCRIPTION
+        }
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.7 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+ focus = {
+        id = ENG_the_1999_constitution
+     icon = GFX_goal_eng_1999_constitution
+        x = 0
+        y = 4
+
+        cost = 8
+
+        prerequisite = {
+            focus = ENG_GARRISON_THE_LOWLANDS
+        }
+
+        prerequisite = {
+            focus = ENG_MUZZLE_THE_TRADE_UNIONS
+        }
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.8 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+  focus = {
+        id = ENG_Winter_Of_Discontent_25
+      icon = GFX_goal_eng_winter_of_discontent_25
+        x = 0
+        y = 5
+
+        cost = 10
+
+        prerequisite = {
+            focus = ENG_the_1999_constitution
+        }
+
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.9 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+  focus = {
+        id = ENG_Starmer_Holds
+      icon = GFX_goal_eng_starmer_holds
+        x = -4
+        y = 6
+
+        cost = 4
+
+        prerequisite = {
+            focus = ENG_Winter_Of_Discontent_25
+        }
+
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+        mutually_exclusive = {
+            focus = ENG_Reform_Attempt
+            focus = ENG_Garrison_State
+            focus = ENG_Military_Intervention
+        }
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.10 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+ 
+
+  focus = {
+        id = ENG_Reform_Attempt
+      icon = GFX_goal_eng_reform_attempt
+        x = -1
+        y = 6
+
+        cost = 4
+
+        prerequisite = {
+            focus = ENG_Winter_Of_Discontent_25
+        }
+
+        mutually_exclusive = {
+            focus = ENG_Starmer_Holds
+            focus = ENG_Garrison_State
+            focus = ENG_Military_Intervention
+        }
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.11 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+  focus = {
+        id = ENG_Garrison_State
+      icon = GFX_goal_eng_garrison_state
+        x = 1
+        y = 6
+
+        cost = 4
+
+        prerequisite = {
+            focus = ENG_Winter_Of_Discontent_25
+        }
+
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+        mutually_exclusive = {
+            focus = ENG_Starmer_Holds
+            focus = ENG_Reform_Attempt
+            focus = ENG_Military_Intervention
+        }
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.12 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+   focus = {
+        id = ENG_Military_Intervention
+       icon = GFX_goal_eng_military_intervention
+        x = 4
+        y = 6
+
+        cost = 4
+
+        prerequisite = {
+            focus = ENG_Winter_Of_Discontent_25
+        }
+
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+        mutually_exclusive = {
+            focus = ENG_Starmer_Holds
+            focus = ENG_Reform_Attempt
+            focus = ENG_Garrison_State
+        }
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.13 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+  focus = {
+        id = ENG_Establish_the_Committee_of_Public_Security
+      icon = GFX_goal_eng_establish_the_committee_of_public_security
+        x = 0
+        y = 8
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.14 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+  focus = {
+        id = ENG_The_Enemy_Within_the_Walls
+      icon = GFX_goal_eng_the_enemy_within_the_walls
+        x = 0
+        y = 9
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_Establish_the_Committee_of_Public_Security
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.15 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+      focus = {
+        id = ENG_The_London_Show_Trials
+                icon = GFX_goal_eng_the_london_show_trials
+        x = -3
+        y = 10
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_The_Enemy_Within_the_Walls
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.16 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+       focus = {
+        id = ENG_Liquidate_the_Modernizers
+        icon = GFX_goal_eng_liquidate_the_modernizers
+        x = -3
+        y = 11
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_The_London_Show_Trials
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.17 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+          focus = {
+        id = ENG_Purge_the_High_Command
+        icon = GFX_goal_eng_purge_the_high_command
+        x = -3
+        y = 12
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_Liquidate_the_Modernizers
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.18 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+   focus = {
+        id = ENG_Radio_Free_Whitehall
+       icon = GFX_goal_eng_radio_free_whitehall
+        x = -3
+        y = 13
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_Purge_the_High_Command
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.19 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+  focus = {
+        id = ENG_The_Scottish_Pacification
+      icon = GFX_goal_eng_scottish_pacification
+        x = 6
+        y = 10
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_The_Enemy_Within_the_Walls
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.20 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+  focus = {
+        id = ENG_Dismantle_the_Edinburgh_Soviet
+      icon = GFX_goal_eng_dismantle_the_edinburgh_soviet
+        x = 6
+        y = 11
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_The_Scottish_Pacification
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.21 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+focus = {
+        id = ENG_The_Highland_Re_education
+    icon = GFX_goal_eng_highland_reeducation
+        x = 6
+        y = 12
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_Dismantle_the_Edinburgh_Soviet
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.22 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+ focus = {
+        id = ENG_No_Step_Backwards_in_Britain
+     icon = GFX_goal_eng_no_step_backwards_in_britain
+        x = 10
+        y = 13
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_The_Highland_Re_education
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.23 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+ 
+ focus = {
+        id = ENG_Shells_for_the_Static_Front
+     icon = GFX_goal_eng_shells_for_the_static_front
+        x = 7
+        y = 13
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_The_Highland_Re_education
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.24 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+  focus = {
+        id = ENG_The_Iron_Line_on_the_Tweed
+      icon = GFX_goal_eng_iron_line_on_the_tweed
+        x = 4
+        y = 13
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_The_Highland_Re_education
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.25 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+   focus = {
+        id = ENG_The_Sappers_Mandate
+       icon = GFX_goal_eng_the_sappers_mandate
+        x = 1
+        y = 13
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_The_Highland_Re_education
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.26 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = ENG_Project_Caelus
+        icon = GFX_goal_eng_project_caelus
+        x = -1
+        y = 13
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_The_Highland_Re_education
+        }
+        prerequisite = {
+            focus = ENG_Purge_the_High_Command
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.27 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+   focus = {
+        id = ENG_Weaponize_the_Rations
+       icon = GFX_goal_eng_weaponize_the_rations
+        x = -5
+        y = 13
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_Purge_the_High_Command
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.28 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+  focus = {
+        id = ENG_Requisition_the_Welsh_Valleys
+      icon = GFX_goal_eng_requisition_the_welsh_valleys
+        x = -5
+        y = 14
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_Weaponize_the_Rations
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.29 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+ 
+  focus = {
+        id = ENG_Crush_the_Plaid_Insurgency
+     icon = GFX_goal_eng_crush_the_plaid_insurgency
+        x = -2
+        y = 15
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_Requisition_the_Welsh_Valleys
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.30 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+ 
+ focus = {
+        id = ENG_The_Rural_Collectivisation
+     icon = GFX_goal_eng_the_rural_collectivisation
+        x = -8
+        y = 15
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_Requisition_the_Welsh_Valleys
+        }
+
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.31 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+  
+ focus = {
+        id = ENG_The_Dragon_Awakens
+      icon = GFX_goal_eng_the_dragon_awakens
+        x = -5
+        y = 16
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+          prerequisite = {
+            focus = ENG_The_Rural_Collectivisation
+        }
+        prerequisite = {
+            focus = ENG_Crush_the_Plaid_Insurgency
+        }
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            set_country_flag = ENG_welsh_campaign_started
+            if = {
+                limit = {
+                    WLS = {
+                        exists = no
+                    }
+                }
+                release = WLS
+            }
+            if = {
+                limit = {
+                    WLS = {
+                        exists = yes
+                        NOT = { is_subject_of = ROOT }
+                    }
+                    NOT = { has_war_with = WLS }
+                }
+                declare_war_on = { target = WLS type = annex_everything }
+                add_ideas = ENG_severed_western_arteries
+                set_country_flag = ENG_welsh_stalemate_mission_live
+                activate_mission = ENG_break_wales_in_thirty_days
+            }
+            if = {
+                limit = {
+                    has_war_with = WLS
+                    NOT = { has_country_flag = ENG_welsh_stalemate_mission_live }
+                }
+                add_ideas = ENG_severed_western_arteries
+                set_country_flag = ENG_welsh_stalemate_mission_live
+                activate_mission = ENG_break_wales_in_thirty_days
+            }
+            country_event = { id = rot_eng_focus.32 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+  focus = {
+        id = ENG_The_Conquest_of_Cardiff
+        icon = GFX_goal_eng_conquest_of_cardiff
+        x = -5
+        y = 18
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+
+        available = {
+            has_country_flag = ENG_welsh_campaign_started
+            NOT = { has_war_with = WLS }
+            OR = {
+                WLS = { exists = no }
+                WLS = { has_capitulated = yes }
+            }
+        }
+
+   
+        completion_reward = {
+            if = {
+                limit = {
+                    has_idea = ENG_severed_western_arteries
+                }
+                remove_ideas = ENG_severed_western_arteries
+            }
+            clr_country_flag = ENG_welsh_campaign_started
+            clr_country_flag = ENG_cardiff_unlocked
+            clr_country_flag = ENG_welsh_stalemate_mission_live
+            clr_country_flag = ENG_welsh_famine_cleanup_live
+            country_event = { id = rot_eng_focus.33 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+ 
+
+
+  focus = {
+        id = ENG_The_Welsh_Bread_Basket_Secure
+        icon = GFX_goal_eng_welsh_bread_basket_secure
+        x = -5
+        y = 19
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+            prerequisite = {
+            focus = ENG_The_Conquest_of_Cardiff
+        }
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+  focus = {
+        id = ENG_Sights_Back_on_the_Tweed
+        icon = GFX_goal_eng_sights_on_the_tweed
+        x = -5
+        y = 20
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+            prerequisite = {
+            focus = ENG_The_Conquest_of_Cardiff
+        }
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.35 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+   focus = {
+        id = ENG_Restore_the_Greater_Map
+        icon = GFX_goal_eng_restore_the_greater_map
+        x = 2
+        y = 17
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+        available = {
+            has_country_flag = ENG_Scottish_Pacification_Complete
+            NOT = { has_war_with = SCO }
+            OR = {
+                SCO = { exists = no }
+                SCO = { has_capitulated = yes }
+            }
+        }
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.36 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+        
+    
+
+
+
+ focus = {
+        id = ENG_The_Ulster_Ultimatum
+        icon = GFX_goal_eng_ulster_ultimatum
+        x = 2
+        y = 18
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+    prerequisite = {
+            focus = ENG_Restore_the_Greater_Map
+        }
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.37 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+  focus = {
+        id = ENG_The_Belfast_Amphibious_Assault
+        icon = GFX_goal_eng_belfast_amphibious_assault
+        x = 2
+        y = 19
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+    prerequisite = {
+            focus = ENG_The_Ulster_Ultimatum
+        }
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.38 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+      focus = {
+        id = ENG_Enforce_the_Republic_Line
+        icon = GFX_goal_eng_enforce_the_republic_line
+        x = 2
+        y = 20
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+    prerequisite = {
+            focus = ENG_The_Belfast_Amphibious_Assault
+        }
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.39 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+  focus = {
+        id = ENG_The_Irish_Conquest_Campaign
+        icon = GFX_goal_eng_irish_conquest_campaign
+        x = 5
+        y = 21
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+    prerequisite = {
+            focus = ENG_Enforce_the_Republic_Line
+        }
+
+        mutually_exclusive = {
+            focus = ENG_Ignore_the_Southern_Isolation
+        }
+        
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.40 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+  focus = {
+        id = ENG_Ignore_the_Southern_Isolation
+        icon = GFX_goal_eng_ignore_the_southern_isolation
+        x = -1
+        y = 21
+
+        cost = 4
+
+        relative_position_id = ENG_THE_LIFELINE_SNAPS
+
+    mutually_exclusive = {
+            focus = ENG_The_Irish_Conquest_Campaign
+        }
+   
+    prerequisite = {
+            focus = ENG_Enforce_the_Republic_Line
+        }
+
+        available = {}
+
+        bypass = {}
+
+        completion_reward = {
+            country_event = { id = rot_eng_focus.41 }
+      
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,27 @@
+state={
+	id=1129
+	name="STATE_835"
+	provinces={
+		13928 13954 13961 14026 14011 13915
+	}
+	manpower = 0
+
+	state_category = wasteland
+
+	history = {
+		owner = ANT
+		buildings = {
+			infrastructure = 0
+		}
+		
+		1939.01.14 = {
+			add_claim_by = NOR
+		}
+		
+		1939.04.11 = {
+			add_claim_by = GER
+			set_state_name = "New Swabia"
+		}
+	}
+
+}

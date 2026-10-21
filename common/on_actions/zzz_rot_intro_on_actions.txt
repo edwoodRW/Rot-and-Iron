@@ -1,0 +1,16 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					NOT = { has_country_flag = rot_intro_shown }
+				}
+
+				set_variable = { country_splash_variable = 1 }
+
+				set_country_flag = rot_intro_shown
+			}
+		}
+	}
+}

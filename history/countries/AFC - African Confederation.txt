@@ -1,0 +1,57 @@
+capital = 772
+
+oob = "AFC_1936"
+
+set_research_slots = 5
+set_convoys = 400
+set_stability = 0.6
+set_war_support = 0.7
+
+set_technology = {
+	support_weapons = 1
+	infantry_weapons = 1
+	motorised_infantry = 1 
+	tech_support = 1 
+	tech_field_hospital = 1 
+	tech_engineers = 1 
+	gwtank = 1 
+	basic_light_tank = 1 
+	gw_artillery = 1 
+	tech_mountaineers = 1
+	early_fighter = 1 
+	interwar_antiair = 1 
+	interwar_antitank = 1
+}
+
+set_politics = {
+	ruling_party = moderate_socialist
+	last_election = "1980.1.1"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascist = 0
+	nationalist = 5
+	monarchist = 0
+	national_bolshevik = 0
+	national_conservative = 0
+	centrist = 0
+	liberal = 0
+	new_democrat = 0
+	moderate_socialist = 15
+	revolutionary_socialist = 40
+	communist = 40
+}
+
+create_country_leader = {
+	name = "Robert Mugabe"
+	picture = "Robert_Mugabe.dds"
+	ideology = moderate_socialist
+}
+
+
+
+
+
+

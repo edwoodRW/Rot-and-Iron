@@ -1,0 +1,68 @@
+opinion_modifiers = {
+	USA_silent_partner_japan = {
+		value = 10
+	}
+	USA_silent_partner_china = {
+		value = -10
+	}
+	USA_reconstruction_aid = {
+		value = 25
+		decay = 1
+	}
+	USA_rival_reconstruction = {
+		value = -20
+		decay = 1
+	}
+	USA_cold_peace_guarantee = {
+		value = 15
+		decay = 1
+	}
+	USA_cold_peace_rivalry = {
+		value = -25
+		decay = 1
+	}
+	USA_cold_peace_dialogue = {
+		value = 10
+		decay = 1
+	}
+	USA_moscow_pressured = {
+		value = -25
+		decay = 1
+	}
+	USA_moscow_courted = {
+		value = 20
+		decay = 1
+	}
+	USA_hemispheric_partnership = {
+		value = 20
+		decay = 1
+	}
+	USA_argentina_interference = {
+		value = -40
+		decay = 1
+	}
+	USA_junta_sympathy = {
+		value = 20
+		decay = 1
+	}
+	USA_junta_pariah = {
+		value = -30
+		decay = 1
+	}
+	USA_civilian_restoration = {
+		value = 20
+		decay = 1
+	}
+	USA_christian_american_order = {
+		value = 25
+		decay = 1
+	}
+	USA_public_justice = {
+		value = 20
+		decay = 1
+	}
+	USA_pragmatic_reconciliation = {
+		value = 15
+		decay = 1
+	}
+}

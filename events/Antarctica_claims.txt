@@ -1,0 +1,105 @@
+###########################
+# Antarctica Claim Events
+###########################
+
+add_namespace = antarctica
+
+# 1939 Queen Maud Land (Norway)
+country_event = {
+	id = antarctica.1
+	title = antarctica.1.t
+	desc = antarctica.1.d
+	picture = GFX_report_event_nor_antarctica_expedition
+	
+	is_triggered_only = yes
+	
+	option = { # Claim Queen Maud Land
+		name = antarctica.1.a
+	}
+}
+
+# New Swabia Expedition Sets Out (Germany)
+country_event = {
+	id = antarctica.5
+	title = antarctica.5.t
+	desc = antarctica.5.d
+	picture = GFX_report_event_ger_schwabenland
+	
+	is_triggered_only = yes
+	
+	option = { # Stay warm
+		name = antarctica.5.a
+	}
+}
+
+# New Swabia Expedition Returns (Germany)
+country_event = {
+	id = antarctica.6
+	title = antarctica.6.t
+	desc = antarctica.6.d
+	picture = GFX_report_event_ger_schwabenland
+	
+	is_triggered_only = yes
+	
+	option = { # Welcome back
+		name = antarctica.6.a
+	}
+}
+
+# 1939 New Swabia (Germany)
+country_event = {
+	id = antarctica.2
+	title = antarctica.2.t
+	desc = antarctica.2.d
+	picture = GFX_report_event_ger_schwabenland
+	
+	is_triggered_only = yes
+	
+	option = { # Claim New Swabia
+		name = antarctica.2.a
+	}
+}
+
+# 1940 Chilean Antarctic Territory
+country_event = {
+	id = antarctica.3
+	title = antarctica.3.t # Decree No. 1747
+	desc = antarctica.3.d
+	picture = GFX_report_event_chl_ohiggins_base
+
+	is_triggered_only = yes
+	
+	option = { # Formalize claims
+		name = antarctica.3.a
+	}
+}
+
+# 1942 Argentine Antarctica
+country_event = {
+	id = antarctica.4
+	title = antarctica.4.t
+	desc = antarctica.4.d
+	picture = GFX_report_event_arg_base_orcadas
+	
+	is_triggered_only = yes
+	
+	option = { # Formalize claims
+		name = antarctica.4.a
+		ai_chance = { 
+			base = 99
+		}
+		add_state_claim = 1085
+		add_state_claim = 1110
+		add_state_claim = 1119
+		add_state_claim = 1120
+		add_state_claim = 1121
+		add_state_claim = 1122
+		add_state_claim = 1123
+		add_state_claim = 1124
+		add_state_claim = 1125
+		add_state_claim = 1126
+		add_state_claim = 1127
+		add_state_claim = 1144
+		add_state_claim = 1092
+	}
+}

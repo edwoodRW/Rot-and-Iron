@@ -1,0 +1,19 @@
+state={
+	id=1094
+	name="STATE_800" # Peter I Island
+	manpower = 0
+	
+	state_category = wasteland
+
+	history={
+		owner = ANT
+		add_claim_by = NOR
+		buildings = {
+			infrastructure = 0
+		}
+	}
+
+	provinces={
+		13856
+	}
+}

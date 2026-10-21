@@ -1,0 +1,78 @@
+###########################
+# Pictures for Antarctica Base Events
+###########################
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_usa_east_base"
+		texturefile = "gfx/event_pictures/report_event_usa_east_base.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_eng_station_a"
+		texturefile = "gfx/event_pictures/report_event_eng_station_a.dds"
+	}
+	#spriteType = {
+	#	name = "GFX_report_event_eng_station_b"
+	#	texturefile = "gfx/event_pictures/report_event_eng_station_b.dds"
+	#}
+	spriteType = {
+		name = "GFX_report_event_eng_station_d"
+		texturefile = "gfx/event_pictures/report_event_eng_station_d.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_chl_arturo_prat"
+		texturefile = "gfx/event_pictures/report_event_chl_arturo_prat.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_arg_melchior_base"
+		texturefile = "gfx/event_pictures/report_event_arg_melchior_base.dds"
+	}
+	#spriteType = {
+	#	name = "GFX_report_event_eng_station_f"
+	#	texturefile = "gfx/event_pictures/report_event_eng_station_f.dds"
+	#}
+	spriteType = {
+		name = "GFX_report_event_eng_station_g"
+		texturefile = "gfx/event_pictures/report_event_eng_station_g.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_chl_ohiggins_base"
+		texturefile = "gfx/event_pictures/report_event_chl_ohiggins_base.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_nor_maudheim"
+		texturefile = "gfx/event_pictures/report_event_nor_maudheim.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_fra_port_martin"
+		texturefile = "gfx/event_pictures/report_event_fra_port_martin.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_eng_station_e"
+		texturefile = "gfx/event_pictures/report_event_eng_station_e.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_arg_deception_station"
+		texturefile = "gfx/event_pictures/report_event_arg_deception_station.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ger_hitler_station"
+		texturefile = "gfx/event_pictures/report_event_ger_hitler_station.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_eng_signy_station"
+		texturefile = "gfx/event_pictures/report_event_eng_signy_station.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ger_schwabenland"
+		texturefile = "gfx/event_pictures/report_event_ger_schwabenland.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_nor_antarctica_expedition"
+		texturefile = "gfx/event_pictures/report_event_nor_antarctica_expedition.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_arg_base_orcadas"
+		texturefile = "gfx/event_pictures/report_event_arg_base_orcadas.dds"
+	}
+}

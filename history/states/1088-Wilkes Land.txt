@@ -1,0 +1,21 @@
+state={
+	id=1088
+	name="STATE_794" # Wilkes Land
+	manpower = 0
+	
+	state_category = wasteland
+	
+	impassable = yes
+
+	history={
+		owner = ANT
+		add_claim_by = AST
+		buildings = {
+			infrastructure = 0
+		}
+	}
+
+	provinces={
+		13843 13844 13845 13846 13847 13848 13849 13850 13851 13852
+	}
+}

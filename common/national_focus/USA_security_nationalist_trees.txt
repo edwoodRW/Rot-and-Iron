@@ -1,0 +1,1196 @@
+focus_tree = {
+	id = USA_security_nationalist_tree
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 22300 }
+
+	focus = {
+		id = USA_Security_National_Covenant
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 0
+		cost = 5
+		available = { has_country_flag = USA_america_under_watch }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = USA_security_national_covenant
+			news_event = { id = USA_events.109 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_State_Church_Charter
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Security_National_Covenant }
+		completion_reward = {
+			add_ideas = USA_christian_national_order
+			add_popularity = { ideology = nationalist popularity = 0.05 }
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Christian_Schools
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_State_Church_Charter }
+		completion_reward = {
+			add_ideas = USA_christian_civic_code
+			add_popularity = { ideology = liberal popularity = -0.04 }
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_Family_Compact
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 3
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Christian_Schools }
+		completion_reward = {
+			add_ideas = USA_nat_family_compact
+			add_stability = 0.05
+			add_popularity = { ideology = moderate_socialist popularity = -0.03 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_An_American_Covenant
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 4
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_The_Family_Compact }
+		completion_reward = {
+			add_ideas = USA_theocratic_public_life
+			add_war_support = 0.05
+			add_popularity = { ideology = nationalist popularity = 0.05 }
+			set_country_flag = USA_theocratic_public_life
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Corporate_Concordat
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 4
+		y = 1
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Security_National_Covenant }
+		completion_reward = {
+			add_ideas = USA_corporatist_charters
+			add_political_power = 50
+			add_stability = -0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Labor_Peace
+		icon = GFX_goal_generic_production
+		x = 4
+		y = 2
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Corporate_Concordat }
+		completion_reward = {
+			add_ideas = USA_nat_labour_under_flag
+			add_stability = 0.03
+			add_popularity = { ideology = revolutionary_socialist popularity = -0.04 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Industrial_Charters
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 3
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Labor_Peace }
+		completion_reward = {
+			add_ideas = USA_continental_arsenal
+			add_army_experience = 15
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 producer = USA }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_National_Reconstruction
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 4
+		y = 4
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Industrial_Charters }
+		completion_reward = {
+			add_ideas = USA_corporatist_reconstruction
+			add_stability = 0.04
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Defence_Tech_Partnerships
+		icon = GFX_goal_generic_scientific_exchange
+		x = 6
+		y = 3
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Industrial_Charters }
+		completion_reward = {
+			add_ideas = USA_nat_defence_tech
+			add_army_experience = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Energy_Dominance
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 5
+		y = 5
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_National_Reconstruction }
+		completion_reward = {
+			add_ideas = USA_nat_energy_dominance
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Anti_Subversion_Act
+		icon = GFX_goal_generic_secret_police
+		x = 8
+		y = 1
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Security_National_Covenant }
+		completion_reward = {
+			add_ideas = USA_civic_security_program
+			add_popularity = { ideology = revolutionary_socialist popularity = -0.05 }
+			add_popularity = { ideology = moderate_socialist popularity = -0.03 }
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Civil_Service_Lustration
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 8
+		y = 2
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Anti_Subversion_Act }
+		completion_reward = {
+			add_ideas = USA_loyalty_bureaus
+			add_political_power = 75
+			add_stability = -0.03
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Outlaw_the_Opposition
+		icon = GFX_goal_generic_secret_police
+		x = 8
+		y = 3
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Civil_Service_Lustration }
+		completion_reward = {
+			add_popularity = { ideology = liberal popularity = -0.05 }
+			add_popularity = { ideology = moderate_socialist popularity = -0.08 }
+			add_popularity = { ideology = revolutionary_socialist popularity = -0.1 }
+			add_popularity = { ideology = nationalist popularity = 0.08 }
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = no
+			}
+			set_country_flag = USA_opposition_parties_outlawed
+			news_event = { id = USA_events.107 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_One_Party_Charter
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 4
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Outlaw_the_Opposition }
+		available = { has_country_flag = USA_opposition_parties_outlawed }
+		completion_reward = {
+			add_ideas = USA_one_party_christian_state
+			add_stability = 0.05
+			add_war_support = 0.05
+			news_event = { id = USA_events.111 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Border_Security_Corps
+		icon = GFX_goal_generic_army_doctrines
+		x = 10
+		y = 2
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Anti_Subversion_Act }
+		completion_reward = {
+			add_ideas = USA_nat_border_corps
+			add_manpower = 40000
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Sentinel_Data_Grid
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 10
+		y = 3
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Civil_Service_Lustration }
+		completion_reward = {
+			add_ideas = USA_nat_sentinel_grid
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Managed_Plebiscite
+		icon = GFX_goal_generic_political_pressure
+		x = 7
+		y = 5
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_One_Party_Charter }
+		mutually_exclusive = { focus = USA_Nat_Permanent_Emergency }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			set_country_flag = USA_nat_managed_plebiscite
+			country_event = { id = USA_nat_events.3 }
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = USA_Nat_Permanent_Emergency
+		icon = GFX_goal_generic_secret_police
+		x = 9
+		y = 5
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_One_Party_Charter }
+		mutually_exclusive = { focus = USA_Nat_Managed_Plebiscite }
+		completion_reward = {
+			add_ideas = USA_nat_permanent_emergency
+			add_war_support = 0.05
+			add_stability = -0.02
+			set_country_flag = USA_nat_permanent_emergency
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = USA_Nat_Information_Integrity_Authority
+		icon = GFX_goal_generic_propaganda
+		x = 13
+		y = 1
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Security_National_Covenant }
+		completion_reward = {
+			add_ideas = USA_nat_information_authority
+			add_political_power = 50
+			add_popularity = { ideology = liberal popularity = -0.03 }
+			country_event = { id = USA_nat_events.4 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Patriot_Media_Network
+		icon = GFX_goal_generic_propaganda
+		x = 13
+		y = 2
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Nat_Information_Integrity_Authority }
+		completion_reward = {
+			add_ideas = USA_nat_patriot_media
+			add_stability = 0.03
+			add_popularity = { ideology = nationalist popularity = 0.03 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Campus_Order
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 13
+		y = 3
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Nat_Patriot_Media_Network }
+		completion_reward = {
+			add_ideas = USA_nat_campus_order
+			add_popularity = { ideology = liberal popularity = -0.03 }
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Department_of_War
+		icon = GFX_goal_generic_army_doctrines
+		x = -5
+		y = 1
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Security_National_Covenant }
+		completion_reward = {
+			add_ideas = USA_nat_department_of_war
+			add_political_power = 50
+			add_war_support = 0.03
+			set_country_flag = USA_nat_department_of_war
+			country_event = { id = USA_nat_events.1 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Drone_Autonomy_Command
+		icon = GFX_goal_generic_scientific_exchange
+		x = -8
+		y = 2
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Nat_Department_of_War }
+		completion_reward = {
+			add_ideas = USA_nat_autonomy_command
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Warrior_Ethos_Directive
+		icon = GFX_goal_generic_secret_police
+		x = -5
+		y = 2
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Nat_Department_of_War }
+		completion_reward = {
+			add_ideas = USA_nat_warrior_ethos
+			set_country_flag = USA_nat_warrior_ethos
+			country_event = { id = USA_nat_events.2 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Chairmans_Office
+		icon = GFX_goal_generic_political_pressure
+		x = -7
+		y = 3
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Nat_Warrior_Ethos_Directive }
+		mutually_exclusive = { focus = USA_Nat_Generals_Council }
+		completion_reward = {
+			add_ideas = USA_nat_chairmans_office
+			add_political_power = 75
+			add_stability = 0.03
+			add_popularity = { ideology = nationalist popularity = 0.03 }
+			set_country_flag = USA_nat_chairmans_office
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	focus = {
+		id = USA_Nat_Generals_Council
+		icon = GFX_goal_generic_army_doctrines
+		x = -3
+		y = 3
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Nat_Warrior_Ethos_Directive }
+		mutually_exclusive = { focus = USA_Nat_Chairmans_Office }
+		completion_reward = {
+			add_ideas = USA_nat_generals_council
+			add_war_support = 0.05
+			add_stability = 0.02
+			set_country_flag = USA_nat_generals_council
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = USA_Nat_Cult_of_the_Chairman
+		icon = GFX_goal_generic_propaganda
+		x = -7
+		y = 4
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Nat_Chairmans_Office }
+		completion_reward = {
+			add_ideas = USA_nat_cult_of_the_chairman
+			add_stability = 0.05
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Collective_Directorate
+		icon = GFX_goal_generic_political_pressure
+		x = -3
+		y = 4
+		relative_position_id = USA_Security_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Nat_Generals_Council }
+		completion_reward = {
+			add_ideas = USA_nat_collective_directorate
+			add_war_support = 0.03
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_The_New_American_Order
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 7
+		relative_position_id = USA_Security_National_Covenant
+		cost = 15
+		prerequisite = { focus = USA_An_American_Covenant }
+		prerequisite = { focus = USA_National_Reconstruction }
+		prerequisite = { focus = USA_Nat_Managed_Plebiscite focus = USA_Nat_Permanent_Emergency }
+		prerequisite = { focus = USA_Nat_Cult_of_the_Chairman focus = USA_Nat_Collective_Directorate }
+		completion_reward = {
+			add_ideas = USA_nat_new_american_order
+			add_stability = 0.06
+			add_war_support = 0.05
+			add_political_power = 100
+			set_country_flag = USA_nat_new_order_complete
+			news_event = { id = USA_nat_events.7 }
+		}
+		ai_will_do = { factor = 6 }
+	}
+
+}
+
+focus_tree = {
+	id = USA_hemispheric_nationalist_tree
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 22300 }
+
+	focus = {
+		id = USA_Hemispheric_National_Covenant
+		icon = GFX_goal_generic_alliance
+		x = 10
+		y = 0
+		cost = 5
+		available = { has_country_flag = USA_hemisphere_armed }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = USA_hemispheric_national_covenant
+			news_event = { id = USA_events.110 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Christian_Diplomacy
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Hemispheric_National_Covenant }
+		completion_reward = {
+			add_ideas = USA_christian_hemisphere
+			add_popularity = { ideology = nationalist popularity = 0.05 }
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_American_Pact
+		icon = GFX_goal_generic_alliance
+		x = -1
+		y = 2
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Christian_Diplomacy }
+		completion_reward = {
+			add_ideas = USA_americas_covenant
+			add_political_power = 50
+			add_war_support = 0.03
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Arms_for_Allies
+		icon = GFX_goal_generic_army_doctrines
+		x = -1
+		y = 3
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_The_American_Pact }
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = MEX
+					NOT = { MEX = { has_war_with = USA } }
+				}
+				MEX = {
+					add_opinion_modifier = { target = USA modifier = USA_christian_american_order }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 500 producer = USA }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = BRA
+					NOT = { BRA = { has_war_with = USA } }
+				}
+				BRA = {
+					add_opinion_modifier = { target = USA modifier = USA_christian_american_order }
+					add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment amount = 500 producer = USA }
+				}
+			}
+			add_army_experience = 20
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Hemispheric_Order
+		icon = GFX_goal_generic_alliance
+		x = -1
+		y = 4
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Arms_for_Allies }
+		completion_reward = {
+			add_ideas = USA_nat_hemispheric_order
+			add_stability = 0.03
+			news_event = { id = USA_events.112 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Continental_Service
+		icon = GFX_goal_generic_army_doctrines
+		x = 4
+		y = 1
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Hemispheric_National_Covenant }
+		completion_reward = {
+			add_ideas = USA_national_service_act
+			add_manpower = 50000
+			add_war_support = 0.03
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_An_Arsenal_for_Order
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 2
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Continental_Service }
+		completion_reward = {
+			add_ideas = USA_continental_arsenal
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 8000 producer = USA }
+			add_equipment_to_stockpile = { type = artillery_equipment amount = 800 producer = USA }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Forward_Defense_Network
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 3
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_An_Arsenal_for_Order }
+		completion_reward = {
+			add_ideas = USA_forward_defense_network
+			add_manpower = 50000
+			add_war_support = 0.03
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Fortress_Hemisphere
+		icon = GFX_goal_generic_army_doctrines
+		x = 4
+		y = 4
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Forward_Defense_Network }
+		completion_reward = {
+			add_ideas = USA_fortress_hemisphere
+			add_manpower = 75000
+			add_equipment_to_stockpile = { type = anti_air_equipment amount = 1000 producer = USA }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Economic_Sphere
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 8
+		y = 1
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Hemispheric_National_Covenant }
+		completion_reward = {
+			add_ideas = USA_hemispheric_economy
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Corporate_Aid
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 8
+		y = 2
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Economic_Sphere }
+		completion_reward = {
+			add_ideas = USA_corporatist_charters
+			if = {
+				limit = {
+					country_exists = MEX
+					NOT = { MEX = { has_war_with = USA } }
+				}
+				MEX = { add_stability = 0.03 }
+			}
+			if = {
+				limit = {
+					country_exists = BRA
+					NOT = { BRA = { has_war_with = USA } }
+				}
+				BRA = { add_stability = 0.03 }
+			}
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Resource_Independence
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 8
+		y = 3
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Corporate_Aid }
+		completion_reward = {
+			add_ideas = USA_nat_resource_independence
+			add_equipment_to_stockpile = { type = support_equipment amount = 1000 producer = USA }
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_The_Americas_Covenant
+		icon = GFX_goal_generic_alliance
+		x = 8
+		y = 4
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Resource_Independence }
+		completion_reward = {
+			add_ideas = USA_nat_covenant_enforced
+			add_war_support = 0.05
+			add_stability = -0.02
+			news_event = { id = USA_events.108 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Northern_Alliance
+		icon = GFX_goal_generic_alliance
+		x = -4
+		y = 2
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Christian_Diplomacy }
+		completion_reward = {
+			add_ideas = USA_nat_northern_alliance
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = CAN }
+				give_guarantee = CAN
+			}
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Southern_Alliance
+		icon = GFX_goal_generic_alliance
+		x = -6
+		y = 2
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Christian_Diplomacy }
+		completion_reward = {
+			add_ideas = USA_nat_southern_alliance
+			add_political_power = 25
+			if = {
+				limit = { country_exists = ARG }
+				give_guarantee = ARG
+			}
+			country_event = { id = USA_nat_events.5 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Partners_Not_Satellites
+		icon = GFX_goal_generic_national_unity
+		x = -3
+		y = 5
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Hemispheric_Order }
+		mutually_exclusive = { focus = USA_Nat_Enforce_the_Order }
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 50
+			if = {
+				limit = { country_exists = MEX }
+				MEX = { add_stability = 0.02 }
+			}
+			if = {
+				limit = { country_exists = BRA }
+				BRA = { add_stability = 0.02 }
+			}
+			set_country_flag = USA_nat_partners_not_satellites
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = USA_Nat_Enforce_the_Order
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 5
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Hemispheric_Order }
+		mutually_exclusive = { focus = USA_Nat_Partners_Not_Satellites }
+		completion_reward = {
+			add_war_support = 0.05
+			if = {
+				limit = { country_exists = MEX }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = MEX
+				}
+			}
+			if = {
+				limit = { country_exists = BRA }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = BRA
+				}
+			}
+			set_country_flag = USA_nat_enforce_the_order
+			country_event = { id = USA_nat_events.6 }
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = USA_Nat_Golden_Dome
+		icon = GFX_goal_generic_scientific_exchange
+		x = 5
+		y = 5
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Fortress_Hemisphere }
+		completion_reward = {
+			add_ideas = USA_nat_golden_dome
+			add_equipment_to_stockpile = { type = anti_air_equipment amount = 1000 producer = USA }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Canal_and_Arctic
+		icon = GFX_goal_generic_army_doctrines
+		x = 6
+		y = 4
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Forward_Defense_Network }
+		completion_reward = {
+			add_ideas = USA_nat_canal_arctic
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Blue_Water_Shield
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 6
+		y = 2
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Continental_Service }
+		completion_reward = {
+			add_ideas = USA_nat_blue_water_shield
+			add_war_support = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Dollar_Zone
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 10
+		y = 2
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Economic_Sphere }
+		completion_reward = {
+			add_ideas = USA_nat_dollar_zone
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Lithium_and_Energy_Compact
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 10
+		y = 3
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 10
+		prerequisite = { focus = USA_Resource_Independence }
+		completion_reward = {
+			add_ideas = USA_nat_lithium_compact
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_Nat_Pax_Americana
+		icon = GFX_goal_generic_alliance
+		x = 4
+		y = 7
+		relative_position_id = USA_Hemispheric_National_Covenant
+		cost = 15
+		prerequisite = { focus = USA_Fortress_Hemisphere }
+		prerequisite = { focus = USA_The_Americas_Covenant }
+		prerequisite = { focus = USA_Nat_Partners_Not_Satellites focus = USA_Nat_Enforce_the_Order }
+		completion_reward = {
+			add_ideas = USA_nat_pax_americana
+			add_stability = 0.05
+			add_war_support = 0.08
+			add_political_power = 100
+			set_country_flag = USA_nat_pax_americana
+			news_event = { id = USA_nat_events.8 }
+		}
+		ai_will_do = { factor = 6 }
+	}
+	
+			USA_nat_family_compact = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.04
+				political_power_factor = -0.02
+			}
+		}
+ 
+		USA_nat_labour_under_flag = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.03
+				political_power_factor = -0.03
+			}
+		}
+ 
+		USA_nat_hemispheric_order = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = 0.03
+				war_support_factor = 0.02
+			}
+		}
+ 
+		USA_nat_resource_independence = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+ 
+		USA_nat_covenant_enforced = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.04
+				stability_factor = -0.02
+			}
+		}
+ 
+		USA_nat_department_of_war = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.03
+				political_power_factor = 0.03
+			}
+		}
+ 
+		USA_nat_warrior_ethos = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.05
+				stability_factor = -0.02
+			}
+		}
+ 
+		USA_nat_autonomy_command = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+ 
+		USA_nat_chairmans_office = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.03
+				war_support_factor = -0.02
+			}
+		}
+ 
+		USA_nat_generals_council = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				political_power_factor = -0.05
+			}
+		}
+ 
+		USA_nat_cult_of_the_chairman = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.06
+				political_power_factor = 0.05
+				research_speed_factor = -0.03
+			}
+		}
+ 
+		USA_nat_collective_directorate = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.04
+				stability_factor = 0.03
+			}
+		}
+ 
+		USA_nat_information_authority = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.02
+				research_speed_factor = -0.02
+			}
+		}
+ 
+		USA_nat_patriot_media = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.02
+			}
+		}
+ 
+		USA_nat_campus_order = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				research_speed_factor = -0.05
+				stability_factor = 0.02
+			}
+		}
+ 
+		USA_nat_sentinel_grid = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.04
+				research_speed_factor = 0.02
+				political_power_factor = -0.03
+			}
+		}
+ 
+		USA_nat_border_corps = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.02
+				war_support_factor = 0.02
+			}
+		}
+ 
+		USA_nat_permanent_emergency = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.08
+				stability_factor = -0.03
+				consumer_goods_factor = 0.04
+			}
+		}
+ 
+		USA_nat_defence_tech = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				research_speed_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.1
+				industrial_capacity_factory = 0.03
+			}
+		}
+ 
+		USA_nat_energy_dominance = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = 0.07
+				production_speed_buildings_factor = 0.05
+			}
+		}
+ 
+		USA_nat_new_american_order = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.06
+				war_support_factor = 0.06
+				political_power_factor = 0.05
+			}
+		}
+ 
+		USA_nat_northern_alliance = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.02
+				political_power_factor = 0.03
+			}
+		}
+ 
+		USA_nat_southern_alliance = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.02
+				political_power_factor = 0.03
+			}
+		}
+ 
+		USA_nat_golden_dome = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_defence_factor = 0.05
+				research_speed_factor = 0.03
+				stability_factor = 0.02
+			}
+		}
+ 
+		USA_nat_canal_arctic = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = 0.03
+				army_defence_factor = 0.03
+			}
+		}
+ 
+		USA_nat_blue_water_shield = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.03
+				navy_defence_factor = 0.05
+			}
+		}
+ 
+		USA_nat_dollar_zone = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = 0.04
+				consumer_goods_factor = -0.02
+			}
+		}
+ 
+		USA_nat_lithium_compact = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = 0.05
+				research_speed_factor = 0.02
+			}
+		}
+ 
+		USA_nat_pax_americana = {
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.08
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+ 
+	}
+

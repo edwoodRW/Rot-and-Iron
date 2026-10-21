@@ -1,0 +1,46 @@
+characters={
+	rho_ian_smith={
+		name=rho_ian_smith
+		portraits={
+			civilian={
+				large=GFX_portrait_RHO_smith
+			}
+		}
+		country_leader={
+			ideology=fascism
+			expire="2036.1.1.1"
+			traits = { rho_white_supremacist rho_loyalist_commander }
+			id=-1
+		}
+	}
+	
+	rho_p_k_van_der_byl={
+		name=rho_p_k_van_der_byl
+		portraits={
+			civilian={
+				large=GFX_portrait_RHO_van_der_byl
+			}
+		}
+		country_leader={
+			ideology=fascism
+			expire="2036.1.1.1"
+			traits = { rho_hawkish_militarist }
+			id=-1
+		}
+	}
+	
+	rho_roy_welensky={
+		name=rho_roy_welensky
+		portraits={
+			civilian={
+				large=GFX_portrait_RHO_welensky
+			}
+		}
+		country_leader={
+			ideology=social_conservative
+			expire="2036.1.1.1"
+			traits = { rho_moderate_unionist }
+			id=-1
+		}
+	}
+}

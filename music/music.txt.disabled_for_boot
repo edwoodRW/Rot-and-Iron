@@ -1,0 +1,1123 @@
+# music_station intentionally omitted to use default station UI
+
+music = {
+	name = "maintheme"
+	file = "hoi4mainthemeallies.ogg"
+	volume = 0.95
+}
+ 
+  
+
+music = {
+	song = "The_Yellow_Rose_of_Texas"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "The_Chicken_Song"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+
+music = {
+	song = "O_Canada_and_God_Save_the_Queen"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "Take_Me_Home_Country_Roads"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "Anthem_of_the_Soviet_Union"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = ENG
+			factor = 100
+		}
+		modifier = {
+			tag = SOV
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "This_Land_Is_Your_Land"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "Heads_Wil_Roll"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "What_A_Time_It_Was"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "Indian_Reservation"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "California_Dreamin"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "Come_and_Get_Your_Love"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "Southern_Nights"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "I_Dont_Want_to_Set_the_World_on_Fire"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "Aint_No_Grave"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+
+
+
+music = {
+	song = "Do_You_Hear_the_People_Sing"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "Waiting_For_The_Great_Leap_Forward"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "Solidarity_Forever"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = ENG
+			factor = 100
+		}
+	}
+}
+
+
+
+
+music = {
+	song = "Thatcherites"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = ENG
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "Bread_and_Roses"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = ENG
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "Wind_Of_Change"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+
+music = {
+	song = "There_Is_Power_In_A_Union"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = ENG
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "Die_Wacht_am_Rhein"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = GER
+			factor = 100
+		}
+	}
+}
+
+
+
+music = {
+	song = "Kaiser_Wilhelm_Siegesmarsch"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = GER
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "AMAZING_GRACE"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = SCO
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "A_Gift_Of_A_Thistle"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = SCO
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "The_British_Grenadiers_fife_and_drum"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = ENG
+			factor = 100
+		}
+	}
+}
+
+
+
+
+music = {
+	song = "Battle_of_the_Falklands"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = ENG
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "The_Internationale"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = ENG
+			factor = 100
+		}
+	}
+}
+
+
+
+
+music = {
+	song = "Over_There_The_United"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "Yankee_Doodle_Instrumentel"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "The_Battle_Cry_of_Freedom"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "John_Browns_body"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "Roll_The_Old_Chariot"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+
+
+music = {
+	song = "Battle_Hymn_of_the_Republic"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "Rifles_of_the_IRA"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = IRE
+			factor = 100
+		}
+	}
+}
+
+
+
+music = {
+	song = "Austro_Hungarian_Empire_1867_1918_Imperial_Anthem"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = AUS
+			factor = 100
+		}
+	}
+}
+
+
+
+music = {
+	song = "Auld_Lang_Syne"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = SCO
+			factor = 100
+		}
+		modifier = {
+			tag = ENG
+			factor = 100
+		}
+		modifier = {
+			tag = WAL
+			factor = 100
+		}
+	}
+}
+
+
+
+music = {
+	song = "The_BonnieBanks_O_Loch_Lomond"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = SCO
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "Scotland_the_Brave"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = SCO
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "We_Didnt_Start_the_Fire"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "Keep_Home_fires_burning_Pack_up_Long_Way"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "God_Syria_and_Bashar"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "55_Days_at_Peking"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "Flanders_Fields"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "Which_Side_are_You_On"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "Rule_Britannia"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "I_vow_to_thee_my_Country"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "Sink_The_Bismarck"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+
+music = {
+	song = "FLOWER_OF_SCOTLAND"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = SCO
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "Canada_National_Anthem_Instrumental"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = CAN
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "The_Irish_National_Anthem"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = IRE
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "Song_of_the_United_Front"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = ENG
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "America_The_Beautiful"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "Come_All_You_Bold_Canadians"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = CAN
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "i_am_australian"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = AST
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "o_canada"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = CAN
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "soviet_anthem_english"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = SOV
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "aint_i_right"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "Jonny_Marching_Home"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "Hey_Jude"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "farewell_to_nova_scotia"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "House_Of_The_Rising_Sun"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "Long_Way_To_Tipperary"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "Alive"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+
+	}
+}
+
+music = {
+	song = "Fortunate_Son"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+
+music = {
+	song = "Surfin_USA"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			tag = USA
+			factor = 100
+		}
+	}
+}
+
+music = {
+	song = "Paradise_City"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "Dancing_In_The_Dark"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "Bitter_Sweet_Symphony"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "Livin_La_Vida_Loca"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "Dont_Look_Back_In_Anger"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "I_Get_Knocked_Down"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "all_the_small_things"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "Mary_On_A_Cross"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "Hotel_California"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "I_did_it_my_way"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "Another_Day_In_Paradise"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "Lay_All_Your_Love_On_Me"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "Thank_you_Reverb"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+music = {
+	song = "MGMT_Little_Dark_Age_Reverb"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

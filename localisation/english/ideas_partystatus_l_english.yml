@@ -1,0 +1,31 @@
+﻿l_english:
+very_low_democratic_influence:0 "Insignificant Influence Of Democracy §Y0-10%§!"
+low_democratic_influence:0 "Low Influence of Democracy §Y10-25%§!"
+medium_democratic_influence:0 "Medium Influence of Democracy §Y25-50%§!"
+high_democratic_influence:0 "High Influence of Democracy §Y50-80%§!"
+very_high_democratic_influence:0 "Absolute Influence of Democracy §Y80-100%§!"
+
+very_low_communist_influence:0 "Insignificant Influence Of Communism §Y0-10%§!"
+low_communist_influence:0 "Low Influence of Communism §Y10-25%§!"
+medium_communist_influence:0 "Medium Influence of Communism §Y25-50%§!"
+high_communist_influence:0 "High Influence of Communism §Y50-80%§!"
+very_high_communist_influence:0 "Absolute Influence of Communism §Y80-100%§!"
+
+very_low_fascism_influence:0 "Insignificant Influence Of Fascism §Y0-10%§!"
+low_fascism_influence:0 "Low Influence of Fascism §Y10-25%§!"
+medium_fascism_influence:0 "Medium Influence of Fascism §Y25-50%§!"
+high_fascism_influence:0 "High Influence of Fascism §Y50-80%§!"
+very_high_fascism_influence:0 "Absolute Influence of Fascism §Y80-100%§!"
+
+very_low_neutrality_influence:0 "Insignificant Influence Of Neutrality §Y0-10%§!"
+low_neutrality_influence:0 "Low Influence of Neutrality §Y10-25%§!"
+medium_neutrality_influence:0 "Medium Influence of Neutrality §Y25-50%§!"
+high_neutrality_influence:0 "High Influence of Neutrality §Y50-80%§!"
+very_high_neutrality_influence:0 "Absolute Influence of Neutrality §Y80-100%§!"
+
+dem_party_status:0 "Status Democracy"
+com_party_status:0 "Status Communism"
+fas_party_status:0 "Status Fascism"
+neu_party_status:0 "Status Neutrality"
+
+elections_reworked:0 "Influence of Parties"

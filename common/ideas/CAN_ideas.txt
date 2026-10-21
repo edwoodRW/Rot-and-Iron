@@ -1,0 +1,263 @@
+ideas = {
+	country = {
+		CAN_mogg_deputy_pm = {
+			picture = GFX_idea_CAN_mogg_deputy_pm
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_weekly = 0.002
+				political_power_gain = -0.10
+				stability_weekly = -0.001
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+		CAN_boris_deputy_pm = {
+			picture = GFX_idea_CAN_boris_deputy_pm
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.10
+				stability_weekly = 0.001
+				improve_relations_maintain_cost_factor = -0.15
+				democratic_drift = 0.05
+			}
+		}
+		Entente_Cordiale_idea = {
+			picture = GFX_idea_CAN_detroit
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.10
+				trade_opinion_factor = 0.05
+			}
+		}
+		Entente_Economic_Union = {
+			picture = GFX_idea_CAN_economy
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.02
+				construction_speed = 0.03
+			}
+		}
+		CAN_sovereignty_declared = {
+			picture = GFX_idea_CAN_sovereignty
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				political_power_gain = 0.05
+				improve_relations_maintain_cost_factor = -0.10
+				justify_war_goal_time = 0.20
+			}
+		}
+		CAN_detroit_framework = {
+			picture = GFX_idea_CAN_detroit
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				stability_weekly = 0.002
+				production_speed_buildings_factor = 0.05
+				embargo_threshold_factor = -0.20
+			}
+		}
+		CAN_conscription_legislation = {
+			picture = GFX_idea_CAN_conscription
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription = 0.03
+				war_support_weekly = 0.001
+				stability_weekly = -0.002
+				industrial_capacity_factory = -0.03
+			}
+		}
+		CAN_industrial_stability = {
+			picture = GFX_idea_CAN_industry
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.03
+				stability_weekly = 0.001
+				political_power_gain = 0.05
+			}
+		}
+		CAN_opposition_dialogue = {
+			picture = GFX_idea_CAN_dialogue
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_cost = -0.05
+				stability_weekly = 0.001
+			}
+		}
+		CAN_minority_government_idea = {
+			picture = GFX_idea_CAN_minority_govt
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.15
+				stability_weekly = -0.001
+				war_support_weekly = -0.001
+			}
+		}
+		CAN_saganash_cabinet_idea = {
+			picture = GFX_idea_CAN_saganash
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.002
+				national_unity_factor = 0.05
+				army_core_defence_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		CAN_saganash_northern_affairs_idea = {
+			picture = GFX_idea_CAN_northern_affairs
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				army_core_defence_factor = 0.03
+				political_power_gain = 0.03
+			}
+		}
+		CAN_indigenous_consultation_active_idea = {
+			picture = GFX_idea_CAN_consultation
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				political_power_gain = -0.05
+			}
+		}
+		CAN_reclamation_war_economy = {
+			picture = GFX_idea_CAN_reclamation
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = 0.20
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.10
+				conscription = 0.05
+				stability_weekly = -0.003
+				consumer_goods_factor = 0.15
+			}
+		}
+		CAN_halifax_superdocks = {
+			picture = GFX_idea_CAN_halifax
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = 0.30
+				naval_speed_factor = 0.05
+				production_speed_naval_base_factor = 0.20
+			}
+		}
+		CAN_naval_priority = {
+			picture = GFX_idea_CAN_naval_priority
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = 0.10
+				production_speed_naval_base_factor = 0.05
+				stability_weekly = -0.001
+			}
+		}
+		CAN_infrastructure_priority = {
+			picture = GFX_idea_CAN_infrastructure_priority
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+				stability_weekly = 0.001
+				industrial_capacity_factory = 0.03
+			}
+		}
+		CAN_professional_command = {
+			picture = GFX_idea_CAN_boris
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { naval_org_factor = 0.05 naval_morale_factor = 0.05 }
+		}
+		CAN_fanatical_command = {
+			picture = GFX_idea_CAN_mogg_deputy_pm
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { naval_morale_factor = 0.10 naval_org_factor = -0.03 }
+		}
+		CAN_symbolic_landing = {
+			picture = GFX_idea_CAN_reclamation
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { amphibious_invasion = 0.05 }
+		}
+		CAN_pragmatic_landing = {
+			picture = GFX_idea_CAN_industry
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { supply_consumption_factor = -0.05 amphibious_invasion = 0.05 }
+		}
+		CAN_coordinated_landing = {
+			picture = GFX_idea_CAN_naval_priority
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { amphibious_invasion = 0.10 naval_coordination = 0.05 }
+		}
+		CAN_coordination_bonus = {
+			picture = GFX_idea_CAN_dialogue
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { planning_speed = 0.10 }
+		}
+		CAN_armada_ready_professional = {
+			picture = GFX_idea_CAN_naval_priority
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { naval_org_factor = 0.05 amphibious_invasion = 0.05 }
+		}
+		CAN_armada_ready_fanatical = {
+			picture = GFX_idea_CAN_reclamation
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { naval_morale_factor = 0.10 war_support_factor = 0.05 }
+		}
+		CAN_armada_ready_divided = {
+			picture = GFX_idea_CAN_dialogue
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { naval_org_factor = -0.05 planning_speed = -0.05 }
+		}
+		CAN_halifax_accountability = {
+			picture = GFX_idea_CAN_dialogue
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { stability_weekly = 0.002 political_power_gain = 0.05 }
+		}
+		CAN_second_armada_doctrine = {
+			picture = GFX_idea_CAN_naval_priority
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { naval_org_factor = 0.05 naval_coordination = 0.05 amphibious_invasion = 0.05 }
+		}
+	}
+}

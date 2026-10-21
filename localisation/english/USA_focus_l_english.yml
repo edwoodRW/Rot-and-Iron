@@ -1,0 +1,272 @@
+﻿l_english:
+
+ USA_The_War_Begins:0 "The World Burns"
+ USA_The_War_Begins_desc:0 "Germany and China have gone to war with the Soviet Union, and Washington has little time to decide what the conflict means for America. In the first cabinet meeting, Turner must choose who will explain the crisis to the public: the President herself, speaking directly to the country, or the State Department, delivering a careful official statement."
+
+ USA_The_Turner_Doctrine:0 "The Turner Doctrine"
+ USA_The_Turner_Doctrine_desc:0 "Turner sees Germany's war against the Soviet Union as a chance to weaken an oppressive regime, even if supporting Berlin means standing beside a one-party state. That choice closes off both an attempt to save Moscow and a retreat into domestic affairs. When the backlash comes, Turner can defend the alignment openly or describe it more cautiously as humanitarian aid."
+
+ USA_Lend_Lease_to_Berlin:0 "Lend-Lease to Berlin"
+ USA_Lend_Lease_to_Berlin_desc:0 "American factories will supply Germany with equipment and industrial goods to keep its armies in the field. Congress must decide whether to rush the shipments, giving contractors greater freedom, or subject every contract to civilian review and accept delays in exchange for closer oversight."
+
+ USA_Atlantic_Alliance:0 "Atlantic Alliance"
+ USA_Atlantic_Alliance_desc:0 "Turner proposes a military pact with Germany, turning emergency shipments into a lasting partnership. Berlin wants a unified command; the Pentagon wants American forces to remain under American orders. The agreement will either bind the two militaries closely together or preserve a clear boundary between their chains of command."
+
+ USA_Deploy_the_Expeditionary_Force:0 "Deploy the Expeditionary Force"
+ USA_Deploy_the_Expeditionary_Force_desc:0 "With the Atlantic pact in place, Turner raises three infantry divisions for service alongside Germany. Their arrival commits American soldiers to a war that can no longer be presented as a distant foreign crisis. When casualties return home, Turner must decide whether to attend the ceremonies herself or leave them to her cabinet and concentrate on the campaign."
+
+ USA_The_Containment_Reversal:0 "The Containment Reversal"
+ USA_The_Containment_Reversal_desc:0 "Rather than help Germany destroy the Soviet Union, Turner opens a channel to Moscow and offers the possibility of American support if the Soviet state can reform. The Kremlin rejects the offer as charity. Turner can try again through a different channel, risking political capital, or wait and hope that Moscow's position changes."
+
+ USA_The_Reform_Package:0 "The Reform Package"
+ USA_The_Reform_Package_desc:0 "Washington offers Moscow relief and diplomatic cover, but Turner wants political concessions in return. Her cabinet debates whether food and credit should be tied to verifiable reforms, or sent immediately with no conditions attached. The decision will determine whether American aid becomes leverage over Rashkin or a gesture of goodwill."
+
+ USA_Negotiated_Peace:0 "Negotiated Peace"
+ USA_Negotiated_Peace_desc:0 "American envoys bring Germany, the Soviet Union, and China to the table in search of a ceasefire. The talks are close to collapse: Turner can force a draft proposal forward by threatening to walk away, or give the diplomats more time while the armies continue fighting. Either course commits Washington to ending the war through negotiation."
+
+ USA_The_New_New_Deal:0 "The New New Deal"
+ USA_The_New_New_Deal_desc:0 "Turner refuses to choose a side in the war and turns her attention to the damage still visible in American cities and public services. Her government will put recovery at home ahead of influence abroad, leaving Germany, the Soviet Union, and China to settle their own conflict. The decision gives the administration breathing room to pursue socialist reforms."
+
+ USA_Domestic_Socialist_Transformation:0 "Domestic Socialist Transformation"
+ USA_Domestic_Socialist_Transformation_desc:0 "Turner wants public ownership of key industries to direct investment toward recovery rather than private profit. When business leaders begin moving their money overseas, she must choose whether to nationalize the remaining holdouts or offer guarantees to keep moderates from breaking with the government. The decision will shape how far the socialist transformation goes."
+
+ USA_Fortress_America:0 "Fortress America"
+ USA_Fortress_America_desc:0 "Turner declares that the United States will put the Western Hemisphere first and avoid new commitments in Europe and Asia. Her cabinet must now define what that policy means: defend the continent as a perimeter against outside threats, or build lasting partnerships with its neighbors. The Pan-American Union will be shaped by that decision."
+
+ USA_The_Business_Plot_2_0:0 "The Business Plot 2.0"
+ USA_The_Business_Plot_2_0_desc:0 "After Turner completes the Pacific Century or Fortress America, reports reach the White House that business executives, defense contractors and military officers oppose the nationalizations and are discussing how to remove the government. The focus opens an investigation and forces Turner to choose between moving against the suspected plotters now or gathering stronger evidence."
+
+ USA_Turner_Survives:0 "Turner Survives"
+ USA_Turner_Survives_desc:0 "Turner moves before the plotters are ready. Arrests, subpoenas, and dismissals break up the conspiracy before it can seize the government, but the purge deepens the country's divisions and strengthens the revolutionary left. The administration now has to decide how far to pursue the officers, donors, and contractors who helped make the plot possible."
+
+ USA_Coup_Succeeds:0 "Coup Succeeds"
+ USA_Coup_Succeeds_desc:0 "Turner waits for more evidence, and the plotters use that delay to take power. A national-conservative junta removes the President, but revolutionary-socialist forces refuse to accept the coup. The United States descends into civil war, and the immediate task is no longer governing the country but defeating the new regime."
+
+ USA_Pivot_to_Asia:0 "Pivot to Asia"
+ USA_Pivot_to_Asia_desc:0 "Turner orders the Navy and diplomatic corps to give the Pacific greater priority. China is expanding its influence, Japan remains a powerful regional force, and Washington fears that the balance could turn against American interests. Before committing to military action, Turner must decide whether Japan can be trusted as a partner."
+
+ USA_The_Pacific_Alliance:0 "The Pacific Alliance"
+ USA_The_Pacific_Alliance_desc:0 "Turner proposes cooperation with Japan against growing Chinese power, despite the deep political divide between the two governments. Tokyo wants shared military plans; Washington could instead keep the commitment limited and preserve the right to withdraw. The terms matter: the coming operation in Korea will depend on how much the two allies are willing to trust one another."
+
+ USA_Operation_Pacific_Storm:0 "Operation Pacific Storm"
+ USA_Operation_Pacific_Storm_desc:0 "American forces and their Japanese partners intervene as China pushes into Korea, presenting its advance as liberation. The operation turns the Pacific policy into a shooting war, and the first battlefield reports will force Turner to choose between pressing the advantage against the invasion or stopping at a defensible line. One course risks a wider conflict; the other leaves Korea exposed and the balance of power unresolved."
+
+ USA_Full_Co_Belligerency:0 "Full Co-Belligerency"
+ USA_Full_Co_Belligerency_desc:0 "American troops are already fighting alongside Germany; Turner must now decide whether to make that partnership official. Berlin wants to lead the campaign, while Washington can demand an equal voice in operations. A demand for parity risks friction between the allies, but accepting German leadership would leave American soldiers fighting under someone else's strategy."
+
+ USA_Joint_Operations_Command:0 "Joint Operations Command"
+ USA_Joint_Operations_Command_desc:0 "The Atlantic pact has settled the formal chain of command; now American and German officers must decide how to coordinate actual operations against the Soviet Union. Turner can authorize the joint staff to prepare shared campaign plans, or restrict it to intelligence exchange and liaison so US commanders retain more room to refuse German proposals."
+
+ USA_Arm_the_Eastern_Front:0 "Arm the Eastern Front"
+ USA_Arm_the_Eastern_Front_desc:0 "Washington expands its aid from general shipments to direct support for the armies fighting in the east. More American manpower, equipment, and industrial output will help keep the coalition supplied, but it also ties the United States more closely to the war's outcome. The distinction between aiding Germany and fighting its war is becoming harder to maintain."
+
+ USA_The_Soviet_Collapse:0 "The Soviet Collapse"
+ USA_The_Soviet_Collapse_desc:0 "The Soviet Union has capitulated under the strain of defeat, and its authority is breaking apart. Turner must decide what follows: help successor administrations keep order and begin reconstruction, or prevent a power vacuum by preparing for a more dangerous postwar balance. The choice will determine whether Washington approaches the aftermath as a relief effort or a security crisis."
+
+ USA_A_New_World_Order:0 "A New World Order"
+ USA_A_New_World_Order_desc:0 "Turner refuses to let a German victory become German rule over all of Eastern Europe. Washington proposes a settlement in which local governments can recover and choose their own future. The first decision is how to deliver aid: rebuild communities immediately and let them decide what follows, or require independent oversight before American money is released."
+
+ USA_Contain_the_Victor:0 "Contain the Victor"
+ USA_Contain_the_Victor_desc:0 "With the Soviet Union defeated, Germany could become the dominant power in Europe. Turner orders Washington to limit Berlin's influence, but a public military buildup could provoke the very confrontation she hopes to prevent. Her advisers weigh quiet military preparations against diplomatic pressure and distance from Germany."
+
+ USA_Rebuild_Eastern_Europe:0 "Rebuild Eastern Europe"
+ USA_Rebuild_Eastern_Europe_desc:0 "Towns across Eastern Europe need food, transport, and functioning public services after decades of Soviet rule and a devastating war. American aid can reach them directly rather than passing through Berlin, giving local governments room to recover. Turner hopes reconstruction will create independent states that need not trade one foreign master for another."
+
+ USA_Quiet_Rearmament:0 "Quiet Rearmament"
+ USA_Quiet_Rearmament_desc:0 "American shipyards and armories begin preparing for a future in which Germany may no longer be a partner. Turner keeps the preparations quiet to avoid provoking Berlin, while the military argues that public deterrence may be necessary. The government must balance readiness against the risk of turning a cold peace into an open confrontation."
+
+ USA_The_Peace_Turner_Built:0 "The Peace Turner Built"
+ USA_The_Peace_Turner_Built_desc:0 "Turner presents the reconstruction of Eastern Europe as proof that peace can mean more than replacing Soviet influence with German influence. Local governments are rebuilding with American support and a chance to choose their own direction. Her administration hopes this network of independent states will outlast the war and give Europe an alternative to domination by a single power."
+
+ USA_The_Cold_Peace:0 "The Cold Peace"
+ USA_The_Cold_Peace_desc:0 "Germany has won, and Washington is quietly preparing for the possibility that its new strength will threaten American interests. Turner avoids breaking with Berlin in public while the armed forces improve their readiness behind closed doors. The result is not trust, but a pause in which both sides watch for the balance to shift."
+
+ USA_Washington_Moscow_Accord:0 "The Washington-Moscow Accord"
+ USA_Washington_Moscow_Accord_desc:0 "If the guns have started again, the accord restores the German-Soviet peace. A ceasefire has held long enough for Washington and Moscow to formalize their relationship. Economic cooperation now sits beside deep disagreements over the Soviet system. Turner must decide whether to defend the agreement publicly as the only realistic path to peace, or allow criticism to pass without risking the diplomatic process."
+
+ USA_Leverage_for_Reform:0 "Leverage for Reform"
+ USA_Leverage_for_Reform_desc:0 "American aid gives Turner leverage over a Soviet government weakened by war. She demands the release of political prisoners and a genuine opening of Rashkin's bureaucracy, even if pressure could unravel the accord. Her advisers hope the threat of withholding aid will make reform possible; Moscow may instead choose pride over cooperation."
+
+ USA_Pragmatic_Silence:0 "Pragmatic Silence"
+ USA_Pragmatic_Silence_desc:0 "Turner decides that peace with Moscow matters more than making political reform a condition of cooperation. Human-rights demands disappear from the drafts of the accord, and American officials stop challenging Rashkin in public. The agreement may survive, but its stability will rest on Washington choosing not to confront what it knows about Soviet repression."
+
+ USA_The_Rashkin_Ultimatum:0 "The Rashkin Ultimatum"
+ USA_The_Rashkin_Ultimatum_desc:0 "American reconstruction credits are suspended and grain ships wait offshore while Rashkin receives Turner's demand: verifiable reforms within ninety days, or the accord will be worthless. Washington is betting that a Soviet Union devastated by war needs American aid more than its leaders need to save face. If Rashkin refuses, the peace itself may be at risk."
+
+ USA_Look_the_Other_Way:0 "Look the Other Way"
+ USA_Look_the_Other_Way_desc:0 "Reports of Soviet repression continue to reach Washington, but Turner refuses to challenge Moscow while the accord holds. Her administration accepts that silence may preserve peace in the short term, while leaving Soviet citizens to live under the same system. The bargain is simple and troubling: stability for America, with no promise of justice for them."
+
+ USA_A_Reformed_Union:0 "A Reformed Union"
+ USA_A_Reformed_Union_desc:0 "Rashkin's government begins releasing political prisoners and opening parts of its bureaucracy, slowly and without admitting that American pressure played a role. Turner accepts gradual concessions rather than a dramatic transformation. The Soviet Union remains intact, but the accord has created room for changes that would have been unthinkable before the war."
+
+ USA_The_Price_of_Peace:0 "The Price of Peace"
+ USA_The_Price_of_Peace_desc:0 "The accord holds and American grain continues to reach the Soviet Union, but Rashkin's government remains largely unchanged. Turner has avoided another crisis by leaving Moscow's internal affairs alone. The peace is real, and so is its cost: those still living under the Soviet government have gained little from the bargain."
+
+ USA_The_Pan_American_Union:0 "The Pan-American Union"
+ USA_pan_american_union_faction:0 "The Pan-American Union"
+ USA_influence_tier_updated_tt:0 "Recalculate corporate influence and refresh its national spirit."
+ USA_The_Pan_American_Union_desc:0 "Turner proposes a closer union among the American states, beginning with shared plans and a common budget. Mexico wants railways and power links; smaller countries want a real voice; the military wants a shield against outside powers. Washington must decide whether the Union will be built through shared investment or collective security."
+
+ USA_Courting_Mexico_City:0 "Courting Mexico City"
+ USA_Courting_Mexico_City_desc:0 "Mexico is the first major partner Turner hopes to bring into the Pan-American project. Joint rail, power, and trade plans could turn the border from a security line into a connection between the two economies. A partnership with Mexico would also show the rest of the hemisphere that the Union can offer mutual benefit rather than American orders."
+
+ USA_The_Southern_Cone_Question:0 "The Southern Cone Question"
+ USA_The_Southern_Cone_Question_desc:0 "Argentina's military government opposes the Pan-American Union, while Brazil fears that cooperation could become another name for American control. As unrest grows in Argentina, Turner must decide whether to provide the opposition with material support or limit Washington's response to public statements and asylum. That choice will define the Union's first major crisis."
+
+ USA_The_World_Finds_Us:0 "The World Finds Us"
+ USA_The_World_Finds_Us_desc:0 "Turner chose to provide material support to Argentina's opposition, and the crisis is now pulling the United States into a conflict in its own hemisphere. The Union was meant to build cooperation, not wage wars, but Washington cannot ignore the consequences of its support. Turner must prepare the public for an involvement she once promised to avoid."
+
+ USA_The_Wall_Holds:0 "The Wall Holds"
+ USA_The_Wall_Holds_desc:0 "Turner limited Washington's response to statements and offers of asylum, refusing to arm Argentina's opposition. As the crisis deepens, she holds to the view that the Pan-American Union must not become an intervention force. The policy protects the Union from an immediate war, but leaves Argentina's people to face their own government's violence."
+
+ USA_The_Two_Front_Question:0 "The Two-Front Question"
+ USA_The_Two_Front_Question_desc:0 "After intervention in Korea, the Joint Chiefs warn that the country cannot sustain major commitments in Europe and the Pacific indefinitely. Turner must choose where scarce ships, divisions, and supplies will go: shift more of them west and accept a thinner European effort, or limit the Pacific presence and preserve resources for the Atlantic."
+
+ USA_Total_Pacific_Mobilization:0 "Total Pacific Mobilization"
+ USA_Total_Pacific_Mobilization_desc:0 "Turner orders more ships and divisions to the Pacific, accepting that Europe will receive less American support. The decision makes Asia the central theatre of American policy and prepares the country for a prolonged contest with China. It is a deliberate commitment to the Pacific, not a temporary show of force."
+
+ USA_Stabilize_and_Withdraw:0 "Stabilize and Withdraw"
+ USA_Stabilize_and_Withdraw_desc:0 "Turner decides the United States cannot afford to expand the Pacific war while remaining committed in Europe. American forces will hold the current line in Korea, then withdraw to a smaller defensive posture as resources return to the Atlantic and home. The immediate danger of escalation falls, but the uneasy line with China remains."
+
+ USA_The_Pacific_Century:0 "The Pacific Century"
+ USA_The_Pacific_Century_desc:0 "The Pacific is now the center of American strategy. Turner wants lasting coordination with regional partners and a military prepared to protect American interests across Asia. Whether this shift was planned from the beginning or forced by events, the government is committing itself to a generation of attention and resources in the Pacific."
+
+ USA_An_Uneasy_Truce:0 "An Uneasy Truce"
+ USA_An_Uneasy_Truce_desc:0 "The United States has stepped back from further escalation, but neither side trusts the line dividing American and Chinese forces. Turner keeps a reduced presence in place and asks Washington to guarantee the truce. The fighting has paused, not ended; a future President may still face the crisis this administration chose to defer."
+
+ USA_The_Reckoning:0 "The Reckoning"
+ USA_The_Reckoning_desc:0 "With the coup defeated, Turner's Justice Department traces the conspiracy through the military, the defense industry, and the donors who supported it. The public wants accountability, but the scale of the investigation raises fears that emergency powers could be used against future opponents. Turner must decide whether the purge remains necessary or whether it has gone far enough."
+
+ USA_A_Party_Remade:0 "A Party Remade"
+ USA_A_Party_Remade_desc:0 "The coup has convinced Turner's supporters that the old balance between the military, business, and elected government cannot be restored. She uses the crisis to push for workplace democracy and stronger civilian control of the armed forces. The DSA that emerges will be more radical, more organized, and less willing to compromise with the institutions that threatened it."
+
+ USA_The_Junta_Consolidates:0 "The Junta Consolidates"
+ USA_The_Junta_Consolidates_desc:0 "The generals who seized Washington now decide how the country will be governed. A security council could rule above the civilian ministries, or officials could keep those ministries operating under military supervision. Either arrangement gives the junta a working government; the difference is whether authority rests openly with the officers or behind a civilian facade."
+
+ USA_Martial_Law_Made_Permanent:0 "Martial Law Made Permanent"
+ USA_Martial_Law_Made_Permanent_desc:0 "The junta announces that emergency rule will last for as long as the global crisis continues, without defining when that crisis will end. Ministries keep working, but political power is concentrated in the military government and opposition is driven underground. The promise of temporary rule has become permanent dictatorship."
+
+ USA_Rebuild_the_Union:0 "Rebuild the Union"
+ USA_Rebuild_the_Union_desc:0 "The fighting is over, but victory has left cities damaged, families displaced, and the federal government deeply mistrusted. The junta directs federal resources toward repairing the country and restoring basic services. Once recovery is underway, the generals must decide whether to govern openly through the security council or rely on civilian administrators."
+
+ USA_The_Security_State_Endures:0 "The Security State Endures"
+ USA_The_Security_State_Endures_desc:0 "The generals conclude that the civil war proved civilian politics too dangerous to restore. The security council keeps direct control of the state, using the armed forces to maintain order while reconstruction proceeds under military direction."
+
+ USA_A_Civilian_Recovery_Cabinet:0 "A Civilian Recovery Cabinet"
+ USA_A_Civilian_Recovery_Cabinet_desc:0 "The junta reopens civilian ministries and gives administrators responsibility for rebuilding the country. The generals retain ultimate authority, but permit a broader government to restore services, repair infrastructure, and make daily life feel less like an extension of the war."
+
+ USA_Push_for_a_Ceasefire:0 "Push for a Ceasefire"
+ USA_Push_for_a_Ceasefire_desc:0 "Turner tells her envoys to stop the shooting first and settle the larger questions later. They will negotiate with the commanders at the front, where any agreement must actually be obeyed. The President can stake her reputation on a public demand for a ceasefire or support the effort quietly, leaving herself room to retreat if the talks fail."
+
+ USA_War_Profiteers_Mobilize:0 "War Profiteers Mobilize"
+ USA_War_Profiteers_Mobilize_desc:0 "Defense contractors fear that peace will end the contracts and profits created by the war. Their money is appearing in think tanks, political campaigns, and editorials warning against a ceasefire. Turner's advisers can expose the campaign and risk making the talks a political spectacle, or ignore it and let the pressure build."
+
+ USA_The_Ceasefire_Holds:0 "The Ceasefire Holds"
+ USA_The_Ceasefire_Holds_desc:0 "Germany and the Soviet Union stop fighting each other and a white peace takes effect. The guns have fallen silent, but early violations could still unravel the agreement. Turner can fund independent inspectors and publish evidence of who breaks the terms, or accept a less exacting political compromise to keep the shooting stopped. The first approach demands accountability; the second protects the fragile pause from another round of accusations."
+
+ USA_The_War_Grinds_On:0 "The War Grinds On"
+ USA_The_War_Grinds_On_desc:0 "The ceasefire has collapsed and the fighting continues. Turner must decide whether to give the production board emergency authority to expand wartime output, or keep contractors under civilian oversight even if that slows supplies. The argument is no longer about how to end the war soon, but how much power the war economy should have."
+
+ USA_A_Longer_War:0 "A Longer War"
+ USA_A_Longer_War_desc:0 "With negotiations stalled, Turner prepares the country for a conflict with no clear end. Industry is redirected toward the war effort and the public is asked to accept a longer commitment. The policy may sustain the armies abroad, but it will deepen the strain on a country already divided over why America is fighting."
+
+ USA_A_Peace_Denied:0 "A Peace Denied"
+ USA_A_Peace_Denied_desc:0 "A leaked report alleges that unelected interests helped destroy a ceasefire that might have ended the war. Turner can let public anger strengthen support for the war effort or try to move past the scandal. Either way, trust in Washington suffers, and the crisis gives military and corporate opponents another reason to challenge her government."
+
+l_english:
+
+ USA_Debt_Jubilee:0 "The Debt Jubilee"
+ USA_Debt_Jubilee_desc:0 "Student loans, medical bills and payday debt are cancelled by decree, and the public bank absorbs the losses. Millions of households wake up to find the burden that shaped their adult lives has vanished. Creditors call it theft; everyone else calls it a jubilee."
+ USA_The_Public_Grid:0 "The Public Grid"
+ USA_The_Public_Grid_desc:0 "Regional utilities and private grid operators are merged into a single public network. Engineers get to plan the grid as one machine instead of thousands of competing balance sheets, and their first act is to rebuild the transmission lines left to decay for a generation."
+ USA_Solar_and_Storage:0 "Solar, Storage and Heat Pumps"
+ USA_Solar_and_Storage_desc:0 "Solar farms spread across the Southwest and panels spread across every city rooftop. Grid-scale batteries smooth out the load, and crews of retrofitters install heat pumps in homes that burned oil for fifty years. Energy bills fall for the first time in living memory."
+ USA_Rail_and_Gigafactories:0 "Rail and Gigafactories"
+ USA_Rail_and_Gigafactories_desc:0 "Battery plants and electric vehicle lines open across the Rust Belt, and high-speed rail corridors link cities once connected only by interstate. For the first time in decades, a factory job in Ohio or Michigan looks like a job with a future."
+ USA_The_Green_Republic:0 "The Green Republic"
+ USA_The_Green_Republic_desc:0 "The grid is public, the factories are clean and the fossil-fuel lobbies that bankrolled the coup have been dismantled. Turner declares America a green republic, and national emissions fall at a rate climate scientists called impossible five years earlier."
+ USA_Housing_as_a_Right:0 "Housing as a Right"
+ USA_Housing_as_a_Right_desc:0 "Corporate landlord portfolios are bought out, rents are capped and public builders are given the land to put up mid-rise blocks in every major city. The first new neighbourhoods open with waiting lists a year long. Nobody is surprised by the demand; the surprise is that the government finally answered it."
+ USA_Medicare_for_All:0 "Care for All"
+ USA_Medicare_for_All_desc:0 "Every clinic, insurer and hospital group is folded into one public health service. Care is free at the point of use, and the billing departments that swallowed a fifth of the old system's budget simply disappear. Doctors worry about pay; patients stop worrying about bills."
+ USA_The_Digital_Public_Square:0 "The Digital Public Square"
+ USA_The_Digital_Public_Square_desc:0 "Public broadband reaches every county, and a publicly owned platform with open moderation rules and no advertising model offers an alternative to the private feeds that spent a decade amplifying outrage. It will not win every argument, but it is an argument the public owns."
+ USA_Oversight_of_the_Watchers:0 "Oversight of the Watchers"
+ USA_Oversight_of_the_Watchers_desc:0 "A civilian review board, partly chosen by lot, is given the right to audit every warrant and every database the security bureau touches. Intelligence officers resent the interference. Turner reminds them that the last government that insisted on secrecy ended in a coup."
+ USA_The_Digital_Bill_of_Rights:0 "The Digital Bill of Rights"
+ USA_The_Digital_Bill_of_Rights_desc:0 "The republic adopts a charter protecting private communication, banning bulk surveillance without court review and guaranteeing every citizen the right to see and correct any file the state holds on them. It is the party's answer to its own most dangerous temptation."
+ USA_The_Peoples_Guard:0 "The People's Guard"
+ USA_The_Peoples_Guard_desc:0 "The loyalist militias, union defence committees and mutinous National Guard units that won the civil war are brought under one banner and one chain of command. Weapons are registered, officers are elected within limits, and loyalty is pledged to the constitution rather than to any general."
+ USA_Purge_the_Coup_Officers:0 "Purge the Coup Officers"
+ USA_Purge_the_Coup_Officers_desc:0 "Every officer who signed an order for the junta, or simply stayed silent when it was given, faces review. Courts-martial open within weeks, the Pentagon's corridors empty quickly, and the survivors learn that in the new republic the chain of command ends at the ballot box."
+ USA_Nationalise_the_Arms_Industry:0 "Nationalise the Arms Industry"
+ USA_Nationalise_the_Arms_Industry_desc:0 "The defence contractors that financed the coup are taken into public ownership, their boards dissolved and their lobbyists locked out of procurement. Production lines continue under worker and engineer management. Nobody will again profit from a war they helped arrange."
+ USA_Cyber_Defence_Command:0 "Cyber Defence Command"
+ USA_Cyber_Defence_Command_desc:0 "Satellite uplinks, grid controllers and military networks are placed under one digital defence staff, with orders to keep hostile hackers and the coup's surviving signal units out of the country's systems. Recruiters scour universities and union halls for engineers. The command is small, young and indispensable."
+ USA_The_Democratic_Army:0 "The Democratic Army"
+ USA_The_Democratic_Army_desc:0 "A new defence law enshrines soldiers' rights, civilian oversight and a citizen-reserve model drawn from the loyalist militias. The army that emerges is leaner and less hierarchical than the one it replaced, and the generals who remain discover that persuasion matters as much as orders."
+ USA_Revolutionary_Diplomacy:0 "Revolutionary Diplomacy"
+ USA_Revolutionary_Diplomacy_desc:0 "The State Department's corridors are repopulated with organisers, union lawyers and veterans of the loyalist government. Ambassadors appointed by the junta are recalled, and a new doctrine goes out on every secure channel: America will no longer treat the hemisphere as a market to be managed."
+ USA_Americas_Solidarity_Pact:0 "The Americas Solidarity Pact"
+ USA_Americas_Solidarity_Pact_desc:0 "Mexico City and Brasilia, products of the revolutions of 2003, are offered something Washington never gave them before: a treaty between equals. Joint grid links, shared supply chains for battery metals and a mutual defence clause bind the three governments, with no occupying army and no conditions written in Washington."
+ USA_Support_Argentine_Labour:0 "Stand with Argentine Labour"
+ USA_Support_Argentine_Labour_desc:0 "The junta in Buenos Aires survived 2003 by force, and its strikers now organise through encrypted apps faster than its police can tap them. American unions open strike funds, public broadcasters carry their stories and Turner's government quietly shares secure communication tools. The junta calls it interference. The strikers call it the first help they have had in twenty years."
+ USA_Overthrow_the_Junta:0 "Overthrow the Junta"
+ USA_Overthrow_the_Junta_desc:0 "The movement in Argentina will either be crushed or victorious, and Washington decides it will not watch it be crushed. Advisers, supplies and a declaration of support go south. Critics at home ask whether a revolution that exports itself by force is still a revolution."
+ USA_Liberate_the_North:0 "Liberate the North"
+ USA_Liberate_the_North_desc:0 "Across the border, Conrad Black's regime jails strikers, closes newspapers and keeps a thin veneer of elections for the benefit of foreign diplomats. Refugees cross at night and tell the same story at every reception centre. Turner's cabinet concludes that a free America and an oligarchic Canada cannot coexist indefinitely."
+ USA_Peaceful_Coexistence:0 "Peaceful Coexistence"
+ USA_Peaceful_Coexistence_desc:0 "The cabinet decides the revolution will be judged by what it builds at home, not by who it fights abroad. Border commands stand down, trade talks open even with hostile neighbours, and Turner tells the nation that a government that rebuilt its own country first has earned the right to speak to the world. The generals grumble; the factories hum."
+ USA_The_Second_American_Revolution:0 "The Second American Revolution"
+ USA_The_Second_American_Revolution_desc:0 "The coup is defeated, the economy is public, the grid is clean and the state answers to the movement that won the war. Turner stands on the Capitol steps and declares the revolution not finished, but secure. A country that was a garrison state for fifty years is now something nobody quite has a name for."
+
+ USA_rev_debt_jubilee:0 "Debt Jubilee"
+ USA_rev_debt_jubilee_desc:0 "Student, medical and consumer debts have been cancelled, freeing household income and public goodwill."
+ USA_rev_public_grid:0 "Public Grid"
+ USA_rev_public_grid_desc:0 "One public network plans, upgrades and maintains the national power grid."
+ USA_rev_clean_energy:0 "Clean Energy Mobilisation"
+ USA_rev_clean_energy_desc:0 "Solar farms, grid batteries and heat-pump retrofits are cutting energy costs nationwide."
+ USA_rev_gigafactories:0 "Rail and Gigafactories"
+ USA_rev_gigafactories_desc:0 "Battery plants and rail corridors are reviving the industrial heartland."
+ USA_rev_green_republic:0 "The Green Republic"
+ USA_rev_green_republic_desc:0 "A public grid, clean industry and a defeated fossil-fuel lobby define the new economy."
+ USA_rev_public_housing:0 "Public Housing Programme"
+ USA_rev_public_housing_desc:0 "Public builders and rent caps are turning housing from an asset into a right."
+ USA_rev_universal_care:0 "Care for All"
+ USA_rev_universal_care_desc:0 "A single public health service has replaced the insurers and billing departments."
+ USA_rev_public_square:0 "The Digital Public Square"
+ USA_rev_public_square_desc:0 "Public broadband and a publicly owned platform give citizens a space no advertiser controls."
+ USA_rev_security_oversight:0 "Civilian Security Oversight"
+ USA_rev_security_oversight_desc:0 "A review board chosen partly by lot audits every warrant and database the security bureau uses."
+ USA_rev_digital_bill_of_rights:0 "Digital Bill of Rights"
+ USA_rev_digital_bill_of_rights_desc:0 "Citizens are guaranteed private communication and the right to see and correct state files on them."
+ USA_rev_peoples_guard:0 "The People's Guard"
+ USA_rev_peoples_guard_desc:0 "Loyalist militias, union defence committees and National Guard units now serve under one constitutional command."
+ USA_rev_public_arsenal:0 "Public Arsenal"
+ USA_rev_public_arsenal_desc:0 "Former coup-financing contractors are publicly owned and managed by engineers and workers."
+ USA_rev_cyber_command:0 "Cyber Defence Command"
+ USA_rev_cyber_command_desc:0 "A dedicated digital staff protects military and civilian networks from hostile intrusion."
+ USA_rev_democratic_army:0 "The Democratic Army"
+ USA_rev_democratic_army_desc:0 "Soldiers' rights, civilian oversight and a citizen-reserve model shape a leaner armed force."
+ USA_rev_americas_solidarity:0 "Americas Solidarity Pact"
+ USA_rev_americas_solidarity_desc:0 "Treaties of equals with Mexico and Brazil link grids, supply chains and defence."
+ USA_rev_second_revolution:0 "The Second American Revolution"
+ USA_rev_second_revolution_desc:0 "The coup is defeated and the republic is rebuilt on public ownership, public technology and popular power."
+
+ USA_rev_events.1.t:0 "The Jubilee"
+ USA_rev_events.1.d:0 "At nine on a Monday morning, millions of phones across the country buzz at once. Student loan balances, medical debts and payday loans have been wiped from the public ledger. Within the hour bank shares crash and the feeds fill with strangers posting screenshots of zero balances. Treasury's lawyers want to know what to do about the pension funds that held the paper, and Turner must decide whether the jubilee has exceptions."
+ USA_rev_events.1.a:0 "Cancel everything, no exceptions"
+ USA_rev_events.1.b:0 "Protect pensions and small lenders"
+ USA_rev_events.2.t:0 "The Northern Border"
+ USA_rev_events.2.d:0 "Border commands from Maine to Washington State are placed on alert as thousands of refugees from Canada fill reception centres. Their testimony is consistent: arrests without charge, closed newspapers, mass layoffs for anyone who signed a petition. The northern governors ask for troops. Black's government calls the mobilisation an act of aggression and says Canadian forces are ready."
+ USA_rev_events.2.a:0 "The border commands move"
+ USA_rev_events.3.t:0 "The Right to See Your File"
+ USA_rev_events.3.d:0 "A schoolteacher in Ohio is the first citizen to request her file under the new charter. Eleven days later she receives four hundred pages: location records, purchase histories, a note from an informant she thought was a friend. She posts the first page online with a single line of commentary. By evening it has been shared two million times, and the security bureau has had to explain every entry."
+ USA_rev_events.3.a:0 "The state answers to the citizen"
+ USA_rev_events.4.t:0 "Courts-Martial"
+ USA_rev_events.4.d:0 "The review boards have identified four hundred officers who carried out orders for the junta, from brigadiers to the captain who locked a county courthouse and read out a list of names. The loyalist rank and file want public trials. The Pentagon's reformers warn that a generation of officers will resign rather than submit, and the army needs them."
+ USA_rev_events.4.a:0 "Public courts-martial, televised"
+ USA_rev_events.4.b:0 "Quiet retirements, and lose the pensions"
+ USA_rev_events.5.t:0 "The Second American Revolution"
+ USA_rev_events.5.d:0 "On the steps of the Capitol, with the flag behind her and a camera crew on every roof, Nina Turner reads the declaration that closes the war. The coup is defeated. The banks, the grid and the factories are in public hands. The crowd is smaller than the one that cheered her inauguration and much louder. Across the world, governments watch to see whether this experiment will survive the people who made it."
+ USA_rev_events.5.a:0 "The republic endures"

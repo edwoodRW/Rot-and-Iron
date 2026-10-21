@@ -1,0 +1,102 @@
+ENG_welsh_campaign_cat = {
+	ENG_break_wales_in_thirty_days = {
+		icon = decision_generic_ignite_civil_war
+		is_good = no
+
+		visible = {
+			has_country_flag = ENG_welsh_campaign_started
+		}
+
+		available = {
+			has_war_with = WLS
+			WLS = {
+				exists = yes
+				NOT = { has_capitulated = yes }
+			}
+		}
+
+		activation = {
+			has_country_flag = ENG_welsh_campaign_started
+		}
+
+		selectable_mission = yes
+		days_mission_timeout = 30
+		fire_only_once = yes
+		cancel_if_not_visible = no
+
+		cancel_trigger = {
+			OR = {
+				NOT = { has_country_flag = ENG_welsh_campaign_started }
+				NOT = { has_war_with = WLS }
+				WLS = { exists = no }
+				WLS = { has_capitulated = yes }
+			}
+		}
+
+		cancel_effect = {
+			if = {
+				limit = {
+					has_idea = ENG_severed_western_arteries
+				}
+				remove_ideas = ENG_severed_western_arteries
+			}
+			clr_country_flag = ENG_welsh_famine_cleanup_live
+		}
+
+		complete_effect = {
+		}
+
+		timeout_effect = {
+			country_event = { id = rot_eng_focus.42 days = 1 }
+			set_country_flag = ENG_welsh_famine_cleanup_live
+		}
+	}
+
+	ENG_welsh_famine_cleanup = {
+		icon = generic_operation
+		is_good = no
+
+		visible = {
+			has_country_flag = ENG_welsh_campaign_started
+		}
+
+		available = {
+			has_idea = ENG_severed_western_arteries
+		}
+
+		activation = {
+			has_country_flag = ENG_welsh_famine_cleanup_live
+		}
+
+		days_mission_timeout = 3650
+		fire_only_once = no
+		cancel_if_not_visible = no
+
+		cancel_trigger = {
+			OR = {
+				NOT = { has_country_flag = ENG_welsh_campaign_started }
+				NOT = { has_idea = ENG_severed_western_arteries }
+				NOT = { has_war_with = WLS }
+				WLS = { exists = no }
+				WLS = { has_capitulated = yes }
+			}
+		}
+
+		cancel_effect = {
+			if = {
+				limit = {
+					has_idea = ENG_severed_western_arteries
+				}
+				remove_ideas = ENG_severed_western_arteries
+			}
+			clr_country_flag = ENG_welsh_famine_cleanup_live
+		}
+
+		complete_effect = {
+		}
+
+		timeout_effect = {
+			activate_mission = ENG_welsh_famine_cleanup
+		}
+	}
+}
