@@ -11,10 +11,11 @@ if = {
 }
 
 add_ideas = {
-UN_Member_idea
-EuroPaktMember_idea
-Reichspakt_idea
+RI_european_socialist_union
+The_Spartacist_Legacy
+The_Democratic_Socialist_Model
 Vanguard_of_a_United_Europe
+The_Eastern_Question
 
 }
 
@@ -48,7 +49,7 @@ add_to_faction = UKR # Ukraine
 add_to_faction = LAT # Latvia
 add_to_faction = LIT # Lithuania
 add_to_faction = EST # Estonia
-add_to_faction = IRN # Iran
+add_to_faction = PER # Iran
 
 set_convoys = 500
 set_stability = 0.8
@@ -144,68 +145,101 @@ set_popularities = {
     national_conservative = 8
     centrist = 10
     liberal = 9
-    new_democrat = 6
+    social_democrat = 6
     moderate_socialist = 38 
     revolutionary_socialist = 18 
     communist = 7
 }
 
-# moderate_socialist — ruling party
+# fascist — German Imperial Front
 create_country_leader = {
-    name = "Stefan Liebich"
+    name = "Rolf Eichenwald"
+    desc = RI_GER_rolf_eichenwald_desc
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = fascist_ideology
+    traits = { }
+}
+
+# nationalist — Kaiserliche Restauration
+create_country_leader = {
+    name = "Friedrich Hagenfels"
+    desc = RI_GER_friedrich_hagenfels_desc
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = nationalist_ideology
+    traits = { }
+}
+
+# national_bolshevik — National Revolutionary Front
+create_country_leader = {
+    name = "Jürgen Elsässer"
+    desc = RI_GER_jurgen_elsasser_desc
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = national_bolshevik_ideology
+    traits = { }
+}
+
+# liberal — National Liberal Union
+create_country_leader = {
+    name = "Sabine Leutheusser-Schnarrenberger"
+    desc = RI_GER_sabine_leutheusser_schnarrenberger_desc
+    picture = "gfx/leaders/leader_unknown_female.dds"
+    ideology = social_liberal
+    traits = { }
+}
+
+# social_democrat — Progressive Democrats
+create_country_leader = {
+    name = "Olaf Scholz"
+    desc = RI_GER_olaf_scholz_desc
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = social_democracy
+    traits = { }
+}
+
+# Eurocommunist — ruling party
+create_country_leader = {
+    name = "Chancellor Stefan Liebich"
     picture = "Stefan_Liebich.dds"
-    ideology = democratic_socialist
-    traits = { GER_war_chancellor GER_coalition_builder }
+    ideology = eurocommunism
+    traits = { }
 }
 
 # revolutionary_socialist — main opposition
-create_country_leader = {
-    name = "Elsa Brandt"
-    picture = "GER_Elsa_Brandt.dds"
-    ideology = council_socialism
-    traits = { GER_anti_war_voice GER_principled_left }
-}
+recruit_character = RI_GER_sahra_wagenknecht
 
 # national_conservative — war hawks
 create_country_leader = {
-    name = "Karl Hoffmann"
-    picture = "GER_Karl_Hoffmann.dds"
-    ideology = national_conservatism
-    traits = { GER_former_general GER_war_hawk }
+    name = "Markus Söder"
+    desc = RI_GER_markus_soder_desc
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = reactionary
+    traits = { }
 }
 
 # centrist
 create_country_leader = {
-    name = "Heinrich Müller"
-    picture = "GER_Heinrich_Muller.dds"
-    ideology = social_liberalism
-    traits = { GER_technocrat GER_former_finance_minister }
+    name = "Jürgen Falkenrath"
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = centrist_ideology
+    traits = { }
 }
 
 # communist
 create_country_leader = {
     name = "Werner Dahl"
-    picture = "GER_Werner_Dahl.dds"
-    ideology = marxism_leninism
-    traits = { GER_hardliner }
+    desc = RI_GER_werner_dahl_desc
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = communist
+    traits = { }
 }
 
-# nationalist — monarchist fringe
+# monarchist — House of Hohenzollern Circle
 create_country_leader = {
-    name = "Friedrich von Hohenzollern"
-    picture = "GER_Friedrich_Hohenzollern.dds"
-    ideology = ultranationalism
-    traits = { GER_royal_pretender }
+    name = "Georg Friedrich Prinz von Preußen"
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = Constitutional_monarchist
+    traits = { }
 }
-
-
-
-
-
-
-
-
-
 
 
 

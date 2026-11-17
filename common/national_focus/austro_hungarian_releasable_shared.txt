@@ -2,24 +2,7 @@
 	id = austro_hungarian_releasable_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			OR = {
-				tag = SLO
-				tag = TRA
-				tag = CRO
-				tag = LBV
-				tag = SIL
-				tag = MNT
-				tag = BOS
-				tag = SLV
-				tag = HRZ
-				tag = ALB
-			}
-			has_dlc = "Gotterdammerung"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

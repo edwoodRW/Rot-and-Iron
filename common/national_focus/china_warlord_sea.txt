@@ -2,28 +2,7 @@
 	id = china_warlord_sea_focus
 	
 	country = {
-		base = 0
-		
-		modifier = {
-			add = 15
-			OR = {
-				tag = YUN
-				tag = SIK
-				tag = GXC
-				tag = SHX
-				tag = XSM
-				tag = GDC
-				tag = XIC
-				tag = SND
-				tag = KHM
-				tag = NXM
-				tag = GSM
-				tag = SIC
-				tag = KUM
-				tag = HBC
-			}
-			has_dlc = "No Compromise, No Surrender"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

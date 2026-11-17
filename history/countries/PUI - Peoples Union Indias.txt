@@ -100,7 +100,7 @@ set_popularities = {
 		national_conservative = 15
 		centrist = 3
 		liberal = 2
-		new_democrat = 15
+		social_democrat = 15
 		moderate_socialist = 15
 		revolutionary_socialist = 35
 		communist = 5
@@ -157,7 +157,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Rajiv Ghandi"
 	picture = "Portrait_PUI_Rajiv_Ghandi.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

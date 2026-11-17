@@ -1,21 +1,3 @@
-###########################################################
-# STRUCTURE
-# Phase 0 — THE GATHERING STORM (pre-war)
-#   Germany has NOT yet invaded the USSR. The opening game
-#   is spent building an alliance network, running a shadow
-#   war against UBSR/Soviet interests, quietly rearming
-#   without tipping Germany's hand, and securing Liebich's
-#   domestic mandate for war.
-# Phase 1 — THE WAR COUNCIL (war begins)
-#   Once enough of Phase 0 is complete, "The Die Is Cast"
-#   unlocks the war council, Germany commits to the
-#   two-front invasion of the USSR, and the wartime branches
-#   open up:
-#   - War Economy mobilisation
-#   - Cutting UBSR supply routes to the USSR (the Atlantic)
-#   - Formalising the ally network (Scotland, France, China)
-#   - Internal political pressure from Brandt's anti-war left
-###########################################################
 
 
 focus_tree = {
@@ -31,17 +13,244 @@ focus_tree = {
 
 	default = no
  continuous_focus_position = { x = 50 y = 22300 }
-	###################################################
-	# PHASE 0 — THE GATHERING STORM
-	# The true root of the tree. Germany has not yet
-	# invaded the USSR. Everything in this phase is
-	# about preparing the ground: allies, sabotage,
-	# quiet rearmament, and the domestic mandate for war.
-	###################################################
+
+	focus = {
+		id = GER_victory_reassert_sovereignty
+		icon = GFX_focus_GER_pacific
+		x = 18
+		y = 13
+		cost = 5
+		available = {
+			has_country_flag = RI_GER_recovery_unlocked
+			NOT = { is_subject = yes }
+			NOT = { has_war_with = SOV }
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_victory_economic_revival
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_victory_reassert_sovereignty }
+		x = 13
+		y = 14
+		cost = 5
+		available = {
+			any_owned_state = {
+				is_core_of = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT is_fully_controlled_by = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_recovery_reopen_workshops
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_victory_economic_revival }
+		x = 12
+		y = 15
+		cost = 5
+		available = {
+			any_owned_state = {
+				is_core_of = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT is_fully_controlled_by = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_recovery_restore_connections
+		icon = GFX_GER_The_Reserve_LedgerGFX_focus_GER_pacific
+		prerequisite = { focus = GER_victory_economic_revival }
+		x = 14
+		y = 15
+		cost = 5
+		completion_reward = {
+			add_political_power = 35
+			add_ideas = GER_recovery_transport_plan
+		}
+	}
+
+	focus = {
+		id = GER_recovery_peacetime_economy
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_recovery_reopen_workshops }
+		prerequisite = { focus = GER_recovery_restore_connections }
+		x = 13
+		y = 16
+		cost = 5
+		completion_reward = {
+			add_stability = 0.03
+			add_ideas = GER_recovery_peacetime_industry
+		}
+	}
+
+	focus = {
+		id = GER_victory_ideological_consolidation
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_victory_reassert_sovereignty }
+		x = 18
+		y = 14
+		cost = 5
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_recovery_local_councils
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_victory_ideological_consolidation }
+		mutually_exclusive = { focus = GER_recovery_national_compact }
+		x = 17
+		y = 15
+		cost = 5
+		completion_reward = {
+			add_stability = 0.03
+			add_ideas = GER_recovery_council_participation
+		}
+	}
+
+	focus = {
+		id = GER_recovery_national_compact
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_victory_ideological_consolidation }
+		mutually_exclusive = { focus = GER_recovery_local_councils }
+		x = 19
+		y = 15
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = GER_recovery_national_consensus
+		}
+	}
+
+	focus = {
+		id = GER_recovery_civic_reconciliation
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_recovery_local_councils focus = GER_recovery_national_compact }
+		x = 18
+		y = 16
+		cost = 5
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 40
+		}
+	}
+
+	focus = {
+		id = GER_recovery_security_review
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_victory_reassert_sovereignty }
+		x = 23
+		y = 14
+		cost = 5
+		completion_reward = {
+			add_political_power = 25
+			army_experience = 15
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = GER_recovery_reform_the_reserves
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_recovery_security_review }
+		x = 22
+		y = 15
+		cost = 5
+		completion_reward = {
+			add_manpower = 25000
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = GER_recovery_european_dialogue
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_recovery_security_review }
+		x = 24
+		y = 15
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = { FRA = { exists = yes NOT = { has_war_with = GER } } }
+				FRA = { add_opinion_modifier = { target = GER modifier = GER_recovery_dialogue_opinion } }
+			}
+			if = {
+				limit = { SCO = { exists = yes NOT = { has_war_with = GER } } }
+				SCO = { add_opinion_modifier = { target = GER modifier = GER_recovery_dialogue_opinion } }
+			}
+			if = {
+				limit = { POL = { exists = yes NOT = { has_war_with = GER } } }
+				POL = { add_opinion_modifier = { target = GER modifier = GER_recovery_dialogue_opinion } }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_recovery_defence_and_diplomacy
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_recovery_reform_the_reserves }
+		prerequisite = { focus = GER_recovery_european_dialogue }
+		x = 23
+		y = 16
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = GER_recovery_defensive_posture
+		}
+	}
+
+	focus = {
+		id = GER_victory_rearmament_and_renaissance
+		icon = GFX_focus_GER_pacific
+		prerequisite = { focus = GER_recovery_peacetime_economy }
+		prerequisite = { focus = GER_recovery_civic_reconciliation }
+		prerequisite = { focus = GER_recovery_defence_and_diplomacy }
+		x = 18
+		y = 18
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.05
+			add_ideas = GER_recovery_national_renewal
+		}
+	}
 
 	focus = {
 		id = GER_the_gathering_storm
-		icon = GFX_focus_GER_gathering_storm
+		icon = GFX_The_Storm_Gathers
 		x = 18
 		y = 0
 
@@ -65,15 +274,9 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 	}
 
-	###################################################
-	# BRANCH P1 — COURTING ALLIES
-	# Informal, deniable groundwork with Scotland and
-	# France, well before any formal wartime alliance
-	###################################################
-
 	focus = {
 		id = GER_diplomatic_outreach
-		icon = GFX_focus_GER_diplomatic_outreach
+		icon = GFX_GER_The_Envoys_Depart
 		prerequisite = { focus = GER_the_gathering_storm }
 
 		x = 4
@@ -98,7 +301,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_unofficial_channels_edinburgh
-		icon = GFX_focus_GER_scotland
+		icon = GFX_GER_Edinburgh_Quiet_Door
 		prerequisite = { focus = GER_diplomatic_outreach }
 
 		x = 0
@@ -137,7 +340,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_covert_arms_shipments
-		icon = GFX_focus_GER_covert_arms
+		icon = GFX_GER_Crates_in_the_Night
 		prerequisite = { focus = GER_unofficial_channels_edinburgh }
 
 		x = 0
@@ -175,7 +378,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_paris_backchannel
-		icon = GFX_focus_GER_france
+		icon = GFX_GER_The_Paris_Channel
 		prerequisite = { focus = GER_diplomatic_outreach }
 
 		x = 8
@@ -215,7 +418,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_industrial_cooperation_accord
-		icon = GFX_focus_GER_industry
+		icon = GFX_GER_An_Industrial_Entente
 		prerequisite = { focus = GER_paris_backchannel }
 
 		x = 8
@@ -249,7 +452,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_paris_edinburgh_understanding
-		icon = GFX_focus_GER_understanding
+		icon = GFX_GER_The_Paris_Edinburgh_Understanding
 		prerequisite = { focus = GER_covert_arms_shipments }
 		prerequisite = { focus = GER_industrial_cooperation_accord }
 
@@ -287,7 +490,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_shadow_war_directive
-		icon = GFX_focus_GER_shadow_war
+		icon = GFX_GER_Directive_for_the_Unseen_War
 		prerequisite = { focus = GER_the_gathering_storm }
 
 		x = 14
@@ -312,7 +515,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_infiltrate_the_ubsr
-		icon = GFX_focus_GER_infiltrate
+		icon = GFX_GER_The_British_Union_Infiltrated
 		prerequisite = { focus = GER_shadow_war_directive }
 
 		x = 11
@@ -348,7 +551,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_isolate_the_soviets
-		icon = GFX_focus_GER_isolate
+		icon = GFX_GER_The_Soviet_Circle_Narrows
 		prerequisite = { focus = GER_shadow_war_directive }
 
 		x = 17
@@ -389,7 +592,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_saboteurs_network
-		icon = GFX_focus_GER_saboteurs
+		icon = GFX_GER_The_Saboteurs_Web
 		prerequisite = { focus = GER_infiltrate_the_ubsr }
 
 		x = 11
@@ -426,7 +629,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_diplomatic_encirclement
-		icon = GFX_focus_GER_encirclement
+		icon = GFX_GER_A_Ring_of_Doubt
 		prerequisite = { focus = GER_isolate_the_soviets }
 
 		x = 17
@@ -455,7 +658,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_bear_is_weakened
-		icon = GFX_focus_GER_bear_weakened
+		icon = GFX_GER_The_Bear_Bleeds
 		prerequisite = { focus = GER_the_saboteurs_network }
 		prerequisite = { focus = GER_diplomatic_encirclement }
 
@@ -502,7 +705,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_quiet_rearmament
-		icon = GFX_focus_GER_quiet_rearmament
+		icon = GFX_GER_Rearmament_in_Shadow
 		prerequisite = { focus = GER_the_gathering_storm }
 
 		x = 24
@@ -526,7 +729,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_reserve_stockpiling
-		icon = GFX_focus_GER_stockpiling
+		icon = GFX_GER_The_Reserve_Ledger
 		prerequisite = { focus = GER_quiet_rearmament }
 
 		x = 24
@@ -564,7 +767,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_officer_corps_review
-		icon = GFX_focus_GER_officers
+		icon = GFX_GER_The_Officers_Examination
 		prerequisite = { focus = GER_reserve_stockpiling }
 
 		x = 24
@@ -588,7 +791,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_doctrine_studies
-		icon = GFX_focus_GER_doctrine
+		icon = GFX_GER_Maps_for_the_Eastern_War
 		prerequisite = { focus = GER_officer_corps_review }
 		prerequisite = { focus = GER_securing_the_mandate }
 
@@ -624,7 +827,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_liebich_tests_the_waters
-		icon = GFX_focus_GER_liebich
+		icon = GFX_GER_Liebich_Trial_Balloon
 		prerequisite = { focus = GER_the_gathering_storm }
 
 		x = 32
@@ -648,7 +851,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_courting_the_moderates
-		icon = GFX_focus_GER_moderates
+		icon = GFX_GER_A_Majority_in_Waiting
 		prerequisite = { focus = GER_liebich_tests_the_waters }
 
 		x = 34
@@ -676,7 +879,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_brandts_early_warning
-		icon = GFX_focus_GER_brandt
+		icon = GFX_GER_Wagenknechts_Warning
 		prerequisite = { focus = GER_liebich_tests_the_waters }
 
 		x = 30
@@ -696,7 +899,7 @@ focus_tree = {
 			add_political_power = -25
 			add_stability = -0.02
 
-			# Brandt goes public against the drift toward war —
+			# Wagenknecht goes public against the drift toward war —
 			# a preview of the confrontation to come later
 			add_popularity = {
 				ideology = revolutionary_socialist
@@ -720,7 +923,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_securing_the_mandate
-		icon = GFX_focus_GER_mandate
+		icon = GFX_GER_A_Majority_in_Waiting
 		prerequisite = { focus = GER_courting_the_moderates }
 
 		x = 32
@@ -757,7 +960,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_die_is_cast
-		icon = GFX_focus_GER_die_is_cast
+		icon = GFX_GER_No_Road_Back
 		prerequisite = { focus = GER_the_paris_edinburgh_understanding }
 		prerequisite = { focus = GER_the_bear_is_weakened }
 		prerequisite = { focus = GER_doctrine_studies }
@@ -797,7 +1000,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_spartacist_war_council
-		icon = GFX_focus_GER_war_council
+		icon = GFX_GER_Council_of_War
 		prerequisite = { focus = GER_the_die_is_cast }
 
 		x = 18
@@ -834,7 +1037,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_total_war_decree
-		icon = GFX_focus_GER_total_war
+		icon = GFX_GER_The_Emergency_Decree
 		prerequisite = { focus = GER_spartacist_war_council }
 
 		x = 10
@@ -857,7 +1060,7 @@ focus_tree = {
 
 			add_ideas = GER_war_economy_decree
 
-			# Brandt's Rätepartei surges - they oppose total war
+			# Wagenknecht's Rätepartei surges - they oppose total war
 			add_popularity = {
 				ideology = revolutionary_socialist
 				popularity = 0.03
@@ -874,7 +1077,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_rationalise_industry
-		icon = GFX_focus_GER_industry
+		icon = GFX_GER_Factories_for_the_Front
 		prerequisite = { focus = GER_total_war_decree }
 
 		x = 8
@@ -916,7 +1119,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_conscription_review
-		icon = GFX_focus_GER_conscription
+		icon = GFX_GER_The_Nation_in_Uniform
 		prerequisite = { focus = GER_total_war_decree }
 
 		x = 12
@@ -955,7 +1158,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_spartacist_production_drive
-		icon = GFX_focus_GER_production
+		icon = GFX_GER_The_Production_Offensive
 		prerequisite = { focus = GER_rationalise_industry }
 
 		x = 8
@@ -993,7 +1196,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_peoples_army_reform
-		icon = GFX_focus_GER_army
+		icon = GFX_GER_The_Peoples_Army
 		prerequisite = { focus = GER_conscription_review }
 
 		x = 12
@@ -1026,7 +1229,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_war_bond_programme
-		icon = GFX_focus_GER_war_bonds
+		icon = GFX_GER_Bonds_for_Victory
 		prerequisite = { focus = GER_spartacist_production_drive }
 
 		x = 8
@@ -1059,7 +1262,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_officer_acceleration
-		icon = GFX_focus_GER_officers
+		icon = GFX_GER_Commanders_of_Tomorrow
 		prerequisite = { focus = GER_peoples_army_reform }
 
 		x = 12
@@ -1086,7 +1289,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_eastern_hammer
-		icon = GFX_focus_GER_eastern_hammer
+		icon = GFX_GER_The_Eastern_Hammer
 		prerequisite = { focus = GER_war_bond_programme }
 		prerequisite = { focus = GER_officer_acceleration }
 
@@ -1121,7 +1324,7 @@ focus_tree = {
 				add_war_support = -0.10
 			}
 
-			# Internal politics — Brandt sees this as the final proof
+			# Internal politics — Wagenknecht sees this as the final proof
 			add_popularity = {
 				ideology = revolutionary_socialist
 				popularity = 0.05
@@ -1144,7 +1347,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_atlantic_question
-		icon = GFX_focus_GER_atlantic
+		icon = GFX_GER_The_Atlantic_Lifeline
 
 
 		prerequisite = { focus = GER_spartacist_war_council }
@@ -1188,7 +1391,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_naval_build_programme
-		icon = GFX_focus_GER_naval
+		icon = GFX_GER_Hulls_in_the_Slipways
 
 
 		prerequisite = { focus = GER_the_atlantic_question }
@@ -1229,7 +1432,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_submarine_campaign
-		icon = GFX_focus_GER_submarines
+		icon = GFX_GER_The_Silent_Service
 		prerequisite = { focus = GER_the_atlantic_question }
 
 		x = 4
@@ -1266,7 +1469,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_iceland_forward_base
-		icon = GFX_focus_GER_iceland
+		icon = GFX_GER_A_Footing_in_Iceland
 		prerequisite = { focus = GER_naval_build_programme }
 
 		x = -3
@@ -1300,7 +1503,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_bay_of_biscay_patrol
-		icon = GFX_focus_GER_biscay
+		icon = GFX_GER_The_Biscay_Patrol
 		prerequisite = { focus = GER_submarine_campaign }
 
 		x = 3
@@ -1336,7 +1539,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_mediterranean_pressure
-		icon = GFX_focus_GER_mediterranean
+		icon = GFX_GER_The_Mediterranean_Chokepoint
 		prerequisite = { focus = GER_iceland_forward_base }
 
 		x = -2
@@ -1370,7 +1573,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_north_sea_blockade
-		icon = GFX_focus_GER_blockade
+		icon = GFX_GER_The_North_Sea_Line
 		prerequisite = { focus = GER_bay_of_biscay_patrol }
 
 		x = 2
@@ -1406,7 +1609,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_starve_the_bear
-		icon = GFX_focus_GER_starve_bear
+		icon = GFX_GER_The_Lifeline_Cut
 		prerequisite = { focus = GER_mediterranean_pressure }
 		prerequisite = { focus = GER_north_sea_blockade }
 
@@ -1462,7 +1665,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_spartacist_alliance
-		icon = GFX_focus_GER_alliance
+		icon = GFX_GER_Solidarity_in_Arms
 		prerequisite = { focus = GER_spartacist_war_council }
 
 		x = -11
@@ -1499,7 +1702,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_scottish_arms_deal
-		icon = GFX_focus_GER_scotland
+		icon = GFX_GER_Scotland_Re_Armed
 		prerequisite = { focus = GER_spartacist_alliance }
 
 		x = -15
@@ -1560,7 +1763,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_tommy_brigades
-		icon = GFX_focus_GER_tommy_brigades
+		icon = GFX_GER_The_Tommy_Brigades
 		prerequisite = { focus = GER_scottish_arms_deal }
 
 		x = -15
@@ -1614,7 +1817,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_edinburgh_pact
-		icon = GFX_focus_GER_edinburgh
+		icon = GFX_GER_The_Edinburgh_Guarantee
 		prerequisite = { focus = GER_tommy_brigades }
 
 		x = -15
@@ -1658,7 +1861,7 @@ focus_tree = {
 				}
 			}
 
-			# Brandt's Rätepartei cautiously supportive
+			# Wagenknecht's Rätepartei cautiously supportive
 			# Scotland is democratic socialism in action
 			add_popularity = {
 				ideology = moderate_socialist
@@ -1673,7 +1876,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_french_integration
-		icon = GFX_focus_GER_france
+		icon = GFX_GER_Paris_Turns_East
 		prerequisite = { focus = GER_spartacist_alliance }
 
 		x = -11
@@ -1718,7 +1921,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_bordeaux_agreement
-		icon = GFX_focus_GER_bordeaux
+		icon = GFX_GER_The_Bordeaux_Terms
 		prerequisite = { focus = GER_french_integration }
 
 		x = -11
@@ -1762,7 +1965,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_western_front_opens
-		icon = GFX_focus_GER_western_front
+		icon = GFX_GER_A_Second_Front_in_the_West
 		prerequisite = { focus = GER_bordeaux_agreement }
 
 		x = -11
@@ -1819,7 +2022,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_china_coordination
-		icon = GFX_focus_GER_china
+		icon = GFX_GER_The_Chongqing_Channel
 		prerequisite = { focus = GER_spartacist_alliance }
 
 		x = -7
@@ -1894,7 +2097,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_manchurian_front
-		icon = GFX_focus_GER_manchuria
+		icon = GFX_GER_The_Manchurian_Offensive
 		prerequisite = { focus = GER_pacific_coordination }
 
 		x = -8
@@ -1941,7 +2144,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_grand_coalition
-		icon = GFX_focus_GER_grand_coalition
+		icon = GFX_GER_An_Alliance_of_Necessity
 		# Requires completion of at least two ally paths
 		prerequisite = {
 			focus = GER_edinburgh_pact
@@ -2005,13 +2208,10 @@ focus_tree = {
 
 	focus = {
 		id = GER_liebich_coalition
-		icon = GFX_focus_GER_liebich
-
-
-	
+		icon = GFX_GER_Liebichs_Wartime_Coalition
 
 		x = 37
-		y = 8
+		y = 5
 
 		cost = 7
 
@@ -2035,7 +2235,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_address_the_raetepartei
-		icon = GFX_focus_GER_raetepartei
+		icon = GFX_GER_A_Hearing_for_Raetepartei
 		prerequisite = { focus = GER_liebich_coalition }
 
 		x = 37
@@ -2075,7 +2275,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_hold_the_centre
-		icon = GFX_focus_GER_hold_centre
+		icon = GFX_GER_The_Centre_Holds
 		prerequisite = { focus = GER_address_the_raetepartei }
 
 		x = 39
@@ -2103,7 +2303,7 @@ focus_tree = {
 
 			set_country_flag = GER_liebich_holds
 
-			# Brandt's challenge fails
+			# Wagenknecht's challenge fails
 			add_popularity = {
 				ideology = revolutionary_socialist
 				popularity = -0.03
@@ -2115,12 +2315,12 @@ focus_tree = {
 
 	focus = {
 		id = GER_victory_in_the_east
-		icon = GFX_focus_GER_victory_east
+		icon = GFX_GER_Victory_and_Its_Reckoning
 		prerequisite = { focus = GER_hold_the_centre }
 		prerequisite = { focus = GER_the_eastern_hammer }
 
-		x = 38
-		y = 10
+		x = 37
+		y = 12
 
 		cost = 10
 
@@ -2173,14 +2373,14 @@ focus_tree = {
 	}
 
 	###################################################
-	# BRANDT'S PATH — fires if war goes badly
-	# Liebich loses confidence, Brandt takes power
+	# WAGENKNECHT'S PATH — fires if war goes badly
+	# Liebich loses confidence, Wagenknecht takes power
 	# Germany negotiates peace with USSR
 	###################################################
 
 	focus = {
 		id = GER_brandts_moment
-		icon = GFX_focus_GER_brandt
+		icon = GFX_GER_Wagenknechts_Hour
 		prerequisite = { focus = GER_address_the_raetepartei }
 
 		x = 35
@@ -2189,6 +2389,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
+			NOT = { has_country_flag = RI_GER_war_crisis }
 			# Only available if war is going badly
 			OR = {
 				stability < 0.35
@@ -2197,44 +2398,35 @@ focus_tree = {
 					surrender_progress > 0.15
 				}
 			}
-			# Brandt's party must have enough support
+			# Wagenknecht's party must have enough support
 			revolutionary_socialist > 0.25
 		}
 
 		bypass = {
 			# Skip if Liebich holds
-			has_country_flag = GER_liebich_holds
+			OR = {
+				has_country_flag = GER_liebich_holds
+				has_country_flag = GER_brandt_takes_power
+			}
 		}
 
 		completion_reward = {
-			add_political_power = -50
+			if = {
+				limit = { NOT = { has_country_flag = RI_GER_war_crisis } }
+				add_political_power = -50
 
-			# Liebich falls
-			# Brandt takes over
-			retire_country_leader = yes
+				RI_GER_wagenknecht_takes_power = yes
 
-			create_country_leader = {
-				name = "Elsa Brandt"
-				picture = "gfx/leaders/GER/Portrait_GER_Elsa_Brandt.dds"
-				ideology = council_socialism
-				traits = {
-					GER_anti_war_voice
-					GER_principled_left
+				add_stability = 0.08
+				add_popularity = {
+					ideology = revolutionary_socialist
+					popularity = 0.08
 				}
-			}
 
-			set_country_flag = GER_brandt_takes_power
-			set_country_flag = GER_liebich_falls
-
-			add_stability = 0.08
-			add_popularity = {
-				ideology = revolutionary_socialist
-				popularity = 0.08
-			}
-
-			country_event = {
-				id = GER_politics.brandt_takes_power
-				days = 3
+				country_event = {
+					id = GER_politics.brandt_takes_power
+					days = 3
+				}
 			}
 		}
 
@@ -2249,37 +2441,50 @@ focus_tree = {
 
 	focus = {
 		id = GER_peace_negotiations
-		icon = GFX_focus_GER_peace
+		icon = GFX_GER_road_to_ceasefire
 		prerequisite = { focus = GER_brandts_moment }
 
-		x = 35
+		x = 36
 		y = 8
 
 		cost = 7
 
 		available = {
 			has_country_flag = GER_brandt_takes_power
+			NOT = { has_country_flag = RI_GER_war_crisis }
+			has_war_with = SOV
+			SOV = { exists = yes }
 		}
 
 		bypass = {}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.10
-
-			# Open ceasefire talks with USSR
-			set_country_flag = GER_ceasefire_talks_active
-
-			SOV = {
-				country_event = {
-					id = SOV_german_ceasefire.1
-					days = 14
+			if = {
+				limit = {
+					NOT = { has_country_flag = RI_GER_war_crisis }
+					has_war_with = SOV
+					SOV = { exists = yes }
 				}
-			}
+				add_political_power = 100
+				add_stability = 0.10
 
-			country_event = {
-				id = GER_politics.ceasefire_opened
-				days = 7
+				# Open ceasefire talks with USSR
+				set_country_flag = GER_ceasefire_talks_active
+				clr_country_flag = RI_GER_ceasefire_refused
+				set_country_flag = { flag = RI_GER_ceasefire_pending value = 1 days = 90 }
+
+				SOV = {
+					clr_country_flag = SOV_accepts_ceasefire_talks
+					country_event = {
+						id = SOV_german_ceasefire.1
+						days = 14
+					}
+				}
+
+				country_event = {
+					id = GER_politics.ceasefire_opened
+					days = 7
+				}
 			}
 		}
 
@@ -2288,40 +2493,55 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_berlin_accords
-		icon = GFX_focus_GER_berlin_accords
+		icon = GFX_GER_The_Berlin_Settlement
 		prerequisite = { focus = GER_peace_negotiations }
 
-		x = 35
-		y = 9
+		x = 37
+		y = 10
 
 		cost = 10
 
 		available = {
 			has_country_flag = GER_ceasefire_talks_active
 			has_country_flag = GER_brandt_takes_power
+			NOT = { has_country_flag = RI_GER_war_crisis }
+			has_war_with = SOV
+			NOT = { is_in_peace_conference = yes }
+			SOV = {
+				exists = yes
+				has_country_flag = SOV_accepts_ceasefire_talks
+				NOT = { is_in_peace_conference = yes }
+			}
 		}
 
 		bypass = {}
 
 		completion_reward = {
-			add_political_power = 150
-			add_stability = 0.15
-			add_stability = 0.05
+			if = {
+				limit = {
+					NOT = { has_country_flag = RI_GER_war_crisis }
+					has_war_with = SOV
+					NOT = { is_in_peace_conference = yes }
+					SOV = {
+						exists = yes
+						has_country_flag = SOV_accepts_ceasefire_talks
+						NOT = { is_in_peace_conference = yes }
+					}
+				}
+				add_political_power = 150
+				add_stability = 0.15
+				add_stability = 0.05
 
-			# Peace with USSR
-			white_peace = SOV
+				RI_GER_end_soviet_coalition_war = yes
 
-			add_ideas = GER_berlin_accords_spirit
+				add_ideas = GER_berlin_accords_spirit
 
-			set_country_flag = GER_berlin_accords_signed
+				set_country_flag = GER_berlin_accords_signed
 
-			# Germany keeps territorial gains in Belarus/Ukraine
-			# USSR keeps core Russian territory
-			# Disputed territories get independence referenda
-
-			country_event = {
-				id = GER_endgame.berlin_accords
-				days = 7
+				country_event = {
+					id = GER_endgame.berlin_accords
+					days = 7
+				}
 			}
 		}
 

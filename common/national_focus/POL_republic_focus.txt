@@ -1,0 +1,333 @@
+focus_tree = {
+	id = RI_POL_republic_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = POL
+		}
+	}
+
+	default = no
+	initial_show_position = {
+		focus = RI_POL_defend_democracy
+	}
+
+	focus = {
+		id = RI_POL_defend_democracy
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = RI_POL_strengthen_the_sejm
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = RI_POL_defend_democracy }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_defend_democracy
+		cost = 5
+		completion_reward = { add_stability = 0.05 }
+	}
+
+	focus = {
+		id = RI_POL_socialist_programme
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = RI_POL_strengthen_the_sejm }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_strengthen_the_sejm
+		cost = 5
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = RI_POL_national_industrial_investment
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RI_POL_socialist_programme }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_socialist_programme
+		cost = 5
+		completion_reward = { add_ideas = RI_POL_industrial_revival }
+	}
+
+	focus = {
+		id = RI_POL_modern_european_republic
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = RI_POL_national_industrial_investment }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_national_industrial_investment
+		cost = 5
+		completion_reward = { add_stability = 0.05 }
+	}
+
+	focus = {
+		id = RI_POL_warsaw_berlin_treaty
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = RI_POL_defend_democracy }
+		x = 4
+		y = 1
+		relative_position_id = RI_POL_defend_democracy
+		cost = 5
+		completion_reward = {
+			country_event = { id = RI_POL_events.1 hours = 1 }
+		}
+	}
+
+	focus = {
+		id = RI_POL_joint_military_planning
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = RI_POL_warsaw_berlin_treaty }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_warsaw_berlin_treaty
+		cost = 5
+		completion_reward = { army_experience = 25 }
+	}
+
+	focus = {
+		id = RI_POL_german_industrial_investment
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RI_POL_joint_military_planning }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_joint_military_planning
+		cost = 5
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RI_POL_shared_intelligence_network
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = RI_POL_german_industrial_investment }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_german_industrial_investment
+		cost = 5
+		completion_reward = { add_ideas = RI_POL_ally_not_satellite }
+	}
+
+	focus = {
+		id = RI_POL_eastern_defence_agreement
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = RI_POL_shared_intelligence_network }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_shared_intelligence_network
+		cost = 5
+		completion_reward = {
+			add_ideas = RI_POL_guardian_of_the_east
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = RI_POL_modernise_the_army
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = RI_POL_defend_democracy }
+		x = 8
+		y = 1
+		relative_position_id = RI_POL_defend_democracy
+		cost = 5
+		completion_reward = { army_experience = 25 }
+	}
+
+	focus = {
+		id = RI_POL_expand_armoured_corps
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = RI_POL_modernise_the_army }
+		x = -1
+		y = 1
+		relative_position_id = RI_POL_modernise_the_army
+		cost = 5
+		completion_reward = { add_ideas = RI_POL_armoured_corps }
+	}
+
+	focus = {
+		id = RI_POL_modern_artillery
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = RI_POL_modernise_the_army }
+		x = 1
+		y = 1
+		relative_position_id = RI_POL_modernise_the_army
+		cost = 5
+		completion_reward = { army_experience = 20 }
+	}
+
+	focus = {
+		id = RI_POL_strengthen_the_air_force
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = RI_POL_modernise_the_army }
+		x = 3
+		y = 1
+		relative_position_id = RI_POL_modernise_the_army
+		cost = 5
+		completion_reward = { air_experience = 25 }
+	}
+
+	focus = {
+		id = RI_POL_national_air_defence
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = RI_POL_strengthen_the_air_force }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_strengthen_the_air_force
+		cost = 5
+		completion_reward = { add_ideas = RI_POL_air_defence }
+	}
+
+	focus = {
+		id = RI_POL_eastern_shield
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = RI_POL_modern_artillery }
+		prerequisite = { focus = RI_POL_expand_armoured_corps }
+		prerequisite = { focus = RI_POL_national_air_defence }
+		x = 0
+		y = 2
+		relative_position_id = RI_POL_modern_artillery
+		cost = 5
+		completion_reward = {
+			add_ideas = RI_POL_guardian_of_the_east
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = RI_POL_the_soviet_threat
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RI_POL_defend_democracy }
+		x = 12
+		y = 1
+		relative_position_id = RI_POL_defend_democracy
+		cost = 5
+		completion_reward = { add_war_support = 0.05 }
+	}
+
+	focus = {
+		id = RI_POL_defend_the_eastern_frontier
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = RI_POL_the_soviet_threat }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_the_soviet_threat
+		cost = 5
+		completion_reward = { army_experience = 25 }
+	}
+
+	focus = {
+		id = RI_POL_secure_the_baltic_approaches
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = RI_POL_defend_the_eastern_frontier }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_defend_the_eastern_frontier
+		cost = 5
+		completion_reward = { add_ideas = RI_POL_baltic_defence }
+	}
+
+	focus = {
+		id = RI_POL_defence_of_warsaw
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = RI_POL_secure_the_baltic_approaches }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_secure_the_baltic_approaches
+		cost = 5
+		completion_reward = { add_ideas = RI_POL_warsaw_defence }
+	}
+
+	focus = {
+		id = RI_POL_victory_in_the_east
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = RI_POL_defence_of_warsaw }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_defence_of_warsaw
+		cost = 5
+		available = { has_war_with = SOV }
+		completion_reward = {
+			add_war_support = 0.1
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = RI_POL_confirm_independence
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = RI_POL_defend_democracy }
+		x = 16
+		y = 1
+		relative_position_id = RI_POL_defend_democracy
+		cost = 5
+		completion_reward = {
+			add_ideas = RI_POL_ally_not_satellite
+			country_event = { id = RI_POL_events.1 }
+		}
+	}
+
+	focus = {
+		id = RI_POL_strategic_independence
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = RI_POL_confirm_independence }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_confirm_independence
+		cost = 5
+		completion_reward = { add_political_power = 75 }
+	}
+
+	focus = {
+		id = RI_POL_strengthen_national_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RI_POL_strategic_independence }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_strategic_independence
+		cost = 5
+		completion_reward = { add_ideas = RI_POL_industrial_revival }
+	}
+
+	focus = {
+		id = RI_POL_independent_foreign_policy
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = RI_POL_strengthen_national_industry }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_strengthen_national_industry
+		cost = 5
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = RI_POL_polands_place_in_europe
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = RI_POL_independent_foreign_policy }
+		prerequisite = { focus = RI_POL_eastern_defence_agreement }
+		x = 0
+		y = 1
+		relative_position_id = RI_POL_independent_foreign_policy
+		cost = 5
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+}

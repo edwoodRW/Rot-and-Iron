@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	RI_POL_strategic_partnership = {
+		value = 50
+	}
+}

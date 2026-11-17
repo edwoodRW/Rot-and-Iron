@@ -1,0 +1,37 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						is_faction_leader = yes
+					}
+				}
+				every_country = {
+					limit = {
+						exists = yes
+						is_in_faction = no
+						OR = {
+							tag = SCO
+							tag = HOL
+							tag = POL
+							tag = FIN
+							tag = BEL
+							tag = LUX
+							tag = CZE
+							tag = SLO
+							tag = CRO
+							tag = UKR
+							tag = LAT
+							tag = LIT
+							tag = EST
+							tag = PER
+						}
+					}
+					GER = { add_to_faction = PREV }
+				}
+			}
+		}
+	}
+}

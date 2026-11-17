@@ -1,0 +1,50 @@
+ideas = {
+	country = {
+		RI_SOV_rotting_bureaucracy = {
+			name = RI_SOV_rotting_bureaucracy
+			allowed = { always = no }
+			modifier = { production_factory_efficiency_gain_factor = -0.10 production_speed_buildings_factor = -0.10 research_speed_factor = -0.10 }
+		}
+		RI_SOV_rashkin_paralysis = {
+			name = RI_SOV_rashkin_paralysis
+			allowed = { always = no }
+			modifier = { political_power_gain = -0.20 focus_speed = -0.15 }
+		}
+		RI_SOV_two_front_catastrophe = {
+			name = RI_SOV_two_front_catastrophe
+			allowed = { always = no }
+			modifier = { army_attack_factor = -0.25 army_defence_factor = -0.20 army_org_factor = -0.15 }
+		}
+		RI_SOV_mobilised_republics = { name = RI_SOV_mobilised_republics allowed = { always = no } modifier = { recruitable_population_factor = 0.03 production_speed_infrastructure_factor = 0.05 } }
+		RI_SOV_emergency_economy = { name = RI_SOV_emergency_economy allowed = { always = no } modifier = { production_speed_buildings_factor = 0.05 production_factory_efficiency_gain_factor = 0.05 } }
+		RI_SOV_peoples_defence = { name = RI_SOV_peoples_defence allowed = { always = no } modifier = { state_anti_air_construction_speed_factor = 0.10 war_support_factor = 0.05 } }
+		RI_SOV_union_resurgent = { name = RI_SOV_union_resurgent allowed = { always = no } modifier = { stability_factor = 0.05 army_org_factor = 0.05 } }
+		RI_SOV_reformed_politburo = { name = RI_SOV_reformed_politburo allowed = { always = no } modifier = { political_power_gain = 0.10 stability_factor = 0.05 } }
+		RI_SOV_anti_corruption = { name = RI_SOV_anti_corruption allowed = { always = no } modifier = { stability_factor = 0.05 production_factory_efficiency_gain_factor = 0.05 } }
+		RI_SOV_merit_service = { name = RI_SOV_merit_service allowed = { always = no } modifier = { research_speed_factor = 0.05 } }
+		RI_SOV_new_economy = { name = RI_SOV_new_economy allowed = { always = no } modifier = { production_factory_efficiency_gain_factor = 0.05 } }
+		RI_SOV_industrial_revival = { name = RI_SOV_industrial_revival allowed = { always = no } modifier = { production_factory_efficiency_gain_factor = 0.05 production_factory_max_efficiency_factor = 0.05 } }
+		RI_SOV_siberian_development = { name = RI_SOV_siberian_development allowed = { always = no } modifier = { production_speed_buildings_factor = 0.05 supply_consumption_factor = -0.05 } }
+		RI_SOV_technology_union = { name = RI_SOV_technology_union allowed = { always = no } modifier = { research_speed_factor = 0.10 } }
+		RI_SOV_union_connected = { name = RI_SOV_union_connected allowed = { always = no } modifier = { supply_consumption_factor = -0.10 production_speed_buildings_factor = 0.05 } }
+		RI_SOV_soviet_internet_act = { name = RI_SOV_soviet_internet_act allowed = { always = no } modifier = { research_speed_factor = 0.05 production_speed_buildings_factor = 0.05 } }
+		RI_SOV_cyber_directorate = { name = RI_SOV_cyber_directorate allowed = { always = no } modifier = { encryption_factor = 0.10 decryption_factor = 0.10 } }
+		RI_SOV_digital_union = { name = RI_SOV_digital_union allowed = { always = no } modifier = { research_speed_factor = 0.05 production_factory_efficiency_gain_factor = 0.05 } }
+		RI_SOV_transport_emergency = { name = RI_SOV_transport_emergency allowed = { always = no } modifier = { production_speed_infrastructure_factor = 0.10 } }
+		RI_SOV_red_army_reborn = { name = RI_SOV_red_army_reborn allowed = { always = no } modifier = { army_org_factor = 0.05 army_defence_factor = 0.05 } }
+		RI_SOV_military_confidence = { name = RI_SOV_military_confidence allowed = { always = no } modifier = { army_org_factor = 0.05 planning_speed = 0.05 } }
+		RI_SOV_general_staff_reform = { name = RI_SOV_general_staff_reform allowed = { always = no } modifier = { army_defence_factor = 0.05 } }
+		RI_SOV_unified_command = { name = RI_SOV_unified_command allowed = { always = no } modifier = { planning_speed = 0.05 } }
+		RI_SOV_modern_general_staff = { name = RI_SOV_modern_general_staff allowed = { always = no } modifier = { army_attack_factor = 0.05 army_defence_factor = 0.05 } }
+		RI_SOV_western_defence = { name = RI_SOV_western_defence allowed = { always = no } modifier = { army_defence_factor = 0.05 } }
+		RI_SOV_moscow_defence = { name = RI_SOV_moscow_defence allowed = { always = no } modifier = { max_dig_in_factor = 0.10 } }
+		RI_SOV_modern_armed_forces = { name = RI_SOV_modern_armed_forces allowed = { always = no } modifier = { army_org_factor = 0.05 } }
+		RI_SOV_two_front_doctrine = { name = RI_SOV_two_front_doctrine allowed = { always = no } modifier = { army_org_factor = 0.05 army_defence_factor = 0.05 } }
+		RI_SOV_diplomatic_offensive = { name = RI_SOV_diplomatic_offensive allowed = { always = no } modifier = { political_power_gain = 0.05 } }
+		RI_SOV_rashkin_fortress = { name = RI_SOV_rashkin_fortress allowed = { always = no } modifier = { war_support_factor = 0.10 army_defence_factor = 0.05 } }
+		RI_SOV_total_mobilisation = { name = RI_SOV_total_mobilisation allowed = { always = no } modifier = { recruitable_population_factor = 0.05 war_support_factor = 0.10 } }
+		RI_SOV_new_union = { name = RI_SOV_new_union allowed = { always = no } modifier = { stability_factor = 0.10 research_speed_factor = 0.05 } }
+		RI_SOV_red_renewal = { name = RI_SOV_red_renewal allowed = { always = no } modifier = { war_support_factor = 0.05 production_factory_efficiency_gain_factor = 0.05 } }
+		RI_SOV_permanent_revolution = { name = RI_SOV_permanent_revolution allowed = { always = no } modifier = { political_power_gain = 0.10 army_attack_factor = 0.05 } }
+	}
+}

@@ -138,24 +138,24 @@ air_wings = {
 			amount = 64
 		}
 	}
-	"HMS Furious"  = {
+	"USBRS Furious"  = {
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 9 }
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 2 }
 	}
-	"HMS Courageous"  = {
+	"USBRS Courageous"  = {
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 9 }
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 4 }
 	}
-	"HMS Glorious"  = {
+	"USBRS Glorious"  = {
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 6 } #historical 9
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 4 } #historical 36
 	}
-	"HMS Eagle"  = {
+	"USBRS Eagle"  = {
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 10 }
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 8 }
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }

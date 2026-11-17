@@ -1,0 +1,228 @@
+RI_GER_victory_settlement_conditions = {
+	exists = yes
+	has_capitulated = no
+	has_war_with = SOV
+	NOT = { is_in_peace_conference = yes }
+	SOV = {
+		exists = yes
+		has_capitulated = no
+		NOT = { is_in_peace_conference = yes }
+	}
+	219 = {
+		controller = {
+			has_war_with = SOV
+			OR = {
+				tag = GER
+				has_war_together_with = GER
+			}
+		}
+	}
+}
+
+RI_GER_urals_settlement_conditions = {
+	has_war_with = SOV
+	NOT = { has_capitulated = yes }
+	NOT = { is_in_peace_conference = yes }
+	SOV = {
+		exists = yes
+		has_capitulated = no
+		NOT = { is_in_peace_conference = yes }
+	}
+	653 = {
+		controller = {
+			OR = {
+				tag = GER
+				AND = {
+					has_war_together_with = GER
+					NOT = { tag = CHI }
+				}
+			}
+		}
+	}
+	OR = {
+		408 = { is_owned_and_controlled_by = SOV }
+		409 = { is_owned_and_controlled_by = SOV }
+		570 = { is_owned_and_controlled_by = SOV }
+		571 = { is_owned_and_controlled_by = SOV }
+	}
+}
+
+RI_GER_western_soviet_state = {
+	OR = {
+		GER_is_RKU_state = yes
+		GER_is_RKO_state = yes
+		GER_is_RKM_state = yes
+		GER_is_RKK_state = yes
+		GER_is_RK_south_urals_state = yes
+		GER_is_RK_north_urals_state = yes
+		GER_is_soviet_greater_finland_state = yes
+		state = 829
+		state = 653
+	}
+}
+
+RI_GER_can_offer_victory_settlement = {
+	RI_GER_victory_settlement_conditions = yes
+	NOT = { has_country_flag = RI_GER_victory_offer_pending }
+	NOT = { has_country_flag = RI_GER_victory_offer_cooldown }
+	NOT = { has_country_flag = RI_GER_stalemate_offer_pending }
+}
+
+RI_GER_stalemate_conditions = {
+	exists = yes
+	has_capitulated = no
+	has_war_with = SOV
+	war_length_with = { tag = SOV months > 11 }
+	surrender_progress < 0.70
+	NOT = { is_in_peace_conference = yes }
+	NOT = { has_country_flag = RI_GER_soviet_takeover }
+	SOV = {
+		exists = yes
+		has_capitulated = no
+		surrender_progress < 0.70
+		NOT = { is_in_peace_conference = yes }
+	}
+}
+
+RI_GER_can_offer_stalemate = {
+	RI_GER_stalemate_conditions = yes
+	NOT = { has_country_flag = RI_GER_stalemate_offer_pending }
+	NOT = { has_country_flag = RI_GER_stalemate_offer_cooldown }
+	NOT = { has_country_flag = RI_GER_victory_offer_pending }
+}
+
+RI_GER_can_release_ukraine = {
+	UKR = { exists = no }
+	any_owned_state = { is_core_of = UKR is_fully_controlled_by = GER }
+	NOT = { any_owned_state = { is_core_of = UKR NOT = { is_fully_controlled_by = GER } } }
+}
+
+RI_GER_can_return_crimea_to_ukraine = {
+	137 = { is_owned_by = GER is_fully_controlled_by = GER NOT = { is_core_of = GER } }
+	UKR = { exists = yes }
+	NOT = { has_war_with = UKR }
+	NOT = { is_in_peace_conference = yes }
+}
+
+RI_GER_can_release_belarus = {
+	BLR = { exists = no }
+	any_owned_state = { is_core_of = BLR is_fully_controlled_by = GER }
+	NOT = { any_owned_state = { is_core_of = BLR NOT = { is_fully_controlled_by = GER } } }
+}
+
+RI_GER_can_release_georgia = {
+	GEO = { exists = no }
+	any_owned_state = { is_core_of = GEO is_fully_controlled_by = GER }
+	NOT = { any_owned_state = { is_core_of = GEO NOT = { is_fully_controlled_by = GER } } }
+}
+
+RI_GER_can_release_armenia = {
+	ARM = { exists = no }
+	any_owned_state = { is_core_of = ARM is_fully_controlled_by = GER }
+	NOT = { any_owned_state = { is_core_of = ARM NOT = { is_fully_controlled_by = GER } } }
+}
+
+RI_GER_can_release_azerbaijan = {
+	AZR = { exists = no }
+	any_owned_state = { is_core_of = AZR is_fully_controlled_by = GER }
+	NOT = { any_owned_state = { is_core_of = AZR NOT = { is_fully_controlled_by = GER } } }
+}
+
+RI_GER_can_release_kazakhstan = {
+	KAZ = { exists = no }
+	any_owned_state = { is_core_of = KAZ is_fully_controlled_by = GER }
+	NOT = { any_owned_state = { is_core_of = KAZ NOT = { is_fully_controlled_by = GER } } }
+}
+
+RI_GER_siberian_exile_state = {
+	OR = {
+		state = 408
+		state = 409
+		state = 516
+		state = 560
+		state = 561
+		state = 562
+		state = 563
+		state = 564
+		state = 565
+		state = 566
+		state = 567
+		state = 568
+		state = 569
+		state = 570
+		state = 571
+		state = 572
+		state = 574
+		state = 575
+		state = 576
+		state = 577
+		state = 578
+		state = 579
+		state = 580
+		state = 655
+		state = 822
+		state = 824
+		state = 874
+		state = 875
+		state = 876
+		state = 877
+		state = 878
+	}
+}
+
+RI_GER_can_review_vilnius = {
+	784 = { is_owned_by = GER is_fully_controlled_by = GER }
+}
+
+RI_GER_can_create_moscow_state = {
+	RMO = { exists = no }
+	219 = { is_owned_by = GER is_fully_controlled_by = GER }
+}
+
+RI_GER_can_create_ural_state = {
+	URE = { exists = no }
+	653 = { is_owned_by = GER is_fully_controlled_by = GER }
+}
+
+RI_GER_can_restore_soviet_east = {
+	SOV = { exists = no }
+	OR = {
+		408 = { is_owned_by = GER is_fully_controlled_by = GER }
+		409 = { is_owned_by = GER is_fully_controlled_by = GER }
+		570 = { is_owned_by = GER is_fully_controlled_by = GER }
+		571 = { is_owned_by = GER is_fully_controlled_by = GER }
+	}
+}
+
+RI_GER_has_pending_russian_settlement = {
+	OR = {
+		AND = {
+			NOT = { has_country_flag = RI_GER_reviewed_vilnius }
+			RI_GER_can_review_vilnius = yes
+		}
+		AND = {
+			NOT = { has_country_flag = RI_GER_reviewed_moscow_state }
+			RI_GER_can_create_moscow_state = yes
+		}
+		AND = {
+			NOT = { has_country_flag = RI_GER_reviewed_ural_state }
+			RI_GER_can_create_ural_state = yes
+		}
+		AND = {
+			NOT = { has_country_flag = RI_GER_reviewed_soviet_east }
+			RI_GER_can_restore_soviet_east = yes
+		}
+	}
+}
+
+RI_GER_has_releasable_soviet_country = {
+	OR = {
+		RI_GER_can_release_ukraine = yes
+		RI_GER_can_release_belarus = yes
+		RI_GER_can_release_georgia = yes
+		RI_GER_can_release_armenia = yes
+		RI_GER_can_release_azerbaijan = yes
+		RI_GER_can_release_kazakhstan = yes
+		RI_GER_has_pending_russian_settlement = yes
+	}
+}

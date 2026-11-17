@@ -19,12 +19,7 @@ focus_tree = {
 	id = china_nationalist_sea_focus
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 1000
-			tag = CHI
-			has_dlc = "No Compromise, No Surrender"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	initial_show_position = {
 		x = 40

@@ -38,7 +38,7 @@ set_popularities = {
 	national_conservative = 8
 	centrist = 8
 	liberal = 8
-	new_democrat = 15
+	social_democrat = 15
 	moderate_socialist = 30
 	revolutionary_socialist = 12
 	communist = 13
@@ -81,7 +81,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Rohan Mehra"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

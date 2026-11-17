@@ -2,7 +2,7 @@ NDefines = {
 
 NGame = {
 	START_DATE = "2026.1.1.12",
-	END_DATE = "2049.1.1.1",
+	END_DATE = "2051.1.1.1",
 	MAP_SCALE_PIXEL_TO_KM = 7.114,					-- Yes, we did the math
 	SAVE_VERSION = 33,								-- 1.17.0 (Case Green)
 	MINOR_SAVE_VERSION = 0,                         -- Minor save version is used to identifiy different backward compatible savegame versions
@@ -4243,7 +4243,7 @@ NIntel = {
 NCharacter = {
 	OFFICER_CORP_ADVISOR_ENTRIES_IN_MENU = { "high_command", "theorist", "army_chief", "air_chief", "navy_chief" },
 	OFFICER_CORP_HIGH_COMMAND_SLOTS_IN_MENU = 3, --For Alert manager to count the number of High Command Slots in the UI
-	POLITICAL_ADVISOR_SLOTS_IN_MENU = 3, --For Alert manager to count the number of Political Advisor Slots in the UI
+	POLITICAL_ADVISOR_SLOTS_IN_MENU = 5, --For Alert manager to count the number of Political Advisor Slots in the UI
 
 	DEFAULT_PP_COST_FOR_MILITARY_ADVISOR = 50,	-- When an advisor does not have cost assigned this is the default used
 	DEFAULT_PP_COST_FOR_POLITICAL_ADVISOR = 150,

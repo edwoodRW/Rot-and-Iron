@@ -93,7 +93,7 @@ set_popularities = {
 		national_conservative = 10
 		centrist = 0
 		liberal = 0
-		new_democrat = 4
+		social_democrat = 4
 		moderate_socialist = 0
 		revolutionary_socialist = 11
 		communist = 0
@@ -150,7 +150,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Susilo Bambang Yudhoyono"
 	picture = "Portrait_INS_Susilo_Bambang_Yudhoyono.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

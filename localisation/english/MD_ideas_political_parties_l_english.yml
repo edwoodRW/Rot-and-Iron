@@ -64,6 +64,7 @@
  #Poland- 2017 Start Date
  POL_ruling_party_communist: "Polish Communist Party"
  POL_ruling_party_socialist: "Polish Socialist Party"
+ POL_ruling_party_moderate_socialist: "Polish Socialist Party"
  POL_ruling_party_green: "The Greens"
  POL_ruling_party_social_democrat: "Democratic Left Alliance"
  POL_ruling_party_social_liberal: ".Modern"
@@ -104,4 +105,3 @@
  USA_ruling_party_neo_national_socialist: "National Socialist Movement"
  USA_ruling_party_islamist: "Council on American-Islamic Relations"
  USA_ruling_party_fundamental_islamist: "Hizb ut-Tahrir America"
-

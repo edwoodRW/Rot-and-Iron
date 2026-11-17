@@ -81,7 +81,7 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = new_democrat
+	ruling_party = social_democrat
 	last_election = "1997.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -95,7 +95,7 @@ set_popularities = {
 		national_conservative = 24
 		centrist = 0
 		liberal = 16
-		new_democrat = 34
+		social_democrat = 34
 		moderate_socialist = 0
 		revolutionary_socialist = 9
 		communist = 2
@@ -146,7 +146,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Helle Thorning-Schmidt"
 	picture = "Helle_Thorning_Schmidt.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

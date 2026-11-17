@@ -92,7 +92,7 @@ set_popularities = {
 		national_conservative = 4
 		centrist = 2
 		liberal = 0
-		new_democrat = 30
+		social_democrat = 30
 		moderate_socialist = 35
 		revolutionary_socialist = 0
 		communist = 8
@@ -128,7 +128,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Jayaram Jayalalithaa"
 	
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -82,7 +82,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 7
 		liberal = 0
-		new_democrat = 14
+		social_democrat = 14
 		moderate_socialist = 0
 		revolutionary_socialist = 5
 		communist = 54
@@ -134,7 +134,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Tewelde Ghebreselassie"
 	picture = "Portrait_ERI_Tewelde_Ghebreselassie.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

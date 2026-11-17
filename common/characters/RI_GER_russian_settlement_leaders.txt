@@ -1,0 +1,78 @@
+characters = {
+	RI_RMO_alexei_sokolov = {
+		name = "Alexei Sokolov"
+		portraits = { civilian = { large = GFX_portrait_generic_europe_male_01 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_URE_irina_demidova = {
+		name = "Irina Demidova"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_01 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RWE_mikhail_belov = {
+		name = "Mikhail Belov"
+		portraits = { civilian = { large = GFX_portrait_generic_europe_male_02 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RVN_elena_orlova = {
+		name = "Elena Orlova"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_02 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RDN_viktor_zhdanov = {
+		name = "Viktor Zhdanov"
+		portraits = { civilian = { large = GFX_portrait_generic_europe_male_03 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RCA_murat_akhmetov = {
+		name = "Murat Akhmetov"
+		portraits = { civilian = { large = GFX_portrait_generic_europe_male_04 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RVG_natalia_karimova = {
+		name = "Natalia Karimova"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_03 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RSW_pavel_morozov = {
+		name = "Pavel Morozov"
+		portraits = { civilian = { large = GFX_portrait_generic_europe_male_05 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RTS_anna_lebedeva = {
+		name = "Anna Lebedeva"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_04 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RAI_baatyr_ertekov = {
+		name = "Baatyr Ertekov"
+		portraits = { civilian = { large = GFX_portrait_generic_europe_male_06 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RIR_sergei_antonov = {
+		name = "Sergei Antonov"
+		portraits = { civilian = { large = GFX_portrait_generic_europe_male_07 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RBU_dolgor_badmaeva = {
+		name = "Dolgor Badmaeva"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_05 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RYK_ayana_egorova = {
+		name = "Ayana Egorova"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_06 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RFA_andrei_volkov = {
+		name = "Andrei Volkov"
+		portraits = { civilian = { large = GFX_portrait_generic_europe_male_08 } }
+		country_leader = { ideology = progressive expire = "2100.1.1.1" traits = { } }
+	}
+}

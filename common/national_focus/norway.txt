@@ -11,12 +11,7 @@ focus_tree = {
 	id = norwegian_focus
 
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			NOR_AAT = yes 
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

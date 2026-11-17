@@ -20,14 +20,8 @@ focus_tree = {
     id = indian_focus_goe
     
     country = {
-        factor = 0
-        
-        modifier = {
-            add = 10
-            tag = RAJ
-            has_dlc = "Graveyard of Empires"
-        }
-    }
+		factor = 0 # disabled: countries without a custom tree use generic_focus
+	}
     default = no
     continuous_focus_position = { x = 200 y = 3800 }
 

@@ -1,0 +1,104 @@
+ideas = {
+	country = {
+		RI_POL_guardian_of_the_east = {
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_army_war_college
+			modifier = {
+				army_defence_factor = 0.1
+				dig_in_speed = 0.1
+				war_support_factor = 0.05
+			}
+		}
+
+		RI_POL_industrial_revival = {
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = man_five_year_plan_industry
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		RI_POL_ally_not_satellite = {
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+
+		RI_POL_armoured_corps = {
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_tank_manufacturer_2
+			modifier = { army_attack_factor = 0.05 }
+		}
+
+		RI_POL_air_defence = {
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = { air_defence_factor = 0.05 }
+		}
+
+		RI_POL_baltic_defence = {
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = { navy_org_factor = 0.05 }
+		}
+
+		RI_POL_warsaw_defence = {
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				army_defence_factor = 0.05
+				dig_in_speed = 0.1
+			}
+		}
+
+		RI_POL_full_mobilisation = {
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				war_support_factor = 0.05
+				conscription_factor = 0.02
+			}
+		}
+
+		RI_POL_emergency_fortification = {
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				army_defence_factor = 0.1
+				dig_in_speed = 0.15
+			}
+		}
+
+		RI_POL_german_military_assistance = {
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_army_war_college
+			modifier = {
+				army_org_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+	}
+}

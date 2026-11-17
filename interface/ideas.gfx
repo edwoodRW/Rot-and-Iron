@@ -1,6 +1,15 @@
 spriteTypes = {	
 
 
+		SpriteType = {
+		name = "GFX_idea_The_Democratic_Socialist_Model"
+		texturefile = "gfx/interface/ideas/germany/The_Democratic_Socialist_Model.dds"
+	}
+		SpriteType = {
+		name = "GFX_idea_The_Spartacist_Legacy"
+		texturefile = "gfx/interface/ideas/germany/The_Spartacist_Legacy.dds"
+	}
+
 
 	SpriteType = {
 		name = "GFX_idea_traits_strip"

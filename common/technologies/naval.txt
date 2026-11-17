@@ -13,7 +13,7 @@ technologies = {
 		
 		research_cost = 1.5
 
-		start_year = 1922
+		start_year = 2026
 		
 		folder = {
 			name = naval_folder
@@ -52,7 +52,7 @@ technologies = {
 		
 		research_cost = 2
 		
-		start_year = 1936
+		start_year = 2034
 
 		folder = {
 			name = naval_folder
@@ -90,7 +90,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 2040
 		
 		folder = {
 			name = naval_folder
@@ -116,6 +116,11 @@ technologies = {
 	}
 	
 	advanced_destroyer = {
+		path = {
+			leads_to_tech = RI_future_destroyer
+			research_cost_coeff = 1
+		}
+
 
 		enable_equipments = { 
 			destroyer_4
@@ -123,7 +128,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 2047
 		
 		folder = {
 			name = naval_folder
@@ -174,7 +179,7 @@ technologies = {
 			}
 		}
 
-		start_year = 1922
+		start_year = 2026
 		
 		folder = {
 			name = naval_folder
@@ -223,7 +228,7 @@ technologies = {
 		
 		research_cost = 2
 		
-		start_year = 1936
+		start_year = 2034
 		
 		folder = {
 			name = naval_folder
@@ -271,7 +276,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 2040
 		
 		folder = {
 			name = naval_folder
@@ -303,6 +308,11 @@ technologies = {
 	}
 	
 	advanced_light_cruiser = {
+		path = {
+			leads_to_tech = RI_future_light_cruiser
+			research_cost_coeff = 1
+		}
+
 
 		enable_equipments = { 
 			light_cruiser_4
@@ -315,7 +325,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 2047
 		
 		folder = {
 			name = naval_folder
@@ -365,7 +375,7 @@ technologies = {
 		
 		research_cost = 1.5
 
-		start_year = 1922
+		start_year = 2026
 		
 		folder = {
 			name = naval_folder
@@ -404,7 +414,7 @@ technologies = {
 		
 		research_cost = 2
 		
-		start_year = 1936
+		start_year = 2034
 		
 		folder = {
 			name = naval_folder
@@ -442,7 +452,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 2040
 		
 		folder = {
 			name = naval_folder
@@ -464,6 +474,11 @@ technologies = {
 	}
 	
 	advanced_heavy_cruiser = {
+		path = {
+			leads_to_tech = RI_future_heavy_cruiser
+			research_cost_coeff = 1
+		}
+
 
 		enable_equipments = { 
 			heavy_cruiser_4
@@ -476,7 +491,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 2047
 		
 		folder = {
 			name = naval_folder
@@ -513,7 +528,7 @@ technologies = {
 		
 		research_cost = 1.5
 
-		start_year = 1922
+		start_year = 2026
 		
 		folder = {
 			name = naval_folder
@@ -546,7 +561,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 2040
 		
 		folder = {
 			name = naval_folder
@@ -579,7 +594,7 @@ technologies = {
 		
 		
 		research_cost = 1.5
-		start_year = 1922
+		start_year = 2026
 		
 		on_research_complete = {
 			custom_effect_tooltip = {
@@ -623,7 +638,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1936
+		start_year = 2034
 		
 		folder = {
 			name = naval_folder
@@ -659,7 +674,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1940
+		start_year = 2040
 		
 		folder = {
 			name = naval_folder
@@ -680,6 +695,11 @@ technologies = {
 	}
 	
 	advanced_battleship = {
+		path = {
+			leads_to_tech = RI_future_battleship
+			research_cost_coeff = 1
+		}
+
 
 		enable_equipments = { 
 			battleship_4
@@ -691,7 +711,7 @@ technologies = {
 		#}
 		
 		research_cost = 2
-		start_year = 1944
+		start_year = 2047
 		
 		folder = {
 			name = naval_folder
@@ -734,7 +754,7 @@ technologies = {
 		#}
 		
 		research_cost = 2
-		start_year = 1936
+		start_year = 2034
 		
 		#folder = {
 			#name = naval_folder
@@ -773,7 +793,7 @@ technologies = {
 		research_cost = 2
 
 		is_special_project_tech = yes
-		start_year = 1944
+		start_year = 2047
 		
 		folder = {
 			name = naval_folder
@@ -811,7 +831,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 1922
+		start_year = 2026
 		
 		folder = {
 			name = naval_folder
@@ -871,7 +891,7 @@ technologies = {
 		show_equipment_icon = yes
 		
 		research_cost = 2
-		start_year = 1940
+		start_year = 2040
 		
 		folder = {
 			name = naval_folder
@@ -948,7 +968,7 @@ technologies = {
 		#naval_invasion_capacity = 100
 
 		research_cost = 2
-		start_year = 1944
+		start_year = 2047
 		folder = {
 			name = naval_folder
 			position = { x = 0 y = 19 }
@@ -998,7 +1018,7 @@ technologies = {
 		
 		research_cost = 1.5
 
-		start_year = 1922
+		start_year = 2026
 		
 		folder = {
 			name = naval_folder
@@ -1039,7 +1059,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1936
+		start_year = 2034
 		
 		folder = {
 			name = naval_folder
@@ -1092,7 +1112,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1940
+		start_year = 2040
 
 		on_research_complete = {
 			if = { 
@@ -1132,6 +1152,11 @@ technologies = {
 	}
 	
 	advanced_carrier = {
+		path = {
+			leads_to_tech = RI_future_carrier
+			research_cost_coeff = 1
+		}
+
 
 		enable_equipments = { 
 			carrier_4
@@ -1140,7 +1165,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 2047
 		
 		on_research_complete = {
 			if = {
@@ -1203,7 +1228,7 @@ technologies = {
 
 		research_cost = 1.5
 
-		start_year = 1922
+		start_year = 2026
 		
 		folder = {
 			name = naval_folder
@@ -1252,7 +1277,7 @@ technologies = {
 		}
 				
 		research_cost = 2
-		start_year = 1936
+		start_year = 2034
 
 		folder = {
 			name = naval_folder
@@ -1289,7 +1314,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 2040
 		
 		folder = {
 			name = naval_folder
@@ -1314,6 +1339,11 @@ technologies = {
 	}
 	
 	advanced_submarine = {
+		path = {
+			leads_to_tech = RI_future_submarine
+			research_cost_coeff = 1
+		}
+
 
 		enable_equipments = { 
 			submarine_4
@@ -1321,7 +1351,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 2047
 		
 		folder = {
 			name = naval_folder
@@ -1355,7 +1385,7 @@ technologies = {
 		}
 
 		research_cost = 1
-		start_year = 1936
+		start_year = 2034
 
 		# only from focus!!! #####
 		allow = {
@@ -1373,7 +1403,7 @@ technologies = {
 		#}
 
 		#research_cost = 1
-		#start_year = 1936
+		#start_year = 2034
 
 		#allow = {
 			#always = no

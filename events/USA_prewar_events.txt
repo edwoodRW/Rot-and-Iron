@@ -1,0 +1,59 @@
+add_namespace = USA_prewar
+
+# Fires on completion of USA_Inauguration_Day
+country_event = {
+	id = USA_prewar.1
+	title = USA_prewar.1.t
+	desc = USA_prewar.1.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_prewar.1.a
+		add_political_power = 25
+		add_stability = 0.02
+	}
+	option = {
+		name = USA_prewar.1.b
+		add_political_power = 50
+		add_popularity = { ideology = revolutionary_socialist popularity = 0.01 }
+	}
+}
+
+# Fires on completion of USA_Whispers_of_a_Plot
+country_event = {
+	id = USA_prewar.2
+	title = USA_prewar.2.t
+	desc = USA_prewar.2.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_prewar.2.a
+		add_political_power = 25
+		set_country_flag = USA_plot_briefed
+	}
+	option = {
+		name = USA_prewar.2.b
+		add_stability = 0.02
+		set_country_flag = USA_plot_dismissed
+	}
+}
+
+# Fires on completion of USA_The_Last_Quiet_Day
+country_event = {
+	id = USA_prewar.3
+	title = USA_prewar.3.t
+	desc = USA_prewar.3.d
+	picture = GFX_unkown
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_prewar.3.a
+		add_political_power = 50
+		add_war_support = 0.03
+	}
+}

@@ -83,7 +83,7 @@ set_popularities = {
 		national_conservative = 24
 		centrist = 32
 		liberal = 0
-		new_democrat = 12
+		social_democrat = 12
 		moderate_socialist = 16
 		revolutionary_socialist = 0
 		communist = 4
@@ -134,7 +134,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Ute Vogt"
 	picture = "Portrait_BAV_Ute_Vogt.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

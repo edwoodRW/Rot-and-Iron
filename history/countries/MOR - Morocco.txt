@@ -98,7 +98,7 @@ set_popularities = {
 		national_conservative = 12
 		centrist = 6
 		liberal = 0
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 5
 		revolutionary_socialist = 5
 		communist = 5
@@ -155,7 +155,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Driss Lachgar"
 	picture = "Portrait_MOR_Driss_Lachgar.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -89,7 +89,7 @@ set_popularities = {
 		national_conservative = 8
 		centrist = 11
 		liberal = 0
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 10
 		revolutionary_socialist = 0
 		communist = 21
@@ -140,7 +140,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Marinos Sizopoulos"
 	picture = "Portrait_CYP_Marinos_Sizopoulos.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

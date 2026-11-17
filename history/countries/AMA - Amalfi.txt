@@ -86,7 +86,7 @@ set_popularities = {
 		national_conservative = 13
 		centrist = 57
 		liberal = 20
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 10
@@ -144,7 +144,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Amalfi City Council"
 	picture = "Portrait_AMA_Amalfi_Council.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -38,7 +38,7 @@ set_popularities = {
 	national_conservative = 8
 	centrist = 0
 	liberal = 0
-	new_democrat = 6
+	social_democrat = 6
 	moderate_socialist = 10
 	revolutionary_socialist = 30
 	communist = 18
@@ -81,7 +81,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Bakhyt Abdulov"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

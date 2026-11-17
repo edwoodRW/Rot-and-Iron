@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_RI_european_socialist_union"
+		texturefile = "gfx/interface/ideas/RI_european_socialist_union.dds"
+	}
+	spriteType = {
+		name = "GFX_RI_european_socialist_union_tooltip"
+		texturefile = "gfx/interface/RI_european_socialist_union_tooltip.dds"
+		legacy_lazy_load = no
+	}
+}

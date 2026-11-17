@@ -1,0 +1,153 @@
+add_namespace = RI_GER_eastern_campaign
+
+country_event = {
+	id = RI_GER_eastern_campaign.1
+	title = RI_GER_eastern_campaign.1.t
+	desc = RI_GER_eastern_campaign.1.d
+	picture = GFX_report_event_Hammer_Falls
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_eastern_campaign.1.a
+		trigger = { RI_GER_can_offer_victory_settlement = yes }
+		RI_GER_send_moscow_offer = yes
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = RI_GER_eastern_campaign.1.b
+		trigger = { has_war_with = SOV SOV = { exists = yes has_capitulated = no } }
+		set_country_flag = RI_GER_advance_to_urals
+		SOV = { add_ideas = RI_GER_soviet_eastern_retreat }
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = RI_GER_eastern_campaign.1.c
+		trigger = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				SOV = { exists = no }
+				SOV = { has_capitulated = yes }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RI_GER_eastern_campaign.2
+	title = RI_GER_eastern_campaign.2.t
+	desc = RI_GER_eastern_campaign.2.d
+	picture = GFX_report_event_Hammer_Falls
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_eastern_campaign.2.a
+		trigger = {
+			RI_GER_urals_settlement_conditions = yes
+			NOT = { has_country_flag = RI_GER_urals_offer_pending }
+		}
+		RI_GER_send_urals_offer = yes
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = RI_GER_eastern_campaign.2.b
+		trigger = { has_war_with = SOV SOV = { exists = yes } }
+		SOV = { remove_ideas = RI_GER_soviet_eastern_retreat }
+		clr_country_flag = RI_GER_advance_to_urals
+		ai_chance = { factor = 30 }
+	}
+	option = {
+		name = RI_GER_eastern_campaign.2.c
+		trigger = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				SOV = { exists = no }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RI_GER_eastern_campaign.3
+	title = RI_GER_eastern_campaign.3.t
+	desc = RI_GER_eastern_campaign.3.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_eastern_campaign.3.a
+		trigger = {
+			GER = {
+				has_country_flag = RI_GER_urals_offer_pending
+				RI_GER_urals_settlement_conditions = yes
+			}
+		}
+
+		GER = {
+			clr_country_flag = RI_GER_urals_offer_pending
+			RI_GER_urals_settlement = yes
+		}
+		ai_chance = { factor = 80 }
+	}
+	option = {
+		name = RI_GER_eastern_campaign.3.b
+		trigger = {
+			has_war_with = GER
+			GER = { has_country_flag = RI_GER_urals_offer_pending }
+		}
+		GER = {
+			clr_country_flag = RI_GER_urals_offer_pending
+			country_event = { id = RI_GER_eastern_campaign.4 hours = 1 }
+		}
+		ai_chance = { factor = 20 }
+	}
+	option = {
+		name = RI_GER_eastern_campaign.3.c
+		trigger = {
+			OR = {
+				NOT = { GER = { RI_GER_urals_settlement_conditions = yes } }
+				GER = { NOT = { has_country_flag = RI_GER_urals_offer_pending } }
+			}
+		}
+		GER = { clr_country_flag = RI_GER_urals_offer_pending }
+	}
+}
+
+country_event = {
+	id = RI_GER_eastern_campaign.4
+	title = RI_GER_eastern_campaign.4.t
+	desc = RI_GER_eastern_campaign.4.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_eastern_campaign.4.a
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = RI_GER_eastern_campaign.4.b
+		trigger = { has_war_with = SOV SOV = { exists = yes } }
+		SOV = { remove_ideas = RI_GER_soviet_eastern_retreat }
+		clr_country_flag = RI_GER_advance_to_urals
+		ai_chance = { factor = 30 }
+	}
+}
+
+country_event = {
+	id = RI_GER_eastern_campaign.5
+	title = RI_GER_eastern_campaign.5.t
+	desc = RI_GER_eastern_campaign.5.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = { name = RI_GER_eastern_campaign.5.a }
+}
+
+country_event = {
+	id = RI_GER_eastern_campaign.6
+	title = RI_GER_eastern_campaign.6.t
+	desc = RI_GER_eastern_campaign.6.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = { name = RI_GER_eastern_campaign.6.a }
+}

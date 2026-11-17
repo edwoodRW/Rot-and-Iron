@@ -93,7 +93,7 @@ set_popularities = {
 		national_conservative = 8
 		centrist = 0
 		liberal = 0
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 0
 		revolutionary_socialist = 10
 		communist = 55
@@ -151,7 +151,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Kem Ley"
 	picture = "Portrait_CMB_Kem_Ley.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

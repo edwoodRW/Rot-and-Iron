@@ -77,7 +77,7 @@ if = {
 }
 
 set_politics = {
-	ruling_party = new_democrat
+	ruling_party = social_democrat
 	last_election = "1997.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -91,7 +91,7 @@ set_popularities = {
 		national_conservative = 4
 		centrist = 2
 		liberal = 0
-		new_democrat = 64
+		social_democrat = 64
 		moderate_socialist = 8
 		revolutionary_socialist = 0
 		communist = 20

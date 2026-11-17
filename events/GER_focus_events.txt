@@ -12,16 +12,19 @@ country_event = {
 	id = GER_prewar.1
 	title = GER_prewar.1.t
 	desc = GER_prewar.1.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Message_to_the_Chancellery
 	is_triggered_only = yes
 	option = {
 		name = GER_prewar.1.a
-		add_political_power = 25
+		add_political_power = 75
+		add_command_power = 20
+		add_war_support = 0.03
 	}
 	option = {
 		name = GER_prewar.1.b
-		add_stability = 0.02
+		add_stability = 0.05
 		add_political_power = -25
+		add_manpower = 5000
 	}
 }
 
@@ -29,15 +32,18 @@ country_event = {
 	id = GER_prewar.western_understanding
 	title = GER_prewar.western_understanding.t
 	desc = GER_prewar.western_understanding.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Quiet_Words_in_Brussels
 	is_triggered_only = yes
 	option = {
 		name = GER_prewar.western_understanding.a
-		add_political_power = 25
+		add_political_power = 75
+		add_command_power = 15
+		add_war_support = 0.03
 	}
 	option = {
 		name = GER_prewar.western_understanding.b
-		add_stability = 0.02
+		add_stability = 0.05
+		add_political_power = 25
 	}
 }
 
@@ -45,11 +51,13 @@ country_event = {
 	id = GER_prewar.bear_is_weakened
 	title = GER_prewar.bear_is_weakened.t
 	desc = GER_prewar.bear_is_weakened.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_bear_is_weakened
 	is_triggered_only = yes
 	option = {
 		name = GER_prewar.bear_is_weakened.a
-		add_war_support = 0.03
+		add_war_support = 0.08
+		add_political_power = 50
+		army_experience = 15
 	}
 }
 
@@ -57,15 +65,19 @@ country_event = {
 	id = GER_prewar.military_ready
 	title = GER_prewar.military_ready.t
 	desc = GER_prewar.military_ready.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_The_Call_Up
 	is_triggered_only = yes
 	option = {
 		name = GER_prewar.military_ready.a
-		army_experience = 10
+		army_experience = 40
+		add_command_power = 25
+		add_war_support = 0.03
 	}
 	option = {
 		name = GER_prewar.military_ready.b
-		add_stability = 0.02
+		add_stability = 0.05
+		add_manpower = 10000
+		add_political_power = 25
 	}
 }
 
@@ -73,16 +85,22 @@ country_event = {
 	id = GER_prewar.mandate_secured
 	title = GER_prewar.mandate_secured.t
 	desc = GER_prewar.mandate_secured.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_A_Mandate_for_Action
 	is_triggered_only = yes
 	option = {
 		name = GER_prewar.mandate_secured.a
-		add_political_power = 50
+		add_political_power = 120
+		add_war_support = 0.04
+		add_command_power = 20
 	}
 	option = {
 		name = GER_prewar.mandate_secured.b
-		add_stability = 0.03
-		add_political_power = -25
+		add_stability = 0.08
+		add_political_power = 30
+		add_popularity = {
+			ideology = revolutionary_socialist
+			popularity = 0.03
+		}
 	}
 }
 
@@ -90,11 +108,14 @@ country_event = {
 	id = GER_prewar.the_die_is_cast
 	title = GER_prewar.the_die_is_cast.t
 	desc = GER_prewar.the_die_is_cast.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_The_Die_Is_Cast
 	is_triggered_only = yes
 	option = {
 		name = GER_prewar.the_die_is_cast.a
-		add_war_support = 0.03
+		add_war_support = 0.10
+		add_political_power = 100
+		add_manpower = 30000
+		army_experience = 30
 		set_country_flag = GER_war_declared_on_soviets
 		if = {
 			limit = {
@@ -123,6 +144,7 @@ country_event = {
 					country_event = { id = ITA_german_war.decision days = 100 }
 				}
 			}
+			set_global_flag = RI_german_war_started
 			declare_war_on = {
 				target = SOV
 				type = annex_everything
@@ -141,15 +163,18 @@ country_event = {
 	id = GER_shadow.1
 	title = GER_shadow.1.t
 	desc = GER_shadow.1.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Ghosts_in_the_Wire
 	is_triggered_only = yes
 	option = {
 		name = GER_shadow.1.a
-		add_political_power = 25
+		add_political_power = 60
+		add_command_power = 25
+		army_experience = 15
 	}
 	option = {
 		name = GER_shadow.1.b
-		add_stability = 0.02
+		add_stability = 0.05
+		add_political_power = 25
 	}
 }
 
@@ -157,11 +182,13 @@ country_event = {
 	id = GER_shadow.saboteurs_in_place
 	title = GER_shadow.saboteurs_in_place.t
 	desc = GER_shadow.saboteurs_in_place.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Ghosts_in_the_Wire
 	is_triggered_only = yes
 	option = {
 		name = GER_shadow.saboteurs_in_place.a
-		add_war_support = 0.02
+		add_war_support = 0.06
+		add_political_power = 50
+		add_command_power = 20
 	}
 }
 
@@ -169,17 +196,20 @@ country_event = {
 	id = GER_opening.1
 	title = GER_opening.1.t
 	desc = GER_opening.1.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_The_Die_Is_Cast
 	is_triggered_only = yes
 	option = {
 		name = GER_opening.1.a
-		add_war_support = 0.04
-		add_stability = -0.03
+		add_war_support = 0.10
+		add_stability = -0.04
+		add_manpower = 15000
+		army_experience = 20
 	}
 	option = {
 		name = GER_opening.1.b
-		add_stability = 0.03
+		add_stability = 0.07
 		add_war_support = -0.02
+		add_political_power = 60
 	}
 }
 
@@ -187,17 +217,20 @@ country_event = {
 	id = GER_economy.1
 	title = GER_economy.1.t
 	desc = GER_economy.1.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_The_Factory_Floor
 	is_triggered_only = yes
 	option = {
 		name = GER_economy.1.a
-		add_war_support = 0.05
-		add_stability = -0.02
+		add_war_support = 0.08
+		add_stability = -0.03
+		add_political_power = 50
+		add_manpower = 10000
 	}
 	option = {
 		name = GER_economy.1.b
-		add_stability = 0.03
-		add_political_power = -25
+		add_stability = 0.07
+		add_political_power = 25
+		add_command_power = 15
 	}
 }
 
@@ -205,16 +238,19 @@ country_event = {
 	id = GER_economy.conscription_reaction
 	title = GER_economy.conscription_reaction.t
 	desc = GER_economy.conscription_reaction.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_The_Call_Up
 	is_triggered_only = yes
 	option = {
 		name = GER_economy.conscription_reaction.a
-		add_war_support = 0.04
-		add_stability = -0.03
+		add_manpower = 40000
+		add_war_support = 0.08
+		add_stability = -0.04
 	}
 	option = {
 		name = GER_economy.conscription_reaction.b
-		add_stability = 0.03
+		add_stability = 0.06
+		add_manpower = 15000
+		add_political_power = 30
 	}
 }
 
@@ -222,17 +258,20 @@ country_event = {
 	id = GER_eastern.hammer_fired
 	title = GER_eastern.hammer_fired.t
 	desc = GER_eastern.hammer_fired.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Hammer_Falls
 	is_triggered_only = yes
 	option = {
 		name = GER_eastern.hammer_fired.a
-		add_war_support = 0.05
-		add_stability = -0.03
+		add_war_support = 0.10
+		add_stability = -0.04
+		army_experience = 25
+		add_manpower = 20000
 	}
 	option = {
 		name = GER_eastern.hammer_fired.b
-		army_experience = 15
-		add_stability = 0.01
+		army_experience = 50
+		add_stability = 0.03
+		add_command_power = 25
 	}
 }
 
@@ -240,17 +279,19 @@ country_event = {
 	id = GER_naval.1
 	title = GER_naval.1.t
 	desc = GER_naval.1.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_The_Lifeline_Is_Cut
 	is_triggered_only = yes
 	option = {
 		name = GER_naval.1.a
-		navy_experience = 10
-		add_war_support = 0.02
+		navy_experience = 40
+		add_war_support = 0.05
+		add_command_power = 20
 	}
 	option = {
 		name = GER_naval.1.b
-		add_political_power = 25
-		add_stability = 0.02
+		add_political_power = 60
+		add_stability = 0.04
+		navy_experience = 15
 	}
 }
 
@@ -258,15 +299,19 @@ country_event = {
 	id = GER_naval.submarine_reaction
 	title = GER_naval.submarine_reaction.t
 	desc = GER_naval.submarine_reaction.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_The_Lifeline_Is_Cut
 	is_triggered_only = yes
 	option = {
 		name = GER_naval.submarine_reaction.a
-		add_war_support = 0.03
+		add_war_support = 0.07
+		navy_experience = 30
+		add_political_power = 40
 	}
 	option = {
 		name = GER_naval.submarine_reaction.b
-		add_stability = 0.02
+		add_stability = 0.05
+		add_political_power = 30
+		navy_experience = 15
 	}
 }
 
@@ -274,11 +319,13 @@ country_event = {
 	id = GER_naval.lifeline_cut
 	title = GER_naval.lifeline_cut.t
 	desc = GER_naval.lifeline_cut.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_The_Lifeline_Is_Cut
 	is_triggered_only = yes
 	option = {
 		name = GER_naval.lifeline_cut.a
-		add_war_support = 0.03
+		add_war_support = 0.07
+		navy_experience = 40
+		add_political_power = 50
 	}
 }
 
@@ -286,17 +333,19 @@ country_event = {
 	id = GER_allies.1
 	title = GER_allies.1.t
 	desc = GER_allies.1.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Quiet_Words_in_Brussels
 	is_triggered_only = yes
 	option = {
 		name = GER_allies.1.a
-		add_political_power = 25
-		add_war_support = 0.02
+		add_political_power = 70
+		add_war_support = 0.05
+		add_command_power = 20
 	}
 	option = {
 		name = GER_allies.1.b
-		add_stability = 0.02
+		add_stability = 0.06
 		add_war_support = -0.02
+		add_manpower = 10000
 	}
 }
 
@@ -304,16 +353,19 @@ country_event = {
 	id = GER_allies.france_responds
 	title = GER_allies.france_responds.t
 	desc = GER_allies.france_responds.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Paris_Answers
 	is_triggered_only = yes
 	option = {
 		name = GER_allies.france_responds.a
-		add_political_power = 25
-		add_stability = -0.01
+		add_political_power = 70
+		add_stability = -0.02
+		army_experience = 20
 	}
 	option = {
 		name = GER_allies.france_responds.b
-		add_stability = 0.02
+		add_stability = 0.05
+		add_political_power = 25
+		add_manpower = 10000
 	}
 }
 
@@ -321,12 +373,14 @@ country_event = {
 	id = GER_allies.western_front
 	title = GER_allies.western_front.t
 	desc = GER_allies.western_front.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Paris_Answers
 	is_triggered_only = yes
 	option = {
 		name = GER_allies.western_front.a
-		add_war_support = 0.04
-		add_stability = -0.03
+		add_war_support = 0.10
+		add_stability = -0.04
+		army_experience = 30
+		add_manpower = 20000
 	}
 }
 
@@ -334,15 +388,18 @@ country_event = {
 	id = GER_allies.china_responds
 	title = GER_allies.china_responds.t
 	desc = GER_allies.china_responds.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_A_Message_From_Beijing
 	is_triggered_only = yes
 	option = {
 		name = GER_allies.china_responds.a
-		add_war_support = 0.03
+		add_war_support = 0.06
+		add_political_power = 50
+		add_command_power = 20
 	}
 	option = {
 		name = GER_allies.china_responds.b
-		army_experience = 10
+		army_experience = 40
+		add_political_power = 25
 	}
 }
 
@@ -350,15 +407,19 @@ country_event = {
 	id = GER_allies.grand_coalition
 	title = GER_allies.grand_coalition.t
 	desc = GER_allies.grand_coalition.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Quiet_Words_in_Brussels
 	is_triggered_only = yes
 	option = {
 		name = GER_allies.grand_coalition.a
-		add_war_support = 0.04
+		add_war_support = 0.08
+		add_political_power = 60
+		army_experience = 20
 	}
 	option = {
 		name = GER_allies.grand_coalition.b
-		add_stability = 0.03
+		add_stability = 0.07
+		add_political_power = 40
+		add_manpower = 10000
 	}
 }
 
@@ -366,20 +427,22 @@ country_event = {
 	id = GER_politics.brandt_prewar_warning
 	title = GER_politics.brandt_prewar_warning.t
 	desc = GER_politics.brandt_prewar_warning.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Wagenknecht_Warning
 	is_triggered_only = yes
 	option = {
 		name = GER_politics.brandt_prewar_warning.a
 		add_popularity = {
 			ideology = revolutionary_socialist
-			popularity = 0.01
+			popularity = 0.03
 		}
-		add_stability = 0.02
+		add_stability = 0.04
+		add_political_power = 30
 	}
 	option = {
 		name = GER_politics.brandt_prewar_warning.b
-		add_political_power = 25
-		add_stability = -0.02
+		add_political_power = 70
+		add_stability = -0.03
+		add_war_support = 0.03
 	}
 }
 
@@ -387,19 +450,21 @@ country_event = {
 	id = GER_politics.brandt_response
 	title = GER_politics.brandt_response.t
 	desc = GER_politics.brandt_response.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Wagenknecht_Warning
 	is_triggered_only = yes
 	option = {
 		name = GER_politics.brandt_response.a
-		add_stability = 0.02
+		add_stability = 0.06
+		add_political_power = 40
 	}
 	option = {
 		name = GER_politics.brandt_response.b
 		add_popularity = {
 			ideology = revolutionary_socialist
-			popularity = 0.02
+			popularity = 0.05
 		}
-		add_stability = -0.02
+		add_stability = -0.03
+		add_war_support = 0.04
 	}
 }
 
@@ -407,15 +472,17 @@ country_event = {
 	id = GER_politics.brandt_takes_power
 	title = GER_politics.brandt_takes_power.t
 	desc = GER_politics.brandt_takes_power.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Wagenknecht_Warning
 	is_triggered_only = yes
 	option = {
 		name = GER_politics.brandt_takes_power.a
-		add_stability = 0.03
+		add_stability = 0.07
 		add_popularity = {
 			ideology = revolutionary_socialist
-			popularity = 0.03
+			popularity = 0.06
 		}
+		add_political_power = 100
+		add_war_support = 0.03
 	}
 }
 
@@ -423,17 +490,19 @@ country_event = {
 	id = GER_politics.ceasefire_opened
 	title = GER_politics.ceasefire_opened.t
 	desc = GER_politics.ceasefire_opened.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Quiet_Words_in_Brussels
 	is_triggered_only = yes
 	option = {
 		name = GER_politics.ceasefire_opened.a
-		add_stability = 0.02
-		add_war_support = -0.03
+		add_stability = 0.06
+		add_war_support = -0.05
+		add_political_power = 60
 	}
 	option = {
 		name = GER_politics.ceasefire_opened.b
-		add_war_support = 0.02
-		add_stability = -0.03
+		add_war_support = 0.06
+		add_stability = -0.05
+		army_experience = 25
 	}
 }
 
@@ -441,13 +510,15 @@ country_event = {
 	id = GER_endgame.victory
 	title = GER_endgame.victory.t
 	desc = GER_endgame.victory.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_Hammer_Falls
 	is_triggered_only = yes
 	option = {
 		name = GER_endgame.victory.a
-		add_political_power = 50
-		add_war_support = 0.03
-		add_stability = 0.02
+		add_political_power = 150
+		add_war_support = 0.06
+		add_stability = 0.05
+		army_experience = 50
+		add_manpower = 25000
 	}
 }
 
@@ -455,11 +526,13 @@ country_event = {
 	id = GER_endgame.berlin_accords
 	title = GER_endgame.berlin_accords.t
 	desc = GER_endgame.berlin_accords.d
-	picture = GFX_news_event_001
+	picture = GFX_report_event_A_Mandate_for_Action
 	is_triggered_only = yes
 	option = {
 		name = GER_endgame.berlin_accords.a
-		add_stability = 0.03
-		add_war_support = -0.03
+		add_stability = 0.08
+		add_war_support = -0.05
+		add_political_power = 100
+		add_manpower = 20000
 	}
 }

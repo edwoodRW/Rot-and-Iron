@@ -96,7 +96,7 @@ set_popularities = {
 		national_conservative = 15
 		centrist = 48
 		liberal = 6
-		new_democrat = 8
+		social_democrat = 8
 		moderate_socialist = 4
 		revolutionary_socialist = 3
 		communist = 0
@@ -147,7 +147,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Anwar-ul-Haq Ahady"
 	picture = "Portrait_PSH_Anwar_ul_Haq_Ahady.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

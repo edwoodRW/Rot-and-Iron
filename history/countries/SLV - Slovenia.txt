@@ -85,7 +85,7 @@ set_popularities = {
 		national_conservative = 14
 		centrist = 0
 		liberal = 6
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 25
 		revolutionary_socialist = 42
 		communist = 5
@@ -136,7 +136,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Tanja Fajon"
 	picture = "Portrait_SLV_Tanja_Fajon.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

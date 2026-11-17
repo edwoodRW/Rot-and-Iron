@@ -83,7 +83,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 0
 		liberal = 5
-		new_democrat = 15
+		social_democrat = 15
 		moderate_socialist = 0
 		revolutionary_socialist = 5
 		communist = 10
@@ -140,7 +140,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Nada Zaarour"
 	picture = "Portrait_LEB_Nada_Zaarour.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

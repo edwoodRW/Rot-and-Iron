@@ -12,15 +12,7 @@ focus_tree = {
 	id = austria_focus_tree
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 50
-			tag = AUS
-			#always = no
-
-			has_dlc = "Gotterdammerung"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

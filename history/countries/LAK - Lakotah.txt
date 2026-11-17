@@ -86,7 +86,7 @@ set_popularities = {
 		national_conservative = 14 #51
 		centrist = 11 #62
 		liberal = 5 #67
-		new_democrat = 6 #73
+		social_democrat = 6 #73
 		moderate_socialist = 2 #75
 		revolutionary_socialist = 16
 		communist = 13 #90
@@ -137,7 +137,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Cecilia Fire Thunder"
 	picture = "Portrait_LAK_Cecilia_Fire_Thunder.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

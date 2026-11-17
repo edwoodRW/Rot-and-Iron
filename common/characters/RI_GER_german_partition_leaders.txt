@@ -1,0 +1,42 @@
+characters = {
+	RI_WGR_karl_neumann = {
+		name = "Karl Neumann"
+		portraits = { civilian = { large = GFX_portrait_generic_europe_male_09 } }
+		country_leader = { ideology = communist expire = "2100.1.1.1" traits = { } }
+	}
+	RI_BAY_marta_weber = {
+		name = "Marta Weber"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_07 } }
+		country_leader = { ideology = communist expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RWG_erika_baumann = {
+		name = "Erika Baumann"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_08 } }
+		country_leader = { ideology = communist expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RHG_otto_stein = {
+		name = "Otto Stein"
+		portraits = { civilian = { large = GFX_portrait_generic_europe_male_10 } }
+		country_leader = { ideology = communist expire = "2100.1.1.1" traits = { } }
+	}
+	RI_RSB_marie_keller = {
+		name = "Marie Keller"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_09 } }
+		country_leader = { ideology = communist expire = "2100.1.1.1" traits = { } }
+	}
+	RI_AUS_anna_gruber = {
+		name = "Anna Gruber"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_07 } }
+		country_leader = { ideology = communist expire = "2100.1.1.1" traits = { } }
+	}
+	RI_ROD_helene_voss = {
+		name = "Helene Voss"
+		gender = female
+		portraits = { civilian = { large = GFX_portrait_generic_europe_female_08 } }
+		country_leader = { ideology = communist expire = "2100.1.1.1" traits = { } }
+	}
+}

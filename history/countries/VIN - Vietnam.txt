@@ -92,7 +92,7 @@ set_popularities = {
 		national_conservative = 3
 		centrist = 0
 		liberal = 0
-		new_democrat = 25
+		social_democrat = 25
 		moderate_socialist = 0
 		revolutionary_socialist = 2
 		communist = 14
@@ -149,7 +149,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Nguyen Quoc Quan"
 	picture = "Portrait_VIN_Nguyen_Quoc_Quan.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

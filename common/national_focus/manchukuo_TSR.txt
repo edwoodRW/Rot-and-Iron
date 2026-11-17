@@ -2,12 +2,7 @@
 	id = manchukuo_focus_tsr
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 15
-			tag = MAN
-			has_dlc = "No Compromise, No Surrender"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 

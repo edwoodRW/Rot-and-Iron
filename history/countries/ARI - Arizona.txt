@@ -87,7 +87,7 @@ set_popularities = {
 		national_conservative = 11
 		centrist = 0
 		liberal = 35
-		new_democrat = 8
+		social_democrat = 8
 		moderate_socialist = 0
 		revolutionary_socialist = 10
 		communist = 20
@@ -139,7 +139,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Rachel Maddow"
 	picture = "Portrait_ARI_Rachel_Maddow.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

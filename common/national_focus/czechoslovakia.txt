@@ -2,13 +2,7 @@
 	id = czech_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = CZE
-			has_dlc = "Death or Dishonor"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

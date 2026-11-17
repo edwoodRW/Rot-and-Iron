@@ -93,7 +93,7 @@ set_popularities = {
 		national_conservative = 12
 		centrist = 3
 		liberal = 5
-		new_democrat = 15
+		social_democrat = 15
 		moderate_socialist = 0
 		revolutionary_socialist = 6
 		communist = 5
@@ -151,7 +151,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Valon Shehu"
 	picture = "Portrait_ALB_Rexhep_Meidani.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

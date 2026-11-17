@@ -169,7 +169,7 @@ if = {
 set_convoys = 100
 
 set_politics = {
-	ruling_party = new_democrat
+	ruling_party = social_democrat
 	last_election = "1997.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -183,7 +183,7 @@ set_popularities = {
 		national_conservative = 10
 		centrist = 10
 		liberal = 10
-		new_democrat = 55
+		social_democrat = 55
 		moderate_socialist = 10
 		revolutionary_socialist = 0
 		communist = 0

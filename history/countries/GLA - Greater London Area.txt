@@ -124,7 +124,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 0
 		liberal = 0
-		new_democrat = 0  
+		social_democrat = 0  
 		moderate_socialist = 4
 		revolutionary_socialist = 13 
 		communist = 79
@@ -211,7 +211,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Rowan Atkinson"
 	picture = Rowan_Atkinson.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 

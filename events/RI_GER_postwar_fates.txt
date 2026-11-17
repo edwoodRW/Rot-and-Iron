@@ -1,0 +1,367 @@
+add_namespace = RI_GER_postwar_fates
+
+country_event = {
+	id = RI_GER_postwar_fates.1
+	title = RI_GER_postwar_fates.1.t
+	desc = RI_GER_postwar_fates.1.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.1.a
+		RI_GER_review_next_soviet_country = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.2
+	title = RI_GER_postwar_fates.2.t
+	desc = RI_GER_postwar_fates.2.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.puppet
+		trigger = { SOV = { exists = no } RI_GER_can_release_ukraine = yes }
+		release_autonomy = { target = UKR autonomy_state = autonomy_puppet }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.independent
+		trigger = { SOV = { exists = no } RI_GER_can_release_ukraine = yes }
+		release = UKR
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.keep
+		trigger = { SOV = { exists = no } RI_GER_can_release_ukraine = yes }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.changed
+		trigger = { OR = { SOV = { exists = yes } NOT = { RI_GER_can_release_ukraine = yes } } }
+		RI_GER_review_next_soviet_country = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.3
+	title = RI_GER_postwar_fates.3.t
+	desc = RI_GER_postwar_fates.3.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.puppet
+		trigger = { SOV = { exists = no } RI_GER_can_release_belarus = yes }
+		release_autonomy = { target = BLR autonomy_state = autonomy_puppet }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.independent
+		trigger = { SOV = { exists = no } RI_GER_can_release_belarus = yes }
+		release = BLR
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.keep
+		trigger = { SOV = { exists = no } RI_GER_can_release_belarus = yes }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.changed
+		trigger = { OR = { SOV = { exists = yes } NOT = { RI_GER_can_release_belarus = yes } } }
+		RI_GER_review_next_soviet_country = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.4
+	title = RI_GER_postwar_fates.4.t
+	desc = RI_GER_postwar_fates.4.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.puppet
+		trigger = { SOV = { exists = no } RI_GER_can_release_georgia = yes }
+		release_autonomy = { target = GEO autonomy_state = autonomy_puppet }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.independent
+		trigger = { SOV = { exists = no } RI_GER_can_release_georgia = yes }
+		release = GEO
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.keep
+		trigger = { SOV = { exists = no } RI_GER_can_release_georgia = yes }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.changed
+		trigger = { OR = { SOV = { exists = yes } NOT = { RI_GER_can_release_georgia = yes } } }
+		RI_GER_review_next_soviet_country = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.5
+	title = RI_GER_postwar_fates.5.t
+	desc = RI_GER_postwar_fates.5.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.puppet
+		trigger = { SOV = { exists = no } RI_GER_can_release_armenia = yes }
+		release_autonomy = { target = ARM autonomy_state = autonomy_puppet }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.independent
+		trigger = { SOV = { exists = no } RI_GER_can_release_armenia = yes }
+		release = ARM
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.keep
+		trigger = { SOV = { exists = no } RI_GER_can_release_armenia = yes }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.changed
+		trigger = { OR = { SOV = { exists = yes } NOT = { RI_GER_can_release_armenia = yes } } }
+		RI_GER_review_next_soviet_country = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.6
+	title = RI_GER_postwar_fates.6.t
+	desc = RI_GER_postwar_fates.6.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.puppet
+		trigger = { SOV = { exists = no } RI_GER_can_release_azerbaijan = yes }
+		release_autonomy = { target = AZR autonomy_state = autonomy_puppet }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.independent
+		trigger = { SOV = { exists = no } RI_GER_can_release_azerbaijan = yes }
+		release = AZR
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.keep
+		trigger = { SOV = { exists = no } RI_GER_can_release_azerbaijan = yes }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.changed
+		trigger = { OR = { SOV = { exists = yes } NOT = { RI_GER_can_release_azerbaijan = yes } } }
+		RI_GER_review_next_soviet_country = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.7
+	title = RI_GER_postwar_fates.7.t
+	desc = RI_GER_postwar_fates.7.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.puppet
+		trigger = { SOV = { exists = no } RI_GER_can_release_kazakhstan = yes }
+		release_autonomy = { target = KAZ autonomy_state = autonomy_puppet }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.independent
+		trigger = { SOV = { exists = no } RI_GER_can_release_kazakhstan = yes }
+		release = KAZ
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.keep
+		trigger = { SOV = { exists = no } RI_GER_can_release_kazakhstan = yes }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.changed
+		trigger = { OR = { SOV = { exists = yes } NOT = { RI_GER_can_release_kazakhstan = yes } } }
+		RI_GER_review_next_soviet_country = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.8
+	title = RI_GER_postwar_fates.8.t
+	desc = RI_GER_postwar_fates.8.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.8.lithuania
+		trigger = {
+			SOV = { exists = no }
+			RI_GER_can_review_vilnius = yes
+			LIT = { exists = yes }
+			NOT = { has_war_with = LIT }
+		}
+		784 = { transfer_state_to = LIT }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.8.belarus
+		trigger = {
+			SOV = { exists = no }
+			RI_GER_can_review_vilnius = yes
+			BLR = { exists = yes }
+			NOT = { has_war_with = BLR }
+		}
+		784 = { add_core_of = BLR transfer_state_to = BLR }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.8.poland
+		trigger = {
+			SOV = { exists = no }
+			RI_GER_can_review_vilnius = yes
+			POL = { exists = yes }
+			NOT = { has_war_with = POL }
+		}
+		784 = { transfer_state_to = POL }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.keep
+		trigger = { SOV = { exists = no } RI_GER_can_review_vilnius = yes }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.changed
+		trigger = { OR = { SOV = { exists = yes } NOT = { RI_GER_can_review_vilnius = yes } } }
+		RI_GER_review_next_soviet_country = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.9
+	title = RI_GER_postwar_fates.9.t
+	desc = RI_GER_postwar_fates.9.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.puppet
+		trigger = { SOV = { exists = no } RI_GER_can_create_moscow_state = yes }
+		RI_GER_create_moscow_state = yes
+		puppet = RMO
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.independent
+		trigger = { SOV = { exists = no } RI_GER_can_create_moscow_state = yes }
+		RI_GER_create_moscow_state = yes
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.keep
+		trigger = { SOV = { exists = no } RI_GER_can_create_moscow_state = yes }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.changed
+		trigger = { OR = { SOV = { exists = yes } NOT = { RI_GER_can_create_moscow_state = yes } } }
+		RI_GER_review_next_soviet_country = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.10
+	title = RI_GER_postwar_fates.10.t
+	desc = RI_GER_postwar_fates.10.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.puppet
+		trigger = { SOV = { exists = no } RI_GER_can_create_ural_state = yes }
+		RI_GER_create_ural_state = yes
+		puppet = URE
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.independent
+		trigger = { SOV = { exists = no } RI_GER_can_create_ural_state = yes }
+		RI_GER_create_ural_state = yes
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.keep
+		trigger = { SOV = { exists = no } RI_GER_can_create_ural_state = yes }
+		RI_GER_review_next_soviet_country = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.changed
+		trigger = { OR = { SOV = { exists = yes } NOT = { RI_GER_can_create_ural_state = yes } } }
+		RI_GER_review_next_soviet_country = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.11
+	title = RI_GER_postwar_fates.11.t
+	desc = RI_GER_postwar_fates.11.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.11.restore
+		trigger = { RI_GER_can_restore_soviet_east = yes }
+		RI_GER_restore_soviet_east = yes
+		country_event = { id = RI_GER_postwar_fates.12 days = 1 }
+	}
+	option = {
+		name = RI_GER_postwar_fates.11.divide
+		trigger = { RI_GER_partition_ready = yes }
+		country_event = { id = RI_GER_postwar_fates.12 days = 1 }
+	}
+	option = {
+		name = RI_GER_postwar_fates.keep
+		trigger = { RI_GER_can_restore_soviet_east = yes }
+	}
+	option = {
+		name = RI_GER_postwar_fates.changed
+		trigger = { NOT = { RI_GER_can_restore_soviet_east = yes } }
+	}
+}
+
+country_event = {
+	id = RI_GER_postwar_fates.12
+	title = RI_GER_postwar_fates.12.t
+	desc = RI_GER_postwar_fates.12.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_postwar_fates.12.remnant
+		trigger = { RI_GER_partition_ready = yes RI_GER_partition_can_keep_soviet = yes }
+		RI_GER_prepare_soviet_remnant = yes
+		RI_GER_partition_russia = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.12.divide
+		trigger = { RI_GER_partition_ready = yes }
+		RI_GER_partition_russia = yes
+	}
+	option = {
+		name = RI_GER_postwar_fates.12.defer
+	}
+}

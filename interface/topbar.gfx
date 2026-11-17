@@ -279,6 +279,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/empty_button.dds"
 	}	
 
+	corneredTileSpriteType = {
+		name = "GFX_RI_flag_frame"
+		size = { x=24 y=24 }
+		textureFile = "gfx/interface/RI_flag_frame.dds"
+		borderSize = { x=4 y=4 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
 	spriteType = {
 		name = "GFX_topbar_background"
 		texturefile = "gfx/interface/topbar/background.dds"

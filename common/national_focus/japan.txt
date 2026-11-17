@@ -21,11 +21,7 @@ focus_tree = {
 	id = japan_wtt_focus
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 20
-			tag = JAP
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 
 

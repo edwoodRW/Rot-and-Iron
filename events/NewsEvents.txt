@@ -1715,6 +1715,7 @@ news_event = {
 news_event = {
 
 	id = news.51
+	is_triggered_only = yes # disabled: random flavour event
 	hidden = yes
 	
 	fire_only_once = yes
@@ -1757,6 +1758,7 @@ news_event = {
 # Rudolf Hess Trigger (HIDDEN)
 news_event = {
 	id = news.52
+	is_triggered_only = yes # disabled: random flavour event
 	hidden = yes
 	
 	fire_only_once = yes
@@ -1819,6 +1821,7 @@ news_event = {
 # Rudolf Hess Hindenburg Trigger (HIDDEN)
 news_event = {
 	id = news.53
+	is_triggered_only = yes # disabled: random flavour event
 	hidden = yes
 	
 	fire_only_once = yes
@@ -1892,6 +1895,7 @@ news_event = {
 # Amelia Earhart Trigger (HIDDEN)
 news_event = {
 	id = news.54
+	is_triggered_only = yes # disabled: random flavour event
 	hidden = yes
 	
 	fire_only_once = yes
@@ -2371,6 +2375,7 @@ news_event = {
 # Games of the XI Olympiad
 news_event = {
 	id = news.66
+	is_triggered_only = yes # disabled: random flavour event
 	title = news.66.t
 	desc = {
 		text = news.66.d
@@ -2424,6 +2429,7 @@ news_event = {
 # Games of the XII Olympiad (Tokyo)
 news_event = {
 	id = news.67
+	is_triggered_only = yes # disabled: random flavour event
 	title = news.67.t
 	desc = news.67.d
 	picture = GFX_news_event_070
@@ -2463,6 +2469,7 @@ news_event = {
 # Games of the XII Olympiad (Helsinki)
 news_event = {
 	id = news.68
+	is_triggered_only = yes # disabled: random flavour event
 	title = news.67.t
 	desc = news.68.d
 	picture = GFX_news_event_069

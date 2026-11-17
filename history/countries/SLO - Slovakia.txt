@@ -1,4 +1,5 @@
 ﻿capital = 230
+add_ideas = { RI_european_socialist_union }
 
 oob = "generic_2000"
 
@@ -85,7 +86,7 @@ set_popularities = {
 		national_conservative = 15
 		centrist = 5
 		liberal = 5
-		new_democrat = 5
+		social_democrat = 5
 		moderate_socialist = 60
 		revolutionary_socialist = 0
 		communist = 10
@@ -136,7 +137,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Peter Pellegrini"
 	picture = "Portrait_SLO_Peter_Pellegrini.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

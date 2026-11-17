@@ -3,6 +3,31 @@ MAL_UK = {
     color_ui = rgb { 255 73 121 }
 }
 
+RI_GER_north_german = {
+	color = rgb { 100 112 107 }
+	color_ui = rgb { 122 135 128 }
+}
+
+RI_POL_soviet = {
+	color = rgb { 170 118 130 }
+	color_ui = rgb { 190 138 150 }
+}
+
+RI_AUS_restored = {
+	color = rgb { 174 172 162 }
+	color_ui = rgb { 194 192 182 }
+}
+
+RI_WGR_west_german = {
+	color = rgb { 117 126 116 }
+	color_ui = rgb { 137 146 136 }
+}
+
+RI_BAY_south_german = {
+	color = rgb { 133 119 110 }
+	color_ui = rgb { 153 139 130 }
+}
+
 RAJ_UK = {
 	color = rgb { 170  10  10 }
 	color_ui = rgb { 200  10  10 }

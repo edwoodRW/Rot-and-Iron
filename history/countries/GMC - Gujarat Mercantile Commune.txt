@@ -38,7 +38,7 @@ set_popularities = {
 	national_conservative = 18
 	centrist = 10
 	liberal = 8
-	new_democrat = 12
+	social_democrat = 12
 	moderate_socialist = 25
 	revolutionary_socialist = 8
 	communist = 7
@@ -81,7 +81,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Rohan Pillai"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

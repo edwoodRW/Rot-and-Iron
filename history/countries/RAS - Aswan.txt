@@ -99,7 +99,7 @@ set_popularities = {
 		national_conservative = 7
 		centrist = 10
 		liberal = 5
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 0
@@ -150,7 +150,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Mamdouh Shahin"
 	picture = "Portrait_RAS_Mamdouh_Shahin.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

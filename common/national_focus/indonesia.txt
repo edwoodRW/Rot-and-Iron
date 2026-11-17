@@ -28,13 +28,7 @@ focus_tree = {
 	id = indonesia_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = INS
-			has_dlc = "Thunder at Our Gates"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 
 	default = no

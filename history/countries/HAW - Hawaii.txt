@@ -93,7 +93,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 9
 		liberal = 0
-		new_democrat = 12
+		social_democrat = 12
 		moderate_socialist = 0
 		revolutionary_socialist = 4
 		communist = 13
@@ -102,7 +102,7 @@ set_popularities = {
 create_country_leader = {
 	name = "Tulsi Gabbard"
 	picture = "Portrait_HAW_Tulsi_Gabbard.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

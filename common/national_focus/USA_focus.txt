@@ -10,13 +10,315 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 22300 }
 
 	# ====================================================
+	# PREWAR - Turner's first term, before the war
+	# ====================================================
+	focus = {
+		id = USA_Inauguration_Day
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 0
+		cost = 5
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.03
+			set_country_flag = USA_turner_inaugurated
+			country_event = { id = USA_prewar.1 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_First_Hundred_Days
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_Inauguration_Day }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 75
+			add_ideas = USA_turner_mandate
+			set_country_flag = USA_first_hundred_days
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Budget_Showdown
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = USA_First_Hundred_Days }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.03
+			set_country_flag = USA_budget_passed
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Jobs_and_Infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -4
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_Inauguration_Day }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+			add_popularity = { ideology = moderate_socialist popularity = 0.02 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Healthcare_Compact
+		icon = GFX_goal_generic_political_pressure
+		x = -4
+		y = 2
+		cost = 5
+		prerequisite = { focus = USA_Jobs_and_Infrastructure }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			add_popularity = { ideology = moderate_socialist popularity = 0.02 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Rebuilding_the_Unions
+		icon = GFX_goal_generic_production
+		x = -4
+		y = 3
+		cost = 5
+		prerequisite = { focus = USA_Healthcare_Compact }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = USA_union_compact
+			add_popularity = { ideology = revolutionary_socialist popularity = 0.02 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Heartland_Industrial_Strategy
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -4
+		y = 4
+		cost = 5
+		prerequisite = { focus = USA_Rebuilding_the_Unions }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = USA_recovery_programme
+			set_country_flag = USA_heartland_strategy
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Meeting_the_Opposition
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_Inauguration_Day }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = USA_met_opposition
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Reach_Across_the_Aisle
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 2
+		cost = 5
+		prerequisite = { focus = USA_Meeting_the_Opposition }
+		mutually_exclusive = { focus = USA_Confront_the_Obstructionists }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.04
+			add_popularity = { ideology = nationalist popularity = -0.02 }
+			set_country_flag = USA_conciliation_path
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Confront_the_Obstructionists
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 2
+		cost = 5
+		prerequisite = { focus = USA_Meeting_the_Opposition }
+		mutually_exclusive = { focus = USA_Reach_Across_the_Aisle }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 75
+			add_war_support = 0.03
+			add_popularity = { ideology = revolutionary_socialist popularity = 0.03 }
+			add_stability = -0.02
+			set_country_flag = USA_confrontation_path
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Courts_and_Congress
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 3
+		cost = 5
+		prerequisite = { focus = USA_Reach_Across_the_Aisle focus = USA_Confront_the_Obstructionists }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+			set_country_flag = USA_courts_settled
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Reform_the_Security_Services
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 8
+		y = 4
+		cost = 5
+		prerequisite = { focus = USA_Courts_and_Congress }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = USA_counterplot_vigilance
+			set_country_flag = USA_security_reviewed
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Watching_Berlin
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 4
+		cost = 5
+		prerequisite = { focus = USA_Budget_Showdown }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = USA_watching_berlin
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Watching_Moscow
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 4
+		y = 4
+		cost = 5
+		prerequisite = { focus = USA_Budget_Showdown }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = USA_watching_moscow
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Whispers_of_a_Plot
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 2
+		y = 5
+		cost = 5
+		prerequisite = { focus = USA_Watching_Berlin }
+		prerequisite = { focus = USA_Watching_Moscow }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = USA_plot_whispers
+			country_event = { id = USA_prewar.2 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Counter_the_Plot
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 6
+		cost = 5
+		prerequisite = { focus = USA_Whispers_of_a_Plot }
+		mutually_exclusive = { focus = USA_Trust_the_Institutions }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.02
+			add_ideas = USA_counterplot_vigilance_2
+			set_country_flag = USA_counterplot_active
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_Trust_the_Institutions
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 6
+		cost = 5
+		prerequisite = { focus = USA_Whispers_of_a_Plot }
+		mutually_exclusive = { focus = USA_Counter_the_Plot }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.04
+			set_country_flag = USA_trusted_institutions
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_The_Last_Quiet_Day
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 7
+		cost = 5
+		prerequisite = { focus = USA_Counter_the_Plot focus = USA_Trust_the_Institutions }
+		prerequisite = { focus = USA_Heartland_Industrial_Strategy }
+		prerequisite = { focus = USA_Reform_the_Security_Services }
+		available = { always = yes }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.03
+			set_country_flag = USA_prewar_complete
+			country_event = { id = USA_prewar.3 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+
+	# ====================================================
 	# ROOT - Turner's cabinet assesses the outbreak of WWIII
 	# ====================================================
 	focus = {
 		id = USA_The_War_Begins
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_The_War_Begins
 		x = 2
-		y = 0
+		y = 10
 		cost = 2
 		available = { always = yes }
 		completion_reward = {
@@ -33,6 +335,7 @@ focus_tree = {
 	# ====================================================
 	focus = {
 		id = USA_The_Turner_Doctrine
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Turner_Doctrine
 		x = -12
 		y = 1
@@ -59,6 +362,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Lend_Lease_to_Berlin
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Lend_Lease_to_Berlin
 		x = -12
 		y = 2
@@ -77,6 +381,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Atlantic_Alliance
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_Atlantic_Alliance
 		x = -12
 		y = 3
@@ -95,6 +400,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Deploy_the_Expeditionary_Force
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Deploy_the_Expeditionary_Force
 		x = -12
 		y = 4
@@ -137,6 +443,7 @@ focus_tree = {
 	# ====================================================
 	focus = {
 		id = USA_The_Containment_Reversal
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Containment_Reversal
 		x = -2
 		y = 1
@@ -160,6 +467,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Push_for_a_Ceasefire
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Push_for_a_Ceasefire
 		x = -4
 		y = 2
@@ -184,6 +492,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_War_Profiteers_Mobilize
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_War_Profiteers_Mobilize
 		x = 0
 		y = 2
@@ -205,6 +514,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Ceasefire_Holds
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Ceasefire_Holds
 		x = -4
 		y = 3
@@ -241,6 +551,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_War_Grinds_On
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_War_Grinds_On
 		x = 0
 		y = 3
@@ -274,6 +585,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_A_Longer_War
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_A_Longer_War
 		x = 0
 		y = 4
@@ -300,6 +612,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_A_Peace_Denied
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_A_Peace_Denied
 		x = 0
 		y = 5
@@ -320,6 +633,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Reform_Package
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Reform_Package
 		x = -4
 		y = 4
@@ -339,6 +653,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Negotiated_Peace
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Negotiated_Peace
 		x = -4
 		y = 5
@@ -364,6 +679,7 @@ focus_tree = {
 	# ====================================================
 	focus = {
 		id = USA_The_New_New_Deal
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_New_New_Deal
 		x = 4
 		y = 1
@@ -388,6 +704,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Domestic_Socialist_Transformation
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Domestic_Socialist_Transformation
 		x = 4
 		y = 2
@@ -411,6 +728,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Fortress_America
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Fortress_America
 		x = 4
 		y = 3
@@ -434,6 +752,7 @@ focus_tree = {
 	# ====================================================
 	focus = {
 		id = USA_The_Business_Plot_2_0
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Business_Plot_2_0
 		x = 22
 		y = 1
@@ -462,6 +781,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Turner_Survives
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_Turner_Survives
 		x = 19
 		y = 2
@@ -492,6 +812,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Coup_Succeeds
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_Coup_Succeeds
 		x = 24
 		y = 2
@@ -631,6 +952,7 @@ focus_tree = {
 	# ====================================================
 	focus = {
 		id = USA_Pivot_to_Asia
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Pivot_to_Asia
 		x = 12
 		y = 1
@@ -649,6 +971,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Pacific_Alliance
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Pacific_Alliance
 		x = 12
 		y = 2
@@ -667,6 +990,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Operation_Pacific_Storm
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_Operation_Pacific_Storm
 		x = 12
 		y = 3
@@ -696,6 +1020,7 @@ focus_tree = {
 	# ====================================================
 	focus = {
 		id = USA_Full_Co_Belligerency
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Full_Co_Belligerency
 		x = -12
 		y = 5
@@ -716,6 +1041,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Joint_Operations_Command
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Joint_Operations_Command
 		x = -12
 		y = 6
@@ -735,6 +1061,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Arm_the_Eastern_Front
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Arm_the_Eastern_Front
 		x = -12
 		y = 7
@@ -755,6 +1082,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Soviet_Collapse
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Soviet_Collapse
 		x = -12
 		y = 8
@@ -776,6 +1104,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_A_New_World_Order
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_A_New_World_Order
 		x = -15
 		y = 9
@@ -801,6 +1130,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Contain_the_Victor
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Contain_the_Victor
 		x = -9
 		y = 9
@@ -823,6 +1153,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Rebuild_Eastern_Europe
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Rebuild_Eastern_Europe
 		x = -15
 		y = 10
@@ -850,6 +1181,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Quiet_Rearmament
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Quiet_Rearmament
 		x = -9
 		y = 10
@@ -876,6 +1208,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Peace_Turner_Built
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Peace_Turner_Built
 		x = -15
 		y = 11
@@ -898,6 +1231,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Cold_Peace
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Cold_Peace
 		x = -9
 		y = 11
@@ -921,6 +1255,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Eastern_Compact
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Eastern_Compact
 		x = -15
 		y = 12
@@ -941,6 +1276,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_A_Europe_of_Many_Peoples
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_A_Europe_of_Many_Peoples
 		x = -15
 		y = 13
@@ -962,6 +1298,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Atlantic_Shield
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Atlantic_Shield
 		x = -9
 		y = 12
@@ -982,6 +1319,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Long_Watch
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Long_Watch
 		x = -9
 		y = 13
@@ -1006,6 +1344,7 @@ focus_tree = {
 	# ====================================================
 	focus = {
 		id = USA_Washington_Moscow_Accord
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Washington_Moscow_Accord
 		x = -4
 		y = 6
@@ -1031,6 +1370,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Leverage_for_Reform
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Leverage_for_Reform
 		x = -6
 		y = 7
@@ -1057,6 +1397,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Pragmatic_Silence
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Pragmatic_Silence
 		x = -2
 		y = 7
@@ -1080,6 +1421,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Rashkin_Ultimatum
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Rashkin_Ultimatum
 		x = -6
 		y = 8
@@ -1102,6 +1444,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Look_the_Other_Way
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Look_the_Other_Way
 		x = -2
 		y = 8
@@ -1128,6 +1471,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_A_Reformed_Union
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_A_Reformed_Union
 		x = -6
 		y = 9
@@ -1150,6 +1494,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Price_of_Peace
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Price_of_Peace
 		x = -2
 		y = 9
@@ -1179,6 +1524,7 @@ focus_tree = {
 	# ====================================================
 	focus = {
 		id = USA_The_Pan_American_Union
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Pan_American_Union
 		x = 4
 		y = 4
@@ -1232,6 +1578,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Courting_Mexico_City
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Courting_Mexico_City
 		x = 4
 		y = 5
@@ -1255,6 +1602,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Southern_Cone_Question
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_The_Southern_Cone_Question
 		x = 4
 		y = 6
@@ -1274,6 +1622,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_World_Finds_Us
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_The_World_Finds_Us
 		x = 2
 		y = 7
@@ -1299,6 +1648,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Wall_Holds
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_The_Wall_Holds
 		x = 6
 		y = 7
@@ -1327,6 +1677,7 @@ focus_tree = {
 	# ====================================================
 	focus = {
 		id = USA_The_Two_Front_Question
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_The_Two_Front_Question
 		x = 12
 		y = 4
@@ -1352,6 +1703,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Total_Pacific_Mobilization
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_Total_Pacific_Mobilization
 		x = 10
 		y = 5
@@ -1376,6 +1728,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Stabilize_and_Withdraw
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_Stabilize_and_Withdraw
 		x = 14
 		y = 5
@@ -1400,6 +1753,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Pacific_Century
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_The_Pacific_Century
 		x = 10
 		y = 6
@@ -1428,6 +1782,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_An_Uneasy_Truce
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_An_Uneasy_Truce
 		x = 14
 		y = 6
@@ -1452,6 +1807,7 @@ focus_tree = {
 	# ====================================================
 	focus = {
 		id = USA_The_Reckoning
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_The_Reckoning
 		x = 19
 		y = 3
@@ -1477,6 +1833,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_A_Party_Remade
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_A_Party_Remade
 		x = 19
 		y = 4
@@ -1517,6 +1874,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Junta_Consolidates
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_The_Junta_Consolidates
 		x = 24
 		y = 3
@@ -1539,6 +1897,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Martial_Law_Made_Permanent
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_USA_Martial_Law_Made_Permanent
 		x = 24
 		y = 4
@@ -1566,6 +1925,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_Rebuild_the_Union
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_Rebuild_the_Union
 		x = 24
 		y = 5
@@ -1589,6 +1949,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_The_Security_State_Endures
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_The_Security_State_Endures
 		x = 22
 		y = 6
@@ -1621,7 +1982,7 @@ focus_tree = {
 		relative_position_id = USA_The_War_Begins
 		cost = 3
 		prerequisite = { focus = USA_The_Security_State_Endures }
-		visible = { has_country_flag = USA_postwar_security_state }
+		visible = { has_global_flag = RI_german_war_started has_country_flag = USA_postwar_security_state }
 		available = { has_country_flag = USA_postwar_security_state }
 		completion_reward = {
 			add_ideas = USA_national_security_directorate
@@ -1643,7 +2004,7 @@ focus_tree = {
 		cost = 3
 		prerequisite = { focus = USA_National_Security_Directorate }
 		mutually_exclusive = { focus = USA_The_Atlantic_Perimeter }
-		visible = { has_country_flag = USA_postwar_security_state }
+		visible = { has_global_flag = RI_german_war_started has_country_flag = USA_postwar_security_state }
 		available = { has_country_flag = USA_security_directorate_established }
 		completion_reward = {
 			add_ideas = USA_civic_security_program
@@ -1665,7 +2026,7 @@ focus_tree = {
 		cost = 3
 		prerequisite = { focus = USA_National_Security_Directorate }
 		mutually_exclusive = { focus = USA_Operation_Civic_Shield }
-		visible = { has_country_flag = USA_postwar_security_state }
+		visible = { has_global_flag = RI_german_war_started has_country_flag = USA_postwar_security_state }
 		available = { has_country_flag = USA_security_directorate_established }
 		completion_reward = {
 			add_ideas = USA_atlantic_perimeter
@@ -1686,7 +2047,7 @@ focus_tree = {
 		relative_position_id = USA_The_War_Begins
 		cost = 3
 		prerequisite = { focus = USA_Operation_Civic_Shield }
-		visible = { has_country_flag = USA_postwar_security_state }
+		visible = { has_global_flag = RI_german_war_started has_country_flag = USA_postwar_security_state }
 		available = { has_country_flag = USA_civic_shield_authorized }
 		completion_reward = {
 			add_ideas = USA_loyalty_bureaus
@@ -1707,7 +2068,7 @@ focus_tree = {
 		relative_position_id = USA_The_War_Begins
 		cost = 3
 		prerequisite = { focus = USA_The_Atlantic_Perimeter }
-		visible = { has_country_flag = USA_postwar_security_state }
+		visible = { has_global_flag = RI_german_war_started has_country_flag = USA_postwar_security_state }
 		available = { has_country_flag = USA_atlantic_perimeter_authorized }
 		completion_reward = {
 			add_ideas = USA_continental_arsenal
@@ -1736,7 +2097,7 @@ focus_tree = {
 		relative_position_id = USA_The_War_Begins
 		cost = 3
 		prerequisite = { focus = USA_The_Loyalty_Bureaus }
-		visible = { has_country_flag = USA_postwar_security_state }
+		visible = { has_global_flag = RI_german_war_started has_country_flag = USA_postwar_security_state }
 		available = { has_country_flag = USA_loyalty_bureaus_active }
 		completion_reward = {
 			remove_ideas = USA_civic_security_program
@@ -1765,7 +2126,7 @@ focus_tree = {
 		relative_position_id = USA_The_War_Begins
 		cost = 3
 		prerequisite = { focus = USA_The_Continental_Arsenal }
-		visible = { has_country_flag = USA_postwar_security_state }
+		visible = { has_global_flag = RI_german_war_started has_country_flag = USA_postwar_security_state }
 		available = { has_country_flag = USA_continental_arsenal_ready }
 		completion_reward = {
 			add_ideas = USA_hemisphere_armed
@@ -1794,6 +2155,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_A_Civilian_Recovery_Cabinet
+		visible = { has_global_flag = RI_german_war_started }
 		icon = GFX_A_Civilian_Recovery_Cabinet
 		x = 26
 		y = 6

@@ -85,7 +85,7 @@ set_popularities = {
 		national_conservative = 15
 		centrist = 8
 		liberal = 10
-		new_democrat = 43
+		social_democrat = 43
 		moderate_socialist = 0
 		revolutionary_socialist = 4
 		communist = 20
@@ -136,7 +136,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Bhupinder Singh"
 	picture = "Portrait_ODI_Bhupinder_Singh.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

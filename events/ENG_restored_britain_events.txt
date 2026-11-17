@@ -24,7 +24,7 @@ country_event = {
 	option = {
 		name = ENG_restored.2.a
 		add_stability = 0.05
-		add_popularity = { ideology = new_democrat popularity = 0.10 }
+		add_popularity = { ideology = social_democrat popularity = 0.10 }
 	}
 }
 

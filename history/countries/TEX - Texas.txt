@@ -93,7 +93,7 @@ set_popularities = {
 		national_conservative = 25
 		centrist = 0
 		liberal = 10
-		new_democrat = 2
+		social_democrat = 2
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 0
@@ -144,7 +144,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "David Cobb"
 	picture = "Portrait_TEX_David_Cobb.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

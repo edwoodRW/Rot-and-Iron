@@ -87,7 +87,7 @@ set_popularities = {
 		national_conservative = 29
 		centrist = 6
 		liberal = 39
-		new_democrat = 4
+		social_democrat = 4
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 4
@@ -138,7 +138,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Martin O'Malley"
 	picture = "Portrait_ILL_Martin_Malley.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

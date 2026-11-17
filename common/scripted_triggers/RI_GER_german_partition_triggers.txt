@@ -1,0 +1,214 @@
+RI_GER_partition_north_state = {
+	OR = { state = 56 state = 58 state = 59 state = 60 state = 61 state = 64 state = 909 }
+}
+
+RI_GER_partition_east_state = {
+	OR = { state = 5 state = 62 state = 63 state = 65 state = 66 state = 67 state = 68 state = 763 }
+}
+
+RI_GER_can_return_ermland_to_soviet = {
+	has_country_flag = RI_GER_soviet_takeover
+	is_subject_of = SOV
+	has_war = no
+	NOT = { is_in_peace_conference = yes }
+	SOV = { exists = yes NOT = { is_in_peace_conference = yes } }
+	5 = {
+		OR = {
+			AND = { is_owned_by = GER RI_GER_german_partition_state_safe = yes }
+			AND = {
+				is_owned_by = POL
+				OR = { is_fully_controlled_by = POL is_fully_controlled_by = SOV }
+				POL = { is_subject_of = SOV has_war = no NOT = { is_in_peace_conference = yes } }
+			}
+		}
+	}
+}
+
+RI_GER_partition_oder_state = {
+	OR = { state = 62 state = 63 state = 65 state = 66 state = 67 state = 68 }
+}
+
+RI_GER_partition_polish_state = {
+	OR = {
+		state = 85 state = 762 state = 807
+		AND = {
+			is_core_of = POL
+			NOT = { RI_GER_partition_north_state = yes }
+			NOT = { RI_GER_partition_east_state = yes }
+			NOT = { RI_GER_partition_west_state = yes }
+			NOT = { RI_GER_partition_south_state = yes }
+			NOT = { RI_GER_partition_austrian_state = yes }
+			NOT = { OR = { state = 69 state = 72 state = 74 state = 188 state = 972 } }
+		}
+	}
+}
+
+RI_GER_partition_neighbor_state = {
+	OR = { state = 69 state = 72 state = 74 state = 188 state = 972 RI_GER_partition_polish_state = yes }
+}
+
+RI_GER_polish_homeland_state = {
+	OR = { state = 10 state = 85 state = 86 state = 87 state = 88 state = 90 state = 92 state = 98 state = 762 state = 807 }
+}
+
+RI_GER_partition_austrian_state = {
+	OR = { state = 4 state = 152 state = 153 state = 848 state = 975 state = 976 }
+}
+
+RI_GER_partition_west_state = {
+	OR = { state = 42 state = 51 state = 55 state = 57 }
+}
+
+RI_GER_partition_south_state = {
+	OR = { state = 50 state = 52 state = 53 state = 54 state = 978 }
+}
+
+RI_GER_german_partition_state_safe = {
+	OR = { is_fully_controlled_by = GER is_fully_controlled_by = SOV }
+}
+
+RI_GER_german_partition_ready = {
+	has_country_flag = RI_GER_soviet_takeover
+	is_subject_of = SOV
+	SOV = { exists = yes }
+	has_war = no
+	NOT = { is_in_peace_conference = yes }
+	64 = { is_owned_by = GER }
+	NOT = {
+		any_owned_state = {
+			OR = {
+				RI_GER_partition_west_state = yes
+				RI_GER_partition_south_state = yes
+				RI_GER_partition_east_state = yes
+				RI_GER_partition_austrian_state = yes
+				RI_GER_partition_neighbor_state = yes
+			}
+			NOT = { RI_GER_german_partition_state_safe = yes }
+		}
+	}
+}
+
+RI_GER_soviet_settlement_cleanup_pending = {
+	OR = {
+		any_owned_state = {
+			OR = {
+				RI_GER_partition_east_state = yes
+				RI_GER_partition_austrian_state = yes
+				RI_GER_partition_neighbor_state = yes
+			}
+		}
+		WGR = { exists = yes has_cosmetic_tag = RI_WGR_west_german is_subject = no }
+		BAY = { exists = yes has_cosmetic_tag = RI_BAY_south_german is_subject = no }
+		RWG = { exists = yes is_subject = no }
+		RHG = { exists = yes is_subject = no }
+		RSB = { exists = yes is_subject = no }
+		AUS = { exists = yes has_cosmetic_tag = RI_AUS_restored is_subject = no }
+	}
+}
+
+RI_GER_soviet_settlement_cleanup_ready = {
+	RI_GER_german_partition_ready = yes
+	SOV = { NOT = { is_in_peace_conference = yes } }
+	OR = {
+		POL = { exists = no }
+		NOT = { any_owned_state = { RI_GER_partition_polish_state = yes } }
+		POL = { NOT = { has_war_with = GER } NOT = { has_war_with = SOV } }
+	}
+	OR = {
+		CZE = { exists = no }
+		NOT = { any_owned_state = { OR = { state = 69 state = 72 state = 74 state = 972 } } }
+		CZE = { NOT = { has_war_with = GER } NOT = { has_war_with = SOV } }
+	}
+	OR = {
+		LIT = { exists = no }
+		NOT = { 188 = { is_owned_by = GER } }
+		LIT = { NOT = { has_war_with = GER } NOT = { has_war_with = SOV } }
+	}
+	OR = {
+		AUS = { exists = no }
+		NOT = { any_owned_state = { RI_GER_partition_austrian_state = yes } }
+		AUS = { NOT = { has_war_with = GER } NOT = { has_war_with = SOV } }
+	}
+	WGR = { OR = { exists = no NOT = { has_cosmetic_tag = RI_WGR_west_german } is_subject = yes AND = { has_war = no NOT = { is_in_peace_conference = yes } } } }
+	BAY = { OR = { exists = no NOT = { has_cosmetic_tag = RI_BAY_south_german } is_subject = yes AND = { has_war = no NOT = { is_in_peace_conference = yes } } } }
+	RWG = { OR = { exists = no is_subject = yes AND = { has_war = no NOT = { is_in_peace_conference = yes } } } }
+	RHG = { OR = { exists = no is_subject = yes AND = { has_war = no NOT = { is_in_peace_conference = yes } } } }
+	RSB = { OR = { exists = no is_subject = yes AND = { has_war = no NOT = { is_in_peace_conference = yes } } } }
+	AUS = { OR = { exists = no NOT = { has_cosmetic_tag = RI_AUS_restored } is_subject = yes AND = { has_war = no NOT = { is_in_peace_conference = yes } } } }
+}
+
+RI_GER_test_polish_ssr_ready = {
+	RI_GER_soviet_settlement_cleanup_ready = yes
+	OR = {
+		POL = { exists = no }
+		POL = {
+			has_war = no
+			NOT = { is_in_peace_conference = yes }
+			OR = { is_subject = no is_subject_of = SOV }
+		}
+	}
+}
+
+RI_GER_has_german_partition_region = {
+	any_owned_state = {
+		OR = { RI_GER_partition_west_state = yes RI_GER_partition_south_state = yes }
+		RI_GER_german_partition_state_safe = yes
+	}
+}
+
+RI_GER_can_establish_western_buffer = {
+	SOV = { exists = yes NOT = { is_in_peace_conference = yes } }
+	RSM = {
+		OR = {
+			exists = no
+			AND = {
+				has_country_flag = RI_GER_western_buffer_created
+				is_subject_of = SOV
+				has_war = no
+				NOT = { is_in_peace_conference = yes }
+			}
+		}
+	}
+}
+
+RI_GER_can_release_austria_after_defeat = {
+	AUS = { exists = no }
+	any_owned_state = {
+		RI_GER_partition_austrian_state = yes
+		RI_GER_german_partition_state_safe = yes
+	}
+}
+
+RI_GER_can_refine_german_regions = {
+	RWG = { exists = no }
+	RHG = { exists = no }
+	RSB = { exists = no }
+	WGR = {
+		OR = {
+			NOT = { has_cosmetic_tag = RI_WGR_west_german }
+			AND = {
+				OR = { is_subject = no is_subject_of = SOV }
+				NOT = {
+					any_owned_state = {
+						OR = { state = 55 state = 57 }
+						NOT = { OR = { is_fully_controlled_by = WGR is_fully_controlled_by = GER is_fully_controlled_by = SOV } }
+					}
+				}
+			}
+		}
+	}
+	BAY = {
+		OR = {
+			NOT = { has_cosmetic_tag = RI_BAY_south_german }
+			AND = {
+				OR = { is_subject = no is_subject_of = SOV }
+				NOT = {
+					any_owned_state = {
+						OR = { state = 50 state = 52 state = 978 }
+						NOT = { OR = { is_fully_controlled_by = BAY is_fully_controlled_by = GER is_fully_controlled_by = SOV } }
+					}
+				}
+			}
+		}
+	}
+}

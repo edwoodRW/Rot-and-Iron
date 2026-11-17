@@ -95,7 +95,7 @@ set_popularities = {
 	national_conservative = 14
 	centrist = 30
 	liberal = 10
-	new_democrat = 15
+	social_democrat = 15
 	moderate_socialist = 0
 	revolutionary_socialist = 10
 	communist = 1
@@ -146,7 +146,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Ivica Dačić"
 	picture = "Portrait_YUG_Vojislav_Kostunica.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -1,4 +1,5 @@
 ﻿capital = 230
+add_ideas = { RI_european_socialist_union }
 
 oob = "generic_2000"
 
@@ -88,7 +89,7 @@ set_popularities = {
 		national_conservative = 34
 		centrist = 16
 		liberal = 0
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 36
 		revolutionary_socialist = 0
 		communist = 8
@@ -139,7 +140,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Zoran Milanović"
 	picture = "Portrait_CRO_Zoran_Milanovic.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

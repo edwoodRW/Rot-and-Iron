@@ -85,7 +85,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 35
 		liberal = 0
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 42
 		communist = 10
@@ -135,7 +135,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Winston Dookeran"
 	picture = "Portrait_TAT_Winston_Dookeran.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -85,7 +85,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 57
 		liberal = 10
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 19
 		revolutionary_socialist = 0
 		communist = 14
@@ -142,7 +142,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Pisa City Council"
 	picture = "Portrait_PIS_Pisa_Council.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

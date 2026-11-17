@@ -85,7 +85,7 @@ set_popularities = {
 		national_conservative = 21
 		centrist = 5
 		liberal = 0
-		new_democrat = 22
+		social_democrat = 22
 		moderate_socialist = 8
 		revolutionary_socialist = 0
 		communist = 9
@@ -137,7 +137,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Prithviraj Chavan"
 	picture = "Portrait_MHA_Prithviraj_Chavan.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

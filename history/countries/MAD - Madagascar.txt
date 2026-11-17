@@ -94,7 +94,7 @@ set_popularities = {
 		national_conservative = 8
 		centrist = 12
 		liberal = 10
-		new_democrat = 3
+		social_democrat = 3
 		moderate_socialist = 10
 		revolutionary_socialist = 3
 		communist = 19
@@ -151,7 +151,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Elia Ravelomanantsoa"
 	picture = "Portrait_MAD_Elia_Ravelomanantsoa.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

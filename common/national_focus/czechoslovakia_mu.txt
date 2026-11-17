@@ -18,13 +18,7 @@ focus_tree = {
 	id = mu_czech_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 50
-			tag = CZE
-			has_dlc = "Peace For Our Time"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 
 	initial_show_position = {

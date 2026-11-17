@@ -72,7 +72,7 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = new_democrat
+	ruling_party = social_democrat
 	last_election = "1997.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -86,7 +86,7 @@ set_popularities = {
 		national_conservative = 20
 		centrist = 0
 		liberal = 0
-		new_democrat = 42
+		social_democrat = 42
 		moderate_socialist = 0
 		revolutionary_socialist = 5
 		communist = 18
@@ -143,7 +143,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Saleh Ersheidatt"
 	picture = "Portrait_JOR_Saleh_Ersheidatt.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

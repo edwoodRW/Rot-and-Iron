@@ -1,0 +1,141 @@
+add_namespace = RI_POL_events
+add_namespace = RI_POL_crisis
+add_namespace = RI_POL_outcome
+
+country_event = {
+	id = RI_POL_events.1
+	title = RI_POL_events.1.t
+	desc = RI_POL_events.1.d
+	picture = GFX_report_event_A_Mandate_for_Action
+	is_triggered_only = yes
+
+	option = {
+		name = RI_POL_events.1.a
+		add_political_power = 50
+		set_country_flag = RI_POL_independent_ally
+		GER = {
+			add_opinion_modifier = {
+				target = POL
+				modifier = RI_POL_strategic_partnership
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RI_POL_crisis.1
+	title = RI_POL_crisis.1.t
+	desc = RI_POL_crisis.1.d
+	picture = GFX_report_event_Hammer_Falls
+	is_triggered_only = yes
+
+	option = {
+		name = RI_POL_crisis.1.a
+		country_event = { id = RI_POL_crisis.2 days = 1 }
+	}
+}
+
+country_event = {
+	id = RI_POL_crisis.2
+	title = RI_POL_crisis.2.t
+	desc = RI_POL_crisis.2.d
+	picture = GFX_report_event_Hammer_Falls
+	is_triggered_only = yes
+
+	option = {
+		name = RI_POL_crisis.2.a
+		add_timed_idea = { idea = RI_POL_full_mobilisation days = 365 }
+		add_war_support = 0.05
+		add_stability = -0.05
+	}
+	option = {
+		name = RI_POL_crisis.2.b
+		add_timed_idea = { idea = RI_POL_emergency_fortification days = 365 }
+		add_war_support = 0.03
+	}
+	option = {
+		name = RI_POL_crisis.2.c
+		trigger = { GER = { exists = yes } }
+		add_timed_idea = { idea = RI_POL_german_military_assistance days = 365 }
+		add_political_power = -25
+		GER = {
+			add_opinion_modifier = {
+				target = POL
+				modifier = RI_POL_strategic_partnership
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RI_POL_crisis.3
+	title = RI_POL_crisis.3.t
+	desc = RI_POL_crisis.3.d
+	picture = GFX_report_event_Hammer_Falls
+	is_triggered_only = yes
+
+	option = {
+		name = RI_POL_crisis.3.a
+		trigger = { has_capitulated = no }
+		add_war_support = 0.1
+		set_country_flag = RI_POL_resist_for_warsaw
+	}
+	option = {
+		name = RI_POL_crisis.3.b
+		set_country_flag = RI_POL_government_in_exile
+		add_political_power = 50
+	}
+	option = {
+		name = RI_POL_crisis.3.c
+		trigger = { GER = { exists = yes } }
+		set_country_flag = RI_POL_requesting_international_aid
+		GER = {
+			add_opinion_modifier = {
+				target = POL
+				modifier = RI_POL_strategic_partnership
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RI_POL_outcome.1
+	title = RI_POL_outcome.1.t
+	desc = RI_POL_outcome.1.d
+	picture = GFX_report_event_Hammer_Falls
+	is_triggered_only = yes
+
+	option = {
+		name = RI_POL_outcome.1.a
+		trigger = { SOV = { exists = yes } }
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		SOV = { puppet = POL }
+		set_politics = {
+			ruling_party = communist
+			elections_allowed = no
+		}
+		set_country_flag = RI_POL_soviet_occupation
+	}
+	option = {
+		name = RI_POL_outcome.1.b
+		set_country_flag = RI_POL_government_in_exile
+		add_war_support = 0.1
+	}
+	option = {
+		name = RI_POL_outcome.1.c
+		trigger = {
+			any_owned_state = { is_controlled_by = ROOT }
+			SOV = { exists = yes }
+			has_war_with = SOV
+		}
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		white_peace = { tag = SOV }
+		set_country_flag = RI_POL_neutrality_agreement
+	}
+}

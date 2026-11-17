@@ -1,4 +1,4 @@
-﻿capital = 885
+capital = 13056
 
 oob = "TUV_2000"
 
@@ -87,7 +87,7 @@ set_popularities = {
 		national_conservative = 35
 		centrist = 30
 		liberal = 0
-		new_democrat = 5
+		social_democrat = 5
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 20

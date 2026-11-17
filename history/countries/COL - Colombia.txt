@@ -95,7 +95,7 @@ set_popularities = {
 		national_conservative = 30
 		centrist = 10
 		liberal = 2
-		new_democrat = 25
+		social_democrat = 25
 		moderate_socialist = 6
 		revolutionary_socialist = 5
 		communist = 10
@@ -153,7 +153,7 @@ create_country_leader = {
 	name = "Sergio Fajardo"
 	desc = "POLITICS_JUAN_MANUEL_SANTOS_DESC"
 	picture = "Portrait_COL_Juan_Manuel_Santos.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

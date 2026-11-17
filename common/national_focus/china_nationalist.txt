@@ -2,17 +2,7 @@
 	id = china_nationalist_focus
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = CHI
-			has_dlc = "Waking the Tiger"
-		}
-		modifier = {
-			add = 10
-			tag = RNG
-			has_dlc = "Waking the Tiger"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 

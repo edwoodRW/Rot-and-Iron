@@ -97,7 +97,7 @@ set_popularities = {
 		national_conservative = 2
 		centrist = 26
 		liberal = 4
-		new_democrat = 6
+		social_democrat = 6
 		moderate_socialist = 15
 		revolutionary_socialist = 0
 		communist = 10
@@ -154,7 +154,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Andres Manuel Lopez"
 	picture = "Portrait_MEX_Andres_Manuel_Lopez.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

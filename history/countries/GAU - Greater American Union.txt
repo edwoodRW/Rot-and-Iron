@@ -94,7 +94,7 @@ set_popularities = {
 		national_conservative = 3
 		centrist = 3
 		liberal = 1
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 68
 		revolutionary_socialist = 21
 		communist = 1
@@ -157,7 +157,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Keith Ellison"
 	picture = "Portrait_GAU_Keith_Ellison.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

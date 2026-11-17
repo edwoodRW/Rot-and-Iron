@@ -86,7 +86,7 @@ set_popularities = {
 		national_conservative = 62
 		centrist = 0
 		liberal = 6
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 2
 		revolutionary_socialist = 2
 		communist = 14
@@ -137,7 +137,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Dumelang Saleshando"
 	picture = "Portrait_BOT_Dumelang_Saleshando.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

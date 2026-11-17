@@ -4,6 +4,162 @@ spriteTypes = {
 
 
 
+
+	###Germany###
+
+	 
+
+	SpriteType = {
+		name = "GFX_The_Storm_Gathers"
+		texturefile = "gfx/interface/goals/Germany/The_Storm_Gathers.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Envoys_Depart"
+		texturefile = "gfx/interface/goals/Germany/The_Envoys_Depart.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Edinburgh_Quiet_Door"
+		texturefile = "gfx/interface/goals/Germany/Edinburgh_Quiet_Door.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Crates_in_the_Night"
+		texturefile = "gfx/interface/goals/Germany/Crates_in_the_Night.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Paris_Channel"
+		texturefile = "gfx/interface/goals/Germany/The_Paris_Channel.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_An_Industrial_Entente"
+		texturefile = "gfx/interface/goals/Germany/An_Industrial_Entente.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Paris_Edinburgh_Understanding"
+		texturefile = "gfx/interface/goals/Germany/The_Paris_Edinburgh_Understanding.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Directive_for_the_Unseen_War"
+		texturefile = "gfx/interface/goals/Germany/Directive_for_the_Unseen_War.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_British_Union_Infiltrated"
+		texturefile = "gfx/interface/goals/Germany/The_British_Union_Infiltrated.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Soviet_Circle_Narrows"
+		texturefile = "gfx/interface/goals/Germany/The_Soviet_Circle_Narrows.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Saboteurs_Web"
+		texturefile = "gfx/interface/goals/Germany/The_Saboteurs_Web.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_A_Ring_of_Doubt"
+		texturefile = "gfx/interface/goals/Germany/A_Ring_of_Doubt.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Bear_Bleeds"
+		texturefile = "gfx/interface/goals/Germany/The_Bear_Bleeds.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Bonds_for_Victory"
+		texturefile = "gfx/interface/goals/Germany/Bonds_for_Victory.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Commanders_of_Tomorrow"
+		texturefile = "gfx/interface/goals/Germany/Commanders_of_Tomorrow.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Council_of_War"
+		texturefile = "gfx/interface/goals/Germany/Council_of_War.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Factories_for_the_Front"
+		texturefile = "gfx/interface/goals/Germany/Factories_for_the_Front.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Liebich_Trial_Balloon"
+		texturefile = "gfx/interface/goals/Germany/Liebich_Trial_Balloon.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Maps_for_the_Eastern_War"
+		texturefile = "gfx/interface/goals/Germany/Maps_for_the_Eastern_War.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_No_Road_Back"
+		texturefile = "gfx/interface/goals/Germany/No_Road_Back.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Rearmament_in_Shadow"
+		texturefile = "gfx/interface/goals/Germany/Rearmament_in_Shadow.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Eastern_Hammer"
+		texturefile = "gfx/interface/goals/Germany/The_Eastern_Hammer.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Emergency_Decree"
+		texturefile = "gfx/interface/goals/Germany/The_Emergency_Decree.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Nation_in_Uniform"
+		texturefile = "gfx/interface/goals/Germany/The_Nation_in_Uniform.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Officers_Examination"
+		texturefile = "gfx/interface/goals/Germany/The_Officers_Examination.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Peoples_Army"
+		texturefile = "gfx/interface/goals/Germany/The_Peoples_Army.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Production_Offensive"
+		texturefile = "gfx/interface/goals/Germany/The_Production_Offensive.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_The_Reserve_Ledger"
+		texturefile = "gfx/interface/goals/Germany/The_Reserve_Ledger.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_Wagenknechts_Warning"
+		texturefile = "gfx/interface/goals/Germany/Wagenknechts_Warning.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_GER_A_Majority_in_Waiting"
+		texturefile = "gfx/interface/goals/Germany/A_Majority_in_Waiting.dds"
+		}
+
+
 	###USA#####
 	
 	SpriteType = {
@@ -740,7 +896,128 @@ spriteTypes = {
 	}
 	
 
+	spriteType = {
+		name = "GFX_GER_The_Atlantic_Lifeline"
+		texturefile = "gfx/interface/goals/Germany/The_Atlantic_Lifeline.dds"
+	}
 
+	spriteType = {
+		name = "GFX_GER_Hulls_in_the_Slipways"
+		texturefile = "gfx/interface/goals/Germany/Hulls_in_the_Slipways.dds"
+	}
 
+	spriteType = {
+		name = "GFX_GER_The_Silent_Service"
+		texturefile = "gfx/interface/goals/Germany/The_Silent_Service.dds"
+	}
 
+	spriteType = {
+		name = "GFX_GER_A_Footing_in_Iceland"
+		texturefile = "gfx/interface/goals/Germany/A_Footing_in_Iceland.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_Biscay_Patrol"
+		texturefile = "gfx/interface/goals/Germany/The_Biscay_Patrol.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_Mediterranean_Chokepoint"
+		texturefile = "gfx/interface/goals/Germany/The_Mediterranean_Chokepoint.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_North_Sea_Line"
+		texturefile = "gfx/interface/goals/Germany/The_North_Sea_Line.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_Lifeline_Cut"
+		texturefile = "gfx/interface/goals/Germany/The_Lifeline_Cut.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_Solidarity_in_Arms"
+		texturefile = "gfx/interface/goals/Germany/Solidarity_in_Arms.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_Scotland_Re_Armed"
+		texturefile = "gfx/interface/goals/Germany/Scotland_Re_Armed.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_Tommy_Brigades"
+		texturefile = "gfx/interface/goals/Germany/The_Tommy_Brigades.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_Edinburgh_Guarantee"
+		texturefile = "gfx/interface/goals/Germany/The_Edinburgh_Guarantee.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_Paris_Turns_East"
+		texturefile = "gfx/interface/goals/Germany/Paris_Turns_East.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_Bordeaux_Terms"
+		texturefile = "gfx/interface/goals/Germany/The_Bordeaux_Terms.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_A_Second_Front_in_the_West"
+		texturefile = "gfx/interface/goals/Germany/A_Second_Front_in_the_West.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_Chongqing_Channel"
+		texturefile = "gfx/interface/goals/Germany/The_Chongqing_Channel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_Manchurian_Offensive"
+		texturefile = "gfx/interface/goals/Germany/The_Manchurian_Offensive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_An_Alliance_of_Necessity"
+		texturefile = "gfx/interface/goals/Germany/An_Alliance_of_Necessity.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_Liebichs_Wartime_Coalition"
+		texturefile = "gfx/interface/goals/Germany/Liebich's_Wartime_Coalition.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_A_Hearing_for_Raetepartei"
+		texturefile = "gfx/interface/goals/Germany/A_Hearing_for_Raetepartei.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_Centre_Holds"
+		texturefile = "gfx/interface/goals/Germany/The_Centre_Holds.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_Victory_and_Its_Reckoning"
+		texturefile = "gfx/interface/goals/Germany/Victory_and_Its_Reckoning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_Wagenknechts_Hour"
+		texturefile = "gfx/interface/goals/Germany/Wagenknechts_Hour.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_road_to_ceasefire"
+		texturefile = "gfx/interface/goals/Germany/road_to_ceasefire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_The_Berlin_Settlement"
+		texturefile = "gfx/interface/goals/Germany/The_Berlin_Settlement.dds"
+	}
 }

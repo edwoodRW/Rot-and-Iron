@@ -3,11 +3,11 @@
 oob = "HOL_2000"
 
 add_ideas = {
+    RI_european_socialist_union
     UN_Member_idea
 Reichspakt_idea 
     EuroPaktMember_idea
 }
-add_to_faction =  Reichspakt 
 set_research_slots = 4
 set_convoys = 1000
 set_stability = 0.6
@@ -96,7 +96,7 @@ set_popularities = {
 		national_conservative = 25
 		centrist = 0
 		liberal = 30
-		new_democrat = 23
+		social_democrat = 23
 		moderate_socialist = 11
 		revolutionary_socialist = 3
 		communist = 1
@@ -153,7 +153,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Diederik Samsom"
 	picture = "Portrait_HOL_Diederik_Samsom.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

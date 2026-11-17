@@ -10,20 +10,25 @@ guiTypes = {
 
 		background = {
 			name = "country_splash_bg"
-			quadTextureSprite = "GFX_tiled_window"
+			quadTextureSprite = "GFX_RI_panel_big"
 		}
 
 		containerWindowType = {
 			name = "country_splash_header_window"
-			position = { x = 12 y = 12 }
-			size = { width = 936 height = 44 }
+			position = { x = 14 y = 12 }
+			size = { width = 932 height = 44 }
 			clipping = no
+
+			background = {
+				name = "country_splash_header_bg"
+				quadTextureSprite = "GFX_RI_panel_big"
+			}
 
 			instantTextBoxType = {
 				name = "country_splash_header"
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 7 }
 				format = center
-				maxWidth = 936
+				maxWidth = 932
 				font = "hoi_30header"
 				text = "[ROOT.GetCountrySplashHeader]"
 			}
@@ -37,13 +42,13 @@ guiTypes = {
 
 			background = {
 				name = "country_splash_picture_bg"
-				quadTextureSprite = "GFX_tiled_window"
+				quadTextureSprite = "GFX_RI_panel_big"
 				position = { x = 0 y = 0 }
 			}
 
 			iconType = {
 				name = "country_splash_picture"
-				position = { x = 10 y = 10 }
+				position = { x = 20 y = 10 }
 				spriteType = "GFX_dog"
 			}
 		}
@@ -55,15 +60,15 @@ guiTypes = {
 
 			background = {
 				name = "country_splash_description_bg"
-				quadTextureSprite = "GFX_tiled_window"
+				quadTextureSprite = "GFX_RI_panel_big"
 				position = { x = 0 y = 0 }
 			}
 
 			instantTextBoxType = {
 				name = "country_splash_description"
-				position = { x = 12 y = 12 }
+				position = { x = 16 y = 14 }
 				format = left
-				maxWidth = 636
+				maxWidth = 624
 				maxHeight = 470
 				font = "hoi_18"
 				text = "[ROOT.GetCountrySplashDescription]"

@@ -1219,3 +1219,23 @@ ANT = {
 	color = rgb { 255 255 255 }
 	color_ui = rgb { 255 255 255 }
 }
+
+RMO = { color = rgb { 106 124 105 } color_ui = rgb { 126 146 124 } }
+URE = { color = rgb { 111 126 143 } color_ui = rgb { 132 147 164 } }
+RWE = { color = rgb { 121 130 102 } color_ui = rgb { 143 152 121 } }
+RVN = { color = rgb { 113 105 121 } color_ui = rgb { 134 125 143 } }
+RDN = { color = rgb { 134 118 92 } color_ui = rgb { 155 139 110 } }
+RCA = { color = rgb { 135 105 99 } color_ui = rgb { 157 125 118 } }
+RVG = { color = rgb { 132 126 94 } color_ui = rgb { 154 148 112 } }
+RSW = { color = rgb { 83 120 105 } color_ui = rgb { 100 142 124 } }
+RTS = { color = rgb { 133 145 106 } color_ui = rgb { 153 165 125 } }
+RAI = { color = rgb { 104 118 119 } color_ui = rgb { 124 139 140 } }
+RIR = { color = rgb { 103 137 125 } color_ui = rgb { 122 158 145 } }
+RBU = { color = rgb { 109 129 103 } color_ui = rgb { 130 150 122 } }
+RYK = { color = rgb { 150 141 109 } color_ui = rgb { 170 160 128 } }
+RFA = { color = rgb { 103 120 143 } color_ui = rgb { 122 141 164 } }
+RWG = { color = rgb { 116 127 119 } color_ui = rgb { 136 147 139 } }
+RHG = { color = rgb { 134 122 107 } color_ui = rgb { 154 142 127 } }
+RSB = { color = rgb { 116 119 133 } color_ui = rgb { 136 139 153 } }
+ROD = { color = rgb { 119 130 116 } color_ui = rgb { 139 150 136 } }
+RSM = { color = rgb { 125 111 108 } color_ui = rgb { 145 131 128 } }

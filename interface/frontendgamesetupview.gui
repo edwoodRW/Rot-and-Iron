@@ -126,54 +126,39 @@ guiTypes = {
 	### country entry
 	containerWindowType = {
 		name = "country_entry"
+		size = { width = 2400 height = 824 }
+		clipping = no
 
-		# Keep the controller-bound selection button as a transparent hit area.
 		buttonType = {
 			name = "country"
-			quadTextureSprite = "GFX_country_selection_minor_entry"
-			position = { x=80 y =-20 }
-			size = { width = 150 height = 58 }
+			quadTextureSprite = "GFX_RI_country_selection_countries"
+			position = { x = -28800 y = -9064 }
 			clicksound = click_checkbox
+			scale = 8
 		}
 
-		# The country selector controller populates this required widget with its
-		# leader portrait. Keep it outside the card so the flag remains visible.
 		buttonType = {
 			name = "country_leader"
-			quadTextureSprite = "GFX_country_card_portrait_hidden"
+			quadTextureSprite = "GFX_blank"
 			position = { x = -1000 y = -1000 }
 			size = { width = 1 height = 1 }
 			scale = 0.01
+			alwaystransparent = yes
 		}
 
-		# Shared compact flag placement for major-country selection buttons.
 		iconType = {
 			name = "country_flag"
-			quadTextureSprite ="GFX_flag_large"
-			position = { x = 100 y = 0 }
-			scale = 0.9
-			Orientation = "UPPER_LEFT"
+			quadTextureSprite = "GFX_shield_medium"
+			hide = yes
 			alwaystransparent = yes
 		}
 
 		iconType = {
-			name = "new_content"
-			position = { x = 124 y = 7 }
-			spriteType = "GFX_unplayed_content_notification"
+			name = "country_frame"
+			spriteType = "GFX_large_flag_frame_menu"
+			hide = yes
 			alwaystransparent = yes
 		}
-
-	#	instantTextBoxType = {
-	#		name = "country_name"
-	#		position = { x = 72 y = 17 }
-	#		font = "hoi_16mbs"
-	#		borderSize = {x = 0 y = 0}
-	#		maxWidth = 68
-	#		maxHeight = 20
-	#		fixedsize = yes
-	#		format = center
-	#		Orientation = "UPPER_LEFT"
-	#	}
 	}
 
 	### country entry
@@ -662,9 +647,86 @@ guiTypes = {
 			format = centre
 		}
 
-		background = {
-			name = "single_player_country_bg"
-			quadTextureSprite ="GFX_country_selection_bg"
+		instantTextBoxType = {
+			name = "map_selection_hint"
+			position = { x = 185 y = 43 }
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "RI_MAP_SELECTION_HINT"
+			maxWidth = 855
+			maxHeight = 24
+			format = centre
+		}
+
+		containerWindowType = {
+			name = "RI_map_frame"
+			position = { x = 6 y = 61 }
+			size = { width = 1213 height = 418 }
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_RI_flag_frame"
+			}
+		}
+
+		containerWindowType = {
+			name = "countries"
+			position = { x = 10 y = 65 }
+			size = { width = 1205 height = 410 }
+			clipping = yes
+			verticalScrollbar = "right_vertical_slider"
+			horizontalScrollbar = "bottom_horizontal_slider"
+			scroll_wheel_factor = 40
+			smooth_scrolling = yes
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+			}
+			iconType = {
+				name = "RI_world_background"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_RI_country_selection_world"
+				alwaystransparent = yes
+			}
+			gridboxType = {
+				name = "countries_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 2400 height = 824 }
+				slotsize = { width = 2400 height = 824 }
+				add_horizontal = yes
+				max_slots_horizontal = 13
+				max_slots_vertical = 12
+				format = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {
+			name = "country_info_panel_frame"
+			position = { x = 10 y = 485 }
+			size = { width = 390 height = 220 }
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_RI_panel_big"
+			}
+		}
+
+		containerWindowType = {
+			name = "country_details_panel_frame"
+			position = { x = 405 y = 485 }
+			size = { width = 395 height = 220 }
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_RI_panel_big"
+			}
+		}
+
+		containerWindowType = {
+			name = "country_history_panel_frame"
+			position = { x = 805 y = 485 }
+			size = { width = 405 height = 220 }
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_RI_panel_big"
+			}
 		}
 
 		ButtonType = {
@@ -691,26 +753,9 @@ guiTypes = {
 			shortcut = "RETURN"
 		}
 
-		containerWindowType = {
-			name ="countries"
-			position = { x = 15 y = 346 }
-			size = { width = -15 height = 58}
-
-			gridboxType = {
-				name ="countries_grid"
-				position = { x = 0 y = 0 }
-				size = { width = 100% height = 100% }
-				slotsize = { width = 150 height = 58 }
-				add_horizontal = yes
-				max_slots_vertical = 1
-				format = "UPPER_LEFT"
-			}
-
-		}
-
 		OverlappingElementsBoxType = {
 			name = "filters"
-			position = { x = 22 y = 321 }
+			position = { x = 22 y = 403 }
 			size = { x = 1181 y = 32 }
 			format = center
 			spacing = 14.0
@@ -718,7 +763,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name ="countries_medium"
-			position = { x = 15 y = 352 }
+			position = { x = 15 y = 396 }
 			size = { width = -15 height = 120}
 			hide = yes
 
@@ -736,7 +781,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name ="countries_mini"
-			position = { x = 11 y = 360 }
+			position = { x = 11 y = 404 }
 			size = { width = -15 height = 80}
 			hide = yes
 			
@@ -755,7 +800,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "info_title"
-			position = { x = 10 y = 462 }
+			position = { x = 10 y = 495 }
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
 			text = "FE_COUNTRY_INFO_TITLE"
@@ -766,7 +811,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "info"
-			position = { x = 35 y = 497 }
+			position = { x = 35 y = 530 }
 
 			instantTextBoxType = {
 				name = "leader_label"
@@ -871,7 +916,7 @@ guiTypes = {
 		iconType = {
 			name = "minor_country_leader"
 			quadTextureSprite ="GFX_leader_unknown"
-			position = { x = 289 y = 457 }
+			position = { x = 289 y = 490 }
 			scale=0.696
 			rotation=-0.04
 		}
@@ -879,12 +924,12 @@ guiTypes = {
 		iconType = {
 			name ="minor_portrait_overlay"
 			spriteType = "GFX_minor_portrait_overlay"
-			position = { x= 280 y = 446 }
+			position = { x= 280 y = 479 }
 		}
 		
 		instantTextBoxType = {
 			name = "nation_title"
-			position = { x = 442 y = 433 }
+			position = { x = 442 y = 466 }
 			font = "hoi_24header"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 340
@@ -895,7 +940,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "spirit"
-			position = { x = 451 y = 487 }
+			position = { x = 451 y = 520 }
 
 			iconType ={
 				name ="pol_faction_icon"
@@ -939,7 +984,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "history_title"
-			position = { x = 830 y = 462 }
+			position = { x = 830 y = 495 }
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
 			text = "FE_COUNTRY_HISTORY_TITLE"
@@ -950,7 +995,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "history"
-			position = { x = 810 y = 502 }
+			position = { x = 810 y = 535 }
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 380
@@ -2005,7 +2050,7 @@ guiTypes = {
 
 			background = {
 				name = "Background"
-				spriteType ="GFX_tiled_bg"
+				spriteType ="GFX_RI_panel"
 			}
 
 			instantTextBoxType = {

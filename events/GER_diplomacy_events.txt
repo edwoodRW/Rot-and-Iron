@@ -205,13 +205,52 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = SOV_german_ceasefire.1.a
+		trigger = {
+			has_war_with = GER
+			GER = {
+				exists = yes
+				has_country_flag = GER_ceasefire_talks_active
+				has_country_flag = RI_GER_ceasefire_pending
+				NOT = { has_country_flag = RI_GER_war_crisis }
+			}
+		}
 		add_stability = 0.03
 		add_war_support = -0.03
 		set_country_flag = SOV_accepts_ceasefire_talks
+		GER = {
+			clr_country_flag = RI_GER_ceasefire_pending
+			clr_country_flag = RI_GER_ceasefire_refused
+		}
 	}
 	option = {
 		name = SOV_german_ceasefire.1.b
+		trigger = {
+			has_war_with = GER
+			GER = {
+				exists = yes
+				has_country_flag = GER_ceasefire_talks_active
+				has_country_flag = RI_GER_ceasefire_pending
+				NOT = { has_country_flag = RI_GER_war_crisis }
+			}
+		}
 		add_war_support = 0.03
 		add_stability = -0.02
+		clr_country_flag = SOV_accepts_ceasefire_talks
+		GER = {
+			clr_country_flag = RI_GER_ceasefire_pending
+			set_country_flag = RI_GER_ceasefire_refused
+		}
+	}
+	option = {
+		name = SOV_german_ceasefire.1.c
+		trigger = {
+			OR = {
+				NOT = { has_war_with = GER }
+				NOT = { GER = { exists = yes } }
+				GER = { has_country_flag = RI_GER_war_crisis }
+				GER = { NOT = { has_country_flag = GER_ceasefire_talks_active } }
+				GER = { NOT = { has_country_flag = RI_GER_ceasefire_pending } }
+			}
+		}
 	}
 }

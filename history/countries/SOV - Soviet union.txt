@@ -2,7 +2,7 @@
 
 oob = "SOV_1939"
 
-load_focus_tree = "SOV_Intro_Tree"
+load_focus_tree = "RI_SOV_modern_intro"
 
 
 
@@ -44,6 +44,9 @@ if = {
 }
 
 add_ideas = {
+	RI_SOV_rotting_bureaucracy
+	RI_SOV_rashkin_paralysis
+	RI_SOV_two_front_catastrophe
     idea_soviet_stagnating_economy
 	idea_soviet_rampant_corruption
 	soviet_sic_gennady_zyuganov
@@ -52,6 +55,9 @@ add_ideas = {
 	soviet_nsm_igor_sechin
 	soviet_inm_viktor_chirkov
 }
+
+set_variable = { RI_SOV_cohesion = 70 }
+set_variable = { RI_SOV_military_confidence = 45 }
 
 set_research_slots = 4
 set_convoys = 500
@@ -154,17 +160,18 @@ set_politics = {
 }
 
 set_popularities = {
-        fascist = 0
-		nationalist = 2
-		monarchist = 10
-		national_bolshevik = 25
-		national_conservative = 1
-		centrist = 11
-		liberal = 0
-		new_democrat = 1
-		moderate_socialist = 0
-		revolutionary_socialist = 0
-		communist = 50
+      fascist = 1
+    nationalist = 2
+    monarchist = 1
+    national_bolshevik = 3
+    national_conservative = 8
+    centrist = 4
+    liberal = 3
+    social_democrat = 5
+    moderate_socialist = 15
+    revolutionary_socialist = 19
+    communist = 38
+    islamist = 1
 }
 
 add_opinion_modifier = {
@@ -181,8 +188,95 @@ add_opinion_modifier = {
 
 create_country_leader = {
 	name = "General Secretary Valery Rashkin"
-	desc = "POLITICS_DMITRY_YAZOV_DESC"
+	desc = "POLITICS_VALERY_RASHKIN_DESC"
 	picture = "gfx/leaders/SOV/Valery_Rashkin.dds"
 	ideology = communist
 }
+
+create_country_leader = {
+    name = "Sergei Udaltsov"
+    desc = "POLITICS_SERGEI_UDALTSOV_DESC"
+    picture = "gfx/leaders/SOV/Sergei_Udaltsov.dds"
+    ideology = revolutionary_socialist
+}
+
+create_country_leader = {
+    name = "Nikolai Platoshkin"
+    desc = "POLITICS_NIKOLAI_PLATOSHKIN_DESC"
+    picture = "gfx/leaders/SOV/Nikolai_Platoshkin.dds"
+    ideology = moderate_socialist
+}
+
+create_country_leader = { ##Fake leader
+    name = "Irina Mikhailova"
+    desc = "POLITICS_IRINA_MIKHAILOVA_DESC"
+    picture = "gfx/leaders/SOV/Irina_Mikhailova.dds"
+    ideology = social_democrat
+}
+
+create_country_leader = {
+    name = "Grigory Yavlinsky"
+    desc = "POLITICS_GRIGORY_YAVLINSKY_DESC"
+    picture = "gfx/leaders/SOV/Grigory_Yavlinsky.dds"
+    ideology = liberal
+}
+
+create_country_leader = {
+    name = "Alexei Kudrin"
+    desc = "POLITICS_ALEXEI_KUDRIN_DESC"
+    picture = "gfx/leaders/SOV/Alexei_Kudrin.dds"
+    ideology = centrist
+}
+
+create_country_leader = { ####Fake leader
+    name = "Viktor Sokolov"
+    desc = "POLITICS_VIKTOR_SOKOLOV_DESC"
+    picture = "gfx/leaders/SOV/Viktor_Sokolov.dds"
+    ideology = national_conservative
+}
+
+create_country_leader = { ##Fake leader
+    name = "Konstantin Malenkov"
+    desc = "POLITICS_KONSTANTIN_MALENKOV_DESC"
+    picture = "gfx/leaders/SOV/Konstantin_Malenkov.dds"
+    ideology = national_bolshevik
+}
+
+create_country_leader = {
+    name = "Vladimir Putin"
+    desc = "POLITICS_VLADIMIR_PUTIN_DESC"
+    picture = "gfx/leaders/SOV/Vladimir_Putin.dds"
+    ideology = nationalist
+}
+
+create_country_leader = { ##Fake leader
+    name = "Alexander Vorontsov"
+    desc = "POLITICS_ALEXANDER_VORONTSOV_DESC"
+    picture = "gfx/leaders/SOV/Alexander_Vorontsov.dds"
+    ideology = monarchist
+}
+
+create_country_leader = { ##Fake leader
+    name = "Dmitry Chernov"
+    desc = "POLITICS_DMITRY_CHERNOV_DESC"
+    picture = "gfx/leaders/SOV/Dmitry_Chernov.dds"
+    ideology = fascist
+}
+
+create_country_leader = { ##Fake leader
+    name = "Timur Karimov"
+    desc = "POLITICS_TIMUR_KARIMOV_DESC"
+    picture = "gfx/leaders/SOV/Timur_Karimov.dds"
+    ideology = islamist
+}
+
+
+
+
+
+
+
+
+
+
 

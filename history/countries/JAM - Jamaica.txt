@@ -93,7 +93,7 @@ set_popularities = {
 		national_conservative = 6
 		centrist = 47
 		liberal = 24
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 2
 		communist = 8
@@ -144,7 +144,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Portia Simpson-Miller"
 	picture = "Portrait_JAM_Portia_Simpson_Miller.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -48,12 +48,7 @@ focus_tree = {
 	id = persian_focus_tree
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = PER
-			has_dlc = "Graveyard of Empires"
-		} 
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 
 	default = no

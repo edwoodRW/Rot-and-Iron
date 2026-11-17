@@ -90,7 +90,7 @@ set_popularities = {
 		national_conservative = 72
 		centrist = 0
 		liberal = 4
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 1
 		communist = 5
@@ -142,7 +142,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Neera Tanden"
 	picture = "Portrait_UTA_Neera_Tanden.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

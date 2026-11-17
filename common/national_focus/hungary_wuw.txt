@@ -10,15 +10,7 @@ focus_tree = {
 	id = wuw_hungarian_focus
 
 	country = {
-		factor = 0
-
-		modifier = {
-			add = 50
-			tag = HUN
-			#always = no
-
-			has_dlc = "Gotterdammerung"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 
 	default = no

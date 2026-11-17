@@ -2,12 +2,7 @@
 	id = manchukuo_focus
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MAN
-			has_dlc = "Waking the Tiger"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 

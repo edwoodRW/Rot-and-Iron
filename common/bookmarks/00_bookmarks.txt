@@ -5,12 +5,16 @@ bookmarks = {
         date = 2026.1.1.12
         picture = "GFX_select_date_1939"
         default_country = "GER"
+        sort_unplayed_first = no
+        include_majors_in_minor_list = no
+        apply_filter_to_majors = no
+        filters = { }
 
         "SCO"={
             history = "SCO_BLITZKRIEG_DESC"
             ideology = moderate_socialist
             ideas={
-            
+                RI_european_socialist_union
             }
         }
         "FRA"={
@@ -23,10 +27,11 @@ bookmarks = {
         }
         "GER"={
             history = "GER_BLITZKRIEG_DESC"
-            ideology = reactionary
+            ideology = moderate_socialist
             ideas = {
-                idea_GER_german_legacy
-                idea_eu_member
+                RI_european_socialist_union
+                The_Spartacist_Legacy
+                The_Democratic_Socialist_Model
                 GER_bundeswehr_shortcomings
             }
         }
@@ -61,6 +66,865 @@ bookmarks = {
                 idea_USA_political_establishment
                 american_militarism
                 idea_united_nations_security_council_member
+            }
+        }
+
+        "PRC"={
+            history = "PRC_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "JAP"={
+            history = "JAP_BLITZKRIEG_DESC"
+            ideology = Constitutional_monarchist
+            ideas = {
+            }
+        }
+        "ITA"={
+            history = "ITA_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+            }
+        }
+        "BRA"={
+            history = "BRA_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "AST"={
+            history = "AST_BLITZKRIEG_DESC"
+            ideology = social_democrat_ideology
+            ideas = {
+            }
+        }
+        "RAJ"={
+            history = "RAJ_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+
+        "INS"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "SPR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "KAZ"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+            }
+        }
+        "FIN"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "SWE"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "EGY"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "PER"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = national_bolshevik_ideology
+            ideas = {
+            }
+        }
+        "MEX"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "BRM"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "PHI"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_democrat_ideology
+            ideas = {
+            }
+        }
+        "MON"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "LBA"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = national_bolshevik_ideology
+            ideas = {
+            }
+        }
+        "DPR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "NKO"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+            }
+        }
+        "SIA"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = Neoconservatism
+            ideas = {
+            }
+        }
+        "ALG"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "ROM"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "HUN"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "PNG"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_democrat_ideology
+            ideas = {
+            }
+        }
+        "SAU"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "SAF"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+            }
+        }
+        "POR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = fascist_ideology
+            ideas = {
+            }
+        }
+        "PAK"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "NOR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_liberal
+            ideas = {
+            }
+        }
+        "NZL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = ultranationalist
+            ideas = {
+            }
+        }
+        "AUS"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "POL"={
+            history = "RI_POL_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+                RI_european_socialist_union
+                RI_POL_guardian_of_the_east
+                RI_POL_industrial_revival
+                RI_POL_ally_not_satellite
+            }
+        }
+        "CHL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "MOR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "BWC"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "IRE"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "AFG"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "BUL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "TMS"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "DEN"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_democrat_ideology
+            ideas = {
+            }
+        }
+        "PRU"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+
+
+        "AFC"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "ALB"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "ANR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "ANT"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "ARG"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+            }
+        }
+        "BAH"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "BAS"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "BEL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "BHR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "BHU"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "BLZ"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "BOL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "CHI"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = fascist_ideology
+            ideas = {
+            }
+        }
+        "COL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+            }
+        }
+        "COS"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "CRO"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "CUB"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_liberal
+            ideas = {
+            }
+        }
+        "CYP"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "CZE"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "DAH"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "DOM"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "ECU"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "ELS"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "EST"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "ETH"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "FIJ"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "GAM"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "GHA"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "GMC"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "GNA"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "GRE"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "GUA"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "GYA"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "HAI"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = fascist_ideology
+            ideas = {
+            }
+        }
+        "HOL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_liberal
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "HON"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "ICE"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = fascist_ideology
+            ideas = {
+            }
+        }
+        "IRQ"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "IVO"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_liberal
+            ideas = {
+            }
+        }
+        "JAM"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "JOR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_democrat_ideology
+            ideas = {
+            }
+        }
+        "KIR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "KMR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "KRL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "KUW"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "KYR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "LAT"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "LEB"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "LIB"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_liberal
+            ideas = {
+            }
+        }
+        "LIT"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "LUX"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "MAC"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "MAL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "MLD"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "MLI"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "MLT"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+            }
+        }
+        "MRI"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "MRT"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "NEP"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "NGR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "NIC"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "OMA"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "PAL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "PAN"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "PAR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+            }
+        }
+        "PHS"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+            }
+        }
+        "QAT"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = absolute_monarchist
+            ideas = {
+            }
+        }
+        "RHO"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = fascist_ideology
+            ideas = {
+            }
+        }
+        "RTN"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_democrat_ideology
+            ideas = {
+            }
+        }
+        "SEN"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "SER"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+            }
+        }
+        "SEY"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+            }
+        }
+        "SHX"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "SIE"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "SIK"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "SLO"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "SLV"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "SNG"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+            }
+        }
+        "SOL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+            }
+        }
+        "SRL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = democratic_socialist
+            ideas = {
+            }
+        }
+        "SWI"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+            }
+        }
+        "SYR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "TAJ"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "TAN"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "TOG"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "TRI"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "TUN"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "TUR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = national_bolshevik_ideology
+            ideas = {
+            }
+        }
+        "TUV"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "UAE"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = communist
+            ideas = {
+            }
+        }
+        "UKR"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = reactionary
+            ideas = {
+                RI_european_socialist_union
+            }
+        }
+        "URG"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "UZB"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "VEN"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = social_democrat_ideology
+            ideas = {
+            }
+        }
+        "VIN"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = nationalist_ideology
+            ideas = {
+            }
+        }
+        "VOL"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = centrist_ideology
+            ideas = {
+            }
+        }
+        "WES"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
+            }
+        }
+        "YEM"={
+            history = "OTHER_BLITZKRIEG_DESC"
+            ideology = revolutionary_socialist_ideology
+            ideas = {
             }
         }
 

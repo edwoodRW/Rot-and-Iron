@@ -1,4 +1,9 @@
 opinion_modifiers = {
+	GER_recovery_dialogue_opinion = {
+		value = 20
+		months = 48
+	}
+
 	GER_quiet_feelers = {
 		value = 15
 		months = 36

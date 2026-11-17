@@ -85,7 +85,7 @@ set_popularities = {
 		national_conservative = 5
 		centrist = 0
 		liberal = 0
-		new_democrat = 6
+		social_democrat = 6
 		moderate_socialist = 0
 		revolutionary_socialist = 35
 		communist = 22
@@ -136,7 +136,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Vlado Bučkovski"
 	picture = "Portrait_MAC_Vlado_Bučkovski.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

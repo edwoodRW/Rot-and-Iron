@@ -95,7 +95,7 @@ set_popularities = {
 		national_conservative = 10
 		centrist = 0
 		liberal = 24
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 20
 		communist = 26
@@ -152,7 +152,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Hootan Dolati"
 	picture = "Portrait_SPE_Hootan_Dolati.tga"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

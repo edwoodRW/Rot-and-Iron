@@ -38,7 +38,7 @@ set_popularities = {
 	national_conservative = 10
 	centrist = 8
 	liberal = 6
-	new_democrat = 15
+	social_democrat = 15
 	moderate_socialist = 28
 	revolutionary_socialist = 8
 	communist = 8
@@ -81,7 +81,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Sunil Senanayake"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

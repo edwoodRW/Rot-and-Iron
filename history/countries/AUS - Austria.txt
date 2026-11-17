@@ -92,7 +92,7 @@ set_popularities = {
 		national_conservative = 35
 		centrist = 5
 		liberal = 3
-		new_democrat = 25
+		social_democrat = 25
 		moderate_socialist = 5
 		revolutionary_socialist = 2
 		communist = 5
@@ -148,7 +148,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Otto I"
 	picture = "Portrait_AUS_Otto_I.tga"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

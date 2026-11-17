@@ -30,6 +30,7 @@ add_opinion_modifier = {
 
 
 add_ideas = {
+   RI_european_socialist_union
    idea_Francis_Of_Scotland 
    idea_Scottish_Resources
    idea_Standing_Against_England
@@ -38,7 +39,6 @@ add_ideas = {
 	Council_Of_Nordic_Nations
 	Reichspakt_idea
 }
-add_to_faction = GER 
 set_research_slots = 4
 set_convoys = 500
 set_stability = 0.5
@@ -128,7 +128,7 @@ set_popularities = {
 		national_conservative = 10
 		centrist = 0
 		liberal = 0
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 55
 		revolutionary_socialist = 10
 		communist = 10
@@ -141,5 +141,3 @@ create_country_leader = {
 	picture = "Tommy_Sheridan.dds"
 	ideology = democratic_socialist 
 }
-
-

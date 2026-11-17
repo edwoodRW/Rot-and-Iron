@@ -31,12 +31,7 @@ focus_tree = {
 	id = afghanistan_tree
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = AFG
-			has_dlc = "Graveyard of Empires"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

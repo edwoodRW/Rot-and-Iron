@@ -432,7 +432,7 @@ country_event = {
 			limit = { has_country_flag = CAN_british_elections_called }
 			ENG = {
 				set_politics = {
-					ruling_party = new_democrat
+					ruling_party = social_democrat
 					elections_allowed = yes
 				}
 			}

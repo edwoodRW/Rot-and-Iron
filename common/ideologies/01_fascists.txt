@@ -28,10 +28,6 @@ ideologies = {
 			Sinai_Liberationism = {
 			}
 
-			Caliphate_of_the_African_Spirit= {
-			}
-			
-			
 		}
 		
 		dynamic_faction_names = {

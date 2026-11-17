@@ -95,7 +95,7 @@ set_popularities = {
 		national_conservative = 15
 		centrist = 0
 		liberal = 3
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 20
 		revolutionary_socialist = 40
 		communist = 10
@@ -146,7 +146,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Amara Benyounes"
 	picture = "Portrait_ALG_Amara_Benyounes.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -286,6 +286,37 @@ spriteTypes = {
 		texturefile = "gfx/interface/country_selection_bg.tga"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"				
 	}
+
+	corneredTileSpriteType = {
+		name = "GFX_RI_panel_big"
+		size = { x=444 y=436 }
+		textureFile = "gfx/interface/RI_panel_big.dds"
+		borderSize = { x=8 y=8 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_RI_panel"
+		size = { x=48 y=48 }
+		textureFile = "gfx/interface/RI_panel_tile.dds"
+		borderSize = { x=12 y=12 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_RI_country_selection_world"
+		texturefile = "gfx/interface/RI_country_selection_world.png"
+	}
+
+	spriteType = {
+		name = "GFX_RI_country_selection_countries"
+		texturefile = "gfx/interface/RI_country_selection_countries.png"
+		noOfFrames = 2
+		transparencecheck = yes
+		effectFile = "gfx/FX/RI_selection_country.shader"
+	}
 	
 	spriteType = {
 		name = "GFX_custom_setting_slider_bg"

@@ -86,7 +86,7 @@ if = {
 		national_conservative = 16
 		centrist = 0
 		liberal = 0
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 24
 		revolutionary_socialist = 25
 		communist = 5
@@ -148,7 +148,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Najeeb Qahtan Al-Sha'abi"
 	picture = "Portrait_YEM_Najeeb_Qahtan_Al_Sha_abi.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

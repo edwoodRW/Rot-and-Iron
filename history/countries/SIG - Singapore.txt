@@ -88,7 +88,7 @@ set_popularities = {
 		national_conservative = 9
 		centrist = 73
 		liberal = 0
-		new_democrat = 6
+		social_democrat = 6
 		moderate_socialist = 0
 		revolutionary_socialist = 3
 		communist = 5
@@ -133,7 +133,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Low Thia Khiang"
 	picture = "Portrait_SIG_Low_Thia_Khiang.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

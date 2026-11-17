@@ -1,0 +1,137 @@
+add_namespace = RI_GER_victory_offer
+
+country_event = {
+	id = RI_GER_victory_offer.1
+	title = RI_GER_victory_offer.1.t
+	desc = RI_GER_victory_offer.1.d
+	picture = GFX_report_event_Hammer_Falls
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_victory_offer.1.a
+		trigger = {
+			exists = yes
+			has_capitulated = no
+			has_war_with = GER
+			GER = {
+				RI_GER_victory_settlement_conditions = yes
+				has_country_flag = RI_GER_victory_offer_pending
+			}
+		}
+		GER = {
+			clr_country_flag = RI_GER_victory_offer_pending
+			set_country_flag = RI_GER_victory_pending
+			start_peace_conference = {
+				tag = SOV
+				score_factor = 1
+				winner_scope = ALL
+				loser_scope = ALL
+			}
+		}
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = RI_GER_victory_offer.1.b
+		trigger = {
+			exists = yes
+			has_capitulated = no
+			has_war_with = GER
+			GER = {
+				exists = yes
+				has_capitulated = no
+				has_country_flag = RI_GER_victory_offer_pending
+			}
+		}
+		GER = {
+			clr_country_flag = RI_GER_victory_offer_pending
+			country_event = { id = RI_GER_victory_offer.2 hours = 1 }
+		}
+		ai_chance = { factor = 35 }
+	}
+	option = {
+		name = RI_GER_victory_offer.1.c
+		trigger = {
+			OR = {
+				NOT = { has_war_with = GER }
+				has_capitulated = yes
+				NOT = { GER = { exists = yes } }
+				GER = { NOT = { RI_GER_victory_settlement_conditions = yes } }
+				GER = { NOT = { has_country_flag = RI_GER_victory_offer_pending } }
+			}
+		}
+
+		GER = { clr_country_flag = RI_GER_victory_offer_pending }
+	}
+}
+
+country_event = {
+	id = RI_GER_victory_offer.2
+	title = RI_GER_victory_offer.2.t
+	desc = RI_GER_victory_offer.2.d
+	picture = GFX_report_event_Hammer_Falls
+	is_triggered_only = yes
+	option = { name = RI_GER_victory_offer.2.a }
+}
+
+country_event = {
+	id = RI_GER_victory_offer.3
+	title = RI_GER_victory_offer.3.t
+	desc = RI_GER_victory_offer.3.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_victory_offer.3.a
+		trigger = {
+			GER = {
+				RI_GER_stalemate_conditions = yes
+				has_country_flag = RI_GER_stalemate_offer_pending
+			}
+		}
+		GER = {
+			clr_country_flag = RI_GER_stalemate_offer_pending
+			start_peace_conference = {
+				tag = SOV
+				score_factor = 0
+				winner_scope = ALL
+				loser_scope = ALL
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = RI_GER_victory_offer.3.b
+		trigger = {
+			has_war_with = GER
+			NOT = { is_in_peace_conference = yes }
+			GER = {
+				exists = yes
+				has_country_flag = RI_GER_stalemate_offer_pending
+			}
+		}
+		GER = {
+			clr_country_flag = RI_GER_stalemate_offer_pending
+			country_event = { id = RI_GER_victory_offer.4 hours = 1 }
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = RI_GER_victory_offer.3.c
+		trigger = {
+			OR = {
+				NOT = { GER = { RI_GER_stalemate_conditions = yes } }
+				GER = { NOT = { has_country_flag = RI_GER_stalemate_offer_pending } }
+			}
+		}
+		GER = { clr_country_flag = RI_GER_stalemate_offer_pending }
+	}
+}
+
+country_event = {
+	id = RI_GER_victory_offer.4
+	title = RI_GER_victory_offer.4.t
+	desc = RI_GER_victory_offer.4.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+	option = { name = RI_GER_victory_offer.4.a }
+}

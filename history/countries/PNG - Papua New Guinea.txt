@@ -24,7 +24,7 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = new_democrat
+	ruling_party = social_democrat
 	last_election = "2024.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -38,7 +38,7 @@ set_popularities = {
 	national_conservative = 12
 	centrist = 10
 	liberal = 8
-	new_democrat = 30
+	social_democrat = 30
 	moderate_socialist = 12
 	revolutionary_socialist = 7
 	communist = 6
@@ -81,7 +81,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Michael Okuk"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

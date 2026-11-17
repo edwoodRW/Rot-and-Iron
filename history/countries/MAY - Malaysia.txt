@@ -92,7 +92,7 @@ set_popularities = {
 		national_conservative = 4
 		centrist = 0
 		liberal = 10
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 5
 		revolutionary_socialist = 4
 		communist = 20
@@ -149,7 +149,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Lim Kit Siang"
 	picture = "Portrait_MAY_Lim_Kit_Siang.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

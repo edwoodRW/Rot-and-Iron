@@ -94,7 +94,7 @@ set_popularities = {
 		national_conservative = 10
 		centrist = 16
 		liberal = 0
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 22
 		communist = 28
@@ -151,7 +151,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Ricardo Lagos"
 	picture = "gfx/leaders/CHL/Portrait_CHL_Ricardo_Lagos.png"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

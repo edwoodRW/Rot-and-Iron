@@ -3,11 +3,11 @@
 oob = "BEL_2000"
 
 add_ideas = {
+    RI_european_socialist_union
     idea_eu_member
 Reichspakt_idea 
     EuroPaktMember_idea
 }
-add_to_faction =  Reichspakt 
 set_research_slots = 4
 set_convoys = 500
 set_stability = 0.6
@@ -96,7 +96,7 @@ set_popularities = {
 		national_conservative = 51
 		centrist = 0
 		liberal = 6
-		new_democrat = 31
+		social_democrat = 31
 		moderate_socialist = 0
 		revolutionary_socialist = 5
 		communist = 5
@@ -154,7 +154,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Elio Di Rupo"
 	picture = "Portrait_BEL_Elio_Di_Rupo.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

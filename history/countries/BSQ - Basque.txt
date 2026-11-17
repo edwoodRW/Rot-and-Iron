@@ -83,7 +83,7 @@ set_popularities = {
 		national_conservative = 3
 		centrist = 25
 		liberal = 4
-		new_democrat = 3
+		social_democrat = 3
 		moderate_socialist = 10
 		revolutionary_socialist = 19
 		communist = 14
@@ -134,7 +134,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Paxti López"
 	picture = "Portrait_BSQ_Paxti_Lopez.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

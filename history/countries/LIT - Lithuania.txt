@@ -10,6 +10,7 @@ set_war_support = 0.3
 set_country_flag = catholic_nation
 
 add_ideas = {
+   RI_european_socialist_union
    UN_Member_idea
 }
 
@@ -94,7 +95,7 @@ set_popularities = {
 		national_conservative = 30
 		centrist = 0
 		liberal = 0
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 0
@@ -145,7 +146,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Vytenis Andriukaitis"
 	picture = "Portrait_LIT_Vytenis_Andriukiatis.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {
@@ -264,4 +265,3 @@ create_navy_leader = {
 	coordination_skill = 2
 	maneuvering_skill = 2
 }
-

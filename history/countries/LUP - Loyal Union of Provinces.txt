@@ -92,7 +92,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 10
 		liberal = 14
-		new_democrat = 22
+		social_democrat = 22
 		moderate_socialist = 6
 		revolutionary_socialist = 0
 		communist = 0
@@ -149,7 +149,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Alex Bodry"
 	picture = "Portrait_LUX_Francoise_Folmer.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

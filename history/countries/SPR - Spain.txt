@@ -99,7 +99,7 @@ set_popularities = {
 		national_conservative = 6
 		centrist = 58
 		liberal = 0
-		new_democrat = 11
+		social_democrat = 11
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 1
@@ -157,7 +157,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Cristina Narbona"
 	picture = "Portrait_SPR_Cristina_Narbona.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

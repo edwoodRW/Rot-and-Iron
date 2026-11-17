@@ -10,13 +10,7 @@ focus_tree = {
 	id = paraguay_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = PAR
-			has_dlc = "Trial of Allegiance"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 
 	initial_show_position = {

@@ -1,0 +1,30 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_RI_GER_marcel_fratzscher"
+		texturefile = "gfx/interface/ideas/advisors/Germany/Marcel_Fratzscher.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RI_GER_robert_habeck"
+		texturefile = "gfx/interface/ideas/advisors/Germany/Robert_Habeck.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RI_GER_anton_hofreiter"
+		texturefile = "gfx/interface/ideas/advisors/Germany/Anton_Hofreiter.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RI_GER_helena_richter"
+		texturefile = "gfx/interface/ideas/advisors/Germany/Helena_Richter.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RI_GER_thomas_berger"
+		texturefile = "gfx/interface/ideas/advisors/Germany/Thomas_Berger.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RI_GER_martin_eberhardt"
+		texturefile = "gfx/interface/ideas/advisors/Germany/Martin_Eberhardt.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RI_GER_klara_vogt"
+		texturefile = "gfx/interface/ideas/advisors/Germany/Klara_Vogt.dds"
+	}
+}

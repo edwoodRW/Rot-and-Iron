@@ -85,7 +85,7 @@ set_popularities = {
 		national_conservative = 16
 		centrist = 2
 		liberal = 0
-		new_democrat = 21
+		social_democrat = 21
 		moderate_socialist = 6
 		revolutionary_socialist = 4
 		communist = 2
@@ -136,7 +136,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Amarinder Singh"
 	picture = "GFX_PJB_Amarinder_Singh.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -85,7 +85,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 0
 		liberal = 0
-		new_democrat = 5
+		social_democrat = 5
 		moderate_socialist = 8
 		revolutionary_socialist = 14
 		communist = 68
@@ -142,7 +142,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Maria Elena Boschi"
 	picture = "Portrait_TUS_Maria_Elena_Boschi.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

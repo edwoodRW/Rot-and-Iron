@@ -86,7 +86,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 10
 		liberal = 0
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 40
 		revolutionary_socialist = 16
 		communist = 10
@@ -137,7 +137,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Julius Maada Bio"
 	picture = "Portrait_SIE_Julius_Maada_Bio.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

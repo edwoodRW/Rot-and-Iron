@@ -78,7 +78,7 @@ if = {
 }
 
 set_politics = {
-	ruling_party = new_democrat
+	ruling_party = social_democrat
 	last_election = "1997.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -92,7 +92,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 0
 		liberal = 0
-		new_democrat = 40
+		social_democrat = 40
 		moderate_socialist = 0
 		revolutionary_socialist = 3
 		communist = 10
@@ -149,7 +149,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Win Tin"
 	picture = "Win_Tin.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

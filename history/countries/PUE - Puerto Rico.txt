@@ -87,7 +87,7 @@ set_popularities = {
 		national_conservative = 10
 		centrist = 54
 		liberal = 7
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 14
@@ -138,7 +138,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Rubén Ángel Berríos Martínez"
 	picture = "Portrait_PUE_Ruben_Angel_Berrios_Martinez.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

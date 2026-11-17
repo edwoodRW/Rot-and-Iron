@@ -91,7 +91,7 @@ set_popularities = {
 		national_conservative = 15
 		centrist = 25
 		liberal = 35
-		new_democrat = 4
+		social_democrat = 4
 		moderate_socialist = 6
 		revolutionary_socialist = 0
 		communist = 5
@@ -136,7 +136,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Mia Mottley"
 	picture = "Portrait_GUY_Chan_Santokhi.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

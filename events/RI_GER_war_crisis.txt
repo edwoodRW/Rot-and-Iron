@@ -1,0 +1,336 @@
+add_namespace = RI_GER_crisis
+
+country_event = {
+	id = RI_GER_crisis.1
+	title = RI_GER_crisis.1.t
+	desc = RI_GER_crisis.1.d
+	picture = GFX_report_event_Wagenknecht_Warning
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_crisis.1.a
+		if = {
+			limit = {
+				has_war_with = SOV
+				NOT = { has_country_flag = RI_GER_soviet_takeover }
+			}
+			country_event = { id = RI_GER_crisis.2 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = RI_GER_crisis.2
+	title = RI_GER_crisis.2.t
+	desc = RI_GER_crisis.2.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_crisis.2.a
+		trigger = {
+			has_war_with = SOV
+			NOT = { has_country_flag = RI_GER_soviet_takeover }
+			RI_GER_has_concedable_occupied_state = yes
+		}
+		RI_GER_accept_soviet_terms = yes
+		add_stability = -0.10
+		add_war_support = -0.10
+		ai_chance = { factor = 80 }
+	}
+	option = {
+		name = RI_GER_crisis.2.b
+		trigger = {
+			has_war_with = SOV
+			NOT = { has_country_flag = RI_GER_soviet_takeover }
+		}
+		set_country_flag = RI_GER_rejected_settlement
+		add_war_support = 0.05
+		add_stability = -0.05
+		RI_GER_check_war_crisis = yes
+		ai_chance = { factor = 20 }
+	}
+	option = {
+		name = RI_GER_crisis.2.c
+		trigger = {
+			OR = {
+				NOT = { has_war_with = SOV }
+				has_country_flag = RI_GER_soviet_takeover
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RI_GER_crisis.3
+	title = RI_GER_crisis.3.t
+	desc = RI_GER_crisis.3.d
+	picture = GFX_report_event_Hammer_Falls
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_crisis.3.a
+		add_stability = -0.10
+		add_war_support = -0.10
+		RI_GER_review_german_partition = yes
+	}
+}
+
+country_event = {
+	id = RI_GER_crisis.5
+	title = RI_GER_crisis.5.t
+	desc = RI_GER_crisis.5.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_crisis.5.regions
+		trigger = {
+			RI_GER_german_partition_ready = yes
+			NOT = { has_country_flag = RI_GER_german_partition_reviewed }
+			RI_GER_has_german_partition_region = yes
+			OR = { WGR = { exists = no } BAY = { exists = no } }
+			RI_GER_can_refine_german_regions = yes
+		}
+		RI_GER_establish_german_regions = yes
+		set_country_flag = RI_GER_german_partition_reviewed
+		RI_GER_review_german_partition = yes
+		ai_chance = { factor = 80 }
+	}
+	option = {
+		name = RI_GER_crisis.5.soviet
+		trigger = {
+			RI_GER_german_partition_ready = yes
+			NOT = { has_country_flag = RI_GER_german_partition_reviewed }
+			RI_GER_has_german_partition_region = yes
+			RI_GER_can_establish_western_buffer = yes
+		}
+		RI_GER_establish_western_buffer = yes
+		set_country_flag = RI_GER_german_partition_reviewed
+		RI_GER_review_german_partition = yes
+		ai_chance = { factor = 20 }
+	}
+	option = {
+		name = RI_GER_crisis.5.buffer_unavailable
+		trigger = {
+			RI_GER_german_partition_ready = yes
+			NOT = { has_country_flag = RI_GER_german_partition_reviewed }
+			RI_GER_has_german_partition_region = yes
+			NOT = { RI_GER_can_establish_western_buffer = yes }
+		}
+		custom_effect_tooltip = RI_GER_crisis.5.buffer_unavailable_tt
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = RI_GER_crisis.5.regions_unavailable
+		trigger = {
+			RI_GER_german_partition_ready = yes
+			NOT = { has_country_flag = RI_GER_german_partition_reviewed }
+			RI_GER_has_german_partition_region = yes
+			NOT = { RI_GER_can_refine_german_regions = yes }
+		}
+		custom_effect_tooltip = RI_GER_crisis.5.regions_unavailable_tt
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = RI_GER_crisis.5.defer
+		trigger = {
+			RI_GER_german_partition_ready = yes
+			NOT = { has_country_flag = RI_GER_german_partition_reviewed }
+			RI_GER_has_german_partition_region = yes
+		}
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = RI_GER_crisis.5.unavailable
+		trigger = {
+			OR = {
+				NOT = { RI_GER_german_partition_ready = yes }
+				has_country_flag = RI_GER_german_partition_reviewed
+				NOT = { RI_GER_has_german_partition_region = yes }
+			}
+		}
+		custom_effect_tooltip = RI_GER_crisis.5.unavailable_tt
+	}
+}
+
+country_event = {
+	id = RI_GER_crisis.6
+	title = RI_GER_crisis.6.t
+	desc = RI_GER_crisis.6.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_crisis.6.puppet
+		trigger = { RI_GER_german_partition_ready = yes RI_GER_can_release_austria_after_defeat = yes }
+		RI_GER_establish_austria_after_defeat = yes
+		SOV = { puppet = AUS }
+		set_country_flag = RI_GER_austria_reviewed
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = RI_GER_crisis.6.soviet
+		trigger = { RI_GER_german_partition_ready = yes RI_GER_can_release_austria_after_defeat = yes }
+		every_owned_state = {
+			limit = {
+				RI_GER_partition_austrian_state = yes
+				RI_GER_german_partition_state_safe = yes
+			}
+			transfer_state_to = SOV
+		}
+		set_country_flag = RI_GER_austria_reviewed
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = RI_GER_crisis.5.defer
+		trigger = { RI_GER_german_partition_ready = yes RI_GER_can_release_austria_after_defeat = yes }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = RI_GER_crisis.6.unavailable
+		trigger = {
+			OR = {
+				NOT = { RI_GER_german_partition_ready = yes }
+				NOT = { RI_GER_can_release_austria_after_defeat = yes }
+			}
+		}
+		custom_effect_tooltip = RI_GER_crisis.6.unavailable_tt
+	}
+}
+
+country_event = {
+	id = RI_GER_crisis.7
+	title = RI_GER_crisis.7.t
+	desc = RI_GER_crisis.7.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_crisis.7.test
+		trigger = {
+			tag = GER
+			SOV = { exists = yes }
+			64 = { is_owned_by = GER }
+			has_war = no
+			NOT = { is_subject = yes }
+			NOT = { has_capitulated = yes }
+			NOT = { is_in_peace_conference = yes }
+			NOT = { has_country_flag = RI_GER_soviet_takeover }
+		}
+		set_country_flag = RI_GER_soviet_takeover_test
+		RI_GER_soviet_takeover = yes
+	}
+	option = {
+		name = RI_GER_crisis.7.cancel
+	}
+}
+
+country_event = {
+	id = RI_GER_crisis.8
+	title = RI_GER_crisis.8.t
+	desc = RI_GER_crisis.8.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	immediate = {
+		random_country = {
+			limit = { RI_SOV_german_ally_settlement_ready = yes }
+			save_event_target_as = RI_SOV_defeated_ally
+		}
+	}
+
+	option = {
+		name = RI_GER_crisis.8.puppet
+		trigger = {
+			country_exists = event_target:RI_SOV_defeated_ally
+			event_target:RI_SOV_defeated_ally = { RI_SOV_german_ally_settlement_ready = yes }
+		}
+		RI_SOV_end_german_ally_war = yes
+		if = {
+			limit = {
+				country_exists = event_target:RI_SOV_defeated_ally
+				event_target:RI_SOV_defeated_ally = { has_war = no NOT = { is_in_peace_conference = yes } }
+			}
+			event_target:RI_SOV_defeated_ally = {
+				if = { limit = { is_in_faction = yes } leave_faction = yes }
+				if = { limit = { is_subject_of = GER } GER = { end_puppet = PREV } }
+				clr_country_flag = RI_SOV_german_war_ally
+				set_politics = { ruling_party = communist elections_allowed = no }
+				if = { limit = { tag = POL } set_cosmetic_tag = RI_POL_soviet }
+			}
+			puppet = { target = event_target:RI_SOV_defeated_ally }
+			if = {
+				limit = { event_target:RI_SOV_defeated_ally = { tag = POL } }
+				GER = {
+					RI_GER_return_ermland_to_soviet = yes
+					if = {
+						limit = { RI_GER_soviet_settlement_cleanup_ready = yes }
+						RI_GER_finalize_soviet_settlement = yes
+					}
+				}
+			}
+		}
+		else = { country_event = { id = RI_GER_crisis.9 hours = 1 } }
+		clr_country_flag = RI_SOV_german_ally_event_pending
+		ai_chance = { factor = 80 }
+	}
+	option = {
+		name = RI_GER_crisis.8.annex
+		trigger = {
+			country_exists = event_target:RI_SOV_defeated_ally
+			event_target:RI_SOV_defeated_ally = {
+				RI_SOV_german_ally_settlement_ready = yes
+				NOT = { any_subject_country = { exists = yes } }
+			}
+		}
+		RI_SOV_end_german_ally_war = yes
+		if = {
+			limit = {
+				country_exists = event_target:RI_SOV_defeated_ally
+				event_target:RI_SOV_defeated_ally = { has_war = no NOT = { is_in_peace_conference = yes } }
+			}
+			event_target:RI_SOV_defeated_ally = {
+				if = { limit = { is_in_faction = yes } leave_faction = yes }
+				if = { limit = { is_subject_of = GER } GER = { end_puppet = PREV } }
+				clr_country_flag = RI_SOV_german_war_ally
+			}
+			annex_country = { target = event_target:RI_SOV_defeated_ally transfer_troops = no }
+		}
+		else = { country_event = { id = RI_GER_crisis.9 hours = 1 } }
+		clr_country_flag = RI_SOV_german_ally_event_pending
+		ai_chance = { factor = 20 }
+	}
+	option = {
+		name = RI_GER_crisis.8.unavailable
+		trigger = {
+			NOT = {
+				country_exists = event_target:RI_SOV_defeated_ally
+				event_target:RI_SOV_defeated_ally = { RI_SOV_german_ally_settlement_ready = yes }
+			}
+		}
+		clr_country_flag = RI_SOV_german_ally_event_pending
+	}
+}
+
+country_event = {
+	id = RI_GER_crisis.9
+	title = RI_GER_crisis.9.t
+	desc = RI_GER_crisis.9.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = { name = RI_GER_crisis.9.a }
+}
+
+country_event = {
+	id = RI_GER_crisis.4
+	title = RI_GER_crisis.4.t
+	desc = RI_GER_crisis.4.d
+	picture = GFX_report_event_Quiet_Words_in_Brussels
+	is_triggered_only = yes
+
+	option = {
+		name = RI_GER_crisis.4.a
+	}
+}

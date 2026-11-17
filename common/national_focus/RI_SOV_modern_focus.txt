@@ -1,0 +1,371 @@
+focus_tree = {
+	id = RI_SOV_modern_intro
+	country = { factor = 0 modifier = { add = 10 tag = SOV } }
+	default = no
+	 continuous_focus_position = { x = 50 y = 22300 }
+
+	focus = {
+		id = RI_SOV_union_must_survive
+		icon = GFX_goal_generic_political_pressure
+		x = 0 y = 0 cost = 1
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			set_country_flag = RI_SOV_opening_started
+			set_variable = { RI_SOV_cohesion = 70 }
+			set_variable = { RI_SOV_military_confidence = 45 }
+			country_event = { id = RI_SOV_opening.1 days = 1 }
+		}
+	}
+	focus = {
+		id = RI_SOV_emergency_politburo_session
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RI_SOV_union_must_survive }
+		x = 0 y = 1 cost = 2
+		completion_reward = { set_country_flag = RI_SOV_politburo_decisions_unlocked country_event = { id = RI_SOV_opening.2 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_state_of_union_address
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = RI_SOV_emergency_politburo_session }
+		x = 0 y = 2 cost = 2
+		completion_reward = { add_stability = 0.03 add_political_power = 25 }
+	}
+	focus = {
+		id = RI_SOV_mobilise_the_republics
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = RI_SOV_state_of_union_address }
+		x = 0 y = 3 cost = 3
+		completion_reward = { add_recruitable_population = 0.03 add_ideas = RI_SOV_mobilised_republics country_event = { id = RI_SOV_focus_events.1 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_five_year_emergency_programme
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = RI_SOV_state_of_union_address }
+		x = -3 y = 3 cost = 3
+		completion_reward = { add_ideas = RI_SOV_emergency_economy country_event = { id = RI_SOV_focus_events.2 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_defend_every_soviet_citizen
+		icon = GFX_goal_generic_defend
+		prerequisite = { focus = RI_SOV_state_of_union_address }
+		x = 3 y = 3 cost = 2
+		completion_reward = { add_war_support = 0.05 add_ideas = RI_SOV_peoples_defence country_event = { id = RI_SOV_focus_events.3 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_union_will_not_fall
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = RI_SOV_mobilise_the_republics }
+		prerequisite = { focus = RI_SOV_five_year_emergency_programme }
+		prerequisite = { focus = RI_SOV_defend_every_soviet_citizen }
+		x = 0 y = 4 cost = 5
+		completion_reward = { add_stability = 0.05 add_ideas = RI_SOV_union_resurgent set_country_flag = RI_SOV_emergency_complete }
+	}
+
+	focus = {
+		id = RI_SOV_reform_the_politburo
+		icon = GFX_goal_generic_political_reform
+		prerequisite = { focus = RI_SOV_emergency_politburo_session }
+		x = -12 y = 5 cost = 3
+		completion_reward = { add_political_power = 50 add_ideas = RI_SOV_reformed_politburo set_country_flag = RI_SOV_reformist_current }
+	}
+	focus = {
+		id = RI_SOV_anti_corruption_directorate
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RI_SOV_reform_the_politburo }
+		x = -15 y = 6 cost = 4
+		completion_reward = { add_stability = 0.05 add_ideas = RI_SOV_anti_corruption country_event = { id = RI_SOV_focus_events.4 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_merit_before_loyalty
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = RI_SOV_reform_the_politburo }
+		x = -9 y = 6 cost = 4
+		completion_reward = { add_ideas = RI_SOV_merit_service }
+	}
+	focus = {
+		id = RI_SOV_reformist_memorandum
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = RI_SOV_anti_corruption_directorate }
+		prerequisite = { focus = RI_SOV_merit_before_loyalty }
+		x = -12 y = 7 cost = 4
+		completion_reward = { add_research_slot = 1 set_country_flag = RI_SOV_reformist_memorandum }
+	}
+	focus = {
+		id = RI_SOV_extraordinary_party_congress
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RI_SOV_reformist_memorandum }
+		x = -12 y = 8 cost = 5
+		completion_reward = { add_stability = 0.10 set_country_flag = RI_SOV_reformist_congress country_event = { id = RI_SOV_focus_events.5 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_new_soviet_consensus
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = RI_SOV_extraordinary_party_congress }
+		x = -12 y = 9 cost = 5
+		completion_reward = { add_stability = 0.10 add_political_power = 50 set_country_flag = RI_SOV_reformist_route }
+	}
+
+	focus = {
+		id = RI_SOV_new_soviet_economy
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = RI_SOV_five_year_emergency_programme }
+		x = -6 y = 5 cost = 3
+		completion_reward = { add_ideas = RI_SOV_new_economy }
+	}
+	focus = {
+		id = RI_SOV_revive_soviet_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RI_SOV_new_soviet_economy }
+		x = -9 y = 6 cost = 3
+		completion_reward = { add_ideas = RI_SOV_industrial_revival country_event = { id = RI_SOV_focus_events.6 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_ural_industrial_corridor
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RI_SOV_revive_soviet_industry }
+		x = -9 y = 7 cost = 5
+		completion_reward = { random_owned_controlled_state = { limit = { is_core_of = SOV } add_building_construction = { type = industrial_complex level = 2 instant_build = no } } }
+	}
+	focus = {
+		id = RI_SOV_siberian_development_programme
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = RI_SOV_new_soviet_economy }
+		x = -3 y = 6 cost = 5
+		completion_reward = { add_ideas = RI_SOV_siberian_development }
+	}
+	focus = {
+		id = RI_SOV_technological_revolution
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = RI_SOV_revive_soviet_industry }
+		prerequisite = { focus = RI_SOV_siberian_development_programme }
+		x = -6 y = 8 cost = 5
+		completion_reward = { add_research_slot = 1 add_ideas = RI_SOV_technology_union country_event = { id = RI_SOV_focus_events.7 days = 1 } }
+	}
+
+	focus = {
+		id = RI_SOV_reconnect_the_union
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = RI_SOV_five_year_emergency_programme }
+		x = 6 y = 5 cost = 3
+		completion_reward = { add_ideas = RI_SOV_union_connected }
+	}
+	focus = {
+		id = RI_SOV_digital_question
+		icon = GFX_goal_generic_technology
+		prerequisite = { focus = RI_SOV_reconnect_the_union }
+		x = 3 y = 6 cost = 3
+		completion_reward = { add_research_slot = 1 set_country_flag = RI_SOV_digital_policy_unlocked country_event = { id = RI_SOV_focus_events.8 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_soviet_internet_act
+		icon = GFX_goal_generic_technology
+		prerequisite = { focus = RI_SOV_digital_question }
+		x = 3 y = 7 cost = 4
+		completion_reward = { add_ideas = RI_SOV_soviet_internet_act }
+	}
+	focus = {
+		id = RI_SOV_connect_the_republics
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = RI_SOV_soviet_internet_act }
+		x = 0 y = 8 cost = 5
+		completion_reward = { add_ideas = RI_SOV_union_connected }
+	}
+	focus = {
+		id = RI_SOV_national_cyber_directorate
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = RI_SOV_soviet_internet_act }
+		x = 6 y = 8 cost = 4
+		completion_reward = { add_ideas = RI_SOV_cyber_directorate }
+	}
+	focus = {
+		id = RI_SOV_digital_soviet_union
+		icon = GFX_goal_generic_technology
+		prerequisite = { focus = RI_SOV_connect_the_republics }
+		prerequisite = { focus = RI_SOV_national_cyber_directorate }
+		x = 3 y = 9 cost = 5
+		completion_reward = { add_ideas = RI_SOV_digital_union }
+	}
+	focus = {
+		id = RI_SOV_rebuild_transport_network
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = RI_SOV_reconnect_the_union }
+		x = 9 y = 6 cost = 3
+		completion_reward = { add_ideas = RI_SOV_transport_emergency }
+	}
+	focus = {
+		id = RI_SOV_trans_siberian_modernisation
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = RI_SOV_rebuild_transport_network }
+		x = 7 y = 7 cost = 5
+		completion_reward = { add_ideas = RI_SOV_union_connected }
+	}
+
+	focus = {
+		id = RI_SOV_red_army_reborn
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = RI_SOV_defend_every_soviet_citizen }
+		x = 12 y = 5 cost = 3
+		completion_reward = { add_ideas = RI_SOV_red_army_reborn }
+	}
+	focus = {
+		id = RI_SOV_general_staff_emergency_conference
+		icon = GFX_goal_generic_army_doctrine
+		prerequisite = { focus = RI_SOV_red_army_reborn }
+		x = 9 y = 6 cost = 2
+		completion_reward = { army_experience = 20 add_ideas = RI_SOV_military_confidence country_event = { id = RI_SOV_focus_events.9 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_zhukov_protocol
+		icon = GFX_goal_generic_army_doctrine
+		prerequisite = { focus = RI_SOV_general_staff_emergency_conference }
+		x = 10 y = 7 cost = 3
+		completion_reward = { add_ideas = RI_SOV_general_staff_reform add_to_variable = { RI_SOV_military_confidence = 10 } }
+	}
+	focus = {
+		id = RI_SOV_remove_incompetent_commanders
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = RI_SOV_zhukov_protocol }
+		x = 12 y = 8 cost = 4
+		completion_reward = { army_experience = 35 add_to_variable = { RI_SOV_military_confidence = 10 } }
+	}
+	focus = {
+		id = RI_SOV_unified_command_system
+		icon = GFX_goal_generic_army_doctrine
+		prerequisite = { focus = RI_SOV_remove_incompetent_commanders }
+		x = 12 y = 9 cost = 4
+		completion_reward = { add_ideas = RI_SOV_unified_command }
+	}
+	focus = {
+		id = RI_SOV_modern_general_staff
+		icon = GFX_goal_generic_army_doctrine
+		prerequisite = { focus = RI_SOV_unified_command_system }
+		x = 12 y = 10 cost = 5
+		completion_reward = { add_ideas = RI_SOV_modern_general_staff add_to_variable = { RI_SOV_military_confidence = 10 } }
+	}
+	focus = {
+		id = RI_SOV_western_defence_line
+		icon = GFX_goal_generic_defend
+		prerequisite = { focus = RI_SOV_red_army_reborn }
+		x = 15 y = 6 cost = 3
+		completion_reward = { add_ideas = RI_SOV_western_defence }
+	}
+	focus = {
+		id = RI_SOV_moscow_defensive_ring
+		icon = GFX_goal_generic_defend
+		prerequisite = { focus = RI_SOV_western_defence_line }
+		x = 15 y = 7 cost = 5
+		completion_reward = { add_ideas = RI_SOV_moscow_defence }
+	}
+	focus = {
+		id = RI_SOV_modernise_armed_forces
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = RI_SOV_zhukov_protocol }
+		x = 9 y = 8 cost = 4
+		completion_reward = { add_ideas = RI_SOV_modern_armed_forces }
+	}
+	focus = {
+		id = RI_SOV_two_front_doctrine
+		icon = GFX_goal_generic_army_doctrine
+		prerequisite = { focus = RI_SOV_modern_general_staff }
+		prerequisite = { focus = RI_SOV_moscow_defensive_ring }
+		prerequisite = { focus = RI_SOV_modernise_armed_forces }
+		x = 9 y = 9 cost = 5
+		completion_reward = { add_ideas = RI_SOV_two_front_doctrine set_country_flag = RI_SOV_military_route country_event = { id = RI_SOV_focus_events.10 days = 1 } }
+	}
+
+	focus = {
+		id = RI_SOV_diplomatic_offensive
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = RI_SOV_union_must_survive }
+		x = 21 y = 1 cost = 3
+		completion_reward = { add_political_power = 50 add_ideas = RI_SOV_diplomatic_offensive }
+	}
+	focus = {
+		id = RI_SOV_resistance_pact
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = RI_SOV_diplomatic_offensive }
+		x = 18 y = 4 cost = 2
+		completion_reward = { add_political_power = 50 add_war_support = 0.03 }
+	}
+	focus = {
+		id = RI_SOV_international_socialist_appeal
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = RI_SOV_resistance_pact }
+		x = 18 y = 5 cost = 5
+		completion_reward = { add_war_support = 0.05 GER = { add_opinion_modifier = { target = SOV modifier = rival } } country_event = { id = RI_SOV_focus_events.11 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_message_to_washington
+		icon = GFX_goal_generic_diplomatic_treaty
+		prerequisite = { focus = RI_SOV_diplomatic_offensive }
+		x = 24 y = 4 cost = 4
+		completion_reward = { USA = { add_opinion_modifier = { target = SOV modifier = improved_relations } } country_event = { id = RI_SOV_focus_events.12 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_nuclear_question
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = RI_SOV_message_to_washington }
+		x = 24 y = 5 cost = 3
+		completion_reward = { add_world_tension = 0.02 add_political_power = 50 }
+	}
+
+	focus = {
+		id = RI_SOV_future_of_the_union
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RI_SOV_union_will_not_fall }
+		prerequisite = { focus = RI_SOV_digital_soviet_union }
+		prerequisite = { focus = RI_SOV_two_front_doctrine }
+		prerequisite = { focus = RI_SOV_international_socialist_appeal }
+		x = 12 y = 12 cost = 5
+		completion_reward = { set_country_flag = RI_SOV_future_unlocked country_event = { id = RI_SOV_future.1 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_rashkin_holds
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = RI_SOV_future_of_the_union }
+		mutually_exclusive = { focus = RI_SOV_reform_coup }
+		mutually_exclusive = { focus = RI_SOV_red_renewal }
+		x = 6 y = 13 cost = 4
+		completion_reward = { set_country_flag = RI_SOV_rashkin_route add_ideas = RI_SOV_rashkin_fortress add_political_power = 75 country_event = { id = RI_SOV_focus_events.13 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_emergency_decree
+		icon = GFX_goal_generic_war
+		prerequisite = { focus = RI_SOV_rashkin_holds }
+		x = 6 y = 14 cost = 4
+		completion_reward = { add_war_support = 0.10 add_ideas = RI_SOV_total_mobilisation }
+	}
+	focus = {
+		id = RI_SOV_reform_coup
+		icon = GFX_goal_generic_political_reform
+		prerequisite = { focus = RI_SOV_future_of_the_union }
+		mutually_exclusive = { focus = RI_SOV_rashkin_holds }
+		mutually_exclusive = { focus = RI_SOV_red_renewal }
+		x = 12 y = 13 cost = 4
+		available = { has_country_flag = RI_SOV_reformist_current }
+		completion_reward = { set_country_flag = RI_SOV_reform_coup_route add_ideas = RI_SOV_new_union set_politics = { ruling_party = communist } add_stability = 0.10 country_event = { id = RI_SOV_focus_events.14 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_removal_of_rashkin
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RI_SOV_reform_coup }
+		x = 12 y = 14 cost = 4
+		completion_reward = { add_political_power = 100 add_ideas = RI_SOV_reformed_politburo }
+	}
+	focus = {
+		id = RI_SOV_red_renewal
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = RI_SOV_future_of_the_union }
+		x = 18 y = 13 cost = 4
+		completion_reward = { set_country_flag = RI_SOV_red_renewal_route add_ideas = RI_SOV_red_renewal add_war_support = 0.05 country_event = { id = RI_SOV_focus_events.15 days = 1 } }
+	}
+	focus = {
+		id = RI_SOV_permanent_revolution
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = RI_SOV_red_renewal }
+
+		x = 18 y = 14 cost = 5
+		completion_reward = { add_ideas = RI_SOV_permanent_revolution add_political_power = 100 }
+	}
+}

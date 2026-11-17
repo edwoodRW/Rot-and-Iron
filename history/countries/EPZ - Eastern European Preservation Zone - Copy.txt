@@ -129,7 +129,7 @@ set_popularities = {
 		national_conservative = 20
 		centrist = 10
 		liberal = 15
-		new_democrat = 15
+		social_democrat = 15
 		moderate_socialist = 25
 		revolutionary_socialist = 0
 		communist = 0
@@ -208,7 +208,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Jesse Ventura"
 	picture = "gfx/leaders/USA/Portrait_USA_Jesse_Ventura.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 	traits = {
 		USA_Norton_IV
 	}

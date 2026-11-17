@@ -111,7 +111,7 @@ set_popularities = {
 		national_conservative = 10
 		centrist = 8
 		liberal = 0
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 8
 		revolutionary_socialist = 7
 		communist = 5
@@ -169,7 +169,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Ulrich Junghanns"
 	picture = "Portrait_GER_Ulrich_Junghanns.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

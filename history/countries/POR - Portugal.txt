@@ -99,7 +99,7 @@ set_popularities = {
 		national_conservative = 1
 		centrist = 10
 		liberal = 8
-		new_democrat = 5
+		social_democrat = 5
 		moderate_socialist = 0
 		revolutionary_socialist = 10
 		communist = 14
@@ -156,7 +156,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "António Costa"
 	picture = "Portrait_POR_Antonio_Costa.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

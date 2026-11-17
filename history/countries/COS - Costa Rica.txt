@@ -93,7 +93,7 @@ set_popularities = {
 		national_conservative = 13
 		centrist = 6
 		liberal = 0
-		new_democrat = 17
+		social_democrat = 17
 		moderate_socialist = 43
 		revolutionary_socialist = 2
 		communist = 14
@@ -144,7 +144,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Ottón Solís"
 	picture = "Portrait_COS_Otton_Solis.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

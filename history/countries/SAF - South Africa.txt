@@ -100,7 +100,7 @@ set_popularities = {
 		national_conservative = 32
 		centrist = 0
 		liberal = 0
-		new_democrat = 1
+		social_democrat = 1
 		moderate_socialist = 13
 		revolutionary_socialist = 9
 		communist = 11
@@ -158,7 +158,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Cyril Ramaphosa"
 	picture = "Portrait_SAF_Cyril_Ramaphosa.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

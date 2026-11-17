@@ -119,7 +119,7 @@ country_event = {
             traits = { }
         }
 		set_politics = {
-			ruling_party = new_democrat
+			ruling_party = social_democrat
 		}
 		country_event = {
 			id = CAN_angus_aftermath.1

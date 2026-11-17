@@ -84,7 +84,7 @@ set_popularities = {
 		national_conservative = 8
 		centrist = 5
 		liberal = 0
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 0
 		revolutionary_socialist = 5
 		communist = 23
@@ -135,7 +135,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Kisinoti Mukwazhe"
 	picture = "Portrait_ZIM_Kisinoti_Mukwazhe.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

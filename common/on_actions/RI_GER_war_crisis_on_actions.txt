@@ -1,0 +1,238 @@
+on_actions = {
+	on_daily_GER = {
+		effect = {
+			RI_GER_install_russian_settlement_leaders = yes
+			RI_GER_check_war_crisis = yes
+			RI_GER_return_ermland_to_soviet = yes
+			if = {
+				limit = {
+					has_war_with = SOV
+					NOT = { has_capitulated = yes }
+					NOT = { has_country_flag = RI_GER_moscow_milestone }
+					SOV = {
+						exists = yes
+						has_capitulated = no
+						NOT = { has_idea = RI_GER_soviet_eastern_retreat }
+					}
+					219 = {
+						controller = {
+							OR = {
+								tag = SOV
+								tag = GER
+								has_war_together_with = GER
+							}
+						}
+					}
+				}
+				SOV = { add_ideas = RI_GER_soviet_eastern_retreat }
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = RI_GER_moscow_milestone }
+					RI_GER_victory_settlement_conditions = yes
+				}
+				set_country_flag = RI_GER_moscow_milestone
+				country_event = { id = RI_GER_eastern_campaign.1 hours = 1 }
+			}
+			if = {
+				limit = {
+					has_country_flag = RI_GER_advance_to_urals
+					NOT = { has_country_flag = RI_GER_urals_milestone }
+					RI_GER_urals_settlement_conditions = yes
+				}
+				set_country_flag = RI_GER_urals_milestone
+				country_event = { id = RI_GER_eastern_campaign.2 hours = 1 }
+			}
+			if = {
+				limit = {
+					SOV = { exists = yes has_idea = RI_GER_soviet_eastern_retreat }
+					OR = {
+						NOT = { has_war_with = SOV }
+						has_capitulated = yes
+						SOV = { has_capitulated = yes }
+						AND = {
+							NOT = { has_country_flag = RI_GER_moscow_milestone }
+							219 = {
+								controller = {
+									NOT = { tag = SOV }
+									NOT = { tag = GER }
+									NOT = { has_war_together_with = GER }
+								}
+							}
+						}
+					}
+				}
+				SOV = { remove_ideas = RI_GER_soviet_eastern_retreat }
+			}
+			if = {
+				limit = {
+					has_country_flag = RI_GER_soviet_takeover
+					NOT = { is_subject = yes }
+					NOT = { has_capitulated = yes }
+					NOT = { has_war_with = SOV }
+					NOT = { is_in_peace_conference = yes }
+				}
+				clr_country_flag = RI_GER_soviet_takeover
+				clr_country_flag = RI_GER_test_polish_ssr_complete
+				if = {
+					limit = { has_idea = GER_SOV_underground_network }
+					remove_ideas = GER_SOV_underground_network
+				}
+				if = {
+					limit = { has_cosmetic_tag = RI_GER_north_german }
+					drop_cosmetic_tag = yes
+				}
+				clr_country_flag = RI_GER_victory_pending
+				set_country_flag = RI_GER_recovery_unlocked
+				load_focus_tree = { tree = GER_spartacist_focus keep_completed = yes }
+				country_event = { id = RI_GER_crisis.4 hours = 1 }
+			}
+			if = {
+				limit = {
+					has_country_flag = RI_GER_victory_pending
+					NOT = { has_country_flag = RI_GER_soviet_takeover }
+					NOT = { is_subject = yes }
+					NOT = { has_capitulated = yes }
+					NOT = { has_war_with = SOV }
+					NOT = { is_in_peace_conference = yes }
+				}
+				clr_country_flag = RI_GER_victory_pending
+				set_country_flag = RI_GER_recovery_unlocked
+				country_event = { id = RI_GER_crisis.4 hours = 1 }
+			}
+			if = {
+				limit = {
+					is_ai = no
+					has_country_flag = RI_GER_recovery_unlocked
+					NOT = { has_country_flag = RI_GER_postwar_review_started }
+					NOT = { is_subject = yes }
+					NOT = { has_capitulated = yes }
+					NOT = { is_in_peace_conference = yes }
+					SOV = { exists = no }
+					RI_GER_has_releasable_soviet_country = yes
+				}
+				set_country_flag = RI_GER_postwar_review_started
+				country_event = { id = RI_GER_postwar_fates.1 days = 3 }
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_ceasefire_talks_active
+					NOT = { has_war_with = SOV }
+				}
+				clr_country_flag = GER_ceasefire_talks_active
+				clr_country_flag = RI_GER_ceasefire_pending
+				clr_country_flag = RI_GER_ceasefire_refused
+				if = {
+					limit = { SOV = { exists = yes } }
+					SOV = { clr_country_flag = SOV_accepts_ceasefire_talks }
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_ceasefire_talks_active
+					has_war_with = SOV
+					NOT = { has_country_flag = RI_GER_war_crisis }
+					NOT = { has_country_flag = RI_GER_ceasefire_pending }
+					SOV = {
+						exists = yes
+						NOT = { has_country_flag = SOV_accepts_ceasefire_talks }
+					}
+				}
+				set_country_flag = RI_GER_ceasefire_refused
+			}
+		}
+	}
+
+	on_daily_SOV = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = RI_SOV_opening_started
+					NOT = { has_country_flag = RI_SOV_dissolution_started }
+				}
+				if = {
+					limit = {
+						has_war = yes
+						stability < 0.35
+					}
+					add_to_variable = { RI_SOV_cohesion = -1 }
+				}
+				if = {
+					limit = {
+						check_variable = { RI_SOV_cohesion < 30 }
+						NOT = { has_country_flag = RI_SOV_collapse_event_sent }
+					}
+					set_country_flag = RI_SOV_collapse_event_sent
+					country_event = { id = RI_SOV_collapse.1 days = 1 }
+				}
+			}
+			if = {
+				limit = { GER = { has_country_flag = RI_GER_soviet_takeover is_subject_of = SOV } }
+				RI_SOV_check_german_war_allies = yes
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = { is_owned_by = GER }
+					GER = {
+						exists = yes
+						has_war_with = SOV
+						NOT = { has_country_flag = RI_GER_soviet_takeover }
+					}
+				}
+				GER = { RI_GER_check_war_crisis = yes }
+			}
+			if = {
+				limit = {
+					FROM.FROM = { owner = { has_country_flag = RI_SOV_german_war_ally } }
+					GER = { has_country_flag = RI_GER_soviet_takeover is_subject_of = SOV }
+					SOV = { exists = yes }
+				}
+				SOV = { RI_SOV_check_german_war_allies = yes }
+			}
+		}
+	}
+
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = SOV }
+					GER = {
+						exists = yes
+						has_war_with = SOV
+						NOT = { has_capitulated = yes }
+					}
+					FROM = {
+						OR = {
+							tag = GER
+							has_war_together_with = GER
+						}
+					}
+				}
+				GER = { set_country_flag = RI_GER_victory_pending }
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = GER
+						has_war_with = SOV
+						NOT = { has_country_flag = RI_GER_soviet_takeover }
+						NOT = { has_country_flag = RI_GER_settlement_accepted }
+					}
+					FROM = {
+						OR = {
+							tag = SOV
+							has_war_together_with = SOV
+						}
+					}
+				}
+				ROOT = { RI_GER_check_war_crisis = yes }
+			}
+		}
+	}
+}

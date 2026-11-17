@@ -2,12 +2,7 @@
 	id = vichy_french_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 1
-			tag = FRA
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

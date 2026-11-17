@@ -133,7 +133,7 @@ country_event = {
 
 		# CCF gains support from angry workers
 		add_popularity = {
-			ideology = new_democrat
+			ideology = social_democrat
 			popularity = 0.03
 		}
 

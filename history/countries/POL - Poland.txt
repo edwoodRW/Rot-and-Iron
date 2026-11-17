@@ -1,21 +1,21 @@
 ﻿capital = 10
 
+load_focus_tree = RI_POL_republic_focus
+
 oob = "POL_2000"
 
 add_ideas = {
+    RI_european_socialist_union
     UN_Member_idea
 }
 
 add_ideas = {
-    idea_pol_king_alexander
-    idea_pol_german_influence
-    idea_pol_watch_bug
-    idea_pol_tradition
-    idea_pol_forgotten_partner	
+    RI_POL_guardian_of_the_east
+    RI_POL_industrial_revival
+    RI_POL_ally_not_satellite
     Reichspakt_idea 
     EuroPaktMember_idea
 }
-add_to_faction =  Reichspakt 
 set_research_slots = 4
 set_convoys = 500
 set_stability = 0.5
@@ -93,24 +93,31 @@ if = {
 }
 
 set_politics = {
-	ruling_party = monarchist
-	last_election = "1997.1.1"
+	ruling_party = moderate_socialist
+	last_election = "2025.10.1"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_popularities = {
-        fascist = 6
-		nationalist = 7
-		monarchist = 29
-		national_bolshevik = 3
-		national_conservative = 11
-		centrist = 14
-		liberal = 8
-		new_democrat = 6
-		moderate_socialist = 7
-		revolutionary_socialist = 5
-		communist = 4
+	fascist = 3
+	nationalist = 3
+	monarchist = 2
+	national_bolshevik = 1
+	national_conservative = 12
+	centrist = 8
+	liberal = 8
+	social_democrat = 12
+	moderate_socialist = 40
+	revolutionary_socialist = 7
+	communist = 4
+}
+
+create_country_leader = {
+	name = "President Aleksander Wysocki"
+	picture = "gfx/leaders/leader_unknown.dds"
+	ideology = democratic_socialist
+	desc = RI_POL_aleksander_wysocki_desc
 }
 
 create_country_leader = {
@@ -164,7 +171,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Robert Biedroń"
 	picture = "Portrait_POL_Robert_Biedron.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

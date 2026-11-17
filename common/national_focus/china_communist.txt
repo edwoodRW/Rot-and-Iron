@@ -10,17 +10,7 @@ focus_tree = {
 	id = china_communist_focus
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			AND = {
-				tag = PRC
-				has_dlc = "Waking the Tiger"
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 

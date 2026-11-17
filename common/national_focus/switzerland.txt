@@ -2,12 +2,7 @@
 	id = swiss_focus
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = SWI
-			has_dlc = "By Blood Alone"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	default = no
 	continuous_focus_position = { x = 100 y = 2000 }

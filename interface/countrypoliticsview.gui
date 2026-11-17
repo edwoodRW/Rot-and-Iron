@@ -445,8 +445,7 @@ containerWindowType = {
 			containerWindowType = {
 				name = "national_spirit_container"
 				position = { x = 99 y = 16 }
-				size = { width = 353 height = 73 }
-				scale = 1.5
+				size = { width = 353 height = 92 }
 				horizontalScrollbar = "bottom_horizontal_slider"
 				scroll_wheel_factor = 120
 				smooth_scrolling = yes
@@ -459,16 +458,16 @@ containerWindowType = {
 				gridboxtype = {
 					name = "spirit_grid"
 					position = { x = 1 y = 1 }
-					size = { width = 1200 height = 64 }
-					slotsize = { width = 60 height = 64 }
+					size = { width = 1200 height = 68 }
+					slotsize = { width = 60 height = 68 }
 					max_slots_horizontal = 20
 					format = "UPPER_LEFT"
 				}
 				gridboxtype = {
 					name = "spirit_grid_over_defined"
 					position = { x = 1 y = 1 }
-					size = { width = 1200 height = 64 }
-					slotsize = { width = 44 height = 46 }
+					size = { width = 660 height = 68 }
+					slotsize = { width = 33 height = 34 }
 					max_slots_horizontal = 20
 					format = "UPPER_LEFT"
 				}

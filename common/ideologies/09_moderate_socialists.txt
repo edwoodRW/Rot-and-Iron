@@ -8,6 +8,9 @@ ideologies = {
 		
 			democratic_socialist = {
 			}
+
+			eurocommunism = {
+			}
 			
 			progressive = {
 			}

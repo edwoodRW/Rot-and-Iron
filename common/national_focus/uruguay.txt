@@ -2,13 +2,7 @@ focus_tree = {
 	id = uruguay_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = URG
-			has_dlc = "Trial of Allegiance"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 
 	shared_focus = SMB_army

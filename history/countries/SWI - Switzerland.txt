@@ -90,7 +90,7 @@ set_popularities = {
 		national_conservative = 16
 		centrist = 11
 		liberal = 20
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 15
 		revolutionary_socialist = 12
 		communist = 13
@@ -141,7 +141,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Christian Levrat"
 	picture = "Portrait_SWI_Christian_Levrat.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

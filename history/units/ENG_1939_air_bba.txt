@@ -79,7 +79,7 @@ air_wings = {
 		medium_plane_airframe_1 = { owner = "ENG" amount = 48 version_name = "Bristol Blenheim" }				# Bomber Group -- Blenheim I's
 		small_plane_naval_bomber_airframe_0 = { owner = "ENG" amount = 36 version_name = "Vickers Vildebeest" }		# Coastal Group -- Vildebeests
 	}
-	"HMS Ark Royal"  = {
+	"USBRS Endeavour"  = {
 		cv_small_plane_airframe_0 =  { owner = "ENG" amount = 10 version_name = "Sea Gladiator" }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_small_plane_airframe_0 =  { owner = "ENG" amount = 2 version_name = "Sea Gladiator" }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_small_plane_naval_bomber_airframe_1 =  { owner = "ENG" amount = 10 version_name = "Fairey Swordfish" }			# Swordfish
@@ -87,7 +87,7 @@ air_wings = {
 		cv_small_plane_cas_airframe_1 =  { owner = "ENG" amount = 10 version_name = "Blackburn Skua" }					# Blackburn Skua
 		cv_small_plane_cas_airframe_1 =  { owner = "ENG" amount = 8 version_name = "Blackburn Skua" }					# Blackburn Skua
 	}
-	"HMS Furious"  = {
+	"USBRS Furious"  = {
 		cv_small_plane_airframe_0 =  { owner = "ENG" amount = 10 version_name = "Sea Gladiator" }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_small_plane_airframe_0 =  { owner = "ENG" amount = 2 version_name = "Sea Gladiator" }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_small_plane_naval_bomber_airframe_1 =  { owner = "ENG" amount = 10 version_name = "Fairey Swordfish" }			# Swordfish
@@ -95,7 +95,7 @@ air_wings = {
 		cv_small_plane_cas_airframe_1 =  { owner = "ENG" amount = 10 version_name = "Blackburn Skua" }					# Blackburn Skua
 		cv_small_plane_cas_airframe_1 =  { owner = "ENG" amount = 2 version_name = "Blackburn Skua" }					# Blackburn Skua
 	}
-	"HMS Courageous"  = {
+	"USBRS Courageous"  = {
 		cv_small_plane_airframe_0 =  { owner = "ENG" amount = 10 version_name = "Sea Gladiator" }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_small_plane_airframe_0 =  { owner = "ENG" amount = 2 version_name = "Sea Gladiator" }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_small_plane_naval_bomber_airframe_1 =  { owner = "ENG" amount = 10 version_name = "Fairey Swordfish" }			# Swordfish
@@ -103,7 +103,7 @@ air_wings = {
 		cv_small_plane_cas_airframe_1 =  { owner = "ENG" amount = 10 version_name = "Blackburn Skua" }					# Blackburn Skua
 		cv_small_plane_cas_airframe_1 =  { owner = "ENG" amount = 2 version_name = "Blackburn Skua" }					# Blackburn Skua
 	}
-	"HMS Glorious"  = {
+	"USBRS Glorious"  = {
 		cv_small_plane_airframe_0 =  { owner = "ENG" amount = 10 version_name = "Sea Gladiator" }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_small_plane_airframe_0 =  { owner = "ENG" amount = 2 version_name = "Sea Gladiator" }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_small_plane_naval_bomber_airframe_1 =  { owner = "ENG" amount = 10 version_name = "Fairey Swordfish" }			# Swordfish
@@ -111,7 +111,7 @@ air_wings = {
 		cv_small_plane_cas_airframe_1 =  { owner = "ENG" amount = 10 version_name = "Blackburn Skua" }					# Blackburn Skua
 		cv_small_plane_cas_airframe_1 =  { owner = "ENG" amount = 2 version_name = "Blackburn Skua" }					# Blackburn Skua
 	}
-	"HMS Eagle"  = {
+	"USBRS Eagle"  = {
 		cv_small_plane_airframe_0 =  { owner = "ENG" amount = 10 version_name = "Sea Gladiator" }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_small_plane_airframe_0 =  { owner = "ENG" amount = 2 version_name = "Sea Gladiator" }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_small_plane_naval_bomber_airframe_1 =  { owner = "ENG" amount = 10 version_name = "Fairey Swordfish" }			# Swordfish

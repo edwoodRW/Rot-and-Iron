@@ -74,7 +74,7 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = new_democrat
+	ruling_party = social_democrat
 	last_election = "1997.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -88,7 +88,7 @@ set_popularities = {
 		national_conservative = 8
 		centrist = 0
 		liberal = 0
-		new_democrat = 72
+		social_democrat = 72
 		moderate_socialist = 0
 		revolutionary_socialist = 2
 		communist = 7
@@ -139,7 +139,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "José Maria Neves"
 	picture = "Portrait_CAB_Jose_Maria_Neves.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

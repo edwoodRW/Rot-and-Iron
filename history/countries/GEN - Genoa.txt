@@ -89,7 +89,7 @@ set_popularities = {
 		national_conservative = 20
 		centrist = 50
 		liberal = 13
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 7
 		communist = 10
@@ -146,7 +146,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Genoan Regional Council"
 	picture = "Portrait_GEN_Genoa_Council.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

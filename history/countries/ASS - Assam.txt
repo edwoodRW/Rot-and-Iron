@@ -83,7 +83,7 @@ set_popularities = {
 		national_conservative = 22
 		centrist = 6
 		liberal = 0
-		new_democrat = 21
+		social_democrat = 21
 		moderate_socialist = 0
 		revolutionary_socialist = 5
 		communist = 12
@@ -133,7 +133,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Tarun Gogoi"
 	picture = "Portrait_ASS_Tarun_Gogoi.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

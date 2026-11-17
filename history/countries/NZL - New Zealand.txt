@@ -100,7 +100,7 @@ set_popularities = {
 		national_conservative = 0.5
 		centrist = 5
 		liberal = 1
-		new_democrat = 2
+		social_democrat = 2
 		moderate_socialist = 0.75
 		revolutionary_socialist = 10
 		communist = 3
@@ -152,7 +152,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Jacinda Ardern"
 	picture = "Portrait_NZL_Jacinda_Ardern.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

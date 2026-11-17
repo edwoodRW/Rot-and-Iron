@@ -86,7 +86,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 5
 		liberal = 6
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 62
 		communist = 18
@@ -143,7 +143,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Jean-Jacques Ekindi"
 	picture = "Portrait_CAM_Jean-Jacques_Ekindi.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -11,13 +11,7 @@ focus_tree = {
 	id = bulgarian_focus
 
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = BUL
-			has_dlc = "Battle for the Bosporus"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

@@ -84,7 +84,7 @@ set_popularities = {
 		national_conservative = 20
 		centrist = 0
 		liberal = 0
-		new_democrat = 9
+		social_democrat = 9
 		moderate_socialist = 0
 		revolutionary_socialist = 2
 		communist = 31
@@ -135,7 +135,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Frank Habineza"
 	picture = "Portrait_RWA_Frank_Habineza.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

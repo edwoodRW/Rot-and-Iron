@@ -97,7 +97,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 5
 		liberal = 25
-		new_democrat = 5
+		social_democrat = 5
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 5
@@ -155,7 +155,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Aecio Neves"
 	picture = "Portrait_BRA_Aecio_Neves.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

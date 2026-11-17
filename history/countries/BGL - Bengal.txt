@@ -83,7 +83,7 @@ set_popularities = {
 		national_conservative = 4
 		centrist = 0
 		liberal = 0
-		new_democrat = 9
+		social_democrat = 9
 		moderate_socialist = 6
 		revolutionary_socialist = 11
 		communist = 30
@@ -134,7 +134,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Manas Bhunia"
 	picture = "Portrait_BGL_Manas_Bhunia.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

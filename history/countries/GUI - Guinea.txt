@@ -85,7 +85,7 @@ set_popularities = {
 		national_conservative = 10
 		centrist = 10
 		liberal = 0
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 15
 		revolutionary_socialist = 5
 		communist = 20
@@ -136,7 +136,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Nanfadima Magassouba"
 	picture = "Portrait_GUI_Nanfadima_Magassouba.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

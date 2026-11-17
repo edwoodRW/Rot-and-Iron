@@ -1,5 +1,156 @@
 ideas = {
+
+
+	hidden_ideas = {
+		RI_GER_soviet_eastern_retreat = {
+			allowed = { always = no }
+			picture = The_Spartacist_Legacy
+
+			modifier = {
+				surrender_limit = 1
+				max_surrender_limit_offset = 1
+			}
+		}
+	}
+
 	country = {
+
+		The_Democratic_Socialist_Model = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = The_Democratic_Socialist_Model
+			modifier = { research_speed_factor = 0.03 }
+		}
+
+		The_Spartacist_Legacy = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = The_Spartacist_Legacy
+			modifier = { stability_factor = 0.05 }
+		}
+
+
+
+		GER_SOV_reconstruction_science = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = { research_speed_factor = 0.03 }
+		}
+
+		GER_SOV_planned_reconstruction = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				political_power_gain = -0.02
+			}
+		}
+
+		GER_SOV_workers_guarantees = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		GER_SOV_integrated_industry = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = { industrial_capacity_factory = 0.05 }
+		}
+
+		GER_SOV_underground_network = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		GER_SOV_liberation_militia = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				army_defence_factor = 0.08
+				army_org_factor = 0.05
+			}
+		}
+
+		GER_recovery_transport_plan = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+
+		GER_recovery_peacetime_industry = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		GER_recovery_council_participation = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				production_speed_industrial_complex_factor = 0.08
+				political_power_gain = -0.02
+			}
+		}
+
+		GER_recovery_national_consensus = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_foreign_capital
+			modifier = {
+				political_power_gain = 0.08
+				production_speed_industrial_complex_factor = -0.03
+			}
+		}
+
+		GER_recovery_defensive_posture = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				army_org_factor = 0.03
+				planning_speed = 0.05
+			}
+		}
+
+		GER_recovery_national_renewal = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				political_power_gain = 0.03
+				research_speed_factor = 0.03
+			}
+		}
+
 		GER_diplomatic_corps = {
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }

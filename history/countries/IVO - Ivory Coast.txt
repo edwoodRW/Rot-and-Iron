@@ -86,7 +86,7 @@ set_popularities = {
 		national_conservative = 5
 		centrist = 10
 		liberal = 35
-		new_democrat = 15
+		social_democrat = 15
 		moderate_socialist = 0
 		revolutionary_socialist = 8
 		communist = 27
@@ -137,7 +137,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Francis Wodié"
 	picture = "Portrait_IVO_Francis_Wodie.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

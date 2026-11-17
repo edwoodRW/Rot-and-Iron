@@ -1,0 +1,261 @@
+technologies = {
+
+	RI_future_infantry = {
+		enable_equipments = { infantry_equipment_4 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 20 }
+		}
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_artillery = {
+		enable_equipments = { artillery_equipment_4 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 18 }
+		}
+		categories = { artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_artillery
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_mbt_chassis = {
+		enable_equipments = { modern_tank_chassis_2 modern_tank_destroyer_chassis_2 modern_tank_artillery_chassis_2 modern_tank_aa_chassis_2 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 14 }
+		}
+		categories = { armor
+			mio_cat_tech_all_armor_and_modules
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_mbt = {
+		enable_equipments = { modern_tank_equipment_2 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 14 }
+		}
+		categories = { armor
+			mio_cat_tech_all_armor_and_modules
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_fighter_airframe = {
+		enable_equipments = { small_plane_airframe_6 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 0 y = 14 }
+		}
+		categories = { light_air
+			light_fighter
+			cas_bomber
+			air_equipment
+			naval_air
+			naval_bomber
+			jet_technology
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_cas_and_modules
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_light_aircraft_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_fighter = {
+		enable_equipments = { jet_fighter_equipment_3 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = air_techs_folder
+			position = { x = 1 y = 14 }
+		}
+		categories = { light_air
+			light_fighter
+			air_equipment
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_light_aircraft_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_destroyer_hull = {
+		enable_equipments = { ship_hull_light_5 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = mtgnavalfolder
+			position = { x = 0 y = 24 }
+		}
+		categories = { naval_equipment
+			dd_tech
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_destroyer_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_cruiser_hull = {
+		enable_equipments = { ship_hull_cruiser_5 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = mtgnavalfolder
+			position = { x = -1 y = 24 }
+		}
+		categories = { naval_equipment
+			ca_tech
+			mio_cat_tech_all_capital_ship_and_modules
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_cruiser_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_heavy_hull = {
+		enable_equipments = { ship_hull_heavy_5 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = mtgnavalfolder
+			position = { x = 0 y = 24 }
+		}
+		categories = { naval_equipment
+			bb_tech
+			bc_tech
+			mio_cat_tech_all_capital_ship_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_carrier_hull = {
+		enable_equipments = { ship_hull_carrier_4 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = mtgnavalfolder
+			position = { x = -1 y = 24 }
+		}
+		categories = { naval_equipment
+			cv_tech
+			mio_cat_tech_all_carrier_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_submarine_hull = {
+		enable_equipments = { ship_hull_submarine_5 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = mtgnavalfolder
+			position = { x = -2 y = 24 }
+		}
+		categories = { naval_equipment
+			ss_tech
+			mio_cat_tech_all_submarine_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_destroyer = {
+		enable_equipments = { destroyer_5 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = naval_folder
+			position = { x = 0 y = 23 }
+		}
+		categories = { naval_equipment
+			dd_tech
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_destroyer_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_light_cruiser = {
+		enable_equipments = { light_cruiser_5 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = naval_folder
+			position = { x = -1 y = 23 }
+		}
+		categories = { naval_artillery
+			naval_equipment
+			ca_tech
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_cruiser_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_heavy_cruiser = {
+		enable_equipments = { heavy_cruiser_5 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = naval_folder
+			position = { x = 1 y = 23 }
+		}
+		categories = { naval_artillery
+			naval_equipment
+			ca_tech
+			mio_cat_tech_all_capital_ship_and_modules
+			mio_cat_tech_all_cruiser_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_battleship = {
+		enable_equipments = { battleship_5 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = naval_folder
+			position = { x = 1 y = 23 }
+		}
+		categories = { naval_artillery
+			naval_equipment
+			bb_tech
+			mio_cat_tech_all_capital_ship_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_carrier = {
+		enable_equipments = { carrier_5 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = naval_folder
+			position = { x = 0 y = 23 }
+		}
+		categories = { naval_equipment
+			cv_tech
+			mio_cat_tech_all_carrier_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+
+	RI_future_submarine = {
+		enable_equipments = { submarine_5 }
+		research_cost = 2
+		start_year = 2050
+		folder = {
+			name = naval_folder
+			position = { x = 0 y = 23 }
+		}
+		categories = { naval_equipment
+			ss_tech
+			mio_cat_tech_all_submarine_and_modules }
+		ai_will_do = { factor = 1 }
+	}
+}

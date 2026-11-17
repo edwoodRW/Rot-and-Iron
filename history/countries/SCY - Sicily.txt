@@ -86,7 +86,7 @@ set_popularities = {
 		national_conservative = 32
 		centrist = 22
 		liberal = 0
-		new_democrat = 6
+		social_democrat = 6
 		moderate_socialist = 0
 		revolutionary_socialist = 4
 		communist = 18
@@ -144,7 +144,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Leoluca Orlando"
 	picture = "Portrait_SCY_Leoluca_Orlando.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

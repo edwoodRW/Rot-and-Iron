@@ -1,0 +1,27 @@
+capital = 13018
+
+set_research_slots = 3
+set_convoys = 500
+set_stability = 0.7
+set_war_support = 0.2
+
+set_politics = {
+	ruling_party = nationalist
+	last_election = "2024.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascist = 0
+	nationalist = 20
+	monarchist = 0
+	national_bolshevik = 0
+	national_conservative = 35
+	centrist = 0
+	liberal = 20
+	social_democrat = 15
+	moderate_socialist = 0
+	revolutionary_socialist = 5
+	communist = 5
+}

@@ -2,16 +2,7 @@ focus_tree = {
 	id = polish_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = POL
-			OR = {
-				has_dlc = "Poland: United and Ready"
-				has_dlc = "No Step Back"
-			}
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	default = no
 

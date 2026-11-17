@@ -88,7 +88,7 @@ set_popularities = {
 		national_conservative = 5
 		centrist = 3
 		liberal = 0
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 0
 		revolutionary_socialist = 58
 		communist = 20
@@ -145,7 +145,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Margot Soria Saravia"
 	picture = "Portrait_BOL_Margot_Soria_Saravia.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

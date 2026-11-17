@@ -95,7 +95,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 0
 		liberal = 0
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 10
 		revolutionary_socialist = 42
 		communist = 30
@@ -152,7 +152,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Meles Zenawi"
 	picture = "Portrait_ETH_Meles_Zenawi.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

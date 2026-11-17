@@ -1,0 +1,16 @@
+characters = {
+	RI_GER_test_bisect = {
+		name = RI_GER_test_bisect
+		portraits = {
+			army = {
+				small = GFX_idea_generic_political_advisor_europe_1
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_test_bisect
+			allowed = { original_tag = GER }
+			traits = { captain_of_industry }
+		}
+	}
+}

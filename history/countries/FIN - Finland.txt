@@ -8,6 +8,7 @@ set_stability = 0.6
 set_war_support = 0.2
 
 add_ideas = {
+	RI_european_socialist_union
 	Council_Of_Nordic_Nations
    UN_Member_idea
 }
@@ -95,7 +96,7 @@ set_popularities = {
 		national_conservative = 20
 		centrist = 0
 		liberal = 15
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 8
 		communist = 5
@@ -146,7 +147,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Jutta Urpilainen"
 	picture = "Portrait_FIN_Jutta_Urpilainen.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -9,6 +9,7 @@ set_war_support = 0.3
 
 
 add_ideas = {
+   RI_european_socialist_union
    UN_Member_idea
 Reichspakt_idea 
     EuroPaktMember_idea
@@ -94,7 +95,7 @@ set_popularities = {
         national_conservative = 9
         centrist = 14
         liberal = 7
-        new_democrat = 13
+        social_democrat = 13
         moderate_socialist = 3
         revolutionary_socialist = 0
         communist = 11
@@ -147,7 +148,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Jevgeni Ossinovski"
 	picture = "Portrait_EST_Jevgeni_Ossinovski.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

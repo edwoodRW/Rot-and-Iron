@@ -120,7 +120,7 @@ set_popularities = {
 		national_conservative = 1
 		centrist = 0
 		liberal = 4
-		new_democrat = 3
+		social_democrat = 3
 		moderate_socialist = 0
 		revolutionary_socialist = 20
 		communist = 65
@@ -178,7 +178,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Kevin de Leon"
 	picture = "Portrait_PCA_Kevin_De_Leon.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

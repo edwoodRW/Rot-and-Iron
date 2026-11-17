@@ -84,7 +84,7 @@ if = {
 }
 
 set_politics = {
-	ruling_party = new_democrat
+	ruling_party = social_democrat
 	last_election = "1997.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -98,7 +98,7 @@ set_popularities = {
 		national_conservative = 15
 		centrist = 2
 		liberal = 15
-		new_democrat = 39
+		social_democrat = 39
 		moderate_socialist = 2
 		revolutionary_socialist = 10
 		communist = 12
@@ -155,7 +155,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Juan Guaidó"
 	picture = "Juan_Guaido.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

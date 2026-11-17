@@ -83,7 +83,7 @@ set_popularities = {
 		national_conservative = 22
 		centrist = 27
 		liberal = 11
-		new_democrat = 23
+		social_democrat = 23
 		moderate_socialist = 7
 		revolutionary_socialist = 1
 		communist = 0
@@ -134,7 +134,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Siddaramaiah"
 	picture = "Portrait_KRN_Siddaramaiah.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

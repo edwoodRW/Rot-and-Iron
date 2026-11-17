@@ -2,28 +2,7 @@
 	id = china_warlord_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			OR = {
-				tag = YUN
-				tag = SIK
-				tag = GXC
-				tag = SHX
-				tag = XSM
-				tag = GDC
-				tag = XIC
-				tag = SND
-				tag = KHM
-				tag = NXM
-				tag = GSM
-				tag = SIC
-				tag = KUM
-				tag = HBC
-			}
-			has_dlc = "Waking the Tiger"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

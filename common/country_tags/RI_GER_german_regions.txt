@@ -1,0 +1,5 @@
+RWG = "countries/RI_GER_Westphalia.txt"
+RHG = "countries/RI_GER_Hesse.txt"
+RSB = "countries/RI_GER_Swabia.txt"
+ROD = "countries/RI_GER_Oder.txt"
+RSM = "countries/RI_GER_Western_Administration.txt"

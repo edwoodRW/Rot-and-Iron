@@ -3,6 +3,7 @@
 oob = "LUX_2000"
 
 add_ideas = {
+    RI_european_socialist_union
     UN_Member_idea
 }
 
@@ -92,7 +93,7 @@ set_popularities = {
 		national_conservative = 0
 		centrist = 34
 		liberal = 24
-		new_democrat = 22
+		social_democrat = 22
 		moderate_socialist = 6
 		revolutionary_socialist = 0
 		communist = 0
@@ -149,7 +150,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Alex Bodry"
 	picture = "Portrait_LUX_Francoise_Folmer.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {
@@ -240,4 +241,3 @@ create_corps_commander = {
 	planning_skill = 1
 	logistics_skill = 1
 }
-

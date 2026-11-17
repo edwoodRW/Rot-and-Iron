@@ -1,4 +1,4 @@
-﻿capital = 639
+capital = 13021
 
 oob = "KIR_2000"
 
@@ -88,7 +88,7 @@ set_popularities = {
 		national_conservative = 15
 		centrist = 20
 		liberal = 22
-		new_democrat = 8
+		social_democrat = 8
 		moderate_socialist = 0
 		revolutionary_socialist = 3
 		communist = 4

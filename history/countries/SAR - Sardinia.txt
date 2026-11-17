@@ -83,7 +83,7 @@ set_popularities = {
 		national_conservative = 40
 		centrist = 0
 		liberal = 17
-		new_democrat = 13
+		social_democrat = 13
 		moderate_socialist = 0
 		revolutionary_socialist = 7
 		communist = 13
@@ -140,7 +140,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Gavino Sale"
 	picture = "Portrait_SAR_Gavino_Sale.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

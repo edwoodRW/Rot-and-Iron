@@ -13,12 +13,7 @@ focus_tree = {
 	id = chilean_focus_tree
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = CHL
-			has_dlc = "Trial of Allegiance"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 

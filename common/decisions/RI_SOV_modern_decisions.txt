@@ -1,0 +1,24 @@
+RI_SOV_digital_policy_category = {
+	allowed = { original_tag = SOV }
+	visible = { has_country_flag = RI_SOV_digital_policy_unlocked }
+	decision = {
+		RI_SOV_open_network = {
+			cost = 50
+			fire_only_once = yes
+			complete_effect = { add_ideas = RI_SOV_digital_union add_stability = 0.05 add_to_variable = { RI_SOV_cohesion = -5 } }
+			available = { has_political_power > 49 }
+		}
+		RI_SOV_state_network = {
+			cost = 50
+			fire_only_once = yes
+			complete_effect = { add_ideas = RI_SOV_soviet_internet_act }
+			available = { has_political_power > 49 }
+		}
+		RI_SOV_sovereign_network = {
+			cost = 50
+			fire_only_once = yes
+			complete_effect = { add_ideas = RI_SOV_cyber_directorate add_stability = -0.03 }
+			available = { has_political_power > 49 }
+		}
+	}
+}

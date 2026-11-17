@@ -448,7 +448,7 @@
  STATE_308:0 "Leeward Islands"
  STATE_309:0 "Suriname"
  STATE_310:0 "French Guiana"
- STATE_311:1 "British Honduras"
+ STATE_311:1 "Belize"
  STATE_312:0 "Honduras"
  STATE_313:0 "Guatemala"
  STATE_314:0 "El Salvador"
@@ -835,7 +835,7 @@
  STATE_684:0 "Caroline Islands"
  STATE_685:1 "Panamá Canal"
  STATE_686:0 "Puerto Rico"
- STATE_687:0 "British Guyana"
+ STATE_687:0 "Guyana"
  STATE_688:0 "Chaco Boreal"
  STATE_689:0 "Jamaica"
  STATE_690:0 "Northern Bahamas"
@@ -1257,8 +1257,6 @@
  STATE_1044: "Wuwei"
  STATE_1045: "Guyuan"
  STATE_1046: "Yulin"
-
-
 
 
 

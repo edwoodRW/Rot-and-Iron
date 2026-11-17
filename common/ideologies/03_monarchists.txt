@@ -18,12 +18,6 @@ ideologies = {
 			Nortism = {
 			}
 			
-			Theocratic_Shia = {
-			}
-
-			Neo_Ikhwanism = {
-			}
-
 			Emirati_Futurism = {
 			}
 

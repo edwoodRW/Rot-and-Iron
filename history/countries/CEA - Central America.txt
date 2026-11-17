@@ -94,7 +94,7 @@ set_popularities = {
 		national_conservative = 18
 		centrist = 15
 		liberal = 0
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 0
@@ -152,7 +152,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Guillermo Enrique Valle"
 	picture = "Portrait_CEA_Guillermo_Enrique_Valle.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

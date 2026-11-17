@@ -5,13 +5,30 @@ guiTypes = {
 		position = { x=-4 y=-1 }	
 		size = { width=100%% height=100%% }
 		
-		iconType = {
-			name ="background"
-			spriteType = "GFX_topbar_background_extended"
-			position = { x= 0 y = 0 }
+		containerWindowType = {
+			name = "RI_topbar_bg_lower"
+			position = { x = 0 y = 36 }
+			size = { width = 1150 height = 54 }
 			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_RI_panel"
+			}
 		}
-		
+
+		containerWindowType = {
+			name = "RI_topbar_bg"
+			position = { x = 0 y = 0 }
+			size = { width = 100%% height = 44 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_RI_panel"
+			}
+		}
+
 		buttonType = {
 			name = "reopen_ingame_lobby"
 			quadTextureSprite ="GFX_reopen_lobby"
@@ -87,6 +104,18 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 		
+		containerWindowType = {
+			name = "player_flag_frame"
+			position = { x = 10 y = 12 }
+			size = { width = 86 height = 56 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_RI_flag_frame"
+			}
+		}
+
 		buttonType = {
 			name = "player_flag"
 			quadTextureSprite ="GFX_shield_medium"

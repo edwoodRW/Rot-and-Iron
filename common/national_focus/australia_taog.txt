@@ -19,12 +19,7 @@ focus_tree = {
 	id = australia_taog_focus
 	
 	country = {
-		factor = 0
-		modifier = {
-			add = 1000
-			tag = AST
-			has_dlc = "Thunder at Our Gates"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	initial_show_position = { 

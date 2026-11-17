@@ -96,7 +96,7 @@ set_popularities = {
 		national_conservative = 30
 		centrist = 0
 		liberal = 22
-		new_democrat = 9
+		social_democrat = 9
 		moderate_socialist = 0
 		revolutionary_socialist = 6
 		communist = 5
@@ -115,8 +115,8 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "John Hume"
-	picture = "john_hume.dds"
+	name = "Michelle O'Neill"
+	picture = "Portrait_IRE_Michelle_O_Neill.dds"
 	ideology = nationalist_ideology
 }
 
@@ -133,13 +133,13 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Bertie Ahern"
-	picture = "Bertie_Ahern.dds"
+	name = "Simon Harris"
+	picture = "Portrait_IRE_Simon_Harris.dds"
 	ideology = one_conservative
 }
 
 create_country_leader = {
-	name = "David Trimble"
+	name = "Micheál Martin"
 	picture = "Portrait_IRE_Micheal_Martin.dds"
 	ideology = centrist_ideology
 }
@@ -153,12 +153,12 @@ create_country_leader = {
 create_country_leader = {
 	name = "Brendan Howlin"
 	picture = "Portrait_IRE_Brendan_Howlin.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {
-	name = "Gerry Adams"
-	picture = "Portrait_IRE_Gerry_Adams.dds"
+	name = "Mary Lou McDonald"
+	picture = "Portrait_IRE_Mary_Lou_McDonald.dds"
 	ideology = democratic_socialist
 }
 

@@ -92,7 +92,7 @@ set_popularities = {
 		national_conservative = 1
 		centrist = 0
 		liberal = 10
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 38
 		revolutionary_socialist = 0
 		communist = 34
@@ -149,7 +149,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "José Samo Gudo"
 	picture = "Portrait_MZB_José_Samo_Gudo.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

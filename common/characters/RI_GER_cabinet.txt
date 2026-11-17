@@ -1,0 +1,793 @@
+characters = {
+	RI_GER_moderate_anja_keller = {
+		name = RI_GER_moderate_anja_keller
+		portraits = { civilian = { large = GFX_idea_generic_political_advisor_europe_1 small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_moderate_anja_keller
+			allowed = { original_tag = GER }
+			visible = { always = yes }
+			available = { always = yes }
+			cost = 50
+			traits = { RI_GER_foreign_minister }
+		}
+	}
+	RI_GER_moderate_klara_vogt = {
+		name = RI_GER_moderate_klara_vogt
+		portraits = { civilian = { large = GFX_idea_RI_GER_klara_vogt small = GFX_idea_RI_GER_klara_vogt } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_moderate_klara_vogt
+			allowed = { original_tag = GER }
+			visible = { has_government = moderate_socialist }
+			available = { has_government = moderate_socialist }
+			cost = 50
+			traits = { RI_GER_deputy_chancellor }
+		}
+	}
+	RI_GER_moderate_martin_eberhardt = {
+		name = RI_GER_moderate_martin_eberhardt
+		portraits = { civilian = { large = GFX_idea_RI_GER_martin_eberhardt small = GFX_idea_RI_GER_martin_eberhardt } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_moderate_martin_eberhardt
+			allowed = { original_tag = GER }
+			visible = { has_government = moderate_socialist }
+			available = { has_government = moderate_socialist }
+			cost = 50
+			traits = { RI_GER_party_chairman }
+		}
+	}
+
+	RI_GER_social_democrat_vice_chancellor = {
+		name = RI_GER_social_democrat_vice_chancellor
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_social_democrat_vice_chancellor
+			allowed = { original_tag = GER }
+			visible = { has_government = social_democrat }
+			available = { has_government = social_democrat }
+			cost = 50
+			traits = { silent_workhorse }
+		}
+	}
+	RI_GER_social_democrat_foreign_minister = {
+		name = RI_GER_social_democrat_foreign_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_social_democrat_foreign_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = social_democrat }
+			available = { has_government = social_democrat }
+			cost = 50
+			traits = { smooth_talking_charmer }
+		}
+	}
+	RI_GER_social_democrat_interior_minister = {
+		name = RI_GER_social_democrat_interior_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_social_democrat_interior_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = social_democrat }
+			available = { has_government = social_democrat }
+			cost = 50
+			traits = { popular_figurehead }
+		}
+	}
+
+	RI_GER_revolutionary_vice_chancellor = {
+		name = RI_GER_revolutionary_vice_chancellor
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_revolutionary_vice_chancellor
+			allowed = { original_tag = GER }
+			visible = { has_government = revolutionary_socialist }
+			available = { has_government = revolutionary_socialist }
+			cost = 50
+			traits = { silent_workhorse }
+		}
+	}
+	RI_GER_revolutionary_foreign_minister = {
+		name = RI_GER_revolutionary_foreign_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_revolutionary_foreign_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = revolutionary_socialist }
+			available = { has_government = revolutionary_socialist }
+			cost = 50
+			traits = { smooth_talking_charmer }
+		}
+	}
+	RI_GER_revolutionary_interior_minister = {
+		name = RI_GER_revolutionary_interior_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_revolutionary_interior_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = revolutionary_socialist }
+			available = { has_government = revolutionary_socialist }
+			cost = 50
+			traits = { popular_figurehead }
+		}
+	}
+
+	RI_GER_communist_vice_chancellor = {
+		name = RI_GER_communist_vice_chancellor
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_communist_vice_chancellor
+			allowed = { original_tag = GER }
+			visible = { has_government = communist }
+			available = { has_government = communist }
+			cost = 50
+			traits = { silent_workhorse }
+		}
+	}
+	RI_GER_communist_foreign_minister = {
+		name = RI_GER_communist_foreign_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_communist_foreign_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = communist }
+			available = { has_government = communist }
+			cost = 50
+			traits = { smooth_talking_charmer }
+		}
+	}
+	RI_GER_communist_interior_minister = {
+		name = RI_GER_communist_interior_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_communist_interior_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = communist }
+			available = { has_government = communist }
+			cost = 50
+			traits = { popular_figurehead }
+		}
+	}
+
+	RI_GER_liberal_vice_chancellor = {
+		name = RI_GER_liberal_vice_chancellor
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_liberal_vice_chancellor
+			allowed = { original_tag = GER }
+			visible = { has_government = liberal }
+			available = { has_government = liberal }
+			cost = 50
+			traits = { silent_workhorse }
+		}
+	}
+	RI_GER_liberal_foreign_minister = {
+		name = RI_GER_liberal_foreign_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_liberal_foreign_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = liberal }
+			available = { has_government = liberal }
+			cost = 50
+			traits = { smooth_talking_charmer }
+		}
+	}
+	RI_GER_liberal_interior_minister = {
+		name = RI_GER_liberal_interior_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_liberal_interior_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = liberal }
+			available = { has_government = liberal }
+			cost = 50
+			traits = { popular_figurehead }
+		}
+	}
+
+	RI_GER_centrist_vice_chancellor = {
+		name = RI_GER_centrist_vice_chancellor
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_centrist_vice_chancellor
+			allowed = { original_tag = GER }
+			visible = { has_government = centrist }
+			available = { has_government = centrist }
+			cost = 50
+			traits = { silent_workhorse }
+		}
+	}
+	RI_GER_centrist_foreign_minister = {
+		name = RI_GER_centrist_foreign_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_centrist_foreign_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = centrist }
+			available = { has_government = centrist }
+			cost = 50
+			traits = { smooth_talking_charmer }
+		}
+	}
+	RI_GER_centrist_interior_minister = {
+		name = RI_GER_centrist_interior_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_centrist_interior_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = centrist }
+			available = { has_government = centrist }
+			cost = 50
+			traits = { popular_figurehead }
+		}
+	}
+
+	RI_GER_national_conservative_vice_chancellor = {
+		name = RI_GER_national_conservative_vice_chancellor
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_national_conservative_vice_chancellor
+			allowed = { original_tag = GER }
+			visible = { has_government = national_conservative }
+			available = { has_government = national_conservative }
+			cost = 50
+			traits = { silent_workhorse }
+		}
+	}
+	RI_GER_national_conservative_foreign_minister = {
+		name = RI_GER_national_conservative_foreign_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_national_conservative_foreign_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = national_conservative }
+			available = { has_government = national_conservative }
+			cost = 50
+			traits = { smooth_talking_charmer }
+		}
+	}
+	RI_GER_national_conservative_interior_minister = {
+		name = RI_GER_national_conservative_interior_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_national_conservative_interior_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = national_conservative }
+			available = { has_government = national_conservative }
+			cost = 50
+			traits = { popular_figurehead }
+		}
+	}
+
+	RI_GER_nationalist_vice_chancellor = {
+		name = RI_GER_nationalist_vice_chancellor
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_nationalist_vice_chancellor
+			allowed = { original_tag = GER }
+			visible = { has_government = nationalist }
+			available = { has_government = nationalist }
+			cost = 50
+			traits = { silent_workhorse }
+		}
+	}
+	RI_GER_nationalist_foreign_minister = {
+		name = RI_GER_nationalist_foreign_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_nationalist_foreign_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = nationalist }
+			available = { has_government = nationalist }
+			cost = 50
+			traits = { smooth_talking_charmer }
+		}
+	}
+	RI_GER_nationalist_interior_minister = {
+		name = RI_GER_nationalist_interior_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_nationalist_interior_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = nationalist }
+			available = { has_government = nationalist }
+			cost = 50
+			traits = { popular_figurehead }
+		}
+	}
+
+	RI_GER_fascist_vice_chancellor = {
+		name = RI_GER_fascist_vice_chancellor
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_fascist_vice_chancellor
+			allowed = { original_tag = GER }
+			visible = { has_government = fascist }
+			available = { has_government = fascist }
+			cost = 50
+			traits = { silent_workhorse }
+		}
+	}
+	RI_GER_fascist_foreign_minister = {
+		name = RI_GER_fascist_foreign_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_fascist_foreign_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = fascist }
+			available = { has_government = fascist }
+			cost = 50
+			traits = { smooth_talking_charmer }
+		}
+	}
+	RI_GER_fascist_interior_minister = {
+		name = RI_GER_fascist_interior_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_fascist_interior_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = fascist }
+			available = { has_government = fascist }
+			cost = 50
+			traits = { popular_figurehead }
+		}
+	}
+
+	RI_GER_national_bolshevik_vice_chancellor = {
+		name = RI_GER_national_bolshevik_vice_chancellor
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_national_bolshevik_vice_chancellor
+			allowed = { original_tag = GER }
+			visible = { has_government = national_bolshevik }
+			available = { has_government = national_bolshevik }
+			cost = 50
+			traits = { silent_workhorse }
+		}
+	}
+	RI_GER_national_bolshevik_foreign_minister = {
+		name = RI_GER_national_bolshevik_foreign_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_national_bolshevik_foreign_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = national_bolshevik }
+			available = { has_government = national_bolshevik }
+			cost = 50
+			traits = { smooth_talking_charmer }
+		}
+	}
+	RI_GER_national_bolshevik_interior_minister = {
+		name = RI_GER_national_bolshevik_interior_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_national_bolshevik_interior_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = national_bolshevik }
+			available = { has_government = national_bolshevik }
+			cost = 50
+			traits = { popular_figurehead }
+		}
+	}
+
+	RI_GER_monarchist_vice_chancellor = {
+		name = RI_GER_monarchist_vice_chancellor
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_monarchist_vice_chancellor
+			allowed = { original_tag = GER }
+			visible = { has_government = monarchist }
+			available = { has_government = monarchist }
+			cost = 50
+			traits = { silent_workhorse }
+		}
+	}
+	RI_GER_monarchist_foreign_minister = {
+		name = RI_GER_monarchist_foreign_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_monarchist_foreign_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = monarchist }
+			available = { has_government = monarchist }
+			cost = 50
+			traits = { smooth_talking_charmer }
+		}
+	}
+	RI_GER_monarchist_interior_minister = {
+		name = RI_GER_monarchist_interior_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_monarchist_interior_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = monarchist }
+			available = { has_government = monarchist }
+			cost = 50
+			traits = { popular_figurehead }
+		}
+	}
+
+	RI_GER_moderate_thomas_berger = {
+		name = RI_GER_moderate_thomas_berger
+		portraits = { civilian = { large = GFX_idea_RI_GER_thomas_berger small = GFX_idea_RI_GER_thomas_berger } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_moderate_thomas_berger
+			allowed = { original_tag = GER }
+			visible = { has_government = moderate_socialist }
+			available = { has_government = moderate_socialist }
+			cost = 50
+			traits = { RI_GER_labour_minister }
+		}
+	}
+	RI_GER_moderate_helena_richter = {
+		name = RI_GER_moderate_helena_richter
+		portraits = { civilian = { large = GFX_idea_RI_GER_helena_richter small = GFX_idea_RI_GER_helena_richter } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_moderate_helena_richter
+			allowed = { original_tag = GER }
+			visible = { has_government = moderate_socialist }
+			available = { has_government = moderate_socialist }
+			cost = 50
+			traits = { RI_GER_finance_minister }
+		}
+	}
+	RI_GER_moderate_economic_advisor = {
+		name = RI_GER_moderate_economic_advisor
+		portraits = { civilian = { large = GFX_idea_RI_GER_marcel_fratzscher small = GFX_idea_RI_GER_marcel_fratzscher } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_moderate_economic_advisor
+			allowed = { original_tag = GER }
+			visible = { has_government = moderate_socialist }
+			available = { has_government = moderate_socialist }
+			cost = 50
+			traits = { RI_GER_economic_adviser }
+		}
+	}
+	RI_GER_moderate_industry_climate_minister = {
+		name = RI_GER_moderate_industry_climate_minister
+		portraits = { civilian = { large = GFX_idea_RI_GER_robert_habeck small = GFX_idea_RI_GER_robert_habeck } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_moderate_industry_climate_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = moderate_socialist }
+			available = { has_government = moderate_socialist }
+			cost = 50
+			traits = { RI_GER_industry_climate_minister }
+		}
+	}
+	RI_GER_moderate_science_research_minister = {
+		name = RI_GER_moderate_science_research_minister
+		portraits = { civilian = { large = GFX_idea_RI_GER_anton_hofreiter small = GFX_idea_RI_GER_anton_hofreiter } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_moderate_science_research_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = moderate_socialist }
+			available = { has_government = moderate_socialist }
+			cost = 50
+			traits = { RI_GER_science_research_minister }
+		}
+	}
+	RI_GER_moderate_chief_economic_advisor = {
+		name = RI_GER_moderate_chief_economic_advisor
+		portraits = { civilian = { large = GFX_idea_generic_political_advisor_europe_1 small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_moderate_chief_economic_advisor
+			allowed = { original_tag = GER }
+			visible = { has_government = moderate_socialist }
+			available = { has_government = moderate_socialist }
+			cost = 50
+			traits = { RI_GER_chief_economic_advisor }
+		}
+	}
+	RI_GER_moderate_lukas_hartmann = {
+		name = RI_GER_moderate_lukas_hartmann
+		portraits = { civilian = { large = GFX_idea_generic_political_advisor_europe_3 small = GFX_idea_generic_political_advisor_europe_3 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_moderate_lukas_hartmann
+			allowed = { original_tag = GER }
+			visible = { has_government = moderate_socialist }
+			available = { has_government = moderate_socialist }
+			cost = 50
+			traits = { RI_GER_interior_minister }
+		}
+	}
+	RI_GER_social_democrat_finance_minister = {
+		name = RI_GER_social_democrat_finance_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_social_democrat_finance_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = social_democrat }
+			available = { has_government = social_democrat }
+			cost = 50
+			traits = { war_industrialist }
+		}
+	}
+	RI_GER_social_democrat_defence_minister = {
+		name = RI_GER_social_democrat_defence_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_social_democrat_defence_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = social_democrat }
+			available = { has_government = social_democrat }
+			cost = 50
+			traits = { army_chief_defensive_1 }
+		}
+	}
+	RI_GER_revolutionary_finance_minister = {
+		name = RI_GER_revolutionary_finance_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_revolutionary_finance_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = revolutionary_socialist }
+			available = { has_government = revolutionary_socialist }
+			cost = 50
+			traits = { war_industrialist }
+		}
+	}
+	RI_GER_revolutionary_defence_minister = {
+		name = RI_GER_revolutionary_defence_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_revolutionary_defence_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = revolutionary_socialist }
+			available = { has_government = revolutionary_socialist }
+			cost = 50
+			traits = { army_chief_defensive_1 }
+		}
+	}
+	RI_GER_communist_finance_minister = {
+		name = RI_GER_communist_finance_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_communist_finance_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = communist }
+			available = { has_government = communist }
+			cost = 50
+			traits = { war_industrialist }
+		}
+	}
+	RI_GER_communist_defence_minister = {
+		name = RI_GER_communist_defence_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_communist_defence_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = communist }
+			available = { has_government = communist }
+			cost = 50
+			traits = { army_chief_defensive_1 }
+		}
+	}
+	RI_GER_liberal_finance_minister = {
+		name = RI_GER_liberal_finance_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_liberal_finance_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = liberal }
+			available = { has_government = liberal }
+			cost = 50
+			traits = { war_industrialist }
+		}
+	}
+	RI_GER_liberal_defence_minister = {
+		name = RI_GER_liberal_defence_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_liberal_defence_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = liberal }
+			available = { has_government = liberal }
+			cost = 50
+			traits = { army_chief_defensive_1 }
+		}
+	}
+	RI_GER_centrist_finance_minister = {
+		name = RI_GER_centrist_finance_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_centrist_finance_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = centrist }
+			available = { has_government = centrist }
+			cost = 50
+			traits = { war_industrialist }
+		}
+	}
+	RI_GER_centrist_defence_minister = {
+		name = RI_GER_centrist_defence_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_centrist_defence_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = centrist }
+			available = { has_government = centrist }
+			cost = 50
+			traits = { army_chief_defensive_1 }
+		}
+	}
+	RI_GER_national_conservative_finance_minister = {
+		name = RI_GER_national_conservative_finance_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_national_conservative_finance_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = national_conservative }
+			available = { has_government = national_conservative }
+			cost = 50
+			traits = { war_industrialist }
+		}
+	}
+	RI_GER_national_conservative_defence_minister = {
+		name = RI_GER_national_conservative_defence_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_national_conservative_defence_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = national_conservative }
+			available = { has_government = national_conservative }
+			cost = 50
+			traits = { army_chief_defensive_1 }
+		}
+	}
+	RI_GER_nationalist_finance_minister = {
+		name = RI_GER_nationalist_finance_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_nationalist_finance_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = nationalist }
+			available = { has_government = nationalist }
+			cost = 50
+			traits = { war_industrialist }
+		}
+	}
+	RI_GER_nationalist_defence_minister = {
+		name = RI_GER_nationalist_defence_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_nationalist_defence_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = nationalist }
+			available = { has_government = nationalist }
+			cost = 50
+			traits = { army_chief_defensive_1 }
+		}
+	}
+	RI_GER_fascist_finance_minister = {
+		name = RI_GER_fascist_finance_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_fascist_finance_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = fascist }
+			available = { has_government = fascist }
+			cost = 50
+			traits = { war_industrialist }
+		}
+	}
+	RI_GER_fascist_defence_minister = {
+		name = RI_GER_fascist_defence_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_fascist_defence_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = fascist }
+			available = { has_government = fascist }
+			cost = 50
+			traits = { army_chief_defensive_1 }
+		}
+	}
+	RI_GER_national_bolshevik_finance_minister = {
+		name = RI_GER_national_bolshevik_finance_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_national_bolshevik_finance_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = national_bolshevik }
+			available = { has_government = national_bolshevik }
+			cost = 50
+			traits = { war_industrialist }
+		}
+	}
+	RI_GER_national_bolshevik_defence_minister = {
+		name = RI_GER_national_bolshevik_defence_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_national_bolshevik_defence_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = national_bolshevik }
+			available = { has_government = national_bolshevik }
+			cost = 50
+			traits = { army_chief_defensive_1 }
+		}
+	}
+	RI_GER_monarchist_finance_minister = {
+		name = RI_GER_monarchist_finance_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_1 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_monarchist_finance_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = monarchist }
+			available = { has_government = monarchist }
+			cost = 50
+			traits = { war_industrialist }
+		}
+	}
+	RI_GER_monarchist_defence_minister = {
+		name = RI_GER_monarchist_defence_minister
+		portraits = { army = { small = GFX_idea_generic_political_advisor_europe_2 } }
+		advisor = {
+			slot = political_advisor
+			idea_token = RI_GER_monarchist_defence_minister
+			allowed = { original_tag = GER }
+			visible = { has_government = monarchist }
+			available = { has_government = monarchist }
+			cost = 50
+			traits = { army_chief_defensive_1 }
+		}
+	}
+}

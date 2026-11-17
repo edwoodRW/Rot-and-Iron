@@ -96,7 +96,7 @@ set_popularities = {
 		national_conservative = 36
 		centrist = 6
 		liberal = 20
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 2
@@ -154,7 +154,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Viktor Szigetvari"
 	picture = "Portrait_HUN_Viktor_Szigetvari.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

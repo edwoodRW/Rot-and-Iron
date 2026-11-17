@@ -1,0 +1,429 @@
+RI_GER_review_german_partition = {
+	if = {
+		limit = {
+			RI_GER_german_partition_ready = yes
+			NOT = { has_country_flag = RI_GER_german_partition_reviewed }
+			RI_GER_has_german_partition_region = yes
+		}
+		country_event = { id = RI_GER_crisis.5 hours = 1 }
+	}
+	else_if = {
+		limit = {
+			RI_GER_german_partition_ready = yes
+			NOT = { has_country_flag = RI_GER_austria_reviewed }
+			RI_GER_can_release_austria_after_defeat = yes
+		}
+		set_country_flag = RI_GER_german_partition_reviewed
+		country_event = { id = RI_GER_crisis.6 hours = 1 }
+	}
+	else_if = {
+		limit = { RI_GER_german_partition_ready = yes }
+		set_country_flag = RI_GER_german_partition_reviewed
+		set_country_flag = RI_GER_austria_reviewed
+	}
+}
+
+RI_GER_establish_german_regions = {
+	if = {
+		limit = { WGR = { exists = no } }
+		every_owned_state = {
+			limit = { RI_GER_partition_west_state = yes RI_GER_german_partition_state_safe = yes }
+			add_core_of = WGR
+			transfer_state_to = WGR
+			WGR = { set_capital = { state = PREV } }
+		}
+		if = {
+			limit = { WGR = { exists = yes } }
+			WGR = {
+				set_politics = { ruling_party = communist elections_allowed = no }
+				set_cosmetic_tag = RI_WGR_west_german
+				recruit_character = RI_WGR_karl_neumann
+				promote_character = RI_WGR_karl_neumann
+			}
+			SOV = { puppet = WGR }
+		}
+	}
+	else = {
+		every_owned_state = {
+			limit = { RI_GER_partition_west_state = yes RI_GER_german_partition_state_safe = yes }
+			transfer_state_to = SOV
+		}
+	}
+	if = {
+		limit = { BAY = { exists = no } }
+		every_owned_state = {
+			limit = { RI_GER_partition_south_state = yes RI_GER_german_partition_state_safe = yes }
+			add_core_of = BAY
+			transfer_state_to = BAY
+			BAY = { set_capital = { state = PREV } }
+		}
+		if = {
+			limit = { BAY = { exists = yes } }
+			BAY = {
+				set_politics = { ruling_party = communist elections_allowed = no }
+				set_cosmetic_tag = RI_BAY_south_german
+				recruit_character = RI_BAY_marta_weber
+				promote_character = RI_BAY_marta_weber
+			}
+			SOV = { puppet = BAY }
+		}
+	}
+	else = {
+		every_owned_state = {
+			limit = { RI_GER_partition_south_state = yes RI_GER_german_partition_state_safe = yes }
+			transfer_state_to = SOV
+		}
+	}
+	RI_GER_refine_german_regions = yes
+	if = {
+		limit = { RI_GER_soviet_settlement_cleanup_ready = yes }
+		RI_GER_finalize_soviet_settlement = yes
+	}
+	set_country_flag = RI_GER_german_regions_refined
+}
+
+RI_GER_establish_western_buffer = {
+	if = {
+		limit = { RI_GER_can_establish_western_buffer = yes }
+		every_owned_state = {
+			limit = {
+				OR = { RI_GER_partition_west_state = yes RI_GER_partition_south_state = yes }
+				RI_GER_german_partition_state_safe = yes
+			}
+			add_core_of = RSM
+			transfer_state_to = RSM
+			RSM = {
+				if = {
+					limit = { NOT = { has_country_flag = RI_GER_western_buffer_created } }
+					set_capital = { state = PREV }
+				}
+			}
+		}
+		SOV = {
+			every_owned_state = {
+				limit = {
+					OR = { RI_GER_partition_west_state = yes RI_GER_partition_south_state = yes }
+					is_fully_controlled_by = SOV
+				}
+				add_core_of = RSM
+				transfer_state_to = RSM
+				RSM = {
+					if = {
+						limit = { NOT = { has_country_flag = RI_GER_western_buffer_created } }
+						set_capital = { state = PREV }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { RSM = { exists = yes NOT = { has_country_flag = RI_GER_western_buffer_created } } }
+			if = { limit = { 55 = { is_owned_by = RSM } } RSM = { set_capital = { state = 55 } } }
+			RSM = {
+				set_country_flag = RI_GER_western_buffer_created
+				set_politics = { ruling_party = communist elections_allowed = no }
+				create_country_leader = {
+					name = "Alexei Morozov"
+					desc = RI_RSM_alexei_morozov_desc
+					picture = GFX_portrait_Europe_Generic_1
+					expire = "2100.1.1.1"
+					ideology = communist
+					traits = { }
+				}
+			}
+			SOV = { puppet = RSM }
+		}
+	}
+}
+
+RI_GER_establish_austria_after_defeat = {
+	every_owned_state = {
+		limit = {
+			RI_GER_partition_austrian_state = yes
+			RI_GER_german_partition_state_safe = yes
+		}
+		transfer_state_to = AUS
+		AUS = { set_capital = { state = PREV } }
+	}
+	if = {
+		limit = { 4 = { is_owned_by = AUS } }
+		AUS = { set_capital = { state = 4 } }
+	}
+	AUS = {
+		set_politics = { ruling_party = communist elections_allowed = no }
+		set_cosmetic_tag = RI_AUS_restored
+		recruit_character = RI_AUS_anna_gruber
+		promote_character = RI_AUS_anna_gruber
+	}
+}
+
+RI_GER_return_existing_austrian_territory = {
+	if = {
+		limit = {
+			AUS = { exists = yes NOT = { has_war_with = SOV } }
+			NOT = { has_war_with = AUS }
+		}
+		every_owned_state = {
+			limit = {
+				RI_GER_partition_austrian_state = yes
+				RI_GER_german_partition_state_safe = yes
+			}
+			transfer_state_to = AUS
+		}
+	}
+}
+
+RI_GER_finalize_soviet_settlement = {
+	RI_GER_return_ermland_to_soviet = yes
+	if = {
+		limit = { POL = { exists = yes } }
+		every_owned_state = {
+			limit = {
+				RI_GER_partition_polish_state = yes
+				RI_GER_german_partition_state_safe = yes
+			}
+			transfer_state_to = POL
+		}
+	}
+	else = {
+		every_owned_state = {
+			limit = {
+				RI_GER_partition_polish_state = yes
+				RI_GER_german_partition_state_safe = yes
+			}
+			transfer_state_to = SOV
+		}
+	}
+	if = {
+		limit = { CZE = { exists = yes } }
+		every_owned_state = {
+			limit = {
+				OR = { state = 69 state = 72 state = 74 state = 972 }
+				RI_GER_german_partition_state_safe = yes
+			}
+			transfer_state_to = CZE
+		}
+	}
+	else = {
+		every_owned_state = {
+			limit = {
+				OR = { state = 69 state = 72 state = 74 state = 972 }
+				RI_GER_german_partition_state_safe = yes
+			}
+			transfer_state_to = SOV
+		}
+	}
+	if = {
+		limit = { 188 = { is_owned_by = GER RI_GER_german_partition_state_safe = yes } }
+		if = {
+			limit = { LIT = { exists = yes } }
+			188 = { transfer_state_to = LIT }
+		}
+		else = { 188 = { transfer_state_to = SOV } }
+	}
+	if = {
+		limit = { AUS = { exists = yes } }
+		RI_GER_return_existing_austrian_territory = yes
+	}
+	else_if = {
+		limit = { RI_GER_can_release_austria_after_defeat = yes }
+		RI_GER_establish_austria_after_defeat = yes
+		SOV = { puppet = AUS }
+		set_country_flag = RI_GER_austria_reviewed
+	}
+	RI_GER_resolve_eastern_pockets = yes
+	if = {
+		limit = { WGR = { exists = yes has_cosmetic_tag = RI_WGR_west_german has_war = no NOT = { is_in_peace_conference = yes } OR = { is_subject = no is_subject_of = SOV } } }
+		WGR = { set_politics = { ruling_party = communist elections_allowed = no } }
+		if = { limit = { WGR = { is_subject = no } } SOV = { puppet = WGR } }
+	}
+	if = {
+		limit = { BAY = { exists = yes has_cosmetic_tag = RI_BAY_south_german has_war = no NOT = { is_in_peace_conference = yes } OR = { is_subject = no is_subject_of = SOV } } }
+		BAY = { set_politics = { ruling_party = communist elections_allowed = no } }
+		if = { limit = { BAY = { is_subject = no } } SOV = { puppet = BAY } }
+	}
+	if = {
+		limit = { RWG = { exists = yes has_war = no NOT = { is_in_peace_conference = yes } OR = { is_subject = no is_subject_of = SOV } } }
+		RWG = { set_politics = { ruling_party = communist elections_allowed = no } }
+		if = { limit = { RWG = { is_subject = no } } SOV = { puppet = RWG } }
+	}
+	if = {
+		limit = { RHG = { exists = yes has_war = no NOT = { is_in_peace_conference = yes } OR = { is_subject = no is_subject_of = SOV } } }
+		RHG = { set_politics = { ruling_party = communist elections_allowed = no } }
+		if = { limit = { RHG = { is_subject = no } } SOV = { puppet = RHG } }
+	}
+	if = {
+		limit = { RSB = { exists = yes has_war = no NOT = { is_in_peace_conference = yes } OR = { is_subject = no is_subject_of = SOV } } }
+		RSB = { set_politics = { ruling_party = communist elections_allowed = no } }
+		if = { limit = { RSB = { is_subject = no } } SOV = { puppet = RSB } }
+	}
+	if = {
+		limit = { AUS = { exists = yes has_cosmetic_tag = RI_AUS_restored has_war = no NOT = { is_in_peace_conference = yes } OR = { is_subject = no is_subject_of = SOV } } }
+		AUS = {
+			set_politics = { ruling_party = communist elections_allowed = no }
+			if = {
+				limit = { NOT = { has_character = RI_AUS_anna_gruber } }
+				recruit_character = RI_AUS_anna_gruber
+				promote_character = RI_AUS_anna_gruber
+			}
+		}
+		if = { limit = { AUS = { is_subject = no } } SOV = { puppet = AUS } }
+	}
+}
+
+RI_GER_resolve_eastern_pockets = {
+	every_owned_state = {
+		limit = {
+			RI_GER_partition_east_state = yes
+			RI_GER_german_partition_state_safe = yes
+		}
+		transfer_state_to = SOV
+	}
+	RI_GER_establish_oder_republic = yes
+}
+
+RI_GER_return_ermland_to_soviet = {
+	if = {
+		limit = { RI_GER_can_return_ermland_to_soviet = yes }
+		5 = { transfer_state_to = SOV }
+	}
+}
+
+RI_GER_establish_oder_republic = {
+	if = {
+		limit = {
+			ROD = { exists = no }
+			SOV = {
+				NOT = { is_in_peace_conference = yes }
+				any_owned_state = { RI_GER_partition_oder_state = yes is_fully_controlled_by = SOV }
+			}
+		}
+		SOV = {
+			every_owned_state = {
+				limit = { RI_GER_partition_oder_state = yes is_fully_controlled_by = SOV }
+				add_core_of = ROD
+				transfer_state_to = ROD
+				ROD = { set_capital = { state = PREV } }
+			}
+		}
+		ROD = {
+			set_country_flag = RI_GER_oder_republic_created
+			set_politics = { ruling_party = communist elections_allowed = no }
+			recruit_character = RI_ROD_helene_voss
+			promote_character = RI_ROD_helene_voss
+		}
+		SOV = { puppet = ROD }
+	}
+	else_if = {
+		limit = {
+			ROD = { exists = yes has_country_flag = RI_GER_oder_republic_created is_subject_of = SOV }
+			SOV = { NOT = { is_in_peace_conference = yes } }
+		}
+		SOV = {
+			every_owned_state = {
+				limit = { RI_GER_partition_oder_state = yes is_fully_controlled_by = SOV }
+				add_core_of = ROD
+				transfer_state_to = ROD
+			}
+		}
+	}
+}
+
+RI_GER_test_polish_ssr = {
+	if = {
+		limit = { POL = { exists = no } }
+		set_country_flag = RI_GER_creating_test_poland
+	}
+	every_owned_state = {
+		limit = { RI_GER_partition_polish_state = yes RI_GER_german_partition_state_safe = yes }
+		transfer_state_to = POL
+		if = {
+			limit = { GER = { has_country_flag = RI_GER_creating_test_poland } }
+			POL = { set_capital = { state = PREV } }
+		}
+	}
+	SOV = {
+		every_owned_state = {
+			limit = { RI_GER_polish_homeland_state = yes is_fully_controlled_by = SOV }
+			transfer_state_to = POL
+			if = {
+				limit = { GER = { has_country_flag = RI_GER_creating_test_poland } }
+				POL = { set_capital = { state = PREV } }
+			}
+		}
+	}
+	if = {
+		limit = { POL = { exists = yes } }
+		if = { limit = { 10 = { is_owned_by = POL } } POL = { set_capital = { state = 10 } } }
+		POL = {
+			if = { limit = { is_in_faction = yes is_subject = no } leave_faction = yes }
+			set_politics = { ruling_party = communist elections_allowed = no }
+			set_cosmetic_tag = RI_POL_soviet
+		}
+		if = { limit = { POL = { is_subject = no } } SOV = { puppet = POL } }
+		set_country_flag = RI_GER_test_polish_ssr_complete
+	}
+	clr_country_flag = RI_GER_creating_test_poland
+	RI_GER_return_ermland_to_soviet = yes
+}
+
+RI_GER_refine_german_regions = {
+	if = {
+		limit = { WGR = { exists = yes has_cosmetic_tag = RI_WGR_west_german } }
+		if = { limit = { 42 = { is_owned_by = WGR } } WGR = { set_capital = { state = 42 } } }
+		else_if = { limit = { 51 = { is_owned_by = WGR } } WGR = { set_capital = { state = 51 } } }
+		if = {
+			limit = {
+				RWG = { exists = no }
+				57 = { is_owned_by = WGR OR = { is_fully_controlled_by = WGR is_fully_controlled_by = GER is_fully_controlled_by = SOV } }
+			}
+			57 = { add_core_of = RWG transfer_state_to = RWG }
+			RWG = {
+				set_capital = { state = 57 }
+				set_politics = { ruling_party = communist elections_allowed = no }
+				recruit_character = RI_RWG_erika_baumann
+				promote_character = RI_RWG_erika_baumann
+			}
+			SOV = { puppet = RWG }
+		}
+		if = {
+			limit = {
+				RHG = { exists = no }
+				55 = { is_owned_by = WGR OR = { is_fully_controlled_by = WGR is_fully_controlled_by = GER is_fully_controlled_by = SOV } }
+			}
+			55 = { add_core_of = RHG transfer_state_to = RHG }
+			RHG = {
+				set_capital = { state = 55 }
+				set_politics = { ruling_party = communist elections_allowed = no }
+				recruit_character = RI_RHG_otto_stein
+				promote_character = RI_RHG_otto_stein
+			}
+			SOV = { puppet = RHG }
+		}
+	}
+	if = {
+		limit = { BAY = { exists = yes has_cosmetic_tag = RI_BAY_south_german } RSB = { exists = no } }
+		if = { limit = { 53 = { is_owned_by = BAY } } BAY = { set_capital = { state = 53 } } }
+		else_if = { limit = { 54 = { is_owned_by = BAY } } BAY = { set_capital = { state = 54 } } }
+		BAY = {
+			every_owned_state = {
+				limit = {
+					OR = { state = 50 state = 52 state = 978 }
+					OR = { is_fully_controlled_by = BAY is_fully_controlled_by = GER is_fully_controlled_by = SOV }
+				}
+				add_core_of = RSB
+				transfer_state_to = RSB
+				RSB = { set_capital = { state = PREV } }
+			}
+		}
+		if = {
+			limit = { RSB = { exists = yes } }
+			if = { limit = { 52 = { is_owned_by = RSB } } RSB = { set_capital = { state = 52 } } }
+			RSB = {
+				set_politics = { ruling_party = communist elections_allowed = no }
+				recruit_character = RI_RSB_marie_keller
+				promote_character = RI_RSB_marie_keller
+			}
+			SOV = { puppet = RSB }
+		}
+	}
+}

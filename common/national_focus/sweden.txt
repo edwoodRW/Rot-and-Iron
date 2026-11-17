@@ -2,13 +2,7 @@ focus_tree = {
 	id = sweden_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = SWE
-			has_dlc = "Arms Against Tyranny"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

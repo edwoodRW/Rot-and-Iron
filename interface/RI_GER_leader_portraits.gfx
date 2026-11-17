@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_RI_GER_sahra_wagenknecht"
+		texturefile = "gfx/leaders/GER/Sahra_Wagenknecht.dds"
+	}
+}

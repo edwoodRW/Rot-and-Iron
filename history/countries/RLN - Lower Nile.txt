@@ -99,7 +99,7 @@ set_popularities = {
 		national_conservative = 12
 		centrist = 0
 		liberal = 14
-		new_democrat = 5
+		social_democrat = 5
 		moderate_socialist = 10
 		revolutionary_socialist = 6
 		communist = 14
@@ -156,7 +156,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Amr Moussa"
 	picture = "Portrait_RLN_Amr_Moussa.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

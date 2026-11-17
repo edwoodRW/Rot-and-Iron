@@ -1,0 +1,45 @@
+RI_GER_state_occupied_by_soviet_coalition = {
+	controller = {
+		has_war_with = GER
+		OR = {
+			tag = SOV
+			has_war_together_with = SOV
+		}
+	}
+}
+
+RI_GER_has_concedable_occupied_state = {
+	any_owned_state = {
+		NOT = { state = 64 }
+		RI_GER_state_occupied_by_soviet_coalition = yes
+	}
+}
+
+RI_SOV_german_ally_settlement_ready = {
+	exists = yes
+	has_country_flag = RI_SOV_german_war_ally
+	has_war_with = SOV
+	OR = { is_subject = no is_subject_of = GER }
+	NOT = { is_in_peace_conference = yes }
+	GER = { has_country_flag = RI_GER_soviet_takeover is_subject_of = SOV }
+	SOV = { exists = yes NOT = { is_in_peace_conference = yes } }
+	any_owned_state = { is_fully_controlled_by = SOV }
+	NOT = {
+		any_owned_state = {
+			NOT = { OR = { is_fully_controlled_by = SOV is_fully_controlled_by = PREV } }
+		}
+	}
+	NOT = {
+		any_other_country = {
+			has_war_with = PREV
+			NOT = { OR = { tag = SOV has_war_together_with = SOV } }
+		}
+	}
+	OR = {
+		has_capitulated = yes
+		AND = {
+			check_variable = { RI_SOV_ally_core_count > 0 }
+			check_variable = { var = RI_SOV_ally_occupied_count value = RI_SOV_ally_core_count compare = greater_than_or_equals }
+		}
+	}
+}

@@ -1,0 +1,165 @@
+add_namespace = RI_SOV_opening
+add_namespace = RI_SOV_future
+add_namespace = RI_SOV_focus_events
+
+country_event = {
+	id = RI_SOV_opening.1
+	title = RI_SOV_opening.1.t
+	desc = RI_SOV_opening.1.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_opening.1.a add_political_power = 25 }
+}
+country_event = {
+	id = RI_SOV_opening.2
+	title = RI_SOV_opening.2.t
+	desc = RI_SOV_opening.2.d
+	is_triggered_only = yes
+	option = {
+		name = RI_SOV_opening.2.a
+		add_political_power = 50
+		add_to_variable = { RI_SOV_cohesion = -5 }
+		set_country_flag = RI_SOV_hardliner_choice
+	}
+	option = {
+		name = RI_SOV_opening.2.b
+		add_research_slot = 1
+		add_to_variable = { RI_SOV_cohesion = 5 }
+		set_country_flag = RI_SOV_reformist_current
+	}
+	option = {
+		name = RI_SOV_opening.2.c
+		army_experience = 25
+		add_to_variable = { RI_SOV_military_confidence = 10 }
+		set_country_flag = RI_SOV_military_council
+	}
+}
+country_event = {
+	id = RI_SOV_future.1
+	title = RI_SOV_future.1.t
+	desc = RI_SOV_future.1.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_future.1.a set_country_flag = RI_SOV_rashkin_route add_ideas = RI_SOV_rashkin_fortress }
+	option = { name = RI_SOV_future.1.b trigger = { has_country_flag = RI_SOV_reformist_current } set_country_flag = RI_SOV_reform_coup_route add_ideas = RI_SOV_new_union }
+	option = { name = RI_SOV_future.1.c set_country_flag = RI_SOV_red_renewal_route add_ideas = RI_SOV_red_renewal }
+}
+country_event = {
+	id = RI_SOV_collapse.1
+	title = RI_SOV_collapse.1.t
+	desc = RI_SOV_collapse.1.d
+	is_triggered_only = yes
+	option = {
+		name = RI_SOV_collapse.1.a
+		set_country_flag = RI_SOV_dissolution_started
+		if = { limit = { country_exists = UKR } release = UKR }
+		if = { limit = { country_exists = BLR } release = BLR }
+		if = { limit = { country_exists = KAZ } release = KAZ }
+		add_stability = -0.15
+	}
+	option = { name = RI_SOV_collapse.1.b add_war_support = 0.10 add_to_variable = { RI_SOV_cohesion = 10 } }
+}
+
+country_event = {
+	id = RI_SOV_focus_events.1
+	title = RI_SOV_focus_events.1.t
+	desc = RI_SOV_focus_events.1.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.1.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.2
+	title = RI_SOV_focus_events.2.t
+	desc = RI_SOV_focus_events.2.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.2.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.3
+	title = RI_SOV_focus_events.3.t
+	desc = RI_SOV_focus_events.3.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.3.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.4
+	title = RI_SOV_focus_events.4.t
+	desc = RI_SOV_focus_events.4.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.4.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.5
+	title = RI_SOV_focus_events.5.t
+	desc = RI_SOV_focus_events.5.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.5.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.6
+	title = RI_SOV_focus_events.6.t
+	desc = RI_SOV_focus_events.6.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.6.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.7
+	title = RI_SOV_focus_events.7.t
+	desc = RI_SOV_focus_events.7.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.7.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.8
+	title = RI_SOV_focus_events.8.t
+	desc = RI_SOV_focus_events.8.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.8.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.9
+	title = RI_SOV_focus_events.9.t
+	desc = RI_SOV_focus_events.9.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.9.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.10
+	title = RI_SOV_focus_events.10.t
+	desc = RI_SOV_focus_events.10.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.10.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.11
+	title = RI_SOV_focus_events.11.t
+	desc = RI_SOV_focus_events.11.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.11.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.12
+	title = RI_SOV_focus_events.12.t
+	desc = RI_SOV_focus_events.12.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.12.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.13
+	title = RI_SOV_focus_events.13.t
+	desc = RI_SOV_focus_events.13.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.13.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.14
+	title = RI_SOV_focus_events.14.t
+	desc = RI_SOV_focus_events.14.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.14.a }
+}
+country_event = {
+	id = RI_SOV_focus_events.15
+	title = RI_SOV_focus_events.15.t
+	desc = RI_SOV_focus_events.15.d
+	is_triggered_only = yes
+	option = { name = RI_SOV_focus_events.15.a }
+}

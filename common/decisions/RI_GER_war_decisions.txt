@@ -1,0 +1,376 @@
+RI_GER_war_negotiations = {
+	RI_GER_create_western_buffer = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		fire_only_once = no
+		visible = {
+			is_ai = no
+			has_country_flag = RI_GER_soviet_takeover
+			has_country_flag = RI_GER_german_partition_reviewed
+			SOV = {
+				exists = yes
+				any_owned_state = {
+					OR = { RI_GER_partition_west_state = yes RI_GER_partition_south_state = yes }
+				}
+			}
+		}
+		available = {
+			is_subject_of = SOV
+			has_war = no
+			NOT = { is_in_peace_conference = yes }
+			RI_GER_can_establish_western_buffer = yes
+			SOV = {
+				any_owned_state = {
+					OR = { RI_GER_partition_west_state = yes RI_GER_partition_south_state = yes }
+					is_fully_controlled_by = SOV
+				}
+			}
+		}
+		complete_effect = { RI_GER_establish_western_buffer = yes }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_return_ermland_to_soviet = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		fire_only_once = no
+		visible = {
+			is_ai = no
+			has_country_flag = RI_GER_soviet_takeover
+			5 = {
+				OR = {
+					is_owned_by = GER
+					AND = { is_owned_by = POL POL = { is_subject_of = SOV } }
+				}
+			}
+		}
+		available = { RI_GER_can_return_ermland_to_soviet = yes }
+		complete_effect = { RI_GER_return_ermland_to_soviet = yes }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_test_eastern_republics = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		fire_only_once = no
+		visible = {
+			is_ai = no
+			has_country_flag = RI_GER_soviet_takeover
+			OR = {
+				AND = {
+					NOT = { has_country_flag = RI_GER_test_polish_ssr_complete }
+					OR = {
+						POL = { exists = yes }
+						any_owned_state = { RI_GER_partition_polish_state = yes }
+						SOV = { any_owned_state = { RI_GER_polish_homeland_state = yes } }
+					}
+				}
+				AND = {
+					OR = {
+						ROD = { exists = no }
+						ROD = { has_country_flag = RI_GER_oder_republic_created is_subject_of = SOV }
+					}
+					SOV = { any_owned_state = { RI_GER_partition_oder_state = yes } }
+				}
+			}
+		}
+		available = { RI_GER_test_polish_ssr_ready = yes }
+		complete_effect = {
+			RI_GER_test_polish_ssr = yes
+			RI_GER_resolve_eastern_pockets = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_finalize_soviet_settlement = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		fire_only_once = no
+		visible = {
+			is_ai = no
+			has_country_flag = RI_GER_soviet_takeover
+			RI_GER_soviet_settlement_cleanup_pending = yes
+		}
+		available = { RI_GER_soviet_settlement_cleanup_ready = yes }
+		complete_effect = { RI_GER_finalize_soviet_settlement = yes }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_review_remaining_austria = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		visible = {
+			is_ai = no
+			has_country_flag = RI_GER_soviet_takeover
+			AUS = { exists = no }
+			any_owned_state = { RI_GER_partition_austrian_state = yes }
+		}
+		available = { RI_GER_german_partition_ready = yes RI_GER_can_release_austria_after_defeat = yes }
+		complete_effect = { country_event = { id = RI_GER_crisis.6 hours = 1 } }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_return_austria_to_existing = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		visible = {
+			is_ai = no
+			has_country_flag = RI_GER_soviet_takeover
+			AUS = { exists = yes }
+			any_owned_state = { RI_GER_partition_austrian_state = yes }
+		}
+		available = {
+			RI_GER_german_partition_ready = yes
+			AUS = { NOT = { has_war_with = SOV } }
+			NOT = { has_war_with = AUS }
+		}
+		complete_effect = { RI_GER_return_existing_austrian_territory = yes }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_transfer_eastern_pockets = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		visible = {
+			is_ai = no
+			has_country_flag = RI_GER_soviet_takeover
+			any_owned_state = { RI_GER_partition_east_state = yes }
+		}
+		available = { RI_GER_german_partition_ready = yes }
+		complete_effect = { RI_GER_resolve_eastern_pockets = yes }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_refine_german_partition = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		visible = {
+			is_ai = no
+			has_country_flag = RI_GER_soviet_takeover
+			has_country_flag = RI_GER_german_partition_reviewed
+			NOT = { has_country_flag = RI_GER_german_regions_refined }
+			OR = {
+				WGR = { exists = yes has_cosmetic_tag = RI_WGR_west_german }
+				BAY = { exists = yes has_cosmetic_tag = RI_BAY_south_german }
+			}
+		}
+		available = { RI_GER_soviet_settlement_cleanup_ready = yes RI_GER_can_refine_german_regions = yes }
+		complete_effect = {
+			RI_GER_refine_german_regions = yes
+			RI_GER_finalize_soviet_settlement = yes
+			set_country_flag = RI_GER_german_regions_refined
+		}
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_review_german_partition = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		visible = {
+			has_country_flag = RI_GER_soviet_takeover
+			OR = {
+				NOT = { has_country_flag = RI_GER_german_partition_reviewed }
+				NOT = { has_country_flag = RI_GER_austria_reviewed }
+			}
+			OR = { RI_GER_has_german_partition_region = yes RI_GER_can_release_austria_after_defeat = yes }
+		}
+		available = { RI_GER_german_partition_ready = yes }
+		complete_effect = { RI_GER_review_german_partition = yes }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_return_crimea_to_ukraine = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		visible = {
+			is_ai = no
+			has_country_flag = RI_GER_russian_partition_complete
+			137 = { is_owned_by = GER }
+			UKR = { exists = yes }
+		}
+		available = { RI_GER_can_return_crimea_to_ukraine = yes }
+		complete_effect = { RI_GER_transfer_crimea_to_ukraine = yes }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_partition_russian_settlement = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = RI_GER_russian_partition_complete }
+			OR = {
+				has_country_flag = RI_GER_recovery_unlocked
+				has_country_flag = RI_GER_reviewed_ukraine
+				has_country_flag = RI_GER_reviewed_belarus
+				has_country_flag = RI_GER_reviewed_georgia
+				has_country_flag = RI_GER_reviewed_armenia
+				has_country_flag = RI_GER_reviewed_azerbaijan
+				has_country_flag = RI_GER_reviewed_kazakhstan
+				has_country_flag = RI_GER_reviewed_moscow_state
+				has_country_flag = RI_GER_reviewed_ural_state
+				has_country_flag = RI_GER_reviewed_soviet_east
+			}
+		}
+		available = { RI_GER_partition_ready = yes }
+		complete_effect = { country_event = { id = RI_GER_postwar_fates.12 hours = 1 } }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_review_russian_settlement = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		visible = {
+			is_ai = no
+			OR = {
+				has_country_flag = RI_GER_recovery_unlocked
+				has_country_flag = RI_GER_reviewed_ukraine
+				has_country_flag = RI_GER_reviewed_belarus
+				has_country_flag = RI_GER_reviewed_georgia
+				has_country_flag = RI_GER_reviewed_armenia
+				has_country_flag = RI_GER_reviewed_azerbaijan
+				has_country_flag = RI_GER_reviewed_kazakhstan
+			}
+			SOV = { exists = no }
+			RI_GER_has_pending_russian_settlement = yes
+		}
+		available = {
+			NOT = { is_subject = yes }
+			NOT = { has_capitulated = yes }
+			NOT = { is_in_peace_conference = yes }
+		}
+		complete_effect = { RI_GER_review_next_soviet_country = yes }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_enforce_accepted_settlement = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		visible = {
+			is_ai = no
+			has_country_flag = RI_GER_settlement_accepted
+			NOT = { has_country_flag = RI_GER_settlement_peace_completed }
+			has_war_with = SOV
+		}
+		available = { has_war_with = SOV }
+		complete_effect = { RI_GER_end_soviet_coalition_war = yes }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_offer_victory_settlement = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = {
+			has_war_with = SOV
+			SOV = { exists = yes }
+		}
+		available = { RI_GER_can_offer_victory_settlement = yes }
+		complete_effect = { RI_GER_send_moscow_offer = yes }
+		ai_will_do = { factor = 1 }
+	}
+	RI_GER_continue_to_urals = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		visible = {
+			has_country_flag = RI_GER_moscow_milestone
+			NOT = { has_country_flag = RI_GER_advance_to_urals }
+			NOT = { has_country_flag = RI_GER_urals_milestone }
+			has_war_with = SOV
+		}
+		available = { SOV = { exists = yes has_capitulated = no } }
+		complete_effect = {
+			set_country_flag = RI_GER_advance_to_urals
+			SOV = { add_ideas = RI_GER_soviet_eastern_retreat }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_offer_urals_settlement = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = {
+			has_country_flag = RI_GER_urals_milestone
+			has_war_with = SOV
+		}
+		available = {
+			RI_GER_urals_settlement_conditions = yes
+			NOT = { has_country_flag = RI_GER_urals_offer_pending }
+			NOT = { has_country_flag = RI_GER_urals_offer_cooldown }
+		}
+		complete_effect = { RI_GER_send_urals_offer = yes }
+		ai_will_do = { factor = 1 }
+	}
+	RI_GER_retry_ceasefire_talks = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = {
+			has_country_flag = GER_ceasefire_talks_active
+			has_country_flag = RI_GER_ceasefire_refused
+			NOT = { has_country_flag = RI_GER_war_crisis }
+		}
+		available = {
+			has_war_with = SOV
+			SOV = { exists = yes }
+			NOT = { has_country_flag = RI_GER_ceasefire_retry_cooldown }
+		}
+		complete_effect = {
+			clr_country_flag = RI_GER_ceasefire_refused
+			set_country_flag = { flag = RI_GER_ceasefire_pending value = 1 days = 90 }
+			set_country_flag = { flag = RI_GER_ceasefire_retry_cooldown value = 1 days = 180 }
+			SOV = {
+				clr_country_flag = SOV_accepts_ceasefire_talks
+				country_event = { id = SOV_german_ceasefire.1 days = 14 }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	RI_GER_offer_stalemate = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = {
+			has_war_with = SOV
+			SOV = { exists = yes }
+		}
+		available = { RI_GER_can_offer_stalemate = yes }
+		complete_effect = {
+			set_country_flag = { flag = RI_GER_stalemate_offer_pending value = 1 days = 90 }
+			set_country_flag = { flag = RI_GER_stalemate_offer_cooldown value = 1 days = 180 }
+			SOV = { country_event = { id = RI_GER_victory_offer.3 days = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_release_ukraine = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = { has_country_flag = RI_GER_recovery_unlocked UKR = { exists = no } }
+		available = { RI_GER_can_release_ukraine = yes }
+		complete_effect = { release_autonomy = { target = UKR autonomy_state = autonomy_puppet } }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_release_belarus = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = { has_country_flag = RI_GER_recovery_unlocked BLR = { exists = no } }
+		available = { RI_GER_can_release_belarus = yes }
+		complete_effect = { release_autonomy = { target = BLR autonomy_state = autonomy_puppet } }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_release_georgia = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = { has_country_flag = RI_GER_recovery_unlocked GEO = { exists = no } }
+		available = { RI_GER_can_release_georgia = yes }
+		complete_effect = { release_autonomy = { target = GEO autonomy_state = autonomy_puppet } }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_release_armenia = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = { has_country_flag = RI_GER_recovery_unlocked ARM = { exists = no } }
+		available = { RI_GER_can_release_armenia = yes }
+		complete_effect = { release_autonomy = { target = ARM autonomy_state = autonomy_puppet } }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_release_azerbaijan = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = { has_country_flag = RI_GER_recovery_unlocked AZR = { exists = no } }
+		available = { RI_GER_can_release_azerbaijan = yes }
+		complete_effect = { release_autonomy = { target = AZR autonomy_state = autonomy_puppet } }
+		ai_will_do = { factor = 0 }
+	}
+	RI_GER_release_kazakhstan = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = { has_country_flag = RI_GER_recovery_unlocked KAZ = { exists = no } }
+		available = { RI_GER_can_release_kazakhstan = yes }
+		complete_effect = { release_autonomy = { target = KAZ autonomy_state = autonomy_puppet } }
+		ai_will_do = { factor = 0 }
+	}
+}

@@ -1,0 +1,54 @@
+ideas = {
+	country = {
+
+		USA_turner_mandate = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+			}
+		}
+
+		USA_union_compact = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		USA_recovery_programme = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				stability_factor = 0.03
+			}
+		}
+
+		USA_counterplot_vigilance = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				enemy_operative_detection_chance = 0.1
+				agency_upgrade_time = -0.1
+			}
+		}
+
+		USA_counterplot_vigilance_2 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				enemy_operative_detection_chance = 0.15
+				political_power_gain = 0.05
+			}
+		}
+	}
+}

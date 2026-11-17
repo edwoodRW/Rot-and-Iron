@@ -1,0 +1,82 @@
+on_actions = {
+	on_daily_POL = {
+		effect = {
+			if = {
+				limit = { has_country_flag = RI_POL_awaiting_german_war }
+				if = {
+					limit = { GER = { has_country_flag = RI_GER_soviet_takeover } }
+					clr_country_flag = RI_POL_awaiting_german_war
+				}
+				else_if = {
+					limit = { GER = { NOT = { has_war_with = SOV } } }
+					clr_country_flag = RI_POL_awaiting_german_war
+					country_event = { id = RI_POL_outcome.1 days = 1 }
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = RI_POL_soviet_counteroffensive_alerted }
+					has_war_with = SOV
+					is_in_faction_with = GER
+					GER = {
+						exists = yes
+						any_owned_state = {
+							RI_GER_state_occupied_by_soviet_coalition = yes
+						}
+					}
+				}
+				set_country_flag = RI_POL_soviet_counteroffensive_alerted
+				country_event = { id = RI_POL_crisis.1 hours = 1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = RI_POL_warsaw_crisis_alerted }
+					NOT = { has_country_flag = RI_POL_soviet_defeat }
+					OR = {
+						has_capitulated = yes
+						10 = { is_controlled_by = SOV }
+					}
+				}
+				set_country_flag = RI_POL_warsaw_crisis_alerted
+				country_event = { id = RI_POL_crisis.3 hours = 1 }
+			}
+		}
+	}
+
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { original_tag = POL }
+					FROM = {
+						OR = {
+							tag = SOV
+							has_war_together_with = SOV
+						}
+					}
+				}
+				ROOT = {
+					set_country_flag = RI_POL_soviet_defeat
+					if = {
+						limit = {
+							NOT = {
+								has_country_flag = RI_SOV_german_war_ally
+								GER = { has_country_flag = RI_GER_soviet_takeover }
+							}
+						}
+						if = {
+							limit = {
+								has_war_with = SOV
+								has_war_together_with = GER
+								GER = { has_war_with = SOV }
+							}
+							set_country_flag = RI_SOV_german_war_ally
+							set_country_flag = RI_POL_awaiting_german_war
+						}
+						else = { country_event = { id = RI_POL_outcome.1 days = 1 } }
+					}
+				}
+			}
+		}
+	}
+}

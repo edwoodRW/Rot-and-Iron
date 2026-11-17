@@ -98,7 +98,7 @@ set_popularities = {
 		national_conservative = 3
 		centrist = 5
 		liberal = 0
-		new_democrat = 5
+		social_democrat = 5
 		moderate_socialist = 0
 		revolutionary_socialist = 0
 		communist = 84
@@ -156,7 +156,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Evarist Bartolo"
 	picture = "Portrait_MLT_Evarist_Bartolo.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

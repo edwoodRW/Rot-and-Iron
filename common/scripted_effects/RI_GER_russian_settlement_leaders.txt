@@ -1,0 +1,114 @@
+RI_GER_install_russian_settlement_leaders = {
+	if = {
+		limit = { RMO = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RMO = {
+			recruit_character = RI_RMO_alexei_sokolov
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RMO_alexei_sokolov }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { URE = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		URE = {
+			recruit_character = RI_URE_irina_demidova
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_URE_irina_demidova }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RWE = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RWE = {
+			recruit_character = RI_RWE_mikhail_belov
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RWE_mikhail_belov }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RVN = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RVN = {
+			recruit_character = RI_RVN_elena_orlova
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RVN_elena_orlova }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RDN = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RDN = {
+			recruit_character = RI_RDN_viktor_zhdanov
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RDN_viktor_zhdanov }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RCA = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RCA = {
+			recruit_character = RI_RCA_murat_akhmetov
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RCA_murat_akhmetov }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RVG = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RVG = {
+			recruit_character = RI_RVG_natalia_karimova
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RVG_natalia_karimova }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RSW = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RSW = {
+			recruit_character = RI_RSW_pavel_morozov
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RSW_pavel_morozov }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RTS = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RTS = {
+			recruit_character = RI_RTS_anna_lebedeva
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RTS_anna_lebedeva }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RAI = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RAI = {
+			recruit_character = RI_RAI_baatyr_ertekov
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RAI_baatyr_ertekov }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RIR = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RIR = {
+			recruit_character = RI_RIR_sergei_antonov
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RIR_sergei_antonov }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RBU = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RBU = {
+			recruit_character = RI_RBU_dolgor_badmaeva
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RBU_dolgor_badmaeva }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RYK = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RYK = {
+			recruit_character = RI_RYK_ayana_egorova
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RYK_ayana_egorova }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+	if = {
+		limit = { RFA = { exists = yes NOT = { has_country_flag = RI_settlement_leader_installed } } }
+		RFA = {
+			recruit_character = RI_RFA_andrei_volkov
+			if = { limit = { has_government = moderate_socialist } promote_character = RI_RFA_andrei_volkov }
+			set_country_flag = RI_settlement_leader_installed
+		}
+	}
+}

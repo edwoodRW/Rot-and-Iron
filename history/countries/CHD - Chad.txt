@@ -87,7 +87,7 @@ set_popularities = {
 		national_conservative = 4
 		centrist = 0
 		liberal = 9
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 43
 		revolutionary_socialist = 0
 		communist = 19
@@ -144,7 +144,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Jacqueline Moudeina "
 	picture = "Portrait_CHD_Jacqueline_Moudeina.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

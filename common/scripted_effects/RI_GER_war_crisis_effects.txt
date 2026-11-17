@@ -1,0 +1,535 @@
+RI_GER_wagenknecht_takes_power = {
+	if = {
+		limit = { NOT = { has_character = RI_GER_sahra_wagenknecht } }
+		recruit_character = RI_GER_sahra_wagenknecht
+	}
+	promote_character = RI_GER_sahra_wagenknecht
+	set_politics = { ruling_party = revolutionary_socialist }
+	set_country_flag = GER_brandt_takes_power
+	set_country_flag = GER_liebich_falls
+	clr_country_flag = GER_liebich_holds
+}
+
+RI_GER_transfer_crimea_to_ukraine = {
+	if = {
+		limit = { RI_GER_can_return_crimea_to_ukraine = yes }
+		137 = { add_core_of = UKR transfer_state_to = UKR }
+	}
+}
+
+RI_GER_check_war_crisis = {
+	if = {
+		limit = {
+			exists = yes
+			has_capitulated = no
+			has_war_with = SOV
+			NOT = { surrender_progress < 0.40 }
+			NOT = { has_country_flag = RI_GER_war_crisis }
+			any_owned_state = {
+				RI_GER_state_occupied_by_soviet_coalition = yes
+			}
+		}
+		set_country_flag = RI_GER_war_crisis
+		RI_GER_wagenknecht_takes_power = yes
+		country_event = { id = RI_GER_crisis.1 hours = 1 }
+	}
+	if = {
+		limit = {
+			has_war_with = SOV
+			SOV = { exists = yes }
+			NOT = { has_country_flag = RI_GER_soviet_takeover }
+			64 = { is_owned_by = GER }
+		}
+		set_variable = { RI_GER_core_state_count = 0 }
+		set_variable = { RI_GER_occupied_core_count = 0 }
+		every_owned_state = {
+			limit = { is_core_of = GER }
+			add_to_variable = { PREV.RI_GER_core_state_count = 1 }
+			if = {
+				limit = { RI_GER_state_occupied_by_soviet_coalition = yes }
+				add_to_variable = { PREV.RI_GER_occupied_core_count = 1 }
+			}
+		}
+		multiply_variable = { RI_GER_core_state_count = 4 }
+		multiply_variable = { RI_GER_occupied_core_count = 5 }
+		if = {
+			limit = {
+				check_variable = { RI_GER_core_state_count > 0 }
+				check_variable = { var = RI_GER_occupied_core_count value = RI_GER_core_state_count compare = greater_than_or_equals }
+			}
+			RI_GER_soviet_takeover = yes
+		}
+		clear_variable = RI_GER_core_state_count
+		clear_variable = RI_GER_occupied_core_count
+	}
+}
+
+RI_GER_soviet_takeover = {
+	every_country = {
+		limit = {
+			NOT = { tag = GER }
+			has_war_together_with = GER
+			has_war_with = SOV
+			capital_scope = { is_on_continent = europe }
+		}
+		set_country_flag = RI_SOV_german_war_ally
+	}
+	set_country_flag = RI_GER_soviet_takeover
+	clr_country_flag = RI_GER_victory_pending
+	clr_country_flag = RI_GER_recovery_unlocked
+	set_country_flag = GER_liebich_falls
+	if = {
+		limit = { is_in_faction = yes }
+		leave_faction = yes
+	}
+	every_owned_state = {
+		limit = {
+			NOT = { state = 64 }
+			NOT = { RI_GER_partition_north_state = yes }
+			NOT = { RI_GER_partition_west_state = yes }
+			NOT = { RI_GER_partition_south_state = yes }
+			NOT = { RI_GER_partition_austrian_state = yes }
+			NOT = { RI_GER_partition_neighbor_state = yes }
+			OR = {
+				RI_GER_state_occupied_by_soviet_coalition = yes
+				AND = {
+					RI_GER_partition_east_state = yes
+					is_fully_controlled_by = GER
+				}
+			}
+		}
+		transfer_state_to = SOV
+	}
+	every_country = {
+		limit = {
+			has_war_with = GER
+			OR = { tag = SOV has_war_together_with = SOV }
+		}
+		set_country_flag = RI_GER_takeover_soviet_side
+	}
+	every_country = {
+		limit = { has_country_flag = RI_GER_takeover_soviet_side }
+		if = {
+			limit = { has_war_with = GER }
+			white_peace = { tag = GER }
+		}
+		clr_country_flag = RI_GER_takeover_soviet_side
+	}
+	SOV = { puppet = GER }
+	set_capital = { state = 64 }
+	set_cosmetic_tag = RI_GER_north_german
+	RI_GER_establish_oder_republic = yes
+	if = {
+		limit = { has_country_flag = RI_GER_soviet_takeover_test RI_GER_test_polish_ssr_ready = yes }
+		RI_GER_test_polish_ssr = yes
+	}
+	clr_country_flag = RI_GER_soviet_takeover_test
+	RI_GER_return_ermland_to_soviet = yes
+	if = {
+		limit = { RI_GER_soviet_settlement_cleanup_ready = yes }
+		RI_GER_finalize_soviet_settlement = yes
+	}
+	create_country_leader = {
+		name = "Werner Dahl"
+		desc = RI_GER_werner_dahl_desc
+		picture = "gfx/leaders/leader_unknown.dds"
+		ideology = communist
+		traits = { }
+	}
+	set_politics = {
+		ruling_party = communist
+		elections_allowed = no
+	}
+	load_focus_tree = { tree = GER_soviet_occupation_focus keep_completed = no }
+	country_event = { id = RI_GER_crisis.3 hours = 1 }
+}
+
+RI_SOV_check_german_war_allies = {
+	every_country = {
+		limit = { has_country_flag = RI_SOV_german_war_ally }
+		if = {
+			limit = { NOT = { has_war_with = SOV } }
+			clr_country_flag = RI_SOV_german_war_ally
+		}
+		else = {
+			set_variable = { RI_SOV_ally_core_count = 0 }
+			set_variable = { RI_SOV_ally_occupied_count = 0 }
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				add_to_variable = { PREV.RI_SOV_ally_core_count = 1 }
+				if = {
+					limit = { is_fully_controlled_by = SOV }
+					add_to_variable = { PREV.RI_SOV_ally_occupied_count = 1 }
+				}
+			}
+			multiply_variable = { RI_SOV_ally_core_count = 4 }
+			multiply_variable = { RI_SOV_ally_occupied_count = 5 }
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = RI_SOV_german_ally_event_pending }
+			any_country = { RI_SOV_german_ally_settlement_ready = yes }
+		}
+		set_country_flag = RI_SOV_german_ally_event_pending
+		country_event = { id = RI_GER_crisis.8 hours = 1 }
+	}
+}
+
+RI_SOV_end_german_ally_war = {
+	every_country = {
+		limit = {
+			has_war_with = event_target:RI_SOV_defeated_ally
+			OR = { tag = SOV has_war_together_with = SOV }
+		}
+		set_country_flag = RI_SOV_ally_settlement_peace_side
+	}
+	every_country = {
+		limit = { has_country_flag = RI_SOV_ally_settlement_peace_side }
+		white_peace = { tag = event_target:RI_SOV_defeated_ally }
+		clr_country_flag = RI_SOV_ally_settlement_peace_side
+	}
+}
+
+RI_GER_end_soviet_coalition_war = {
+	# Record both sides before individual peace deals change their war relationships.
+	every_country = {
+		limit = {
+			OR = {
+				tag = GER
+				AND = {
+					has_war_together_with = GER
+					has_war_with = SOV
+				}
+			}
+		}
+		set_country_flag = RI_GER_settlement_german_side
+	}
+	every_country = {
+		limit = {
+			OR = {
+				tag = SOV
+				AND = {
+					has_war_together_with = SOV
+					has_war_with = GER
+				}
+			}
+		}
+		set_country_flag = RI_GER_settlement_soviet_side
+	}
+	every_country = {
+		limit = { has_country_flag = RI_GER_settlement_german_side }
+		every_country = {
+			limit = {
+				has_country_flag = RI_GER_settlement_soviet_side
+				has_war_with = PREV
+			}
+			white_peace = { tag = PREV }
+		}
+	}
+	every_country = {
+		limit = {
+			OR = {
+				has_country_flag = RI_GER_settlement_german_side
+				has_country_flag = RI_GER_settlement_soviet_side
+			}
+		}
+		clr_country_flag = RI_GER_settlement_german_side
+		clr_country_flag = RI_GER_settlement_soviet_side
+	}
+	if = {
+		limit = { GER = { NOT = { has_war_with = SOV } } }
+		GER = { set_country_flag = RI_GER_settlement_peace_completed }
+	}
+}
+
+RI_GER_accept_soviet_terms = {
+	set_country_flag = RI_GER_settlement_accepted
+	set_country_flag = GER_berlin_accords_signed
+	clr_country_flag = RI_GER_settlement_peace_completed
+	every_owned_state = {
+		display_individual_scopes = yes
+		limit = {
+			NOT = { state = 64 }
+			RI_GER_state_occupied_by_soviet_coalition = yes
+		}
+		transfer_state_to = SOV
+	}
+	RI_GER_end_soviet_coalition_war = yes
+}
+
+RI_GER_send_moscow_offer = {
+	set_country_flag = { flag = RI_GER_victory_offer_pending value = 1 days = 90 }
+	set_country_flag = { flag = RI_GER_victory_offer_cooldown value = 1 days = 180 }
+	SOV = {
+		remove_ideas = RI_GER_soviet_eastern_retreat
+		country_event = { id = RI_GER_victory_offer.1 days = 1 }
+	}
+}
+
+RI_GER_send_urals_offer = {
+	set_country_flag = { flag = RI_GER_urals_offer_pending value = 1 days = 90 }
+	set_country_flag = { flag = RI_GER_urals_offer_cooldown value = 1 days = 180 }
+	SOV = { country_event = { id = RI_GER_eastern_campaign.3 days = 1 } }
+}
+
+RI_GER_review_next_soviet_country = {
+	if = {
+		limit = {
+			SOV = { exists = no }
+			NOT = { has_country_flag = RI_GER_reviewed_ukraine }
+			RI_GER_can_release_ukraine = yes
+		}
+		set_country_flag = RI_GER_reviewed_ukraine
+		country_event = { id = RI_GER_postwar_fates.2 days = 1 }
+	}
+	else_if = {
+		limit = {
+			SOV = { exists = no }
+			NOT = { has_country_flag = RI_GER_reviewed_belarus }
+			RI_GER_can_release_belarus = yes
+		}
+		set_country_flag = RI_GER_reviewed_belarus
+		country_event = { id = RI_GER_postwar_fates.3 days = 1 }
+	}
+	else_if = {
+		limit = {
+			SOV = { exists = no }
+			NOT = { has_country_flag = RI_GER_reviewed_georgia }
+			RI_GER_can_release_georgia = yes
+		}
+		set_country_flag = RI_GER_reviewed_georgia
+		country_event = { id = RI_GER_postwar_fates.4 days = 1 }
+	}
+	else_if = {
+		limit = {
+			SOV = { exists = no }
+			NOT = { has_country_flag = RI_GER_reviewed_armenia }
+			RI_GER_can_release_armenia = yes
+		}
+		set_country_flag = RI_GER_reviewed_armenia
+		country_event = { id = RI_GER_postwar_fates.5 days = 1 }
+	}
+	else_if = {
+		limit = {
+			SOV = { exists = no }
+			NOT = { has_country_flag = RI_GER_reviewed_azerbaijan }
+			RI_GER_can_release_azerbaijan = yes
+		}
+		set_country_flag = RI_GER_reviewed_azerbaijan
+		country_event = { id = RI_GER_postwar_fates.6 days = 1 }
+	}
+	else_if = {
+		limit = {
+			SOV = { exists = no }
+			NOT = { has_country_flag = RI_GER_reviewed_kazakhstan }
+			RI_GER_can_release_kazakhstan = yes
+		}
+		set_country_flag = RI_GER_reviewed_kazakhstan
+		country_event = { id = RI_GER_postwar_fates.7 days = 1 }
+	}
+	else_if = {
+		limit = {
+			SOV = { exists = no }
+			NOT = { has_country_flag = RI_GER_reviewed_vilnius }
+			RI_GER_can_review_vilnius = yes
+		}
+		set_country_flag = RI_GER_reviewed_vilnius
+		country_event = { id = RI_GER_postwar_fates.8 days = 1 }
+	}
+	else_if = {
+		limit = {
+			SOV = { exists = no }
+			NOT = { has_country_flag = RI_GER_reviewed_moscow_state }
+			RI_GER_can_create_moscow_state = yes
+		}
+		set_country_flag = RI_GER_reviewed_moscow_state
+		country_event = { id = RI_GER_postwar_fates.9 days = 1 }
+	}
+	else_if = {
+		limit = {
+			SOV = { exists = no }
+			NOT = { has_country_flag = RI_GER_reviewed_ural_state }
+			RI_GER_can_create_ural_state = yes
+		}
+		set_country_flag = RI_GER_reviewed_ural_state
+		country_event = { id = RI_GER_postwar_fates.10 days = 1 }
+	}
+	else_if = {
+		limit = {
+			SOV = { exists = no }
+			NOT = { has_country_flag = RI_GER_reviewed_soviet_east }
+			RI_GER_can_restore_soviet_east = yes
+		}
+		set_country_flag = RI_GER_reviewed_soviet_east
+		country_event = { id = RI_GER_postwar_fates.11 days = 1 }
+	}
+}
+
+RI_GER_create_moscow_state = {
+	219 = {
+		add_core_of = RMO
+		transfer_state_to = RMO
+	}
+	every_owned_state = {
+		limit = {
+			GER_is_RKM_state = yes
+			is_core_of = SOV
+			is_fully_controlled_by = GER
+			NOT = { is_core_of = BLR }
+			NOT = { is_core_of = UKR }
+		}
+		add_core_of = RMO
+		transfer_state_to = RMO
+	}
+	RMO = {
+		set_capital = { state = 219 }
+		set_politics = { ruling_party = moderate_socialist elections_allowed = yes }
+	}
+}
+
+RI_GER_create_ural_state = {
+	653 = {
+		add_core_of = URE
+		transfer_state_to = URE
+	}
+	every_owned_state = {
+		limit = {
+			OR = {
+				GER_is_RK_south_urals_state = yes
+				GER_is_RK_north_urals_state = yes
+			}
+			is_core_of = SOV
+			is_fully_controlled_by = GER
+			NOT = { is_core_of = KAZ }
+		}
+		add_core_of = URE
+		transfer_state_to = URE
+	}
+	URE = {
+		set_capital = { state = 653 }
+		set_politics = { ruling_party = moderate_socialist elections_allowed = yes }
+	}
+}
+
+RI_GER_restore_soviet_east = {
+	if = {
+		limit = { 408 = { is_owned_by = GER is_fully_controlled_by = GER } }
+		408 = { transfer_state_to = SOV }
+		SOV = { set_capital = { state = 408 } }
+	}
+	else_if = {
+		limit = { 409 = { is_owned_by = GER is_fully_controlled_by = GER } }
+		409 = { transfer_state_to = SOV }
+		SOV = { set_capital = { state = 409 } }
+	}
+	else_if = {
+		limit = { 570 = { is_owned_by = GER is_fully_controlled_by = GER } }
+		570 = { transfer_state_to = SOV }
+		SOV = { set_capital = { state = 570 } }
+	}
+	else_if = {
+		limit = { 571 = { is_owned_by = GER is_fully_controlled_by = GER } }
+		571 = { transfer_state_to = SOV }
+		SOV = { set_capital = { state = 571 } }
+	}
+	every_owned_state = {
+		limit = {
+			RI_GER_siberian_exile_state = yes
+			is_core_of = SOV
+			is_fully_controlled_by = GER
+			NOT = { is_core_of = KAZ }
+		}
+		transfer_state_to = SOV
+	}
+	SOV = { set_politics = { ruling_party = communist elections_allowed = no } }
+}
+
+RI_GER_urals_settlement = {
+	SOV = {
+		if = {
+			limit = { 408 = { is_owned_and_controlled_by = SOV } }
+			set_capital = { state = 408 }
+		}
+		else_if = {
+			limit = { 409 = { is_owned_and_controlled_by = SOV } }
+			set_capital = { state = 409 }
+		}
+		else_if = {
+			limit = { 570 = { is_owned_and_controlled_by = SOV } }
+			set_capital = { state = 570 }
+		}
+		else = { set_capital = { state = 571 } }
+		every_owned_state = {
+			limit = {
+				RI_GER_western_soviet_state = yes
+				controller = {
+					OR = {
+						tag = SOV
+						tag = GER
+						AND = {
+							has_war_together_with = GER
+							NOT = { tag = CHI }
+						}
+					}
+				}
+			}
+			transfer_state_to = GER
+		}
+		remove_ideas = RI_GER_soviet_eastern_retreat
+	}
+
+	every_country = {
+		limit = {
+			NOT = { tag = CHI }
+			OR = {
+				tag = GER
+				AND = {
+					has_war_together_with = GER
+					has_war_with = SOV
+				}
+			}
+		}
+		set_country_flag = RI_GER_urals_german_side
+	}
+	every_country = {
+		limit = {
+			OR = {
+				tag = SOV
+				AND = {
+					has_war_together_with = SOV
+					has_war_with = GER
+				}
+			}
+		}
+		set_country_flag = RI_GER_urals_soviet_side
+	}
+	every_country = {
+		limit = { has_country_flag = RI_GER_urals_german_side }
+		every_country = {
+			limit = {
+				has_country_flag = RI_GER_urals_soviet_side
+				has_war_with = PREV
+			}
+			white_peace = { tag = PREV }
+		}
+	}
+	every_country = {
+		limit = {
+			OR = {
+				has_country_flag = RI_GER_urals_german_side
+				has_country_flag = RI_GER_urals_soviet_side
+			}
+		}
+		clr_country_flag = RI_GER_urals_german_side
+		clr_country_flag = RI_GER_urals_soviet_side
+	}
+	set_country_flag = RI_GER_victory_pending
+	if = {
+		limit = { NOT = { has_war_with = SOV } }
+		country_event = { id = RI_GER_eastern_campaign.5 hours = 1 }
+	}
+	else = {
+		country_event = { id = RI_GER_eastern_campaign.6 hours = 1 }
+	}
+}

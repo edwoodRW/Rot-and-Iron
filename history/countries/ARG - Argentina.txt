@@ -94,7 +94,7 @@ set_popularities = {
 	national_conservative = 5
 	centrist = 4
 	liberal = 1
-	new_democrat = 10
+	social_democrat = 10
 	moderate_socialist = 1
 	revolutionary_socialist = 8
 	communist = 50
@@ -152,7 +152,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Nicolás del Caño"
 	picture = "Portrait_ARG_Jose_Manuel_Corral.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

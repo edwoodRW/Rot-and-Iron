@@ -87,7 +87,7 @@ set_popularities = {
 		national_conservative = 12
 		centrist = 10
 		liberal = 17
-		new_democrat = 10
+		social_democrat = 10
 		moderate_socialist = 2
 		revolutionary_socialist = 9
 		communist = 12
@@ -145,7 +145,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Faysal Ali Warabe"
 	picture = "Portrait_SOM_Faysal_Ali_Warabe.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

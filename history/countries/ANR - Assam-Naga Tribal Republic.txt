@@ -38,7 +38,7 @@ set_popularities = {
 	national_conservative = 15
 	centrist = 8
 	liberal = 0
-	new_democrat = 10
+	social_democrat = 10
 	moderate_socialist = 10
 	revolutionary_socialist = 7
 	communist = 6
@@ -81,7 +81,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Rohan Rathore"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

@@ -2,13 +2,7 @@
 	id = south_african_focus
 	
 	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = SAF
-			has_dlc = "Together for Victory"
-		}
+		factor = 0 # disabled: countries without a custom tree use generic_focus
 	}
 	
 	default = no

@@ -79,7 +79,7 @@ air_wings = {
 		CAS_equipment_1 = { owner = "ENG" amount = 48 }				# Bomber Group -- Blenheim I's
 		nav_bomber_equipment_1 = { owner = "ENG" amount = 36 }		# Coastal Group -- Vildebeests
 	}
-	"HMS Ark Royal"  = {
+	"USBRS Endeavour"  = {
 		cv_fighter_equipment_1 =  { owner = "ENG" amount = 10 }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_fighter_equipment_1 =  { owner = "ENG" amount = 2 }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }			# Swordfish
@@ -87,7 +87,7 @@ air_wings = {
 		cv_CAS_equipment_1 =  { owner = "ENG" amount = 10 }					# Blackburn Skua
 		cv_CAS_equipment_1 =  { owner = "ENG" amount = 8 }					# Blackburn Skua
 	}
-	"HMS Furious"  = {
+	"USBRS Furious"  = {
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 10 }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 2 }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }			# Swordfish
@@ -95,7 +95,7 @@ air_wings = {
 		cv_CAS_equipment_1 =  { owner = "ENG" amount = 10 }					# Blackburn Skua
 		cv_CAS_equipment_1 =  { owner = "ENG" amount = 2 }					# Blackburn Skua
 	}
-	"HMS Courageous"  = {
+	"USBRS Courageous"  = {
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 10 }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 2 }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }			# Swordfish
@@ -103,7 +103,7 @@ air_wings = {
 		cv_CAS_equipment_1 =  { owner = "ENG" amount = 10 }					# Blackburn Skua
 		cv_CAS_equipment_1 =  { owner = "ENG" amount = 2 }					# Blackburn Skua
 	}
-	"HMS Glorious"  = {
+	"USBRS Glorious"  = {
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 10 }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 2 }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }			# Swordfish
@@ -111,7 +111,7 @@ air_wings = {
 		cv_CAS_equipment_1 =  { owner = "ENG" amount = 10 }					# Blackburn Skua
 		cv_CAS_equipment_1 =  { owner = "ENG" amount = 2 }					# Blackburn Skua
 	}
-	"HMS Eagle"  = {
+	"USBRS Eagle"  = {
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 10 }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_fighter_equipment_0 =  { owner = "ENG" amount = 2 }				# Sea Gladiator (REVISIT -- can be variant)
 		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }			# Swordfish

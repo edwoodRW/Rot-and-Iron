@@ -99,7 +99,7 @@ set_popularities = {
 	national_conservative = 15
 	centrist = 0
 	liberal = 7
-	new_democrat = 12
+	social_democrat = 12
 	moderate_socialist = 0
 	revolutionary_socialist = 3
 	communist = 10
@@ -150,7 +150,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Sergey Stanishev"
 	picture = "Portrait_BUL_Boyko_Borisov.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

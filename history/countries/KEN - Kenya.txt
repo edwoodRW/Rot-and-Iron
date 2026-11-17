@@ -86,7 +86,7 @@ set_popularities = {
 		national_conservative = 9
 		centrist = 0
 		liberal = 51
-		new_democrat = 0
+		social_democrat = 0
 		moderate_socialist = 10
 		revolutionary_socialist = 0
 		communist = 20
@@ -137,7 +137,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Eugene Wamalwa"
 	picture = "Portrait_KEN_Eugene_Wamalwa.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

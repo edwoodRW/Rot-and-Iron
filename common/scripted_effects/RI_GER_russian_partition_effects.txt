@@ -1,0 +1,353 @@
+RI_GER_partition_russia = {
+	RI_GER_transfer_crimea_to_ukraine = yes
+	if = {
+		limit = {
+			784 = { is_owned_by = GER is_fully_controlled_by = GER NOT = { is_core_of = GER } }
+			LIT = { exists = yes }
+			NOT = { has_war_with = LIT }
+		}
+		784 = { transfer_state_to = LIT }
+	}
+	else_if = {
+		limit = {
+			784 = { is_owned_by = GER is_fully_controlled_by = GER NOT = { is_core_of = GER } }
+			BLR = { exists = yes }
+			NOT = { has_war_with = BLR }
+		}
+		784 = { add_core_of = BLR transfer_state_to = BLR }
+	}
+	else_if = {
+		limit = {
+			784 = { is_owned_by = GER is_fully_controlled_by = GER NOT = { is_core_of = GER } }
+			POL = { exists = yes }
+			NOT = { has_war_with = POL }
+		}
+		784 = { transfer_state_to = POL }
+	}
+	if = {
+		limit = { BLR = { exists = yes } NOT = { has_war_with = BLR } }
+		every_owned_state = {
+			limit = {
+				is_core_of = BLR
+				is_fully_controlled_by = GER
+				NOT = { is_core_of = GER }
+				NOT = { state = 784 }
+			}
+			transfer_state_to = BLR
+		}
+	}
+	if = {
+		limit = { UKR = { exists = yes } NOT = { has_war_with = UKR } }
+		every_owned_state = {
+			limit = {
+				is_core_of = UKR
+				is_fully_controlled_by = GER
+				NOT = { is_core_of = GER }
+				NOT = { state = 784 }
+			}
+			transfer_state_to = UKR
+		}
+	}
+	if = {
+		limit = { GEO = { exists = yes } NOT = { has_war_with = GEO } }
+		every_owned_state = {
+			limit = {
+				is_core_of = GEO
+				is_fully_controlled_by = GER
+				NOT = { is_core_of = GER }
+				NOT = { state = 784 }
+			}
+			transfer_state_to = GEO
+		}
+	}
+	if = {
+		limit = { ARM = { exists = yes } NOT = { has_war_with = ARM } }
+		every_owned_state = {
+			limit = {
+				is_core_of = ARM
+				is_fully_controlled_by = GER
+				NOT = { is_core_of = GER }
+				NOT = { state = 784 }
+			}
+			transfer_state_to = ARM
+		}
+	}
+	if = {
+		limit = { AZR = { exists = yes } NOT = { has_war_with = AZR } }
+		every_owned_state = {
+			limit = {
+				is_core_of = AZR
+				is_fully_controlled_by = GER
+				NOT = { is_core_of = GER }
+				NOT = { state = 784 }
+			}
+			transfer_state_to = AZR
+		}
+	}
+	if = {
+		limit = { KAZ = { exists = yes } NOT = { has_war_with = KAZ } }
+		every_owned_state = {
+			limit = {
+				is_core_of = KAZ
+				is_fully_controlled_by = GER
+				NOT = { is_core_of = GER }
+				NOT = { state = 784 }
+			}
+			transfer_state_to = KAZ
+		}
+	}
+	if = {
+		limit = { RWE = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RWE_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RWE
+			transfer_state_to = RWE
+			RWE = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RWE = { exists = yes } }
+			RWE = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 219 = { is_owned_by = RWE } }
+				RWE = { set_capital = { state = 219 } }
+			}
+		}
+	}
+	if = {
+		limit = { RVN = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RVN_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RVN
+			transfer_state_to = RVN
+			RVN = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RVN = { exists = yes } }
+			RVN = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 214 = { is_owned_by = RVN } }
+				RVN = { set_capital = { state = 214 } }
+			}
+		}
+	}
+	if = {
+		limit = { RDN = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RDN_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RDN
+			transfer_state_to = RDN
+			RDN = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RDN = { exists = yes } }
+			RDN = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 218 = { is_owned_by = RDN } }
+				RDN = { set_capital = { state = 218 } }
+			}
+		}
+	}
+	if = {
+		limit = { RCA = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RCA_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RCA
+			transfer_state_to = RCA
+			RCA = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RCA = { exists = yes } }
+			RCA = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 235 = { is_owned_by = RCA } }
+				RCA = { set_capital = { state = 235 } }
+			}
+		}
+	}
+	if = {
+		limit = { RVG = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RVG_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RVG
+			transfer_state_to = RVG
+			RVG = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RVG = { exists = yes } }
+			RVG = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 251 = { is_owned_by = RVG } }
+				RVG = { set_capital = { state = 251 } }
+			}
+		}
+	}
+	if = {
+		limit = { RSW = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RSW_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RSW
+			transfer_state_to = RSW
+			RSW = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RSW = { exists = yes } }
+			RSW = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 571 = { is_owned_by = RSW } }
+				RSW = { set_capital = { state = 571 } }
+			}
+		}
+	}
+	if = {
+		limit = { RTS = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RTS_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RTS
+			transfer_state_to = RTS
+			RTS = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RTS = { exists = yes } }
+			RTS = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 570 = { is_owned_by = RTS } }
+				RTS = { set_capital = { state = 570 } }
+			}
+		}
+	}
+	if = {
+		limit = { RAI = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RAI_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RAI
+			transfer_state_to = RAI
+			RAI = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RAI = { exists = yes } }
+			RAI = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 569 = { is_owned_by = RAI } }
+				RAI = { set_capital = { state = 569 } }
+			}
+		}
+	}
+	if = {
+		limit = { RIR = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RIR_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RIR
+			transfer_state_to = RIR
+			RIR = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RIR = { exists = yes } }
+			RIR = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 566 = { is_owned_by = RIR } }
+				RIR = { set_capital = { state = 566 } }
+			}
+		}
+	}
+	if = {
+		limit = { RBU = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RBU_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RBU
+			transfer_state_to = RBU
+			RBU = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RBU = { exists = yes } }
+			RBU = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 564 = { is_owned_by = RBU } }
+				RBU = { set_capital = { state = 564 } }
+			}
+		}
+	}
+	if = {
+		limit = { RYK = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RYK_state = yes
+				RI_GER_partition_transferable_state = yes
+			}
+			add_core_of = RYK
+			transfer_state_to = RYK
+			RYK = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RYK = { exists = yes } }
+			RYK = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 574 = { is_owned_by = RYK } }
+				RYK = { set_capital = { state = 574 } }
+			}
+		}
+	}
+	if = {
+		limit = { RFA = { exists = no } }
+		every_state = {
+			limit = {
+				RI_GER_partition_RFA_state = yes
+				RI_GER_partition_transferable_state = yes
+				NOT = { AND = { RI_GER_partition_soviet_remnant_state = yes ROOT = { has_country_flag = RI_GER_partition_keep_soviet } } }
+			}
+			add_core_of = RFA
+			transfer_state_to = RFA
+			RFA = { set_capital = { state = PREV } }
+		}
+		if = { limit = { RFA = { exists = yes } }
+			RFA = { set_politics = { ruling_party = moderate_socialist elections_allowed = yes } }
+			if = { limit = { 561 = { is_owned_by = RFA } }
+				RFA = { set_capital = { state = 561 } }
+			}
+		}
+	}
+	set_country_flag = RI_GER_russian_partition_complete
+	clr_country_flag = RI_GER_partition_keep_soviet
+}
+
+RI_GER_prepare_soviet_remnant = {
+	set_country_flag = RI_GER_partition_keep_soviet
+	if = {
+		limit = { SOV = { exists = no } }
+		set_country_flag = RI_GER_partition_creating_soviet
+	}
+	if = {
+		limit = { 408 = { RI_GER_partition_transferable_state = yes } }
+		if = { limit = { 408 = { is_owned_by = GER } } 408 = { transfer_state_to = SOV } }
+		SOV = { set_capital = { state = 408 } }
+	}
+	else_if = {
+		limit = { 409 = { RI_GER_partition_transferable_state = yes } }
+		if = { limit = { 409 = { is_owned_by = GER } } 409 = { transfer_state_to = SOV } }
+		SOV = { set_capital = { state = 409 } }
+	}
+	else_if = {
+		limit = { 657 = { RI_GER_partition_transferable_state = yes } }
+		if = { limit = { 657 = { is_owned_by = GER } } 657 = { transfer_state_to = SOV } }
+		SOV = { set_capital = { state = 657 } }
+	}
+	every_owned_state = {
+		limit = {
+			RI_GER_partition_soviet_remnant_state = yes
+			RI_GER_partition_transferable_state = yes
+		}
+		transfer_state_to = SOV
+	}
+	if = {
+		limit = { has_country_flag = RI_GER_partition_creating_soviet }
+		SOV = { set_politics = { ruling_party = communist elections_allowed = no } }
+		clr_country_flag = RI_GER_partition_creating_soviet
+	}
+}

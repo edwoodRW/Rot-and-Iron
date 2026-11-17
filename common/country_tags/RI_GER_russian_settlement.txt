@@ -1,0 +1,2 @@
+RMO = "countries/RI_GER_Russian_Republic.txt"
+URE = "countries/RI_GER_Ural_Republic.txt"

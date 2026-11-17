@@ -1,0 +1,296 @@
+focus_tree = {
+	id = GER_soviet_occupation_focus
+	country = { factor = 0 modifier = { add = 100 tag = GER has_country_flag = RI_GER_soviet_takeover } }
+	default = no
+
+	focus = {
+		id = GER_SOV_establish_administration
+		icon = GFX_goal_generic_political_reform
+		x = 6
+		y = 0
+		cost = 5
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_rebuild_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = GER_SOV_establish_administration }
+		x = 5
+		y = 1
+		cost = 5
+		available = {
+			any_owned_state = {
+				is_fully_controlled_by = GER
+				free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+			}
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = GER
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_restore_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GER_SOV_establish_administration }
+		x = 7
+		y = 1
+		cost = 5
+		completion_reward = {
+			add_political_power = 25
+			if = {
+				limit = {
+					any_owned_state = { is_fully_controlled_by = GER infrastructure < 5 }
+				}
+				random_owned_state = {
+					limit = { is_fully_controlled_by = GER infrastructure < 5 }
+					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				}
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_expand_technical_education
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = GER_SOV_rebuild_industry focus = GER_SOV_restore_railways }
+		x = 6
+		y = 3
+		cost = 5
+		completion_reward = {
+			add_ideas = GER_SOV_reconstruction_science
+			if = {
+				limit = { amount_research_slots < 5 }
+				add_research_slot = 1
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_form_workers_republic
+		icon = GFX_goal_generic_political_reform
+		prerequisite = { focus = GER_SOV_establish_administration }
+		mutually_exclusive = { focus = GER_SOV_organise_resistance }
+		x = 2
+		y = 2
+		cost = 5
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_reconstruction_councils
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = GER_SOV_form_workers_republic }
+		x = 1
+		y = 3
+		cost = 5
+		completion_reward = {
+			add_ideas = GER_SOV_planned_reconstruction
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_negotiate_deliveries
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = GER_SOV_form_workers_republic }
+		x = 3
+		y = 3
+		cost = 5
+		available = { is_subject_of = SOV }
+		completion_reward = {
+			add_political_power = 50
+			add_autonomy_ratio = { value = 0.05 localization = GER_SOV_negotiate_deliveries }
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_social_guarantees
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = GER_SOV_reconstruction_councils }
+		x = 1
+		y = 4
+		cost = 5
+		completion_reward = {
+			add_ideas = GER_SOV_workers_guarantees
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_integrate_socialist_economy
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = GER_SOV_negotiate_deliveries }
+		x = 3
+		y = 4
+		cost = 5
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = GER_SOV_integrated_industry
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_negotiate_self_government
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = GER_SOV_social_guarantees }
+		prerequisite = { focus = GER_SOV_integrate_socialist_economy }
+		x = 2
+		y = 5
+		cost = 5
+		available = { is_subject_of = SOV }
+		completion_reward = {
+			add_autonomy_ratio = { value = 0.1 localization = GER_SOV_negotiate_self_government }
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_consolidate_republic
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = GER_SOV_negotiate_self_government }
+		x = 2
+		y = 6
+		cost = 5
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = GER_SOV_organise_resistance
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = GER_SOV_establish_administration }
+		mutually_exclusive = { focus = GER_SOV_form_workers_republic }
+		x = 10
+		y = 2
+		cost = 5
+		available = { is_subject_of = SOV has_political_power > 49 }
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = GER_SOV_underground_network
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	focus = {
+		id = GER_SOV_underground_press
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = GER_SOV_organise_resistance }
+		x = 9
+		y = 3
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	focus = {
+		id = GER_SOV_form_cells
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = GER_SOV_organise_resistance }
+		x = 11
+		y = 3
+		cost = 5
+		completion_reward = {
+			add_manpower = 20000
+			add_army_experience = 10
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	focus = {
+		id = GER_SOV_workers_militias
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = GER_SOV_underground_press }
+		x = 9
+		y = 4
+		cost = 5
+		completion_reward = {
+			add_manpower = 30000
+			add_war_support = 0.05
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	focus = {
+		id = GER_SOV_hidden_arsenals
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = GER_SOV_form_cells }
+		x = 11
+		y = 4
+		cost = 5
+		completion_reward = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 3000 producer = GER }
+			add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = GER }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	focus = {
+		id = GER_SOV_coordinate_uprising
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = GER_SOV_workers_militias }
+		prerequisite = { focus = GER_SOV_hidden_arsenals }
+		x = 10
+		y = 5
+		cost = 5
+		completion_reward = {
+			add_army_experience = 15
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	focus = {
+		id = GER_SOV_defy_occupation
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = GER_SOV_coordinate_uprising }
+		x = 10
+		y = 6
+		cost = 5
+		available = {
+			is_subject_of = SOV
+			has_war = no
+			has_capitulated = no
+			NOT = { is_in_peace_conference = yes }
+			SOV = { exists = yes has_capitulated = no NOT = { is_in_peace_conference = yes } }
+		}
+		completion_reward = {
+			remove_ideas = GER_SOV_underground_network
+			add_timed_idea = { idea = GER_SOV_liberation_militia days = 365 }
+			SOV = { end_puppet = GER }
+			if = { limit = { is_in_faction_with = SOV } leave_faction = yes }
+			drop_cosmetic_tag = yes
+			declare_war_on = { target = SOV type = independence_wargoal }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

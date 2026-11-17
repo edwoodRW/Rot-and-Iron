@@ -36,7 +36,7 @@ set_popularities = {
 	national_conservative = 14
 	centrist = 8
 	liberal = 0
-	new_democrat = 14
+	social_democrat = 14
 	moderate_socialist = 10
 	revolutionary_socialist = 6
 	communist = 6
@@ -79,7 +79,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Rohan Verma"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

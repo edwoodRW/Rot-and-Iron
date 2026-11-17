@@ -95,7 +95,7 @@ set_popularities = {
 		national_conservative = 23
 		centrist = 0
 		liberal = 12
-		new_democrat = 6
+		social_democrat = 6
 		moderate_socialist = 0
 		revolutionary_socialist = 5
 		communist = 9
@@ -146,7 +146,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Victor Ponta"
 	picture = "Portrait_ROM_Mircea_Ionescu_Quintus.dds"
-	ideology = new_democrat_ideology
+	ideology = social_democrat_ideology
 }
 
 create_country_leader = {

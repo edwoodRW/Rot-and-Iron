@@ -22,6 +22,41 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 
+	textSpriteType = {
+		name = "GFX_RI_mainmenu_multiplayer_button"
+		textureFile = "gfx/interface/RI_mainmenu_multiplayer_button_states.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	textSpriteType = {
+		name = "GFX_RI_mainmenu_options_button"
+		textureFile = "gfx/interface/RI_mainmenu_options_button_states.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	textSpriteType = {
+		name = "GFX_RI_mainmenu_nudge_button"
+		textureFile = "gfx/interface/RI_mainmenu_nudge_button_states.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	textSpriteType = {
+		name = "GFX_RI_mainmenu_blank_button"
+		textureFile = "gfx/interface/RI_mainmenu_blank_button_states.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	textSpriteType = {
+		name = "GFX_RI_mainmenu_quit_button"
+		textureFile = "gfx/interface/RI_mainmenu_quit_button_states.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
 	SpriteType = {
 		name = "GFX_main_lobby_button_highlight"
 		textureFile = "gfx/interface/main_lobby_button_transparent.dds"
